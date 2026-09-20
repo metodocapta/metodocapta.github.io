@@ -494,9 +494,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 }
 
 /* --- contenção de vazamento horizontal (os ambientes decorativos do hero
-       extrapolam a viewport; o body voltou a overflow:visible para o menu fixo) --- */
+       extrapolam a viewport; o body voltou a overflow:visible para o menu fixo) ---
+   NOTA: não aplicar max-width no .fm-site — ele usa full-bleed
+   (margin-left: calc(50% - 50vw)) e o max-width desloca todo o conteúdo. */
 .fm-hero{overflow:hidden;}
-.fm-site,.elementor-shortcode{max-width:100%;}
 .mc-aviso{
   max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);
