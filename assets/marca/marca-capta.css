@@ -376,8 +376,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 }
 .fm-audience-card p{margin:0;font-size:14px;line-height:1.6;color:#cfe8e6 !important;}
 
-/* --- 11) CTA (separado do contato) --- */
-.fm-cta-section{
+/* --- 11) CTA (separado do contato) --- */.fm-cta-section{
   background:
     radial-gradient(900px 420px at 50% -10%, rgba(10,188,176,.20) 0%, rgba(10,188,176,0) 62%),
     linear-gradient(160deg,#062531 0%,#08343c 58%,#0a4a4a 100%) !important;
@@ -404,10 +403,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 
 @media (max-width:900px){
   .fm-problem-layout{grid-template-columns:1fr;gap:30px;}
-  .fm-metrics{grid-template-columns:1fr;}
+  .fm-metrics{grid-template-columns:1fr 1fr;}
   .fm-cta-actions{flex-direction:column;align-items:stretch;}
   .fm-btn-primary,.fm-btn-ghost{text-align:center;}
 }
+
+/* --- Fase 2 · Hero: destaque do lead na cor da marca (nunca itálico) --- */
+.fm-hero-copy p em{font-style:normal;color:var(--mc-teal);font-weight:500;}
 .mc-aviso{
   max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);
