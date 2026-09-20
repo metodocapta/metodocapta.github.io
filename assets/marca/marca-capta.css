@@ -84,12 +84,12 @@ a[class*="btn"]:hover,button[class*="btn"]:hover,.fm-cta a:hover,.fm-button:hove
 a{transition:color .2s ease;}
 a:hover{color:var(--mc-teal-2);}
 
-/* --- nav: leve vidro --- */
+/* --- nav: sem caixa (o fundo se dissolve na página) --- */
 nav[class*="fm-nav"],.fm-nav{
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  background:rgba(6,37,49,.72);
-  border-bottom:1px solid rgba(127,227,216,.18);
+  background:transparent !important;
+  border-bottom:0 !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
 }
 
 /* --- imagens e mídia --- */
@@ -149,7 +149,122 @@ footer::before,.fm-footer::before{
 .entry-content a,.page-header a,.site-main a{color:var(--mc-teal-2);}
 .entry-content a:hover,.site-main a:hover{color:var(--mc-navy);}
 
-/* --- bloco de aviso (substitui shortcodes sem render) --- */
+/* ==========================================================================
+   v2 · MENU FLUIDO · ESPAÇAMENTO · ALTO CONTRASTE · WHATSAPP
+   ========================================================================== */
+
+/* --- 1) MENU: sem "caixa" — fundo que se dissolve na página --- */
+/* o overflow:clip do wrapper + overflow no body quebravam o position:sticky do menu */
+.fm-site{overflow:visible !important;}
+html{overflow-x:hidden !important;}
+body{overflow:visible !important;}
+
+.fm-header{
+  background:transparent !important;
+  border-bottom-color:transparent !important;
+  backdrop-filter:none !important;
+  box-shadow:none !important;
+}
+.fm-header::before{
+  content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;
+  z-index:-1;pointer-events:none;opacity:1;
+  background:linear-gradient(180deg,
+    rgba(2,13,13,.99) 0%,
+    rgba(2,13,13,.97) 52%,
+    rgba(2,13,13,.86) 74%,
+    rgba(2,13,13,.48) 89%,
+    rgba(2,13,13,0) 100%);
+  transition:opacity .38s cubic-bezier(.2,.7,.2,1);
+}
+.fm-header.is-scrolled::before{opacity:1;}
+/* reforço de legibilidade quando a classe de rolagem é aplicada */
+.fm-header.is-scrolled::before{
+  background:linear-gradient(180deg,
+    rgba(2,13,13,1) 0%,
+    rgba(2,13,13,.99) 56%,
+    rgba(2,13,13,.90) 78%,
+    rgba(2,13,13,.52) 90%,
+    rgba(2,13,13,0) 100%);
+}
+.fm-header.is-scrolled{
+  background:transparent !important;
+  border-bottom-color:transparent !important;
+  box-shadow:none !important;
+  backdrop-filter:none !important;
+}
+.fm-header-inner{position:relative;z-index:2;}
+
+/* --- 2) ESPAÇAMENTO ENTRE CARACTERES (fluidez tipográfica) --- */
+body,p,li,span,figcaption,td,th{letter-spacing:.012em;}
+h1{letter-spacing:.004em;}
+h2,h3,h4{letter-spacing:.008em;}
+.fm-nav a{
+  letter-spacing:.085em !important;
+  font-size:13px !important;
+  text-transform:uppercase;
+}
+.fm-header-cta{letter-spacing:.055em !important;font-size:12.5px !important;}
+.fm-kicker,.fm-eyebrow,[class*="kicker"],[class*="eyebrow"]{letter-spacing:.20em !important;}
+a[class*="btn"],button[class*="btn"],.fm-button{letter-spacing:.05em;}
+p{line-height:1.72;}
+
+/* --- 3) ALTO CONTRASTE / VISÃO APRIMORADA --- */
+.fm-nav a{color:#dcefeb !important;font-weight:700 !important;}
+.fm-nav a:hover,.fm-nav a.is-active{color:#ffffff !important;}
+.fm-nav a::after{height:2px !important;background:linear-gradient(90deg,#0ABCB0,#7fe3d8) !important;}
+.fm-header-cta{
+  color:#ffffff !important;
+  border-color:rgba(10,188,176,.72) !important;
+  background:rgba(10,188,176,.20) !important;
+  font-weight:800 !important;
+}
+.fm-header-cta:hover{
+  background:rgba(10,188,176,.34) !important;
+  border-color:#0ABCB0 !important;
+}
+/* corpo do texto mais legível sobre fundo escuro */
+.fm-site p,.fm-site li,.fm-site span{color:#e4f4f1;}
+.fm-site h1,.fm-site h2,.fm-site h3{color:#ffffff;}
+/* foco visível e forte em qualquer superfície */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid #0ABCB0 !important;
+  outline-offset:3px !important;
+  border-radius:8px;
+}
+::selection{background:#0ABCB0;color:#04222a;}
+/* quem pede mais contraste no sistema recebe mais contraste */
+@media (prefers-contrast:more){
+  .fm-nav a{color:#ffffff !important;}
+  .fm-site p,.fm-site li,.fm-site span{color:#ffffff !important;}
+  .fm-header::before{background:linear-gradient(180deg,rgba(0,0,0,.98),rgba(0,0,0,.90) 60%,rgba(0,0,0,0)) !important;}
+  .mc-aviso{border-color:#0ABCB0 !important;}
+}
+
+/* --- 4) BOTÃO FLUTUANTE DO WHATSAPP (acompanha a rolagem) --- */
+.mc-zap{
+  position:fixed;right:22px;bottom:22px;z-index:9998;
+  display:inline-flex;align-items:center;gap:11px;
+  padding:13px 20px 13px 15px;border-radius:999px;text-decoration:none;
+  font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif;font-weight:600;
+  font-size:14.5px;letter-spacing:.045em;text-transform:uppercase;
+  color:#04222a !important;
+  background:linear-gradient(135deg,#25D366 0%,#0ABCB0 100%);
+  box-shadow:0 14px 36px rgba(0,0,0,.34),0 0 0 1px rgba(255,255,255,.18) inset;
+  transform:translateY(14px);opacity:0;animation:mcZapIn .5s .6s forwards;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.mc-zap:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 20px 44px rgba(0,0,0,.42);color:#04222a !important;}
+.mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
+.mc-zap .mc-zap__txt{white-space:nowrap;}
+@keyframes mcZapIn{to{transform:translateY(0);opacity:1;}}
+@media (max-width:720px){
+  .mc-zap{right:14px;bottom:14px;padding:13px;gap:0;}
+  .mc-zap .mc-zap__txt{display:none;}
+  .mc-zap svg{width:28px;height:28px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .mc-zap{animation:none;opacity:1;transform:none;}
+}
 .mc-aviso{
   max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);

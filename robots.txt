@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /ola-mundo/
-Disallow: /category/
-Disallow: /area-do-cliente/
-Disallow: /cartao-allan/
