@@ -3,8 +3,8 @@
 Site estático (GitHub Pages) do **Método Capta+** — método de direção em captação de recursos
 para organizações da sociedade civil, cooperativas e associações.
 
-> Recriação do espelho do site institucional, **rebrandado**: zero ocorrência da palavra
-> "Fomentia" (em nomes de arquivo e conteúdo) — apenas **Método Capta+**.
+> Recriação do espelho do site institucional, **rebrandado**: zero ocorrência do nome
+> anterior (em nomes de arquivo e conteúdo) — apenas **Método Capta+**.
 
 ## Estrutura
 
