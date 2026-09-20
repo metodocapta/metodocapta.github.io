@@ -265,6 +265,29 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 @media (prefers-reduced-motion:reduce){
   .mc-zap{animation:none;opacity:1;transform:none;}
 }
+
+/* --- 5) CARTÕES FLUTUANTES DO HERO (rótulo cortado na borda do card) --- */
+/* o palco usa transform-style:preserve-3d + perspective; nesse contexto o z-index
+   é ignorado e o transform 3D do .fm-stage-media vinha à frente dos cartões.
+   Solução: trazer os cartões para frente no eixo Z. */
+.fm-stage-card{
+  z-index:9 !important;
+  transform:translateZ(90px) !important;
+  overflow:visible !important;
+  min-width:0 !important;
+  width:max-content;
+  max-width:min(340px,82%);
+}
+.fm-stage-card strong{
+  white-space:nowrap;
+  overflow:visible !important;
+  text-overflow:clip !important;
+}
+.fm-stage-card-c{gap:10px;}
+@media (max-width:900px){
+  .fm-stage-card{max-width:min(260px,86%);}
+  .fm-stage-card strong{white-space:normal;}
+}
 .mc-aviso{
   max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);
