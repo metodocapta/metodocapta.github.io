@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Método Capta+">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062531"/>
+      <stop offset="1" stop-color="#067a72"/>
+    </linearGradient>
+    <linearGradient id="cg" gradientUnits="userSpaceOnUse" x1="30" y1="30" x2="100" y2="100">
+      <stop offset="0" stop-color="#6ff5f1"/>
+      <stop offset=".5" stop-color="#19d3c5"/>
+      <stop offset="1" stop-color="#0a9f97"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <g transform="translate(21 19) scale(0.67)">
+    <path d="M67.6 24.8 A36 36 0 1 0 67.6 85.2" fill="none" stroke="url(#cg)" stroke-width="22"/>
+    <g fill="none" stroke="url(#cg)" stroke-width="15" stroke-linecap="round">
+      <path d="M106 42 V68"/>
+      <path d="M93 55 H119"/>
+    </g>
+  </g>
+</svg>

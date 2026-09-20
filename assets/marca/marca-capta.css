@@ -1,0 +1,176 @@
+/* ==========================================================================
+   MÉTODO CAPTA+ · camada visual moderna (detalhamento de marca)
+   Carregar DEPOIS dos CSS do tema/plugin. Paleta oficial:
+   navy #062531 · teal #0ABCB0 · teal-grafite #067a72 · laranja #d97b4d
+   ========================================================================== */
+
+:root{
+  --mc-navy:#062531;
+  --mc-navy-2:#0a3a45;
+  --mc-teal:#0ABCB0;
+  --mc-teal-2:#067a72;
+  --mc-teal-claro:#7fe3d8;
+  --mc-laranja:#d97b4d;
+  --mc-ink:#132229;
+  --mc-ink-2:#3c4a52;
+  --mc-linha:rgba(6,37,49,.12);
+  --mc-sombra:0 18px 44px rgba(6,37,49,.14);
+  --mc-raio:18px;
+}
+
+/* --- base --- */
+html{scroll-behavior:smooth;}
+body{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+
+/* --- barra de acento no topo (assinatura da marca) --- */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0 0 auto 0;
+  height:3px;
+  z-index:9999;
+  background:linear-gradient(90deg,var(--mc-navy) 0%,var(--mc-teal-2) 45%,var(--mc-teal) 70%,var(--mc-laranja) 100%);
+}
+
+/* --- tipografia: títulos em Oswald --- */
+h1,h2,h3,h4,
+.fm-hero h1,.fm-section h2,.fm-title{
+  font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif;
+  letter-spacing:-.01em;
+  text-wrap:balance;
+}
+h1{letter-spacing:-.02em;}
+p,li{text-wrap:pretty;}
+
+/* --- âncoras com respiro (menu fixo) --- */
+[id]{scroll-margin-top:96px;}
+
+/* --- cartões e blocos: acabamento moderno --- */
+[class*="fm-card"],[class*="fm-pilar"],[class*="fm-step"],[class*="fm-jornada"] [class*="item"]{
+  border-radius:var(--mc-raio);
+  border:1px solid var(--mc-linha);
+  box-shadow:0 10px 30px rgba(6,37,49,.07);
+  transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,border-color .28s ease;
+}
+[class*="fm-card"]:hover,[class*="fm-pilar"]:hover,[class*="fm-step"]:hover{
+  transform:translateY(-4px);
+  border-color:rgba(10,188,176,.45);
+  box-shadow:0 20px 48px rgba(6,37,49,.16);
+}
+
+/* --- botões / CTAs --- */
+a[class*="btn"],button[class*="btn"],.fm-cta a,.fm-button,
+input[type="submit"]{
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:.03em;
+  background-image:linear-gradient(135deg,var(--mc-teal) 0%,var(--mc-teal-2) 100%);
+  color:#04222a;
+  border:0;
+  box-shadow:0 12px 30px rgba(10,188,176,.34);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;
+}
+a[class*="btn"]:hover,button[class*="btn"]:hover,.fm-cta a:hover,.fm-button:hover,input[type="submit"]:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.06);
+  box-shadow:0 18px 40px rgba(10,188,176,.44);
+}
+
+/* --- links de texto --- */
+a{transition:color .2s ease;}
+a:hover{color:var(--mc-teal-2);}
+
+/* --- nav: leve vidro --- */
+nav[class*="fm-nav"],.fm-nav{
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  background:rgba(6,37,49,.72);
+  border-bottom:1px solid rgba(127,227,216,.18);
+}
+
+/* --- imagens e mídia --- */
+img{max-width:100%;height:auto;}
+img[class*="logo"],img[class*="brand"],.fm-stage-brand{
+  filter:drop-shadow(0 8px 22px rgba(10,188,176,.28));
+}
+
+/* --- foco acessível --- */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--mc-teal);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* --- movimento reduzido --- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none!important;animation:none!important;}
+}
+
+/* --- rodapé --- */
+footer,.fm-footer{
+  background:linear-gradient(180deg,rgba(6,37,49,.02) 0%,rgba(6,37,49,.06) 100%);
+}
+footer::before,.fm-footer::before{
+  content:"";
+  display:block;
+  height:3px;
+  background:linear-gradient(90deg,var(--mc-teal) 0%,var(--mc-teal-2) 55%,var(--mc-laranja) 100%);
+  opacity:.85;
+}
+
+/* --- cabeçalho das páginas internas (tema Hello Elementor) -> paleta da marca --- */
+.site-header,.site-header.dynamic-header{
+  border-bottom:1px solid var(--mc-linha);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+.site-header .site-title a,
+.site-header .site-title a:visited{
+  color:var(--mc-navy);
+  font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif;
+  font-weight:600;
+  letter-spacing:-.01em;
+  text-decoration:none;
+}
+.site-header .site-title a:hover{color:var(--mc-teal-2);}
+.site-header .site-description{color:var(--mc-ink-2);}
+.page-header .entry-title,.page-header h1{
+  font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif;
+  color:var(--mc-navy);
+}
+
+/* --- links gerais do conteúdo: nada de magenta do tema --- */
+.entry-content a,.page-header a,.site-main a{color:var(--mc-teal-2);}
+.entry-content a:hover,.site-main a:hover{color:var(--mc-navy);}
+
+/* --- bloco de aviso (substitui shortcodes sem render) --- */
+.mc-aviso{
+  max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
+  border-radius:24px;border:1px solid rgba(10,188,176,.28);
+  background:
+    radial-gradient(680px 320px at 50% -20%, rgba(10,188,176,.16) 0%, rgba(10,188,176,0) 62%),
+    linear-gradient(160deg,#062531 0%,#08343c 60%,#0a4a4a 100%);
+  color:#eafffb;box-shadow:var(--mc-sombra);
+}
+.mc-aviso__kick{
+  display:inline-block;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--mc-teal-claro);border:1px solid rgba(127,227,216,.4);border-radius:999px;padding:7px 16px;margin-bottom:20px;
+}
+.mc-aviso h2{
+  font-size:34px;font-weight:700;letter-spacing:-.01em;text-transform:uppercase;margin:0 0 14px;color:#fff;
+}
+.mc-aviso p{font-size:16px;line-height:1.6;color:#cfe8e6;margin:0 0 26px;}
+.mc-aviso a.mc-aviso__cta,.mc-aviso a.mc-aviso__cta:visited{
+  display:inline-block;padding:15px 30px;border-radius:999px;text-decoration:none;
+  font-weight:700;letter-spacing:.03em;color:#04222a;
+  background:linear-gradient(135deg,var(--mc-teal) 0%,var(--mc-teal-2) 100%);
+  box-shadow:0 14px 34px rgba(10,188,176,.42);
+  transition:transform .2s ease,filter .2s ease;
+}
+.mc-aviso a.mc-aviso__cta:hover{transform:translateY(-2px);filter:brightness(1.07);color:#04222a;}

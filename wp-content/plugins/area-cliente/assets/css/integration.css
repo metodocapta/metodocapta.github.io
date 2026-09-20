@@ -1,0 +1,32 @@
+.fmc-landing-access {
+    min-height: 42px;
+    margin-left: 2px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(147,217,204,.16);
+    border-radius: 999px;
+    color: #c9ddd7;
+    background: rgba(255,255,255,.025);
+    font-size: 11px;
+    font-weight: 780;
+    white-space: nowrap;
+    transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+}
+.fmc-landing-access svg { width: 15px; height: 15px; fill: none; stroke: #1ed69d; stroke-width: 1.7; }
+.fmc-landing-access:hover { transform: translateY(-1px); color: #fff; border-color: rgba(30,214,157,.34); background: rgba(30,214,157,.055); }
+.fm-header-inner .fmc-landing-access { margin-left: auto; }
+.fm-header-inner .fmc-landing-access + .fm-header-cta { margin-left: -14px; }
+.fm-header-inner .fm-nav { margin-left: 0; }
+.fmc-nav-client { display: none !important; }
+
+@media (max-width: 1080px) {
+    .fm-header-inner .fmc-landing-access { margin-left: auto; }
+}
+
+@media (max-width: 860px) {
+    .fmc-landing-access { display: none !important; }
+    .fm-nav .fmc-nav-client { display: block !important; color: #d8ebe5 !important; }
+    .fm-nav .fmc-nav-client::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; border-radius: 50%; background: #1ed69d; box-shadow: 0 0 12px rgba(30,214,157,.5); vertical-align: 1px; }
+}
