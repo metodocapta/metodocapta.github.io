@@ -5,17 +5,56 @@
    ========================================================================== */
 
 :root{
+  /* ---------- FASE 3 · DESIGN TOKENS (canônicos) ---------- */
+  /* cores */
   --mc-navy:#062531;
   --mc-navy-2:#0a3a45;
   --mc-teal:#0ABCB0;
-  --mc-teal-2:#067a72;
-  --mc-teal-claro:#7fe3d8;
-  --mc-laranja:#d97b4d;
-  --mc-ink:#132229;
-  --mc-ink-2:#3c4a52;
-  --mc-linha:rgba(6,37,49,.12);
-  --mc-sombra:0 18px 44px rgba(6,37,49,.14);
+  --mc-teal-dark:#067a72;
+  --mc-teal-light:#7fe3d8;
+  --mc-green:#25D366;
+  --mc-orange:#d97b4d;
+  --mc-white:#ffffff;
+  --mc-text:#e4f4f1;          /* corpo sobre fundo escuro */
+  --mc-text-strong:#ffffff;   /* títulos sobre fundo escuro */
+  --mc-muted:#a9cfcb;         /* apoio/legenda sobre fundo escuro */
+  --mc-ink:#132229;           /* corpo sobre fundo claro */
+  --mc-ink-2:#3c4a52;         /* apoio sobre fundo claro */
+  --mc-border:rgba(6,37,49,.12);
+  --mc-border-dark:rgba(159,241,216,.16);
+
+  /* semântica (função de cada cor — não é estética, é hierarquia) */
+  --mc-color-structure:var(--mc-navy);   /* estrutura · profundidade · autoridade */
+  --mc-color-identity:var(--mc-teal);    /* identidade · tecnologia · informação */
+  --mc-color-action:var(--mc-green);     /* ação · progresso · confirmação */
+  --mc-color-accent:var(--mc-orange);    /* acento estratégico (uso raro) */
+  --mc-color-clarity:var(--mc-white);    /* clareza · respiro · contraste */
+
+  /* tipografia */
+  --mc-font-display:'Oswald','Segoe UI',system-ui,Arial,sans-serif;
+  --mc-font-body:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+
+  /* escala tipográfica única */
+  --mc-fs-h1:clamp(42px,5.4vw,78px);
+  --mc-fs-h2:clamp(29px,3.5vw,46px);
+  --mc-fs-h3:clamp(19px,1.9vw,24px);
+  --mc-fs-lead:clamp(16px,1.3vw,18.5px);
+  --mc-fs-body:16px;
+  --mc-fs-small:14px;
+  --mc-fs-label:11.5px;
+  --mc-fs-caption:11px;
+
+  /* ritmo e forma */
+  --mc-space-section:clamp(64px,8vw,118px);
   --mc-raio:18px;
+  --mc-raio-sm:12px;
+  --mc-sombra:0 18px 44px rgba(6,37,49,.14);
+
+  /* ---------- ALIASES LEGADOS (compatibilidade) ---------- */
+  --mc-teal-2:var(--mc-teal-dark);
+  --mc-teal-claro:var(--mc-teal-light);
+  --mc-laranja:var(--mc-orange);
+  --mc-linha:var(--mc-border);
 }
 
 /* --- base --- */
@@ -410,6 +449,54 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 
 /* --- Fase 2 · Hero: destaque do lead na cor da marca (nunca itálico) --- */
 .fm-hero-copy p em{font-style:normal;color:var(--mc-teal);font-weight:500;}
+
+/* ==========================================================================
+   v2.3 · FASE 3 — ESCALA TIPOGRÁFICA ÚNICA + RITMO DE SEÇÃO
+   Uma escala só. Nenhuma seção inventa a sua.
+   ========================================================================== */
+.fm-site .fm-hero h1{
+  font-size:var(--mc-fs-h1) !important;
+  line-height:1.03;
+  letter-spacing:-.005em;
+}
+.fm-site .fm-section h2,
+.fm-site .fm-contact-section h2{
+  font-size:var(--mc-fs-h2) !important;
+  line-height:1.09;
+  letter-spacing:.004em;
+}
+.fm-site .fm-section h3,
+.fm-site .fm-contact-section h3{
+  font-size:var(--mc-fs-h3) !important;
+  line-height:1.28;
+  letter-spacing:.006em;
+}
+.fm-site .fm-kicker{font-size:var(--mc-fs-label) !important;}
+.fm-site .fm-hero-copy > p{font-size:var(--mc-fs-lead) !important;line-height:1.62;}
+.fm-site .fm-section p,
+.fm-site .fm-contact-section p{font-size:var(--mc-fs-body);line-height:1.7;}
+
+/* ritmo vertical uniforme entre capítulos */
+.fm-site .fm-section{
+  padding-top:var(--mc-space-section) !important;
+  padding-bottom:var(--mc-space-section) !important;
+}
+.fm-site .fm-section:first-of-type{padding-top:calc(var(--mc-space-section) * .62) !important;}
+
+/* respiro interno dos blocos de topo de seção */
+.fm-site .fm-section-heading,
+.fm-site .fm-evidence-head,
+.fm-site .fm-audience-head,
+.fm-site .fm-problem-copy{margin-bottom:0;}
+
+@media (max-width:900px){
+  .fm-site .fm-section{padding-top:clamp(48px,10vw,72px) !important;padding-bottom:clamp(48px,10vw,72px) !important;}
+}
+
+/* --- contenção de vazamento horizontal (os ambientes decorativos do hero
+       extrapolam a viewport; o body voltou a overflow:visible para o menu fixo) --- */
+.fm-hero{overflow:hidden;}
+.fm-site,.elementor-shortcode{max-width:100%;}
 .mc-aviso{
   max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);
