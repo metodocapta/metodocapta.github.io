@@ -1,6 +1,49 @@
+# Método Capta+ — https://metodocapta.github.io/
+# Regra: conteudo publico aberto a buscadores E a motores de resposta por IA (GEO/AEO).
+# Fechado apenas o que nao e conteudo: area restrita, paginas legadas e categoria vazia.
+
 User-agent: *
 Allow: /
+Disallow: /area-do-cliente/
 Disallow: /ola-mundo/
 Disallow: /category/
+
+# --- Motores de resposta por IA ---
+User-agent: GPTBot
+Allow: /
 Disallow: /area-do-cliente/
-Disallow: /cartao-allan/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /area-do-cliente/
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /area-do-cliente/
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /area-do-cliente/
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+Sitemap: https://metodocapta.github.io/sitemap.xml

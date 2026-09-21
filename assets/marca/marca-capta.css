@@ -32,7 +32,7 @@
 
   /* tipografia */
   --mc-font-display:'Oswald','Segoe UI',system-ui,Arial,sans-serif;
-  --mc-font-body:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --mc-font-body:'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
 
   /* escala tipográfica única */
   --mc-fs-h1:clamp(42px,5.4vw,78px);
@@ -60,9 +60,13 @@
 /* --- base --- */
 html{scroll-behavior:smooth;}
 body{
+  font-family:var(--mc-font-body);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   text-rendering:optimizeLegibility;
+}
+.fm-site,.fm-site p,.fm-site li,.fm-site span,.fm-site a,.fm-site input,.fm-site textarea{
+  font-family:var(--mc-font-body);
 }
 
 /* --- barra de acento no topo (assinatura da marca) --- */
@@ -570,6 +574,36 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-pillars::before{top:-16px;}
   .fm-pillars::after{top:-20px;}
 }
+
+/* ==========================================================================
+   v2.3 · FASE 17 — FAQ (AEO): resposta direta, nativa e indexável
+   ========================================================================== */
+.fm-faq-head{max-width:720px;margin-bottom:32px;}
+.fm-faq-list{display:grid;gap:10px;max-width:920px;}
+.fm-faq-item{
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(159,241,216,.16);
+  border-radius:14px;overflow:hidden;
+  transition:border-color .25s ease,background .25s ease;
+}
+.fm-faq-item:hover{border-color:rgba(10,188,176,.45);background:rgba(10,188,176,.06);}
+.fm-faq-item summary{
+  cursor:pointer;list-style:none;padding:18px 22px;
+  font-family:var(--mc-font-display);font-weight:600;font-size:16px;letter-spacing:.02em;
+  color:var(--mc-text-strong);display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.fm-faq-item summary::-webkit-details-marker{display:none;}
+.fm-faq-item summary::after{
+  content:"+";font-family:var(--mc-font-display);font-weight:700;font-size:20px;line-height:1;
+  color:var(--mc-teal);flex:none;transition:transform .25s ease;
+}
+.fm-faq-item[open] summary::after{transform:rotate(45deg);}
+.fm-faq-item[open] summary{color:#fff;}
+.fm-faq-item p{
+  padding:0 22px 20px;margin:0 !important;
+  font-size:15px;line-height:1.72;color:#cfe8e6 !important;max-width:80ch;
+}
+.fm-faq-item p strong{color:var(--mc-teal-light) !important;}
 
 /* ==========================================================================
    v2.3 · FASE 8 — JORNADA VISUAL (a promessa em primeira pessoa)
