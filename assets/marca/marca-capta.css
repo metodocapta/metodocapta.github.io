@@ -241,7 +241,11 @@ h2,h3,h4{letter-spacing:.008em;}
   letter-spacing:.085em !important;
   font-size:13px !important;
   text-transform:uppercase;
+  white-space:nowrap;
 }
+/* 6 itens + CTA: aperta o espacamento para nao quebrar linha */
+.fm-nav{gap:22px !important;}
+@media (max-width:1200px){ .fm-nav{gap:16px !important;} .fm-nav a{font-size:12px !important;} }
 .fm-header-cta{letter-spacing:.055em !important;font-size:12.5px !important;}
 .fm-kicker,.fm-eyebrow,[class*="kicker"],[class*="eyebrow"]{letter-spacing:.20em !important;}
 a[class*="btn"],button[class*="btn"],.fm-button{letter-spacing:.05em;}
