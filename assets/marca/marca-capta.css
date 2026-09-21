@@ -127,12 +127,54 @@ a[class*="btn"]:hover,button[class*="btn"]:hover,.fm-cta a:hover,.fm-button:hove
 a{transition:color .2s ease;}
 a:hover{color:var(--mc-teal-2);}
 
-/* --- nav: sem caixa (o fundo se dissolve na página) --- */
-nav[class*="fm-nav"],.fm-nav{
-  background:transparent !important;
-  border-bottom:0 !important;
-  backdrop-filter:none !important;
-  -webkit-backdrop-filter:none !important;
+/* --- nav: sem caixa APENAS no desktop (no mobile o .fm-nav é um dropdown) --- */
+@media (min-width:861px){
+  nav[class*="fm-nav"],.fm-nav{
+    background:transparent !important;
+    border-bottom:0 !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+  }
+}
+
+/* --- hambúrguer: paleta da marca (o tema Hello Elementor pinta button:focus com #c36/magenta) --- */
+.fm-menu-toggle,
+.fm-menu-toggle:hover,
+.fm-menu-toggle:focus,
+.fm-menu-toggle:active{
+  background-color:rgba(10,188,176,.14) !important;
+  background-image:none !important;
+  border:1px solid rgba(10,188,176,.5) !important;
+  color:var(--mc-teal-light) !important;
+  -webkit-text-fill-color:var(--mc-teal-light) !important;
+  outline:none !important;
+  box-shadow:none !important;
+}
+.fm-menu-toggle:hover,
+.fm-menu-toggle:focus{background-color:rgba(10,188,176,.26) !important;}
+.fm-menu-toggle:focus-visible{outline:3px solid var(--mc-teal) !important;outline-offset:3px !important;}
+.fm-menu-toggle span{background:#eafffb !important;}
+
+/* --- dropdown do menu no mobile: fundo sólido para não misturar com o conteúdo --- */
+@media (max-width:860px){
+  .fm-nav{
+    background:linear-gradient(180deg,#062531 0%,#08343c 100%) !important;
+    border:1px solid rgba(10,188,176,.32) !important;
+    box-shadow:0 24px 60px rgba(0,0,0,.55) !important;
+    z-index:120 !important;
+    padding:12px !important;
+  }
+  .fm-nav a{
+    color:#e4f4f1 !important;
+    font-size:13.5px !important;
+    padding:15px 14px !important;
+    border-bottom:1px solid rgba(127,227,216,.12) !important;
+  }
+  .fm-nav a:hover,.fm-nav a:focus,.fm-nav a.is-active{
+    color:#ffffff !important;
+    background:rgba(10,188,176,.14) !important;
+    border-radius:10px;
+  }
 }
 
 /* --- imagens e mídia --- */
