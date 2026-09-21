@@ -441,6 +441,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-btn-primary:hover{transform:translateY(-2px);filter:brightness(1.07);color:#04222a !important;}
 .fm-btn-ghost{
   color:#7fe3d8 !important;border:1px solid rgba(127,227,216,.55);background:rgba(127,227,216,.06);
+  background-image:none !important;box-shadow:none !important;
 }
 .fm-btn-ghost:hover{transform:translateY(-2px);background:rgba(127,227,216,.14);border-color:#0ABCB0;color:#fff !important;}
 
