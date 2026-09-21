@@ -43,13 +43,13 @@ git init
 git add .
 git commit -m "Site Método Capta+"
 git branch -M main
-git remote add origin https://github.com/drallan2026/metodo-capta-site.git
+git remote add origin https://github.com/metodocapta/metodocapta.github.io.git
 git push -u origin main
 ```
 
 Depois: **Settings → Pages → Source: Deploy from a branch → main / (root)**
 
-URL: `https://drallan2026.github.io/metodo-capta-site/`
+URL: `https://metodocapta.github.io/`
 
 ### Domínio próprio (quando houver)
 
@@ -58,7 +58,7 @@ Criar o arquivo `CNAME` na raiz com o domínio (ex.: `metodocapta.com.br`) e apo
 | Tipo | Nome | Valor |
 |:--|:--|:--|
 | A | @ | 185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153 |
-| CNAME | www | drallan2026.github.io |
+| CNAME | www | metodocapta.github.io |
 
 Depois: **Settings → Pages → Custom domain** → marcar *Enforce HTTPS*.
 
