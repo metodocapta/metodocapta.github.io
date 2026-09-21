@@ -135,11 +135,11 @@
     }
 
     const form = root.querySelector('[data-fm-contact-form]');
-    if (!form || typeof Método Capta+Landing === 'undefined') return;
+    if (!form || typeof MetodoCaptaLanding === 'undefined') return;
 
     const status = form.querySelector('[data-fm-form-status]');
     const submit = form.querySelector('[data-fm-submit]');
-    const originalLabel = Método Capta+Landing.submitLabel || 'Enviar mensagem';
+    const originalLabel = MetodoCaptaLanding.submitLabel || 'Enviar mensagem';
 
     function setStatus(message, isError) {
         if (!status) return;
@@ -160,14 +160,14 @@
         event.preventDefault();
 
         if (submit) submit.disabled = true;
-        setSubmitLabel(Método Capta+Landing.sendingLabel || 'Enviando mensagem...');
+        setSubmitLabel(MetodoCaptaLanding.sendingLabel || 'Enviando mensagem...');
         if (status) status.classList.remove('is-visible', 'is-error');
 
         const payload = new FormData(form);
-        payload.set('action', Método Capta+Landing.ajaxAction || 'metodo-capta_contact_ajax_submit');
+        payload.set('action', MetodoCaptaLanding.ajaxAction || 'metodocapta_contact_ajax_submit');
 
         try {
-            const response = await fetch(Método Capta+Landing.ajaxUrl, {
+            const response = await fetch(MetodoCaptaLanding.ajaxUrl, {
                 method: 'POST',
                 body: payload,
                 credentials: 'same-origin',
