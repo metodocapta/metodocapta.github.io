@@ -1,0 +1,119 @@
+name: Atualizar Destaques (Substack)
+
+# Puxa os ultimos 5 posts do Substack e atualiza assets/destaques.json,
+# que alimenta o slider "Destaques" da Home.
+#
+# Roda: diariamente, no botao manual, e quando um estudo novo for publicado.
+
+on:
+  schedule:
+    - cron: "0 9 * * *"        # diariamente, 09:00 UTC (06:00 em Brasilia)
+  workflow_dispatch:            # permite rodar manualmente na aba Actions
+  push:
+    branches: [main]
+    paths:
+      - "estudos/**"            # publicou estudo novo -> atualiza os destaques
+      - "assets/destaques.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: destaques
+  cancel-in-progress: true
+
+jobs:
+  destaques:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Coletar o feed do Substack
+        run: |
+          python3 - <<'PY'
+          import email.utils, html, json, re, urllib.request
+          from datetime import date
+
+          FEED  = "https://minutocaptamais.substack.com/feed"
+          SAIDA = "assets/destaques.json"
+          LIMITE = 5
+          MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]
+          UA = "MetodoCapta-Site/1.0 (+https://metodocapta.github.io/)"
+
+          def texto(bruto, limite=None):
+              s = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", bruto or "", flags=re.I)
+              s = re.sub(r"<[^>]+>", " ", s)
+              s = " ".join(html.unescape(s).split())
+              if limite and len(s) > limite:
+                  s = (s[:limite].rsplit(" ", 1)[0] or s[:limite]).rstrip(",.;:") + "\u2026"
+              return s
+
+          def marca(s):
+              s = re.sub(r"\bFOMENTIA\b", "M\u00c9TODO", s or "")
+              s = re.sub(r"\bFomentia\b", "M\u00e9todo", s)
+              return re.sub(r"\s+", " ", s).strip()
+
+          def data_pt(pub):
+              try:
+                  dt = email.utils.parsedate_to_datetime(pub)
+                  return dt.date().isoformat(), "%02d %s %d" % (dt.day, MESES[dt.month-1], dt.year)
+              except (TypeError, ValueError):
+                  return "", ""
+
+          def imagem(item):
+              for el in item.iter():
+                  tag = el.tag.split("}")[-1].lower()
+                  url = el.get("url") or el.get("href")
+                  if url and tag in ("content", "thumbnail", "enclosure") \
+                     and re.search(r"\.(jpe?g|png|webp|gif)($|\?)", url, re.I):
+                      return url
+              return ""
+
+          req = urllib.request.Request(FEED, headers={"User-Agent": UA, "Accept": "application/xml"})
+          bruto = urllib.request.urlopen(req, timeout=45).read().decode("utf-8", "replace")
+
+          import xml.etree.ElementTree as ET
+          itens = []
+          for item in ET.fromstring(bruto).iter("item"):
+              titulo = texto(item.findtext("title"))
+              link = (item.findtext("link") or "").strip()
+              if not titulo or not link:
+                  continue
+              iso, pt = data_pt(item.findtext("pubDate"))
+              itens.append({
+                  "titulo": marca(titulo),
+                  "link": link,
+                  "data": iso,
+                  "data_pt": pt,
+                  "resumo": marca(texto(item.findtext("description"), 190)),
+                  "imagem": imagem(item),
+              })
+              if len(itens) >= LIMITE:
+                  break
+
+          dado = {
+              "gerado_em": date.today().isoformat(),
+              "fonte": FEED,
+              "publicacao": "M\u00e9todo Capta+ \u00b7 Substack",
+              "itens": itens,
+          }
+          with open(SAIDA, "w", encoding="utf-8") as fh:
+              json.dump(dado, fh, ensure_ascii=False, indent=1)
+          print("itens coletados:", len(itens))
+          for it in itens:
+              print(" -", it["data_pt"], it["titulo"])
+          PY
+
+      - name: Commit se houver mudanca
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/destaques.json
+          if git diff --staged --quiet; then
+            echo "Sem mudancas nos destaques."
+          else
+            git commit -m "chore(destaques): atualiza o feed do Substack"
+            git push
+            echo "Destaques atualizados."
+          fi
