@@ -32,14 +32,15 @@ jobs:
       - name: Coletar o feed do Substack
         run: |
           python3 - <<'PY'
-          import email.utils, html, json, re, urllib.request
+          import email.utils, html, json, re, time, urllib.error, urllib.request
           from datetime import date
 
           FEED  = "https://minutocaptamais.substack.com/feed"
           SAIDA = "assets/destaques.json"
           LIMITE = 5
           MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]
-          UA = "MetodoCapta-Site/1.0 (+https://metodocapta.github.io/)"
+          UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
 
           def texto(bruto, limite=None):
               s = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", bruto or "", flags=re.I)
@@ -70,8 +71,26 @@ jobs:
                       return url
               return ""
 
-          req = urllib.request.Request(FEED, headers={"User-Agent": UA, "Accept": "application/xml"})
-          bruto = urllib.request.urlopen(req, timeout=45).read().decode("utf-8", "replace")
+          def baixar(url, tentativas=3):
+              hdrs = {
+                  "User-Agent": UA,
+                  "Accept": "application/rss+xml, application/xml, text/xml, */*;q=0.8",
+                  "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.7",
+                  "Cache-Control": "no-cache",
+              }
+              erro = None
+              for i in range(tentativas):
+                  try:
+                      return urllib.request.urlopen(
+                          urllib.request.Request(url, headers=hdrs), timeout=45
+                      ).read().decode("utf-8", "replace")
+                  except (urllib.error.HTTPError, urllib.error.URLError, OSError) as exc:
+                      erro = exc
+                      if i < tentativas - 1:
+                          time.sleep(5 * (i + 1))
+              raise erro
+
+          bruto = baixar(FEED)
 
           import xml.etree.ElementTree as ET
           itens = []
