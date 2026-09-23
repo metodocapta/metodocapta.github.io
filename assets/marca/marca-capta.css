@@ -782,3 +782,14 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-dest-nav{display:none;}
   .fm-dest-card{flex:0 0 86vw;}
 }
+
+/* ===== REDE DE SEGURANCA DO REVEAL =====
+   .fm-reveal nasce com opacity:0 e depende do JS (IntersectionObserver) para
+   receber .is-visible. Se o observador nao disparar (JS falho, scroll restaurado
+   pelo celular, elemento fora de quadro), o conteudo ficaria invisivel para sempre.
+   Este fallback revela o bloco sozinho depois de 1,8s — a animacao de entrada
+   continua intacta quando o JS funciona. */
+@keyframes mc-reveal-fallback{ to{opacity:1;transform:none;} }
+.fm-reveal:not(.is-visible){animation:mc-reveal-fallback .7s ease 1.8s forwards;}
+.fm-reveal.is-visible{animation:none;}
+@media (prefers-reduced-motion: reduce){.fm-reveal:not(.is-visible){animation:none;}}
