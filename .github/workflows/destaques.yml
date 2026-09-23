@@ -7,7 +7,7 @@ name: Atualizar Destaques (Substack)
 
 on:
   schedule:
-    - cron: "0 9 * * *"        # diariamente, 09:00 UTC (06:00 em Brasilia)
+    - cron: "0 */6 * * *"      # a cada 6 horas (00/06/12/18 UTC)
   workflow_dispatch:            # permite rodar manualmente na aba Actions
   push:
     branches: [main]
