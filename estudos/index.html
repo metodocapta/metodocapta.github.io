@@ -61,24 +61,53 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 .site-ft a{color:#7ef0e2;text-decoration:none;margin-right:14px}
 @media(max-width:640px){article{padding:18px 16px 50px}article table{display:block;overflow-x:auto;white-space:nowrap}}
 
-.hub-hero{padding:30px 0 6px;}
-.hub-hero h1{font:600 clamp(30px,4vw,46px)/1.16 Oswald,Inter,sans-serif;color:#eafffb;margin:0 0 12px;}
-.hub-hero p{font-size:17px;line-height:1.62;color:#b9dad6;max-width:840px;margin:0;}
-.hub-list{display:grid;gap:16px;margin:26px 0 10px;}
-.hub-card{display:block;padding:22px 24px;border-radius:16px;text-decoration:none;
-  background:#0a2f39;border:1px solid rgba(127,227,216,.22);transition:border-color .2s,transform .2s;}
-.hub-card:hover{border-color:#0ABCB0;transform:translateY(-2px);}
-.hub-card .data{display:inline-block;font:600 11.5px/1 Oswald,Inter,sans-serif;letter-spacing:.14em;
-  text-transform:uppercase;color:#0ABCB0;margin-bottom:10px;}
-.hub-card h2{font:600 clamp(19px,2.2vw,25px)/1.3 Oswald,Inter,sans-serif;color:#eafffb;margin:0 0 8px;}
-.hub-card p{font-size:15.5px;line-height:1.6;color:#b9dad6;margin:0 0 12px;}
-.hub-card .mais{font:600 14px/1 Inter,sans-serif;color:#7fe3d8;}
-.hub-zap{margin:26px 0 8px;padding:22px 24px;border-radius:16px;
-  background:linear-gradient(135deg,#062531,#0a3a45 60%,#067a72);color:#eafffb;}
+.hub-hero{padding:30px 0 4px;}
+.hub-hero .eyebrow{display:inline-block;font:600 11.5px/1 Oswald,Inter,sans-serif;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--graf);margin-bottom:12px;}
+.hub-hero h1{font:600 clamp(29px,3.6vw,44px)/1.16 Oswald,Inter,sans-serif;
+  color:var(--navy);margin:0 0 12px;}
+.hub-hero p{font-size:17px;line-height:1.62;color:var(--muted);margin:0;max-width:760px;}
+.hub-list{display:grid;gap:16px;margin:28px 0 0;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+.hub-card{display:flex;flex-direction:column;padding:22px 24px;border-radius:14px;
+  text-decoration:none;background:#fff;border:1px solid var(--line);
+  box-shadow:0 1px 2px rgba(6,37,49,.05);
+  transition:border-color .2s,box-shadow .2s,transform .2s;}
+.hub-card:hover{border-color:var(--teal);box-shadow:0 12px 28px rgba(6,37,49,.12);
+  transform:translateY(-2px);}
+.hub-card .data{font:600 11.5px/1 Oswald,Inter,sans-serif;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--graf);margin-bottom:10px;}
+.hub-card h2{font:600 clamp(18px,1.9vw,22px)/1.32 Oswald,Inter,sans-serif;
+  color:var(--navy);margin:0 0 9px;}
+.hub-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 14px;}
+.hub-card .mais{margin-top:auto;font:600 14px/1 Inter,sans-serif;color:var(--graf);}
+.hub-card:hover .mais{color:var(--teal);}
+.hub-zap{margin:28px 0 64px;padding:22px 24px;border-radius:14px;
+  background:linear-gradient(135deg,var(--navy),var(--navy2) 60%,var(--graf));color:#eafffb;}
 .hub-zap b{font-family:Oswald,Inter,sans-serif;font-size:18px;}
-.hub-zap p{margin:8px 0 0;font-size:15.5px;line-height:1.6;}
+.hub-zap p{margin:9px 0 0;font-size:15.5px;line-height:1.6;color:#cfe8e6;}
 .hub-zap a{color:#7fe3d8;font-weight:600;}
-.hub-vazio{color:#b9dad6;}
+.hub-vazio{color:var(--muted);}
+/* Direto do Substack — lista montada no navegador a partir de assets/destaques.json
+   (o GitHub Action atualiza esse arquivo todo dia, entao a lista nunca envelhece) */
+.hub-sub{margin:34px 0 0;}
+.hub-sub-h{font:600 19px/1.3 Oswald,Inter,sans-serif;color:var(--navy);margin:0 0 4px;}
+.hub-sub-lead{font-size:14.5px;color:var(--muted);margin:0 0 14px;}
+.hub-sub-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);}
+.hub-sub-list li{border-bottom:1px solid var(--line);}
+.hub-sub-list a{display:flex;align-items:baseline;gap:14px;padding:13px 2px;text-decoration:none;}
+.hub-sub-list .d{flex:0 0 92px;font:600 11.5px/1.45 Oswald,Inter,sans-serif;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--graf);}
+.hub-sub-list .t{flex:1 1 auto;font-size:15.5px;color:var(--navy);}
+.hub-sub-list a:hover .t{color:var(--teal);}
+.hub-sub-list .x{flex:0 0 auto;font:600 13px/1 Inter,sans-serif;color:var(--graf);}
+.hub-sub-more{margin:12px 0 0;font-size:14.5px;}
+@media(max-width:640px){
+  .hub-hero{padding-top:22px;}
+  .hub-card{padding:19px 20px;}
+  .hub-sub-list a{flex-wrap:wrap;gap:3px;}
+  .hub-sub-list .d{flex:0 0 100%;}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Estudos de captação — Método Capta+", "description": "Estudos técnicos de captação de recursos para o Terceiro Setor: dados, legislação e o que muda na prática para OSCs, cooperativas e associações.", "url": "https://metodocapta.github.io/estudos/", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "Método Capta+", "url": "https://metodocapta.github.io/"}, "publisher": {"@type": "Organization", "name": "Método Capta+", "@id": "https://metodocapta.github.io/#organizacao"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 1, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Incentivos Fiscais (2015-2026)", "url": "https://metodocapta.github.io/estudos/mapa-da-realidade-captacao-reciclagem/"}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://metodocapta.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Estudos", "item": "https://metodocapta.github.io/estudos/"}]}</script>
@@ -91,11 +120,18 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 <div class="crumb"><a href="/">Início</a> › Estudos</div>
 <main class="wrap">
 <section class="hub-hero">
+<span class="eyebrow">Método Capta+</span>
 <h1>Estudos de captação</h1>
 <p>Estudos técnicos de captação de recursos para o Terceiro Setor: dados, legislação e o que muda na prática para OSCs, cooperativas e associações.</p>
 </section>
 <section class="hub-list">
 <a class="hub-card" href="/estudos/mapa-da-realidade-captacao-reciclagem/"><span class="data">23 set 2026</span><h2>O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Incentivos Fiscais (2015-2026)</h2><p>De cada R$ 10 que as cooperativas pediram na Lei de Incentivo à Reciclagem, só R$ 3 chegaram.</p><span class="mais">Ler o estudo &rsaquo;</span></a>
+</section>
+<section class="hub-sub" id="hub-sub" hidden>
+<h2 class="hub-sub-h">Direto do Substack</h2>
+<p class="hub-sub-lead">Cada estudo e estratégia de captação sai primeiro na newsletter. Esta lista se atualiza sozinha.</p>
+<ul class="hub-sub-list" id="hub-sub-list"></ul>
+<p class="hub-sub-more"><a href="https://minutocaptamais.substack.com/" target="_blank" rel="noopener">Ver todas as newsletters no Substack &rsaquo;</a></p>
 </section>
 <section class="hub-zap">
 <b>Todos os estudos saem primeiro no Substack.</b>
@@ -107,5 +143,31 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 <div><b>Método Capta+</b> — captação de recursos e gestão de projetos para o Terceiro Setor.</div>
 <div><a href="/">Início</a><a href="/metodo-capta-plus/">Método</a><a href="https://minutocaptamais.substack.com/">Substack</a></div>
 </div></footer>
+<script>
+(function () {
+  var box = document.getElementById('hub-sub');
+  var lista = document.getElementById('hub-sub-list');
+  if (!box || !lista) return;
+  function esc(s) {
+    return (s || '').replace(/[&<>"]/g, function (c) {
+      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c];
+    });
+  }
+  fetch('/assets/destaques.json', { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      var itens = (d && d.itens) || [];
+      if (!itens.length) return;
+      lista.innerHTML = itens.map(function (it) {
+        return '<li><a href="' + esc(it.link) + '" target="_blank" rel="noopener">'
+          + '<span class="d">' + esc(it.data_pt) + '</span>'
+          + '<span class="t">' + esc(it.titulo_estrategico || it.titulo) + '</span>'
+          + '<span class="x">Abrir &rsaquo;</span></a></li>';
+      }).join('');
+      box.hidden = false;
+    })
+    .catch(function () {});
+})();
+</script>
 </body>
 </html>
