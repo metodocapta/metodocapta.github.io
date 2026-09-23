@@ -229,7 +229,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                           if (!itens.length) { if (vazio) vazio.hidden = false; return; }
                           track.innerHTML = itens.map(function (it) {
                             var img = it.imagem
-                              ? '<img src="' + esc(it.imagem) + '" alt="" loading="lazy" decoding="async">'
+                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" loading="lazy" decoding="async">'
                               : '<span class="fm-dest-semimg">Método Capta+</span>';
                             return '<article class="fm-dest-card">'
                               + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
