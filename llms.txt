@@ -53,3 +53,6 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
   em cada conta vinculada e prestação de contas.
 - Indicadores de trajetória declarada: R$ 686,9 mil em recursos captados, 15+ projetos
   liderados, 9 organizações atendidas e 1.000+ vidas impactadas.
+
+## Estudos publicados
+- [O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Inc](https://metodocapta.github.io/estudos/mapa-da-realidade-captacao-reciclagem/): estudo técnico com dados e referências.
