@@ -42,6 +42,28 @@ jobs:
           UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                 "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
 
+          # Titulos-gancho: curadoria por slug (post novo cai na heuristica)
+          TITULOS = {
+              "newsletter-fomentia-capta-10092026": "Sua OSC N\u00e3o \u00c9 Uma Empresa \u2014 N\u00e3o A Gere Como Uma",
+              "newsletter-fomentia-capta-07082026": "Habilita\u00e7\u00e3o N\u00e3o Se Resolve na V\u00e9spera do Edital",
+              "newsletter-fomentia-capta-03092026": "De Cada R$ 10 Pedidos na LIR, S\u00f3 R$ 3 Chegam",
+              "newsletter-fomentia-capta-01092026": "O Pente Que Separa a Pot\u00eancia da Car\u00eancia",
+              "newsletter-fomentia-capta-31082026": "Projeto Gen\u00e9rico \u00c9 o Novo Lixo Institucional",
+          }
+          RESUMO_MAX = 130
+
+          def titulo_estrategico(slug, lead):
+              if slug in TITULOS:
+                  return TITULOS[slug]
+              s = re.sub(r"^\s*ESTRAT[\u00c9E]GIA DE CAPTA[\u00c7C][\u00c3A]O"
+                         r"(\s+DE\s+RECURSOS)?\s*\d{0,2}[A-Z]?\d?\s*[-\u2013\u2014:.]?\s*",
+                         "", lead or "", flags=re.I)
+              s = re.sub(r"^\s*NEWSLETTER[^:]*:\s*", "", s, flags=re.I)
+              frase = re.split(r"(?<=[.!?])\s", s.strip())[0].strip(" -\u2013\u2014:;.")
+              if len(frase) > 88:
+                  frase = (frase[:88].rsplit(" ", 1)[0] or frase[:88]).rstrip(",.;:")
+              return frase or "Estrat\u00e9gia de Capta\u00e7\u00e3o"
+
           def texto(bruto, limite=None):
               s = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", bruto or "", flags=re.I)
               s = re.sub(r"<[^>]+>", " ", s)
@@ -122,12 +144,15 @@ jobs:
               if not titulo or not link:
                   continue
               iso, pt = data_pt(item.findtext("pubDate"))
+              lead = marca(texto(item.findtext("description")))
+              slug = link.rstrip("/").split("/")[-1]
               itens.append({
                   "titulo": marca(titulo),
+                  "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
                   "link": link,
                   "data": iso,
                   "data_pt": pt,
-                  "resumo": marca(texto(item.findtext("description"), 190)),
+                  "resumo": marca(texto(item.findtext("description"), RESUMO_MAX)),
                   "imagem": imagem(item),
               })
               if len(itens) >= LIMITE:

@@ -206,7 +206,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                         <div class="fm-heading fm-heading-center fm-reveal">
                             <span class="fm-kicker">Destaques</span>
                             <h2>Últimos estudos<br><em>e newsletters.</em></h2>
-                            <p>O que acabou de sair no Substack — atualizado direto do feed.</p>
+                            <p>Conheça nossas Estratégias de Captação Atualizadas Abaixo - SÓ CLICAR PARA CAPTAR!!!</p>
                         </div>
                         <div class="fm-dest-wrap">
                             <div class="fm-dest-track" id="fm-dest-track" aria-live="polite"></div>
@@ -235,9 +235,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                               + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
                               + '<span class="fm-dest-img">' + img
                               + '<span class="fm-dest-data">' + esc(it.data_pt) + '</span></span>'
-                              + '<h3>' + esc(it.titulo) + '</h3>'
+                              + '<h3>' + esc(it.titulo_estrategico || it.titulo) + '</h3>'
                               + '<p>' + esc(it.resumo) + '</p>'
-                              + '<span class="fm-dest-mais">Ler no Substack &#8594;</span>'
+                              + '<span class="fm-dest-mais">Leia a Estratégia!</span>'
                               + '</a></article>';
                           }).join('');
                           function passo() {
