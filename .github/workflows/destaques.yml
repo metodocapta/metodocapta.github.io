@@ -7,7 +7,7 @@ name: Atualizar Destaques (Substack)
 
 on:
   schedule:
-    - cron: "0 */6 * * *"      # a cada 6 horas (00/06/12/18 UTC)
+    - cron: "0 * * * *"        # de hora em hora (post novo aparece em ate ~1h)
   workflow_dispatch:            # permite rodar manualmente na aba Actions
   push:
     branches: [main]
@@ -42,14 +42,14 @@ jobs:
           UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                 "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
 
-          # Titulos-gancho: curadoria por slug (post novo cai na heuristica)
-          TITULOS = {
-              "newsletter-fomentia-capta-10092026": "Sua OSC N\u00e3o \u00c9 Uma Empresa \u2014 N\u00e3o A Gere Como Uma",
-              "newsletter-fomentia-capta-07082026": "Habilita\u00e7\u00e3o N\u00e3o Se Resolve na V\u00e9spera do Edital",
-              "newsletter-fomentia-capta-03092026": "De Cada R$ 10 Pedidos na LIR, S\u00f3 R$ 3 Chegam",
-              "newsletter-fomentia-capta-01092026": "O Pente Que Separa a Pot\u00eancia da Car\u00eancia",
-              "newsletter-fomentia-capta-31082026": "Projeto Gen\u00e9rico \u00c9 o Novo Lixo Institucional",
-          }
+          # Titulos-gancho: curadoria por slug, lida do MESMO arquivo que o
+          # script local usa (assets/titulos_gancho.json) — uma so lista.
+          try:
+              with open("assets/titulos_gancho.json", encoding="utf-8") as fh:
+                  TITULOS = {k: v for k, v in json.load(fh).items()
+                             if not k.startswith("_")}
+          except (OSError, ValueError):
+              TITULOS = {}
           RESUMO_MAX = 130
 
           def titulo_estrategico(slug, lead):
