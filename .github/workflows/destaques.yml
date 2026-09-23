@@ -32,7 +32,7 @@ jobs:
       - name: Coletar o feed do Substack
         run: |
           python3 - <<'PY'
-          import email.utils, html, json, re, time, urllib.error, urllib.request
+          import email.utils, html, json, re, time, urllib.error, urllib.parse, urllib.request
           from datetime import date
 
           FEED  = "https://minutocaptamais.substack.com/feed"
@@ -90,7 +90,29 @@ jobs:
                           time.sleep(5 * (i + 1))
               raise erro
 
-          bruto = baixar(FEED)
+          # O Substack (Cloudflare) bloqueia o IP do runner do GitHub (HTTP 403).
+          # Tenta direto e, se falhar, por proxies publicos de leitura que buscam
+          # do IP deles — devolvendo o mesmo XML.
+          FONTES = [
+              FEED,
+              "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe=""),
+              "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe=""),
+              "https://api.codetabs.com/v1/proxy?quest=" + urllib.parse.quote(FEED, safe=""),
+          ]
+
+          def pegar_feed():
+              for src in FONTES:
+                  try:
+                      bruto = baixar(src)
+                      if "<item" in bruto:
+                          print("fonte OK:", src[:74])
+                          return bruto
+                      print("sem itens:", src[:74])
+                  except Exception as exc:
+                      print("falhou:", src[:60], "->", exc)
+              raise RuntimeError("nenhuma fonte retornou o feed do Substack")
+
+          bruto = pegar_feed()
 
           import xml.etree.ElementTree as ET
           itens = []
