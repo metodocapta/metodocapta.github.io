@@ -793,3 +793,6 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-reveal:not(.is-visible){animation:mc-reveal-fallback .7s ease 1.8s forwards;}
 .fm-reveal.is-visible{animation:none;}
 @media (prefers-reduced-motion: reduce){.fm-reveal:not(.is-visible){animation:none;}}
+/* nota do mecanismo: o fluxo de 7 pilulas e INTERNO as seis etapas */
+.fm-mech-note{margin:0 0 14px;font:600 11.5px/1.4 Oswald,Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mc-teal-light)}
+.fm-mech-note strong{color:var(--mc-teal)}

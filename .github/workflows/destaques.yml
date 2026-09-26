@@ -73,8 +73,8 @@ jobs:
               return s
 
           def marca(s):
-              s = re.sub(r"\bFOMENTIA\b", "M\u00c9TODO", s or "")
-              s = re.sub(r"\bFomentia\b", "M\u00e9todo", s)
+              s = re.sub(r"\bMÉTODO CAPTA+\b", "M\u00c9TODO", s or "")
+              s = re.sub(r"\bMétodo Capta+\b", "M\u00e9todo", s)
               return re.sub(r"\s+", " ", s).strip()
 
           def data_pt(pub):

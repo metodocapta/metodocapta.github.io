@@ -455,7 +455,7 @@ body .entry-title:empty { display: none !important; }
 }
 
 
-/* V2.1 — página Método Capta+ */
+/* V2.1 — págino Método Capta+ */
 html:has(body.fm-method-page),
 body.fm-method-page { margin: 0 !important; padding: 0 !important; background: #031413 !important; }
 body.fm-method-page #wpadminbar { position: fixed; }
