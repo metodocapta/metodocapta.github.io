@@ -819,3 +819,53 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-partner-card img{max-height:44px !important}
   .fm-partner-nome span{font-size:12.5px}
 }
+
+/* ===== FRENTE 1 — CAMADA EDITORIAL (sobrio, 100% na paleta) =====
+   Fios divisórios, numeração de seção, número vazado, citação e capitular.
+   Só alphas/tints de navy/teal/grafite/laranja — nenhuma cor nova. */
+
+/* 1) FIOS DIVISORIOS entre as secoes (1px, traco solido inicial + fade) */
+.fm-section{position:relative}
+.fm-section + .fm-section::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,
+    rgba(10,188,176,.55) 0,rgba(10,188,176,.55) 72px,
+    rgba(10,188,176,.16) 72px,rgba(10,188,176,.06) 58%,rgba(10,188,176,0) 100%)}
+
+/* 2) NUMERACAO DE SECAO (01..12) — entra no kicker existente */
+body{counter-reset:fm-secao}
+.fm-section{counter-increment:fm-secao}
+.fm-section .fm-kicker::before{content:counter(fm-secao,decimal-leading-zero) " · ";
+  color:rgba(127,227,216,.72);letter-spacing:.12em}
+
+/* 3) NUMERO VAZADO (camada de fundo nos pilares) */
+.fm-pillars{counter-reset:fm-pilar}
+.fm-pillar{counter-increment:fm-pilar;position:relative;overflow:hidden}
+.fm-pillar::before{content:counter(fm-pilar,decimal-leading-zero);pointer-events:none;
+  position:absolute;top:-16px;right:6px;z-index:0;
+  font:700 clamp(50px,6vw,92px)/1 Oswald,Inter,sans-serif;
+  color:rgba(10,188,176,.06);-webkit-text-stroke:1px rgba(10,188,176,.20)}
+.fm-pillar > *{position:relative;z-index:1}
+
+/* 4) CITACAO + CAPITULAR no manifesto */
+.fm-manifesto .fm-lead{border-left:3px solid rgba(10,188,176,.55);padding-left:18px;
+  font-size:clamp(17px,1.5vw,20px);line-height:1.62}
+.fm-manifesto .fm-lead::first-letter{float:left;margin:4px 10px 0 0;
+  font:700 52px/.86 Oswald,Inter,sans-serif;color:var(--mc-teal)}
+
+/* 5) INDICE DA HOME (arquivo editorial) */
+.fm-indice{max-width:1120px;margin:0 auto;padding:16px 0 4px}
+.fm-indice ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;
+  font:500 12.5px/1.6 Oswald,Inter,sans-serif;letter-spacing:.10em;text-transform:uppercase}
+.fm-indice li{display:flex;align-items:baseline;gap:7px}
+.fm-indice li b{font-weight:700;color:rgba(127,227,216,.62);font-size:11.5px}
+.fm-indice a{color:rgba(234,255,251,.78);text-decoration:none}
+.fm-indice a:hover{color:var(--mc-teal)}
+.fm-indice li + li::before{content:"";width:1px;height:11px;align-self:center;
+  background:rgba(10,188,176,.22);margin-right:14px}
+
+@media(max-width:760px){
+  .fm-pillar::before{font-size:46px;top:-8px}
+  .fm-manifesto .fm-lead::first-letter{font-size:42px}
+  .fm-indice ol{gap:5px 14px;font-size:11.5px}
+  .fm-indice li + li::before{margin-right:9px}
+}
