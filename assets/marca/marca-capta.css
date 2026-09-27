@@ -852,22 +852,25 @@ body{counter-reset:fm-secao}
 .fm-manifesto .fm-lead::first-letter{float:left;margin:4px 10px 0 0;
   font:700 52px/.86 Oswald,Inter,sans-serif;color:var(--mc-teal)}
 
-/* 5) INDICE DA HOME (arquivo editorial) */
-.fm-indice{max-width:1120px;margin:0 auto;padding:16px 0 4px}
-.fm-indice ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;
-  font:500 12.5px/1.6 Oswald,Inter,sans-serif;letter-spacing:.10em;text-transform:uppercase}
-.fm-indice li{display:flex;align-items:baseline;gap:7px}
-.fm-indice li b{font-weight:700;color:rgba(127,227,216,.62);font-size:11.5px}
-.fm-indice a{color:rgba(234,255,251,.78);text-decoration:none}
+/* 5) INDICE DA HOME (arquivo editorial) — GRADE alinhada:
+   colunas iguais, numeros em coluna propria (alinhados) e sem separador solto. */
+.fm-indice{max-width:1120px;margin:0 auto;padding:18px 0 6px}
+.fm-indice ol{list-style:none;margin:0;padding:0;display:grid;gap:9px 20px;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  font:500 12.5px/1.5 Oswald,Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.fm-indice li{display:flex;align-items:baseline;gap:8px;min-width:0}
+.fm-indice li b{flex:0 0 auto;min-width:1.7em;font-weight:700;font-size:11.5px;
+  color:rgba(127,227,216,.55)}
+.fm-indice a{color:rgba(234,255,251,.80);text-decoration:none;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;flex:1 1 auto}
 .fm-indice a:hover{color:var(--mc-teal)}
-.fm-indice li + li::before{content:"";width:1px;height:11px;align-self:center;
-  background:rgba(10,188,176,.22);margin-right:14px}
+.fm-indice li + li::before{content:none}   /* a grade organiza; sem separador solto */
 
 @media(max-width:760px){
   .fm-pillar::before{font-size:46px;top:-8px}
   .fm-manifesto .fm-lead::first-letter{font-size:42px}
-  .fm-indice ol{gap:5px 14px;font-size:11.5px}
-  .fm-indice li + li::before{margin-right:9px}
+  .fm-indice ol{gap:8px 14px;font-size:11.5px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fm-indice li + li::before{content:none}
 }
 
 /* ===== ONDA 2 — TRILHO INTERATIVO DOS 6 PILARES =====
