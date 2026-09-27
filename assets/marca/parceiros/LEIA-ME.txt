@@ -1,0 +1,29 @@
+LOGOS DAS ENTIDADES PARCEIRAS
+=============================
+
+Salve aqui o logo de cada entidade com EXATAMENTE um destes nomes.
+O site passa a exibi-lo no lugar do nome (na proxima geracao) — sem editar codigo.
+
+  cooperclim.png            -> COOPERCLIM            (cooperativa de catadores)
+  amara.png                 -> AMARA                 (Associacao de Amparo...)
+  artesania-cultural.png    -> Artesania Cultural
+  energycoop.png            -> ENERGYCOOP            (federacao/cooperativa de energia)
+  tecnoarte.png             -> Tecnoarte
+  bere-xikrin.png           -> Bere Xikrin           (Associacao Bep)
+  mar-grande.png            -> Instituto Mar Grande
+
+Formatos aceitos: .png .svg .webp .jpg .jpeg
+Prefira PNG com FUNDO TRANSPARENTE (as placas do site sao escuras; um logo com
+fundo branco aparece como um retangulo branco).
+
+Ja exibidos (nao precisam ser enviados):
+  associacao-recicla.png · projeto-crescer.png · feccat.png   (vem do espelho)
+
+Consertar:
+  - feccat.png tem contraste baixo no fundo escuro -> enviar versao clara.
+
+Por que estes sao os unicos que faltam:
+  - a pasta OSCS/ NAO guarda logos das entidades (so documentos/recibos);
+  - a busca automatica na web trouxe ENTIDADES HOMONIMAS (faccat.br = faculdade,
+    vtexassets = loja) e foi descartada de proposito: logo de parceiro so entra
+    com arquivo verificado.
