@@ -34,7 +34,7 @@ wp-content/ wp-includes/        assets do tema e plugins
 ## Contato
 
 - WhatsApp: [wa.me/5544999120638](https://wa.me/5544999120638)
-- E-mail: drallanvieira@gmail.com
+- E-mail: metodocaptamais@gmail.com
 
 ## Publicação (GitHub Pages)
 

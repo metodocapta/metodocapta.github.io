@@ -869,3 +869,28 @@ body{counter-reset:fm-secao}
   .fm-indice ol{gap:5px 14px;font-size:11.5px}
   .fm-indice li + li::before{margin-right:9px}
 }
+
+/* ===== ONDA 2 — TRILHO INTERATIVO DOS 6 PILARES =====
+   Os cards viram etapas clicaveis; um painel unico troca por etapa.
+   Sem cor nova: teal/grafite em alpha sobre o navy. */
+.fm-pillars .fm-pillar{cursor:pointer;transition:border-color .2s,transform .2s,box-shadow .2s}
+.fm-pillars .fm-pillar:hover{transform:translateY(-3px)}
+.fm-pillars .fm-pillar.is-ativa{border-color:var(--mc-teal) !important;
+  box-shadow:0 14px 34px rgba(6,37,49,.45),inset 0 0 0 1px rgba(10,188,176,.25)}
+.fm-pillars .fm-pillar.is-ativa .fm-pillar-verb{color:var(--mc-teal)}
+.fm-pillars .fm-pillar:focus-visible{outline:3px solid rgba(10,188,176,.75);outline-offset:3px}
+.fm-engine{margin:22px 0 0;padding:20px 24px;border-radius:16px;
+  border:1px solid rgba(10,188,176,.28);
+  background:linear-gradient(135deg,rgba(10,188,176,.10),rgba(6,122,114,.06))}
+.fm-engine-p{margin:0}
+.fm-engine-txt{margin:0 0 10px;font-size:16.5px;line-height:1.62;color:var(--fm-white,#eafffb)}
+.fm-engine-meta{margin:4px 0 0;font-size:13.5px;color:rgba(207,232,230,.86)}
+.fm-engine-meta b{color:rgba(127,227,216,.95);font-weight:600}
+.fm-engine-mods{display:inline-block;padding:2px 10px;border-radius:999px;
+  background:rgba(10,188,176,.16);border:1px solid rgba(10,188,176,.42);
+  font:600 11.5px/1.6 Oswald,Inter,sans-serif;letter-spacing:.08em;color:#bfeee9}
+@media(max-width:760px){
+  .fm-pillars .fm-pillar:hover{transform:none}
+  .fm-engine{padding:16px 18px}
+  .fm-engine-txt{font-size:15.5px}
+}
