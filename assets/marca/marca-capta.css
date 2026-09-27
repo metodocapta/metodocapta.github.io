@@ -841,9 +841,9 @@ body{counter-reset:fm-secao}
 .fm-pillars{counter-reset:fm-pilar}
 .fm-pillar{counter-increment:fm-pilar;position:relative;overflow:hidden}
 .fm-pillar::before{content:counter(fm-pilar,decimal-leading-zero);pointer-events:none;
-  position:absolute;top:-16px;right:6px;z-index:0;
-  font:700 clamp(50px,6vw,92px)/1 Oswald,Inter,sans-serif;
-  color:rgba(10,188,176,.06);-webkit-text-stroke:1px rgba(10,188,176,.20)}
+  position:absolute;right:16px;bottom:6px;z-index:0;
+  font:700 clamp(42px,4.4vw,64px)/1 Oswald,Inter,sans-serif;
+  color:rgba(10,188,176,.05);-webkit-text-stroke:1px rgba(10,188,176,.15)}
 .fm-pillar > *{position:relative;z-index:1}
 
 /* 4) CITACAO + CAPITULAR no manifesto */
