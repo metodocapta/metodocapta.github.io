@@ -963,3 +963,22 @@ body{counter-reset:fm-secao}
 }
 /* textos longos nunca estouram a tela */
 .fm-engine-txt,.fm-radar-kpi span,.fm-partner-nome span{overflow-wrap:anywhere}
+
+/* ===== MOBILE: o Indice vive DENTRO do painel do menu (nao em overlay) =====
+   O menu mobile e um painel rolavel. Com position:absolute, o botao ficava
+   cortado na borda e a lista vazava sobre o site, impedindo o scroll de chegar
+   ao fim. Aqui o Indice passa a ser item normal do painel. */
+@media (max-width:900px){
+  .fm-nav-indice{display:block !important;width:100%;position:static !important}
+  .fm-nav-indice .fm-indice-btn{display:block !important;width:100%;text-align:left;
+    padding:14px 0 !important;border-bottom:1px solid rgba(10,188,176,.18) !important}
+  .fm-nav-indice ol{position:static !important;left:auto !important;right:auto !important;
+    top:auto !important;width:100% !important;min-width:0 !important;
+    display:none !important;grid-template-columns:1fr !important;
+    border:0 !important;border-radius:0 !important;box-shadow:none !important;
+    background:transparent !important;padding:8px 0 10px 6px !important;margin:0 !important;
+    max-height:none !important;overflow:visible !important}
+  .fm-nav-indice.aberto ol{display:grid !important}
+  .fm-nav-indice ol li{padding:7px 0;white-space:normal}
+  .fm-nav-indice ol a{font-size:14px}
+}
