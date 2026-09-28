@@ -990,3 +990,16 @@ body{counter-reset:fm-secao}
     overflow-y:auto !important;overflow-x:hidden !important;
     overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 }
+
+/* "Indice" com SINAL de que abre: seta + contagem de secoes */
+.fm-indice-num{display:inline-block;margin-left:7px;padding:1px 7px;border-radius:999px;
+  background:rgba(10,188,176,.18);border:1px solid rgba(10,188,176,.45);
+  font-size:10.5px;font-weight:600;color:#bfeee9;vertical-align:middle}
+.fm-indice-seta{display:inline-block;margin-left:5px;font-size:11px;
+  transition:transform .2s ease;vertical-align:middle}
+.fm-nav-indice.aberto .fm-indice-seta{transform:rotate(180deg)}
+.fm-nav-indice.aberto .fm-indice-btn{color:#fff !important}
+/* destaque leve: o indice e o mapa da pagina */
+.fm-nav-indice .fm-indice-btn{color:#7fe3d8 !important}
+.fm-nav-indice.aberto .fm-indice-btn,
+.fm-nav-indice .fm-indice-btn:hover{color:#fff !important}
