@@ -982,3 +982,11 @@ body{counter-reset:fm-secao}
   .fm-nav-indice ol li{padding:7px 0;white-space:normal}
   .fm-nav-indice ol a{font-size:14px}
 }
+
+/* o painel do menu no mobile precisa ROLAR por dentro: com o Indice aberto ele
+   fica mais alto que a tela e os ultimos itens ficariam inalcancaveis */
+@media (max-width:900px){
+  .fm-nav{max-height:calc(100vh - 110px) !important;max-height:calc(100dvh - 110px) !important;
+    overflow-y:auto !important;overflow-x:hidden !important;
+    overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+}
