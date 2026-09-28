@@ -674,5 +674,20 @@ var a=w.classList.toggle('aberto');b.setAttribute('aria-expanded',a?'true':'fals
 document.addEventListener('click',function(){w.classList.remove('aberto');
 b.setAttribute('aria-expanded','false');});})();
 </script>
+<!-- fm-indice-toggle -->
+<script>
+(function(){
+  var b=document.querySelector('.fm-indice-btn');if(!b)return;
+  var w=b.parentNode;
+  b.addEventListener('click',function(e){
+    e.stopPropagation();
+    var a=w.classList.toggle('aberto');
+    b.setAttribute('aria-expanded',a?'true':'false');
+  });
+  document.addEventListener('click',function(){
+    w.classList.remove('aberto');b.setAttribute('aria-expanded','false');
+  });
+})();
+</script><!-- /fm-indice-toggle -->
 </body>
 </html>
