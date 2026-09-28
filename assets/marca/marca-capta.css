@@ -128,7 +128,7 @@ a{transition:color .2s ease;}
 a:hover{color:var(--mc-teal-2);}
 
 /* --- nav: sem caixa APENAS no desktop (no mobile o .fm-nav é um dropdown) --- */
-@media (min-width:861px){
+@media (min-width:901px){
   nav[class*="fm-nav"],.fm-nav{
     background:transparent !important;
     border-bottom:0 !important;
@@ -156,7 +156,7 @@ a:hover{color:var(--mc-teal-2);}
 .fm-menu-toggle span{background:#eafffb !important;}
 
 /* --- dropdown do menu no mobile: fundo sólido para não misturar com o conteúdo --- */
-@media (max-width:860px){
+@media (max-width:900px){
   .fm-nav{
     background:linear-gradient(180deg,#062531 0%,#08343c 100%) !important;
     border:1px solid rgba(10,188,176,.32) !important;
@@ -346,7 +346,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
 .mc-zap .mc-zap__txt{white-space:nowrap;}
 @keyframes mcZapIn{to{transform:translateY(0);opacity:1;}}
-@media (max-width:720px){
+@media (max-width:760px){
   .mc-zap{right:14px;bottom:14px;padding:13px;gap:0;}
   .mc-zap .mc-zap__txt{display:none;}
   .mc-zap svg{width:28px;height:28px;}
@@ -451,7 +451,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-metric-note strong{color:var(--mc-navy) !important;}
 
 /* --- 10) PARA QUEM É --- */
-.fm-audience-head{max-width:720px;margin-bottom:34px;}
+.fm-audience-head{max-width:760px;margin-bottom:34px;}
 .fm-audience-head h2{margin-bottom:14px;}
 .fm-audience-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;}
 .fm-audience-card{
@@ -471,7 +471,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
     linear-gradient(160deg,#062531 0%,#08343c 58%,#0a4a4a 100%) !important;
   text-align:center;
 }
-.fm-cta-inner{max-width:820px;margin:0 auto;}
+.fm-cta-inner{max-width:900px;margin:0 auto;}
 .fm-cta-section h2{margin:14px 0 16px;}
 .fm-cta-section p{font-size:17px;line-height:1.65;color:#cfe8e6 !important;margin:0 auto 30px;max-width:52ch;}
 .fm-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
@@ -587,7 +587,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 /* ==========================================================================
    v2.3 · RESPONSIVIDADE FINA (mobile) — alvos de toque e legibilidade
    ========================================================================== */
-@media (max-width:768px){
+@media (max-width:760px){
   /* 1) alvos de toque confortáveis (WCAG 2.5.8: >= 44px) */
   .fm-footer-links{gap:0 14px;row-gap:0;}
   .fm-footer-links a{display:inline-block;padding:13px 3px;font-size:12.5px !important;}
@@ -668,7 +668,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 /* ==========================================================================
    v2.3 · FASE 17 — FAQ (AEO): resposta direta, nativa e indexável
    ========================================================================== */
-.fm-faq-head{max-width:720px;margin-bottom:32px;}
+.fm-faq-head{max-width:760px;margin-bottom:32px;}
 .fm-faq-list{display:grid;gap:10px;max-width:920px;}
 .fm-faq-item{
   background:rgba(255,255,255,.045);
@@ -712,7 +712,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-journey-step.is-active strong{color:var(--mc-white) !important;}
 .fm-journey-step.is-active p{color:var(--mc-teal) !important;}
 .mc-aviso{
-  max-width:720px;margin:64px auto;padding:44px 40px;text-align:center;
+  max-width:760px;margin:64px auto;padding:44px 40px;text-align:center;
   border-radius:24px;border:1px solid rgba(10,188,176,.28);
   background:
     radial-gradient(680px 320px at 50% -20%, rgba(10,188,176,.16) 0%, rgba(10,188,176,0) 62%),
@@ -916,9 +916,14 @@ body{counter-reset:fm-secao}
    Antes havia dois menus (o do topo + uma faixa solta). Agora é um só:
    6 atalhos + "Índice" que abre a lista completa. */
 .fm-nav-indice{position:relative;display:inline-flex}
-.fm-indice-btn{background:none;border:0;cursor:pointer;padding:0;font:inherit;
-  color:inherit;letter-spacing:inherit;text-transform:inherit}
-.fm-indice-btn[aria-expanded="true"],.fm-indice-btn:hover{color:var(--mc-teal)}
+.fm-nav-indice .fm-indice-btn{background:none !important;border:0 !important;
+  box-shadow:none !important;border-radius:0;padding:0;margin:0;appearance:none;
+  cursor:pointer;font:inherit;font-size:13px;letter-spacing:.085em;text-transform:uppercase;
+  color:rgba(220,239,235,.92) !important}
+.fm-nav-indice .fm-indice-btn:hover,
+.fm-nav-indice .fm-indice-btn[aria-expanded="true"]{
+  color:#ffffff !important;text-decoration:underline;text-underline-offset:6px}
+.fm-nav-indice .fm-indice-btn:focus-visible{outline:3px solid rgba(10,188,176,.85);outline-offset:4px}
 .fm-nav-indice ol{position:absolute;right:0;top:calc(100% + 12px);display:none;
   grid-template-columns:1fr 1fr;gap:8px 22px;min-width:330px;margin:0;padding:16px 18px;
   list-style:none;border-radius:14px;border:1px solid rgba(10,188,176,.30);
@@ -938,7 +943,7 @@ body{counter-reset:fm-secao}
   .fm-nav-indice ol{left:0;right:auto;width:100%;min-width:0;grid-template-columns:1fr}
 }
 /* KPIs do Radar: 4 -> 2 colunas antes de virar 1 */
-@media (max-width:820px){
+@media (max-width:900px){
   .fm-radar-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px !important}
   .fm-radar-kpi{padding:16px 14px}
 }
