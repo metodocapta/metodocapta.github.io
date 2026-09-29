@@ -1,11 +1,11 @@
 {
- "gerado_em": "2026-09-28",
+ "gerado_em": "2026-09-29",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
   "oportunidades": 763,
   "elegiveis": 8,
-  "estruturados": 18,
-  "matches": 45
+  "estruturados": 1,
+  "matches": 15
  }
 }
