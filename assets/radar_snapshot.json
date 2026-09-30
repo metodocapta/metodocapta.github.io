@@ -3,9 +3,51 @@
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1059,
+  "oportunidades": 1073,
   "elegiveis": 8,
   "estruturados": 1,
   "matches": 13
- }
+ },
+ "areas": [
+  {
+   "codigo": "EDITAL_PUBLICO",
+   "rotulo": "EDITAIS",
+   "total": 232
+  },
+  {
+   "codigo": "MROSC",
+   "rotulo": "CHAMAMENTOS PÚBLICOS",
+   "total": 23
+  },
+  {
+   "codigo": "ROUANET",
+   "rotulo": "PRONAC ROUANET",
+   "total": 562
+  },
+  {
+   "codigo": "LIR",
+   "rotulo": "LIR RECICLAGEM",
+   "total": 226
+  },
+  {
+   "codigo": "FIA",
+   "rotulo": "FIA",
+   "total": 12
+  },
+  {
+   "codigo": "FUNDO_IDOSO",
+   "rotulo": "FUNDO DO IDOSO",
+   "total": 7
+  },
+  {
+   "codigo": "LIE",
+   "rotulo": "LIE",
+   "total": 7
+  },
+  {
+   "codigo": "PNAB",
+   "rotulo": "PNAB",
+   "total": 4
+  }
+ ]
 }
