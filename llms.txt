@@ -56,3 +56,16 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## Estudos publicados
 - [O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Inc](https://metodocapta.github.io/estudos/mapa-da-realidade-captacao-reciclagem/): estudo técnico com dados e referências.
+
+## Radar de captação (por mecanismo)
+
+- [Radar de captação (hub)](https://metodocapta.github.io/radar/): índice dos mecanismos: LIR, Rouanet, Esporte, FIA, Fundo do Idoso, PNAB, MROSC e Emendas.
+- [LIR — Lei de Incentivo à Reciclagem](https://metodocapta.github.io/radar/lir/): Guia da Lei de Incentivo à Reciclagem (Lei 14.260/2021): quem pode propor, requisitos no SINIR/MTR, rubrica de captação e como se habilitar. Com oportunidades abertas no Radar.
+- [Rouanet — Lei Rouanet (PRONAC)](https://metodocapta.github.io/radar/rouanet/): Como funciona a Lei Rouanet (Lei 8.313/1991): aprovação no SALIC, quem pode destinar, contrapartidas e captação incentivada para projetos culturais.
+- [LIE — Lei de Incentivo ao Esporte](https://metodocapta.github.io/radar/esporte/): Guia da Lei de Incentivo ao Esporte (Lei 11.438/2006): quem pode captar, manifestação prévia, limites de dedução e prestação de contas de projetos esportivos e paradesportivos.
+- [FIA — Fundo da Infância e da Adolescência](https://metodocapta.github.io/radar/fia/): Como funciona o FIA (ECA, art. 260): destinação de IR por empresas e pessoas físicas, papel dos conselhos (CMDCA/CEAS) e como captar para projetos de criança e adolescente.
+- [Fundo do Idoso — Fundo Nacional do Idoso](https://metodocapta.github.io/radar/fundo-do-idoso/): Como funciona o Fundo do Idoso (Lei 12.213/2010): destinação de IR por empresas e pessoas físicas, papel dos conselhos e captação para projetos de envelhecimento ativo e cuidado.
+- [PNAB — Política Nacional Aldir Blanc](https://metodocapta.github.io/radar/pnab/): Como funciona a PNAB (Lei 14.399/2022): repasses a municípios e estados, editais locais de fomento à cultura e como organizações e agentes culturais participam.
+- [MROSC — Marco Regulatório das OSCs](https://metodocapta.github.io/radar/mrosc/): Como funciona o MROSC (Lei 13.019/2014): chamamentos públicos, termos de fomento e de colaboração, contrapartidas e prestação de contas para parcerias com o poder público.
+- [Emendas — Emendas parlamentares](https://metodocapta.github.io/radar/emendas/): Como funcionam as emendas parlamentares e as transferências especiais: indicação, plano de trabalho no Transferegov, execução e prestação de contas para OSCs e governos.
+
