@@ -3,7 +3,12 @@ name: Atualizar Destaques (Substack)
 # Puxa os ultimos 5 posts do Substack e atualiza assets/destaques.json,
 # que alimenta o slider "Destaques" da Home.
 #
-# Roda: diariamente, no botao manual, e quando um estudo novo for publicado.
+# Roda: de hora em hora, no botao manual e quando um estudo novo for publicado.
+#
+# FONTES: direto (funciona local) e rss2json (a busca e feita nos servidores
+# do rss2json, entao funciona mesmo com o IP do runner do GitHub bloqueado
+# pelo Cloudflare do Substack). Proxies antigos (allorigins/codetabs/corsproxy)
+# ficaram instaveis e seguem apenas como ultimo recurso.
 
 on:
   schedule:
@@ -43,7 +48,7 @@ jobs:
                 "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36")
 
           # Titulos-gancho: curadoria por slug, lida do MESMO arquivo que o
-          # script local usa (assets/titulos_gancho.json) — uma so lista.
+          # script local usa (assets/titulos_gancho.json) - uma so lista.
           try:
               with open("assets/titulos_gancho.json", encoding="utf-8") as fh:
                   TITULOS = {k: v for k, v in json.load(fh).items()
@@ -57,6 +62,14 @@ jobs:
               r"por\s+|reportagem|edi[\u00e7c][\u00e3a]o|newsletter|obrigad|apoio|patroc|realiza|este post)",
               re.I)
 
+          def texto(bruto, limite=None):
+              s = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", bruto or "", flags=re.I)
+              s = re.sub(r"<[^>]+>", " ", s)
+              s = " ".join(html.unescape(s).split())
+              if limite and len(s) > limite:
+                  s = (s[:limite].rsplit(" ", 1)[0] or s[:limite]).rstrip(",.;:") + "\u2026"
+              return s
+
           def titulo_estrategico(slug, lead):
               if slug in TITULOS:
                   return TITULOS[slug]
@@ -69,24 +82,27 @@ jobs:
                   frase = (frase[:88].rsplit(" ", 1)[0] or frase[:88]).rstrip(",.;:")
               return frase or "Estrat\u00e9gia de Capta\u00e7\u00e3o"
 
-          def texto(bruto, limite=None):
-              s = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", bruto or "", flags=re.I)
-              s = re.sub(r"<[^>]+>", " ", s)
-              s = " ".join(html.unescape(s).split())
-              if limite and len(s) > limite:
-                  s = (s[:limite].rsplit(" ", 1)[0] or s[:limite]).rstrip(",.;:") + "\u2026"
-              return s
+          def marca(s):
+              s = re.sub(r"\bM\u00c9TODO CAPTA+\b", "M\u00c9TODO", s or "")
+              s = re.sub(r"\bM\u00e9todo Capta+\b", "M\u00e9todo", s)
+              return re.sub(r"\s+", " ", s).strip()
 
-          def _encoded(item):
-              for el in item.iter():
-                  if el.tag.split("}")[-1].lower() == "encoded" and el.text:
-                      return el.text
-              return ""
+          def data_pt(pub):
+              pub = (pub or "").strip()
+              # rss2json entrega "2026-10-02 16:36:24"; o RSS entrega RFC 2822.
+              m = re.match(r"(\d{4})-(\d{2})-(\d{2})", pub)
+              if m:
+                  a, mo, d = (int(x) for x in m.groups())
+                  return date(a, mo, d).isoformat(), "%02d %s %d" % (d, MESES[mo-1], a)
+              try:
+                  dt = email.utils.parsedate_to_datetime(pub)
+                  return dt.date().isoformat(), "%02d %s %d" % (dt.day, MESES[dt.month-1], dt.year)
+              except (TypeError, ValueError):
+                  return "", ""
 
-          def primeiro_paragrafo(item, limite=RESUMO_MAX):
+          def primeiro_paragrafo(enc, limite=RESUMO_MAX):
               # <description> costuma ser o subtitulo (as vezes = titulo); o corpo
-              # vem em <content:encoded>. Pegamos o 1o paragrafo util.
-              enc = _encoded(item)
+              # vem em content:encoded (RSS) ou no campo "content" (rss2json).
               if not enc:
                   return ""
               enc = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", enc, flags=re.I)
@@ -99,37 +115,25 @@ jobs:
                   return texto(p, limite)
               return ""
 
-          def marca(s):
-              s = re.sub(r"\bMÉTODO CAPTA+\b", "M\u00c9TODO", s or "")
-              s = re.sub(r"\bMétodo Capta+\b", "M\u00e9todo", s)
-              return re.sub(r"\s+", " ", s).strip()
-
-          def data_pt(pub):
-              try:
-                  dt = email.utils.parsedate_to_datetime(pub)
-                  return dt.date().isoformat(), "%02d %s %d" % (dt.day, MESES[dt.month-1], dt.year)
-              except (TypeError, ValueError):
-                  return "", ""
-
-          def imagem(item):
-              for el in item.iter():
-                  tag = el.tag.split("}")[-1].lower()
-                  url = el.get("url") or el.get("href")
-                  if url and tag in ("content", "thumbnail", "enclosure") \
-                     and re.search(r"\.(jpe?g|png|webp|gif)($|\?)", url, re.I):
-                      return url
-              return ""
-
           def imagem_leve(url, largura=640):
-              if url and "/image/fetch/" in url:
-                  url = url.replace("f_auto", "f_webp")
-                  return re.sub(r"(/image/fetch/[^/]+)/", r"\1,w_%d/" % largura, url, count=1)
+              if not url or "/image/fetch/" not in url:
+                  return url
+              url = url.replace("f_auto", "f_webp")
+              url = re.sub(r"(/image/fetch/[^/]+)/", r"\1,w_%d/" % largura, url, count=1)
+              # o rss2json entrega a URL de origem decodificada; o CDN espera
+              # percent-encoded (igual ao que o RSS direto traz).
+              pre, resto = url.split("/image/fetch/", 1)
+              if "/" in resto:
+                  transf, origem = resto.split("/", 1)
+                  if "://" in origem and "%3A" not in origem.upper() and "%2F" not in origem.upper():
+                      origem = urllib.parse.quote(origem, safe="")
+                  url = pre + "/image/fetch/" + transf + "/" + origem
               return url
 
           def baixar(url, tentativas=3):
               hdrs = {
                   "User-Agent": UA,
-                  "Accept": "application/rss+xml, application/xml, text/xml, */*;q=0.8",
+                  "Accept": "application/rss+xml, application/xml, text/xml, application/json, */*;q=0.8",
                   "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.7",
                   "Cache-Control": "no-cache",
               }
@@ -145,51 +149,108 @@ jobs:
                           time.sleep(5 * (i + 1))
               raise erro
 
-          # O Substack (Cloudflare) bloqueia o IP do runner do GitHub (HTTP 403).
-          # Tenta direto e, se falhar, por proxies publicos de leitura que buscam
-          # do IP deles — devolvendo o mesmo XML.
-          FONTES = [
-              FEED,
-              "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe=""),
-              "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe=""),
-              "https://api.codetabs.com/v1/proxy?quest=" + urllib.parse.quote(FEED, safe=""),
-          ]
+          # ---- normaliza itens de RSS (XML) e de rss2json (JSON) ----
+          def itens_rss(bruto):
+              import xml.etree.ElementTree as ET
+              out = []
+              for item in ET.fromstring(bruto).iter("item"):
+                  img = ""
+                  for el in item.iter():
+                      tag = el.tag.split("}")[-1].lower()
+                      u = el.get("url") or el.get("href")
+                      if u and tag in ("content", "thumbnail", "enclosure") \
+                         and re.search(r"\.(jpe?g|png|webp|gif)($|\?)", u, re.I):
+                          img = u
+                          break
+                  enc = ""
+                  for el in item.iter():
+                      if el.tag.split("}")[-1].lower() == "encoded" and el.text:
+                          enc = el.text
+                          break
+                  out.append({
+                      "titulo": item.findtext("title") or "",
+                      "link": (item.findtext("link") or "").strip(),
+                      "pub": item.findtext("pubDate") or "",
+                      "lead": item.findtext("description") or "",
+                      "enc": enc,
+                      "img": img,
+                  })
+              return out
 
-          def pegar_feed():
-              for src in FONTES:
+          def itens_rss2json(bruto):
+              dado = json.loads(bruto)
+              out = []
+              for it in dado.get("items", []):
+                  img = ""
+                  enc = it.get("enclosure")
+                  if isinstance(enc, dict):
+                      img = enc.get("link") or ""
+                  img = img or it.get("thumbnail") or ""
+                  out.append({
+                      "titulo": it.get("title") or "",
+                      "link": (it.get("link") or "").strip(),
+                      "pub": it.get("pubDate") or "",
+                      "lead": it.get("description") or "",
+                      "enc": it.get("content") or "",
+                      "img": img,
+                  })
+              return out
+
+          def fontes():
+              q = urllib.parse.quote(FEED, safe="")
+              return [
+                  ("rss2json", "https://api.rss2json.com/v1/api.json?rss_url=" + q),
+                  ("rss", FEED),
+                  ("rss", "https://api.allorigins.win/raw?url=" + q),
+                  ("rss", "https://api.codetabs.com/v1/proxy?quest=" + q),
+                  ("rss", "https://corsproxy.io/?" + q),
+              ]
+
+          def pegar_itens():
+              for tipo, src in fontes():
                   try:
                       bruto = baixar(src)
-                      if "<item" in bruto:
-                          print("fonte OK:", src[:74])
-                          return bruto
-                      print("sem itens:", src[:74])
+                      if tipo == "rss" and "<item" not in bruto:
+                          print("sem itens:", src[:70])
+                          continue
+                      if tipo == "rss2json" and '"items"' not in bruto:
+                          print("sem itens:", src[:70])
+                          continue
+                      itens = itens_rss(bruto) if tipo == "rss" else itens_rss2json(bruto)
+                      if itens:
+                          print("fonte OK:", tipo, "->", src[:64])
+                          return itens
+                      print("vazio:", src[:70])
                   except Exception as exc:
                       print("falhou:", src[:60], "->", exc)
               raise RuntimeError("nenhuma fonte retornou o feed do Substack")
 
-          bruto = pegar_feed()
+          candidatos = pegar_itens()
 
-          import xml.etree.ElementTree as ET
           itens = []
-          for item in ET.fromstring(bruto).iter("item"):
-              titulo = texto(item.findtext("title"))
-              link = (item.findtext("link") or "").strip()
+          for c in candidatos:
+              titulo = texto(c["titulo"])
+              link = c["link"]
               if not titulo or not link:
                   continue
-              iso, pt = data_pt(item.findtext("pubDate"))
-              lead = marca(texto(item.findtext("description")))
+              iso, pt = data_pt(c["pub"])
+              lead = marca(texto(c["lead"]))
               slug = link.rstrip("/").split("/")[-1]
+              resumo = primeiro_paragrafo(c["enc"]) or texto(c["lead"], RESUMO_MAX)
               itens.append({
                   "titulo": marca(titulo),
                   "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
                   "link": link,
                   "data": iso,
                   "data_pt": pt,
-                  "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
-                  "imagem": imagem_leve(imagem(item)),
+                  "resumo": marca(resumo),
+                  "imagem": imagem_leve(c["img"]),
               })
               if len(itens) >= LIMITE:
                   break
+
+          if not itens:
+              raise RuntimeError("feed lido, mas sem itens validos")
 
           dado = {
               "gerado_em": date.today().isoformat(),
