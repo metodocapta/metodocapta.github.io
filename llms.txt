@@ -90,3 +90,17 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Prestação de contas de projeto](https://metodocapta.github.io/biblioteca/como-prestar-contas/): Prestação de contas é a comprovação da execução física e financeira do recurso. Veja o passo a passo para MROSC, emendas, fundos e leis de incentivo — sem glosa.
 - [Compliance no terceiro setor](https://metodocapta.github.io/biblioteca/compliance/): Compliance no terceiro setor é o conjunto de práticas de governança, controles e transparência que mantêm a OSC conforme as regras dos financiadores e da lei. Veja o essencial.
 
+
+## Soluções (por público e por região)
+
+- [Para quem é](https://metodocapta.github.io/para/): captação de recursos por público.
+- [Cooperativas](https://metodocapta.github.io/para/cooperativas/): Como cooperativas captam recursos públicos e incentivados: LIR, MROSC, emendas e editais. Requisitos, prontidão documental e caminhos por mecanismo.
+- [Associações](https://metodocapta.github.io/para/associacoes/): Como associações captam recursos: MROSC, fundos (FIA e Fundo do Idoso), leis de incentivo e emendas. Requisitos, passos e erros que custam meses.
+- [Federações e redes](https://metodocapta.github.io/para/federacoes-e-redes/): Como federações e redes captam em escala: padronização de projetos, leis de incentivo, fundos e prestação de contas coordenada entre as filiadas.
+- [Institutos e fundações](https://metodocapta.github.io/para/institutos-e-fundacoes/): Institutos e fundações captam com portfólio e governança: leis de incentivo, fundos e parcerias. Requisitos fiduciários, passos e prestação de contas.
+- [Conselhos e coletivos](https://metodocapta.github.io/para/conselhos-e-coletivos/): Coletivos e conselhos que estão se formalizando: o primeiro passo para captar, os mecanismos possíveis e a prontidão mínima antes de pedir recurso.
+- [OSCs](https://metodocapta.github.io/para/oscs/): OSCs (Organizações da Sociedade Civil) captam por MROSC, leis de incentivo, fundos e emendas. Entenda o caminho, os requisitos e a prestação de contas.
+- [Captação por região](https://metodocapta.github.io/captacao-de-recursos/): captação de recursos por estado.
+- [Santa Catarina](https://metodocapta.github.io/captacao-de-recursos/santa-catarina/): Captação de recursos em Santa Catarina: mecanismos ativos, editais e leis de incentivo, prontidão documental e acompanhamento para OSCs, cooperativas e associações.
+- [Paraná](https://metodocapta.github.io/captacao-de-recursos/parana/): Captação de recursos no Paraná: editais, fundos e leis de incentivo para OSCs, cooperativas e associações, com prontidão documental e acompanhamento.
+
