@@ -390,6 +390,80 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                     
 
+                
+                    <script>
+
+                    (function () {
+
+                      var track = document.getElementById('fm-dest-track');
+
+                      var vazio = document.getElementById('fm-dest-vazio');
+
+                      if (!track) return;
+
+                      function esc(s) { return (s || '').replace(/[&<>"]/g, function (c) {
+
+                        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+
+                      fetch('assets/destaques.json', { cache: 'no-store' })
+
+                        .then(function (r) { return r.ok ? r.json() : null; })
+
+                        .then(function (d) {
+
+                          var itens = (d && d.itens) || [];
+
+                          if (!itens.length) { if (vazio) vazio.hidden = false; return; }
+
+                          track.innerHTML = itens.map(function (it) {
+
+                            var img = it.imagem
+
+                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="640" height="360" loading="lazy" decoding="async">'
+
+                              : '<span class="fm-dest-semimg">M├®todo Capta+</span>';
+
+                            return '<article class="fm-dest-card">'
+
+                              + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
+
+                              + '<span class="fm-dest-img">' + img
+
+                              + '<span class="fm-dest-data">' + esc(it.data_pt) + '</span></span>'
+
+                              + '<h3>' + esc(it.titulo_estrategico || it.titulo) + '</h3>'
+
+                              + '<p>' + esc(it.resumo) + '</p>'
+
+                              + '<span class="fm-dest-mais">Leia a Estrat├®gia!</span>'
+
+                              + '</a></article>';
+
+                          }).join('');
+
+                          function passo() {
+
+                            var c = track.querySelector('.fm-dest-card');
+
+                            return c ? c.getBoundingClientRect().width + 18 : 340;
+
+                          }
+
+                          var prev = document.querySelector('.fm-dest-prev');
+
+                          var next = document.querySelector('.fm-dest-next');
+
+                          if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -passo(), behavior: 'smooth' }); });
+
+                          if (next) next.addEventListener('click', function () { track.scrollBy({ left: passo(), behavior: 'smooth' }); });
+
+                        })
+
+                        .catch(function () { if (vazio) vazio.hidden = false; });
+
+                    })();
+
+                    </script>
                 </section>
 
 <section data-v23-home="1" class="fm-section fm-partners-section" aria-labelledby="fm-partners-title" id="fm-parceiros">
