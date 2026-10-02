@@ -116,3 +116,9 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Como montar uma carteira de incentivadores (empresas do Lucro Real)](https://metodocapta.github.io/guias/como-montar-uma-carteira-de-incentivadores/): Passo a passo para montar uma carteira de incentivadores: definir a meta, calcular o número de empresas, priorizar por aderência (tema/material), preparar a abordagem e formalizar.
 - [Como prestar contas de parceria (MROSC) sem glosa](https://metodocapta.github.io/guias/como-prestar-contas-de-parceria/): Passo a passo para prestar contas de parceria (termo de fomento/colaboração, MROSC): dossiê por rubrica, conciliação da conta específica, relatório de execução e resposta a diligências.
 
+
+## FAQ e mapa
+
+- [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
+- [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
+
