@@ -370,8 +370,9 @@ def _pagina(m, total, gerado_em):
 <meta property="og:image" content="{OG}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/marca/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/marca/fontes.css">
+<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/inter-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/oswald-latin.woff2" crossorigin>
 <script type="application/ld+json">{_jsonld(m, total, gerado_em)}</script>
 <style>{CSS}</style>
 </head>
@@ -464,8 +465,9 @@ def _hub(totais, gerado_em):
 <meta property="og:site_name" content="Método Capta+">
 <meta property="og:image" content="{OG}">
 <link rel="icon" href="/assets/marca/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/marca/fontes.css">
+<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/inter-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/oswald-latin.woff2" crossorigin>
 <script type="application/ld+json">{ld}</script>
 <style>{CSS}</style>
 </head>
