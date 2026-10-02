@@ -72,3 +72,21 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Calculadora de Captação
 
 - [Calculadora de Captação](https://metodocapta.github.io/calculadora/): quantas empresas do Lucro Real (incentivadoras) cabem na meta do seu projeto.
+
+## Biblioteca (conceitos)
+
+- [Biblioteca (hub)](https://metodocapta.github.io/biblioteca/): glossário de captação e terceiro setor.
+- [OSC (Organização da Sociedade Civil)](https://metodocapta.github.io/biblioteca/o-que-e-osc/): OSC é a sigla de Organização da Sociedade Civil: entidades privadas, sem fins lucrativos, que atuam em finalidade pública — associações, fundações e cooperativas sociais. Entenda o conceito e o marco legal.
+- [MROSC (Marco Regulatório das OSCs)](https://metodocapta.github.io/biblioteca/o-que-e-mrosc/): MROSC é o Marco Regulatório das Organizações da Sociedade Civil (Lei 13.019/2014): define termos de fomento e de colaboração e o chamamento público. Veja definição, requisitos e passo a passo.
+- [SINIR](https://metodocapta.github.io/biblioteca/o-que-e-sinir/): SINIR é o Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos. A habilitação no SINIR é requisito para projetos na Lei de Incentivo à Reciclagem (LIR).
+- [MTR (Manifesto de Transporte de Resíduos)](https://metodocapta.github.io/biblioteca/o-que-e-mtr/): MTR é o Manifesto de Transporte de Resíduos: documento que rastreia a geração, o transporte e a destinação dos resíduos, exigido na LIR e na prestação de contas.
+- [LIR (Lei de Incentivo à Reciclagem)](https://metodocapta.github.io/biblioteca/o-que-e-lir/): LIR é a Lei de Incentivo à Reciclagem (Lei nº 14.260/2021): permite que empresas do Lucro Real destinem parte do IRPJ a projetos de reciclagem. Veja definição, requisitos e vedação.
+- [Logística Reversa](https://metodocapta.github.io/biblioteca/o-que-e-logistica-reversa/): Logística reversa é o retorno de produtos e embalagens pós-consumo à cadeia produtiva (PNRS, art. 33). Veja o conceito, os setores obrigados e a diferença em relação à LIR.
+- [Economia Circular](https://metodocapta.github.io/biblioteca/o-que-e-economia-circular/): Economia circular é o modelo que mantém materiais em uso o máximo de tempo, reduzindo resíduos (reuso, reciclagem, simbiose industrial). Veja definição, princípios e como projetos acessam incentivos.
+- [PRONAC](https://metodocapta.github.io/biblioteca/o-que-e-pronac/): PRONAC é o número que identifica um projeto cultural aprovado na Lei Rouanet. Entenda o que significa, para que serve e como se relaciona com o SALIC e a captação incentivada.
+- [Glosa (em prestação de contas)](https://metodocapta.github.io/biblioteca/o-que-e-glosao/): Glosa é o desconto ou a rejeição de uma despesa na prestação de contas — por insuficiência de comprovação, desvio de finalidade ou falha formal. Entenda o conceito e como evitá-la.
+- [Conta vinculada (conta específica)](https://metodocapta.github.io/biblioteca/o-que-e-conta-vinculada/): Conta vinculada é a conta bancária exclusiva do projeto, por onde entra e sai todo o recurso. É exigência comum em MROSC, emendas e leis de incentivo. Veja por que e como manter.
+- [ITG 2002 (entidades sem fins lucrativos)](https://metodocapta.github.io/biblioteca/o-que-e-itg-2002/): ITG 2002 é a norma contábil das entidades sem fins lucrativos no Brasil: trata do reconhecimento de recursos, gratuidades e prestação de contas. Veja o que ela exige.
+- [Prestação de contas de projeto](https://metodocapta.github.io/biblioteca/como-prestar-contas/): Prestação de contas é a comprovação da execução física e financeira do recurso. Veja o passo a passo para MROSC, emendas, fundos e leis de incentivo — sem glosa.
+- [Compliance no terceiro setor](https://metodocapta.github.io/biblioteca/compliance/): Compliance no terceiro setor é o conjunto de práticas de governança, controles e transparência que mantêm a OSC conforme as regras dos financiadores e da lei. Veja o essencial.
+
