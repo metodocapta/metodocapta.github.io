@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-10-01",
+ "gerado_em": "2026-10-02",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1249,
+  "oportunidades": 1472,
   "elegiveis": 8,
   "estruturados": 1,
   "matches": 13
@@ -12,42 +12,47 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 236
+   "total": 386
   },
   {
    "codigo": "MROSC",
    "rotulo": "CHAMAMENTOS PÚBLICOS",
-   "total": 23
+   "total": 40
   },
   {
    "codigo": "ROUANET",
    "rotulo": "PRONAC ROUANET",
-   "total": 722
+   "total": 757
   },
   {
    "codigo": "LIR",
    "rotulo": "LIR RECICLAGEM",
-   "total": 238
+   "total": 247
+  },
+  {
+   "codigo": "EMENDA",
+   "rotulo": "EMENDAS",
+   "total": 1
   },
   {
    "codigo": "FIA",
    "rotulo": "FIA",
-   "total": 12
+   "total": 18
   },
   {
    "codigo": "FUNDO_IDOSO",
    "rotulo": "FUNDO DO IDOSO",
-   "total": 7
+   "total": 8
   },
   {
    "codigo": "LIE",
    "rotulo": "LIE",
-   "total": 7
+   "total": 10
   },
   {
    "codigo": "PNAB",
    "rotulo": "PNAB",
-   "total": 4
+   "total": 5
   }
  ]
 }
