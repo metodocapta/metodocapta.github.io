@@ -69,3 +69,6 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [MROSC — Marco Regulatório das OSCs](https://metodocapta.github.io/radar/mrosc/): Como funciona o MROSC (Lei 13.019/2014): chamamentos públicos, termos de fomento e de colaboração, contrapartidas e prestação de contas para parcerias com o poder público.
 - [Emendas — Emendas parlamentares](https://metodocapta.github.io/radar/emendas/): Como funcionam as emendas parlamentares e as transferências especiais: indicação, plano de trabalho no Transferegov, execução e prestação de contas para OSCs e governos.
 
+## Calculadora de Captação
+
+- [Calculadora de Captação](https://metodocapta.github.io/calculadora/): quantas empresas do Lucro Real (incentivadoras) cabem na meta do seu projeto.

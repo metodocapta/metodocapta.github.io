@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de Captação — quantas empresas cabem no seu projeto | Método Capta+</title>
+<meta name="description" content="Calculadora gratuita de captação: descubra quantas empresas do Lucro Real (incentivadoras) cabem na meta do seu projeto, com faixas de ticket e próximos passos.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://metodocapta.github.io/calculadora/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora de Captação — Método Capta+">
+<meta property="og:description" content="Quantas empresas do Lucro Real cabem na meta do seu projeto? Calcule a carteira de incentivadoras em segundos.">
+<meta property="og:url" content="https://metodocapta.github.io/calculadora/">
+<meta property="og:site_name" content="Método Capta+">
+<meta property="og:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/marca/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://metodocapta.github.io/#organizacao","name":"Método Capta+","url":"https://metodocapta.github.io/","logo":"https://metodocapta.github.io/assets/marca/og-metodo-capta.png"},
+ {"@type":"WebApplication","name":"Calculadora de Captação","url":"https://metodocapta.github.io/calculadora/","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"description":"Calcula quantas empresas do Lucro Real (incentivadoras) são necessárias para atingir a meta de captação de um projeto."},
+ {"@type":"BreadcrumbList","itemListElement":[
+   {"@type":"ListItem","position":1,"name":"Início","item":"https://metodocapta.github.io/"},
+   {"@type":"ListItem","position":2,"name":"Calculadora de Captação","item":"https://metodocapta.github.io/calculadora/"}]},
+ {"@type":"FAQPage","mainEntity":[
+   {"@type":"Question","name":"Como sei quantas empresas preciso?","answer":{"@type":"Answer","text":"Divida a meta pelo ticket médio por incentivadora. A referência do Método Capta+ é R$ 150 mil/ano por empresa de R$ 1 bilhão de faturamento (≈10% de margem, 1% de IRPJ)."}},
+   {"@type":"Question","name":"Quem pode incentivar?","answer":{"@type":"Answer","text":"O incentivo fiscal é do Lucro Real: empresas (e, em alguns mecanismos, pessoas físicas) destinam parte do imposto devido a projetos aprovados."}},
+   {"@type":"Question","name":"A calculadora garante a captação?","answer":{"@type":"Answer","text":"Não. É uma estimativa de planejamento. A atuação do Método Capta+ é de meio, sem promessa de resultado."}}]}
+]}
+</script>
+<style>
+:root{--navy:#062531;--navy2:#0a3340;--teal:#0ABCB0;--graf:#067a72;--ink:#0d1f35;--muted:#4a6572;--line:#e2e8ea;--bg:#ffffff;--soft:#f4f8f8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,'Segoe UI',system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--graf)}
+.site-hd{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:18px 0}
+.site-hd .wrap{max-width:960px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:34px;display:block;max-width:100%}
+.brand b{font-family:Oswald,sans-serif;color:#fff;font-size:19px;letter-spacing:.4px;font-weight:600}
+.site-hd nav{display:flex;flex-wrap:wrap;gap:6px 14px;flex:1 1 280px;min-width:0;justify-content:flex-end}
+.site-hd nav a{color:#bdeee9;text-decoration:none;font-size:13px;letter-spacing:.06em;text-transform:uppercase;font-family:Oswald,sans-serif}
+.site-hd nav a:hover{color:#fff}
+.crumb{max-width:960px;margin:0 auto;padding:14px 20px 0;font-size:13px;color:var(--muted)}
+.crumb a{color:var(--graf);text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px;width:100%}
+.hero{padding:26px 0 6px}
+.eyebrow{display:inline-block;font:600 11.5px/1 Oswald,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--graf);margin-bottom:12px}
+.hero h1{font:600 clamp(27px,4vw,42px)/1.16 Oswald,sans-serif;color:var(--navy);margin:0 0 12px}
+.hero p.lead{font-size:17px;color:var(--muted);margin:0;max-width:780px}
+.tool{margin:26px 0 0;border:1px solid var(--line);border-radius:16px;padding:22px;background:linear-gradient(180deg,#fff,#fbfdfd)}
+.fields{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+label{display:block;font:600 12.5px/1.2 Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+input[type=number]{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font:600 18px/1 Oswald,sans-serif;color:var(--navy);font-variant-numeric:tabular-nums}
+input[type=number]:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.hint{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+.result{margin:22px 0 0;border-radius:14px;padding:20px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
+.result .big{font:700 clamp(34px,6vw,56px)/1 Oswald,sans-serif;color:#fff;font-variant-numeric:tabular-nums}
+.result .lbl{font-size:14px;color:#bfe9e3}
+.scen{display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr));margin:16px 0 0}
+.scen .card{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:#fff;text-align:center}
+.scen .card b{display:block;font:600 12px/1.3 Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:var(--graf);margin-bottom:6px}
+.scen .card .n{font:700 clamp(24px,4vw,34px)/1 Oswald,sans-serif;color:var(--navy);font-variant-numeric:tabular-nums}
+.scen .card span{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+article{padding:8px 0 50px}
+h2{font:600 clamp(20px,2.6vw,28px)/1.22 Oswald,sans-serif;color:var(--navy);margin:34px 0 12px}
+article p{margin:0 0 14px}
+article strong{color:var(--navy)}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14.5px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:var(--soft);font-family:Oswald,sans-serif;color:var(--navy);font-weight:600}
+details{border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:8px 0;background:#fff}
+details summary{cursor:pointer;font-weight:600;color:var(--navy)}
+details p{margin:10px 0 0;color:var(--muted)}
+.cta{margin:30px 0 0;padding:24px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
+.cta b{font-family:Oswald,sans-serif;display:block;font-size:20px;color:#fff;margin-bottom:6px}
+.cta p{margin:0 0 14px;color:#cfe8e6}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font:600 14px/1 Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase;background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a}
+.btn.ghost{background:transparent;border:1px solid rgba(127,227,216,.55);color:#7fe3d8;margin-left:10px}
+.muted{color:var(--muted);font-size:13.5px}
+.site-ft{background:var(--navy);color:#a9c6c3;font-size:13.5px;padding:26px 0;margin-top:30px}
+.site-ft .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.site-ft a{color:#7ef0e2;text-decoration:none;margin-right:14px}
+@media(max-width:640px){
+ html,body{overflow-x:hidden}
+ table{display:block;overflow-x:auto;white-space:nowrap}
+ .site-hd{padding:14px 0}.site-hd .wrap{align-items:flex-start;gap:8px}
+ .site-hd nav{flex:1 1 100%;width:100%;justify-content:flex-start;gap:4px 12px}
+ .site-hd nav a{font-size:11.5px;letter-spacing:.04em}
+ .scen{grid-template-columns:1fr}
+ .cta .btn{display:block;width:100%;text-align:center;margin:0 0 10px}
+ .cta .btn.ghost{margin-left:0}
+}
+</style>
+</head>
+<body>
+<header class="site-hd"><div class="wrap">
+<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.png" alt="Método Capta+"></a>
+<nav><a href="/">Início</a><a href="/radar/">Radar</a><a href="/estudos/">Estudos</a><a href="/calculadora/">Calculadora</a><a href="/metodo-capta-plus/">Método</a></nav>
+</div></header>
+<div class="crumb"><a href="/">Início</a> › Calculadora de Captação</div>
+<main class="wrap">
+<section class="hero">
+<span class="eyebrow">Ferramenta gratuita</span>
+<h1>Quantas empresas cabem no seu projeto?</h1>
+<p class="lead">A captação incentivada é feita de <strong>uma carteira</strong>, não de um só patrocinador. Informe a meta e o ticket médio e veja quantas <strong>incentivadoras</strong> (empresas do Lucro Real) você precisa.</p>
+</section>
+
+<div class="tool">
+  <div class="fields">
+    <div>
+      <label for="meta">Meta de captação (R$)</label>
+      <input id="meta" type="number" min="0" step="10000" value="600000">
+      <p class="hint">Ex.: o valor do projeto que você quer captar.</p>
+    </div>
+    <div>
+      <label for="ticket">Ticket médio por incentivadora (R$)</label>
+      <input id="ticket" type="number" min="1000" step="10000" value="150000">
+      <p class="hint">Referência: R$ 150 mil/ano por empresa de R$ 1 bi de faturamento (≈10% de margem · 1% de IRPJ).</p>
+    </div>
+  </div>
+
+  <div class="result">
+    <div class="lbl">Incentivadoras necessárias (cenário de referência)</div>
+    <div class="big" id="out-n">4</div>
+    <div class="lbl" id="out-txt">a R$ 150.000 cada · média por empresa R$ 150.000</div>
+  </div>
+
+  <div class="scen">
+    <div class="card"><b>Empresas maiores</b><div class="n" id="s-alto">3</div><span id="s-alto-t">ticket R$ 240.000</span></div>
+    <div class="card"><b>Referência</b><div class="n" id="s-med">4</div><span id="s-med-t">ticket R$ 150.000</span></div>
+    <div class="card"><b>Empresas menores</b><div class="n" id="s-baixo">7</div><span id="s-baixo-t">ticket R$ 90.000</span></div>
+  </div>
+  <p class="muted" style="margin-top:14px">Estimativa de planejamento. O incentivo fiscal é do <strong>Lucro Real</strong>; a elegibilidade de cada empresa é individual. Não há promessa de resultado.</p>
+</div>
+
+<article>
+<h2>Como o cálculo funciona</h2>
+<p>A lógica é simples: <strong>meta ÷ ticket médio = número de incentivadoras</strong>. O “ticket” é quanto cada empresa tende a destinar por ano, a partir da <strong>referência de R$ 150 mil</strong> (empresa de R$ 1 bilhão de faturamento, ~10% de margem, 1% de IRPJ). Empresas maiores tendem a destinar mais; menores, menos — por isso mostramos três cenários.</p>
+<p>Isso muda a estratégia: em vez de “buscar um patrocinador”, você constrói uma <strong>carteira de incentivadores</strong> — com materialidade e aderência por <strong>tema/material</strong> (ex.: LIR), perfil e território.</p>
+
+<h2>Exemplo</h2>
+<table>
+<thead><tr><th>Meta</th><th>Ticket de referência</th><th>Incentivadoras</th></tr></thead>
+<tbody>
+<tr><td>R$ 600 mil</td><td>R$ 150 mil</td><td>4</td></tr>
+<tr><td>R$ 1 milhão</td><td>R$ 150 mil</td><td>7</td></tr>
+<tr><td>R$ 300 mil</td><td>R$ 150 mil</td><td>2</td></tr>
+</tbody>
+</table>
+
+<h2>Perguntas frequentes</h2>
+<details><summary>Como sei quantas empresas preciso?</summary><p>Divida a meta pelo ticket médio por incentivadora. A referência do Método Capta+ é R$ 150 mil/ano por empresa de R$ 1 bilhão de faturamento.</p></details>
+<details><summary>Quem pode incentivar?</summary><p>O incentivo fiscal é do Lucro Real: empresas (e, em alguns mecanismos, pessoas físicas) destinam parte do imposto devido a projetos aprovados.</p></details>
+<details><summary>A calculadora garante a captação?</summary><p>Não. É uma estimativa de planejamento. A atuação do Método Capta+ é de meio, sem promessa de resultado.</p></details>
+
+<div class="cta">
+<b>Quer a carteira pronta para a sua meta?</b>
+<p>O Método Capta+ organiza a jornada: radar por mecanismo, elegibilidade, material por aderência e abordagem a quem decide. Diagnóstico de 30 minutos.</p>
+<a class="btn" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Usei%20a%20calculadora%20e%20quero%20falar%20sobre%20capta%C3%A7%C3%A3o">Falar no WhatsApp</a>
+<a class="btn ghost" href="/radar/">Ver o Radar por mecanismo</a>
+</div>
+<p class="muted">Última atualização: 2026-10-02.</p>
+</article>
+</main>
+<footer class="site-ft"><div class="wrap">
+<div><b>Método Capta+</b> — captação de recursos e gestão de projetos para o Terceiro Setor.</div>
+<div><a href="/">Início</a><a href="/radar/">Radar</a><a href="/estudos/">Estudos</a><a href="/calculadora/">Calculadora</a><a href="/metodo-capta-plus/">Método</a></div>
+</div></footer>
+<script>
+(function(){
+  var fmt=function(n){return 'R$ '+Number(n||0).toLocaleString('pt-BR',{maximumFractionDigits:0});};
+  function calc(){
+    var meta=parseFloat((document.getElementById('meta').value||'0'))||0;
+    var tk=parseFloat((document.getElementById('ticket').value||'150000'))||150000;
+    var n=meta>0&&tk>0?Math.ceil(meta/tk):0;
+    var media=n>0?meta/n:0;
+    document.getElementById('out-n').textContent=n;
+    document.getElementById('out-txt').textContent='a '+fmt(tk)+' cada · média por empresa '+fmt(media)+' · meta '+fmt(meta);
+    var alto=tk*1.6, baixo=tk*0.6;
+    var nA=meta>0?Math.ceil(meta/alto):0, nB=meta>0?Math.ceil(meta/baixo):0;
+    document.getElementById('s-alto').textContent=nA; document.getElementById('s-alto-t').textContent='ticket '+fmt(alto);
+    document.getElementById('s-med').textContent=n;   document.getElementById('s-med-t').textContent='ticket '+fmt(tk);
+    document.getElementById('s-baixo').textContent=nB; document.getElementById('s-baixo-t').textContent='ticket '+fmt(baixo);
+  }
+  ['meta','ticket'].forEach(function(id){var el=document.getElementById(id); if(el){el.addEventListener('input',calc);}});
+  calc();
+})();
+</script>
+</body></html>
