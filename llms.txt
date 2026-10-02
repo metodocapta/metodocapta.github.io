@@ -104,3 +104,15 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Santa Catarina](https://metodocapta.github.io/captacao-de-recursos/santa-catarina/): Captação de recursos em Santa Catarina: mecanismos ativos, editais e leis de incentivo, prontidão documental e acompanhamento para OSCs, cooperativas e associações.
 - [Paraná](https://metodocapta.github.io/captacao-de-recursos/parana/): Captação de recursos no Paraná: editais, fundos e leis de incentivo para OSCs, cooperativas e associações, com prontidão documental e acompanhamento.
 
+
+## Guias práticos (como fazer)
+
+- [Guias (hub)](https://metodocapta.github.io/guias/): passo a passo de captação.
+- [Como se habilitar no SINIR (passo a passo) para projetos de reciclagem](https://metodocapta.github.io/guias/como-se-habilitar-no-sinir/): Passo a passo para habilitar sua cooperativa ou associação no SINIR, requisito de elegibilidade da Lei de Incentivo à Reciclagem (LIR).
+- [Como emitir o MTR (Manifesto de Transporte de Resíduos) passo a passo](https://metodocapta.github.io/guias/como-emitir-o-mtr/): Passo a passo para emitir o MTR: cadastro do gerador e do transportador, emissão por movimentação e uso do manifesto como prova na captação e na prestação de contas.
+- [Como montar um plano de trabalho de projeto (metas, etapas e orçamento)](https://metodocapta.github.io/guias/como-montar-um-plano-de-trabalho/): Passo a passo para montar o plano de trabalho de um projeto: objeto, metas com indicadores, etapas, cronograma, orçamento por rubrica e nexo causal — pronto para Transferegov e MROSC.
+- [Checklist de habilitação documental para OSCs (prontidão para captar)](https://metodocapta.github.io/guias/checklist-de-habilitacao-documental/): Checklist de habilitação documental de OSC: estatuto, atas, certidões, CNPJ, conselho e conta específica. Confira a prontidão antes de disputar editais e incentivos.
+- [Como calcular o teto de captação da LIR (rubrica de 8% / R$ 120 mil)](https://metodocapta.github.io/guias/como-calcular-o-teto-de-captacao-da-lir/): Como calcular a rubrica de captação da LIR (até 8% do captado, teto de R$ 120 mil), o valor mínimo do projeto e a meta de captação. Com fórmula e exemplo.
+- [Como montar uma carteira de incentivadores (empresas do Lucro Real)](https://metodocapta.github.io/guias/como-montar-uma-carteira-de-incentivadores/): Passo a passo para montar uma carteira de incentivadores: definir a meta, calcular o número de empresas, priorizar por aderência (tema/material), preparar a abordagem e formalizar.
+- [Como prestar contas de parceria (MROSC) sem glosa](https://metodocapta.github.io/guias/como-prestar-contas-de-parceria/): Passo a passo para prestar contas de parceria (termo de fomento/colaboração, MROSC): dossiê por rubrica, conciliação da conta específica, relatório de execução e resposta a diligências.
+
