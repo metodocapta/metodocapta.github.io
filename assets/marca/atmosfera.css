@@ -198,8 +198,12 @@
    ========================================================================== */
 .fm-dest-card h3,
 .fm-dest-card p{text-transform:uppercase;}
+.fm-dest-card h3{color:#062531 !important;}
 .fm-dest-card p{
   display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  color:#2b3d4c !important;
   -webkit-line-clamp:unset !important;
   -webkit-box-orient:unset !important;
   max-height:none !important;
