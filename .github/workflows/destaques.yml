@@ -51,6 +51,11 @@ jobs:
           except (OSError, ValueError):
               TITULOS = {}
           RESUMO_MAX = 130
+          RESUMO_MIN = 59
+          _BOILER = re.compile(
+              r"^(compartilh|share|assine|inscreva|leia|foto|imagem|cr[\u00e9e]dito|publicad|"
+              r"por\s+|reportagem|edi[\u00e7c][\u00e3a]o|newsletter|obrigad|apoio|patroc|realiza|este post)",
+              re.I)
 
           def titulo_estrategico(slug, lead):
               if slug in TITULOS:
@@ -71,6 +76,28 @@ jobs:
               if limite and len(s) > limite:
                   s = (s[:limite].rsplit(" ", 1)[0] or s[:limite]).rstrip(",.;:") + "\u2026"
               return s
+
+          def _encoded(item):
+              for el in item.iter():
+                  if el.tag.split("}")[-1].lower() == "encoded" and el.text:
+                      return el.text
+              return ""
+
+          def primeiro_paragrafo(item, limite=RESUMO_MAX):
+              # <description> costuma ser o subtitulo (as vezes = titulo); o corpo
+              # vem em <content:encoded>. Pegamos o 1o paragrafo util.
+              enc = _encoded(item)
+              if not enc:
+                  return ""
+              enc = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", enc, flags=re.I)
+              for p in re.findall(r"<p\b[^>]*>([\s\S]*?)</p>", enc, flags=re.I):
+                  if re.search(r"<img\b", p, re.I):
+                      continue
+                  t = texto(p)
+                  if len(t) < RESUMO_MIN or _BOILER.match(t):
+                      continue
+                  return texto(p, limite)
+              return ""
 
           def marca(s):
               s = re.sub(r"\bMÉTODO CAPTA+\b", "M\u00c9TODO", s or "")
@@ -152,7 +179,7 @@ jobs:
                   "link": link,
                   "data": iso,
                   "data_pt": pt,
-                  "resumo": marca(texto(item.findtext("description"), RESUMO_MAX)),
+                  "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
                   "imagem": imagem(item),
               })
               if len(itens) >= LIMITE:
