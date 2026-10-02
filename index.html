@@ -182,9 +182,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='metodo-capta-landing-css' href='wp-content/plugins/landing-page/assets/css/landing.css' media='all' />
 
-<script id="jquery-core-js" src="wp-includes/js/jquery/jquery.min.js"></script>
 
-<script id="jquery-migrate-js" src="wp-includes/js/jquery/jquery-migrate.min.js"></script>
+
+
 
 
 
@@ -459,7 +459,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                             var img = it.imagem
 
-                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="800" height="450" loading="lazy" decoding="async">'
+                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="640" height="360" loading="lazy" decoding="async">'
 
                               : '<span class="fm-dest-semimg">Método Capta+</span>';
 
@@ -531,7 +531,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <article class="fm-partner-card"><img src="wp-content/plugins/landing-page/assets/images/partners/feccat.webp" alt="FECCAT — entidade parceira do Método Capta+" loading="lazy" decoding="async" width="645" height="635"></article>
 
-<article class="fm-partner-card"><img src="assets/marca/parceiros/cooperclim.png" alt="COOPERCLIM — entidade parceira do Método Capta+" loading="lazy" decoding="async" width="150" height="140"></article>
+<article class="fm-partner-card"><img src="assets/marca/parceiros/cooperclim.webp" alt="COOPERCLIM — entidade parceira do Método Capta+" loading="lazy" decoding="async" width="150" height="140"></article>
 
 <article class="fm-partner-card fm-partner-nome"><span>AMARA</span></article>
 
@@ -1191,7 +1191,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 			</script>
 
-			<script id="hello-theme-frontend-js" src="wp-content/themes/hello-elementor/assets/js/hello-frontend.js"></script>
+			<!-- jq-movido -->
+<script id="jquery-core-js" src="wp-includes/js/jquery/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script id="hello-theme-frontend-js" src="wp-content/themes/hello-elementor/assets/js/hello-frontend.js"></script>
 
 <script id="elementor-webpack-runtime-js" src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js"></script>
 

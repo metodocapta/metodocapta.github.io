@@ -120,7 +120,7 @@ jobs:
                       return url
               return ""
 
-          def imagem_leve(url, largura=800):
+          def imagem_leve(url, largura=640):
               if url and "/image/fetch/" in url:
                   return re.sub(r"(/image/fetch/[^/]+)/", r"\1,w_%d/" % largura, url, count=1)
               return url

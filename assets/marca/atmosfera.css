@@ -214,3 +214,6 @@
   .fm-dest-card p{display:block !important;font-size:13.5px;}
 }
 
+/* A11y: contraste do botao "Leia a Estrategia!" (Destaques) */
+.fm-dest-mais{background:#0ABCB0 !important;color:#062531 !important;}
+.fm-dest-mais:hover{background:#0AD2C5 !important;color:#04222a !important;}
