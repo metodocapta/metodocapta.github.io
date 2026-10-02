@@ -120,6 +120,11 @@ jobs:
                       return url
               return ""
 
+          def imagem_leve(url, largura=800):
+              if url and "/image/fetch/" in url:
+                  return re.sub(r"(/image/fetch/[^/]+)/", r"\1,w_%d/" % largura, url, count=1)
+              return url
+
           def baixar(url, tentativas=3):
               hdrs = {
                   "User-Agent": UA,
@@ -180,7 +185,7 @@ jobs:
                   "data": iso,
                   "data_pt": pt,
                   "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
-                  "imagem": imagem(item),
+                  "imagem": imagem_leve(imagem(item)),
               })
               if len(itens) >= LIMITE:
                   break
