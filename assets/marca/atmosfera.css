@@ -217,3 +217,27 @@
 /* A11y: contraste do botao "Leia a Estrategia!" (Destaques) */
 .fm-dest-mais{background:#0ABCB0 !important;color:#062531 !important;}
 .fm-dest-mais:hover{background:#0AD2C5 !important;color:#04222a !important;}
+
+/* ==========================================================================
+   10) MENU SUPERIOR — enquadramento no desktop
+   brand + nav (8 itens) + CTA passava da largura da tela. Aqui o menu fica
+   mais compacto, os itens NAO encolhem (evita sobreposicao) e o CTA some
+   quando aperta, sem estourar a viewport.
+   ========================================================================== */
+@media (min-width:901px){
+  .fm-header-inner{padding-inline:clamp(20px,2.2vw,44px);gap:16px;}
+  .fm-nav{gap:14px !important;flex-wrap:nowrap;}
+  .fm-nav a{font-size:12px !important;flex:0 0 auto;}
+  .fm-header-cta{padding:0 14px !important;font-size:11.5px !important;flex:0 0 auto;}
+}
+@media (min-width:901px) and (max-width:1500px){
+  .fm-header-cta{display:none !important;}
+}
+/* telas mais estreitas: os links de SEÇÃO (que já vivem no Índice) saem do menu
+   superior para o restante caber sem sobreposição */
+@media (min-width:901px) and (max-width:1350px){
+  .fm-nav a[href="#fm-inteligencia"],
+  .fm-nav a[href="#fm-pilares"],
+  .fm-nav a[href="#fm-jornada"]{display:none !important;}
+}
+
