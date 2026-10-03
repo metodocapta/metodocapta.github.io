@@ -66,6 +66,21 @@ footer{background:var(--navy);color:#a9c6c3;font-size:13.5px;padding:26px 0;marg
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 footer a{color:#7ef0e2;text-decoration:none;margin-right:14px}
 @media(max-width:700px){ .site-hd nav a{margin-left:0;margin-right:14px} .cta{padding:20px} }
+/* Botão flutuante do WhatsApp — mesmo padrão de assets/marca/marca-capta.css */
+.mc-zap{position:fixed;right:22px;bottom:22px;z-index:9998;display:inline-flex;align-items:center;gap:11px;
+padding:13px 20px 13px 15px;border-radius:999px;text-decoration:none;
+font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif;font-weight:600;
+font-size:14.5px;letter-spacing:.045em;text-transform:uppercase;color:#04222a !important;
+background:linear-gradient(135deg,#25D366 0%,#0ABCB0 100%);
+box-shadow:0 14px 36px rgba(0,0,0,.34),0 0 0 1px rgba(255,255,255,.18) inset;
+transform:translateY(14px);opacity:0;animation:mcZapIn .5s .6s forwards;
+transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;}
+.mc-zap:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 20px 44px rgba(0,0,0,.42);color:#04222a !important;}
+.mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
+.mc-zap .mc-zap__txt{white-space:nowrap;}
+@keyframes mcZapIn{to{transform:translateY(0);opacity:1;}}
+@media(max-width:760px){ .mc-zap{right:14px;bottom:14px;padding:13px;gap:0;} .mc-zap .mc-zap__txt{display:none;} .mc-zap svg{width:28px;height:28px;} }
+@media (prefers-reduced-motion:reduce){ .mc-zap{animation:none;opacity:1;transform:none;} }
 </style>
 <link rel="stylesheet" href="../assets/marca/fontes.css">
 <link rel="preload" as="font" type="font/woff2" href="../assets/marca/fontes/inter-latin.woff2" crossorigin>
