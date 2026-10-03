@@ -1,5 +1,5 @@
 # Método Capta+ — https://metodocapta.github.io/
-# Regra: conteudo publico aberto a buscadores E a motores de resposta por IA (GEO/AEO).
+# Regra: conteudo publico aberto a buscadores E a motores de resposta (GEO/AEO).
 # Fechado apenas o que nao e conteudo: area restrita, paginas legadas e categoria vazia.
 
 User-agent: *
@@ -8,7 +8,7 @@ Disallow: /area-do-cliente/
 Disallow: /ola-mundo/
 Disallow: /category/
 
-# --- Motores de resposta por IA ---
+# --- Motores de resposta ---
 User-agent: GPTBot
 Allow: /
 Disallow: /area-do-cliente/
