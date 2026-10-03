@@ -233,11 +233,13 @@
 @media (min-width:901px) and (max-width:1500px){
   .fm-header-cta{display:none !important;}
 }
-/* telas mais estreitas: os links de SEÇÃO (que já vivem no Índice) saem do menu
-   superior para o restante caber sem sobreposição */
-@media (min-width:901px) and (max-width:1350px){
-  .fm-nav a[href="#fm-inteligencia"],
+/* os atalhos de SEÇÃO (que ja vivem no Indice e no rodape) saem do menu superior
+   para abrir espaco ao "Compartilhar" sem empurrar o CTA para fora */
+@media (min-width:901px){
   .fm-nav a[href="#fm-pilares"],
   .fm-nav a[href="#fm-jornada"]{display:none !important;}
+}
+@media (min-width:901px) and (max-width:1350px){
+  .fm-nav a[href="#fm-inteligencia"]{display:none !important;}
 }
 

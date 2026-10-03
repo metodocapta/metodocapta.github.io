@@ -208,6 +208,42 @@ footer::before,.fm-footer::before{
   opacity:.85;
 }
 
+/* --- rodape em COLUNAS: marca + grupos com titulo e descritor curto por item --- */
+.fm-footer .fm-footer-inner{
+  grid-template-columns:minmax(230px,1fr) 3.1fr;
+  gap:44px;
+  align-items:start;
+  min-height:0;
+  padding:44px 0 30px;
+}
+.fm-footer .fm-footer-brand{align-self:start}
+.fm-footer-tagline{margin:14px 0 0;max-width:34ch;color:#7ea49a;font-size:12.5px;line-height:1.6}
+.fm-footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 26px;width:100%}
+.fm-footer-col{display:flex;flex-direction:column;gap:13px;min-width:0}
+.fm-footer-col-titulo{font:700 10.5px/1 Inter,sans-serif;letter-spacing:.13em;
+  text-transform:uppercase;color:rgba(127,227,216,.75)}
+.fm-footer-col a{display:flex;flex-direction:column;gap:2px;color:#cfe8e3;
+  font-size:13px;font-weight:600;text-decoration:none;line-height:1.25}
+.fm-footer-col a em{font-style:normal;color:#67827b;font-size:11px;font-weight:500;letter-spacing:.01em}
+.fm-footer-col a:hover{color:#0AD2C5}
+.fm-footer-col a:hover em{color:#7fe3d8}
+.fm-footer .fm-footer-meta{display:flex;justify-content:flex-start;align-items:center;
+  gap:28px;padding:16px 0 30px;border-top:1px solid rgba(10,188,176,.14);
+  color:#67827b;font-size:11.5px}
+.fm-footer .fm-footer-meta a{color:#8fb7af;text-decoration:none}
+.fm-footer .fm-footer-meta a:hover{color:#0AD2C5}
+@media (max-width:900px){
+  .fm-footer .fm-footer-inner{grid-template-columns:1fr;gap:26px;padding:34px 0 22px}
+  .fm-footer-brand{text-align:center}
+  .fm-footer-brand img{margin-inline:auto}
+  .fm-footer-tagline{margin-inline:auto}
+  .fm-footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px}
+  .fm-footer .fm-footer-meta{flex-direction:column;gap:8px;text-align:center}
+}
+@media (max-width:520px){
+  .fm-footer-cols{grid-template-columns:1fr}
+}
+
 /* --- cabeçalho das páginas internas (tema Hello Elementor) -> paleta da marca --- */
 .site-header,.site-header.dynamic-header{
   border-bottom:1px solid var(--mc-linha);
