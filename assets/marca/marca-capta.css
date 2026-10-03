@@ -275,10 +275,10 @@ footer::before,.fm-footer::before{
    ========================================================================== */
 
 /* --- 1) MENU: sem "caixa" — fundo que se dissolve na página --- */
-/* o overflow:clip do wrapper + overflow no body quebravam o position:sticky do menu */
+/* o overflow:clip no WRAPPER quebrava o sticky; em html/body (clip) NAO quebra
+   e elimina a rolagem horizontal de ~8px do full-bleed (100vw + scrollbar). */
 .fm-site{overflow:visible !important;}
-html{overflow-x:hidden !important;}
-body{overflow:visible !important;}
+html,body{overflow-x:clip !important;}
 
 .fm-header{
   background:transparent !important;
