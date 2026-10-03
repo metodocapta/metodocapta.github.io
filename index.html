@@ -266,6 +266,51 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                         <a href="#fm-contato">Contato</a>
 
+                    <!-- fm-compartilhar -->
+<div class="fm-share" data-fm-share>
+    <button type="button" class="fm-share-btn" aria-expanded="false" aria-haspopup="true" aria-label="Compartilhar esta página">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13"/><path d="M7.5 7.5 12 3l4.5 4.5"/></svg><span>Compartilhar</span>
+    </button>
+    <div class="fm-share-pop" role="menu" hidden>
+        <a role="menuitem" data-share="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a role="menuitem" data-share="linkedin" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        <a role="menuitem" data-share="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a role="menuitem" data-share="x" href="#" target="_blank" rel="noopener">X (Twitter)</a>
+        <a role="menuitem" data-share="telegram" href="#" target="_blank" rel="noopener">Telegram</a>
+        <a role="menuitem" data-share="email" href="#">E-mail</a>
+        <button type="button" role="menuitem" data-share="copy">Copiar link</button>
+        <button type="button" role="menuitem" data-share="native" hidden>Mais opções…</button>
+    </div>
+    <script>
+    (function(){
+      var box=document.querySelector('[data-fm-share]'); if(!box) return;
+      var btn=box.querySelector('.fm-share-btn'), pop=box.querySelector('.fm-share-pop');
+      function dados(){ var u=location.href.split('#')[0]; var t=document.title||'Método Capta+';
+        return {url:u, t:t, e:encodeURIComponent(t), u:encodeURIComponent(u)}; }
+      function preencher(){ var d=dados(); var m={
+        whatsapp:'https://api.whatsapp.com/send?text='+d.e+'%20'+d.u,
+        linkedin:'https://www.linkedin.com/sharing/share-offsite/?url='+d.u,
+        facebook:'https://www.facebook.com/sharer/sharer.php?u='+d.u,
+        x:'https://twitter.com/intent/tweet?text='+d.e+'&url='+d.u,
+        telegram:'https://t.me/share/url?url='+d.u+'&text='+d.e,
+        email:'mailto:?subject='+d.e+'&body='+d.u };
+        box.querySelectorAll('[data-share]').forEach(function(el){ var k=el.getAttribute('data-share'); if(m[k]) el.setAttribute('href',m[k]); }); }
+      function abrir(v){ pop.hidden=!v; box.classList.toggle('aberto',v); btn.setAttribute('aria-expanded',v?'true':'false'); if(v) preencher(); }
+      btn.addEventListener('click',function(e){ e.stopPropagation(); abrir(pop.hidden); });
+      pop.addEventListener('click',function(e){ if(e.target===pop) e.stopPropagation(); });
+      document.addEventListener('click',function(){ abrir(false); });
+      document.addEventListener('keydown',function(e){ if(e.key==='Escape') abrir(false); });
+      var c=box.querySelector('[data-share="copy"]');
+      if(c) c.addEventListener('click',function(){ var d=dados();
+        var fim=function(){ c.textContent='Link copiado!'; setTimeout(function(){ c.textContent='Copiar link'; },1800); };
+        if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(d.url).then(fim,function(){ window.prompt('Copie o link:',d.url); }); }
+        else { window.prompt('Copie o link:',d.url); } });
+      var n=box.querySelector('[data-share="native"]');
+      if(n&&navigator.share){ n.hidden=false; n.addEventListener('click',function(){ var d=dados(); navigator.share({title:d.t,url:d.url}).catch(function(){}); }); }
+    })();
+    </script>
+</div>
+<!-- /fm-compartilhar -->
                     </nav>
 
                     <a class="fm-header-cta" href="metodo-capta-plus/index.html">

@@ -929,6 +929,48 @@ body{counter-reset:fm-secao}
   .fm-radar-areas li b{text-align:left}
 }
 
+/* ===== COMPARTILHAR (item do menu do topo, em destaque) =====
+   Botao-pilula solido (teal) dentro do .fm-nav: aparece no desktop e tambem
+   no painel do menu mobile. Abre um popover com redes/zap/e-mail/copiar link. */
+.fm-share{position:relative;display:inline-flex;flex:0 0 auto}
+.fm-share .fm-share-btn{display:inline-flex;align-items:center;gap:8px;min-height:38px;
+  padding:0 16px;border-radius:999px;cursor:pointer;white-space:nowrap;
+  border:1px solid rgba(10,188,176,.85);
+  background:linear-gradient(120deg,#0ABCB0 0%,#0AD2C5 100%);
+  color:#04222a;font:800 12px/1 Inter,sans-serif;letter-spacing:.03em;
+  box-shadow:0 8px 22px rgba(10,188,176,.28);
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.fm-share .fm-share-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fm-share .fm-share-btn:hover{transform:translateY(-1px);filter:brightness(1.05);
+  box-shadow:0 12px 28px rgba(10,188,176,.42)}
+.fm-share .fm-share-btn:focus-visible{outline:3px solid rgba(255,255,255,.85);outline-offset:3px}
+.fm-share.aberto .fm-share-btn{filter:brightness(1.06);box-shadow:0 12px 28px rgba(10,188,176,.42)}
+.fm-share-pop{position:absolute;right:0;top:calc(100% + 12px);z-index:130;display:none;
+  min-width:200px;padding:8px;border-radius:14px;
+  border:1px solid rgba(10,188,176,.32);
+  background:linear-gradient(180deg,#062531,#08343c);
+  box-shadow:0 22px 50px rgba(0,0,0,.55)}
+.fm-share.aberto .fm-share-pop{display:block}
+.fm-share-pop a,.fm-share-pop button{display:block;width:100%;text-align:left;
+  padding:10px 12px;border:0;border-radius:9px;background:none;cursor:pointer;
+  color:rgba(234,255,251,.92);font:500 13px/1.2 Inter,sans-serif;text-decoration:none}
+.fm-share-pop a:hover,.fm-share-pop button:hover{background:rgba(10,188,176,.18);color:#fff}
+.fm-share-pop [data-share="copy"]{color:#7fe3d8;font-weight:700}
+.fm-share-pop [data-share="native"]{border-top:1px solid rgba(10,188,176,.16);margin-top:4px}
+/* Desktop estreito: o rotulo some para o menu NAO estourar (vira botao-icone teal) */
+@media (min-width:901px) and (max-width:999px){
+  .fm-share .fm-share-btn span{display:none}
+  .fm-share .fm-share-btn{padding:0 11px;min-width:40px;justify-content:center}
+}
+@media (max-width:900px){
+  .fm-share{display:block;width:100%}
+  .fm-share .fm-share-btn{width:100%;justify-content:center;margin-top:10px;
+    min-height:44px;font-size:13px}
+  .fm-share-pop{position:static;top:auto;right:auto;min-width:0;margin-top:6px;
+    background:rgba(10,188,176,.07);box-shadow:none}
+}
+
 /* ===== MENU ÚNICO: o Índice é um dropdown do topo =====
    Antes havia dois menus (o do topo + uma faixa solta). Agora é um só:
    6 atalhos + "Índice" que abre a lista completa. */
