@@ -423,8 +423,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                           var itens = (d && d.itens) || [];
                           if (!itens.length) { if (vazio) vazio.hidden = false; return; }
                           track.innerHTML = itens.map(function (it) {
-                            var img = it.imagem
-                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" loading="lazy" decoding="async">'
+            var img = it.imagem
+                              ? '<img src="' + esc(it.imagem) + '" alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="355" height="198" loading="lazy" decoding="async">'
                               : '<span class="fm-dest-semimg">Método Capta+</span>';
                             return '<article class="fm-dest-card">'
                               + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
@@ -1023,7 +1023,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 			<!-- jq-movido -->
 
-<script id="metodo-capta-landing-js" src="wp-content/plugins/landing-page/assets/js/landing.js"></script>
+<script id="metodo-capta-landing-js" src="wp-content/plugins/landing-page/assets/js/landing.js" defer></script>
+
+<script id="metodo-capta-landing-interactions-js" src="wp-content/plugins/landing-page/assets/js/landing-interactions.js" defer></script>
 
 			<script data-category="functional">
 
