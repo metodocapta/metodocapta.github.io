@@ -1020,15 +1020,19 @@ body{counter-reset:fm-secao}
   color:#ffffff !important;text-decoration:underline;text-underline-offset:6px}
 .fm-nav-indice .fm-indice-btn:focus-visible{outline:3px solid rgba(10,188,176,.85);outline-offset:4px}
 .fm-nav-indice ol{position:absolute;right:0;top:calc(100% + 12px);display:none;
-  grid-template-columns:1fr 1fr;gap:8px 22px;min-width:330px;margin:0;padding:16px 18px;
+  grid-template-columns:1fr 1fr;gap:10px 28px;min-width:480px;margin:0;padding:16px 20px;
   list-style:none;border-radius:14px;border:1px solid rgba(10,188,176,.30);
   background:linear-gradient(180deg,#062531,#08343c);
   box-shadow:0 22px 50px rgba(0,0,0,.50);z-index:60}
 .fm-nav-indice.aberto ol{display:grid}
-.fm-nav-indice ol li{display:flex;align-items:baseline;gap:8px;white-space:nowrap}
-.fm-nav-indice ol b{font-size:11px;font-weight:700;color:rgba(127,227,216,.62)}
-.fm-nav-indice ol a{color:rgba(234,255,251,.86);text-decoration:none;font-size:13px}
+.fm-nav-indice ol li{display:flex;align-items:baseline;gap:9px;white-space:normal}
+.fm-nav-indice ol b{font-size:11px;font-weight:700;color:rgba(127,227,216,.62);min-width:1.5em}
+.fm-nav-indice ol a{display:flex;flex-direction:column;gap:1px;color:rgba(234,255,251,.90);
+  text-decoration:none;font-size:13px;line-height:1.3}
+.fm-nav-indice ol a em{font-style:normal;color:rgba(127,227,216,.62);font-size:11px;
+  font-weight:500;letter-spacing:.01em}
 .fm-nav-indice ol a:hover{color:var(--mc-teal)}
+.fm-nav-indice ol a:hover em{color:#0AD2C5}
 
 /* ==== RESPONSIVIDADE FINA (consolida os cortes soltos) ==== */
 /* o Radar agora abre a página: respiro menor no topo */
@@ -1074,8 +1078,9 @@ body{counter-reset:fm-secao}
     background:transparent !important;padding:8px 0 10px 6px !important;margin:0 !important;
     max-height:none !important;overflow:visible !important}
   .fm-nav-indice.aberto ol{display:grid !important}
-  .fm-nav-indice ol li{padding:7px 0;white-space:normal}
+  .fm-nav-indice ol li{padding:8px 0;white-space:normal}
   .fm-nav-indice ol a{font-size:14px}
+  .fm-nav-indice ol a em{font-size:12px}
 }
 
 /* o painel do menu no mobile precisa ROLAR por dentro: com o Indice aberto ele
