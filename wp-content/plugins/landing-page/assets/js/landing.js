@@ -36,7 +36,10 @@
 
     root.querySelectorAll('a[href^="#"]').forEach(function (link) {
         link.addEventListener('click', function (event) {
-            const target = root.querySelector(link.getAttribute('href'));
+            const hash = link.getAttribute('href');
+            if (!hash || hash === '#' || hash.length < 2) return; // ignora href="#" sem destino
+            let target = null;
+            try { target = root.querySelector(hash); } catch (error) { return; }
             if (!target) return;
             event.preventDefault();
             target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
@@ -57,9 +60,12 @@
         reveals.forEach(function (item) { revealObserver.observe(item); });
     }
 
-    const navLinks = Array.from(root.querySelectorAll('.fm-nav a[href^="#"]'));
+    const navLinks = Array.from(root.querySelectorAll('.fm-nav a[href^="#"]')).filter(function (link) {
+        const hash = link.getAttribute('href');
+        return hash && hash.length > 1; // descarta href="#"
+    });
     const navTargets = navLinks.map(function (link) {
-        return root.querySelector(link.getAttribute('href'));
+        try { return root.querySelector(link.getAttribute('href')); } catch (error) { return null; }
     }).filter(Boolean);
     if ('IntersectionObserver' in window && navTargets.length) {
         const sectionObserver = new IntersectionObserver(function (entries) {
