@@ -1019,7 +1019,7 @@ body{counter-reset:fm-secao}
 .fm-nav-indice .fm-indice-btn[aria-expanded="true"]{
   color:#ffffff !important;text-decoration:underline;text-underline-offset:6px}
 .fm-nav-indice .fm-indice-btn:focus-visible{outline:3px solid rgba(10,188,176,.85);outline-offset:4px}
-.fm-nav-indice ol{position:absolute;right:0;top:calc(100% + 12px);display:none;
+.fm-nav-indice ol{position:absolute;left:0;right:auto;top:calc(100% + 12px);display:none;
   grid-template-columns:1fr 1fr;gap:10px 28px;min-width:480px;margin:0;padding:16px 20px;
   list-style:none;border-radius:14px;border:1px solid rgba(10,188,176,.30);
   background:linear-gradient(180deg,#062531,#08343c);
