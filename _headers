@@ -1,0 +1,50 @@
+# ============================================================================
+# Cloudflare Pages · headers (cache + segurança)
+# Doc: https://developers.cloudflare.com/pages/configuration/headers/
+# ----------------------------------------------------------------------------
+# Este arquivo é servido pela Cloudflare Pages (fica na RAIZ do site publicado).
+# No GitHub Pages ele é ignorado (ou servido como texto) — não afeta nada lá.
+# ============================================================================
+
+# --- Segurança (todas as rotas) ---------------------------------------------
+# CSP em REPORT-ONLY de propósito: não bloqueia nada, só coleta violações.
+# Depois de observar o relatório, trocar para "Content-Security-Policy".
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  X-Frame-Options: SAMEORIGIN
+  Cross-Origin-Opener-Policy: same-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data: https:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; media-src 'self' https:; frame-src 'self' https:
+
+# --- HTML: sempre revalidar (o conteúdo muda) --------------------------------
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# --- Imagens e fontes: 1 ano, immutable (nome/URL não muda) ------------------
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# --- CSS/JS: 1 dia + revalidação em segundo plano ----------------------------
+# (alguns CSS/JS do legado são referenciados sem ?v=, por isso 1 dia e não 1 ano)
+/*.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/*.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# --- Dados agregados do Radar / Destaques: 1 hora ----------------------------
+/*.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
