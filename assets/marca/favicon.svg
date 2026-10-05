@@ -1,21 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Método Capta+">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#062531"/>
-      <stop offset="1" stop-color="#067a72"/>
-    </linearGradient>
-    <linearGradient id="cg" gradientUnits="userSpaceOnUse" x1="30" y1="30" x2="100" y2="100">
-      <stop offset="0" stop-color="#6ff5f1"/>
-      <stop offset=".5" stop-color="#19d3c5"/>
-      <stop offset="1" stop-color="#0a9f97"/>
+    <linearGradient id="cgf" gradientUnits="userSpaceOnUse" x1="30" y1="24" x2="100" y2="110">
+      <stop offset="0" stop-color="#6ff5f1"/><stop offset=".5" stop-color="#19d3c5"/><stop offset="1" stop-color="#0a9f97"/>
     </linearGradient>
   </defs>
-  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
-  <g transform="translate(21 19) scale(0.67)">
-    <path d="M67.6 24.8 A36 36 0 1 0 67.6 85.2" fill="none" stroke="url(#cg)" stroke-width="22"/>
-    <g fill="none" stroke="url(#cg)" stroke-width="15" stroke-linecap="round">
-      <path d="M106 42 V68"/>
-      <path d="M93 55 H119"/>
-    </g>
+  <rect width="128" height="128" rx="28" fill="#031413"/>
+  <rect x="0.9" y="0.9" width="126.2" height="126.2" rx="27" fill="none" stroke="#19d3c5" stroke-opacity=".55" stroke-width="1.6"/>
+  <g transform="translate(29.1 23) scale(0.697)" fill="url(#cgf)">
+    <path d="M16.83 96.67 L17.17 98.33 L21.17 102.33 L28.67 107.67 L34.17 110.33 L38.17 111.67 L45.83 113.17 L55.33 113.00 L61.17 111.83 L66.00 110.17 L72.00 107.17 L77.00 103.67 L81.17 99.83 L82.50 97.67 L82.17 96.00 L80.50 95.17 L18.83 95.17 L17.67 95.50Z"/>
+    <path d="M4.33 73.17 L4.33 74.67 L7.00 82.50 L10.50 89.50 L12.83 92.33 L81.83 92.50 L83.00 92.17 L83.83 91.00 L83.17 87.17 L81.17 83.83 L77.83 81.00 L74.67 79.67 L72.83 79.33 L68.17 79.67 L65.00 81.00 L60.50 84.67 L57.00 86.67 L52.67 88.00 L48.67 88.17 L42.83 86.67 L37.50 83.17 L33.67 79.00 L30.17 72.67 L29.17 71.83 L6.33 71.67 L5.17 72.00Z"/>
+    <path d="M3.33 49.00 L2.83 50.33 L2.67 53.17 L2.50 53.33 L2.50 64.00 L2.67 64.17 L2.83 67.17 L3.83 68.67 L5.00 69.00 L26.33 69.00 L27.17 68.83 L28.00 68.17 L28.33 67.50 L28.33 66.33 L27.83 64.50 L27.67 61.50 L27.50 61.33 L27.50 56.00 L27.67 55.83 L27.83 53.00 L28.33 51.00 L28.33 49.67 L27.50 48.50 L26.33 48.17 L5.00 48.17 L4.17 48.33Z"/>
+    <path d="M4.33 44.00 L5.17 45.17 L6.33 45.50 L29.33 45.33 L30.33 44.50 L34.00 38.00 L38.33 33.50 L42.67 30.83 L48.00 29.33 L53.00 29.50 L57.17 30.83 L60.17 32.50 L65.17 36.50 L68.33 37.83 L70.17 38.17 L74.67 37.83 L77.83 36.50 L81.17 33.67 L83.17 30.33 L83.83 26.17 L83.00 25.00 L81.83 24.67 L13.00 24.83 L10.50 28.00 L7.33 34.17 L5.00 40.50Z"/>
+    <path d="M17.17 19.50 L17.50 21.17 L19.17 22.00 L80.33 22.00 L81.50 21.67 L82.33 20.50 L82.33 19.50 L81.67 18.33 L78.33 14.83 L71.83 10.17 L65.83 7.17 L62.50 6.00 L57.83 4.83 L52.50 4.17 L47.17 4.17 L41.17 5.00 L32.50 7.83 L27.17 10.67 L22.33 14.17 L17.67 18.50Z"/>
+    <rect x="39" y="54.8" width="22" height="8" rx="4"/><rect x="46" y="47.8" width="8" height="22" rx="4"/>
   </g>
 </svg>
