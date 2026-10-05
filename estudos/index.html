@@ -15,7 +15,9 @@
 <meta property="og:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/marca/favicon.svg?v=2" type="image/svg+xml">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#062531;--navy2:#0a3340;--teal:#0ABCB0;--graf:#067a72;--ink:#0d1f35;
 --muted:#4a6572;--line:#e2e8ea;--bg:#ffffff;--soft:#f4f8f8}
@@ -80,6 +82,8 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 .hub-card p{font-size:15px;line-height:1.6;color:var(--muted);margin:0 0 14px;}
 .hub-card .mais{margin-top:auto;font:600 14px/1 Inter,sans-serif;color:var(--graf);}
 .hub-card:hover .mais{color:var(--teal);}
+.hub-destaque{grid-column:1/-1;border-color:var(--teal);}
+.hub-destaque .data{color:var(--teal);}
 .hub-zap{margin:28px 0 64px;padding:22px 24px;border-radius:14px;
   background:linear-gradient(135deg,var(--navy),var(--navy2) 60%,var(--graf));color:#eafffb;}
 .hub-zap b{font-family:Oswald,Inter,sans-serif;font-size:18px;}
@@ -110,13 +114,10 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Estudos de captação — Método Capta+", "description": "Estudos técnicos de captação de recursos para o Terceiro Setor: dados, legislação e o que muda na prática para OSCs, cooperativas e associações.", "url": "https://metodocapta.github.io/estudos/", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "name": "Método Capta+", "url": "https://metodocapta.github.io/"}, "publisher": {"@type": "Organization", "name": "Método Capta+", "@id": "https://metodocapta.github.io/#organizacao"}, "mainEntity": {"@type": "ItemList", "numberOfItems": 1, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Incentivos Fiscais (2015-2026)", "url": "https://metodocapta.github.io/estudos/mapa-da-realidade-captacao-reciclagem/"}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://metodocapta.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Estudos", "item": "https://metodocapta.github.io/estudos/"}]}</script>
-<link rel="stylesheet" href="/assets/marca/fontes.css">
-<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/inter-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/oswald-latin.woff2" crossorigin>
 </head>
 <body>
 <header class="site-hd"><div class="wrap">
-<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Método Capta+"></a>
+<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.png" alt="Método Capta+"></a>
 <nav><a href="/">Início</a><a href="/metodo-capta-plus/">Método Capta+</a><a href="/estudos/">Estudos</a></nav>
 </div></header>
 <div class="crumb"><a href="/">Início</a> › Estudos</div>
@@ -127,6 +128,12 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 <p>Estudos técnicos de captação de recursos para o Terceiro Setor: dados, legislação e o que muda na prática para OSCs, cooperativas e associações.</p>
 </section>
 <section class="hub-list">
+<a class="hub-card hub-destaque" id="hub-destaque" href="#" target="_blank" rel="noopener" hidden>
+<span class="data">Destaque — Direto do Substack · <span id="hub-destaque-data"></span></span>
+<h2 id="hub-destaque-titulo"></h2>
+<p id="hub-destaque-resumo"></p>
+<span class="mais">Ler o estudo &rsaquo;</span>
+</a>
 <a class="hub-card" href="/estudos/mapa-da-realidade-captacao-reciclagem/"><span class="data">23 set 2026</span><h2>O Mapa da Realidade de Captação na Reciclagem: Economia Circular e o Impacto da Lei de Incentivos Fiscais (2015-2026)</h2><p>De cada R$ 10 que as cooperativas pediram na Lei de Incentivo à Reciclagem, só R$ 3 chegaram.</p><span class="mais">Ler o estudo &rsaquo;</span></a>
 </section>
 <section class="hub-sub" id="hub-sub" hidden>
@@ -168,6 +175,18 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
           + '<span class="x">Abrir &rsaquo;</span></a></li>';
       }).join('');
       box.hidden = false;
+      var dest = document.getElementById('hub-destaque');
+      if (dest) {
+        var it0 = itens[0];
+        dest.href = it0.link || '#';
+        var d0 = document.getElementById('hub-destaque-data');
+        if (d0) d0.textContent = it0.data_pt || '';
+        var t0 = document.getElementById('hub-destaque-titulo');
+        if (t0) t0.textContent = it0.titulo_estrategico || it0.titulo || '';
+        var r0 = document.getElementById('hub-destaque-resumo');
+        if (r0) r0.textContent = it0.resumo || '';
+        dest.hidden = false;
+      }
       var on = document.getElementById('hub-sub-on');
       if (on && d.gerado_em) {
         var p = d.gerado_em.split('-');
