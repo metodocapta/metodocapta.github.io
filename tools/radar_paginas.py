@@ -369,7 +369,7 @@ def _pagina(m, total, gerado_em):
 <meta property="og:site_name" content="Método Capta+">
 <meta property="og:image" content="{OG}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/assets/marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/marca/favicon.svg?v=2" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/marca/fontes.css">
 <link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/inter-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/oswald-latin.woff2" crossorigin>
@@ -464,7 +464,7 @@ def _hub(totais, gerado_em):
 <meta property="og:url" content="{SITE_URL}/radar/">
 <meta property="og:site_name" content="Método Capta+">
 <meta property="og:image" content="{OG}">
-<link rel="icon" href="/assets/marca/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/marca/favicon.svg?v=2" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/marca/fontes.css">
 <link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/inter-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/assets/marca/fontes/oswald-latin.woff2" crossorigin>
