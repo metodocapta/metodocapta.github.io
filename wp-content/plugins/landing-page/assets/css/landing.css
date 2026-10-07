@@ -1005,3 +1005,8 @@ html, body {
 @supports not (overflow: clip) {
   .fm-site { overflow-x: hidden !important; }
 }
+
+/* Missao, Visao e Valores (Metodo Capta+) - 3 cards */
+.fm-mvv-section { background: linear-gradient(180deg,#031413,#051e1c 50%,#031413); }
+.fm-mvv-grid { margin-top: 58px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; }
+@media (max-width: 980px) { .fm-mvv-grid { grid-template-columns: 1fr; } }
