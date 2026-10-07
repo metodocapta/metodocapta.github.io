@@ -45,7 +45,7 @@ def config_site(site):
 
 SITE_URL = "https://metodocapta.github.io"
 WA = "https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20capta%C3%A7%C3%A3o"
-OG = SITE_URL + "/assets/marca/og-metodo-capta.png"
+OG = SITE_URL + "/assets/marca/og-metodo-capta.jpg"
 
 # ---------------------------------------------------------------------------
 # Conteúdo curado por mecanismo (o dado AO VIVO entra depois, do snapshot)
@@ -378,7 +378,7 @@ def _pagina(m, total, gerado_em):
 </head>
 <body>
 <header class="site-hd"><div class="wrap">
-<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.png" alt="Método Capta+"></a>
+<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Método Capta+"></a>
 <nav><a href="/">Início</a><a href="/radar/">Radar</a><a href="/estudos/">Estudos</a><a href="/calculadora/">Calculadora</a><a href="/metodo-capta-plus/">Método</a></nav>
 </div></header>
 <div class="crumb"><a href="/">Início</a> › <a href="/radar/">Radar</a> › {_e(m["sigla"])}</div>
@@ -473,7 +473,7 @@ def _hub(totais, gerado_em):
 </head>
 <body>
 <header class="site-hd"><div class="wrap">
-<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.png" alt="Método Capta+"></a>
+<a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Método Capta+"></a>
 <nav><a href="/">Início</a><a href="/radar/">Radar</a><a href="/estudos/">Estudos</a><a href="/calculadora/">Calculadora</a><a href="/metodo-capta-plus/">Método</a></nav>
 </div></header>
 <div class="crumb"><a href="/">Início</a> › Radar</div>
