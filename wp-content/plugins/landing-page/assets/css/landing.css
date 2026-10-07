@@ -1014,3 +1014,8 @@ html, body {
 .fm-mvv-list li { position: relative; padding-left: 18px; color: #7f9c94; font-size: 13px; line-height: 1.72; }
 .fm-mvv-list li + li { margin-top: 6px; }
 .fm-mvv-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; border-radius: 2px; background: var(--fm-green); box-shadow: 0 0 0 3px rgba(10,188,176,.12); }
+.fm-values-head { margin-top: 78px; }
+.fm-values-head h3 { font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif; font-size: clamp(26px,3vw,38px); color:#edf9f6; letter-spacing:-.01em; margin:10px 0 0; }
+.fm-values-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; }
+.fm-values-grid .fm-method-layer { min-height: 200px; }
+@media (max-width: 760px) { .fm-values-grid { grid-template-columns: 1fr; } }
