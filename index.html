@@ -230,6 +230,17 @@ body.fm-bar-on .mc-zap{bottom:86px}
 }
 </style>
 <script defer src="/assets/fm-conversao.js"></script>
+<style id="fm-esg-css">
+/* P0 (ESG/ISP) — pedido x proposta de valor */
+.fm-valor{display:grid;gap:16px;grid-template-columns:1fr 1fr;margin:30px 0 8px}
+.fm-valor-col{border:1px solid rgba(6,37,49,.12);border-radius:14px;padding:16px 18px;background:#fff;box-shadow:0 2px 10px rgba(6,37,49,.04)}
+.fm-valor-col--ok{border-color:rgba(10,188,176,.55);background:#f3fcfa}
+.fm-valor-tag{display:block;font:600 11px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:9px}
+.fm-valor-col p{margin:0!important;font-size:15.5px;line-height:1.55}
+.fm-valor-nota{margin:16px 0 0!important;text-align:center;font-size:14px;line-height:1.6}
+.fm-valor-nota a{color:#067a72;text-decoration:underline;text-underline-offset:2px}
+@media (max-width:640px){.fm-valor{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body class="home wp-singular page-template page-template-elementor_canvas page page-id-2 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2">
@@ -519,7 +530,7 @@ body.fm-bar-on .mc-zap{bottom:86px}
                         <div class="fm-heading fm-heading-center fm-reveal">
                             <span class="fm-kicker">O problema real</span>
                             <h2>Não falta oportunidade. <em>Falta direção.</em></h2>
-                            <p>Editais, fundos e incentivos existem o ano inteiro. O que trava a captação não é a falta de aviso — é a oportunidade que chega quando a entidade ainda não está pronta para responder.</p>
+                            <p>Editais, fundos e incentivos existem o ano inteiro. O que trava a captação não é a falta de aviso — é a oportunidade que chega quando a entidade ainda não está pronta para responder. E as <strong>empresas também não faltam</strong>: falta a organização pronta para ser <strong>parceira</strong>, não pedinte.</p>
                         </div>
                         <div class="fm-impact-grid">
                             <article class="fm-method-layer fm-reveal"><span>01</span><div class="fm-pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12M6 21h12"/><path d="M8 3c0 4 4 5 4 9s-4 5-4 9"/><path d="M16 3c0 4-4 5-4 9s4 5 4 9"/></svg></div><h3>Oportunidade dispersa <em>→ expira</em></h3><p>Editais, fundos e chamadas espalhados em dezenas de portais. Quem não tem radar descobre tarde — e o prazo se perde.</p></article>
@@ -527,6 +538,17 @@ body.fm-bar-on .mc-zap{bottom:86px}
                             <article class="fm-method-layer fm-reveal"><span>03</span><div class="fm-pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></svg></div><h3>Projeto que não fala a língua <em>→ não pontua</em></h3><p>Trabalho sério descrito de um jeito que o edital não reconhece. O impacto existe; a pontuação, não.</p></article>
                         </div>
                         <p class="fm-impact-close fm-reveal">O custo de não ter direção é recurso que não chega. O Método Capta+ existe para <strong>reduzir esse custo</strong> — com direção, evidência e continuidade.</p>
+                        <div class="fm-valor fm-reveal">
+                            <div class="fm-valor-col">
+                                <span class="fm-valor-tag">O pedido</span>
+                                <p>“Precisamos de R$ 100 mil para o nosso projeto.”</p>
+                            </div>
+                            <div class="fm-valor-col fm-valor-col--ok">
+                                <span class="fm-valor-tag">A proposta de valor social</span>
+                                <p>“Com R$ 100 mil: 200 jovens capacitados, 20 oficinas, indicadores de empregabilidade e relatórios trimestrais.”</p>
+                            </div>
+                        </div>
+                        <p class="fm-valor-nota fm-reveal">Empresa não apoia necessidade — apoia <strong>impacto mensurável</strong>. <a href="/biblioteca/o-que-empresas-procuram-em-uma-osc/">Veja o que as empresas procuram</a> · <a href="/guias/como-montar-indicadores-de-impacto/">Como medir o impacto</a></p>
                     </div>
                 </section>
 
