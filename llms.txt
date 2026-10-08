@@ -71,6 +71,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Ferramentas
 
 - [Calculadora de Captação](https://metodocapta.github.io/calculadora/): quantas empresas do Lucro Real (incentivadoras) cabem na meta do seu projeto.
+- [Carteira de incentivadores (ferramenta)](https://metodocapta.github.io/carteira-de-incentivadores/): calcule quantas incentivadoras o projeto precisa (meta ÷ ticket) e avalie, em 12 itens, se a carteira está pronta.
 - [Checklist de prontidão para parceria](https://metodocapta.github.io/checklist-parcerias/): 12 itens que a empresa avalia antes de investir em um projeto social. Marque e veja o nível de prontidão da OSC.
 
 ## Biblioteca (conceitos)
