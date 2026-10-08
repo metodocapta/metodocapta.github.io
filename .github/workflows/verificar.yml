@@ -1,0 +1,45 @@
+name: Verificar invariantes do site
+
+# Portao de saida CONTINUO: roda a cada push no repositorio publicado e FALHA se
+# alguma invariante sumir — identidade (Missao/Visao/Valores), menu fixo (sticky)
+# ou imagens leves (webp/jpg). Pega regressao vinda de build, GitHub Action
+# (radar/destaques) ou commit manual. A fonte e a verdade:
+#   FOMENTIA\MARKETING\SITE_METODO_CAPTA  (ver LEIA-ME_EDICAO_DO_SITE.md)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  invariantes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checar identidade, menu fixo e imagens leves
+        run: |
+          fail=0
+          quem=metodo-capta-plus/index.html
+          css=wp-content/plugins/landing-page/assets/css/landing.css
+
+          grep -q 'fm-mvv-section' "$quem"      || { echo "::error::Quem Somos sem a secao Missao/Visao/Valores (fm-mvv-section)"; fail=1; }
+          grep -q 'fm-values-grid' "$quem"      || { echo "::error::Quem Somos sem os Valores Fundamentais (fm-values-grid)"; fail=1; }
+          grep -q 'Missão, Visão e Valores' "$quem" || { echo "::error::Quem Somos sem o titulo 'Missao, Visao e Valores'"; fail=1; }
+
+          grep -Eq 'html, *body *\{[^}]*overflow-x: *clip' "$css" || { echo "::error::landing.css: html/body sem overflow-x:clip (hidden QUEBRA o menu fixo)"; fail=1; }
+          grep -Eq '\.fm-site *\{[^}]*overflow: *visible' "$css"  || { echo "::error::landing.css: .fm-site sem overflow:visible"; fail=1; }
+
+          test -f assets/marca/wordmark-claro.webp  || { echo "::error::falta assets/marca/wordmark-claro.webp"; fail=1; }
+          test -f assets/marca/og-metodo-capta.jpg  || { echo "::error::falta assets/marca/og-metodo-capta.jpg"; fail=1; }
+
+          refs=$(grep -rIl --include='*.html' -e 'wordmark-claro\.png' -e 'og-metodo-capta\.png' . | grep -v '^\./radar/' || true)
+          if [ -n "$refs" ]; then
+            echo "::error::paginas referenciando PNG pesado (wordmark/og):"
+            echo "$refs"
+            fail=1
+          fi
+
+          if [ "$fail" -eq 0 ]; then echo "OK: todas as invariantes presentes."; fi
+          exit $fail
