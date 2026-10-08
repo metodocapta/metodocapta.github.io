@@ -994,16 +994,19 @@ body.fm-method-page .fm-site { margin-top: 0 !important; }
 
 
 /* V2.2.14 — elimina scrollbar horizontal causada pelo breakout full-width
-   da landing (100vw) sem alterar dimensões ou posicionamento do layout. */
+   da landing (100vw) sem alterar dimensões ou posicionamento do layout.
+   IMPORTANTE: usar overflow-x: clip (NÃO hidden) em html/body — "hidden" força
+   overflow-y:auto e transforma o contêiner de rolagem, o que QUEBRA o
+   position:sticky do cabeçalho. clip recorta sem criar scroll container. */
 html, body {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   max-width: 100% !important;
 }
 .fm-site {
-  overflow-x: clip !important;
+  overflow: visible !important;
 }
 @supports not (overflow: clip) {
-  .fm-site { overflow-x: hidden !important; }
+  html, body { overflow-x: visible !important; }
 }
 
 /* Missao, Visao e Valores (Metodo Capta+) - 3 cards */
