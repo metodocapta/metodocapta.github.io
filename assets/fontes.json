@@ -1,0 +1,12 @@
+{
+  "atualizado_em": "2026-10-08",
+  "nota": "Normas federais com link oficial (Planalto). Entra SO o que foi verificado.",
+  "leis": {
+    "14260/2021": { "nome": "Lei nº 14.260/2021 (LIR)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14260.htm" },
+    "13019/2014": { "nome": "Lei nº 13.019/2014 (MROSC)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/lei/L13019.htm" },
+    "8313/1991":  { "nome": "Lei nº 8.313/1991 (Rouanet)", "url": "https://www.planalto.gov.br/ccivil_03/leis/L8313cons.htm" },
+    "12305/2010": { "nome": "Lei nº 12.305/2010 (PNRS)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" },
+    "8069/1990":  { "nome": "Lei nº 8.069/1990 (ECA)", "url": "https://www.planalto.gov.br/ccivil_03/leis/L8069.htm" },
+    "14399/2022": { "nome": "Lei nº 14.399/2022 (PNAB)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14399.htm" }
+  }
+}
