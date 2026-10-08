@@ -44,7 +44,7 @@ def config_site(site):
     LLMS = os.path.join(SITE, "llms.txt")
 
 SITE_URL = "https://metodocapta.github.io"
-WA = "https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20capta%C3%A7%C3%A3o"
+WA = "https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B."
 OG = SITE_URL + "/assets/marca/og-metodo-capta.jpg"
 
 # ---------------------------------------------------------------------------
@@ -415,8 +415,8 @@ def _pagina(m, total, gerado_em):
 
 <div class="cta">
 <b>Quer saber se a sua organização capta por este mecanismo?</b>
-<p>Diagnóstico de 30 minutos: elegibilidade, prontidão documental e prioridade — com método e critério. Atuação de meio, sem promessa de resultado.</p>
-<a class="btn" href="{WA}">Falar no WhatsApp</a>
+<p>Diagnóstico de prontidão (72h): elegibilidade, prontidão documental e prioridade — com método e critério. Atuação de meio, sem promessa de resultado.</p>
+<a class="btn" href="{WA}%20%28origem%3A%20Radar%20{m["slug"]}%29">Agendar diagnóstico de prontidão — 72h</a>
 <a class="btn ghost" href="/metodo-capta-plus/">Conhecer o método</a>
 </div>
 
@@ -489,8 +489,8 @@ def _hub(totais, gerado_em):
 {obs}
 <div class="cta">
 <b>Não sabe por onde começar?</b>
-<p>O diagnóstico de 30 minutos indica os mecanismos com maior aderência ao seu perfil — com método e critério, sem promessa de resultado.</p>
-<a class="btn" href="{WA}">Falar no WhatsApp</a>
+<p>O diagnóstico de prontidão (72h) indica os mecanismos com maior aderência ao seu perfil — com método e critério, sem promessa de resultado.</p>
+<a class="btn" href="{WA}">Agendar diagnóstico de prontidão — 72h</a>
 <a class="btn ghost" href="/metodo-capta-plus/">Conhecer o método</a>
 </div>
 <p class="muted">Última atualização: {hoje}.</p>
