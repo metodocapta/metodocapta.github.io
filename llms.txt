@@ -68,9 +68,10 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [MROSC — Marco Regulatório das OSCs](https://metodocapta.github.io/radar/mrosc/): Como funciona o MROSC (Lei 13.019/2014): chamamentos públicos, termos de fomento e de colaboração, contrapartidas e prestação de contas para parcerias com o poder público.
 - [Emendas — Emendas parlamentares](https://metodocapta.github.io/radar/emendas/): Como funcionam as emendas parlamentares e as transferências especiais: indicação, plano de trabalho no Transferegov, execução e prestação de contas para OSCs e governos.
 
-## Calculadora de Captação
+## Ferramentas
 
 - [Calculadora de Captação](https://metodocapta.github.io/calculadora/): quantas empresas do Lucro Real (incentivadoras) cabem na meta do seu projeto.
+- [Checklist de prontidão para parceria](https://metodocapta.github.io/checklist-parcerias/): 12 itens que a empresa avalia antes de investir em um projeto social. Marque e veja o nível de prontidão da OSC.
 
 ## Biblioteca (conceitos)
 
@@ -90,6 +91,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Compliance no terceiro setor](https://metodocapta.github.io/biblioteca/compliance/): Compliance no terceiro setor é o conjunto de práticas de governança, controles e transparência que mantêm a OSC conforme as regras dos financiadores e da lei. Veja o essencial.
 - [Investimento Social Privado (ISP)](https://metodocapta.github.io/biblioteca/o-que-e-investimento-social-privado/): Investimento Social Privado (ISP) é a destinação voluntária e estratégica de recursos privados a projetos de interesse público. Entenda a definição, os formatos, a relação com a agenda ESG e onde entram as leis de incentivo.
 - [O que as empresas procuram em uma OSC](https://metodocapta.github.io/biblioteca/o-que-empresas-procuram-em-uma-osc/): Credibilidade, projeto estruturado, capacidade de execução, transparência e indicadores: o que a empresa avalia antes de investir em um projeto social — e como sua OSC se prepara para ser parceira.
+- [ESG (Environmental, Social, Governance)](https://metodocapta.github.io/biblioteca/o-que-e-esg/): ESG é o conjunto de critérios ambientais, sociais e de governança usados para avaliar organizações — e a dimensão Social é a ponte entre empresas e o terceiro setor.
+- [Formatos de parceria com empresas](https://metodocapta.github.io/biblioteca/formatos-de-parceria-com-empresas/): os 6 formatos de parceria (patrocínio, apoio institucional, doação de produtos, voluntariado, apoio técnico e longo prazo) — a parceria não precisa começar grande.
 
 
 ## Soluções (por público e por região)
@@ -119,6 +122,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Como montar indicadores de impacto (alcance, resultado e impacto)](https://metodocapta.github.io/guias/como-montar-indicadores-de-impacto/): Passo a passo para montar indicadores de alcance, resultado e impacto de um projeto social — a evidência que a empresa investidora espera.
 - [Como montar um relatório de impacto (e renovar a parceria)](https://metodocapta.github.io/guias/como-montar-um-relatorio-de-impacto/): Passo a passo para montar o relatório de impacto que o investidor social espera: recursos, atividades, indicadores, resultados e depoimentos.
 - [Como montar uma apresentação institucional (media kit)](https://metodocapta.github.io/guias/como-montar-uma-apresentacao-institucional/): Passo a passo para montar a apresentação institucional (media kit) antes de abordar empresas e institutos.
+- [Como abordar uma empresa (qualificar, conectar e não vender a necessidade)](https://metodocapta.github.io/guias/como-abordar-uma-empresa/): Passo a passo para abordar uma empresa como parceira: pesquisar e qualificar o incentivador, achar o ponto de conexão e apresentar proposta de valor social.
 
 
 ## FAQ e mapa
