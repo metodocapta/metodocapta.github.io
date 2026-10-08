@@ -1,8 +1,9 @@
 CARTEIRA DE INCENTIVADORES — CALCULE E VEJA SE ESTÁ PRONTA
 Método Capta+ · https://metodocapta.github.io/carteira-de-incentivadores/
 
-1) Meta de captação ÷ ticket médio = nº de incentivadoras.
-   Referência de ticket: R$ 150 mil/ano por empresa de ~R$ 1 bi de faturamento.
+1) Meta de captação do projeto
+   ÷ Ticket médio por incentivadora
+   Referência de ticket: R$ 150.000.
 
 2) Sua carteira está pronta? Marque o que já existe:
 [ ] 1. Meta de captação definida (valor do projeto).

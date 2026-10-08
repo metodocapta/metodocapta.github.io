@@ -1,0 +1,16 @@
+{
+  "ferramentas": [
+    {
+      "slug": "checklist-parcerias",
+      "titulo": "Checklist de prontidão para parceria",
+      "secao": "Ferramentas",
+      "desc": "12 itens que a empresa avalia antes de investir em um projeto social. Marque e veja o nível de prontidão da OSC."
+    },
+    {
+      "slug": "carteira-de-incentivadores",
+      "titulo": "Carteira de incentivadores (ferramenta)",
+      "secao": "Ferramentas",
+      "desc": "calcule quantas incentivadoras o projeto precisa (meta ÷ ticket) e avalie, em 12 itens, se a carteira está pronta."
+    }
+  ]
+}
