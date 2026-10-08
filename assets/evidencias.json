@@ -1,0 +1,14 @@
+{
+  "atualizado_em": "2026-10-08",
+  "escopo": "Trajetória ampla/apresentada (Capta+ / Fomentia)",
+  "rotulo_escopo": "Trajetória ampla/apresentada",
+  "indicadores": [
+    { "id": "captado",      "valor": "R$ 2,5 M", "rotulo": "Valor captado" },
+    { "id": "projetos",     "valor": "25",       "rotulo": "Projetos aprovados" },
+    { "id": "experiencia",  "valor": "15 anos",  "rotulo": "Experiência" },
+    { "id": "conformidade", "valor": "100%",     "rotulo": "Conformidade" }
+  ],
+  "intro": "Trajetória ampla/apresentada em captação de recursos públicos e incentivados para projetos de inclusão digital, saúde e infância.",
+  "nota": "Trajetória ampla/apresentada: acumulado de captações e de projetos conduzidos no HUB — mais de 8 fontes de recursos. Consultoria de <strong>meio</strong>: o recurso captado pertence à organização e é comprovável em cada conta vinculada e prestação de contas.",
+  "nota_llms": "Indicadores (trajetória ampla/apresentada): R$ 2,5 M captados, 25 projetos aprovados, 15 anos de experiência e 100% de conformidade."
+}
