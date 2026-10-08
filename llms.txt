@@ -126,3 +126,5 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
 - [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
 
+## Estudos publicados
+- [ESG e Captação Incentivada: Por Que Empresas Investem e Como uma OSC se Torna Parceira](https://metodocapta.github.io/estudos/esg-e-captacao-incentivada/): estudo técnico com dados e referências.
