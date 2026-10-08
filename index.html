@@ -203,6 +203,32 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="preload" as="font" type="font/woff2" href="assets/marca/fontes/oswald-latin.woff2" crossorigin>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://metodocapta.github.io/#site","url":"https://metodocapta.github.io/","name":"Método Capta+","alternateName":"Método de direção em captação","inLanguage":"pt-BR","publisher":{"@id":"https://metodocapta.github.io/#organizacao"}}</script>
 <script defer src="/assets/fm-eventos.js"></script>
+<style id="fm-conversao-css">
+/* FASE 10 (conversão) — caminho alternativo, barra fixa e A/B */
+.fm-hero-alt{flex-basis:100%;width:100%;margin:8px 0 0;color:#9fb8b3;font-size:13px;line-height:1.6}
+.fm-hero-alt a{color:#7fe3d8;text-decoration:underline;text-underline-offset:2px}
+.fm-hero-alt a:hover{color:#bff6ee}
+.fm-sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:9990;display:flex;align-items:center;justify-content:center;gap:16px;padding:12px clamp(14px,4vw,28px) calc(12px + env(safe-area-inset-bottom,0px));background:rgba(4,34,42,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(127,227,216,.22);transform:translateY(130%);opacity:0;visibility:hidden;transition:transform .28s ease,opacity .28s ease,visibility .28s}
+.fm-sticky-cta.on{transform:translateY(0);opacity:1;visibility:visible}
+.fm-sticky-cta__txt{margin:0;max-width:560px;color:#eafffb;font-size:14px;line-height:1.4}
+.fm-sticky-cta__txt strong{color:#7fe3d8;font-weight:600}
+.fm-sticky-cta__btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:#0ABCB0;color:#04222a;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;letter-spacing:.03em;box-shadow:0 10px 26px rgba(10,188,176,.4);transition:transform .18s ease,filter .18s ease}
+.fm-sticky-cta__btn:hover{transform:translateY(-2px);filter:brightness(1.06);color:#04222a}
+.fm-sticky-cta__x{background:transparent;border:0;color:#7fa8a2;font-size:22px;line-height:1;cursor:pointer;padding:6px 10px;border-radius:8px}
+.fm-sticky-cta__x:hover{color:#eafffb;background:rgba(127,227,216,.12)}
+body.fm-bar-on .mc-zap{bottom:96px}
+@media (max-width:760px){
+.fm-sticky-cta{flex-wrap:wrap;gap:10px;justify-content:space-between}
+.fm-sticky-cta__txt{font-size:13px;max-width:none;flex:1 1 150px}
+.fm-sticky-cta__btn{padding:11px 16px;font-size:14px}
+body.fm-bar-on .mc-zap{bottom:86px}
+}
+@media (prefers-reduced-motion:reduce){
+.fm-sticky-cta{transition:none}
+.fm-sticky-cta__btn:hover{transform:none}
+}
+</style>
+<script defer src="/assets/fm-conversao.js"></script>
 </head>
 
 <body class="home wp-singular page-template page-template-elementor_canvas page page-id-2 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2">
@@ -325,13 +351,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
                             <div class="fm-actions">
 
-                                <a class="fm-btn fm-btn-primary" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20">
+                                <a class="fm-btn fm-btn-primary" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20" data-fm-evento="cta_diagnostico">
 
                                     Agendar diagnóstico de prontidão — 72h
 
                                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"/></svg>                                </a>
 
                                 <a class="fm-btn fm-btn-ghost" href="#fm-capta">Como funciona</a>
+                                <p class="fm-hero-alt">Ainda não é hora do diagnóstico? <a href="calculadora/index.html" data-fm-evento="ferramenta_calculadora">Veja quantas empresas do Lucro Real cabem na sua meta</a> ou leve o <a href="para-o-conselho/index.html" data-fm-evento="ferramenta_conselho">resumo de 1 página para o conselho</a>.</p>
                                 <p class="fm-hero-note">Sem compromisso. Em 72 horas você recebe o diagnóstico com o que a sua organização já pode captar.</p>
 
                             </div>
@@ -954,6 +981,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                     </div>
 
                 </section>
+
+<!-- FASE 10 (i) — barra fixa de conversão: aparece ao rolar o herói -->
+<aside class="fm-sticky-cta" aria-label="Atalho para o diagnóstico de prontidão">
+    <p class="fm-sticky-cta__txt"><strong>Diagnóstico de prontidão &mdash; 72h.</strong> Descubra o que a sua organização já pode captar.</p>
+    <a class="fm-sticky-cta__btn" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20" data-fm-evento="cta_sticky">Agendar agora <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16"><path d="M5 12h14M14 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button class="fm-sticky-cta__x" type="button" aria-label="Fechar atalho">&times;</button>
+</aside>
 
 </main>
 
