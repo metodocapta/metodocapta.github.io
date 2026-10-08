@@ -11,6 +11,12 @@
       "titulo": "Carteira de incentivadores (ferramenta)",
       "secao": "Ferramentas",
       "desc": "calcule quantas incentivadoras o projeto precisa (meta ÷ ticket) e avalie, em 12 itens, se a carteira está pronta."
+    },
+    {
+      "slug": "checklist-prestacao",
+      "titulo": "Checklist de prestação de contas (sem glosa)",
+      "secao": "Ferramentas",
+      "desc": "12 itens para prestar contas sem glosa: dossiê por rubrica, conta específica, nexo despesa↔meta e relatório de execução."
     }
   ]
 }
