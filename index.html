@@ -833,6 +833,27 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
                                     <a class="fm-tool" href="calculadora/index.html"><strong>Calculadora de captação</strong><span>quantas empresas do Lucro Real cabem na sua meta →</span></a>
                                     <a class="fm-tool" href="para-o-conselho/index.html" target="_blank" rel="noopener"><strong>Resumo para o conselho</strong><span>1 página para levar à diretoria →</span></a>
                                 </div>
+                                <div class="fm-frentes" data-frentes hidden>
+                                    <span class="fm-frentes-titulo">Frentes avulsas</span>
+                                    <ul class="fm-frentes-lista"></ul>
+                                </div>
+                                <script>
+                                (function () {
+                                  var box = document.querySelector('[data-frentes]');
+                                  if (!box) return;
+                                  fetch('/assets/frentes.json', { cache: 'no-store' })
+                                    .then(function (r) { return r.ok ? r.json() : null; })
+                                    .then(function (d) {
+                                      var f = (d && d.frentes) || [];
+                                      if (!f.length) return;
+                                      box.querySelector('.fm-frentes-lista').innerHTML = f.map(function (x) {
+                                        return '<li><strong>' + x.nome + '</strong><span>' + x.resumo + '</span></li>';
+                                      }).join('');
+                                      box.hidden = false;
+                                    })
+                                    .catch(function () {});
+                                })();
+                                </script>
                             </div>
                             <aside class="fm-case fm-reveal">
                                 <span class="k">Caso · rede FECCAT/SC</span>

@@ -1,0 +1,42 @@
+{
+  "versao": "1.0",
+  "atualizado_em": "2026-10-08",
+  "descricao": "Catalogo unico das FRENTES (o que vendemos) e o mapeamento frente -> modulos da Capta+ Plataforma. Fonte da verdade para o site e a plataforma.",
+  "frentes": [
+    {
+      "id": "estatuto",
+      "nome": "Reforma e blindagem estatutária",
+      "resumo": "Diagnóstico do estatuto e adequação ao edital, para ampliar a aptidão institucional.",
+      "resultado": "Estatuto apto a captar (menos reprovação por forma).",
+      "modulos": ["M1", "M2"]
+    },
+    {
+      "id": "plano",
+      "nome": "Plano de trabalho (Transferegov/MROSC)",
+      "resumo": "Metas, etapas, orçamento por rubrica e nexo causal no formato do edital.",
+      "resultado": "Plano de trabalho pronto para submissão.",
+      "modulos": ["M4", "M5", "M6", "M7", "M8"]
+    },
+    {
+      "id": "radar",
+      "nome": "Radar de oportunidades",
+      "resumo": "Editais, emendas, leis de incentivo e fundos, com leitura de aderência ao perfil.",
+      "resultado": "Oportunidades priorizadas por aderência.",
+      "modulos": ["M0", "M3"]
+    },
+    {
+      "id": "conformidade",
+      "nome": "Conformidade e prontidão documental",
+      "resumo": "Certidões, habilitação e documentação em ordem, com rastreabilidade.",
+      "resultado": "Habilitação pronta (menos risco de glosa).",
+      "modulos": ["M4", "M9", "M10", "M11", "M15"]
+    },
+    {
+      "id": "prestacao",
+      "nome": "Prestação de contas e acompanhamento",
+      "resumo": "Execução, evidências e relatório final, com monitoramento contínuo.",
+      "resultado": "Prestação de contas sem glosa.",
+      "modulos": ["M12", "M13", "M14"]
+    }
+  ]
+}

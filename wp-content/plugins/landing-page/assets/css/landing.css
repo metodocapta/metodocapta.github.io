@@ -1090,3 +1090,12 @@ html, body {
 .fm-tool span{color:#8fa7a2;font-size:12.5px;line-height:1.5}
 .fm-tool:hover{border-color:rgba(10,188,176,.42)}
 @media (max-width:560px){.fm-decision-tools{grid-template-columns:1fr}}
+
+/* Fase 1 — Frentes (do catalogo unico /assets/frentes.json) */
+.fm-frentes{margin-top:22px}
+.fm-frentes-titulo{display:block;font:600 11px/1 Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--fm-green);margin-bottom:12px}
+.fm-frentes-lista{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fm-frentes-lista li{padding:14px 16px;border:1px solid var(--fm-line);border-radius:14px;background:rgba(6,29,27,.35)}
+.fm-frentes-lista strong{display:block;color:#eafff7;font-size:13.5px}
+.fm-frentes-lista span{display:block;margin-top:4px;color:#8fa7a2;font-size:12.5px;line-height:1.5}
+@media (max-width:560px){.fm-frentes-lista{grid-template-columns:1fr}}
