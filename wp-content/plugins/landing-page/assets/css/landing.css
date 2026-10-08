@@ -1068,3 +1068,25 @@ html, body {
 .fm-case p{margin:12px 0 0;color:#cfdedb;font-size:13.5px;line-height:1.65}
 .fm-case .small{color:#8fa7a2;font-size:12.5px}
 @media (max-width:860px){.fm-decision-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   P1 CONVERSAO — comparativo, casos, ferramentas de decisao
+   ============================================================ */
+.fm-compare-wrap{margin-top:44px;overflow-x:auto;border:1px solid var(--fm-line);border-radius:20px}
+.fm-compare{width:100%;border-collapse:collapse;min-width:760px}
+.fm-compare th,.fm-compare td{padding:14px 16px;text-align:left;font-size:13px;border-top:1px solid var(--fm-line);vertical-align:top}
+.fm-compare thead th{background:rgba(10,188,176,.08);color:#edf9f6;font-size:13px}
+.fm-compare tbody th{color:#cfdedb;font-weight:700;font-size:12.5px;width:130px}
+.fm-compare td{color:#8fa7a2}
+.fm-compare .destaque{background:rgba(10,188,176,.10);color:#eafff7;font-weight:600}
+.fm-compare thead th.destaque{color:#7fe3d8}
+.fm-compare-close{margin:34px auto 0;max-width:760px;text-align:center;color:#cfdedb;font-size:15px;line-height:1.6}
+.fm-cases-grid{margin-top:44px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.fm-cases-grid .fm-case h3{margin:10px 0 0;color:#edf9f6;font-size:18px;line-height:1.25}
+@media (max-width:900px){.fm-cases-grid{grid-template-columns:1fr}}
+.fm-decision-tools{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fm-tool{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--fm-line);border-radius:16px;text-decoration:none;background:rgba(6,29,27,.35);transition:border-color .2s ease}
+.fm-tool strong{color:#eafff7;font-size:14px}
+.fm-tool span{color:#8fa7a2;font-size:12.5px;line-height:1.5}
+.fm-tool:hover{border-color:rgba(10,188,176,.42)}
+@media (max-width:560px){.fm-decision-tools{grid-template-columns:1fr}}
