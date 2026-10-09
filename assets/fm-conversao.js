@@ -1,4 +1,4 @@
-/* Método Capta+ — FASE 10 (conversão). Três caminhos, sem dependências.
+/* MetodoCapta — FASE 10 (conversão). Três caminhos, sem dependências.
    (i)   Barra fixa de CTA que aparece ao rolar o herói e some perto do contato.
    (ii)  Caminho alternativo no herói (termômetro) — feito no HTML.
    (iii) A/B do rótulo do CTA primário (persistido por sessão + rastreado). */

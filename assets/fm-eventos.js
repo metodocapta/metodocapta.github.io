@@ -1,4 +1,4 @@
-/* Método Capta+ — camada de eventos (privacidade primeiro).
+/* MetodoCapta — camada de eventos (privacidade primeiro).
    Sem cookies e sem provedor embutido: dispara para dataLayer / plausible / gtag
    SOMENTE se existirem no site. Sem provedor, nao faz nada (zero rede).
    Uso: window.fmEvento(nome, dados)  ou  data-fm-evento="nome" no elemento. */

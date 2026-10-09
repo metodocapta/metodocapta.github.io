@@ -28,8 +28,8 @@ wp-content/ wp-includes/        assets do tema e plugins
 - **Tipografia:** Oswald (títulos) + fonte de sistema (corpo)
 - **Símbolo:** "C+" — `assets/marca/mark-capta.svg`
 - **Camada visual:** `assets/marca/marca-capta.css` (carregada pelas 8 páginas)
-- **Ativos:** `wordmark-claro.png` (fundo escuro) · `wordmark-escuro.png` (fundo claro) ·
-  `og-metodo-capta.png` · favicons
+- **Ativos:** `wordmark-claro.webp` (fundo escuro) · `wordmark-escuro.png` (fundo claro) ·
+  `og-metodo-capta.jpg` · favicons
 
 ## Contato
 

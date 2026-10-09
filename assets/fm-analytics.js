@@ -1,4 +1,4 @@
-/* Método Capta+ — carregador de analítica (provider-agnostic).
+/* MetodoCapta — carregador de analítica (provider-agnostic).
    Ativa SOMENTE se houver provedor + ID em window.FM_ANALYTICS.
    Sem ID => no-op: zero rede, zero cookie, zero erro.
 
