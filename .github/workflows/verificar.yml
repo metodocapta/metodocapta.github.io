@@ -28,8 +28,10 @@ jobs:
           grep -q 'fm-values-grid' "$quem"      || { echo "::error::Quem Somos sem os Valores Fundamentais (fm-values-grid)"; fail=1; }
           grep -q 'Missão, Visão e Valores' "$quem" || { echo "::error::Quem Somos sem o titulo 'Missao, Visao e Valores'"; fail=1; }
 
-          grep -Eq 'html, *body *\{[^}]*overflow-x: *clip' "$css" || { echo "::error::landing.css: html/body sem overflow-x:clip (hidden QUEBRA o menu fixo)"; fail=1; }
-          grep -Eq '\.fm-site *\{[^}]*overflow: *visible' "$css"  || { echo "::error::landing.css: .fm-site sem overflow:visible"; fail=1; }
+          # Normaliza quebras de linha: as regras CSS podem estar em varias linhas.
+          css_flat=$(tr '\n' ' ' < "$css")
+          echo "$css_flat" | grep -Eq 'html, *body *\{[^}]*overflow-x: *(clip|visible)' || { echo "::error::landing.css: html/body sem overflow-x clip/visible (hidden QUEBRA o menu fixo)"; fail=1; }
+          echo "$css_flat" | grep -Eq '\.fm-site *\{[^}]*overflow: *visible' || { echo "::error::landing.css: .fm-site sem overflow:visible"; fail=1; }
 
           test -f assets/marca/wordmark-claro.webp  || { echo "::error::falta assets/marca/wordmark-claro.webp"; fail=1; }
           test -f assets/marca/og-metodo-capta.jpg  || { echo "::error::falta assets/marca/og-metodo-capta.jpg"; fail=1; }
