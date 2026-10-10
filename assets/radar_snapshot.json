@@ -1,28 +1,28 @@
 {
- "gerado_em": "2026-10-09",
+ "gerado_em": "2026-10-10",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1633,
-  "elegiveis": 8,
-  "estruturados": 1,
+  "oportunidades": 1649,
+  "elegiveis": 10,
+  "estruturados": 2,
   "matches": 458
  },
  "areas": [
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 497
+   "total": 502
   },
   {
    "codigo": "MROSC",
    "rotulo": "CHAMAMENTOS PÚBLICOS",
-   "total": 45
+   "total": 46
   },
   {
    "codigo": "ROUANET",
    "rotulo": "PRONAC ROUANET",
-   "total": 792
+   "total": 802
   },
   {
    "codigo": "LIR",

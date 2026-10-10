@@ -5,10 +5,15 @@ name: Atualizar Destaques (Substack)
 #
 # Roda: diariamente, no botao manual, e quando um estudo novo for publicado.
 
-# Atualizacao AUTOMATICA desligada: o build local (build_site.py) ja gera
-# assets/destaques.json e publica. Rode manual pela aba Actions quando quiser.
 on:
-  workflow_dispatch:            # somente manual (aba Actions)
+  schedule:
+    - cron: "0 * * * *"        # de hora em hora (post novo aparece em ate ~1h)
+  workflow_dispatch:            # permite rodar manualmente na aba Actions
+  push:
+    branches: [main]
+    paths:
+      - "estudos/**"            # publicou estudo novo -> atualiza os destaques
+      - "assets/destaques.json"
 
 permissions:
   contents: write

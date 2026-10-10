@@ -1,15 +1,15 @@
 {
- "gerado_em": "2026-10-09",
+ "gerado_em": "2026-10-10",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 458,
+   "oportunidades": 468,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 365
+     "total": 375
     },
     {
      "codigo": "EDITAL_PUBLICO",
@@ -44,12 +44,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 179,
+   "oportunidades": 181,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 104
+     "total": 106
     },
     {
      "codigo": "ROUANET",
@@ -244,12 +244,12 @@
    ]
   },
   "BA": {
-   "oportunidades": 25,
+   "oportunidades": 26,
    "areas": [
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 1
+     "total": 2
     },
     {
      "codigo": "EDITAL_PUBLICO",
