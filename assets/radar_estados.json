@@ -4,7 +4,7 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 474,
+   "oportunidades": 476,
    "areas": [
     {
      "codigo": "ROUANET",
@@ -14,7 +14,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 69
+     "total": 71
     },
     {
      "codigo": "MROSC",
@@ -44,12 +44,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 181,
+   "oportunidades": 182,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 106
+     "total": 107
     },
     {
      "codigo": "ROUANET",
@@ -79,12 +79,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 290,
+   "oportunidades": 292,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 58
+     "total": 60
     },
     {
      "codigo": "ROUANET",
@@ -144,7 +144,7 @@
    ]
   },
   "RJ": {
-   "oportunidades": 49,
+   "oportunidades": 50,
    "areas": [
     {
      "codigo": "LIR",
@@ -159,7 +159,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 17
+     "total": 18
     },
     {
      "codigo": "ROUANET",
@@ -194,12 +194,12 @@
    ]
   },
   "MG": {
-   "oportunidades": 35,
+   "oportunidades": 36,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 14
+     "total": 15
     },
     {
      "codigo": "MROSC",

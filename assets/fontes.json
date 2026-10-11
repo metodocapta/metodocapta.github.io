@@ -7,6 +7,8 @@
     "8313/1991":  { "nome": "Lei nº 8.313/1991 (Rouanet)", "url": "https://www.planalto.gov.br/ccivil_03/leis/L8313cons.htm" },
     "12305/2010": { "nome": "Lei nº 12.305/2010 (PNRS)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" },
     "8069/1990":  { "nome": "Lei nº 8.069/1990 (ECA)", "url": "https://www.planalto.gov.br/ccivil_03/leis/L8069.htm" },
-    "14399/2022": { "nome": "Lei nº 14.399/2022 (PNAB)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14399.htm" }
+    "14399/2022": { "nome": "Lei nº 14.399/2022 (PNAB)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14399.htm" },
+    "11438/2006": { "nome": "Lei nº 11.438/2006 (Lei de Incentivo ao Esporte — revogada pela LC 222/2025)", "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11438.htm" },
+    "222/2025":   { "nome": "Lei Complementar nº 222/2025 (incentivos fiscais ao esporte)", "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp222.htm" }
   }
 }
