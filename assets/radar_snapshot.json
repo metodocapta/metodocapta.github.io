@@ -3,7 +3,7 @@
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1674,
+  "oportunidades": 1689,
   "elegiveis": 10,
   "estruturados": 4,
   "matches": 1128
@@ -12,7 +12,7 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 522
+   "total": 537
   },
   {
    "codigo": "MROSC",

@@ -3,11 +3,14 @@ name: Atualizar Destaques (Substack)
 # Puxa os ultimos 5 posts do Substack e atualiza assets/destaques.json,
 # que alimenta o slider "Destaques" da Home.
 #
-# Roda: diariamente, no botao manual, e quando um estudo novo for publicado.
+# Roda: 1x/dia, no botao manual, e em push de estudo novo. O Substack (Cloudflare)
+# bloqueia com frequencia o IP do runner do GitHub; nesse caso o job NAO falha —
+# apenas MANTEM o assets/destaques.json como esta (a atualizacao local, via
+# build_site, cuida do arquivo). Assim o Actions nao dispara alerta a toa.
 
 on:
   schedule:
-    - cron: "0 * * * *"        # de hora em hora (post novo aparece em ate ~1h)
+    - cron: "0 11 * * *"       # 1x/dia (~08:00 BRT)
   workflow_dispatch:            # permite rodar manualmente na aba Actions
   push:
     branches: [main]
@@ -126,7 +129,7 @@ jobs:
                   return re.sub(r"(/image/fetch/[^/]+)/", r"\1,w_%d/" % largura, url, count=1)
               return url
 
-          def baixar(url, tentativas=3):
+          def baixar(url, tentativas=2):
               hdrs = {
                   "User-Agent": UA,
                   "Accept": "application/rss+xml, application/xml, text/xml, */*;q=0.8",
@@ -137,7 +140,7 @@ jobs:
               for i in range(tentativas):
                   try:
                       return urllib.request.urlopen(
-                          urllib.request.Request(url, headers=hdrs), timeout=45
+                          urllib.request.Request(url, headers=hdrs), timeout=25
                       ).read().decode("utf-8", "replace")
                   except (urllib.error.HTTPError, urllib.error.URLError, OSError) as exc:
                       erro = exc
@@ -150,6 +153,7 @@ jobs:
           # do IP deles — devolvendo o mesmo XML.
           FONTES = [
               FEED,
+              "https://r.jina.ai/" + FEED,
               "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe=""),
               "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe=""),
               "https://api.codetabs.com/v1/proxy?quest=" + urllib.parse.quote(FEED, safe=""),
@@ -165,9 +169,13 @@ jobs:
                       print("sem itens:", src[:74])
                   except Exception as exc:
                       print("falhou:", src[:60], "->", exc)
-              raise RuntimeError("nenhuma fonte retornou o feed do Substack")
+              return None
 
           bruto = pegar_feed()
+          if not bruto:
+              print("AVISO: feed do Substack inacessivel deste runner (Cloudflare/proxy).")
+              print("Mantendo assets/destaques.json como esta (a atualizacao local cuida).")
+              raise SystemExit(0)
 
           import xml.etree.ElementTree as ET
           itens = []
