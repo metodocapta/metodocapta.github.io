@@ -64,12 +64,11 @@ const on = (el, ev, fn, opt) => {
     if (!/^\d[\d.\s]*$/.test(txt)) return;            // só valores numéricos
     const n = parseInt(txt.replace(/[^\d]/g, ''), 10);
     if (!Number.isFinite(n) || n < 10) return;         // ignora números pequenos
-    alvos.push({ el, n });
+    alvos.push({ el, n, original: txt });
   });
   if (!alvos.length) return;
   if (rm || !('IntersectionObserver' in window)) return;  // mantém o valor final
 
-  const fmt = new Intl.NumberFormat('pt-BR');
   const obs = new IntersectionObserver((entradas, o) => {
     entradas.forEach((entrada) => {
       if (!entrada.isIntersecting) return;
@@ -81,9 +80,9 @@ const on = (el, ev, fn, opt) => {
       const passo = (t) => {
         const k = Math.min(1, (t - t0) / dur);
         const eased = 1 - Math.pow(1 - k, 3);
-        item.el.textContent = fmt.format(Math.round(item.n * eased));
+        item.el.textContent = String(Math.round(item.n * eased));
         if (k < 1) requestAnimationFrame(passo);
-        else item.el.textContent = fmt.format(item.n);
+        else item.el.textContent = item.original;      // volta ao texto exato do HTML
       };
       requestAnimationFrame(passo);
     });
@@ -302,10 +301,76 @@ async function capacidade3D() {
 })();
 
 /* --------------------------------------------------------------------------
-   11) ROLLBACK — desliga a camada sem rebuild (emergência)
+   11) MÉTODO — storytelling por scroll: a etapa que cruza o centro "acende"
+   Reusa a interação que JÁ existe (mouseenter/focus/click → painel). Se o
+   usuário interagir por conta própria, paramos de dirigir por scroll.
+   -------------------------------------------------------------------------- */
+(function metodoStorytelling() {
+  if (rm) return;
+  const pillars = Array.from(doc.querySelectorAll('.fm-capta-section .fm-pillars .fm-pillar'));
+  if (pillars.length < 2) return;
+
+  let manual = false;
+  const marcarManual = (ev) => { if (ev && ev.isTrusted === false) return; manual = true; };
+  ['mouseenter', 'click', 'focusin', 'pointerdown', 'keydown'].forEach((ev) =>
+    pillars.forEach((p) => p.addEventListener(ev, marcarManual, { passive: true })));
+
+  let atual = -1;
+  let ticking = false;
+  function atualizar() {
+    ticking = false;
+    if (manual) return;
+    const cy = window.innerHeight / 2;
+    let melhor = -1;
+    let dist = Infinity;
+    pillars.forEach((p, i) => {
+      const r = p.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > window.innerHeight) return;   // fora da tela
+      const d = Math.abs((r.top + r.height / 2) - cy);
+      if (d < dist) { dist = d; melhor = i; }
+    });
+    if (melhor >= 0 && melhor !== atual) {
+      atual = melhor;
+      pillars[melhor].dispatchEvent(new MouseEvent('mouseenter'));   // acende a etapa
+    }
+  }
+  function agendar() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(atualizar);
+  }
+  on(window, 'scroll', agendar, { passive: true });
+  on(window, 'resize', agendar, { passive: true });
+  agendar();
+})();
+
+/* --------------------------------------------------------------------------
+   12) RADAR — varredura decorativa (HUD), atrás do conteúdo
+   -------------------------------------------------------------------------- */
+(function radarVarredura() {
+  if (rm) return;
+  const sec = doc.querySelector('.fm-radar-section');
+  if (!sec || sec.querySelector('.fm-radar-sweep')) return;
+
+  const sweep = doc.createElement('div');
+  sweep.className = 'fm-radar-sweep';
+  sweep.setAttribute('aria-hidden', 'true');
+  sweep.innerHTML = '<span class="fm-radar-ring"></span><span class="fm-radar-ring"></span>' +
+                    '<span class="fm-radar-ring"></span><span class="fm-radar-beam"></span>';
+  sec.insertBefore(sweep, sec.firstChild);
+  sec.classList.add('fm-radar-host');
+
+  cleanups.push(() => {
+    sweep.remove();
+    sec.classList.remove('fm-radar-host');
+  });
+})();
+
+/* --------------------------------------------------------------------------
+   13) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f2',
+  versao: '2.4.0-f3',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
