@@ -558,7 +558,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   line-height:1.28;
   letter-spacing:.006em;
 }
-.fm-site .fm-kicker{font-size:var(--mc-fs-label) !important;}
+.fm-site .fm-kicker{font-size:clamp(20px,2.8vw,36px) !important;letter-spacing:.08em !important;line-height:1.06;}
 .fm-site .fm-hero-copy > p{font-size:var(--mc-fs-lead) !important;line-height:1.62;}
 .fm-site .fm-section p,
 .fm-site .fm-contact-section p{font-size:var(--mc-fs-body);line-height:1.7;}
@@ -645,7 +645,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-pillar > span,.fm-journey-step > span,.fm-journey-step strong{font-size:11.5px !important;}
   .fm-evidence-tag,.fm-evidence-list li,.fm-audience-card p,.fm-problem-points p{font-size:14px !important;}
   .fm-mech-step{font-size:11.5px !important;}
-  .fm-kicker{font-size:11.5px !important;}
+  .fm-kicker{font-size:clamp(17px,4.6vw,22px) !important;letter-spacing:.09em !important;}
   .fm-faq-item summary{font-size:15.5px;}
   .fm-faq-item p{font-size:14.5px !important;}
 

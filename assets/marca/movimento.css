@@ -225,7 +225,12 @@ html:not(.fm-movimento) .fm-forte{ background-size:100% 2px !important; transiti
 }
 
 /* ==========================================================================
-   16) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
+   16) NOMES DE SEÇÃO (kicker) — o número só no primeiro kicker da seção
+   ========================================================================== */
+.fm-kicker.fm-kicker-sub::before{ content:none !important; }
+
+/* ==========================================================================
+   17) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
    ========================================================================== */
 .fm-mov-toggle{
   position:fixed; left:14px; bottom:18px; z-index:9985;

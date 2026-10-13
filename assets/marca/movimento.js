@@ -52,6 +52,17 @@ const on = (el, ev, fn, opt) => {
 })();
 
 /* --------------------------------------------------------------------------
+   0b) NUMERAÇÃO DAS SEÇÕES — evita "01 · " repetido quando uma seção tem
+   mais de um kicker (o número pertence só ao primeiro)
+   -------------------------------------------------------------------------- */
+(function numeracaoKicker() {
+  doc.querySelectorAll('.fm-section').forEach((sec) => {
+    const ks = sec.querySelectorAll('.fm-kicker');
+    for (let i = 1; i < ks.length; i++) ks[i].classList.add('fm-kicker-sub');
+  });
+})();
+
+/* --------------------------------------------------------------------------
    1) BARRA DE PROGRESSO DE LEITURA
    -------------------------------------------------------------------------- */
 (function barraDeProgresso() {
@@ -82,7 +93,8 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 (function contadores() {
   const els = Array.from(doc.querySelectorAll(
-    '.fm-radar-kpi b, .fm-radar-areas li b, .fm-metric strong'
+    '.fm-radar-kpi b, .fm-radar-areas li b, .fm-metric strong, ' +
+    '.fm-method-metrics b, .fm-method-metrics strong'
   ));
   if (!els.length) return;
 
@@ -123,7 +135,9 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 (function cascata() {
   const grids = Array.from(doc.querySelectorAll(
-    '.fm-partners-grid, .fm-radar-grid, .fm-radar-areas ul'
+    '.fm-partners-grid, .fm-radar-grid, .fm-radar-areas ul, ' +
+    '.fm-mvv-grid, .fm-values-grid, .fm-method-layers, .fm-method-guarantees-grid, ' +
+    '.fm-method-formal-grid, .fm-method-tech-grid, .fm-cases-grid, .fm-method-scope-list'
   ));
   if (!grids.length || rm || !('IntersectionObserver' in window)) return;
 
@@ -150,7 +164,8 @@ const on = (el, ev, fn, opt) => {
 (function tiltDosCards() {
   if (rm || !fine) return;
   const cards = Array.from(doc.querySelectorAll(
-    '.fm-partner-card, .fm-radar-kpi, .fm-metric, .fm-case'
+    '.fm-partner-card, .fm-radar-kpi, .fm-metric, .fm-case, ' +
+    '.fm-method-layer, .fm-method-scope-card, .fm-method-formal-card'
   ));
   cards.forEach((box) => {
     box.classList.add('fm-tiltz');
@@ -210,7 +225,9 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 (function spotlight() {
   if (rm || !fine) return;
-  const secoes = Array.from(doc.querySelectorAll('#fm-capta, #fm-contato'));
+  const secoes = Array.from(doc.querySelectorAll(
+    '#fm-capta, #fm-contato, .fm-method-hero, .fm-method-cta-section'
+  ));
   secoes.forEach((secao) => {
     secao.classList.add('fm-spot-host');
     const spot = doc.createElement('span');
@@ -235,10 +252,13 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 (function tituloCinetico() {
   if (rm) return;
-  const h1 = doc.querySelector('.fm-hero h1');
-  if (!h1 || !/<br\s*\/?>/i.test(h1.innerHTML)) return;
+  const h1 = doc.querySelector('.fm-hero h1, .fm-method-hero h1');
+  if (!h1) return;
 
-  const linhas = h1.innerHTML.split(/<br\s*\/?>/i).map((l) => l.trim());
+  const linhas = /<br\s*\/?>/i.test(h1.innerHTML)
+    ? h1.innerHTML.split(/<br\s*\/?>/i).map((l) => l.trim())
+    : [h1.innerHTML.trim()];
+  if (!linhas.length) return;
   h1.innerHTML = linhas
     .map((l) => '<span class="fm-kin-line"><span class="fm-kin-in">' + l + '</span></span>')
     .join('');
@@ -440,7 +460,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.1',
+  versao: '2.4.2',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
