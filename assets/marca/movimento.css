@@ -1,0 +1,87 @@
+/* ==========================================================================
+   MÉTODO CAPTA+ · v2.4 · MOVIMENTO (camada FINAL)
+   --------------------------------------------------------------------------
+   Carregar DEPOIS de marca-capta.css e atmosfera.css.
+
+   Guardrails (V2.4 · 04_GUARDRAILS_E_ACEITE.md):
+     - Só `transform` e `opacity` (nunca animar layout, cor ou sombra).
+     - Só alphas da paleta oficial (navy / teal / grafite / teal-claro).
+     - Tudo desliga em `prefers-reduced-motion: reduce`.
+     - Aditiva: não redefine regra de marca-capta.css; só acrescenta estado.
+   ========================================================================== */
+
+:root{ --fm-move-ease:cubic-bezier(.2,.72,.2,1); }
+
+/* ==========================================================================
+   1) BARRA DE PROGRESSO DE LEITURA
+   ========================================================================== */
+#fm-progress{
+  position:fixed; left:0; top:0; height:2px; width:100%; z-index:9999;
+  transform:scaleX(0); transform-origin:0 50%; pointer-events:none;
+  background:linear-gradient(90deg,#067a72 0%,#0ABCB0 55%,#7fe3d8 100%);
+  transition:transform .1s linear;
+}
+
+/* ==========================================================================
+   2) CONTADORES — números com largura fixa (sem "pular" durante a contagem)
+   ========================================================================== */
+.fm-radar-kpi b,
+.fm-radar-areas li b,
+.fm-metric strong{ font-variant-numeric:tabular-nums; }
+
+/* ==========================================================================
+   3) REVELAÇÃO EM CASCATA (grids que hoje entram de uma vez só)
+   ========================================================================== */
+.fm-stagger-item{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .55s var(--fm-move-ease), transform .55s var(--fm-move-ease);
+}
+.fm-stagger-item.in{ opacity:1; transform:none; }
+
+/* rede de segurança: se o JS falhar, o item aparece sozinho (igual ao reveal) */
+@keyframes fmStaggerFallback{ to{ opacity:1; transform:none; } }
+.fm-stagger-item:not(.in){ animation:fmStaggerFallback .7s ease 1.8s forwards; }
+
+/* ==========================================================================
+   4) TILT DOS CARDS (transform aplicado via JS; aqui só o contexto 3D)
+   ========================================================================== */
+.fm-tiltz{ transform-style:preserve-3d; }
+
+/* ==========================================================================
+   5) BOTÕES MAGNÉTICOS
+   ========================================================================== */
+.fm-magnet{ will-change:transform; }
+
+/* ==========================================================================
+   6) SPOTLIGHT — brilho teal que segue o cursor (só seções escuras)
+   ========================================================================== */
+.fm-spot-host{ position:relative; }
+.fm-spot{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+  opacity:0; transition:opacity .35s ease;
+  mix-blend-mode:screen;
+  background:radial-gradient(560px circle at var(--fm-mx,50%) var(--fm-my,40%),
+              rgba(10,188,176,.14), transparent 60%);
+}
+.fm-spot.on{ opacity:1; }
+
+/* ==========================================================================
+   7) FAQ — abertura suave da resposta (o <details> nativo ganha entrada)
+   ========================================================================== */
+@keyframes fmFaqIn{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:none; } }
+.fm-faq-item[open] > p{ animation:fmFaqIn .32s var(--fm-move-ease); }
+
+/* ==========================================================================
+   8) ACESSIBILIDADE — desliga tudo
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce){
+  #fm-progress{ transition:none; }
+  .fm-stagger-item{ opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
+  .fm-faq-item[open] > p{ animation:none; }
+  .fm-spot{ display:none; }
+  .fm-tiltz{ transform-style:flat; }
+}
+@media (prefers-contrast: more){
+  .fm-spot{ display:none; }
+}
