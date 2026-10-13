@@ -73,7 +73,45 @@
 .fm-faq-item[open] > p{ animation:fmFaqIn .32s var(--fm-move-ease); }
 
 /* ==========================================================================
-   8) ACESSIBILIDADE — desliga tudo
+   8) TIPOGRAFIA CINÉTICA — H1 revelado por LINHA (máscara)
+   A Oswald condensada em caixa-alta é o material ideal para kinetic type.
+   O JS embrulha cada linha do H1; aqui só a animação (transform/opacity).
+   ========================================================================== */
+.fm-kinetic-title .fm-kin-line{
+  display:block; overflow:hidden;
+  padding-bottom:.12em; margin-bottom:-.12em;   /* espaço p/ cedilha e descendentes */
+}
+.fm-kinetic-title .fm-kin-in{
+  display:block; transform:translateY(110%); opacity:0;
+  transition:transform .9s var(--fm-move-ease), opacity .9s var(--fm-move-ease);
+}
+.fm-kinetic-title.in .fm-kin-in{ transform:none; opacity:1; }
+.fm-kinetic-title.in .fm-kin-line:nth-child(2) .fm-kin-in{ transition-delay:.12s; }
+.fm-kinetic-title.in .fm-kin-line:nth-child(3) .fm-kin-in{ transition-delay:.24s; }
+@keyframes fmKinFallback{ to{ transform:none; opacity:1; } }
+.fm-kinetic-title:not(.in) .fm-kin-in{ animation:fmKinFallback .9s ease 1.6s forwards; }
+
+/* ==========================================================================
+   9) MARQUEE — a faixa do hero vira um fluxo contínuo (pausa no hover)
+   ========================================================================== */
+.fm-hero-strip.fm-marquee{ display:block; overflow:hidden; white-space:nowrap; }
+.fm-marquee-track{ display:flex; width:max-content; animation:fmMarquee 34s linear infinite; }
+.fm-marquee-grupo{ display:flex; align-items:center; gap:23px; padding-right:23px; }
+@keyframes fmMarquee{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(-50%,0,0); } }
+.fm-hero-strip.fm-marquee:hover .fm-marquee-track,
+.fm-hero-strip.fm-marquee:focus-within .fm-marquee-track{ animation-play-state:paused; }
+@media (max-width:400px){ .fm-marquee-grupo{ gap:10px; padding-right:10px; } }
+
+/* ==========================================================================
+   10) H2 COM VARREDURA (wipe) ao entrar na tela
+   ========================================================================== */
+.fm-wipe{ clip-path:inset(0 100% 0 0); transition:clip-path .85s var(--fm-move-ease); }
+.fm-wipe.in{ clip-path:inset(0 0 0 0); }
+@keyframes fmWipeFallback{ to{ clip-path:inset(0 0 0 0); } }
+.fm-wipe:not(.in){ animation:fmWipeFallback .7s ease 1.8s forwards; }
+
+/* ==========================================================================
+   11) ACESSIBILIDADE — desliga tudo
    ========================================================================== */
 @media (prefers-reduced-motion: reduce){
   #fm-progress{ transition:none; }
@@ -81,6 +119,9 @@
   .fm-faq-item[open] > p{ animation:none; }
   .fm-spot{ display:none; }
   .fm-tiltz{ transform-style:flat; }
+  .fm-kinetic-title .fm-kin-in{ transform:none !important; opacity:1 !important; animation:none !important; }
+  .fm-wipe{ clip-path:none !important; animation:none !important; }
+  .fm-hero-strip.fm-marquee .fm-marquee-track{ animation:none !important; }
 }
 @media (prefers-contrast: more){
   .fm-spot{ display:none; }

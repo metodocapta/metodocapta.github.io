@@ -202,14 +202,86 @@ const on = (el, ev, fn, opt) => {
 })();
 
 /* --------------------------------------------------------------------------
-   7) ROLLBACK — desliga a camada sem rebuild (emergência)
+   7) TIPOGRAFIA CINÉTICA — H1 revelado por linha (máscara)
+   Embrulha cada linha do H1 (split no <br>) e revela com cortina.
+   Sem JS / reduced-motion: o texto permanece simples e visível.
+   -------------------------------------------------------------------------- */
+(function tituloCinetico() {
+  if (rm) return;
+  const h1 = doc.querySelector('.fm-hero h1');
+  if (!h1 || !/<br\s*\/?>/i.test(h1.innerHTML)) return;
+
+  const linhas = h1.innerHTML.split(/<br\s*\/?>/i).map((l) => l.trim());
+  h1.innerHTML = linhas
+    .map((l) => '<span class="fm-kin-line"><span class="fm-kin-in">' + l + '</span></span>')
+    .join('');
+  h1.classList.add('fm-kinetic-title');
+
+  if (!('IntersectionObserver' in window)) { h1.classList.add('in'); return; }
+  const obs = new IntersectionObserver((entradas, o) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      o.unobserve(h1);
+      h1.classList.add('in');
+    });
+  }, { threshold: 0.2 });
+  obs.observe(h1);
+})();
+
+/* --------------------------------------------------------------------------
+   8) MARQUEE — a faixa do hero vira um fluxo contínuo
+   Duplica o conteúdo uma vez (o clone é decorativo: aria-hidden).
+   -------------------------------------------------------------------------- */
+(function marqueeDoStrip() {
+  if (rm) return;
+  const strip = doc.querySelector('.fm-hero-strip');
+  if (!strip || strip.children.length < 2) return;
+
+  const track = doc.createElement('div');
+  track.className = 'fm-marquee-track';
+  const grupo = doc.createElement('div');
+  grupo.className = 'fm-marquee-grupo';
+  Array.from(strip.childNodes).forEach((n) => grupo.appendChild(n));
+  track.appendChild(grupo);
+
+  const clone = grupo.cloneNode(true);
+  clone.setAttribute('aria-hidden', 'true');
+  track.appendChild(clone);
+
+  strip.appendChild(track);
+  strip.classList.add('fm-marquee');
+})();
+
+/* --------------------------------------------------------------------------
+   9) H2 COM VARREDURA — cada título de seção entra com um "wipe" lateral
+   -------------------------------------------------------------------------- */
+(function h2Varredura() {
+  if (rm) return;
+  const h2s = Array.from(doc.querySelectorAll('section h2'));
+  if (!h2s.length) return;
+  h2s.forEach((h) => h.classList.add('fm-wipe'));
+
+  if (!('IntersectionObserver' in window)) { h2s.forEach((h) => h.classList.add('in')); return; }
+  const obs = new IntersectionObserver((entradas, o) => {
+    entradas.forEach((e) => {
+      if (!e.isIntersecting) return;
+      o.unobserve(e.target);
+      e.target.classList.add('in');
+    });
+  }, { threshold: 0.25 });
+  h2s.forEach((h) => obs.observe(h));
+})();
+
+/* --------------------------------------------------------------------------
+   10) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f1',
+  versao: '2.4.0-f1.1',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
-    doc.querySelectorAll('.fm-stagger-item').forEach((e) => e.classList.add('in'));
+    doc.querySelectorAll('.fm-stagger-item, .fm-kinetic-title, .fm-wipe')
+      .forEach((e) => e.classList.add('in'));
     const bar = doc.getElementById('fm-progress');
     if (bar) bar.remove();
   }
