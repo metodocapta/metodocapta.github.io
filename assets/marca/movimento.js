@@ -122,7 +122,7 @@ const on = (el, ev, fn, opt) => {
 (function tiltDosCards() {
   if (rm || !fine) return;
   const cards = Array.from(doc.querySelectorAll(
-    '.fm-partner-card, .fm-radar-kpi, .fm-metric'
+    '.fm-partner-card, .fm-radar-kpi, .fm-metric, .fm-case'
   ));
   cards.forEach((box) => {
     box.classList.add('fm-tiltz');
@@ -367,14 +367,35 @@ async function capacidade3D() {
 })();
 
 /* --------------------------------------------------------------------------
-   13) ROLLBACK — desliga a camada sem rebuild (emergência)
+   13) TERMOS-CHAVE — sublinhado que "desenha" ao entrar na tela
+   -------------------------------------------------------------------------- */
+(function termosChave() {
+  if (rm) return;
+  const alvos = Array.from(doc.querySelectorAll(
+    '#fm-problema strong, #fm-decisao strong, #fm-comparativo strong'
+  ));
+  if (!alvos.length) return;
+  alvos.forEach((s) => s.classList.add('fm-forte'));
+  if (!('IntersectionObserver' in window)) { alvos.forEach((s) => s.classList.add('in')); return; }
+  const obs = new IntersectionObserver((ents, o) => {
+    ents.forEach((e) => {
+      if (!e.isIntersecting) return;
+      o.unobserve(e.target);
+      e.target.classList.add('in');
+    });
+  }, { threshold: 0.6 });
+  alvos.forEach((s) => obs.observe(s));
+})();
+
+/* --------------------------------------------------------------------------
+   14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f3',
+  versao: '2.4.0-f4',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
-    doc.querySelectorAll('.fm-stagger-item, .fm-kinetic-title, .fm-wipe')
+    doc.querySelectorAll('.fm-stagger-item, .fm-kinetic-title, .fm-wipe, .fm-forte')
       .forEach((e) => e.classList.add('in'));
     if (hero3D && typeof hero3D.destroy === 'function') {
       try { hero3D.destroy(); } catch (e) { /* noop */ }
