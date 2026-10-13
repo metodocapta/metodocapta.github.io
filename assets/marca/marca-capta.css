@@ -220,7 +220,7 @@ footer::before,.fm-footer::before{
 .fm-footer-tagline{margin:14px 0 0;max-width:34ch;color:#7ea49a;font-size:12.5px;line-height:1.6}
 .fm-footer-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 26px;width:100%}
 .fm-footer-col{display:flex;flex-direction:column;gap:13px;min-width:0}
-.fm-footer-col-titulo{font:700 10.5px/1 Inter,sans-serif;letter-spacing:.13em;
+.fm-footer-col-titulo{font:700 11px/1 Inter,sans-serif;letter-spacing:.13em;
   text-transform:uppercase;color:rgba(127,227,216,.75)}
 .fm-footer-col a{display:flex;flex-direction:column;gap:2px;color:#cfe8e3;
   font-size:13px;font-weight:600;text-decoration:none;line-height:1.25}
@@ -619,6 +619,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-mech-step{font-size:11px;padding:8px 11px;}
   .fm-mech-arrow{display:none;}
 }
+
+/* ==========================================================================
+   v2.4 · ALVOS DE TOQUE — links "ver X" dos cards de 5 perguntas (>=44px)
+   ========================================================================== */
+.fm-site .fm-dec5-card a{display:inline-block;padding:12px 0;margin-top:0}
 
 /* ==========================================================================
    v2.3 · RESPONSIVIDADE FINA (mobile) — alvos de toque e legibilidade
