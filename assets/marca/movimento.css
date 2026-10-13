@@ -111,7 +111,18 @@
 .fm-wipe:not(.in){ animation:fmWipeFallback .7s ease 1.8s forwards; }
 
 /* ==========================================================================
-   11) ACESSIBILIDADE — desliga tudo
+   11) HERO 3D — o canvas entra ATRÁS da composição (minimalismo espacial)
+   ========================================================================== */
+.fm-hero-3d-canvas{
+  position:absolute; inset:0; z-index:0; width:100%; height:100%;
+  pointer-events:none; opacity:0;
+  transform:translateZ(-40px);            /* atrás dos cards/anéis do palco */
+  transition:opacity .8s var(--fm-move-ease);
+}
+html[data-fm-3d="on"] .fm-hero-3d-canvas{ opacity:.92; }
+
+/* ==========================================================================
+   12) ACESSIBILIDADE — desliga tudo
    ========================================================================== */
 @media (prefers-reduced-motion: reduce){
   #fm-progress{ transition:none; }
@@ -122,6 +133,7 @@
   .fm-kinetic-title .fm-kin-in{ transform:none !important; opacity:1 !important; animation:none !important; }
   .fm-wipe{ clip-path:none !important; animation:none !important; }
   .fm-hero-strip.fm-marquee .fm-marquee-track{ animation:none !important; }
+  .fm-hero-3d-canvas{ display:none !important; }
 }
 @media (prefers-contrast: more){
   .fm-spot{ display:none; }

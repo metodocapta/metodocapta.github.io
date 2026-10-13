@@ -273,15 +273,49 @@ const on = (el, ev, fn, opt) => {
 })();
 
 /* --------------------------------------------------------------------------
-   10) ROLLBACK — desliga a camada sem rebuild (emergência)
+   10) HERO 3D — minimalismo espacial (import dinâmico, só se o aparelho aguentar)
+   -------------------------------------------------------------------------- */
+let hero3D = null;
+
+async function capacidade3D() {
+  try {
+    if (!window.WebGL2RenderingContext || !fine) return false;   // mobile mantém o hero CSS
+    const prova = doc.createElement('canvas');
+    if (!prova.getContext('webgl2')) return false;
+    if (navigator.deviceMemory && navigator.deviceMemory < 4) return false;
+    if (navigator.connection && navigator.connection.saveData) return false;
+    return true;
+  } catch (e) { return false; }
+}
+
+(async function heroTridimensional() {
+  if (rm) return;
+  const stage = doc.querySelector('.fm-hero-stage');
+  if (!stage) return;
+  if (!(await capacidade3D())) return;
+  try {
+    const mod = await import('./tres/hero-3d.js');
+    if (!mod || typeof mod.iniciarHero !== 'function') return;
+    hero3D = mod.iniciarHero(stage);
+    if (hero3D) doc.documentElement.setAttribute('data-fm-3d', 'on');
+  } catch (e) { /* silencioso: o hero CSS permanece como fallback */ }
+})();
+
+/* --------------------------------------------------------------------------
+   11) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f1.1',
+  versao: '2.4.0-f2',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
     doc.querySelectorAll('.fm-stagger-item, .fm-kinetic-title, .fm-wipe')
       .forEach((e) => e.classList.add('in'));
+    if (hero3D && typeof hero3D.destroy === 'function') {
+      try { hero3D.destroy(); } catch (e) { /* noop */ }
+      hero3D = null;
+      doc.documentElement.removeAttribute('data-fm-3d');
+    }
     const bar = doc.getElementById('fm-progress');
     if (bar) bar.remove();
   }
