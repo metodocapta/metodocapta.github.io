@@ -166,6 +166,14 @@ html[data-fm-3d="on"] .fm-hero-3d-canvas{ opacity:.92; }
 }
 .fm-radar-areas li:hover::after{ background:var(--mc-teal); box-shadow:0 0 12px rgba(10,188,176,.9); }
 
+/* canvas 3D do Radar: entra no lugar da varredura 2D, atrás do conteúdo */
+.fm-radar-3d-canvas{
+  position:absolute; inset:0; z-index:0; width:100%; height:100%;
+  pointer-events:none; opacity:0; transition:opacity .8s var(--fm-move-ease);
+}
+html[data-fm-radar3d="on"] .fm-radar-3d-canvas{ opacity:.9; }
+html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
+
 /* ==========================================================================
    14) INTERAÇÃO APLICADA — comparativo, casos e termos-chave
    ========================================================================== */
@@ -205,6 +213,7 @@ html[data-fm-3d="on"] .fm-hero-3d-canvas{ opacity:.92; }
   .fm-hero-strip.fm-marquee .fm-marquee-track{ animation:none !important; }
   .fm-radar-beam{ animation:none !important; }
   .fm-hero-3d-canvas{ display:none !important; }
+  .fm-radar-3d-canvas{ display:none !important; }
   .fm-forte{ background-size:100% 2px !important; transition:none !important; }
 }
 @media (prefers-contrast: more){

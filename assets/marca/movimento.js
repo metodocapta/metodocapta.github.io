@@ -275,10 +275,11 @@ const on = (el, ev, fn, opt) => {
    10) HERO 3D — minimalismo espacial (import dinâmico, só se o aparelho aguentar)
    -------------------------------------------------------------------------- */
 let hero3D = null;
+let radar3D = null;
 
 async function capacidade3D() {
   try {
-    if (!window.WebGL2RenderingContext || !fine) return false;   // mobile mantém o hero CSS
+    if (!window.WebGL2RenderingContext || !fine) return false;   // mobile mantém o 2D/CSS
     const prova = doc.createElement('canvas');
     if (!prova.getContext('webgl2')) return false;
     if (navigator.deviceMemory && navigator.deviceMemory < 4) return false;
@@ -287,17 +288,37 @@ async function capacidade3D() {
   } catch (e) { return false; }
 }
 
-(async function heroTridimensional() {
+(async function tridimensional() {
   if (rm) return;
-  const stage = doc.querySelector('.fm-hero-stage');
-  if (!stage) return;
   if (!(await capacidade3D())) return;
-  try {
-    const mod = await import('./tres/hero-3d.js');
-    if (!mod || typeof mod.iniciarHero !== 'function') return;
-    hero3D = mod.iniciarHero(stage);
-    if (hero3D) doc.documentElement.setAttribute('data-fm-3d', 'on');
-  } catch (e) { /* silencioso: o hero CSS permanece como fallback */ }
+
+  // Hero: o símbolo "C+" (minimalismo espacial)
+  const stage = doc.querySelector('.fm-hero-stage');
+  if (stage) {
+    try {
+      const mod = await import('./tres/hero-3d.js');
+      if (mod && typeof mod.iniciarHero === 'function') {
+        hero3D = mod.iniciarHero(stage);
+        if (hero3D) doc.documentElement.setAttribute('data-fm-3d', 'on');
+      }
+    } catch (e) { /* fallback: hero CSS */ }
+  }
+
+  // Radar: a nuvem que se filtra num funil (o 3D enquadra o número)
+  const secRadar = doc.querySelector('.fm-radar-section');
+  if (secRadar) {
+    try {
+      const mod = await import('./tres/radar-3d.js');
+      if (mod && typeof mod.iniciarRadar === 'function') {
+        radar3D = mod.iniciarRadar(secRadar);
+        if (radar3D) {
+          doc.documentElement.setAttribute('data-fm-radar3d', 'on');
+          const sw = doc.querySelector('.fm-radar-sweep');
+          if (sw) sw.remove();          // o 3D substitui a varredura 2D
+        }
+      }
+    } catch (e) { /* fallback: varredura 2D */ }
+  }
 })();
 
 /* --------------------------------------------------------------------------
@@ -391,7 +412,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f4',
+  versao: '2.4.0-f5',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
@@ -401,6 +422,11 @@ window.__fmMovimento = {
       try { hero3D.destroy(); } catch (e) { /* noop */ }
       hero3D = null;
       doc.documentElement.removeAttribute('data-fm-3d');
+    }
+    if (radar3D && typeof radar3D.destroy === 'function') {
+      try { radar3D.destroy(); } catch (e) { /* noop */ }
+      radar3D = null;
+      doc.documentElement.removeAttribute('data-fm-radar3d');
     }
     const bar = doc.getElementById('fm-progress');
     if (bar) bar.remove();
