@@ -200,22 +200,49 @@ html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
 .fm-forte.in{ background-size:100% 2px; }
 
 /* ==========================================================================
-   15) ACESSIBILIDADE — desliga tudo
+   15) ACESSIBILIDADE + OPT-IN
+   O desligamento NÃO usa @media — usa a classe ".fm-movimento" no <html>.
+   O JS (e um script inline no <head>) só a adiciona quando pode animar:
+   movimento normal do sistema, OU o usuário ativou pelo botão (opt-in).
+   Assim quem tem "reduzir movimento" consegue escolher ver — e quem não
+   escolheu continua 100% respeitado.
    ========================================================================== */
-@media (prefers-reduced-motion: reduce){
-  #fm-progress{ transition:none; }
-  .fm-stagger-item{ opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
-  .fm-faq-item[open] > p{ animation:none; }
-  .fm-spot{ display:none; }
-  .fm-tiltz{ transform-style:flat; }
-  .fm-kinetic-title .fm-kin-in{ transform:none !important; opacity:1 !important; animation:none !important; }
-  .fm-wipe{ clip-path:none !important; animation:none !important; }
-  .fm-hero-strip.fm-marquee .fm-marquee-track{ animation:none !important; }
-  .fm-radar-beam{ animation:none !important; }
-  .fm-hero-3d-canvas{ display:none !important; }
-  .fm-radar-3d-canvas{ display:none !important; }
-  .fm-forte{ background-size:100% 2px !important; transition:none !important; }
-}
+html:not(.fm-movimento) #fm-progress{ transition:none; }
+html:not(.fm-movimento) .fm-stagger-item{ opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; }
+html:not(.fm-movimento) .fm-faq-item[open] > p{ animation:none; }
+html:not(.fm-movimento) .fm-spot{ display:none; }
+html:not(.fm-movimento) .fm-tiltz{ transform-style:flat; }
+html:not(.fm-movimento) .fm-kinetic-title .fm-kin-in{ transform:none !important; opacity:1 !important; animation:none !important; }
+html:not(.fm-movimento) .fm-wipe{ clip-path:none !important; animation:none !important; }
+html:not(.fm-movimento) .fm-hero-strip.fm-marquee .fm-marquee-track{ animation:none !important; }
+html:not(.fm-movimento) .fm-radar-beam{ animation:none !important; }
+html:not(.fm-movimento) .fm-hero-3d-canvas,
+html:not(.fm-movimento) .fm-radar-3d-canvas{ display:none !important; }
+html:not(.fm-movimento) .fm-forte{ background-size:100% 2px !important; transition:none !important; }
+
 @media (prefers-contrast: more){
   .fm-spot{ display:none; }
+}
+
+/* ==========================================================================
+   16) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
+   ========================================================================== */
+.fm-mov-toggle{
+  position:fixed; left:14px; bottom:18px; z-index:9985;
+  display:inline-flex; align-items:center; gap:7px;
+  padding:8px 13px; border-radius:999px;
+  border:1px solid rgba(10,188,176,.5);
+  background:rgba(4,34,42,.86); color:#dff6f2; opacity:.92;
+  font:600 11.5px/1 Inter,system-ui,sans-serif; letter-spacing:.02em;
+  cursor:pointer; box-shadow:0 8px 22px rgba(0,0,0,.38);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  transition:transform .2s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
+}
+.fm-mov-toggle:hover{ transform:translateY(-2px); border-color:var(--mc-teal); background:rgba(10,188,176,.18); color:#fff; opacity:1; }
+.fm-mov-toggle:focus-visible{ outline:3px solid rgba(10,188,176,.85); outline-offset:3px; opacity:1; }
+/* sobe quando a barra fixa de CTA aparece (mesmo racional do botao do WhatsApp) */
+body.fm-bar-on .fm-mov-toggle{ bottom:88px; }
+@media (max-width:760px){
+  .fm-mov-toggle{ left:12px; bottom:16px; padding:8px 12px; font-size:11.5px; }
+  body.fm-bar-on .fm-mov-toggle{ bottom:84px; }
 }

@@ -14,7 +14,12 @@
 'use strict';
 
 const doc = document;
-const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const rmSistema = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let optIn = false;
+try { optIn = localStorage.getItem('fm-movimento') === 'on'; } catch (e) { /* noop */ }
+const permitido = !rmSistema || optIn;   // opt-in: ver mesmo com o sistema pedindo menos
+doc.documentElement.classList.toggle('fm-movimento', permitido);
+const rm = !permitido;
 const fine = window.matchMedia('(pointer: fine)').matches;
 
 const cleanups = [];
@@ -22,6 +27,29 @@ const on = (el, ev, fn, opt) => {
   el.addEventListener(ev, fn, opt);
   cleanups.push(() => el.removeEventListener(ev, fn, opt));
 };
+
+/* --------------------------------------------------------------------------
+   0) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
+   -------------------------------------------------------------------------- */
+(function botaoMovimento() {
+  if (!rmSistema) return;                 // quem já vê as animações nunca vê o botão
+  const btn = doc.createElement('button');
+  btn.type = 'button';
+  btn.className = 'fm-mov-toggle';
+  btn.setAttribute('aria-pressed', optIn ? 'true' : 'false');
+  btn.textContent = optIn ? 'Desativar movimento' : 'Ativar movimento';
+  btn.title = optIn
+    ? 'Voltar ao modo sem movimento'
+    : 'Ver as animações do site mesmo com o sistema pedindo menos';
+  btn.addEventListener('click', () => {
+    try {
+      if (optIn) localStorage.removeItem('fm-movimento');
+      else localStorage.setItem('fm-movimento', 'on');
+    } catch (e) { /* noop */ }
+    location.reload();
+  });
+  doc.body.appendChild(btn);
+})();
 
 /* --------------------------------------------------------------------------
    1) BARRA DE PROGRESSO DE LEITURA
@@ -412,7 +440,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.0-f5',
+  versao: '2.4.1',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
