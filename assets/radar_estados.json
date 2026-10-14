@@ -4,7 +4,7 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 483,
+   "oportunidades": 487,
    "areas": [
     {
      "codigo": "ROUANET",
@@ -14,7 +14,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 78
+     "total": 81
     },
     {
      "codigo": "MROSC",
@@ -34,7 +34,7 @@
     {
      "codigo": "FUNDO_IDOSO",
      "rotulo": "FUNDO DO IDOSO",
-     "total": 7
+     "total": 8
     },
     {
      "codigo": "LIE",
@@ -44,12 +44,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 191,
+   "oportunidades": 198,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 116
+     "total": 123
     },
     {
      "codigo": "ROUANET",
@@ -79,12 +79,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 297,
+   "oportunidades": 301,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 65
+     "total": 69
     },
     {
      "codigo": "ROUANET",
@@ -194,12 +194,12 @@
    ]
   },
   "MG": {
-   "oportunidades": 41,
+   "oportunidades": 42,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 19
+     "total": 20
     },
     {
      "codigo": "MROSC",
@@ -474,7 +474,7 @@
    ]
   },
   "RO": {
-   "oportunidades": 5,
+   "oportunidades": 6,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
@@ -489,6 +489,11 @@
     {
      "codigo": "LIE",
      "rotulo": "LIE",
+     "total": 1
+    },
+    {
+     "codigo": "LIR",
+     "rotulo": "LIR RECICLAGEM",
      "total": 1
     }
    ]

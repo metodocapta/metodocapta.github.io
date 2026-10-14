@@ -3,7 +3,7 @@
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1704,
+  "oportunidades": 1733,
   "elegiveis": 10,
   "estruturados": 4,
   "matches": 1128
@@ -12,12 +12,12 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 551
+   "total": 576
   },
   {
    "codigo": "MROSC",
    "rotulo": "CHAMAMENTOS PÚBLICOS",
-   "total": 46
+   "total": 48
   },
   {
    "codigo": "ROUANET",
@@ -27,7 +27,7 @@
   {
    "codigo": "LIR",
    "rotulo": "LIR RECICLAGEM",
-   "total": 248
+   "total": 249
   },
   {
    "codigo": "EMENDA",
@@ -42,7 +42,7 @@
   {
    "codigo": "FUNDO_IDOSO",
    "rotulo": "FUNDO DO IDOSO",
-   "total": 12
+   "total": 13
   },
   {
    "codigo": "LIE",
