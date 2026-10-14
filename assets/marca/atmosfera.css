@@ -148,7 +148,7 @@
 .fm-audience-grid .fm-reveal:nth-child(6),
 .fm-faq-list .fm-reveal:nth-child(6){transition-delay:.30s}
 
-@keyframes mcBreathe{0%,100%{opacity:.72}50%{opacity:1}}
+@keyframes mcBreathe{}
 .fm-ambient-a,.fm-ambient-b{animation:mcBreathe 7s ease-in-out infinite}
 .fm-ambient-b{animation-delay:1.8s}
 
