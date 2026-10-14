@@ -361,10 +361,13 @@ function emOcioso(fn) {
   else setTimeout(fn, 350);
 }
 
-async function capacidade3D() {
+async function capacidade3D(software) {
   try {
     if (!window.WebGL2RenderingContext) return false;
-    if (renderizacaoPorSoftware()) return false;                   // GPU emulada
+    // GPU emulada (sem aceleração): o WebGL roda na CPU e trava a thread principal
+    // — vetado por padrão. EXCEÇÃO: quem CLICOU "ativar movimento" (optIn) pediu a
+    // experiência completa; a escolha do visitante vale (e usamos cenas leves).
+    if (software && !optIn) return false;
     const prova = doc.createElement('canvas');
     if (!prova.getContext('webgl2')) return false;
     const ram = navigator.deviceMemory;
@@ -379,8 +382,9 @@ async function capacidade3D() {
 
 async function tridimensional() {
   if (rm) return;
-  if (!(await capacidade3D())) return;
-  const lite = !fine;          // toque: cenas mais leves (menos partículas, DPR menor)
+  const software = renderizacaoPorSoftware();
+  if (!(await capacidade3D(software))) return;
+  const lite = !fine || software;   // toque OU GPU emulada: cenas mais leves
 
   // Mapa 3D do método (F4): registro IMEDIATO do observador (antes dos awaits do
   // hero/radar, que são pesados) — e o import só dispara quando a seção do método
