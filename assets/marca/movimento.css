@@ -120,6 +120,8 @@
   transition:opacity .8s var(--fm-move-ease);
 }
 html[data-fm-3d="on"] .fm-hero-3d-canvas{ opacity:.92; }
+/* o conteúdo do hero fica ACIMA do campo 3D (que ocupa a tela toda no desktop) */
+.fm-hero .fm-hero-grid{ position:relative; z-index:1; }
 
 /* ==========================================================================
    12) MÉTODO — a etapa ativa "acende" e sobe (storytelling por scroll)

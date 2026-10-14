@@ -4,11 +4,18 @@
    Minimalismo espacial: UM objeto (o símbolo "C+") num fundo navy infinito,
    com anéis, partículas e câmera que acompanha o cursor (LookAt + damping).
 
-   Só é importado quando o aparelho aguenta (ver movimento.js):
-     - WebGL2 + deviceMemory >= 4 + sem saveData + pointer:fine + sem reduced-motion.
+   Aceita:
+     alvo       -> o elemento que recebe o canvas. No desktop é o <section>
+                   .fm-hero (campo 3D por TODA a largura); no mobile é o
+                   .fm-hero-stage (a composição empilhada).
+     opts.lite  -> cena leve (toque): menos partículas, DPR menor.
+     opts.fullBleed -> partículas espalhadas por uma área larga.
+     opts.offsetX   -> função que devolve o deslocamento horizontal (fração da
+                   largura, -0.5..0.5) onde o símbolo deve ficar — mantém o C+
+                   alinhado ao wordmark mesmo com o canvas em tela cheia.
 
    Guardrails: só a paleta (navy/teal/grafite/teal-claro); fundo transparente;
-   loop pausado fora da viewport e em aba oculta; DPR limitado a 2.
+   loop pausado fora da viewport e em aba oculta; DPR limitado.
    Fallback: se este módulo não carregar, o hero CSS atual permanece intacto.
    ========================================================================== */
 import * as THREE from './three.module.min.js';
@@ -22,7 +29,6 @@ const NAVY = 0x062531;
 function criarSimbolo() {
   const grupo = new THREE.Group();
 
-  // --- "C": banda circular com abertura à direita ---
   const R = 1.0;
   const r = 0.66;
   const off = 0.60;                       // metade da abertura (radianos)
@@ -44,12 +50,11 @@ function criarSimbolo() {
   meshC.position.x = -0.62;
   grupo.add(meshC);
 
-  // --- "+": dois blocos (vertical + horizontal) ---
   const materialMais = new THREE.MeshStandardMaterial({
     color: TEAL_LIGHT, emissive: TEAL, emissiveIntensity: 0.75,
     metalness: 0.30, roughness: 0.30, transparent: true, opacity: 0.97,
   });
-  const bracoLong = 1.06, bracoCurto = 0.30, esp = 0.30;
+  const bracoLong = 1.06, esp = 0.30;
   const vBar = new THREE.Mesh(new THREE.BoxGeometry(esp, bracoLong, esp), materialMais);
   const hBar = new THREE.Mesh(new THREE.BoxGeometry(bracoLong * 0.72, esp, esp), materialMais);
   const mais = new THREE.Group();
@@ -80,13 +85,15 @@ function criarAneis() {
   return grupo;
 }
 
-/* Poeira teal (poucas partículas, opacidade baixa) */
-function criarParticulas(qtd) {
+/* Poeira teal. Com "wide", espalha por uma área larga (tela cheia). */
+function criarParticulas(qtd, wide) {
   const pos = new Float32Array(qtd * 3);
+  const r0 = wide ? 3.0 : 2.4;
+  const r1 = wide ? 8.4 : 5.8;
   for (let i = 0; i < qtd; i++) {
     const ang = Math.random() * Math.PI * 2;
-    const raio = 2.4 + Math.random() * 3.4;
-    const altura = (Math.random() - 0.5) * 3.2;
+    const raio = r0 + Math.random() * (r1 - r0);
+    const altura = (Math.random() - 0.5) * (wide ? 4.6 : 3.2);
     pos[i * 3] = Math.cos(ang) * raio;
     pos[i * 3 + 1] = altura;
     pos[i * 3 + 2] = Math.sin(ang) * raio;
@@ -100,12 +107,14 @@ function criarParticulas(qtd) {
   return new THREE.Points(geo, mat);
 }
 
-export function iniciarHero(stage, opts) {
-  if (!stage) return null;
-  const lite = !!(opts && opts.lite);   // toque: cena mais leve
+export function iniciarHero(alvo, opts) {
+  if (!alvo) return null;
+  const lite = !!(opts && opts.lite);
+  const fullBleed = !!(opts && opts.fullBleed);
+  const offsetX = (opts && typeof opts.offsetX === 'function') ? opts.offsetX : null;
 
-  let largura = stage.clientWidth || 560;
-  let altura = stage.clientHeight || 500;
+  let largura = alvo.clientWidth || 560;
+  let altura = alvo.clientHeight || 500;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 1.5));
@@ -116,7 +125,7 @@ export function iniciarHero(stage, opts) {
   const canvas = renderer.domElement;
   canvas.className = 'fm-hero-3d-canvas';
   canvas.setAttribute('aria-hidden', 'true');
-  stage.appendChild(canvas);
+  alvo.appendChild(canvas);
 
   const cena = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(38, largura / altura, 0.1, 100);
@@ -132,23 +141,35 @@ export function iniciarHero(stage, opts) {
   const mundo = new THREE.Group();
   const simbolo = criarSimbolo();
   const aneis = criarAneis();
-  const particulas = criarParticulas(lite ? 120 : 260);
+  const particulas = criarParticulas(lite ? 120 : 260, fullBleed);
   mundo.add(simbolo, aneis, particulas);
   mundo.scale.setScalar(0.92);
   cena.add(mundo);
 
+  /* Desloca o símbolo (e os anéis) para a posição do wordmark, em unidades de mundo. */
+  function aplicarOffset() {
+    if (!offsetX) return;
+    const aspect = largura / altura || 1;
+    const alturaMundo = 2 * Math.tan((camera.fov * Math.PI / 180) / 2) * camera.position.z;
+    const larguraMundo = alturaMundo * aspect;
+    const fx = offsetX() || 0;
+    simbolo.position.x = fx * larguraMundo;
+    aneis.position.x = fx * larguraMundo * 0.7;
+  }
+  aplicarOffset();
+
   // --- ponteiro (parallax da câmera) ---
-  const alvo = { x: 0, y: 0 };
+  const alvoP = { x: 0, y: 0 };
   const suave = { x: 0, y: 0 };
   const aoMover = (ev) => {
-    const r = stage.getBoundingClientRect();
+    const r = alvo.getBoundingClientRect();
     if (!r.width || !r.height) return;
-    alvo.x = ((ev.clientX - r.left) / r.width - 0.5) * 2;   // -1..1
-    alvo.y = ((ev.clientY - r.top) / r.height - 0.5) * 2;   // -1..1
+    alvoP.x = ((ev.clientX - r.left) / r.width - 0.5) * 2;   // -1..1
+    alvoP.y = ((ev.clientY - r.top) / r.height - 0.5) * 2;
   };
-  const aoSair = () => { alvo.x = 0; alvo.y = 0; };
-  stage.addEventListener('pointermove', aoMover, { passive: true });
-  stage.addEventListener('pointerleave', aoSair, { passive: true });
+  const aoSair = () => { alvoP.x = 0; alvoP.y = 0; };
+  alvo.addEventListener('pointermove', aoMover, { passive: true });
+  alvo.addEventListener('pointerleave', aoSair, { passive: true });
 
   // --- loop com pausa inteligente ---
   let rodando = true;
@@ -162,8 +183,8 @@ export function iniciarHero(stage, opts) {
     requestAnimationFrame(animar);
     t += 0.0055;
 
-    suave.x += (alvo.x - suave.x) * 0.055;
-    suave.y += (alvo.y - suave.y) * 0.055;
+    suave.x += (alvoP.x - suave.x) * 0.055;
+    suave.y += (alvoP.y - suave.y) * 0.055;
 
     camera.position.x = suave.x * 0.9;
     camera.position.y = -suave.y * 0.6;
@@ -183,24 +204,24 @@ export function iniciarHero(stage, opts) {
         if (visivel) { rodando = true; requestAnimationFrame(animar); }
       }, { threshold: 0.05 })
     : null;
-  if (obs) obs.observe(stage);
+  if (obs) obs.observe(alvo);
 
   const aoVisibilidade = () => { rodando = !document.hidden; if (rodando) requestAnimationFrame(animar); };
   document.addEventListener('visibilitychange', aoVisibilidade);
 
   const redimensionar = () => {
-    largura = stage.clientWidth || largura;
-    altura = stage.clientHeight || altura;
+    largura = alvo.clientWidth || largura;
+    altura = alvo.clientHeight || altura;
     if (!largura || !altura) return;
     camera.aspect = largura / altura;
     camera.updateProjectionMatrix();
     renderer.setSize(largura, altura, false);
+    aplicarOffset();
   };
   const ro = ('ResizeObserver' in window) ? new ResizeObserver(redimensionar) : null;
-  if (ro) ro.observe(stage);
+  if (ro) ro.observe(alvo);
   window.addEventListener('resize', redimensionar, { passive: true });
 
-  // 1ª renderização imediata (não espera o observer)
   renderer.render(cena, camera);
   requestAnimationFrame(animar);
 
@@ -211,8 +232,8 @@ export function iniciarHero(stage, opts) {
       if (ro) ro.disconnect();
       document.removeEventListener('visibilitychange', aoVisibilidade);
       window.removeEventListener('resize', redimensionar);
-      stage.removeEventListener('pointermove', aoMover);
-      stage.removeEventListener('pointerleave', aoSair);
+      alvo.removeEventListener('pointermove', aoMover);
+      alvo.removeEventListener('pointerleave', aoSair);
       cena.traverse((o) => {
         if (o.geometry) o.geometry.dispose();
         if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => m.dispose());

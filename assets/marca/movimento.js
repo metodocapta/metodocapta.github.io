@@ -355,13 +355,25 @@ async function capacidade3D() {
   if (!(await capacidade3D())) return;
   const lite = !fine;          // toque: cenas mais leves (menos partículas, DPR menor)
 
-  // Hero: o símbolo "C+" (minimalismo espacial)
+  // Hero: o símbolo "C+" (minimalismo espacial).
+  // Desktop: campo 3D por TODA a largura do hero, com o símbolo alinhado ao wordmark.
+  // Mobile: mantém o canvas no palco (a composição é empilhada).
+  const hero = doc.querySelector('.fm-hero');
   const stage = doc.querySelector('.fm-hero-stage');
-  if (stage) {
+  const telaCheia = !!(hero && stage && window.innerWidth >= 1024);
+  const alvo3d = telaCheia ? hero : stage;
+  if (alvo3d) {
+    const obterOffsetX = () => {
+      if (!telaCheia) return 0;
+      const rh = hero.getBoundingClientRect();
+      const rs = stage.getBoundingClientRect();
+      if (!rh.width || !rs.width) return 0;
+      return (rs.left + rs.width / 2 - (rh.left + rh.width / 2)) / rh.width;
+    };
     try {
       const mod = await import('./tres/hero-3d.js');
       if (mod && typeof mod.iniciarHero === 'function') {
-        hero3D = mod.iniciarHero(stage, { lite: lite });
+        hero3D = mod.iniciarHero(alvo3d, { lite: lite, fullBleed: telaCheia, offsetX: obterOffsetX });
         if (hero3D) doc.documentElement.setAttribute('data-fm-3d', 'on');
       }
     } catch (e) { /* fallback: hero CSS */ }
@@ -495,7 +507,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.4',
+  versao: '2.4.5',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
