@@ -334,11 +334,37 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 let hero3D = null;
 let radar3D = null;
+let mapa3D = null;
 let ambientes = [];
+
+/* Renderização por SOFTWARE (SwiftShader/llvmpipe/Basic Render). Sem GPU, o
+   WebGL roda na CPU e TRAVA a thread principal — é o que derruba o TBT em
+   ambientes sem aceleração (o Chromium headless do Lighthouse é um deles).
+   Nesses casos usamos o fallback CSS/2D, que já existe. Retorna false quando
+   não é possível saber (sem contexto WebGL) para não penalizar o visitante. */
+function renderizacaoPorSoftware() {
+  try {
+    const prova = doc.createElement('canvas');
+    const gl = prova.getContext('webgl2') || prova.getContext('webgl');
+    if (!gl) return false;
+    const ext = gl.getExtension('WEBGL_debug_renderer_info');
+    if (!ext) return false;
+    const nome = String(gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || '');
+    return /swiftshader|software|llvmpipe|softpipe|basic render|microsoft basic|mesa offscreen|virtualbox|vmware|emulator/i.test(nome);
+  } catch (e) { return false; }
+}
+
+/* Agenda trabalho pesado para DEPOIS da página estar carregada e ociosa:
+   não compete com a 1ª pintura nem com o TBT da janela de carregamento. */
+function emOcioso(fn) {
+  if ('requestIdleCallback' in window) window.requestIdleCallback(fn, { timeout: 2000 });
+  else setTimeout(fn, 350);
+}
 
 async function capacidade3D() {
   try {
     if (!window.WebGL2RenderingContext) return false;
+    if (renderizacaoPorSoftware()) return false;                   // GPU emulada
     const prova = doc.createElement('canvas');
     if (!prova.getContext('webgl2')) return false;
     const ram = navigator.deviceMemory;
@@ -351,10 +377,30 @@ async function capacidade3D() {
   } catch (e) { return false; }
 }
 
-(async function tridimensional() {
+async function tridimensional() {
   if (rm) return;
   if (!(await capacidade3D())) return;
   const lite = !fine;          // toque: cenas mais leves (menos partículas, DPR menor)
+
+  // Mapa 3D do método (F4): registro IMEDIATO do observador (antes dos awaits do
+  // hero/radar, que são pesados) — e o import só dispara quando a seção do método
+  // se aproxima da viewport (ela fica a ~6.700 px do topo). Assim o mapa não
+  // disputa banda/CPU no carregamento inicial e chega na hora em que é visto.
+  // O 3D NAVEGA; o texto (nome/artefato/plataforma) segue no HTML.
+  const areaMetodo = doc.querySelector('.fm-capta-section .fm-capta-visual');
+  if (areaMetodo && 'IntersectionObserver' in window) {
+    const obsMapa = new IntersectionObserver((ents, ob) => {
+      if (!ents.some((e) => e.isIntersecting)) return;
+      ob.disconnect();
+      import('./tres/mapa-3d.js').then((mod) => {
+        if (mod && typeof mod.iniciarMapa === 'function') {
+          mapa3D = mod.iniciarMapa(areaMetodo, { lite: lite });
+          if (mapa3D) doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
+        }
+      }).catch(() => { /* fallback: imagem + anéis 2D */ });
+    }, { rootMargin: '700px 0px' });
+    obsMapa.observe(areaMetodo);
+  }
 
   // Hero: o símbolo "C+" (minimalismo espacial).
   // Desktop: campo 3D por TODA a largura do hero, com o símbolo alinhado ao wordmark.
@@ -395,7 +441,16 @@ async function capacidade3D() {
       }
     } catch (e) { /* fallback: varredura 2D */ }
   }
-})();
+}
+
+/* O 3D só é disparado DEPOIS do load e em tempo ocioso — e nunca quando a
+   renderização é por software (sem GPU). Assim ele deixa de competir com a
+   janela de carregamento (FCP/LCP/TBT) e o fallback CSS assume o lugar. */
+if (!rm) {
+  const disparar3D = () => emOcioso(tridimensional);
+  if (doc.readyState === 'complete') disparar3D();
+  else on(window, 'load', disparar3D);
+}
 
 /* --------------------------------------------------------------------------
    11) MÉTODO — storytelling por scroll: a etapa que cruza o centro "acende"
@@ -520,15 +575,16 @@ async function capacidade3D() {
    -------------------------------------------------------------------------- */
 (function ambienteNasSecoes() {
   if (rm) return;
+  if (renderizacaoPorSoftware()) return;    // GPU emulada: sem partículas de fundo
   const alvos = Array.from(doc.querySelectorAll(
     '#fm-parceiros, #fm-destaques, #fm-publico, #fm-riscos, #fm-decisao'
   ));
   if (!alvos.length) return;
-  import('./ambiente-particulas.js').then((mod) => {
+  emOcioso(() => import('./ambiente-particulas.js').then((mod) => {
     if (!mod || typeof mod.iniciarAmbiente !== 'function') return;
     ambientes = alvos.map((s) => mod.iniciarAmbiente(s, { lite: !fine })).filter(Boolean);
     if (ambientes.length) doc.documentElement.setAttribute('data-fm-ambiente', 'on');
-  }).catch(() => { /* fallback: seção como está */ });
+  }).catch(() => { /* fallback: seção como está */ }));
 })();
 
 /* --------------------------------------------------------------------------
@@ -550,6 +606,11 @@ window.__fmMovimento = {
       try { radar3D.destroy(); } catch (e) { /* noop */ }
       radar3D = null;
       doc.documentElement.removeAttribute('data-fm-radar3d');
+    }
+    if (mapa3D && typeof mapa3D.destroy === 'function') {
+      try { mapa3D.destroy(); } catch (e) { /* noop */ }
+      mapa3D = null;
+      doc.documentElement.removeAttribute('data-fm-mapa3d');
     }
     if (ambientes.length) {
       ambientes.forEach((a) => { try { a.destroy(); } catch (e) { /* noop */ } });

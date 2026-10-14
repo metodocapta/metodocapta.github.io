@@ -24,13 +24,13 @@ const suave = (x) => {
 export function iniciarRadar(sec, opts) {
   if (!sec) return null;
   const lite = !!(opts && opts.lite);   // toque: cena mais leve
-  const N = lite ? 700 : 1400;          // partículas da nuvem
+  const N = lite ? 260 : 560;           // partículas da nuvem
 
   let largura = sec.clientWidth || 1100;
   let altura = sec.clientHeight || 720;
 
-  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 1.5));
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1 : 1.25));
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -48,7 +48,7 @@ export function iniciarRadar(sec, opts) {
   const funil = new THREE.Group();
   [3.0, 2.0, 1.05].forEach((r, i) => {
     const anel = new THREE.Mesh(
-      new THREE.TorusGeometry(r, 0.012, 10, 150),
+      new THREE.TorusGeometry(r, 0.012, 8, 80),
       new THREE.MeshBasicMaterial({ color: TEAL, transparent: true, opacity: 0.18 - i * 0.035, depthWrite: false })
     );
     anel.rotation.x = Math.PI / 2;

@@ -38,7 +38,7 @@ function criarSimbolo() {
 
   const extrusao = new THREE.ExtrudeGeometry(forma, {
     depth: 0.34, bevelEnabled: true, bevelThickness: 0.05,
-    bevelSize: 0.05, bevelSegments: 3, curveSegments: 96,
+    bevelSize: 0.05, bevelSegments: 2, curveSegments: 24,
   });
   extrusao.center();
 
@@ -76,7 +76,7 @@ function criarAneis() {
     { raio: 2.65, inclina: -0.85, rot: -0.5, op: 0.09 },
   ];
   defs.forEach((d) => {
-    const anel = new THREE.Mesh(new THREE.TorusGeometry(d.raio, 0.012, 12, 220), material.clone());
+    const anel = new THREE.Mesh(new THREE.TorusGeometry(d.raio, 0.012, 8, 96), material.clone());
     anel.material.opacity = d.op;
     anel.rotation.x = d.inclina;
     anel.rotation.y = d.rot;
@@ -116,8 +116,8 @@ export function iniciarHero(alvo, opts) {
   let largura = alvo.clientWidth || 560;
   let altura = alvo.clientHeight || 500;
 
-  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 1.5));
+  const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'high-performance' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1 : 1.25));
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -141,7 +141,7 @@ export function iniciarHero(alvo, opts) {
   const mundo = new THREE.Group();
   const simbolo = criarSimbolo();
   const aneis = criarAneis();
-  const particulas = criarParticulas(lite ? 120 : 260, fullBleed);
+  const particulas = criarParticulas(lite ? 70 : 140, fullBleed);
   mundo.add(simbolo, aneis, particulas);
   mundo.scale.setScalar(0.92);
   cena.add(mundo);
@@ -176,12 +176,17 @@ export function iniciarHero(alvo, opts) {
   let vivo = true;
   let visivel = true;
   let t = 0;
+  let ultimoQuadro = 0;
+  const intervalo = 1000 / 40;              // teto de ~40fps: poupa CPU/GPU
 
-  function animar() {
+  function animar(ts) {
     if (!vivo) return;
     if (!rodando || !visivel) return;         // não agenda: economiza CPU
     requestAnimationFrame(animar);
-    t += 0.0055;
+    if (ts - ultimoQuadro < intervalo) return;          // limita o FPS
+    const dt = ultimoQuadro ? Math.min(ts - ultimoQuadro, 120) : 16.7;
+    ultimoQuadro = ts;
+    t += 0.0055 * (dt / 16.7);
 
     suave.x += (alvoP.x - suave.x) * 0.055;
     suave.y += (alvoP.y - suave.y) * 0.055;

@@ -24,7 +24,7 @@ export function iniciarAmbiente(secao, opts) {
   if (!ctx) { secao.removeChild(canvas); secao.classList.remove('fm-ambiente-host'); return null; }
 
   const dpr = Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 1.5);
-  const N = lite ? 40 : 80;
+  const N = lite ? 24 : 44;
   const P = [];
   let w = 0;
   let h = 0;
@@ -62,7 +62,7 @@ export function iniciarAmbiente(secao, opts) {
     if (!vivo || !visivel || document.hidden) return;
     requestAnimationFrame(desenhar);
     quadro++;
-    if (lite && quadro % 2) return;               // ~30fps no mobile
+    if (quadro % 2) return;                       // ~30fps em qualquer aparelho
 
     ctx.clearRect(0, 0, w, h);
     for (let i = 0; i < P.length; i++) {
