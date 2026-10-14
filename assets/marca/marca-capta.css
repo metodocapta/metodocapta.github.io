@@ -381,7 +381,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .mc-zap:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 20px 44px rgba(0,0,0,.42);color:#04222a !important;}
 .mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
 .mc-zap .mc-zap__txt{white-space:nowrap;}
-@keyframes mcZapIn{}
+@keyframes mcZapIn{to{transform:translateY(0);opacity:1;}}
 @media (max-width:760px){
   .mc-zap{right:14px;bottom:14px;padding:13px;gap:0;}
   .mc-zap .mc-zap__txt{display:none;}
@@ -432,7 +432,23 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 
 /* --- 03b) PROBLEMA --- */
 .fm-problem-layout{display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);gap:56px;align-items:start;}
+.fm-problem-copy h2{margin-bottom:18px;}
+.fm-problem-copy p{font-size:17px;line-height:1.7;max-width:46ch;}
+.fm-problem-points{display:grid;gap:14px;}
+.fm-problem-points article{
+  position:relative;background:#fff;border:1px solid rgba(6,37,49,.10);border-radius:16px;
+  padding:22px 24px 22px 68px;box-shadow:0 10px 30px rgba(6,37,49,.06);
+  transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,border-color .28s ease;
+}
 .fm-problem-points article:hover{transform:translateY(-3px);border-color:rgba(10,188,176,.45);box-shadow:0 18px 44px rgba(6,37,49,.13);}
+.fm-problem-n{
+  position:absolute;left:22px;top:22px;width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Oswald',sans-serif;font-weight:700;font-size:13px;
+  color:#04222a;background:linear-gradient(135deg,#0ABCB0,#067a72);
+}
+.fm-problem-points strong{display:block;font-size:16px;margin-bottom:6px;letter-spacing:.01em;}
+.fm-problem-points p{margin:0;font-size:14.5px;line-height:1.6;}
 
 /* --- 09) EVIDÊNCIAS --- */
 .fm-evidence-head{max-width:760px;margin-bottom:38px;}
@@ -453,6 +469,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-evidence-card p{font-size:14.5px;line-height:1.62;margin:0 0 14px;}
 .fm-evidence-list{margin:0;padding-left:18px;}
 .fm-evidence-list li{font-size:14px;line-height:1.6;margin-bottom:6px;}
+.fm-evidence-logos{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;}
+.fm-evidence-logos span{
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--mc-navy) !important;background:rgba(6,37,49,.06);border-radius:8px;padding:7px 12px;
+}
 .fm-evidence-result{border-color:rgba(217,123,77,.35);background:linear-gradient(180deg,#fff 0%,#fff8f4 100%);}
 .fm-evidence-result .fm-evidence-tag{color:#b85c2e;border-color:rgba(217,123,77,.45);}
 .fm-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin:14px 0 0;}
@@ -486,6 +507,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
     linear-gradient(160deg,#062531 0%,#08343c 58%,#0a4a4a 100%) !important;
   text-align:center;
 }
+.fm-cta-inner{max-width:900px;margin:0 auto;}
+.fm-cta-section h2{margin:14px 0 16px;}
+.fm-cta-section p{font-size:17px;line-height:1.65;color:#cfe8e6 !important;margin:0 auto 30px;max-width:52ch;}
+.fm-cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 .fm-btn-primary,.fm-btn-ghost{
   display:inline-block;padding:16px 32px;border-radius:999px;text-decoration:none;
   font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.05em;text-transform:uppercase;
@@ -503,7 +528,9 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 .fm-btn-ghost:hover{transform:translateY(-2px);background:rgba(127,227,216,.14);border-color:#0ABCB0;color:#fff !important;}
 
 @media (max-width:900px){
+  .fm-problem-layout{grid-template-columns:1fr;gap:30px;}
   .fm-metrics{grid-template-columns:1fr 1fr;}
+  .fm-cta-actions{flex-direction:column;align-items:stretch;}
   .fm-btn-primary,.fm-btn-ghost{text-align:center;}
 }
 
@@ -582,6 +609,10 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   background:rgba(217,123,77,.16);border-color:rgba(217,123,77,.5);color:#ffd9c4;
 }
 .fm-mech-arrow{color:rgba(127,227,216,.5);font-size:13px;line-height:1;}
+.fm-mech-close{
+  font-size:15px !important;line-height:1.6;color:#cfe8e6 !important;margin:0 !important;
+}
+.fm-mech-close strong{color:var(--mc-teal-light) !important;font-weight:700;}
 
 @media (max-width:900px){
   .fm-mech-flow{gap:7px 6px;margin:20px 0 14px;}
@@ -622,6 +653,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-hero-strip span{font-size:11.5px !important;}
   .fm-stage-card small{font-size:11px !important;}
   .fm-stage-card strong{font-size:12px !important;}
+  .fm-visual-kicker{font-size:11px !important;}
   .fm-metric span{font-size:11px !important;}
   .fm-pillar > span,.fm-journey-step > span,.fm-journey-step strong{font-size:11.5px !important;}
   .fm-evidence-tag,.fm-evidence-list li,.fm-audience-card p,.fm-problem-points p{font-size:14px !important;}
@@ -636,10 +668,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-cta-actions a,.fm-actions a{width:100%;justify-content:center;}
   .fm-faq-item summary{padding:16px 18px;}
   .fm-faq-item p{padding:0 18px 18px;}
+  .fm-problem-points article{padding:20px 20px 20px 62px;}
   .fm-evidence-card,.fm-audience-card{padding:20px 20px 18px;}
 
   /* 4) últimos micro-rótulos abaixo de 11px */
   .fm-visual-caption,.fm-visual-caption span{font-size:11px !important;}
+  .fm-principles article span{font-size:11.5px !important;}
   .fm-contact-brand span{font-size:11px !important;}
   /* link de e-mail: alvo de toque confortável (>= 44px) */
   .fm-whats p a,.fm-contact-side p a,.fm-contact-intro a{display:inline-block !important;padding:11px 0 !important;}
@@ -649,6 +683,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .fm-footer-links{gap:0 10px;}
   .fm-hero-strip{gap:10px;}
   .fm-metric strong{font-size:17px !important;}
+  .fm-kpi .v{font-size:20px;}
 }
 
 /* ==========================================================================
@@ -712,6 +747,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   padding:0 22px 20px;margin:0 !important;
   font-size:15px;line-height:1.72;color:#cfe8e6 !important;max-width:80ch;
 }
+.fm-faq-item p strong{color:var(--mc-teal-light) !important;}
 
 /* ==========================================================================
    v2.3 · FASE 8 — JORNADA VISUAL (a promessa em primeira pessoa)
@@ -721,6 +757,11 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   font-family:var(--mc-font-display);
   font-weight:600;
   letter-spacing:.02em;
+}
+.fm-journey-step p{
+  color:var(--mc-teal-light) !important;
+  font-size:13.5px !important;
+  line-height:1.55;
 }
 .fm-journey-step.is-active strong{color:var(--mc-white) !important;}
 .fm-journey-step.is-active p{color:var(--mc-teal) !important;}
@@ -770,6 +811,8 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   box-shadow:0 20px 44px rgba(0,0,0,.42);}
 .fm-dest-img{position:relative;display:block;aspect-ratio:16/9;background:#0a3a45;overflow:hidden;}
 .fm-dest-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.fm-dest-semimg{display:flex;align-items:center;justify-content:center;height:100%;
+  font-family:Oswald,'Segoe UI',sans-serif;color:#7fe3d8;letter-spacing:.06em;font-size:15px;}
 .fm-dest-data{position:absolute;left:10px;bottom:10px;background:rgba(6,37,49,.88);color:#ffffff;
   font-size:11.5px;letter-spacing:.05em;padding:4px 10px;border-radius:999px;
   font-family:Oswald,'Segoe UI',sans-serif;text-transform:uppercase;line-height:1;}
@@ -800,7 +843,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
    pelo celular, elemento fora de quadro), o conteudo ficaria invisivel para sempre.
    Este fallback revela o bloco sozinho depois de 1,8s — a animacao de entrada
    continua intacta quando o JS funciona. */
-@keyframes mc-reveal-fallback{ }
+@keyframes mc-reveal-fallback{ to{opacity:1;transform:none;} }
 .fm-reveal:not(.is-visible){animation:mc-reveal-fallback .7s ease 1.8s forwards;}
 .fm-reveal.is-visible{animation:none;}
 @media (prefers-reduced-motion: reduce){.fm-reveal:not(.is-visible){animation:none;}}
@@ -823,6 +866,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   box-shadow:0 12px 28px rgba(6,37,49,.35)}
 .fm-partner-nome span{font:600 15px/1.25 Oswald,Inter,sans-serif;letter-spacing:.06em;
   text-transform:uppercase;color:#bfe9e4;text-align:center}
+.fm-partner-card-wide img{max-height:56px !important}
 @media(max-width:640px){
   .fm-partners-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
   .fm-partner-card{min-height:94px !important;padding:13px !important}
@@ -865,12 +909,21 @@ body{counter-reset:fm-secao}
 /* 5) INDICE DA HOME (arquivo editorial) — GRADE alinhada:
    colunas iguais, numeros em coluna propria (alinhados) e sem separador solto. */
 .fm-indice{max-width:1120px;margin:0 auto;padding:18px 0 6px}
+.fm-indice ol{list-style:none;margin:0;padding:0;display:grid;gap:9px 20px;
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  font:500 12.5px/1.5 Oswald,Inter,sans-serif;letter-spacing:.09em;text-transform:uppercase}
+.fm-indice li{display:flex;align-items:baseline;gap:8px;min-width:0}
+.fm-indice li b{flex:0 0 auto;min-width:1.7em;font-weight:700;font-size:11.5px;
+  color:rgba(127,227,216,.55)}
+.fm-indice a{color:rgba(234,255,251,.80);text-decoration:none;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;flex:1 1 auto}
 .fm-indice a:hover{color:var(--mc-teal)}
 .fm-indice li + li::before{content:none}   /* a grade organiza; sem separador solto */
 
 @media(max-width:760px){
   .fm-pillar::before{font-size:46px;top:-8px}
   .fm-manifesto .fm-lead::first-letter{font-size:42px}
+  .fm-indice ol{gap:8px 14px;font-size:11.5px;grid-template-columns:repeat(2,minmax(0,1fr))}
   .fm-indice li + li::before{content:none}
 }
 

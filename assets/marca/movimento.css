@@ -40,7 +40,7 @@
 .fm-stagger-item.in{ opacity:1; transform:none; }
 
 /* rede de segurança: se o JS falhar, o item aparece sozinho (igual ao reveal) */
-@keyframes fmStaggerFallback{ }
+@keyframes fmStaggerFallback{ to{ opacity:1; transform:none; } }
 .fm-stagger-item:not(.in){ animation:fmStaggerFallback .7s ease 1.8s forwards; }
 
 /* ==========================================================================
@@ -69,7 +69,7 @@
 /* ==========================================================================
    7) FAQ — abertura suave da resposta (o <details> nativo ganha entrada)
    ========================================================================== */
-@keyframes fmFaqIn{ }
+@keyframes fmFaqIn{ from{ opacity:0; transform:translateY(-6px); } to{ opacity:1; transform:none; } }
 .fm-faq-item[open] > p{ animation:fmFaqIn .32s var(--fm-move-ease); }
 
 /* ==========================================================================
@@ -90,24 +90,26 @@
 .fm-kinetic-title.in .fm-kin-in{ transform:none; opacity:1; }
 .fm-kinetic-title.in .fm-kin-line:nth-child(2) .fm-kin-in{ transition-delay:.12s; }
 .fm-kinetic-title.in .fm-kin-line:nth-child(3) .fm-kin-in{ transition-delay:.24s; }
-@keyframes fmKinFallback{ }
+@keyframes fmKinFallback{ to{ transform:none; opacity:1; } }
 .fm-kinetic-title:not(.in) .fm-kin-in{ animation:fmKinFallback .9s ease 1.6s forwards; }
 
 /* ==========================================================================
    9) MARQUEE — a faixa do hero vira um fluxo contínuo (pausa no hover)
    ========================================================================== */
 .fm-hero-strip.fm-marquee{ display:block; overflow:hidden; white-space:nowrap; }
-@keyframes fmMarquee{ }
+.fm-marquee-track{ display:flex; width:max-content; animation:fmMarquee 34s linear infinite; }
+.fm-marquee-grupo{ display:flex; align-items:center; gap:23px; padding-right:23px; }
+@keyframes fmMarquee{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(-50%,0,0); } }
 .fm-hero-strip.fm-marquee:hover .fm-marquee-track,
 .fm-hero-strip.fm-marquee:focus-within .fm-marquee-track{ animation-play-state:paused; }
-@media (max-width:400px){ }
+@media (max-width:400px){ .fm-marquee-grupo{ gap:10px; padding-right:10px; } }
 
 /* ==========================================================================
    10) H2 COM VARREDURA (wipe) ao entrar na tela
    ========================================================================== */
 .fm-wipe{ clip-path:inset(0 100% 0 0); transition:clip-path .85s var(--fm-move-ease); }
 .fm-wipe.in{ clip-path:inset(0 0 0 0); }
-@keyframes fmWipeFallback{ }
+@keyframes fmWipeFallback{ to{ clip-path:inset(0 0 0 0); } }
 .fm-wipe:not(.in){ animation:fmWipeFallback .7s ease 1.8s forwards; }
 
 /* ==========================================================================
@@ -143,13 +145,23 @@ html[data-fm-3d="on"] .fm-hero-3d-canvas{ opacity:.92; }
    ========================================================================== */
 .fm-radar-host{ position:relative; overflow:hidden; }
 .fm-radar-section .fm-container{ position:relative; z-index:1; }
+.fm-radar-sweep{
+  position:absolute; top:44%; left:50%; z-index:0; pointer-events:none;
+  width:min(660px,88vw); aspect-ratio:1; transform:translate(-50%,-50%); opacity:.55;
+}
+.fm-radar-ring{ position:absolute; inset:0; border:1px solid rgba(10,188,176,.16); border-radius:50%; }
 .fm-radar-ring:nth-child(2){ inset:20%; }
 .fm-radar-ring:nth-child(3){ inset:40%; }
+.fm-radar-beam{
+  position:absolute; inset:0; border-radius:50%;
+  background:conic-gradient(from 0deg, rgba(10,188,176,.24), rgba(10,188,176,0) 26%);
+  animation:fmRadarGira 5s linear infinite;
+}
 .fm-radar-sweep::after{
   content:""; position:absolute; left:50%; top:50%; width:6px; height:6px; margin:-3px;
   border-radius:50%; background:var(--mc-teal); box-shadow:0 0 16px rgba(10,188,176,.9);
 }
-@keyframes fmRadarGira{ }
+@keyframes fmRadarGira{ to{ transform:rotate(360deg); } }
 
 /* hotspots: cada área ganha um ponto que acende no hover */
 .fm-radar-areas li{ position:relative; }
@@ -172,6 +184,8 @@ html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
    14) AMBIENTE — campo de partículas nas demais seções (Canvas 2D)
    ========================================================================== */
 .fm-ambiente-host{ position:relative; overflow:hidden; }
+.fm-ambiente-canvas{ position:absolute; inset:0; z-index:0; pointer-events:none; width:100%; height:100%; }
+.fm-ambiente-host > .fm-container{ position:relative; z-index:1; }
 
 /* ==========================================================================
    15) INTERAÇÃO APLICADA — comparativo, casos e termos-chave
