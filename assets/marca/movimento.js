@@ -17,6 +17,17 @@ const doc = document;
 const rmSistema = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let optIn = false;
 try { optIn = localStorage.getItem('fm-movimento') === 'on'; } catch (e) { /* noop */ }
+// Override EXPLÍCITO por URL: ?3d=on (ou ?movimento=on) força o 3D/movimento neste
+// dispositivo — útil quando o portão de hardware recusa (GPU emulada, driver, VM) e
+// também como autodiagnóstico. Fica gravado no aparelho e pode ser desfeito pelo
+// botão "Desativar movimento" (que passa a aparecer para quem forçou).
+try {
+  const q = new URLSearchParams(window.location.search);
+  if (q.get('3d') === 'on' || q.get('movimento') === 'on') {
+    optIn = true;
+    try { localStorage.setItem('fm-movimento', 'on'); } catch (e) { /* noop */ }
+  }
+} catch (e) { /* noop */ }
 const permitido = !rmSistema || optIn;   // opt-in: ver mesmo com o sistema pedindo menos
 doc.documentElement.classList.toggle('fm-movimento', permitido);
 const rm = !permitido;
@@ -32,7 +43,7 @@ const on = (el, ev, fn, opt) => {
    0) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
    -------------------------------------------------------------------------- */
 (function botaoMovimento() {
-  if (!rmSistema) return;                 // quem já vê as animações nunca vê o botão
+  if (!rmSistema && !optIn) return;       // aparece p/ quem tem reduced-motion OU forçou o 3D (?3d=on)
   const btn = doc.createElement('button');
   btn.type = 'button';
   btn.className = 'fm-mov-toggle';
