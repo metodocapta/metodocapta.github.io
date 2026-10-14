@@ -34,7 +34,7 @@ html[data-fm-mapa3d="on"] .fm-capta-visual[data-fm-tilt]{ transform:none !import
 @media (max-width:760px){
   .fm-mapa3d-rot{ font-size:9.5px; letter-spacing:.06em; }
 }
-
-@media (prefers-reduced-motion: reduce){
-  .fm-mapa3d{ display:none; }        /* reforço: o módulo nem é importado */
-}
+/* NÃO esconder o .fm-mapa3d em prefers-reduced-motion: quem decide é o módulo
+   (que só é importado quando o movimento é permitido — inclusive pelo opt-in
+   "Ativar movimento"). Esconder aqui criaria um buraco: a imagem já foi ocultada
+   por html[data-fm-mapa3d="on"] e o canvas ficaria display:none. */
