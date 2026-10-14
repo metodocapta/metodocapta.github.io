@@ -35,7 +35,7 @@
           ['biblioteca/o-que-e-osc/index.html', 'O que é uma OSC (e o que ela precisa ter)']
         ][r[0]];
         var segundo = (r[1] === 0)
-          ? ['checklist-parcerias/index.html', 'Checklist de prontidão: sua OSC está pronta para atrair empresas?']
+          ? ['diagnostico-de-prontidao/index.html', 'Diagnóstico de prontidão: 18 itens em 3 dimensões']
           : ['guias/checklist-de-habilitacao-documental/index.html', 'Checklist de habilitação documental (estatuto, ata, certidões)'];
         return {
           titulo: 'Primeiro o alvo, depois a prontidão.',
@@ -65,7 +65,7 @@
             ? 'Com o edital escolhido, o trabalho é traduzir a sua realidade para o que ele pede: objeto, metas, orçamento por rubrica e comprovação.'
             : 'Antes de escolher o edital, organize a base: objeto claro, capacidade instalada e documentação. Sem isso, o projeto compete em desvantagem.',
           links: [primeiro,
-            ['checklist-parcerias/index.html', 'Checklist de prontidão (12 itens)'],
+            ['diagnostico-de-prontidao/index.html', 'Diagnóstico de prontidão (18 itens · 3 dimensões)'],
             ['guias/como-se-habilitar-no-sinir/index.html', 'Como se habilitar no SINIR']]
         };
       }
@@ -92,7 +92,7 @@
             : 'Comece pela prontidão: documentação, governança e indicadores. Quem chega pronto é parceiro — quem chega pedindo precisa convencer.',
           links: [primeiro,
             ['biblioteca/o-que-e-glosao/index.html', 'Glosa: por que a verba volta'],
-            ['checklist-prestacao/index.html', 'Checklist: prestação de contas à prova de glosa']]
+            ['diagnostico-de-prontidao/index.html', 'Diagnóstico de prontidão: as 3 dimensões, em 18 itens']]
         };
       }
     },
