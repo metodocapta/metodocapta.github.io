@@ -621,6 +621,19 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 }
 
 /* ==========================================================================
+   v2.4 · MICRO-RÓTULOS — nada abaixo de 11px (padrão do projeto)
+   Correção dos rótulos herdados do tema na página "Quem Somos" (8–10px).
+   ========================================================================== */
+.fm-eyebrow,
+.fm-method-hero-overlay span,
+.fm-method-metrics span,
+.fm-method-scope-card > span,
+.fm-method-scope-card small,
+.fm-method-tags span,
+.fm-method-formal-card > span,
+.fm-method-conditions span{ font-size:11.5px !important; }
+
+/* ==========================================================================
    v2.4 · ALVOS DE TOQUE — links "ver X" dos cards de 5 perguntas (>=44px)
    ========================================================================== */
 .fm-site .fm-dec5-card a{display:inline-block;padding:12px 0;margin-top:0}

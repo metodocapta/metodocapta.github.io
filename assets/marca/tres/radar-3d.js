@@ -14,7 +14,6 @@ import * as THREE from './three.module.min.js';
 const TEAL = 0x0abcb0;
 const TEAL_LIGHT = 0x7fe3d8;
 
-const N = 1400;        // partículas da nuvem
 const NUCLEO = 12;     // as que "ficam" (com aderência)
 
 const suave = (x) => {
@@ -22,14 +21,16 @@ const suave = (x) => {
   return t * t * (3 - 2 * t);
 };
 
-export function iniciarRadar(sec) {
+export function iniciarRadar(sec, opts) {
   if (!sec) return null;
+  const lite = !!(opts && opts.lite);   // toque: cena mais leve
+  const N = lite ? 700 : 1400;          // partículas da nuvem
 
   let largura = sec.clientWidth || 1100;
   let altura = sec.clientHeight || 720;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.5 : 2));
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;

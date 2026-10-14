@@ -327,10 +327,13 @@ let radar3D = null;
 
 async function capacidade3D() {
   try {
-    if (!window.WebGL2RenderingContext || !fine) return false;   // mobile mantém o 2D/CSS
+    if (!window.WebGL2RenderingContext) return false;
     const prova = doc.createElement('canvas');
     if (!prova.getContext('webgl2')) return false;
-    if (navigator.deviceMemory && navigator.deviceMemory < 4) return false;
+    const ram = navigator.deviceMemory;
+    if (typeof ram === 'number' && ram < 4) return false;          // aparelho fraco
+    const cpu = navigator.hardwareConcurrency;
+    if (typeof cpu === 'number' && cpu < 4) return false;
     if (navigator.connection && navigator.connection.saveData) return false;
     return true;
   } catch (e) { return false; }
@@ -339,6 +342,7 @@ async function capacidade3D() {
 (async function tridimensional() {
   if (rm) return;
   if (!(await capacidade3D())) return;
+  const lite = !fine;          // toque: cenas mais leves (menos partículas, DPR menor)
 
   // Hero: o símbolo "C+" (minimalismo espacial)
   const stage = doc.querySelector('.fm-hero-stage');
@@ -346,7 +350,7 @@ async function capacidade3D() {
     try {
       const mod = await import('./tres/hero-3d.js');
       if (mod && typeof mod.iniciarHero === 'function') {
-        hero3D = mod.iniciarHero(stage);
+        hero3D = mod.iniciarHero(stage, { lite: lite });
         if (hero3D) doc.documentElement.setAttribute('data-fm-3d', 'on');
       }
     } catch (e) { /* fallback: hero CSS */ }
@@ -358,7 +362,7 @@ async function capacidade3D() {
     try {
       const mod = await import('./tres/radar-3d.js');
       if (mod && typeof mod.iniciarRadar === 'function') {
-        radar3D = mod.iniciarRadar(secRadar);
+        radar3D = mod.iniciarRadar(secRadar, { lite: lite });
         if (radar3D) {
           doc.documentElement.setAttribute('data-fm-radar3d', 'on');
           const sw = doc.querySelector('.fm-radar-sweep');
@@ -460,7 +464,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.2',
+  versao: '2.4.3',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;

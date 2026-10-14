@@ -100,14 +100,15 @@ function criarParticulas(qtd) {
   return new THREE.Points(geo, mat);
 }
 
-export function iniciarHero(stage) {
+export function iniciarHero(stage, opts) {
   if (!stage) return null;
+  const lite = !!(opts && opts.lite);   // toque: cena mais leve
 
   let largura = stage.clientWidth || 560;
   let altura = stage.clientHeight || 500;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.5 : 2));
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -131,7 +132,7 @@ export function iniciarHero(stage) {
   const mundo = new THREE.Group();
   const simbolo = criarSimbolo();
   const aneis = criarAneis();
-  const particulas = criarParticulas(260);
+  const particulas = criarParticulas(lite ? 120 : 260);
   mundo.add(simbolo, aneis, particulas);
   mundo.scale.setScalar(0.92);
   cena.add(mundo);
