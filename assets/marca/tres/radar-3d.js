@@ -30,7 +30,7 @@ export function iniciarRadar(sec, opts) {
   let altura = sec.clientHeight || 720;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.5 : 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 1.5));
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -124,11 +124,13 @@ export function iniciarRadar(sec, opts) {
   let visivel = true;
   let extra = 0;                 // empurrão de scroll (opcional)
   let t0 = performance.now();
+  let quadro = 0;
 
   function animar(agora) {
     if (!vivo) return;
     if (!visivel || document.hidden) return;   // não agenda: economiza GPU
     requestAnimationFrame(animar);
+    quadro++;
 
     const tempo = (agora - t0) / 1000;
     const ciclo = (tempo % 9) / 9;
@@ -140,14 +142,17 @@ export function iniciarRadar(sec, opts) {
     sm.x += (alvo.x - sm.x) * 0.05;
     sm.y += (alvo.y - sm.y) * 0.05;
 
-    const p = geo.attributes.position.array;
-    for (let i = 0; i < N; i++) {
-      const k = suave((alvoK - atraso[i] * 0.4 - extra) / 0.6);
-      p[i * 3] = inicio[i * 3] * (1 - k) + fim[i * 3] * k;
-      p[i * 3 + 1] = inicio[i * 3 + 1] * (1 - k) + fim[i * 3 + 1] * k;
-      p[i * 3 + 2] = inicio[i * 3 + 2] * (1 - k) + fim[i * 3 + 2] * k;
+    // no modo leve, atualiza a nuvem em um frame sim / um não (metade do custo de CPU)
+    if (!lite || quadro % 2 === 0) {
+      const p = geo.attributes.position.array;
+      for (let i = 0; i < N; i++) {
+        const k = suave((alvoK - atraso[i] * 0.4 - extra) / 0.6);
+        p[i * 3] = inicio[i * 3] * (1 - k) + fim[i * 3] * k;
+        p[i * 3 + 1] = inicio[i * 3 + 1] * (1 - k) + fim[i * 3 + 1] * k;
+        p[i * 3 + 2] = inicio[i * 3 + 2] * (1 - k) + fim[i * 3 + 2] * k;
+      }
+      geo.attributes.position.needsUpdate = true;
     }
-    geo.attributes.position.needsUpdate = true;
 
     nuvem.rotation.y = tempo * 0.06 + sm.x * 0.25;
     funil.rotation.y = -tempo * 0.1;

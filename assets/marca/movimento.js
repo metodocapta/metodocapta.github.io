@@ -234,12 +234,22 @@ const on = (el, ev, fn, opt) => {
     spot.className = 'fm-spot';
     spot.setAttribute('aria-hidden', 'true');
     secao.appendChild(spot);
+
+    let raf = 0;
+    let lx = 0;
+    let ly = 0;
     on(secao, 'pointermove', (ev) => {
-      const r = secao.getBoundingClientRect();
-      if (!r.width || !r.height) return;
-      spot.style.setProperty('--fm-mx', ((ev.clientX - r.left) / r.width * 100).toFixed(1) + '%');
-      spot.style.setProperty('--fm-my', ((ev.clientY - r.top) / r.height * 100).toFixed(1) + '%');
-      spot.classList.add('on');
+      lx = ev.clientX;                       // guarda e resolve no próximo frame
+      ly = ev.clientY;                       // (1 leitura de layout por frame, no máximo)
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const r = secao.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        spot.style.setProperty('--fm-mx', ((lx - r.left) / r.width * 100).toFixed(1) + '%');
+        spot.style.setProperty('--fm-my', ((ly - r.top) / r.height * 100).toFixed(1) + '%');
+        spot.classList.add('on');
+      });
     });
     on(secao, 'pointerleave', () => spot.classList.remove('on'));
   });
@@ -335,6 +345,7 @@ async function capacidade3D() {
     const cpu = navigator.hardwareConcurrency;
     if (typeof cpu === 'number' && cpu < 4) return false;
     if (navigator.connection && navigator.connection.saveData) return false;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches) return false;
     return true;
   } catch (e) { return false; }
 }
@@ -390,30 +401,50 @@ async function capacidade3D() {
 
   let atual = -1;
   let ticking = false;
+  let centros = [];     // centro de cada etapa, em coordenadas do documento
+  let alturas = [];
+
+  function medir() {                       // 1 leitura de layout por etapa (não por frame)
+    centros = []; alturas = [];
+    pillars.forEach((p) => {
+      const r = p.getBoundingClientRect();
+      centros.push(r.top + window.scrollY + r.height / 2);
+      alturas.push(r.height);
+    });
+  }
+
   function atualizar() {
     ticking = false;
-    if (manual) return;
-    const cy = window.innerHeight / 2;
+    if (manual || !centros.length) return;
+    const topo = window.scrollY;
+    const base = topo + window.innerHeight;
+    const cy = topo + window.innerHeight / 2;
     let melhor = -1;
     let dist = Infinity;
-    pillars.forEach((p, i) => {
-      const r = p.getBoundingClientRect();
-      if (r.bottom < 0 || r.top > window.innerHeight) return;   // fora da tela
-      const d = Math.abs((r.top + r.height / 2) - cy);
+    for (let i = 0; i < centros.length; i++) {
+      const c = centros[i];
+      const h = alturas[i] || 0;
+      if (c + h / 2 < topo || c - h / 2 > base) continue;   // fora da tela
+      const d = Math.abs(c - cy);
       if (d < dist) { dist = d; melhor = i; }
-    });
+    }
     if (melhor >= 0 && melhor !== atual) {
       atual = melhor;
       pillars[melhor].dispatchEvent(new MouseEvent('mouseenter'));   // acende a etapa
     }
   }
+
   function agendar() {
     if (ticking) return;
     ticking = true;
     requestAnimationFrame(atualizar);
   }
+  const remedir = () => { medir(); agendar(); };
+
+  medir();
   on(window, 'scroll', agendar, { passive: true });
-  on(window, 'resize', agendar, { passive: true });
+  on(window, 'resize', remedir, { passive: true });
+  on(window, 'load', remedir);
   agendar();
 })();
 
@@ -464,7 +495,7 @@ async function capacidade3D() {
    14) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.3',
+  versao: '2.4.4',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
