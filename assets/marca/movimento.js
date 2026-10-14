@@ -334,6 +334,7 @@ const on = (el, ev, fn, opt) => {
    -------------------------------------------------------------------------- */
 let hero3D = null;
 let radar3D = null;
+let ambientes = [];
 
 async function capacidade3D() {
   try {
@@ -504,10 +505,27 @@ async function capacidade3D() {
 })();
 
 /* --------------------------------------------------------------------------
-   14) ROLLBACK — desliga a camada sem rebuild (emergência)
+   14) AMBIENTE — campo de partículas leve nas demais seções escuras
+   (Canvas 2D: barato, roda também no mobile; nunca compete com o conteúdo)
+   -------------------------------------------------------------------------- */
+(function ambienteNasSecoes() {
+  if (rm) return;
+  const alvos = Array.from(doc.querySelectorAll(
+    '#fm-parceiros, #fm-destaques, #fm-publico, #fm-riscos, #fm-decisao'
+  ));
+  if (!alvos.length) return;
+  import('./ambiente-particulas.js').then((mod) => {
+    if (!mod || typeof mod.iniciarAmbiente !== 'function') return;
+    ambientes = alvos.map((s) => mod.iniciarAmbiente(s, { lite: !fine })).filter(Boolean);
+    if (ambientes.length) doc.documentElement.setAttribute('data-fm-ambiente', 'on');
+  }).catch(() => { /* fallback: seção como está */ });
+})();
+
+/* --------------------------------------------------------------------------
+   15) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.5',
+  versao: '2.4.6',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;
@@ -522,6 +540,11 @@ window.__fmMovimento = {
       try { radar3D.destroy(); } catch (e) { /* noop */ }
       radar3D = null;
       doc.documentElement.removeAttribute('data-fm-radar3d');
+    }
+    if (ambientes.length) {
+      ambientes.forEach((a) => { try { a.destroy(); } catch (e) { /* noop */ } });
+      ambientes = [];
+      doc.documentElement.removeAttribute('data-fm-ambiente');
     }
     const bar = doc.getElementById('fm-progress');
     if (bar) bar.remove();

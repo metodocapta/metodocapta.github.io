@@ -72,8 +72,8 @@ function criarAneis() {
     color: TEAL, transparent: true, opacity: 0.20, depthWrite: false,
   });
   const defs = [
-    { raio: 2.55, inclina: 1.15, rot: 0.2, op: 0.20 },
-    { raio: 3.10, inclina: -0.85, rot: -0.5, op: 0.12 },
+    { raio: 2.15, inclina: 1.15, rot: 0.2, op: 0.16 },
+    { raio: 2.65, inclina: -0.85, rot: -0.5, op: 0.09 },
   ];
   defs.forEach((d) => {
     const anel = new THREE.Mesh(new THREE.TorusGeometry(d.raio, 0.012, 12, 220), material.clone());
@@ -154,7 +154,7 @@ export function iniciarHero(alvo, opts) {
     const larguraMundo = alturaMundo * aspect;
     const fx = offsetX() || 0;
     simbolo.position.x = fx * larguraMundo;
-    aneis.position.x = fx * larguraMundo * 0.7;
+    aneis.position.x = fx * larguraMundo;   // anéis concêntricos ao C+ (não varrem o texto)
   }
   aplicarOffset();
 

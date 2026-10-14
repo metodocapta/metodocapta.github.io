@@ -79,7 +79,7 @@
    ========================================================================== */
 .fm-kinetic-title .fm-kin-line{
   display:block; overflow:hidden;
-  padding-bottom:.12em; margin-bottom:-.12em;   /* espaço p/ cedilha e descendentes */
+  padding:.10em 0 .16em; margin:-.10em 0 -.16em;   /* folga p/ acentos (til) e cedilha */
 }
 .fm-kinetic-title .fm-kin-in{
   display:block; transform:translateY(110%); opacity:0;
@@ -177,7 +177,14 @@ html[data-fm-radar3d="on"] .fm-radar-3d-canvas{ opacity:.9; }
 html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
 
 /* ==========================================================================
-   14) INTERAÇÃO APLICADA — comparativo, casos e termos-chave
+   14) AMBIENTE — campo de partículas nas demais seções (Canvas 2D)
+   ========================================================================== */
+.fm-ambiente-host{ position:relative; overflow:hidden; }
+.fm-ambiente-canvas{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+.fm-ambiente-host > .fm-container{ position:relative; z-index:1; }
+
+/* ==========================================================================
+   15) INTERAÇÃO APLICADA — comparativo, casos e termos-chave
    ========================================================================== */
 
 /* Comparativo: ao passar o mouse, a coluna do Método Capta+ assume o foco */
@@ -202,7 +209,7 @@ html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
 .fm-forte.in{ background-size:100% 2px; }
 
 /* ==========================================================================
-   15) ACESSIBILIDADE + OPT-IN
+   16) ACESSIBILIDADE + OPT-IN
    O desligamento NÃO usa @media — usa a classe ".fm-movimento" no <html>.
    O JS (e um script inline no <head>) só a adiciona quando pode animar:
    movimento normal do sistema, OU o usuário ativou pelo botão (opt-in).
@@ -227,12 +234,12 @@ html:not(.fm-movimento) .fm-forte{ background-size:100% 2px !important; transiti
 }
 
 /* ==========================================================================
-   16) NOMES DE SEÇÃO (kicker) — o número só no primeiro kicker da seção
+   17) NOMES DE SEÇÃO (kicker) — o número só no primeiro kicker da seção
    ========================================================================== */
 .fm-kicker.fm-kicker-sub::before{ content:none !important; }
 
 /* ==========================================================================
-   17) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
+   18) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
    ========================================================================== */
 .fm-mov-toggle{
   position:fixed; left:14px; bottom:18px; z-index:9985;
