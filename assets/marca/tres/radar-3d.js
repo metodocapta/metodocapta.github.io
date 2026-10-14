@@ -169,7 +169,7 @@ export function iniciarRadar(sec, opts) {
     ? new IntersectionObserver((ents) => {
         const antes = visivel;
         visivel = ents.some((e) => e.isIntersecting);
-        if (visivel && !antes) requestAnimationFrame(animar);
+        if (visivel && !antes) { redimensionar(); requestAnimationFrame(animar); }
       }, { threshold: 0.05 })
     : null;
   if (obs) obs.observe(sec);

@@ -37,9 +37,11 @@ export function iniciarAmbiente(secao, opts) {
     h = secao.clientHeight || 420;
     canvas.width = Math.round(w * dpr);
     canvas.height = Math.round(h * dpr);
-    canvas.style.width = w + 'px';
-    canvas.style.height = h + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function medirSeMudou() {
+    if (secao.clientWidth !== w || secao.clientHeight !== h) { medir(); semear(); }
   }
 
   function semear() {
@@ -84,7 +86,7 @@ export function iniciarAmbiente(secao, opts) {
     ? new IntersectionObserver((ents) => {
         const antes = visivel;
         visivel = ents.some((e) => e.isIntersecting);
-        if (visivel && !antes) requestAnimationFrame(desenhar);
+        if (visivel && !antes) { medirSeMudou(); requestAnimationFrame(desenhar); }
       }, { threshold: 0.02 })
     : null;
   if (obs) obs.observe(secao);
@@ -92,7 +94,7 @@ export function iniciarAmbiente(secao, opts) {
   const aoVis = () => { if (!document.hidden && visivel) requestAnimationFrame(desenhar); };
   document.addEventListener('visibilitychange', aoVis);
 
-  const redim = () => { medir(); semear(); };
+  const redim = () => { if (visivel) { medir(); semear(); } };
   const ro = ('ResizeObserver' in window) ? new ResizeObserver(redim) : null;
   if (ro) ro.observe(secao);
   window.addEventListener('resize', redim, { passive: true });

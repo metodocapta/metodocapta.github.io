@@ -458,6 +458,16 @@ async function capacidade3D() {
   on(window, 'scroll', agendar, { passive: true });
   on(window, 'resize', remedir, { passive: true });
   on(window, 'load', remedir);
+
+  // com content-visibility, a seção fora da tela não é "medida": re-mede ao aparecer
+  const secCaps = doc.querySelector('.fm-capta-section');
+  if (secCaps && 'IntersectionObserver' in window) {
+    const ioCap = new IntersectionObserver((ents) => {
+      if (ents.some((e) => e.isIntersecting)) { medir(); agendar(); }
+    }, { threshold: 0.01 });
+    ioCap.observe(secCaps);
+    cleanups.push(() => ioCap.disconnect());
+  }
   agendar();
 })();
 
@@ -525,7 +535,7 @@ async function capacidade3D() {
    15) ROLLBACK — desliga a camada sem rebuild (emergência)
    -------------------------------------------------------------------------- */
 window.__fmMovimento = {
-  versao: '2.4.6',
+  versao: '2.4.7',
   desligar() {
     cleanups.forEach((fn) => { try { fn(); } catch (e) { /* noop */ } });
     cleanups.length = 0;

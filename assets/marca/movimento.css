@@ -184,7 +184,7 @@ html[data-fm-radar3d="on"] .fm-radar-sweep{ display:none; }
    14) AMBIENTE — campo de partículas nas demais seções (Canvas 2D)
    ========================================================================== */
 .fm-ambiente-host{ position:relative; overflow:hidden; }
-.fm-ambiente-canvas{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+.fm-ambiente-canvas{ position:absolute; inset:0; z-index:0; pointer-events:none; width:100%; height:100%; }
 .fm-ambiente-host > .fm-container{ position:relative; z-index:1; }
 
 /* ==========================================================================
