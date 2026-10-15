@@ -289,21 +289,42 @@ body.fm-bar-on .fm-mov-toggle--flutuante{ bottom:170px; }
 }
 
 /* ==========================================================================
-   19) BARRA FIXA DE CTA × MAPA 3D — a barra sai da frente do mapa
+   19) BARRA FIXA DE CTA × MAPA — a barra NÃO sai: ela encolhe para pílula
    --------------------------------------------------------------------------
-   Residual P1 da auditoria V2.5: a barra fixa (128 px de altura a 390 px) cortava
-   os rótulos das etapas enquanto o mapa 3D entrava pela base da tela — medido: os
-   rótulos 01/02/03 passavam inteiros por baixo dela. "Elevar" o 3D NÃO resolve:
-   a barra é fixa e o mapa rola, então o corte só mudaria de posição de rolagem.
-   Regra: enquanto a CAIXA do mapa está em cena (html[data-fm-mapa-visivel], posto
-   pelo módulo 3D), a barra sai de cena e volta quando o mapa sai. Nenhum caminho
-   de conversão se perde: a seção do mapa não tem CTA própria e o balão do
-   WhatsApp — MESMO destino wa.me — fica na tela (recolhido a ícone, com
-   aria-label). A barra é exclusiva da home; a transição de .28s vem do próprio
-   .fm-sticky-cta (e é desligada no modo reduce).
+   Residual P1 da auditoria V2.5. O problema: a barra fixa (128 px de altura a
+   390 px) cortava os rótulos das etapas enquanto o mapa entrava pela base da
+   tela. "Elevar" o 3D NÃO resolve — a barra é fixa e o mapa rola, então o corte
+   só mudaria de posição de rolagem; quem tem de sair da frente é o elemento fixo.
+
+   Três estados foram medidos no pior ponto (§10.6 da auditoria):
+     · barra inteira .......... 21% do mapa e 6 de 6 rótulos cobertos
+     · sair de cena ........... 0% e 0 rótulos, mas SEM CTA
+     · pílula (escolhida) ..... 5% a 390 px e 2% a 912 px, 0 de 6 rótulos, CTA na tela
+   O que decide não é a área: é o que o mapa DIZ. A pílula cai no canto, na zona
+   dos anéis que já estão desvanecendo, e não cobre rótulo nenhum — em troca, o
+   parágrafo da barra sai de cena (o botão e o × ficam).
+
+   Regra: com a CAIXA do mapa em cena (html[data-fm-mapa-visivel], posto pelo
+   movimento.js bloco 0c — vale com 3D e com a imagem 2D), a barra vira botão
+   flutuante no canto inferior direito. A barra é exclusiva da home.
+
+   O que NÃO se toca aqui: transform/opacity/visibility do .fm-sticky-cta. Quem
+   decide se a barra está em cena é o próprio .on (ela continua aparecendo só
+   depois do primeiro scroll) — a versão anterior FORÇAVA a saída e, sem esse
+   trecho, a pílula apareceria antes do .on, no topo da página. Pelo mesmo motivo
+   não há transição de geometria: animar largura/posição daqui venceria por
+   especificidade o "transition:none" do modo reduce e faria a pílula ANDAR para
+   quem pediu menos movimento no sistema.
    ========================================================================== */
 html[data-fm-mapa-visivel] .fm-sticky-cta{
-  transform:translateY(130%);
-  opacity:0;
-  visibility:hidden;
+  left:auto; right:14px; bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  width:auto; max-width:calc(100vw - 28px);
+  padding:7px 9px; gap:6px;
+  justify-content:flex-end; flex-wrap:nowrap;
+  border:1px solid rgba(127,227,216,.24); border-radius:999px;
+  background:rgba(4,34,42,.88);
+  box-shadow:0 12px 30px rgba(0,0,0,.42);
 }
+html[data-fm-mapa-visivel] .fm-sticky-cta__txt{ display:none; }
+html[data-fm-mapa-visivel] .fm-sticky-cta__btn{ padding:10px 16px; font-size:14px; }
+html[data-fm-mapa-visivel] .fm-sticky-cta__x{ font-size:20px; padding:6px 9px; }
