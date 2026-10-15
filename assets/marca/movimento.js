@@ -96,6 +96,27 @@ const on = (el, ev, fn, opt) => {
 })();
 
 /* --------------------------------------------------------------------------
+   0c) MAPA EM CENA — o sinal que afasta a barra fixa de CTA
+   --------------------------------------------------------------------------
+   Residual P1 da auditoria V2.5: a barra fixa de CTA (128 px a 390 px) cobria o
+   mapa enquanto ele entrava pela base da tela (rótulos inteiros sob a barra).
+   O sinal tem de valer SEMPRE que o mapa está em cena — inclusive para quem vê
+   a IMAGEM (o 2D), que é a maioria: o 3D é opt-in e depende do pedido de menos
+   movimento do sistema. Por isso ele nasce AQUI, na coluna visual do mapa, e não
+   dentro do módulo 3D. O balão do WhatsApp (mobile) usa o mesmo sinal.
+   -------------------------------------------------------------------------- */
+(function mapaEmCena() {
+  const visual = doc.querySelector('.fm-capta-section .fm-capta-visual');
+  if (!visual || !('IntersectionObserver' in window)) return;
+  const raiz = doc.documentElement;
+  const obs = new IntersectionObserver((ents) => {
+    if (ents.some((e) => e.isIntersecting)) raiz.setAttribute('data-fm-mapa-visivel', '');
+    else raiz.removeAttribute('data-fm-mapa-visivel');
+  }, { threshold: 0.05 });
+  obs.observe(visual);
+})();
+
+/* --------------------------------------------------------------------------
    1) BARRA DE PROGRESSO DE LEITURA
    -------------------------------------------------------------------------- */
 (function barraDeProgresso() {
@@ -434,10 +455,9 @@ async function tridimensional() {
       import('./tres/mapa-3d.js').then((mod) => {
         if (mod && typeof mod.iniciarMapa === 'function') {
           mapa3D = mod.iniciarMapa(areaMetodo, { lite: lite });
-          // O sinal de "mapa em cena" (html[data-fm-mapa-visivel]) — que recolhe o
-          // balão do WhatsApp e afasta a barra fixa de CTA — é posto pelo PRÓPRIO
-          // módulo, no observador da caixa do mapa: uma fonte só, e só existe
-          // quando o 3D está de pé (que é quando os rótulos existem).
+          // O sinal de "mapa em cena" (html[data-fm-mapa-visivel]) nasce no bloco
+          // 0c, observando a coluna visual do mapa — vale com 3D e com a imagem
+          // (2D). Aqui só se registra que o 3D subiu.
           if (mapa3D) doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
         }
       }).catch(() => { /* fallback: imagem + anéis 2D */ });
