@@ -1059,3 +1059,57 @@ body{counter-reset:fm-secao}
 .fm-nav-indice .fm-indice-btn{color:#7fe3d8 !important}
 .fm-nav-indice.aberto .fm-indice-btn,
 .fm-nav-indice .fm-indice-btn:hover{color:#fff !important}
+
+/* ==========================================================================
+   PISO TIPOGRAFICO (auditoria V2.5, 8 P1) - NENHUM texto abaixo de 12 px
+   --------------------------------------------------------------------------
+   O levantamento a 390 px achou 69 elementos abaixo de 12 px na home (3 deles
+   abaixo de 10 px) e outros tantos nas paginas de secao. A origem estava
+   espalhada: o landing.css (heranca do WordPress, ainda carregado pela home e
+   por metodo-capta-plus), esta folha, os atalhos "font:" e sobrescritas de
+   mobile que ENCOLHIAM texto. Aqui o piso e declarado UMA vez, com valor unico
+   de 12 px - o que era acidente (9, 10, 10,5, 11, 11,5 px) vira decisao.
+
+   So "font-size" mora neste bloco: letter-spacing, cor, peso e caixa seguem
+   vindo das regras originais, que continuam sendo a fonte da verdade do
+   desenho. Esta folha carrega DEPOIS do landing.css e e lida por 68 das 71
+   paginas do site, entao o piso vale para a home e para o resto sem tocar em
+   68 arquivos. Se uma regra original subir para 12 px ou mais, este bloco pode
+   ser enxugado sem risco.
+   ========================================================================== */
+
+/* 1) Abaixo do piso em qualquer largura */
+.fm-kicker, .fm-eyebrow, .eyebrow, .tag,
+.fm-stage-card small, .fm-stage-card strong,
+.fm-hero-signals, .fm-hero-strip, .fm-hero-strip span,
+.fm-pillar > span, .fm-journey-step > span,
+.fm-contact-brand span, .fm-disclaimer, .fm-footer-brand span,
+.fm-footer-col-titulo, .fm-footer-col a em,
+.fm-method-hero-overlay span, .fm-method-metrics span,
+.fm-method-scope-card > span, .fm-method-scope-card small,
+.fm-method-tags span, .fm-method-formal-card > span, .fm-method-formal-card li,
+.fm-method-conditions span, .fm-case .k, .fm-frentes-titulo,
+.fm-evidence-tag, .fm-metric span, .fm-metric-note,
+.fm-mech-step, .fm-mech-note, .fm-dest-data, .fm-engine-mods,
+.fm-conversa-kicker, .fm-conversa-prox, .fm-valor-tag, .fm-mov-toggle,
+.fm-nav-indice ol b, .fm-nav-indice ol a em,
+.fm-indice-seta, .fm-indice-num{
+  font-size:12px !important;
+}
+
+/* 2) A navegacao das paginas de secao: 11,5 px a <=640 px (acima disso e 13 px) */
+@media (max-width:640px){
+  .site-hd nav a{font-size:12px !important;}
+}
+
+/* 3) Rotulos do mapa: 11 px a <=760 px (o desktop ja esta em 12,5 px) */
+@media (max-width:760px){
+  .fm-mapa3d-rot{font-size:12px !important;}
+}
+
+/* 4) O rodape e a excecao: a <=760 px ele JA esta em 12,5 px (acima do piso),
+   entao o piso entra so acima disso, onde a heranca o deixava em 10/11,5 px */
+@media (min-width:761px){
+  .fm-footer .fm-footer-meta{font-size:12px !important;}
+  .fm-footer-links a{font-size:12px !important;}
+}
