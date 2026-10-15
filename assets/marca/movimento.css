@@ -251,10 +251,13 @@ html.fm-sem-movimento .fm-wipe{ clip-path:none !important; animation:none !impor
 
 /* ==========================================================================
    18) BOTÃO "ATIVAR MOVIMENTO" — só aparece para quem tem reduced-motion
+   --------------------------------------------------------------------------
+   Auditoria V2.5: entra no FLUXO (abaixo dos CTAs). Flutuando, ele cobria o CTA
+   principal, a faixa "as seis etapas" e a nota "Sem compromisso…" no mobile.
    ========================================================================== */
 .fm-mov-toggle{
-  position:fixed; left:14px; bottom:18px; z-index:9985;
   display:inline-flex; align-items:center; gap:7px;
+  margin-top:16px;
   padding:8px 13px; border-radius:999px;
   border:1px solid rgba(10,188,176,.5);
   background:rgba(4,34,42,.86); color:#dff6f2; opacity:.92;
@@ -265,9 +268,22 @@ html.fm-sem-movimento .fm-wipe{ clip-path:none !important; animation:none !impor
 }
 .fm-mov-toggle:hover{ transform:translateY(-2px); border-color:var(--mc-teal); background:rgba(10,188,176,.18); color:#fff; opacity:1; }
 .fm-mov-toggle:focus-visible{ outline:3px solid rgba(10,188,176,.85); outline-offset:3px; opacity:1; }
-/* sobe quando a barra fixa de CTA aparece (mesmo racional do botao do WhatsApp) */
-body.fm-bar-on .fm-mov-toggle{ bottom:88px; }
+/* exceção: página sem bloco de ações e sem rodapé — flutua acima do WhatsApp
+   (mesmo eixo do balão, nunca sobre o texto) e sobe quando a barra de CTA entra */
+.fm-mov-toggle--flutuante{
+  position:fixed; right:22px; bottom:96px; z-index:9985; margin-top:0;
+}
+body.fm-bar-on .fm-mov-toggle--flutuante{ bottom:170px; }
 @media (max-width:760px){
-  .fm-mov-toggle{ left:12px; bottom:16px; padding:8px 12px; font-size:11.5px; }
-  body.fm-bar-on .fm-mov-toggle{ bottom:84px; }
+  .fm-mov-toggle{ margin-top:14px; padding:9px 13px; font-size:12px; }
+  .fm-mov-toggle--flutuante{ right:14px; bottom:84px; }
+  body.fm-bar-on .fm-mov-toggle--flutuante{ bottom:158px; }
+}
+/* Home: o botão vive na faixa vazia ACIMA do texto do hero (abaixo do header).
+   Fora do fluxo: não desloca o hero (o palco é centralizado e cresceria 30 px
+   = CLS 0,041) e não cobre nada, porque desce junto com o hero. A faixa foi
+   medida vazia a 390, 912 e 1440 px (só a decoração .fm-hero-lines). */
+.fm-hero-copy{ position:relative; }
+.fm-hero-copy > .fm-mov-toggle{
+  position:absolute; left:0; bottom:100%; margin:0 0 10px;
 }

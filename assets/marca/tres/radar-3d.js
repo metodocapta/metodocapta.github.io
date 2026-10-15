@@ -193,9 +193,22 @@ export function iniciarRadar(sec, opts) {
   renderer.render(cena, camera);
   requestAnimationFrame(animar);
 
+  /* WebGL perdido: o canvas ficaria preto. Some com ele e devolve a varredura 2D
+     (o número do radar é HTML e continua no lugar). */
+  const aoPerderContexto = (ev) => {
+    if (ev) ev.preventDefault();
+    vivo = false;
+    if (obs) obs.disconnect();
+    try { renderer.dispose(); } catch (e) { /* noop */ }
+    if (canvas.parentNode) canvas.parentNode.removeChild(canvas);
+    document.documentElement.removeAttribute('data-fm-radar3d');
+  };
+  canvas.addEventListener('webglcontextlost', aoPerderContexto, false);
+
   return {
     destroy() {
       vivo = false;
+      canvas.removeEventListener('webglcontextlost', aoPerderContexto);
       if (obs) obs.disconnect();
       if (ro) ro.disconnect();
       document.removeEventListener('visibilitychange', aoVisibilidade);

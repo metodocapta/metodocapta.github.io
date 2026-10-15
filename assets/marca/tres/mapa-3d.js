@@ -247,7 +247,8 @@ export function iniciarMapa(alvo, opts) {
       const el = els[i];
       el.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) translate(-50%,-118%)';
       // a etapa ATIVA é a que mais importa: nome visível e mais forte
-      el.style.opacity = (vb.z < 1) ? (i === ativa ? '1' : (i === hover ? '0.85' : '0.42')) : '0';
+      // (contraste: inativo em 0.72 = 9,3:1 sobre o fundo; era 0.42 = 3,74:1)
+      el.style.opacity = (vb.z < 1) ? (i === ativa ? '1' : (i === hover ? '0.92' : '0.72')) : '0';
       el.style.color = i === ativa ? '#ffffff' : '';
     }
 
@@ -287,9 +288,23 @@ export function iniciarMapa(alvo, opts) {
   renderer.render(cena, camera);
   requestAnimationFrame(animar);
 
+  /* WebGL: se o contexto for perdido (driver reiniciado, GPU trocada, aba
+     suspensa por muito tempo), o canvas fica preto e travado. Aqui o mapa sai
+     de cena e o visual 2D (imagem + anéis) volta — nunca um retângulo preto. */
+  const aoPerderContexto = (ev) => {
+    if (ev) ev.preventDefault();
+    vivo = false;
+    if (obs) obs.disconnect();
+    try { renderer.dispose(); } catch (e) { /* noop */ }
+    caixa.style.display = 'none';
+    document.documentElement.removeAttribute('data-fm-mapa3d');
+  };
+  canvas.addEventListener('webglcontextlost', aoPerderContexto, false);
+
   return {
     destroy() {
       vivo = false;
+      canvas.removeEventListener('webglcontextlost', aoPerderContexto);
       if (obs) obs.disconnect();
       if (ro) ro.disconnect();
       if (obsDom) obsDom.disconnect();

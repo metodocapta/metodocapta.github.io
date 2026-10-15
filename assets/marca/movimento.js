@@ -59,7 +59,29 @@ const on = (el, ev, fn, opt) => {
     } catch (e) { /* noop */ }
     location.reload();
   });
-  doc.body.appendChild(btn);
+  /* ANCORAGEM (auditoria V2.5): flutuando no canto inferior, o botão cobria o CTA
+     principal, a faixa "as seis etapas" e a nota "Sem compromisso…" em telas
+     pequenas. Agora, na home, ele é POSICIONADO (fora do fluxo) na faixa vazia
+     logo acima do bloco de texto do hero — medido vazio a 390, 912 e 1440 px,
+     abaixo do header e longe do palco. Fora do fluxo por dois motivos: não
+     desloca nada (o palco é centralizado e o hero cresceria ~60 px = CLS 0,041)
+     e não cobre conteúdo em nenhuma posição de rolagem, pois acompanha o hero.
+     Nas internas (sem hero da home) entra no FLUXO, logo depois das ações —
+     lá o bloco seguinte já está abaixo da dobra e o CLS medido é 0. */
+  const heroCopy = doc.querySelector('.fm-hero-copy');
+  const acoes = doc.querySelector('.fm-actions');
+  const rodape = doc.querySelector('footer.fm-footer');
+  if (heroCopy) {
+    btn.classList.add('fm-mov-toggle--hero');
+    heroCopy.insertBefore(btn, heroCopy.firstChild);
+  } else if (acoes && acoes.parentNode) {
+    acoes.parentNode.insertBefore(btn, acoes.nextSibling);
+  } else if (rodape && rodape.parentNode) {
+    rodape.parentNode.insertBefore(btn, rodape);
+  } else {
+    btn.classList.add('fm-mov-toggle--flutuante');
+    doc.body.appendChild(btn);
+  }
 })();
 
 /* --------------------------------------------------------------------------
@@ -404,17 +426,46 @@ async function tridimensional() {
   // O 3D NAVEGA; o texto (nome/artefato/plataforma) segue no HTML.
   const areaMetodo = doc.querySelector('.fm-capta-section .fm-capta-visual');
   if (areaMetodo && 'IntersectionObserver' in window) {
-    const obsMapa = new IntersectionObserver((ents, ob) => {
-      if (!ents.some((e) => e.isIntersecting)) return;
-      ob.disconnect();
+    let mapaMontado = false;
+    const montarMapa = () => {
+      if (mapaMontado) return;
+      mapaMontado = true;
+      if (obsMapa) obsMapa.disconnect();
       import('./tres/mapa-3d.js').then((mod) => {
         if (mod && typeof mod.iniciarMapa === 'function') {
           mapa3D = mod.iniciarMapa(areaMetodo, { lite: lite });
-          if (mapa3D) doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
+          if (mapa3D) {
+            doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
+            /* Auditoria V2.5: o balão comprido do WhatsApp passava por cima do
+               rótulo da etapa 01. Enquanto a seção do método está em cena ele
+               recolhe para ícone (o WhatsApp segue a um toque); fora dela volta. */
+            const sec = doc.querySelector('.fm-capta-section');
+            if (sec) {
+              const obsZap = new IntersectionObserver((es) => {
+                if (es.some((e) => e.isIntersecting)) {
+                  doc.documentElement.setAttribute('data-fm-mapa-em-cena', '');
+                } else {
+                  doc.documentElement.removeAttribute('data-fm-mapa-em-cena');
+                }
+              }, { threshold: 0.06 });
+              obsZap.observe(sec);
+            }
+          }
         }
       }).catch(() => { /* fallback: imagem + anéis 2D */ });
+    };
+    const obsMapa = new IntersectionObserver((ents) => {
+      if (!ents.some((e) => e.isIntersecting)) return;
+      montarMapa();
     }, { rootMargin: '700px 0px' });
     obsMapa.observe(areaMetodo);
+    /* REDE DE SEGURANÇA (corrida medida na auditoria): quando o observador é
+       registrado com a seção JÁ dentro do alcance, não há transição para
+       observar e o mapa podia nunca montar — o visitante via só a imagem.
+       A checagem aqui é geométrica e imediata, no mesmo tique. */
+    const r = areaMetodo.getBoundingClientRect();
+    const alcance = (window.innerHeight || 800) + 700;
+    if (r.top < alcance && r.bottom > -700) montarMapa();
   }
 
   // Hero: o símbolo "C+" (minimalismo espacial).

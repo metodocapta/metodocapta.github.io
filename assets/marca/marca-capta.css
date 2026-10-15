@@ -292,26 +292,29 @@ html,body{overflow-x:clip !important;}
   background:linear-gradient(180deg,
     rgba(2,13,13,.99) 0%,
     rgba(2,13,13,.97) 52%,
-    rgba(2,13,13,.86) 74%,
-    rgba(2,13,13,.48) 89%,
-    rgba(2,13,13,0) 100%);
+    rgba(2,13,13,.88) 74%,
+    rgba(2,13,13,.60) 89%,
+    rgba(2,13,13,.32) 100%);
   transition:opacity .38s cubic-bezier(.2,.7,.2,1);
 }
 .fm-header.is-scrolled::before{opacity:1;}
-/* reforço de legibilidade quando a classe de rolagem é aplicada */
+/* reforço de legibilidade quando a classe de rolagem é aplicada
+   (auditoria V2.5: o degradê terminava em alpha 0 e o texto da seção anterior
+   era lido sobre a logo; agora ele tem piso e o vidro fica ligado ao rolar) */
 .fm-header.is-scrolled::before{
   background:linear-gradient(180deg,
     rgba(2,13,13,1) 0%,
     rgba(2,13,13,.99) 56%,
-    rgba(2,13,13,.90) 78%,
-    rgba(2,13,13,.52) 90%,
-    rgba(2,13,13,0) 100%);
+    rgba(2,13,13,.92) 78%,
+    rgba(2,13,13,.64) 90%,
+    rgba(2,13,13,.36) 100%);
 }
+/* sem backdrop-filter não há vidro: o fundo do header vem do @supports not
+   (atmosfera.css) — por isso aqui NÃO se força transparente nem se desliga o
+   blur, o que era a causa do header "perder o vidro" ao rolar */
 .fm-header.is-scrolled{
-  background:transparent !important;
   border-bottom-color:transparent !important;
   box-shadow:none !important;
-  backdrop-filter:none !important;
 }
 .fm-header-inner{position:relative;z-index:2;}
 
@@ -376,7 +379,7 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   background:linear-gradient(135deg,#25D366 0%,#0ABCB0 100%);
   box-shadow:0 14px 36px rgba(0,0,0,.34),0 0 0 1px rgba(255,255,255,.18) inset;
   transform:translateY(14px);opacity:0;animation:mcZapIn .5s .6s forwards;
-  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease,padding .22s ease;
 }
 .mc-zap:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 20px 44px rgba(0,0,0,.42);color:#04222a !important;}
 .mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
@@ -390,6 +393,12 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
 @media (prefers-reduced-motion:reduce){
   .mc-zap{animation:none;opacity:1;transform:none;}
 }
+/* Auditoria V2.5: na seção do mapa 3D o balão comprido passava por cima do
+   rótulo da etapa 01. Em cena, ele recolhe para ícone (o WhatsApp continua a um
+   toque, com o mesmo aria-label); fora da seção ele volta ao formato comprido. */
+html[data-fm-mapa-em-cena] .mc-zap{padding:13px;gap:0;}
+html[data-fm-mapa-em-cena] .mc-zap .mc-zap__txt{display:none;}
+html[data-fm-mapa-em-cena] .mc-zap svg{width:28px;height:28px;}
 
 /* --- 5) CARTÕES FLUTUANTES DO HERO (rótulo cortado na borda do card) --- */
 /* o palco usa transform-style:preserve-3d + perspective; nesse contexto o z-index

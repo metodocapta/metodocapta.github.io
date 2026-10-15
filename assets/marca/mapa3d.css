@@ -13,11 +13,13 @@
 .fm-mapa3d-canvas{ display:block; width:100%; height:100%; }
 
 /* rótulos das etapas: texto HTML projetado na tela pela cena
-   (aria-hidden: os cards .fm-pillar continuam sendo a interface acessível) */
+   (aria-hidden: os cards .fm-pillar continuam sendo a interface acessível)
+   Auditoria V2.5: 11px/alpha .42 dava 3,74:1 no rótulo inativo. Agora 12,5px
+   (11px no mobile) com o alpha controlado no JS — inativo em 9,3:1. */
 .fm-mapa3d-rot{
   position:absolute; left:0; top:0; white-space:nowrap; pointer-events:none;
-  font:600 11px/1 'Oswald',sans-serif; letter-spacing:.10em; text-transform:uppercase;
-  color:#e6fbf7; text-shadow:0 2px 16px rgba(4,24,23,.92),0 0 2px rgba(4,24,23,.9);
+  font:600 12.5px/1 'Oswald',sans-serif; letter-spacing:.10em; text-transform:uppercase;
+  color:#e6fbf7; text-shadow:0 2px 16px rgba(4,24,23,.95),0 0 3px rgba(4,24,23,.95);
   opacity:0; transition:opacity .28s ease;
 }
 .fm-mapa3d-rot::after{
@@ -32,7 +34,7 @@ html[data-fm-mapa3d="on"] .fm-capta-ring{ display:none; }
 html[data-fm-mapa3d="on"] .fm-capta-visual[data-fm-tilt]{ transform:none !important; }
 
 @media (max-width:760px){
-  .fm-mapa3d-rot{ font-size:9.5px; letter-spacing:.06em; }
+  .fm-mapa3d-rot{ font-size:11px; letter-spacing:.06em; }
 }
 /* NÃO esconder o .fm-mapa3d em prefers-reduced-motion: quem decide é o módulo
    (que só é importado quando o movimento é permitido — inclusive pelo opt-in
