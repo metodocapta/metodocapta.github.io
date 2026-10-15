@@ -31,6 +31,21 @@
       bar.classList.toggle("on", mostrar);
       document.body.classList.toggle("fm-bar-on", mostrar);
     };
+
+    /* A altura REAL da barra vai para o CSS (--fm-barra-h): o botao do WhatsApp
+       sobe acima dela em vez de cair sobre o "Agendar agora". Era um numero fixo
+       (86px) e a barra a 360px tem 164px. Com o observador, a conta tambem
+       acompanha a barra quando ela encolhe sozinha (a "pilula" com o mapa em
+       cena, que o modulo 3D liga) - sem depender de um scroll para saber. */
+    var medirBarra = function () {
+      document.documentElement.style.setProperty(
+        "--fm-barra-h",
+        Math.round(bar.getBoundingClientRect().height) + "px"
+      );
+    };
+    medirBarra();
+    if (window.ResizeObserver) new ResizeObserver(medirBarra).observe(bar);
+    else window.addEventListener("resize", medirBarra);
     window.addEventListener("scroll", atualizar, { passive: true });
     window.addEventListener("resize", atualizar);
     atualizar();
