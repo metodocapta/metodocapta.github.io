@@ -394,11 +394,13 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   .mc-zap{animation:none;opacity:1;transform:none;}
 }
 /* Auditoria V2.5: na seção do mapa 3D o balão comprido passava por cima do
-   rótulo da etapa 01. Em cena, ele recolhe para ícone (o WhatsApp continua a um
-   toque, com o mesmo aria-label); fora da seção ele volta ao formato comprido. */
-html[data-fm-mapa-em-cena] .mc-zap{padding:13px;gap:0;}
-html[data-fm-mapa-em-cena] .mc-zap .mc-zap__txt{display:none;}
-html[data-fm-mapa-em-cena] .mc-zap svg{width:28px;height:28px;}
+   rótulo da etapa 01. Enquanto a caixa do mapa está em cena (sinal posto pelo
+   módulo 3D) ele recolhe para ícone — o WhatsApp continua a um toque, com o
+   mesmo aria-label. Fora da caixa do mapa ele volta ao formato comprido, mesmo
+   com o resto da seção em tela. */
+html[data-fm-mapa-visivel] .mc-zap{padding:13px;gap:0;}
+html[data-fm-mapa-visivel] .mc-zap .mc-zap__txt{display:none;}
+html[data-fm-mapa-visivel] .mc-zap svg{width:28px;height:28px;}
 
 /* --- 5) CARTÕES FLUTUANTES DO HERO (rótulo cortado na borda do card) --- */
 /* o palco usa transform-style:preserve-3d + perspective; nesse contexto o z-index

@@ -434,23 +434,11 @@ async function tridimensional() {
       import('./tres/mapa-3d.js').then((mod) => {
         if (mod && typeof mod.iniciarMapa === 'function') {
           mapa3D = mod.iniciarMapa(areaMetodo, { lite: lite });
-          if (mapa3D) {
-            doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
-            /* Auditoria V2.5: o balão comprido do WhatsApp passava por cima do
-               rótulo da etapa 01. Enquanto a seção do método está em cena ele
-               recolhe para ícone (o WhatsApp segue a um toque); fora dela volta. */
-            const sec = doc.querySelector('.fm-capta-section');
-            if (sec) {
-              const obsZap = new IntersectionObserver((es) => {
-                if (es.some((e) => e.isIntersecting)) {
-                  doc.documentElement.setAttribute('data-fm-mapa-em-cena', '');
-                } else {
-                  doc.documentElement.removeAttribute('data-fm-mapa-em-cena');
-                }
-              }, { threshold: 0.06 });
-              obsZap.observe(sec);
-            }
-          }
+          // O sinal de "mapa em cena" (html[data-fm-mapa-visivel]) — que recolhe o
+          // balão do WhatsApp e afasta a barra fixa de CTA — é posto pelo PRÓPRIO
+          // módulo, no observador da caixa do mapa: uma fonte só, e só existe
+          // quando o 3D está de pé (que é quando os rótulos existem).
+          if (mapa3D) doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
         }
       }).catch(() => { /* fallback: imagem + anéis 2D */ });
     };

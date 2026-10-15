@@ -270,6 +270,12 @@ export function iniciarMapa(alvo, opts) {
     ? new IntersectionObserver((ents) => {
         const antes = visivel;
         visivel = ents.some((e) => e.isIntersecting);
+        /* Residual P1 (auditoria V2.5): a barra fixa de CTA (128 px a 390 px)
+           cortava os rótulos enquanto o mapa entrava pela base da tela. Ela sai
+           de cena enquanto o mapa 3D está visível; o WhatsApp (mesmo destino, já
+           recolhido a ícone) segue a um toque e a barra volta quando o mapa sai. */
+        if (visivel) document.documentElement.setAttribute('data-fm-mapa-visivel', '');
+        else document.documentElement.removeAttribute('data-fm-mapa-visivel');
         if (visivel && !antes) { redimensionar(); requestAnimationFrame(animar); }
       }, { threshold: 0.05 })
     : null;
@@ -298,6 +304,7 @@ export function iniciarMapa(alvo, opts) {
     try { renderer.dispose(); } catch (e) { /* noop */ }
     caixa.style.display = 'none';
     document.documentElement.removeAttribute('data-fm-mapa3d');
+    document.documentElement.removeAttribute('data-fm-mapa-visivel');
   };
   canvas.addEventListener('webglcontextlost', aoPerderContexto, false);
 
@@ -306,6 +313,7 @@ export function iniciarMapa(alvo, opts) {
       vivo = false;
       canvas.removeEventListener('webglcontextlost', aoPerderContexto);
       if (obs) obs.disconnect();
+      document.documentElement.removeAttribute('data-fm-mapa-visivel');
       if (ro) ro.disconnect();
       if (obsDom) obsDom.disconnect();
       document.removeEventListener('visibilitychange', aoVisibilidade);

@@ -287,3 +287,23 @@ body.fm-bar-on .fm-mov-toggle--flutuante{ bottom:170px; }
 .fm-hero-copy > .fm-mov-toggle{
   position:absolute; left:0; bottom:100%; margin:0 0 10px;
 }
+
+/* ==========================================================================
+   19) BARRA FIXA DE CTA × MAPA 3D — a barra sai da frente do mapa
+   --------------------------------------------------------------------------
+   Residual P1 da auditoria V2.5: a barra fixa (128 px de altura a 390 px) cortava
+   os rótulos das etapas enquanto o mapa 3D entrava pela base da tela — medido: os
+   rótulos 01/02/03 passavam inteiros por baixo dela. "Elevar" o 3D NÃO resolve:
+   a barra é fixa e o mapa rola, então o corte só mudaria de posição de rolagem.
+   Regra: enquanto a CAIXA do mapa está em cena (html[data-fm-mapa-visivel], posto
+   pelo módulo 3D), a barra sai de cena e volta quando o mapa sai. Nenhum caminho
+   de conversão se perde: a seção do mapa não tem CTA própria e o balão do
+   WhatsApp — MESMO destino wa.me — fica na tela (recolhido a ícone, com
+   aria-label). A barra é exclusiva da home; a transição de .28s vem do próprio
+   .fm-sticky-cta (e é desligada no modo reduce).
+   ========================================================================== */
+html[data-fm-mapa-visivel] .fm-sticky-cta{
+  transform:translateY(130%);
+  opacity:0;
+  visibility:hidden;
+}
