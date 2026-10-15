@@ -452,6 +452,9 @@ async function tridimensional() {
       if (mapaMontado) return;
       mapaMontado = true;
       if (obsMapa) obsMapa.disconnect();
+      // Estado "carregando" (auditoria V2.5, §2.5): o CSS usa para a cena entrar
+      // em fade, em vez de aparecer de uma vez. Some quando sobe ou quando falha.
+      doc.documentElement.setAttribute('data-fm-mapa3d', 'carregando');
       import('./tres/mapa-3d.js').then((mod) => {
         if (mod && typeof mod.iniciarMapa === 'function') {
           mapa3D = mod.iniciarMapa(areaMetodo, { lite: lite });
@@ -459,21 +462,30 @@ async function tridimensional() {
           // 0c, observando a coluna visual do mapa — vale com 3D e com a imagem
           // (2D). Aqui só se registra que o 3D subiu.
           if (mapa3D) doc.documentElement.setAttribute('data-fm-mapa3d', 'on');
+          else doc.documentElement.removeAttribute('data-fm-mapa3d');
+        } else {
+          doc.documentElement.removeAttribute('data-fm-mapa3d');
         }
-      }).catch(() => { /* fallback: imagem + anéis 2D */ });
+      }).catch(() => {
+        doc.documentElement.removeAttribute('data-fm-mapa3d');   // fallback: imagem + anéis 2D
+      });
     };
+    // auditoria V2.5, §2.5: 700 -> 1200 px. O módulo passa a subir enquanto a
+    // seção ainda está a mais de uma tela de distância — o 3D é percebido ~2 s
+    // antes (e a checagem geométrica abaixo usa o MESMO alcance).
+    const ALCANCE_MAPA = 1200;
     const obsMapa = new IntersectionObserver((ents) => {
       if (!ents.some((e) => e.isIntersecting)) return;
       montarMapa();
-    }, { rootMargin: '700px 0px' });
+    }, { rootMargin: ALCANCE_MAPA + 'px 0px' });
     obsMapa.observe(areaMetodo);
     /* REDE DE SEGURANÇA (corrida medida na auditoria): quando o observador é
        registrado com a seção JÁ dentro do alcance, não há transição para
        observar e o mapa podia nunca montar — o visitante via só a imagem.
        A checagem aqui é geométrica e imediata, no mesmo tique. */
     const r = areaMetodo.getBoundingClientRect();
-    const alcance = (window.innerHeight || 800) + 700;
-    if (r.top < alcance && r.bottom > -700) montarMapa();
+    const alcance = (window.innerHeight || 800) + ALCANCE_MAPA;
+    if (r.top < alcance && r.bottom > -ALCANCE_MAPA) montarMapa();
   }
 
   // Hero: o símbolo "C+" (minimalismo espacial).
@@ -656,7 +668,8 @@ if (!rm) {
   if (!alvos.length) return;
   emOcioso(() => import('./ambiente-particulas.js').then((mod) => {
     if (!mod || typeof mod.iniciarAmbiente !== 'function') return;
-    ambientes = alvos.map((s) => mod.iniciarAmbiente(s, { lite: !fine })).filter(Boolean);
+    // auditoria V2.5, §2.7 (item 13): UM canvas para as cinco seções, não cinco
+    ambientes = [mod.iniciarAmbiente(alvos, { lite: !fine })].filter(Boolean);
     if (ambientes.length) doc.documentElement.setAttribute('data-fm-ambiente', 'on');
   }).catch(() => { /* fallback: seção como está */ }));
 })();

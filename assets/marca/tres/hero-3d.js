@@ -19,6 +19,7 @@
    Fallback: se este módulo não carregar, o hero CSS atual permanece intacto.
    ========================================================================== */
 import * as THREE from './three.module.min.js';
+import { fatorNitidez } from './nitidez.js';
 
 const TEAL = 0x0abcb0;
 const TEAL_DARK = 0x067a72;
@@ -117,7 +118,7 @@ export function iniciarHero(alvo, opts) {
   let altura = alvo.clientHeight || 500;
 
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1 : 1.25));
+  renderer.setPixelRatio(fatorNitidez(largura, altura, lite));   // auditoria V2.5, 2.3: teto 2
   renderer.setSize(largura, altura, false);
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -220,6 +221,7 @@ export function iniciarHero(alvo, opts) {
     if (!largura || !altura) return;
     camera.aspect = largura / altura;
     camera.updateProjectionMatrix();
+    renderer.setPixelRatio(fatorNitidez(largura, altura, lite));
     renderer.setSize(largura, altura, false);
     aplicarOffset();
   };

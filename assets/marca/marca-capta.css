@@ -1113,3 +1113,58 @@ body{counter-reset:fm-secao}
   .fm-footer .fm-footer-meta{font-size:12px !important;}
   .fm-footer-links a{font-size:12px !important;}
 }
+
+/* ==========================================================================
+   ALVOS DE TOQUE (auditoria V2.5, 3.2 / 8 #14) - nenhum controle abaixo de 44 px
+   --------------------------------------------------------------------------
+   Medido a 390/912/1440 px: o botao do Indice tinha 24 px de altura, o de
+   partilha 38, o de movimento 38, a navegacao de destino 42x42 e o do menu 40.
+   Os cinco sao CONTROLE de verdade (nao link de texto, entao a excecao 2.5.8
+   nao se aplica): o minimo AA e 24 px e o confortavel e 44.
+   A regra cresce SO A AREA - nao mexe em padding vertical -, para o texto
+   ficar exatamente onde estava e nada se deslocar no cabecalho.
+   ========================================================================== */
+.fm-nav-indice .fm-indice-btn,
+.fm-share-btn,
+.fm-mov-toggle,
+.fm-dest-nav,
+.fm-menu-toggle{min-height:44px !important;}
+.fm-share-btn,
+.fm-mov-toggle,
+.fm-dest-nav,
+.fm-menu-toggle{min-width:44px;}
+/* o alvo cresce, o rotulo nao sai do lugar: centraliza no eixo novo */
+@media (min-width:901px){
+  .fm-nav-indice .fm-indice-btn{display:inline-flex !important;align-items:center !important;}
+}
+.fm-share-btn,
+.fm-mov-toggle,
+.fm-dest-nav,
+.fm-menu-toggle{display:inline-flex;align-items:center;justify-content:center;}
+
+/* ==========================================================================
+   MOBILE: o CORPO alinhado a esquerda (auditoria V2.5, 3.3 P1)
+   --------------------------------------------------------------------------
+   A 390 px o "text-align:center" do tema pegava paragrafos de 5, 6 e 7 LINHAS
+   de texto de leitura (hero, cabecalhos de secao, cartao de conversa) - o olho
+   tem de procurar o inicio de cada linha. A 2 linhas ou mais, alinhar a
+   esquerda; titulo, kicker, botao e "sinais" continuam centrados.
+   Fica de fora, de proposito: cartelas de numero/estatistica e de oferta
+   (.fm-dest-card, .fm-dec5-card, .fm-valor-col, .mc-aviso) e os chips - ali o
+   centro e COMPOSICAO (numero + rotulo), nao leitura corrida. As frases de
+   fecho do impacto e da comparacao, sim: sao 3-4 linhas de corpo.
+   ========================================================================== */
+@media (max-width:900px){
+  .fm-hero-copy > p,
+  .fm-hero-copy .fm-actions > p,
+  .fm-section-heading-center > p,
+  .fm-heading-center > p,
+  .fm-capta-copy > p,
+  .fm-conversa-card > p,
+  .fm-conversa-painel > p,
+  .fm-impact-close,
+  .fm-compare-close,
+  .fm-mech-note,
+  .fm-contact-intro > p,
+  .fm-disclaimer{text-align:left;}
+}

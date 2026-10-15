@@ -16,6 +16,7 @@
    viewport e em aba oculta; DPR <= 2. Fallback: a imagem + os anéis 2D atuais.
    ========================================================================== */
 import * as THREE from './three.module.min.js';
+import { fatorNitidez } from './nitidez.js';
 
 const TEAL = 0x0abcb0;
 const TEAL_LIGHT = 0x7fe3d8;
@@ -44,7 +45,6 @@ export function iniciarMapa(alvo, opts) {
 
   /* ------------------------------------------------------------- 2) cena */
   const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, lite ? 1 : 1.25));
   renderer.setClearColor(0x000000, 0);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
 
@@ -68,6 +68,7 @@ export function iniciarMapa(alvo, opts) {
 
   let largura = alvo.clientWidth || 520;
   let altura = alvo.clientHeight || 560;
+  renderer.setPixelRatio(fatorNitidez(largura, altura, lite));   // auditoria V2.5, 2.3: teto 2
   renderer.setSize(largura, altura, false);
 
   const cena = new THREE.Scene();
@@ -114,16 +115,27 @@ export function iniciarMapa(alvo, opts) {
     grupo.add(nucleo);
     nucleos.push(nucleo);
 
-    // área de toque (invisível mas "raycastável")
-    const hit = new THREE.Mesh(
-      new THREE.SphereGeometry(0.52, 8, 8),
-      new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false })
-    );
-    hit.position.copy(p);
-    hit.userData.i = alvosRay.length;
-    grupo.add(hit);
-    alvosRay.push(hit);
   });
+
+  // área de toque (invisível mas "raycastável"): as 6 esferas viraram UM
+  // InstancedMesh (auditoria V2.5, §2.4 / §8 #11). Eram 6 draw calls por quadro
+  // que não desenhavam nada; agora é 1. O índice da etapa vem do instanceId —
+  // os anéis e os núcleos seguem individuais porque animam OPACIDADE por
+  // material (não há opacidade por instância).
+  const toque = new THREE.InstancedMesh(
+    new THREE.SphereGeometry(0.52, 8, 8),
+    new THREE.MeshBasicMaterial({ transparent: true, opacity: 0, depthWrite: false }),
+    N
+  );
+  const matrizToque = new THREE.Matrix4();
+  nos.forEach((p, i) => {
+    matrizToque.makeTranslation(p.x, p.y, p.z);
+    toque.setMatrixAt(i, matrizToque);
+  });
+  toque.instanceMatrix.needsUpdate = true;
+  toque.frustumCulled = false;   // as instâncias não entram no bound do mesh
+  grupo.add(toque);
+  alvosRay.push(toque);
 
   // --- campo de partículas (profundidade, sem peso visual) ---
   const NP = lite ? 110 : 180;
@@ -173,6 +185,9 @@ export function iniciarMapa(alvo, opts) {
     alvoPtr.y = (ny - 0.5) * 2;
     ponteiro.set(nx * 2 - 1, -(ny * 2 - 1));
   };
+  // a área de toque é UM InstancedMesh: a etapa acesa vem do instanceId
+  const etapaDe = (achados) => (achados.length && achados[0].instanceId != null) ? achados[0].instanceId : -1;
+
   const sair = () => { alvoPtr.x = 0; alvoPtr.y = 0; ponteiro.set(-2, -2); hover = -1; };
   const clicar = (ev) => {
     // raycast NO EVENTO (não depende do estado do loop): o clique é determinístico
@@ -181,7 +196,7 @@ export function iniciarMapa(alvo, opts) {
     ponteiro.set(((ev.clientX - r.left) / r.width) * 2 - 1, -(((ev.clientY - r.top) / r.height) * 2 - 1));
     ray.setFromCamera(ponteiro, camera);
     const achados = ray.intersectObjects(alvosRay, false);
-    const i = achados.length ? achados[0].object.userData.i : -1;
+    const i = etapaDe(achados);
     if (i >= 0 && cards[i]) cards[i].click();   // <- ativa pelo card (1 fonte da verdade)
   };
   caixa.addEventListener('pointermove', mover, { passive: true });
@@ -213,7 +228,7 @@ export function iniciarMapa(alvo, opts) {
     if (quadro % 2 === 0) {
       ray.setFromCamera(ponteiro, camera);
       const achados = ray.intersectObjects(alvosRay, false);
-      hover = achados.length ? achados[0].object.userData.i : -1;
+      hover = etapaDe(achados);
       canvas.style.cursor = hover >= 0 ? 'pointer' : 'default';
     }
 
@@ -262,6 +277,7 @@ export function iniciarMapa(alvo, opts) {
     if (!largura || !altura) return;
     camera.aspect = largura / altura;
     camera.updateProjectionMatrix();
+    renderer.setPixelRatio(fatorNitidez(largura, altura, lite));
     renderer.setSize(largura, altura, false);
     enquadrar();
   };

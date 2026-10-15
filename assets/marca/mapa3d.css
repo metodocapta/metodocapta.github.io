@@ -33,6 +33,29 @@ html[data-fm-mapa3d="on"] .fm-capta-ring{ display:none; }
 /* o tilt CSS do cartão é redundante (e desalinharia o ponteiro) com o 3D */
 html[data-fm-mapa3d="on"] .fm-capta-visual[data-fm-tilt]{ transform:none !important; }
 
+/* ---- o "esqueleto" da auditoria (V2.5, §2.5 / §8 #9) ----
+   A correção pedia um esqueleto "no lugar do vazio" enquanto o módulo chega.
+   Medindo, esse vazio não existe: a imagem + os anéis 2D permanecem no lugar do
+   3D até ele subir — e isso é desenho completo, não buraco. O que faltava era
+   (a) a cena começar mais cedo (rootMargin 700 -> 1200 px, em movimento.js) e
+   (b) a troca não ser um "pop". Então o "esqueleto" aqui é o aviso de espera
+   nos elementos que JÁ existem — os dois pontos dos anéis respiram enquanto o
+   módulo carrega — e, quando a cena entra, ela entra em fade. */
+html[data-fm-mapa3d="carregando"] .fm-capta-ring::after{
+  animation: fm-mapa3d-espera 1.6s ease-in-out infinite;
+}
+@keyframes fm-mapa3d-espera{ 0%,100%{ opacity:.45; } 50%{ opacity:1; } }
+
+html[data-fm-mapa3d="on"] .fm-mapa3d{ animation: fm-mapa3d-entra .5s ease-out; }
+@keyframes fm-mapa3d-entra{ from{ opacity:0; } to{ opacity:1; } }
+
+/* quem pediu menos movimento no sistema (mas ligou o 3D no opt-in) não ganha
+   nem a espera pulsante nem o fade */
+@media (prefers-reduced-motion: reduce){
+  html[data-fm-mapa3d="carregando"] .fm-capta-ring::after{ animation:none; }
+  html[data-fm-mapa3d="on"] .fm-mapa3d{ animation:none; }
+}
+
 @media (max-width:760px){
   .fm-mapa3d-rot{ font-size:11px; letter-spacing:.06em; }
 }
