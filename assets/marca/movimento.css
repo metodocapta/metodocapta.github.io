@@ -296,13 +296,17 @@ body.fm-bar-on .fm-mov-toggle--flutuante{ bottom:170px; }
    tela. "Elevar" o 3D NÃO resolve — a barra é fixa e o mapa rola, então o corte
    só mudaria de posição de rolagem; quem tem de sair da frente é o elemento fixo.
 
-   Três estados foram medidos no pior ponto (§10.6 da auditoria):
-     · barra inteira .......... 21% do mapa e 6 de 6 rótulos cobertos
-     · sair de cena ........... 0% e 0 rótulos, mas SEM CTA
-     · pílula (escolhida) ..... 5% a 390 px e 2% a 912 px, 0 de 6 rótulos, CTA na tela
-   O que decide não é a área: é o que o mapa DIZ. A pílula cai no canto, na zona
-   dos anéis que já estão desvanecendo, e não cobre rótulo nenhum — em troca, o
-   parágrafo da barra sai de cena (o botão e o × ficam).
+   Comparação VARRENDO a rolagem — o pior caso da barra, sozinho, engana: foi
+   medindo UM ponto que se concluiu "0 de 6 rótulos", e era falso (ver §10.6 da
+   auditoria). Rótulos LEGÍVEIS (opacidade > 0,5) totalmente escondidos, somados
+   pelas posições de rolagem:
+     · barra inteira .......... 16 a 390 px / 7 a 912 px (pior: 5 de uma vez)
+     · sair de cena ........... 0 / 0, mas SEM CTA
+     · pílula (escolhida) ..... 4 / 1 (pior: 2 de uma vez) e CTA sempre na tela
+   A pílula é ~75-86% melhor que a barra e mantém o caminho de conversão — mas NÃO
+   é zero: um elemento fixo no canto cobre o rótulo que passar por ele. O que decide
+   não é a área coberta, é o que o mapa DIZ — e o parágrafo da barra sai de cena
+   (o botão e o × ficam).
 
    Regra: com a CAIXA do mapa em cena (html[data-fm-mapa-visivel], posto pelo
    movimento.js bloco 0c — vale com 3D e com a imagem 2D), a barra vira botão
