@@ -22,6 +22,10 @@ incluindo editais públicos, emendas parlamentares e captação incentivada.
 - [Quem Somos](https://metodocapta.github.io/metodo-capta-plus/): as quatro camadas de atuação
   (jurídica, técnico-operacional, fiduciária e prospecção/radar) e as cinco frentes
   que conduzem a captação de ponta a ponta.
+- [Guia completo de captação de recursos](https://metodocapta.github.io/guia-de-captacao-de-recursos/): o caminho
+  inteiro em um só lugar — as cinco portas de entrada do recurso (leis de incentivo federais,
+  fundos, editais e parcerias, emendas parlamentares e investimento social privado), a prontidão
+  documental, o plano de trabalho, os indicadores e a prestação de contas.
 
 ## Perguntas frequentes
 
