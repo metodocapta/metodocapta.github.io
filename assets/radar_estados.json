@@ -1,20 +1,20 @@
 {
- "gerado_em": "2026-10-15",
+ "gerado_em": "2026-10-16",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 487,
+   "oportunidades": 496,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 380
+     "total": 385
     },
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 81
+     "total": 85
     },
     {
      "codigo": "MROSC",
@@ -44,12 +44,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 198,
+   "oportunidades": 201,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 123
+     "total": 126
     },
     {
      "codigo": "ROUANET",
@@ -79,12 +79,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 301,
+   "oportunidades": 303,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 69
+     "total": 71
     },
     {
      "codigo": "ROUANET",
@@ -144,7 +144,7 @@
    ]
   },
   "RJ": {
-   "oportunidades": 51,
+   "oportunidades": 52,
    "areas": [
     {
      "codigo": "LIR",
@@ -159,7 +159,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 19
+     "total": 20
     },
     {
      "codigo": "ROUANET",
@@ -194,12 +194,12 @@
    ]
   },
   "MG": {
-   "oportunidades": 42,
+   "oportunidades": 44,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 20
+     "total": 22
     },
     {
      "codigo": "MROSC",
