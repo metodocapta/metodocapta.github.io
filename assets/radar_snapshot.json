@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-10-18",
+ "gerado_em": "2026-10-19",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1790,
+  "oportunidades": 1795,
   "elegiveis": 10,
   "estruturados": 4,
   "matches": 1128
@@ -12,7 +12,7 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 614
+   "total": 619
   },
   {
    "codigo": "MROSC",

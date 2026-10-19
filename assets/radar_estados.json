@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-10-18",
+ "gerado_em": "2026-10-19",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
@@ -79,12 +79,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 304,
+   "oportunidades": 306,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 71
+     "total": 73
     },
     {
      "codigo": "ROUANET",
@@ -369,12 +369,12 @@
    ]
   },
   "PA": {
-   "oportunidades": 17,
+   "oportunidades": 18,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 13
+     "total": 14
     },
     {
      "codigo": "ROUANET",
