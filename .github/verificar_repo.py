@@ -125,6 +125,18 @@ def checar_home(raiz, home):
         erro("Home: secoes fora da ordem canonica. Esperado: %s - encontrado: %s"
              % (" > ".join(presentes), " > ".join(no_dom)))
 
+    # FAQ: o schema tem de ser a MESMA lista que a tela (senao o AEO mente).
+    m_faq = re.search(
+        r'<script type="application/ld\+json">\{[^<]*"@type":"FAQPage"[^<]*</script>', home)
+    schema_q = re.findall(r'"name":"([^"]+)"', m_faq.group(0)) if m_faq else []
+    visivel_q = re.findall(
+        r'<details class="fm-faq-item[^"]*"><summary>([^<]+)</summary>', home)
+    if len(visivel_q) < 3:
+        erro("Home: FAQ visivel com menos de 3 perguntas")
+    if schema_q != visivel_q:
+        erro("Home: schema FAQPage != FAQ visivel (%d no schema, %d na tela)"
+             % (len(schema_q), len(visivel_q)))
+
     # CTA do cabecalho: rotulo curto (o hero diz a acao inteira)
     m = re.search(r'<a class="fm-header-cta"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)', home)
     if not m:
