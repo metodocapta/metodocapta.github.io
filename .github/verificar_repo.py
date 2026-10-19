@@ -101,6 +101,15 @@ def checar_home(raiz, home):
     if len(re.findall(r"<h1\b", home)) != 1:
         erro("Home deve ter exatamente 1 <h1> (tem %d)" % len(re.findall(r"<h1\b", home)))
 
+    # D6 — rotulo do fluxo de 7 pilulas: ele acontece DENTRO das seis etapas.
+    # "Fluxo gerado" sugeria que o fluxo "nasce" ali (contra a fonte canonica §2).
+    if "Fluxo gerado" in home:
+        erro("Home: rotulo 'Fluxo gerado' no fluxo do mecanismo (o fluxo acontece "
+             "DENTRO das seis etapas)")
+    if "O que acontece" not in home or "dentro das seis etapas" not in home:
+        erro("Home: a nota do fluxo do mecanismo sumiu (o fluxo de 7 pilulas precisa "
+             "dizer que acontece dentro das seis etapas)")
+
     # CTA do cabecalho: rotulo curto (o hero diz a acao inteira)
     m = re.search(r'<a class="fm-header-cta"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)', home)
     if not m:
