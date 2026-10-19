@@ -1,10 +1,16 @@
 name: Verificar invariantes do site
 
 # Portao de saida CONTINUO: roda a cada push no repositorio publicado e FALHA se
-# alguma invariante sumir — identidade (Missao/Visao/Valores), menu fixo (sticky),
+# alguma invariante sumir - identidade (Missao/Visao/Valores), menu fixo (sticky),
 # imagens leves, componente Capta+ T-Intelligence (sem codigo de modulo, sem "IA",
-# sem JS) e assets self-hosted. Pega regressao vinda do build, das Actions
-# (radar/destaques) ou de commit manual.
+# sem JS), camadas decorativas sem clique morto, camadas do metodo x dado,
+# cobertura do mapa do site e assets self-hosted.
+#
+# O antigo radar.yml REGERAVA as paginas do Radar por fora do rebrand e commitava:
+# as 9 paginas ficavam sem marca-capta.css/movimento.css/fm-eventos (sem a camada
+# de marca) ate o publish seguinte. O Radar ja e gerado no build (passo 1b, JA com
+# o rebrand). Por isso a regeneracao saiu do CI e o cron diario vive AQUI, que nao
+# escreve nada - so verifica.
 #
 # As regras moram em .github/verificar_repo.py, que roda igual na sua maquina:
 #   python .github/verificar_repo.py --raiz .
@@ -19,6 +25,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: "30 6 * * *"        # diario: pega regressao sem depender de push
 
 permissions:
   contents: read
