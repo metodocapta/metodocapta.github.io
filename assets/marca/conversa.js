@@ -1,7 +1,9 @@
 /* ==========================================================================
    MÉTODO CAPTA+ · v2.5 · CONVERSA (F2) — fluxo guiado, determinístico, sem IA
    --------------------------------------------------------------------------
-   • Injeta uma seção logo após o hero (só na home: os links são relativos à raiz).
+   • Injeta no CAPÍTULO DE DECISÃO (depois das 5 perguntas, antes do CTA):
+     um roteador não pode pedir decisão antes da dor, do mecanismo e da prova.
+     (Só na home: os links são relativos à raiz.)
    • Sem JS: nada é injetado e o site segue igual (a home já tem o caminho normal).
    • Acessível: <button>, foco gerenciado, aria-live, teclado.
    • Sem promessa de resultado — encaminha para as páginas que JÁ existem.
@@ -197,7 +199,15 @@
 
   /* ---------------------------------------------------------------- injeta */
   passoInicial();
-  var alvo = doc.querySelector('.fm-hero');
-  if (alvo && alvo.parentNode) alvo.parentNode.insertBefore(sec, alvo.nextSibling);
-  else doc.body.appendChild(sec);
+  // A Conversa e' um ROTEADOR de decisao: vive no capitulo de decisao, depois
+  // das 5 perguntas e ANTES do CTA. Ficava logo apos o hero — pedia decisao
+  // antes da dor, do mecanismo e da prova (contra a regra do canônico).
+  var cta = doc.querySelector('#fm-decisao');
+  if (cta && cta.parentNode) {
+    cta.parentNode.insertBefore(sec, cta);
+  } else {
+    var hero = doc.querySelector('.fm-hero');
+    if (hero && hero.parentNode) hero.parentNode.insertBefore(sec, hero.nextSibling);
+    else doc.body.appendChild(sec);
+  }
 })();
