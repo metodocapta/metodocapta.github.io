@@ -110,6 +110,21 @@ def checar_home(raiz, home):
         erro("Home: a nota do fluxo do mecanismo sumiu (o fluxo de 7 pilulas precisa "
              "dizer que acontece dentro das seis etapas)")
 
+    # ORDEM DAS SECOES — espelho de ORDEM_SECOES (site_v23_home.py).
+    # A ordem e' narrativa: dor -> diferenca -> mecanismo -> prova -> voce ->
+    # objecao -> acao. Trocar duas secoes muda o argumento, nao so o layout.
+    ORDEM_ESPERADA = [
+        "fm-parceiros", "fm-problema", "fm-comparativo", "fm-capta",
+        "fm-radar", "fm-destaques", "fm-evidencias", "fm-publico",
+        "fm-riscos", "fm-faq", "fm-decisao-mapa", "fm-decisao",
+    ]
+    pos_sec = {i: home.find('id="%s"' % i) for i in ORDEM_ESPERADA}
+    presentes = [i for i in ORDEM_ESPERADA if pos_sec[i] >= 0]
+    no_dom = sorted(presentes, key=lambda i: pos_sec[i])
+    if no_dom != presentes:
+        erro("Home: secoes fora da ordem canonica. Esperado: %s - encontrado: %s"
+             % (" > ".join(presentes), " > ".join(no_dom)))
+
     # CTA do cabecalho: rotulo curto (o hero diz a acao inteira)
     m = re.search(r'<a class="fm-header-cta"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)', home)
     if not m:

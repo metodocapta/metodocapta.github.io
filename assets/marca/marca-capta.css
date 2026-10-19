@@ -896,6 +896,11 @@ html[data-fm-mapa-visivel] .mc-zap svg{width:28px;height:28px;}
 /* 2) NUMERACAO DE SECAO (01..12) — entra no kicker existente */
 body{counter-reset:fm-secao}
 .fm-section{counter-increment:fm-secao}
+/* A "Capta+ Conversa" e' uma FERRAMENTA injetada por JS logo apos o hero: ela
+   nao e' um capitulo do indice (nao tem .fm-kicker). Sem esta excecao ela
+   consumia o "01" e TODOS os kickers ficavam +1 em relacao ao indice
+   (indice 02 = problema, kicker 03). Numero de secao tem de ser um so. */
+.fm-conversa{counter-increment:none}
 .fm-section .fm-kicker::before{content:counter(fm-secao,decimal-leading-zero) " · ";
   color:rgba(127,227,216,.72);letter-spacing:.12em}
 
