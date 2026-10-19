@@ -173,6 +173,22 @@ def checar_componente_t(raiz, home):
         erro("framework_t.json: %d camada(s) no eixo vertical (esperado 6)" % len(camadas))
     if len(modulos) != 17:
         erro("framework_t.json: %d modulo(s) (esperado 17: M0..M16)" % len(modulos))
+    # nenhum modulo fica sem conector; 'modulos' da competencia = uniao das camadas
+    camadas_mods = {c.get("id"): set(c.get("modulos") or []) for c in camadas}
+    cobertos = set()
+    for c in comps:
+        mods_c = set(c.get("modulos") or [])
+        cobertos |= mods_c
+        esperado_c = set()
+        for cid in c.get("camadas") or []:
+            esperado_c |= camadas_mods.get(cid, set())
+        if mods_c != esperado_c:
+            erro("framework_t.json: competencia '%s' com 'modulos' diferente da uniao das suas "
+                 "camadas (esperado %s)" % (c.get("id"), ", ".join(sorted(esperado_c))))
+    sem_conector = sorted(set(modulos) - cobertos, key=lambda x: int(x[1:]))
+    if sem_conector:
+        erro("framework_t.json: modulo(s) sem conector (nenhuma competencia os usa): %s"
+             % ", ".join(sem_conector))
     if "Dados e IA" not in [c.get("nome", "") for c in comps]:
         erro("framework_t.json: a competencia canonica 'Dados e IA' sumiu")
     n_pagina = [c for c in comps if c.get("paginas")]
@@ -186,6 +202,16 @@ def checar_componente_t(raiz, home):
             if not existe_pagina(raiz, pagina):
                 erro("framework_t.json: destino inexistente — %s aponta para %s"
                      % (c.get("rotulo") or c.get("nome"), pagina))
+                continue
+            # ancora: se o id sumir, o clique cai no topo da pagina sem avisar
+            frag = str(pagina).split("#")[1].strip() if "#" in str(pagina) else ""
+            if frag:
+                limpa = str(pagina).split("#")[0].split("?")[0].strip("/")
+                alvo = os.path.join(raiz, *limpa.split("/")) if limpa else raiz
+                arquivo = alvo if os.path.isfile(alvo) else os.path.join(alvo, "index.html")
+                if not re.search(r'id="%s"' % re.escape(frag), ler(arquivo) or ""):
+                    erro("framework_t.json: ancora #%s ausente em %s (o card de %s cai no topo)"
+                         % (frag, pagina, c.get("rotulo") or c.get("nome")))
 
     # o componente nao tem JS: nem referencia, nem arquivo
     if re.search(r"framework-t\.js", home):
@@ -384,7 +410,7 @@ def checar_camadas_metodo(raiz):
         _h = _h.split("#")[0].split("?")[0].strip()
         if not _h or _h.startswith("http"):
             continue
-        _partes = ["metodo-capta-plus"]
+        _partes = [] if _h.startswith("/") else ["metodo-capta-plus"]
         for _p in _h.split("/"):
             if _p == "..":
                 if _partes:
@@ -407,6 +433,44 @@ def checar_camadas_metodo(raiz):
             elif not existe_pagina(raiz, pag_url):
                 erro("metodo-capta-plus: link da camada '%s' aponta para pagina inexistente (%s)"
                      % (nome, pag_url))
+
+
+def checar_mapa(raiz):
+    """Toda pagina do sitemap tem de estar no mapa do site.
+
+    O mapa se datava pela execucao (nao pelo conteudo) e por isso envelhecia.
+    Ficaram 5 paginas de fora (diagnostico, guia completo, resumo para o
+    conselho e os 2 estudos publicados). Agora a cobertura e invariante.
+    """
+    mapa = ler(os.path.join(raiz, "mapa-do-site", "index.html"))
+    if mapa is None:
+        erro("mapa-do-site/index.html ausente")
+        return
+    sm = ler(os.path.join(raiz, "sitemap.xml")) or ""
+    urls = []
+    for loc in re.findall(r"<loc>([^<]+)</loc>", sm):
+        u = loc.replace("https://metodocapta.github.io", "").strip() or "/"
+        if not (u.endswith("/") or "." in u.split("/")[-1]):
+            u += "/"
+        urls.append(u)
+    hrefs = set()
+    for h in re.findall(r'href="([^"]+)"', mapa):
+        h = h.split("#")[0].split("?")[0].strip()
+        if not h or h.startswith("http"):
+            continue
+        partes = [] if h.startswith("/") else ["mapa-do-site"]
+        for p in h.split("/"):
+            if p == "..":
+                if partes:
+                    partes.pop()
+            elif p not in ("", "."):
+                partes.append(p)
+        hrefs.add("/" + "/".join(partes) + ("/" if partes else ""))
+    hrefs = {x.replace("//", "/") for x in hrefs}
+    fora = [u for u in urls if u not in hrefs]
+    if fora:
+        erro("mapa-do-site: %d pagina(s) do sitemap fora do mapa — rode "
+             "faq_mapa_paginas.py --somente-mapa (%s)" % (len(fora), ", ".join(fora[:5])))
 
 
 def checar_codificacao(raiz):
@@ -457,6 +521,7 @@ def main():
     checar_assets_externos(raiz)
     checar_camadas_decorativas(raiz)
     checar_camadas_metodo(raiz)
+    checar_mapa(raiz)
     checar_cta_e_cabecalho(raiz)
     n_texto = checar_codificacao(raiz)
 

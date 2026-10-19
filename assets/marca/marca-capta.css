@@ -942,6 +942,22 @@ body{counter-reset:fm-secao}
   .fm-method-layer .fm-layer-link{margin-top:14px}
 }
 
+/* --- ancora do DNA na pagina do metodo (Onda 4) ----------------------------
+   Definicao curta (3 dimensoes da propria pagina de diagnostico) + ponteiro
+   para a ferramenta. A ancora existe para o card do DNA nao levar direto a um
+   instrumento: primeiro entende-se o que e, depois se mede. Nao duplica a
+   pagina de diagnostico — ela segue dona dos 18 itens. */
+.fm-dna-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:38px}
+.fm-dna-card{padding:24px;border:1px solid var(--fm-line);border-radius:20px;
+  background:linear-gradient(150deg,rgba(8,36,33,.76),rgba(4,24,22,.72))}
+.fm-dna-card h3{margin:0;color:#edf9f6;font-size:18px;line-height:1.25;letter-spacing:-.02em}
+.fm-dna-card p{margin:10px 0 0;color:#7f9c94;font-size:13px;line-height:1.7}
+.fm-dna-cta{margin:26px 0 0;text-align:center}
+@media(max-width:760px){
+  .fm-dna-grid{grid-template-columns:1fr;margin-top:26px}
+  .fm-dna-card{padding:20px}
+}
+
 /* ===== ONDA 2 (B) — INTELIGENCIA REAL NA HOME =====
    Numeros agregados do sistema (nunca de um cliente). So alphas da paleta. */
 .fm-radar-section .fm-radar-grid{display:grid;gap:14px;margin:26px auto 0;

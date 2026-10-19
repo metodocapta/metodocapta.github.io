@@ -62,7 +62,7 @@
   },
   "eixo_horizontal": {
     "rotulo": "Inteligência que conecta",
-    "nota": "Cada competência liga camadas diferentes usando módulos que já existem. Onde não há página pública, 'paginas' fica vazio — não se inventa destino.",
+    "nota": "Cada competência liga camadas diferentes usando módulos que já existem. O campo 'modulos' e DERIVADO das camadas (uniao) e existe para provar que nenhum módulo fica sem conector: não se edita à mão. Onde não há página pública, 'paginas' fica vazio — não se inventa destino.",
     "competencias": [
       {
         "id": "radar",
@@ -70,15 +70,17 @@
         "pergunta": "Onde há recurso com janela aberta?",
         "modulos": ["M0", "M3"],
         "paginas": ["/radar/"],
-        "camadas": ["prospeccao"]
+        "camadas": ["prospeccao"],
+        "modulos": ["M0", "M3", "M10", "M11"]
       },
       {
         "id": "dna",
         "nome": "DNA da entidade",
         "pergunta": "O que a organização já é e já tem?",
         "modulos": ["M1", "M2"],
-        "paginas": ["/diagnostico-de-prontidao/"],
-        "camadas": ["juridica"]
+        "paginas": ["/metodo-capta-plus/#fm-dna"],
+        "camadas": ["juridica"],
+        "modulos": ["M1", "M2", "M4"]
       },
       {
         "id": "territorio",
@@ -86,7 +88,8 @@
         "pergunta": "O que existe para o meu setor e o meu estado?",
         "modulos": ["M0", "M10"],
         "paginas": ["/captacao-de-recursos/"],
-        "camadas": ["prospeccao", "aquisicao"]
+        "camadas": ["prospeccao", "aquisicao"],
+        "modulos": ["M0", "M3", "M9", "M10", "M11", "M15"]
       },
       {
         "id": "compatibilidade",
@@ -94,7 +97,8 @@
         "pergunta": "O edital exige o que eu tenho?",
         "modulos": ["M4", "M10"],
         "paginas": ["/metodo-capta-plus/", "/guia-de-captacao-de-recursos/"],
-        "camadas": ["juridica", "prospeccao"]
+        "camadas": ["juridica", "prospeccao"],
+        "modulos": ["M0", "M1", "M2", "M3", "M4", "M10", "M11"]
       },
       {
         "id": "estrategia",
@@ -102,7 +106,8 @@
         "pergunta": "Qual caminho rende mais com o que eu tenho?",
         "modulos": ["M15", "M16"],
         "paginas": ["/calculadora/", "/carteira-de-incentivadores/"],
-        "camadas": ["aquisicao", "inteligencia"]
+        "camadas": ["aquisicao", "inteligencia"],
+        "modulos": ["M9", "M14", "M15", "M16"]
       },
       {
         "id": "dados",
@@ -111,7 +116,8 @@
         "pergunta": "O que o dado mostra antes de eu decidir?",
         "modulos": ["M3", "M14", "M16"],
         "paginas": ["/estudos/", "/demonstracao/"],
-        "camadas": ["prospeccao", "inteligencia"]
+        "camadas": ["prospeccao", "inteligencia"],
+        "modulos": ["M0", "M3", "M10", "M11", "M14", "M16"]
       },
       {
         "id": "estruturacao",
@@ -119,7 +125,8 @@
         "pergunta": "O projeto está escrito como o edital exige?",
         "modulos": ["M5", "M6", "M7", "M8"],
         "paginas": ["/guias/como-montar-um-plano-de-trabalho/", "/guia-de-captacao-de-recursos/"],
-        "camadas": ["tecnico-operacional"]
+        "camadas": ["tecnico-operacional"],
+        "modulos": ["M5", "M6", "M7", "M8"]
       },
       {
         "id": "impacto",
@@ -127,7 +134,8 @@
         "pergunta": "O que mudou, com que prova?",
         "modulos": ["M12", "M13", "M14"],
         "paginas": ["/guias/como-montar-indicadores-de-impacto/", "/guias/como-prestar-contas-de-parceria/"],
-        "camadas": ["fiduciaria", "inteligencia"]
+        "camadas": ["fiduciaria", "inteligencia"],
+        "modulos": ["M12", "M13", "M14", "M16"]
       }
     ]
   },
@@ -169,9 +177,6 @@
     "fluxo": ["Oportunidade", "Triagem", "Compatibilidade", "Estratégia", "Projeto", "Captação", "Impacto"]
   },
   "lacunas": [
-    { "competencia": "dna", "modulos": ["M1", "M2"], "falta": "página dedicada ao DNA (hoje o card aponta para /diagnostico-de-prontidao/)", "destino": "Onda 4" },
-    { "modulo": "M11", "falta": "CRM e Carteira existe na plataforma, mas nenhuma competência do eixo horizontal o usa — profundidade sem conector", "destino": "Onda 4" },
-    { "modulo": "M9", "falta": "Readiness Engine (parcial) também não tem competência própria; hoje aparece no diagnóstico de prontidão", "destino": "Onda 4" },
     { "modulo": "M3", "falta": "Edital Engine ainda não tem código (planejado)", "destino": "fonte canônica" },
     { "modulo": "M2", "falta": "DNA Normativo ainda não tem código (planejado)", "destino": "fonte canônica" },
     { "modulo": "M9_status", "falta": "Readiness Engine sem score persistido (parcial)", "destino": "fonte canônica" }
