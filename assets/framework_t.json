@@ -15,42 +15,48 @@
         "nome": "Jurídica",
         "etapas": ["Compreender", "Compatibilizar"],
         "modulos": ["M1", "M2", "M4"],
-        "entrega": "Ler a exigência, ler o estatuto e dizer o que ainda não fecha."
+        "entrega": "Ler a exigência, ler o estatuto e dizer o que ainda não fecha.",
+        "paginas": ["/diagnostico-de-prontidao/"]
       },
       {
         "id": "tecnico-operacional",
         "nome": "Técnico-operacional",
         "etapas": ["Estruturar"],
         "modulos": ["M5", "M6", "M7", "M8"],
-        "entrega": "Reforma estatutária, plano de trabalho e cronogramas com nexo causal."
+        "entrega": "Reforma estatutária, plano de trabalho e cronogramas com nexo causal.",
+        "paginas": ["/guias/como-montar-um-plano-de-trabalho/"]
       },
       {
         "id": "fiduciaria",
         "nome": "Fiduciária",
         "etapas": ["Acompanhar"],
         "modulos": ["M12", "M13"],
-        "entrega": "Execução financeira conciliada e prestação de contas rastreável."
+        "entrega": "Execução financeira conciliada e prestação de contas rastreável.",
+        "paginas": ["/guias/como-prestar-contas-de-parceria/"]
       },
       {
         "id": "prospeccao",
         "nome": "Prospecção e Radar",
         "etapas": ["Encontrar"],
         "modulos": ["M0", "M3", "M10", "M11"],
-        "entrega": "Oportunidade com fonte, janela e aderência — não uma lista de editais."
+        "entrega": "Oportunidade com fonte, janela e aderência — não uma lista de editais.",
+        "paginas": ["/radar/", "/carteira-de-incentivadores/"]
       },
       {
         "id": "aquisicao",
         "nome": "Aquisição",
         "etapas": ["Preparar"],
         "modulos": ["M9", "M15"],
-        "entrega": "Prontidão documental e abordagem com gancho legal."
+        "entrega": "Prontidão documental e abordagem com gancho legal.",
+        "paginas": ["/guias/como-abordar-uma-empresa/"]
       },
       {
         "id": "inteligencia",
         "nome": "Inteligência",
         "etapas": ["Acompanhar"],
         "modulos": ["M14", "M16"],
-        "entrega": "Leitura do que os dados mostram e qual é a melhor estratégia."
+        "entrega": "Leitura do que os dados mostram e qual é a melhor estratégia.",
+        "paginas": ["/demonstracao/"]
       }
     ]
   },

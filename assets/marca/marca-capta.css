@@ -921,6 +921,27 @@ body{counter-reset:fm-secao}
   .fm-engine-txt{font-size:15.5px}
 }
 
+/* ===== ONDA 4 — CAMADAS DO METODO (convergencia 4 -> 6) =====
+   O numero decorativo (01-04) deu lugar a ETAPA que a camada serve — dado da
+   fonte canonica (METODO_X_MODULOS.md §4) — e cada card leva a uma pagina real
+   do metodo. Seis camadas: as quatro antigas + Aquisicao e Inteligencia. */
+.fm-method-layer > .fm-layer-etapa{
+  position:static; top:auto; right:auto; display:inline-block;
+  padding:5px 11px; border-radius:999px;
+  border:1px solid rgba(10,188,176,.34); background:rgba(10,188,176,.10);
+  color:#9fe9dd; font:600 10.5px/1 Oswald,Inter,system-ui,sans-serif;
+  letter-spacing:.10em; text-transform:uppercase}
+.fm-method-layer .fm-layer-link{
+  display:inline-flex; align-items:center; gap:7px; margin:18px 14px 0 0;
+  color:#7ef0e2; font-size:12.5px; font-weight:600; text-decoration:none;
+  border-bottom:1px solid transparent}
+.fm-method-layer .fm-layer-link:hover{border-bottom-color:currentColor}
+.fm-method-layer .fm-layer-link:focus-visible{
+  outline:3px solid rgba(10,188,176,.85); outline-offset:3px; border-radius:6px}
+@media(max-width:760px){
+  .fm-method-layer .fm-layer-link{margin-top:14px}
+}
+
 /* ===== ONDA 2 (B) — INTELIGENCIA REAL NA HOME =====
    Numeros agregados do sistema (nunca de um cliente). So alphas da paleta. */
 .fm-radar-section .fm-radar-grid{display:grid;gap:14px;margin:26px auto 0;

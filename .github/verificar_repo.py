@@ -343,6 +343,72 @@ def checar_camadas_decorativas(raiz):
              "do que esta embaixo (%d): %s" % (len(problemas), " | ".join(problemas[:5])))
 
 
+def checar_camadas_metodo(raiz):
+    """Convergencia 4 -> 6 camadas na pagina do metodo.
+
+    A secao dizia "Quatro camadas" quando a fonte canonica ja tinha seis. Cada
+    card mostra a ETAPA que serve (dado do JSON) e leva a uma pagina real.
+    """
+    pag = ler(os.path.join(raiz, "metodo-capta-plus", "index.html"))
+    if pag is None:
+        erro("metodo-capta-plus/index.html ausente")
+        return
+    m = re.search(r'id="fm-metodo-camadas"([\s\S]*?)</section>', pag)
+    bloco = m.group(1) if m else ""
+    if not bloco:
+        erro("metodo-capta-plus: secao das camadas (#fm-metodo-camadas) ausente")
+        return
+    try:
+        with open(os.path.join(raiz, "assets", "framework_t.json"), "rb") as fh:
+            dado = json.loads(fh.read().decode("utf-8-sig"))
+    except (OSError, ValueError) as exc:
+        erro("assets/framework_t.json ilegivel: %s" % exc)
+        return
+    camadas = (dado.get("eixo_vertical") or {}).get("camadas") or []
+    n_cards = bloco.count('<article class="fm-method-layer')
+    if n_cards != len(camadas):
+        erro("metodo-capta-plus: %d card(s) de camada (esperado %d, o mesmo numero do JSON)"
+             % (n_cards, len(camadas)))
+    if "Seis camadas" not in bloco:
+        erro("metodo-capta-plus: titulo das camadas nao diz 'Seis camadas'")
+    # SVG nao e texto de tela: "M12 3 5 6" e comando de path, nao modulo
+    codigos = re.findall(r"\bM\d{1,2}\b", re.sub(r"<svg[\s\S]*?</svg>", "", bloco))
+    if codigos:
+        erro("metodo-capta-plus: codigo de modulo visivel na secao das camadas: %s"
+             % ", ".join(sorted(set(codigos))[:6]))
+    baixo = bloco.lower()
+    # os links da secao sao relativos (o rebrand normaliza): resolve contra a
+    # pasta da pagina antes de comparar com o JSON.
+    hrefs = []
+    for _h in re.findall(r'href="([^"]+)"', bloco):
+        _h = _h.split("#")[0].split("?")[0].strip()
+        if not _h or _h.startswith("http"):
+            continue
+        _partes = ["metodo-capta-plus"]
+        for _p in _h.split("/"):
+            if _p == "..":
+                if _partes:
+                    _partes.pop()
+            elif _p not in ("", "."):
+                _partes.append(_p)
+        hrefs.append("/".join(_partes))
+    for c in camadas:
+        nome = str(c.get("nome") or "")
+        if nome.lower() not in baixo:
+            erro("metodo-capta-plus: falta a camada '%s'" % nome)
+        for etapa in c.get("etapas") or []:
+            if str(etapa).lower() not in baixo:
+                erro("metodo-capta-plus: camada '%s' sem a etapa '%s'" % (nome, etapa))
+        for pag_url in c.get("paginas") or []:
+            pag_url = str(pag_url)
+            alvo_rel = pag_url.strip("/")
+            if alvo_rel not in hrefs:
+                erro("metodo-capta-plus: camada '%s' sem link para %s" % (nome, pag_url))
+            elif not existe_pagina(raiz, pag_url):
+                erro("metodo-capta-plus: link da camada '%s' aponta para pagina inexistente (%s)"
+                     % (nome, pag_url))
+
+
 def checar_codificacao(raiz):
     achados, n = [], 0
     for pasta, dirs, arqs in os.walk(raiz):
@@ -390,6 +456,7 @@ def main():
     checar_imagens(raiz)
     checar_assets_externos(raiz)
     checar_camadas_decorativas(raiz)
+    checar_camadas_metodo(raiz)
     checar_cta_e_cabecalho(raiz)
     n_texto = checar_codificacao(raiz)
 
