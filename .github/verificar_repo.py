@@ -234,6 +234,57 @@ def checar_componente_t(raiz, home):
 # ---------------------------------------------------------------------------
 # 3) Quem Somos + CSS do menu fixo + imagens leves
 # ---------------------------------------------------------------------------
+def checar_radar(raiz, home):
+    """O KPI do Radar na Home tem de ser o do snapshot — nunca numero escrito a mao.
+
+    Era o D2 do baseline: 4 numeros fixos no HTML enquanto o
+    assets/radar_snapshot.json existia. O gerador passou a ler o JSON; esta
+    invariante impede a volta do numero hard-coded (numero na tela sem lastro).
+    """
+    txt = ler(os.path.join(raiz, "assets", "radar_snapshot.json"))
+    snap = None
+    if txt:
+        try:
+            snap = json.loads(txt.lstrip("\ufeff"))
+        except ValueError:
+            erro("assets/radar_snapshot.json invalido (JSON quebrado)")
+            return
+    m = re.search(r"<section[^>]*fm-radar-section[\s\S]*?</section>", home or "")
+    bloco = m.group(0) if m else ""
+    if snap is None:
+        if bloco:
+            erro("Home: secao do Radar sem snapshot — numero na tela sem lastro")
+        return
+    if not bloco:
+        erro("Home: secao do Radar ausente, mas existe snapshot com dado para mostrar")
+        return
+
+    k = snap.get("kpis") or {}
+    esperados = [int(k.get("oportunidades") or 0), int(k.get("elegiveis") or 0),
+                 int(k.get("estruturados") or 0), int(k.get("matches") or 0)]
+    pares = re.findall(r"<b>(\d+)</b><span>([^<]+)</span>", bloco)
+    na_tela = [int(p[0]) for p in pares[:4]]
+    if na_tela != esperados:
+        erro("Home: KPI do Radar fora do snapshot (tela %s | snapshot %s)"
+             % (na_tela, esperados))
+
+    areas_snap = [(int(a.get("total") or 0), str(a.get("rotulo") or ""))
+                  for a in snap.get("areas") or []]
+    areas_tela = [(int(p[0]), p[1]) for p in pares[4:]]
+    if areas_snap and areas_tela != areas_snap:
+        erro("Home: areas do Radar fora do snapshot (tela %s | snapshot %s)"
+             % (len(areas_tela), len(areas_snap)))
+
+    gerado = str(snap.get("gerado_em") or "")
+    try:
+        a_, m_, d_ = gerado.split("-")
+        gerado_fmt = "%s/%s/%s" % (d_, m_, a_)
+    except ValueError:
+        gerado_fmt = ""
+    if gerado_fmt and ("Atualizado em %s" % gerado_fmt) not in bloco:
+        erro("Home: selo do Radar nao mostra a data do snapshot (%s)" % gerado_fmt)
+
+
 def checar_quem_somos(raiz):
     p = os.path.join(raiz, "metodo-capta-plus", "index.html")
     txt = ler(p)
@@ -514,6 +565,7 @@ def main():
 
     home = ler(os.path.join(raiz, "index.html"))
     checar_home(raiz, home)
+    checar_radar(raiz, home)
     checar_componente_t(raiz, home)
     checar_quem_somos(raiz)
     checar_css_menu(raiz)
