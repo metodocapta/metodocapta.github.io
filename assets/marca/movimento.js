@@ -341,26 +341,44 @@ const on = (el, ev, fn, opt) => {
 
 /* --------------------------------------------------------------------------
    8) MARQUEE — a faixa do hero vira um fluxo contínuo
-   Duplica o conteúdo uma vez (o clone é decorativo: aria-hidden).
+   O clone só existe quando o conteúdo não cabe na faixa: com o grupo mais
+   estreito que a tela, o clone aparece lado a lado com o original e a faixa
+   lê como repetição (a mesma palavra duas vezes na mesma linha).
    -------------------------------------------------------------------------- */
 (function marqueeDoStrip() {
   if (rm) return;
   const strip = doc.querySelector('.fm-hero-strip');
   if (!strip || strip.children.length < 2) return;
 
-  const track = doc.createElement('div');
-  track.className = 'fm-marquee-track';
-  const grupo = doc.createElement('div');
-  grupo.className = 'fm-marquee-grupo';
-  Array.from(strip.childNodes).forEach((n) => grupo.appendChild(n));
-  track.appendChild(grupo);
+  function naoCabe() {
+    const gap = 23;                      /* .fm-marquee-grupo{gap:23px} */
+    let largura = 0;
+    Array.from(strip.children).forEach((n) => {
+      largura += n.getBoundingClientRect().width + gap;
+    });
+    return largura >= strip.clientWidth + 80;
+  }
 
-  const clone = grupo.cloneNode(true);
-  clone.setAttribute('aria-hidden', 'true');
-  track.appendChild(clone);
+  function montar() {
+    if (!naoCabe()) return;              /* cabe na tela: fica estática, sem clone */
 
-  strip.appendChild(track);
-  strip.classList.add('fm-marquee');
+    const track = doc.createElement('div');
+    track.className = 'fm-marquee-track';
+    const grupo = doc.createElement('div');
+    grupo.className = 'fm-marquee-grupo';
+    Array.from(strip.childNodes).forEach((n) => grupo.appendChild(n));
+    track.appendChild(grupo);
+
+    const clone = grupo.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+
+    strip.appendChild(track);
+    strip.classList.add('fm-marquee');
+  }
+
+  /* mede com a fonte real: Oswald só entra depois que o webfont carrega */
+  if (doc.fonts && doc.fonts.ready) { doc.fonts.ready.then(montar); } else { montar(); }
 })();
 
 /* --------------------------------------------------------------------------

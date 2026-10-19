@@ -1,0 +1,412 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+VERIFICADOR DO REPOSITORIO PUBLICADO — invariantes que nao podem sumir
+=====================================================================
+
+Por que existe: o repositorio publicado (metodocapta.github.io) recebe push de
+tres lugares — o build local, as Actions do Radar/Destaques e commit manual.
+Um deles pode levar para o ar uma copia regredida (ja aconteceu: o bloco
+Destaques e o schema GEO sumiram em 23/09/2026 sem ninguem notar).
+
+Este arquivo roda DENTRO do repositorio publicado, a cada push, e FALHA o job se
+alguma invariante sumir. Ele e self-contained (so a stdlib) porque o publicado
+nao tem a pasta SKILLS/ do projeto.
+
+Uso
+---
+  python3 verificar_repo.py                  # raiz = pasta atual (o publicado)
+  python3 verificar_repo.py --raiz CAMINHO   # roda contra a fonte, na sua maquina
+
+O portao do BUILD (SKILLS/SCRIPTS/site_verificar.py) e o superconjunto: confere
+tambem o que depende da fonte e dos dados. Este aqui e o subconjunto PORTATIL,
+que precisa valer em qualquer copia do site.
+
+Saida: linha "::error::..." por falha (o GitHub marca no diff do commit).
+Exit: 0 = ok, 1 = falhou.
+"""
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import sys
+
+# arquivos/pastas que nao entram na varredura (arquivo morto e vendor)
+IGNORAR = (".git", "_arquivo", "wp-content")
+
+# unico host externo permitido: as miniaturas do slider de Destaques, que sao
+# carregadas em runtime pelo JS a partir de assets/destaques.json.
+EXTERNO_OK = ("substackcdn.com",)
+
+EXTS_TEXTO = (".html", ".htm", ".css", ".js", ".json", ".xml", ".txt")
+RX_CAIXA = re.compile("[\u2500-\u257f\u2310\u25c0-\u25ff]")
+RX_DUPLO = re.compile("[\u00c3\u00c2][\u0080-\u00bf]")
+
+falhas = []
+
+
+def erro(msg):
+    falhas.append(msg)
+    print("::error::%s" % msg)
+
+
+def ler(caminho):
+    try:
+        with open(caminho, "r", encoding="utf-8", errors="replace") as fh:
+            return fh.read()
+    except OSError:
+        return None
+
+
+def varrer(raiz, extensoes=None):
+    """Devolve [(caminho_relativo, caminho_absoluto)] sem as pastas ignoradas."""
+    saida = []
+    for pasta, dirs, arqs in os.walk(raiz):
+        dirs[:] = [d for d in dirs if d not in IGNORAR]
+        for a in arqs:
+            if extensoes and not a.lower().endswith(extensoes):
+                continue
+            caminho = os.path.join(pasta, a)
+            rel = os.path.relpath(caminho, raiz).replace("\\", "/")
+            saida.append((rel, caminho))
+    return saida
+
+
+def existe_pagina(raiz, url):
+    """Resolve um caminho do site ("/radar/", "guias/x/index.html") em disco."""
+    limpa = str(url).split("#")[0].split("?")[0].strip("/")
+    alvo = os.path.join(raiz, *limpa.split("/")) if limpa else raiz
+    return os.path.isfile(alvo) or os.path.isfile(os.path.join(alvo, "index.html"))
+
+
+# ---------------------------------------------------------------------------
+# 1) Home: blocos que nao podem sumir
+# ---------------------------------------------------------------------------
+def checar_home(raiz, home):
+    if home is None:
+        erro("index.html ausente no repositorio publicado")
+        return
+    for marca, nome in (
+        ("fm-dest-section", "bloco Destaques (slider do Substack)"),
+        ("fm-dest-track", "track do slider de Destaques"),
+        ('"HowTo"', "schema HowTo"),
+        ("FAQPage", "schema FAQPage"),
+        ("BreadcrumbList", "schema BreadcrumbList"),
+        ('name="description"', "meta description"),
+    ):
+        if marca not in home:
+            erro("Home sem %s (%s)" % (nome, marca))
+    if len(re.findall(r"<h1\b", home)) != 1:
+        erro("Home deve ter exatamente 1 <h1> (tem %d)" % len(re.findall(r"<h1\b", home)))
+
+    # CTA do cabecalho: rotulo curto (o hero diz a acao inteira)
+    m = re.search(r'<a class="fm-header-cta"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)', home)
+    if not m:
+        erro("Home sem o CTA do cabecalho (fm-header-cta)")
+    elif "Diagn\u00f3stico 72h" not in m.group(1):
+        erro("Home: CTA do cabecalho fora do padrao curto ('Diagnostico 72h'): %r"
+             % m.group(1).strip()[:50])
+
+    # versionamento dos assets (?v=) — sem isso o navegador serve CSS velho
+    for css in ("marca-capta.css", "movimento.css"):
+        if not re.search(re.escape(css) + r"\?v=", home):
+            erro("Home: %s sem ?v= (cache-busting)" % css)
+    css_t = os.path.join(raiz, "assets", "marca", "framework-t.css")
+    if not os.path.isfile(css_t):
+        erro("assets/marca/framework-t.css ausente")
+    else:
+        with open(css_t, "rb") as fh:
+            md5 = hashlib.md5(fh.read()).hexdigest()[:8]
+        if ("framework-t.css?v=%s" % md5) not in home:
+            erro("Home: framework-t.css sem ?v=%s (md5 do arquivo)" % md5)
+
+
+# ---------------------------------------------------------------------------
+# 2) Componente T (Capta+ T-Intelligence): regras de INTERFACE
+# ---------------------------------------------------------------------------
+def checar_componente_t(raiz, home):
+    if home is None:
+        return
+    marcos = home.count("<!-- fm-t:inicio -->") + home.count("<!-- fm-t:fim -->")
+    if marcos != 2:
+        erro("Home: componente T ausente ou duplicado (marcos fm-t:inicio/fim = %d)" % marcos)
+        return
+    m = re.search(re.escape("<!-- fm-t:inicio -->") + r"([\s\S]*?)"
+                  + re.escape("<!-- fm-t:fim -->"), home)
+    bloco = m.group(1) if m else ""
+    if not bloco.strip():
+        erro("Home: marcos do componente T sem conteudo entre eles")
+        return
+
+    if "<script" in bloco.lower():
+        erro("Home: componente T com <script> — a regra do componente e zero JS")
+    ocultos = sorted(set(re.findall(r"\bM\d{1,2}\b", bloco)))
+    if ocultos:
+        erro("Home: codigo de modulo visivel na interface: %s" % ", ".join(ocultos[:6]))
+    decorativa = re.findall(r">\s*0\d\s*<", bloco)
+    if decorativa:
+        erro("Home: numeracao decorativa no componente T: %s" % ", ".join(decorativa[:4]))
+    if re.search(r"(?<![0-9A-Za-z\u00c0-\u00ff])IA(?![0-9A-Za-z\u00c0-\u00ff])", bloco) \
+            or "Dados e IA" in bloco:
+        erro("Home: componente T citando IA no texto de tela (o rotulo e 'Dados')")
+    ancoras = re.findall(r"<a\b[^>]*>", bloco)
+    if not ancoras or not all("href=" in a for a in ancoras):
+        erro("Home: ancora sem href no componente T (clique que nao leva a lugar nenhum)")
+    if 'href="#"' in bloco:
+        erro('Home: ancora com href="#" no componente T (clique que nao leva a lugar nenhum)')
+
+    # o dado (framework_t.json) e a fonte do componente
+    p_json = os.path.join(raiz, "assets", "framework_t.json")
+    try:
+        with open(p_json, "r", encoding="utf-8-sig") as fh:
+            dado = json.load(fh)
+    except (OSError, ValueError) as exc:
+        erro("assets/framework_t.json ausente ou invalido: %s" % exc)
+        return
+
+    comps = dado.get("eixo_horizontal", {}).get("competencias") or []
+    camadas = dado.get("eixo_vertical", {}).get("camadas") or []
+    modulos = dado.get("modulos") or {}
+    if len(camadas) != 6:
+        erro("framework_t.json: %d camada(s) no eixo vertical (esperado 6)" % len(camadas))
+    if len(modulos) != 17:
+        erro("framework_t.json: %d modulo(s) (esperado 17: M0..M16)" % len(modulos))
+    if "Dados e IA" not in [c.get("nome", "") for c in comps]:
+        erro("framework_t.json: a competencia canonica 'Dados e IA' sumiu")
+    n_pagina = [c for c in comps if c.get("paginas")]
+    if bloco.count('class="fm-t-linha"') != len(n_pagina):
+        erro("Home: componente T com %d linha(s) na tela (esperado %d — uma por competencia "
+             "com pagina real)" % (bloco.count('class="fm-t-linha"'), len(n_pagina)))
+    for c in n_pagina:
+        for pagina in c["paginas"]:
+            if str(pagina).startswith("http"):
+                continue
+            if not existe_pagina(raiz, pagina):
+                erro("framework_t.json: destino inexistente — %s aponta para %s"
+                     % (c.get("rotulo") or c.get("nome"), pagina))
+
+    # o componente nao tem JS: nem referencia, nem arquivo
+    if re.search(r"framework-t\.js", home):
+        erro("Home: referencia a framework-t.js (o componente nao tem JS)")
+    if os.path.exists(os.path.join(raiz, "assets", "marca", "framework-t.js")):
+        erro("assets/marca/framework-t.js existe (o componente nao tem JS)")
+
+    # painel do trilho (fm-engine): tambem e tela, tambem sem codigo de modulo
+    i_eng = home.find('id="fm-engine"')
+    if i_eng >= 0:
+        i_ini = home.rfind("<div", 0, i_eng)
+        i_fim = home.find("<script", i_eng)
+        trecho_eng = home[i_ini:i_fim if i_fim > i_eng else i_eng + 4000]
+        codigos_eng = sorted(set(re.findall(r"\bM\d{1,2}\b", trecho_eng)))
+        if codigos_eng:
+            erro("Home: codigo de modulo no painel do trilho (fm-engine): %s"
+                 % ", ".join(codigos_eng[:6]))
+
+
+# ---------------------------------------------------------------------------
+# 3) Quem Somos + CSS do menu fixo + imagens leves
+# ---------------------------------------------------------------------------
+def checar_quem_somos(raiz):
+    p = os.path.join(raiz, "metodo-capta-plus", "index.html")
+    txt = ler(p)
+    if txt is None:
+        erro("metodo-capta-plus/index.html ausente")
+        return
+    for marca, nome in (("fm-mvv-section", "secao Missao/Visao/Valores"),
+                        ("fm-values-grid", "grade dos Valores Fundamentais"),
+                        ("Miss\u00e3o, Vis\u00e3o e Valores", "titulo 'Missao, Visao e Valores'")):
+        if marca not in txt:
+            erro("Quem Somos sem %s (%s)" % (nome, marca))
+
+
+def checar_css_menu(raiz):
+    p = os.path.join(raiz, "wp-content", "plugins", "landing-page", "assets",
+                     "css", "landing.css")
+    css = ler(p)
+    if css is None:
+        erro("landing.css ausente (menu fixo depende dele)")
+        return
+    css_plano = re.sub(r"\s+", " ", css)
+    if not re.search(r"html, *body *\{[^}]*overflow-x: *(clip|visible)", css_plano):
+        erro("landing.css: html/body sem overflow-x clip/visible (hidden QUEBRA o menu fixo)")
+    if not re.search(r"\.fm-site *\{[^}]*overflow: *visible", css_plano):
+        erro("landing.css: .fm-site sem overflow: visible")
+
+
+def checar_imagens(raiz):
+    for nome in ("assets/marca/wordmark-claro.webp", "assets/marca/og-metodo-capta.jpg"):
+        if not os.path.isfile(os.path.join(raiz, *nome.split("/"))):
+            erro("falta %s" % nome)
+    pesados = []
+    for rel, caminho in varrer(raiz, (".html",)):
+        txt = ler(caminho) or ""
+        if "wordmark-claro.png" in txt or "og-metodo-capta.png" in txt:
+            pesados.append(rel)
+    if pesados:
+        erro("paginas referenciando PNG pesado (wordmark/og): %s"
+             % ", ".join(sorted(set(pesados))[:6]))
+
+
+# ---------------------------------------------------------------------------
+# 4) Nenhum asset externo (o site e self-hosted) + CTA final + cabecalho
+# ---------------------------------------------------------------------------
+def checar_assets_externos(raiz):
+    problemas = []
+    for rel, caminho in varrer(raiz):
+        baixo = rel.lower()
+        if baixo.endswith((".html", ".htm")):
+            txt = ler(caminho) or ""
+            for tag in re.finditer(r"<(script|link|img)\b[^>]*>", txt):
+                corpo = tag.group(0)
+                url = re.search(r'(?:src|href)\s*=\s*["\'](https?://[^"\']+)', corpo)
+                if not url:
+                    continue
+                if tag.group(1) == "link":
+                    if re.search(r'rel="(canonical|alternate|profile)"', corpo):
+                        continue
+                    if (re.search(r'rel="(preconnect|dns-prefetch)"', corpo)
+                            and any(h in url.group(1) for h in EXTERNO_OK)):
+                        continue
+                problemas.append("%s: %s" % (rel, url.group(1)[:70]))
+        elif baixo.endswith(".css"):
+            txt = ler(caminho) or ""
+            for m in re.finditer(r'@import\s+url\(\s*["\']?(https?://[^)"\']+)', txt):
+                problemas.append("%s: @import %s" % (rel, m.group(1)[:60]))
+            for m in re.finditer(r'url\(\s*["\']?(https?://[^)"\']+)', txt):
+                problemas.append("%s: url(%s)" % (rel, m.group(1)[:60]))
+    if problemas:
+        erro("asset externo em %d ponto(s) — o site e self-hosted (so o substackcdn das "
+             "miniaturas de Destaques e permitido): %s" % (len(problemas), " | ".join(problemas[:4])))
+
+
+def checar_cta_e_cabecalho(raiz):
+    sem_cta, cta_sem_link = [], []
+    for rel, caminho in varrer(raiz, (".html",)):
+        txt = ler(caminho) or ""
+        if 'class="site-hd"' in txt and "hd-cta" not in txt:
+            sem_cta.append(rel)
+        for m in re.finditer(r'class="cta"', txt):
+            bloco = txt[m.start():m.start() + 900]
+            if not re.search(r'<a\b[^>]*href\s*=\s*["\']https?://', bloco):
+                cta_sem_link.append(rel)
+                break
+    if sem_cta:
+        erro("cabecalho das internas sem CTA (hd-cta) em %d pagina(s): %s"
+             % (len(sem_cta), ", ".join(sorted(sem_cta)[:6])))
+    if cta_sem_link:
+        erro("bloco .cta sem link de acao em %d pagina(s): %s"
+             % (len(cta_sem_link), ", ".join(sorted(cta_sem_link)[:6])))
+
+
+# ---------------------------------------------------------------------------
+# 5) Codificacao: UTF-8 valido e SEM mojibake (double-encoding)
+# ---------------------------------------------------------------------------
+def checar_camadas_decorativas(raiz):
+    """Camada decorativa que cobre o pai NAO pode capturar clique.
+
+    Uma camada absoluta com inset:0 e pintada por cima do conteudo estatico:
+    sem pointer-events:none ela engole o clique dos links da secao (foi o que
+    deixou os 8 itens de competencia do bloco 08 sem resposta ao clique).
+    """
+    css_projeto = (
+        "assets/marca/marca-capta.css",
+        "assets/marca/atmosfera.css",
+        "assets/marca/movimento.css",
+        "assets/marca/framework-t.css",
+        "wp-content/plugins/landing-page/assets/css/landing.css",
+    )
+    problemas = []
+    for rel in css_projeto:
+        txt = ler(os.path.join(raiz, *rel.split("/")))
+        if not txt:
+            continue
+        txt = re.sub(r"/\*[\s\S]*?\*/", "", txt)
+        regras = [(m.group(1).strip(), m.group(2)) for m in re.finditer(r"([^{}]+)\{([^{}]*)\}", txt)]
+        bases = {sel.split(",")[0].split("::")[0].strip()
+                 for sel, dec in regras if re.search(r"pointer-events:\s*none", dec)}
+        for sel, dec in regras:
+            if not re.search(r"position:\s*(absolute|fixed)", dec):
+                continue
+            cobre = bool(re.search(r"inset:\s*0(px)?\s*(;|\s*$)", dec)) or all(
+                re.search(r"\b%s:\s*0(px)?\s*(;|$)" % lado, dec)
+                for lado in ("top", "right", "bottom", "left"))
+            if not cobre or re.search(r"pointer-events:\s*none", dec):
+                continue
+            base = sel.split(",")[0].split("::")[0].strip()
+            if "::" in sel and base in bases:
+                continue
+            problemas.append("%s: %s" % (rel, sel.replace("\n", " ")[:44]))
+    if problemas:
+        erro("camada decorativa cobrindo o pai SEM pointer-events:none — ela engole o clique "
+             "do que esta embaixo (%d): %s" % (len(problemas), " | ".join(problemas[:5])))
+
+
+def checar_codificacao(raiz):
+    achados, n = [], 0
+    for pasta, dirs, arqs in os.walk(raiz):
+        dirs[:] = [d for d in dirs if d not in (".git", "_arquivo", "wp-content")]
+        for nome in arqs:
+            if not nome.lower().endswith(EXTS_TEXTO):
+                continue
+            n += 1
+            caminho = os.path.join(pasta, nome)
+            rel = os.path.relpath(caminho, raiz).replace("\\", "/")
+            try:
+                with open(caminho, "rb") as fh:
+                    conteudo = fh.read().decode("utf-8")
+            except UnicodeDecodeError as exc:
+                achados.append("%s: NAO e UTF-8 valido (%s)" % (rel, exc))
+                continue
+            except OSError:
+                continue
+            for rx in (RX_CAIXA, RX_DUPLO):
+                m = rx.search(conteudo)
+                if m:
+                    ini = max(0, m.start() - 25)
+                    achados.append("%s: mojibake — ex.: ...%s..."
+                                   % (rel, conteudo[ini:m.start() + 25].replace("\n", " ")))
+                    break
+    if achados:
+        erro("codificacao em %d arquivo(s): %s" % (len(achados), " | ".join(achados[:4])))
+    return n
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Invariantes do repositorio publicado.")
+    ap.add_argument("--raiz", default=".", help="raiz do site (default: pasta atual)")
+    args = ap.parse_args()
+    raiz = os.path.abspath(args.raiz)
+    if not os.path.isdir(raiz):
+        print("::error::raiz nao encontrada: %s" % raiz)
+        return 1
+
+    home = ler(os.path.join(raiz, "index.html"))
+    checar_home(raiz, home)
+    checar_componente_t(raiz, home)
+    checar_quem_somos(raiz)
+    checar_css_menu(raiz)
+    checar_imagens(raiz)
+    checar_assets_externos(raiz)
+    checar_camadas_decorativas(raiz)
+    checar_cta_e_cabecalho(raiz)
+    n_texto = checar_codificacao(raiz)
+
+    print("=" * 70)
+    print(" VERIFICADOR DO REPOSITORIO PUBLICADO — %s" % raiz)
+    print("=" * 70)
+    print("  arquivos de texto conferidos : %d" % n_texto)
+    if falhas:
+        print("  FALHOU (%d):" % len(falhas))
+        for f in falhas:
+            print("   [X] %s" % f)
+        print("=" * 70)
+        return 1
+    print("  OK — todas as invariantes presentes.")
+    print("=" * 70)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

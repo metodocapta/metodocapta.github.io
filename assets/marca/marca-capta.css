@@ -72,6 +72,7 @@ body{
 /* --- barra de acento no topo (assinatura da marca) --- */
 body::before{
   content:"";
+  pointer-events:none;
   position:fixed;
   inset:0 0 auto 0;
   height:3px;
@@ -197,6 +198,36 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 
 /* --- rodapé --- */
+/* RESERVA DA PILHA DE CONTROLES FLUTUANTES (canto inferior direito).
+   No fim da pagina o ultimo item do rodape ficava DEBAIXO dos controles fixos e
+   o clique caia no controle em vez do link (medido em 19/10/2026: 59 paginas).
+   A pilha tem dois andares:
+     - balao do WhatsApp ......... bottom 14px (22 no desktop) + ~54px
+     - botao "Ativar movimento" .. bottom 84px (96 no desktop) + ~34px — e ele so
+       NASCE para quem tem prefers-reduced-motion (movimento.js, ramo flutuante,
+       quando a pagina nao tem hero nem .fm-footer): por isso a reserva maior e
+       media query, e nao um valor fixo que desperdicaria faixa com todo mundo.
+   O rodape das paginas de conteudo (.site-ft) traz padding proprio, inline no
+   <style> da pagina, e regra de CLASSE vence seletor de elemento — daí o
+   `:not(.fm-footer)` incluir o .site-ft sem depender da ordem das folhas. */
+footer:not(.fm-footer),.fm-footer{
+  padding-bottom:82px;                         /* balao do WhatsApp */
+}
+@media (prefers-reduced-motion: reduce){
+  footer:not(.fm-footer){                      /* + botao de movimento */
+    padding-bottom:142px;
+  }
+}
+@media (max-width:760px){
+  footer:not(.fm-footer),.fm-footer{
+    padding-bottom:82px;
+  }
+}
+@media (max-width:760px) and (prefers-reduced-motion: reduce){
+  footer:not(.fm-footer){
+    padding-bottom:134px;
+  }
+}
 footer,.fm-footer{
   background:linear-gradient(180deg,rgba(6,37,49,.02) 0%,rgba(6,37,49,.06) 100%);
 }

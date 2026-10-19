@@ -90,7 +90,7 @@ body .entry-title:empty { display: none !important; }
 
 .fm-hero { position: relative; min-height: 840px; padding: 118px 0 42px; background: radial-gradient(circle at 82% 31%, rgba(6, 122, 114, .25), transparent 29%), radial-gradient(circle at 57% 44%, rgba(10, 188, 176, .07), transparent 32%), linear-gradient(135deg, #020d0d 0%, #031816 47%, #042321 100%); }
 .fm-hero::after { content: ""; position: absolute; inset: auto 0 0; height: 210px; background: linear-gradient(180deg, transparent, #031413 92%); pointer-events: none; }
-.fm-hero-lines { position: absolute; inset: 0; opacity: .48; background-image: linear-gradient(rgba(127, 227, 216, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 227, 216, .03) 1px, transparent 1px); background-size: 62px 62px; mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.7) 68%, transparent 100%); }
+.fm-hero-lines { pointer-events: none; position: absolute; inset: 0; opacity: .48; background-image: linear-gradient(rgba(127, 227, 216, .03) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 227, 216, .03) 1px, transparent 1px); background-size: 62px 62px; mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.7) 68%, transparent 100%); }
 .fm-ambient { position: absolute; border-radius: 50%; filter: blur(3px); pointer-events: none; }
 .fm-ambient-a { width: 620px; height: 620px; right: -270px; top: -260px; background: radial-gradient(circle, rgba(10, 188, 176, .16), transparent 68%); }
 .fm-ambient-b { width: 430px; height: 430px; left: -230px; bottom: 20px; background: radial-gradient(circle, rgba(10, 188, 176, .08), transparent 70%); }
@@ -125,7 +125,7 @@ body .entry-title:empty { display: none !important; }
 
 .fm-hero-stage { position: relative; min-height: 610px; perspective: 1100px; transform-style: preserve-3d; }
 .fm-stage-media { position: absolute; inset: 6% 4% 5% 5%; overflow: hidden; border: 1px solid rgba(127, 227, 216, .13); border-radius: 44px; background: linear-gradient(180deg, rgba(6,41,39,.58), rgba(2,21,20,.8)); box-shadow: inset 0 0 80px rgba(10, 188, 176, .035), 0 45px 120px rgba(0,0,0,.42); transform: rotateY(-5deg) rotateX(2deg); }
-.fm-stage-media::before { content: ""; position: absolute; inset: 0; z-index: 2; background: radial-gradient(circle at 52% 47%, transparent 0 34%, rgba(3,20,19,.18) 63%, rgba(3,20,19,.86) 100%), linear-gradient(180deg, rgba(3,20,19,.03), rgba(3,20,19,.42)); }
+.fm-stage-media::before { content: ""; pointer-events: none; position: absolute; inset: 0; z-index: 2; background: radial-gradient(circle at 52% 47%, transparent 0 34%, rgba(3,20,19,.18) 63%, rgba(3,20,19,.86) 100%), linear-gradient(180deg, rgba(3,20,19,.03), rgba(3,20,19,.42)); }
 .fm-stage-media img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: 50% 53%; filter: saturate(1.15) contrast(1.04); }
 .fm-stage-glow { position: absolute; width: 390px; height: 390px; left: 50%; top: 50%; border-radius: 50%; background: radial-gradient(circle, rgba(10, 188, 176, .17), transparent 68%); transform: translate(-45%,-48%); filter: blur(1px); }
 .fm-stage-orbit { position: absolute; z-index: 5; left: 50%; top: 51%; border: 1px solid rgba(10, 188, 176, .22); border-radius: 50%; pointer-events: none; }
@@ -175,7 +175,11 @@ body .entry-title:empty { display: none !important; }
 
 .fm-capta-section { overflow: hidden; padding: 150px 0; background: radial-gradient(circle at 76% 49%, rgba(10, 188, 176, .12), transparent 28%), linear-gradient(180deg, #031413, #051e1c 49%, #031413); }
 .fm-capta-section::before { content: ""; position: absolute; width: 700px; height: 700px; right: -260px; top: 0; border-radius: 50%; background: radial-gradient(circle, rgba(10, 188, 176, .08), transparent 70%); }
-.fm-capta-grid-bg { position: absolute; inset: 0; opacity: .35; background-image: linear-gradient(rgba(127, 227, 216, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 227, 216, .025) 1px, transparent 1px); background-size: 70px 70px; mask-image: radial-gradient(circle at 70% 50%, #000 0%, transparent 63%); }
+/* decoracao de fundo: NAO pode capturar clique. Sem pointer-events:none, esta
+   camada (inset:0, cobre a secao toda) fica por cima do conteudo estatico e
+   engole o clique dos links da secao — foi o que deixou os 8 itens de
+   competencia do bloco 08 sem resposta ao clique. */
+.fm-capta-grid-bg { pointer-events: none; position: absolute; inset: 0; opacity: .35; background-image: linear-gradient(rgba(127, 227, 216, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(127, 227, 216, .025) 1px, transparent 1px); background-size: 70px 70px; mask-image: radial-gradient(circle at 70% 50%, #000 0%, transparent 63%); }
 .fm-capta-grid { position: relative; display: grid; grid-template-columns: minmax(0,.88fr) minmax(480px,1fr); align-items: center; gap: 90px; }
 .fm-capta-copy > p { max-width: 610px; }
 .fm-capta-visual { position: relative; min-height: 560px; display: grid; place-items: center; }
@@ -342,7 +346,7 @@ body.fm-method-page .fm-site { margin-top: 0 !important; }
 .fm-method-hero-copy h1 em { color: var(--fm-green-2); font-style: normal; }
 .fm-method-hero-copy > p { max-width: 650px; margin: 28px 0 0; color: #a7bbb6; font-size: 18px; line-height: 1.75; }
 .fm-method-hero-visual { position: relative; min-height: 560px; overflow: hidden; border: 1px solid rgba(127, 227, 216, .14); border-radius: 38px; background: #041a18; box-shadow: 0 46px 120px rgba(0,0,0,.38); }
-.fm-method-hero-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 55% 45%,transparent 15%,rgba(3,20,19,.12) 55%,rgba(3,20,19,.82) 100%),linear-gradient(180deg,transparent 48%,rgba(3,20,19,.9)); }
+.fm-method-hero-visual::after { content: ""; pointer-events: none; position: absolute; inset: 0; background: radial-gradient(circle at 55% 45%,transparent 15%,rgba(3,20,19,.12) 55%,rgba(3,20,19,.82) 100%),linear-gradient(180deg,transparent 48%,rgba(3,20,19,.9)); }
 .fm-method-hero-visual img { width: 100%; height: 560px; display: block; object-fit: cover; object-position: center; filter: saturate(1.08) contrast(1.03); }
 .fm-method-hero-overlay { position: absolute; z-index: 3; left: 30px; right: 30px; bottom: 30px; }
 .fm-method-hero-overlay span { color: var(--fm-green); font-size: 10px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }

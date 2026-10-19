@@ -1,0 +1,173 @@
+{
+  "id": "capta-t-intelligence",
+  "nome": "Capta+ T-Intelligence",
+  "versao": "1.1",
+  "atualizado_em": "2026-10-19",
+  "fonte_canonica": "REFERENCIAS/OPENCODEX/docs/METODO_X_MODULOS.md",
+  "principio": "Profundidade sem isolamento: as camadas dão a profundidade técnica, as competências dão a ligação entre elas.",
+  "regra": "Toda célula aponta para um módulo que existe na fonte canônica. Status e numeração são copiados de lá; se divergirem, o erro é aqui.",
+  "eixo_vertical": {
+    "rotulo": "As seis camadas",
+    "nota": "Agrupamento de navegação idêntico ao da fonte canônica (§4). Não é uma sétima etapa.",
+    "camadas": [
+      {
+        "id": "juridica",
+        "nome": "Jurídica",
+        "etapas": ["Compreender", "Compatibilizar"],
+        "modulos": ["M1", "M2", "M4"],
+        "entrega": "Ler a exigência, ler o estatuto e dizer o que ainda não fecha."
+      },
+      {
+        "id": "tecnico-operacional",
+        "nome": "Técnico-operacional",
+        "etapas": ["Estruturar"],
+        "modulos": ["M5", "M6", "M7", "M8"],
+        "entrega": "Reforma estatutária, plano de trabalho e cronogramas com nexo causal."
+      },
+      {
+        "id": "fiduciaria",
+        "nome": "Fiduciária",
+        "etapas": ["Acompanhar"],
+        "modulos": ["M12", "M13"],
+        "entrega": "Execução financeira conciliada e prestação de contas rastreável."
+      },
+      {
+        "id": "prospeccao",
+        "nome": "Prospecção e Radar",
+        "etapas": ["Encontrar"],
+        "modulos": ["M0", "M3", "M10", "M11"],
+        "entrega": "Oportunidade com fonte, janela e aderência — não uma lista de editais."
+      },
+      {
+        "id": "aquisicao",
+        "nome": "Aquisição",
+        "etapas": ["Preparar"],
+        "modulos": ["M9", "M15"],
+        "entrega": "Prontidão documental e abordagem com gancho legal."
+      },
+      {
+        "id": "inteligencia",
+        "nome": "Inteligência",
+        "etapas": ["Acompanhar"],
+        "modulos": ["M14", "M16"],
+        "entrega": "Leitura do que os dados mostram e qual é a melhor estratégia."
+      }
+    ]
+  },
+  "eixo_horizontal": {
+    "rotulo": "Inteligência que conecta",
+    "nota": "Cada competência liga camadas diferentes usando módulos que já existem. Onde não há página pública, 'paginas' fica vazio — não se inventa destino.",
+    "competencias": [
+      {
+        "id": "radar",
+        "nome": "Radar",
+        "pergunta": "Onde há recurso com janela aberta?",
+        "modulos": ["M0", "M3"],
+        "paginas": ["/radar/"],
+        "camadas": ["prospeccao"]
+      },
+      {
+        "id": "dna",
+        "nome": "DNA da entidade",
+        "pergunta": "O que a organização já é e já tem?",
+        "modulos": ["M1", "M2"],
+        "paginas": ["/diagnostico-de-prontidao/"],
+        "camadas": ["juridica"]
+      },
+      {
+        "id": "territorio",
+        "nome": "Território e mecanismos",
+        "pergunta": "O que existe para o meu setor e o meu estado?",
+        "modulos": ["M0", "M10"],
+        "paginas": ["/captacao-de-recursos/"],
+        "camadas": ["prospeccao", "aquisicao"]
+      },
+      {
+        "id": "compatibilidade",
+        "nome": "Compatibilidade",
+        "pergunta": "O edital exige o que eu tenho?",
+        "modulos": ["M4", "M10"],
+        "paginas": ["/metodo-capta-plus/", "/guia-de-captacao-de-recursos/"],
+        "camadas": ["juridica", "prospeccao"]
+      },
+      {
+        "id": "estrategia",
+        "nome": "Estratégia",
+        "pergunta": "Qual caminho rende mais com o que eu tenho?",
+        "modulos": ["M15", "M16"],
+        "paginas": ["/calculadora/", "/carteira-de-incentivadores/"],
+        "camadas": ["aquisicao", "inteligencia"]
+      },
+      {
+        "id": "dados",
+        "nome": "Dados e IA",
+        "rotulo": "Dados",
+        "pergunta": "O que o dado mostra antes de eu decidir?",
+        "modulos": ["M3", "M14", "M16"],
+        "paginas": ["/estudos/", "/demonstracao/"],
+        "camadas": ["prospeccao", "inteligencia"]
+      },
+      {
+        "id": "estruturacao",
+        "nome": "Estruturação do projeto",
+        "pergunta": "O projeto está escrito como o edital exige?",
+        "modulos": ["M5", "M6", "M7", "M8"],
+        "paginas": ["/guias/como-montar-um-plano-de-trabalho/", "/guia-de-captacao-de-recursos/"],
+        "camadas": ["tecnico-operacional"]
+      },
+      {
+        "id": "impacto",
+        "nome": "Impacto",
+        "pergunta": "O que mudou, com que prova?",
+        "modulos": ["M12", "M13", "M14"],
+        "paginas": ["/guias/como-montar-indicadores-de-impacto/", "/guias/como-prestar-contas-de-parceria/"],
+        "camadas": ["fiduciaria", "inteligencia"]
+      }
+    ]
+  },
+  "modulos": {
+    "M0": { "nome": "Radar de Oportunidades", "status": "ativo" },
+    "M1": { "nome": "DNA da Entidade", "status": "ativo" },
+    "M2": { "nome": "DNA Normativo", "status": "planejado" },
+    "M3": { "nome": "Edital Engine", "status": "planejado" },
+    "M4": { "nome": "Cruzamento Estatuto × Edital", "status": "ativo" },
+    "M5": { "nome": "Diagnóstico de Reforma Estatutária", "status": "ativo" },
+    "M6": { "nome": "Estatuto Reformado consolidado", "status": "ativo" },
+    "M7": { "nome": "Plano de Ação da Reforma", "status": "ativo" },
+    "M8": { "nome": "Project Factory (plano + cronogramas)", "status": "ativo" },
+    "M9": { "nome": "Readiness Engine", "status": "parcial" },
+    "M10": { "nome": "Capta Engine (match)", "status": "ativo" },
+    "M11": { "nome": "CRM e Carteira", "status": "ativo" },
+    "M12": { "nome": "Finance Engine", "status": "ativo" },
+    "M13": { "nome": "Accountability", "status": "ativo" },
+    "M14": { "nome": "Intelligence (Capta Score · Leakage · BI)", "status": "ativo" },
+    "M15": { "nome": "Aquisição", "status": "ativo" },
+    "M16": { "nome": "Melhor Estratégia", "status": "ativo" }
+  },
+  "intelligence_core": {
+    "rotulo": "Capta+ Intelligence Core",
+    "nota": "Transversal: fica por baixo das seis etapas. Não é etapa nem camada.",
+    "pilares": [
+      { "id": "evidencia", "nome": "Evidência", "garante": "cada afirmação tem trecho e fonte" },
+      { "id": "rastreabilidade", "nome": "Rastreabilidade", "garante": "fonte, URL, hash e data por oportunidade" },
+      { "id": "versionamento", "nome": "Versionamento", "garante": "versão por documento e por oportunidade" },
+      { "id": "regras", "nome": "Regras", "garante": "parâmetros legais versionados" },
+      { "id": "confidence", "nome": "Confidence Score", "garante": "grau de confiança, nunca 'verdade'" },
+      { "id": "auditoria", "nome": "Auditoria", "garante": "fonte consultada e fonte vazia" },
+      { "id": "governanca-ia", "nome": "Governança da IA", "garante": "IA redige, Quality Gate valida" }
+    ]
+  },
+  "convergencia": {
+    "rotulo": "Fluxo do mecanismo",
+    "nota": "Acontece dentro das seis etapas — não é uma segunda sequência do método.",
+    "fluxo": ["Oportunidade", "Triagem", "Compatibilidade", "Estratégia", "Projeto", "Captação", "Impacto"]
+  },
+  "lacunas": [
+    { "competencia": "dna", "modulos": ["M1", "M2"], "falta": "página dedicada ao DNA (hoje o card aponta para /diagnostico-de-prontidao/)", "destino": "Onda 4" },
+    { "modulo": "M11", "falta": "CRM e Carteira existe na plataforma, mas nenhuma competência do eixo horizontal o usa — profundidade sem conector", "destino": "Onda 4" },
+    { "modulo": "M9", "falta": "Readiness Engine (parcial) também não tem competência própria; hoje aparece no diagnóstico de prontidão", "destino": "Onda 4" },
+    { "modulo": "M3", "falta": "Edital Engine ainda não tem código (planejado)", "destino": "fonte canônica" },
+    { "modulo": "M2", "falta": "DNA Normativo ainda não tem código (planejado)", "destino": "fonte canônica" },
+    { "modulo": "M9_status", "falta": "Readiness Engine sem score persistido (parcial)", "destino": "fonte canônica" }
+  ]
+}

@@ -1,0 +1,138 @@
+/* ==========================================================================
+   FASE T — competências do método (bloco 08 da Home)
+   Oito cards, um por competência. Cada card é um LINK para a página real
+   daquela competência: não existe card que só acende.
+
+   Regras desta folha:
+   - escopo fechado em .fm-t: não toca em nenhum seletor existente do site
+   - todo seletor tem duas classes de escopo porque a camada de marca aplica
+     tipografia global em ".fm-site p/span/a" e, sem isso, o texto herdaria
+     o corpo padrão do site
+   - sem número de camada, sem código de módulo, sem fonte ou imagem externa
+   - a seta é decoração de CSS (não entra no DOM nem no texto lido por leitor)
+   - respeita prefers-reduced-motion e o foco de teclado é sempre visível
+   ========================================================================== */
+
+/* a seção 08 é full-bleed: este padding alinha o bloco ao texto do fm-engine
+   (que compensa com padding próprio) em vez de encostar na borda */
+.fm-t {
+  margin: 26px 0 0;
+  padding: 22px 24px 0;
+  border-top: 1px solid var(--mc-border-dark, rgba(159, 241, 216, .16));
+}
+
+.fm-t .fm-t-kicker {
+  margin: 0 0 6px;
+  font-family: var(--mc-font-display, Oswald), 'Segoe UI', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mc-teal-light, #7fe3d8);
+}
+
+.fm-t .fm-t-lead {
+  margin: 0;
+  max-width: 64ch;
+  font-family: var(--mc-font-body, Inter), 'Segoe UI', sans-serif;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--mc-text, #e4f4f1);
+}
+
+/* --- lista editorial ------------------------------------------------------
+   Opção (B): uma linha por competência, com fio entre elas em vez de caixas.
+   Nome à esquerda, a pergunta em seguida, a seta na ponta — a linha inteira
+   é o link. */
+
+.fm-t .fm-t-lista {
+  display: grid;
+  margin: 18px 0 0;
+  border-top: 1px solid rgba(159, 241, 216, .14);
+}
+
+.fm-t .fm-t-linha {
+  display: grid;
+  grid-template-columns: 216px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 2px;
+  border-bottom: 1px solid rgba(159, 241, 216, .14);
+  text-decoration: none;
+  transition: background-color .18s ease;
+}
+
+/* a seta: só decoração, por isso não existe no HTML */
+.fm-t .fm-t-linha::after {
+  content: "\2192";
+  justify-self: end;
+  font-family: var(--mc-font-body, Inter), 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--mc-teal-light, #7fe3d8);
+  transition: transform .18s ease;
+}
+
+.fm-t .fm-t-linha .fm-t-rotulo {
+  font-family: var(--mc-font-display, Oswald), 'Segoe UI', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--mc-teal-light, #7fe3d8);
+}
+
+.fm-t .fm-t-linha .fm-t-pergunta {
+  font-family: var(--mc-font-body, Inter), 'Segoe UI', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--mc-text-strong, #fff);
+}
+
+.fm-t .fm-t-linha:hover {
+  background: rgba(10, 188, 176, .07);
+}
+
+.fm-t .fm-t-linha:hover::after {
+  transform: translateX(3px);
+}
+
+.fm-t .fm-t-linha:focus-visible {
+  outline: 3px solid var(--mc-teal, #0ABCB0);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* --- telas estreitas: nome sobre a pergunta, tudo em uma linha por item --- */
+
+@media (max-width: 759px) {
+  .fm-t .fm-t-linha {
+    grid-template-columns: minmax(0, 1fr) 18px;
+    gap: 2px 12px;
+    padding: 12px 2px;
+  }
+  .fm-t .fm-t-linha .fm-t-rotulo,
+  .fm-t .fm-t-linha .fm-t-pergunta {
+    grid-column: 1;
+  }
+  .fm-t .fm-t-linha::after {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+  .fm-t .fm-t-linha .fm-t-rotulo {
+    font-size: 11px;
+  }
+  .fm-t .fm-t-linha .fm-t-pergunta {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fm-t .fm-t-linha,
+  .fm-t .fm-t-linha::after {
+    transition: none;
+  }
+}
