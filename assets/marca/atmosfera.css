@@ -250,3 +250,266 @@
   .fm-nav > a[href="#fm-inteligencia"]{display:none !important;}
 }
 
+/* ==========================================================================
+   11) VIDRO POR SEÇÃO · v3.1 — O TEMA DA REDAÇÃO DEFINE O VIDRO
+   --------------------------------------------------------------------------
+   Regra dura: NENHUMA cor nova. Só alphas da paleta oficial
+   (navy #062531 · teal #0ABCB0 · teal-grafite #067a72 · laranja #d97b4d · branco).
+
+   Cada seção tem um TEMA e recebe o vidro correspondente:
+     • credibilidade (Parceiras)   -> cartela de vidro, logo em relevo
+     • dado vivo (Radar)           -> teal + ponto pulsante no selo
+     • editorial (Estudos)         -> vidro de papel (branco) + zoom da capa
+     • decisão (5 perguntas)       -> numeral em vidro + fio teal
+     • dor (Problema)              -> vidro CLARO + acento laranja no custo
+     • escolha (Comparativo)       -> coluna Capta+ em vidro teal
+     • mecanismo (Método)          -> vidro mais denso + rim (a assinatura)
+     • prova (Evidências)          -> vidro CLARO
+     • transparência (Riscos)      -> "o que não fazemos" com fio laranja
+     • ação (Decisão/CTA)          -> o ÚNICO glow contínuo da página
+
+   Performance (mesma decisão da camada 2, JEV p=0,80): blur real só no
+   chrome e em UM painel ancorado (o mecanismo). Cartão = tint + fio +
+   brilho especular + sombra. O "brilho varrendo" é só no hover.
+   ========================================================================== */
+
+:root{
+  --mc-g-sheen:linear-gradient(115deg,transparent 36%,rgba(255,255,255,.055) 50%,transparent 64%);
+  --mc-g-sheen-light:linear-gradient(115deg,transparent 36%,rgba(6,37,49,.035) 50%,transparent 64%);
+  --mc-g-tint:radial-gradient(130% 90% at 0% 0%,rgba(127,227,216,.09),transparent 55%);
+  --mc-g-fill:linear-gradient(160deg,rgba(9,44,41,.74),rgba(4,23,21,.90));
+  --mc-g-hair:1px solid rgba(127,227,216,.20);
+  --mc-g-hair-on:1px solid rgba(10,188,176,.55);
+  --mc-g-spec:inset 0 1px 0 rgba(255,255,255,.09);
+  --mc-g-lift:0 26px 60px rgba(0,0,0,.44);
+}
+
+/* ---------- superfícies escuras (o vidro da marca) ---------- */
+.fm-pillar,.fm-audience-card,.fm-faq-item,.fm-radar-kpi,.fm-partner-card,
+.fm-engine,.fm-dec5-card,.fm-risk-col,.fm-tool,.fm-case,.fm-compare-wrap,
+.fm-risk-obj article{
+  background-image:var(--mc-g-sheen),var(--mc-g-tint),var(--mc-g-fill) !important;
+  background-size:260% 100%,100% 100%,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:0 0,0 0,0 0 !important;
+  border:var(--mc-g-hair) !important;
+  box-shadow:var(--mc-g-spec),0 18px 44px rgba(0,0,0,.32) !important;
+  transition:transform .3s var(--mc-ease),border-color .3s ease,
+             box-shadow .3s ease,background-position .85s var(--mc-ease) !important;
+}
+
+/* o brilho atravessa o vidro no hover (não no repouso: nada de ruído parado) */
+.fm-pillar:hover,.fm-audience-card:hover,.fm-faq-item:hover,.fm-radar-kpi:hover,
+.fm-partner-card:hover,.fm-dec5-card:hover,.fm-risk-col:hover,.fm-tool:hover,
+.fm-case:hover{
+  transform:translateY(-4px);
+  border:var(--mc-g-hair-on) !important;
+  box-shadow:var(--mc-g-spec),var(--mc-g-lift) !important;
+  background-position:100% 0,0 0,0 0 !important;
+}
+.fm-faq-item[open]{
+  border:var(--mc-g-hair-on) !important;
+  box-shadow:var(--mc-g-spec),0 22px 54px rgba(0,0,0,.40) !important;
+}
+
+/* o mecanismo é a assinatura: é o ÚNICO cartão com blur real */
+.fm-engine{
+  -webkit-backdrop-filter:blur(14px) saturate(120%);
+  backdrop-filter:blur(14px) saturate(120%);
+}
+
+/* ---------- faixas CLARAS (dor e prova): vidro de papel ---------- */
+.fm-band-light .fm-evidence-card,
+.fm-band-light .fm-method-layer,
+.fm-band-light .fm-case{
+  background-image:var(--mc-g-sheen-light),
+                   linear-gradient(180deg,rgba(255,255,255,.97),rgba(244,251,250,.92)) !important;
+  background-size:260% 100%,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:0 0,0 0 !important;
+  border:1px solid rgba(6,37,49,.11) !important;
+  box-shadow:inset 0 1px 0 #fff,0 16px 38px rgba(6,37,49,.10) !important;
+  transition:transform .3s var(--mc-ease),box-shadow .3s ease,
+             border-color .3s ease,background-position .85s var(--mc-ease) !important;
+}
+.fm-band-light .fm-evidence-card:hover,
+.fm-band-light .fm-method-layer:hover,
+.fm-band-light .fm-case:hover{
+  transform:translateY(-4px);
+  border-color:rgba(10,188,176,.40) !important;
+  box-shadow:inset 0 1px 0 #fff,0 24px 54px rgba(6,37,49,.16) !important;
+  background-position:100% 0,0 0 !important;
+}
+
+/* cartelas brancas (Estudos e "pedido x proposta"): vidro de papel */
+.fm-dest-link{
+  background-image:var(--mc-g-sheen-light),linear-gradient(180deg,#fff,#f6fbfa) !important;
+  background-size:260% 100%,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:0 0,0 0 !important;
+  border-color:rgba(10,188,176,.36) !important;
+  box-shadow:inset 0 1px 0 #fff,0 14px 34px rgba(0,0,0,.30) !important;
+  transition:transform .3s var(--mc-ease),box-shadow .3s ease,
+             border-color .3s ease,background-position .85s var(--mc-ease) !important;
+}
+.fm-dest-link:hover{
+  background-position:100% 0,0 0 !important;
+  box-shadow:inset 0 1px 0 #fff,0 24px 54px rgba(0,0,0,.42) !important;
+}
+.fm-dest-img img{transition:transform .6s var(--mc-ease);}
+.fm-dest-link:hover .fm-dest-img img{transform:scale(1.06);}
+
+.fm-valor-col{
+  background-image:var(--mc-g-sheen-light),linear-gradient(180deg,#fff,#f7fcfb) !important;
+  border:1px solid rgba(6,37,49,.12) !important;
+  box-shadow:inset 0 1px 0 #fff,0 10px 26px rgba(6,37,49,.07) !important;
+  transition:transform .3s var(--mc-ease),box-shadow .3s ease,
+             border-color .3s ease !important;
+}
+.fm-valor-col--ok{
+  border-color:rgba(10,188,176,.55) !important;
+  background-image:radial-gradient(120% 100% at 0% 0%,rgba(10,188,176,.12),transparent 62%),
+                   linear-gradient(180deg,#fff,#f1fcfa) !important;
+  box-shadow:inset 0 1px 0 #fff,0 14px 34px rgba(10,188,176,.16) !important;
+}
+.fm-valor-col--ok:hover{transform:translateY(-3px);}
+
+/* ---------- RADAR · dado vivo ---------- */
+.fm-radar-kpi b{color:var(--mc-teal) !important;}
+.fm-radar-selo::before{
+  content:"";display:inline-block;width:7px;height:7px;border-radius:50%;
+  background:var(--mc-teal);margin-right:8px;vertical-align:middle;
+  box-shadow:0 0 0 4px rgba(10,188,176,.16),0 0 14px rgba(10,188,176,.75);
+}
+.fm-radar-areas li{
+  background:linear-gradient(160deg,rgba(9,44,41,.55),rgba(4,23,21,.60)) !important;
+  border:1px solid rgba(127,227,216,.16) !important;
+  border-radius:14px !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07) !important;
+  transition:transform .25s var(--mc-ease),border-color .25s ease !important;
+}
+.fm-radar-areas li:hover{
+  transform:translateY(-2px);
+  border-color:rgba(10,188,176,.45) !important;
+}
+
+/* ---------- DECISÃO · o numeral vira uma pastilha de vidro ---------- */
+.fm-dec5-card .n{
+  display:inline-grid;place-items:center;min-width:34px;height:34px;padding:0 8px;
+  border-radius:10px;border:1px solid rgba(127,227,216,.22);
+  background:linear-gradient(150deg,rgba(10,188,176,.16),rgba(10,188,176,.04));
+  color:var(--mc-teal-light) !important;font-weight:700;letter-spacing:.04em;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10);
+}
+
+/* ---------- COMPARATIVO · a coluna do Método é o vidro teal ---------- */
+.fm-compare thead th.destaque{
+  background:rgba(10,188,176,.16) !important;
+  color:var(--mc-teal-light) !important;
+}
+.fm-compare td.destaque{
+  background:linear-gradient(180deg,rgba(10,188,176,.14),rgba(10,188,176,.08)) !important;
+  box-shadow:inset 1px 0 0 rgba(10,188,176,.30),
+             inset -1px 0 0 rgba(10,188,176,.30) !important;
+}
+
+/* ---------- RISCOS · o que NÃO fazemos usa o acento laranja ---------- */
+.fm-risk-col.nao{border-color:rgba(217,123,77,.34) !important;}
+.fm-risk-col.nao li::before{
+  background:var(--mc-orange) !important;
+  box-shadow:0 0 10px rgba(217,123,77,.45) !important;
+}
+
+/* ---------- MÉTODO · as 7 pílulas e as linhas do componente T ---------- */
+.fm-mech-step{
+  background-color:transparent !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 20px rgba(0,0,0,.22) !important;
+  transition:transform .25s ease,border-color .25s ease,
+             background-color .25s ease,box-shadow .25s ease !important;
+}
+.fm-mech-step:hover{
+  background-color:rgba(10,188,176,.14) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 12px 26px rgba(0,0,0,.30) !important;
+}
+.fm-mech-step:first-child{
+  background-image:linear-gradient(135deg,var(--mc-teal),var(--mc-teal-dark)) !important;
+  border-color:transparent !important;
+  color:#04222a !important;
+  box-shadow:0 10px 26px rgba(10,188,176,.30) !important;
+}
+.fm-mech-step:last-child{
+  background-image:linear-gradient(150deg,rgba(217,123,77,.26),rgba(217,123,77,.10)) !important;
+  border-color:rgba(217,123,77,.55) !important;
+  color:#ffd9c4 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 8px 20px rgba(217,123,77,.18) !important;
+}
+.fm-t .fm-t-linha:hover{
+  background:linear-gradient(90deg,rgba(10,188,176,.10),rgba(10,188,176,.02)) !important;
+  box-shadow:inset 3px 0 0 var(--mc-teal) !important;
+  border-radius:8px !important;
+}
+
+/* ---------- AÇÃO · o único glow contínuo (é o pedido de decisão) ---------- */
+.fm-step .n{
+  background:linear-gradient(150deg,rgba(10,188,176,.16),rgba(10,188,176,.04));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 6px 16px rgba(0,0,0,.18);
+}
+
+/* ---------- CONTATO · painel de vidro (já tinha blur; agora com fio) ---------- */
+.fm-contact-side,.fm-form-card{
+  background-image:var(--mc-g-sheen),
+                   linear-gradient(160deg,rgba(7,33,31,.80),rgba(4,24,22,.92)) !important;
+  background-size:260% 100%,100% 100% !important;
+  background-repeat:no-repeat !important;
+  background-position:0 0,0 0 !important;
+  border-color:rgba(127,227,216,.18) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 28px 70px rgba(0,0,0,.36) !important;
+}
+.fm-form-card :is(input,textarea,select):focus-visible,
+.fm-contact-side a:focus-visible{
+  outline:2px solid var(--mc-teal);
+  outline-offset:3px;
+}
+
+/* ---------- movimento contínuo (só onde há dado/ação) ---------- */
+@keyframes mcPulseDot{
+  0%,100%{opacity:.55;transform:scale(.9);}
+  50%{opacity:1;transform:scale(1.1);}
+}
+@keyframes mcGlowPulse{
+  0%,100%{box-shadow:0 12px 30px rgba(10,188,176,.32);}
+  50%{box-shadow:0 18px 46px rgba(10,188,176,.58);}
+}
+html.fm-movimento .fm-radar-selo::before{animation:mcPulseDot 3.2s ease-in-out infinite;}
+html.fm-movimento .fm-decision-cta .fm-btn-primary{animation:mcGlowPulse 4.6s ease-in-out infinite;}
+
+/* ---------- acessibilidade ---------- */
+@media (prefers-reduced-motion:reduce){
+  .fm-radar-selo::before,
+  .fm-decision-cta .fm-btn-primary{animation:none !important;}
+  .fm-pillar,.fm-audience-card,.fm-faq-item,.fm-radar-kpi,.fm-partner-card,
+  .fm-engine,.fm-dec5-card,.fm-risk-col,.fm-tool,.fm-case,.fm-compare-wrap,
+  .fm-band-light .fm-evidence-card,.fm-band-light .fm-method-layer,
+  .fm-band-light .fm-case,.fm-dest-link,.fm-valor-col,.fm-mech-step,
+  .fm-radar-areas li,.fm-dest-img img{transition:none !important;}
+}
+@media (prefers-contrast:more){
+  .fm-pillar,.fm-audience-card,.fm-faq-item,.fm-radar-kpi,.fm-partner-card,
+  .fm-engine,.fm-dec5-card,.fm-risk-col,.fm-tool,.fm-case,.fm-compare-wrap,
+  .fm-contact-side,.fm-form-card{
+    background-image:none !important;background-color:#062531 !important;
+    border-color:rgba(10,188,176,.70) !important;box-shadow:none !important;
+  }
+  .fm-band-light .fm-evidence-card,.fm-band-light .fm-method-layer,
+  .fm-band-light .fm-case,.fm-dest-link,.fm-valor-col{
+    background-image:none !important;background-color:#fff !important;
+    border-color:rgba(6,37,49,.45) !important;box-shadow:none !important;
+  }
+  .fm-radar-selo::before{box-shadow:none;}
+}
+
+/* ---------- fallback: sem backdrop-filter o vidro do mecanismo fecha ---------- */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .fm-engine{background-image:none !important;background-color:rgba(4,24,22,.96) !important;}
+}
+
