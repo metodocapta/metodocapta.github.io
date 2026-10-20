@@ -590,6 +590,53 @@ def checar_codificacao(raiz):
     return n
 
 
+def checar_destaques(raiz):
+    """Destaques: o JSON e o DADO do slider — estrutura, ordem e origem.
+
+    Subconjunto PORTATIL: nao olha o calendario (um push manual nao pode falhar
+    so porque o Substack esta quieto). Frescor, quantidade e link vivo ficam no
+    portao do build (site_verificar.py) e no coletor (substack_destaques.py).
+    """
+    caminho = os.path.join(raiz, "assets", "destaques.json")
+    try:
+        with open(caminho, "r", encoding="utf-8-sig") as fh:
+            dado = json.load(fh)
+    except (OSError, ValueError) as exc:
+        erro("assets/destaques.json ausente ou ilegivel: %s" % exc)
+        return
+    itens = dado.get("itens") if isinstance(dado, dict) else None
+    if not isinstance(itens, list) or not itens:
+        erro("assets/destaques.json: lista 'itens' vazia — o slider sai do ar")
+        return
+
+    links, datas = [], []
+    for pos, it in enumerate(itens, 1):
+        if not isinstance(it, dict):
+            erro("destaques.json: item %d nao e objeto JSON" % pos)
+            continue
+        for campo in ("titulo_estrategico", "link", "data", "data_pt", "resumo"):
+            if not str(it.get(campo) or "").strip():
+                erro("destaques.json: item %d sem '%s' (card incompleto)" % (pos, campo))
+        link = str(it.get("link") or "").strip()
+        if link:
+            if not link.startswith("https://") or "substack.com" not in link:
+                erro("destaques.json: item %d com link fora do Substack: %s" % (pos, link[:60]))
+            if link in links:
+                erro("destaques.json: link repetido no slider: %s" % link[:60])
+            links.append(link)
+        img = str(it.get("imagem") or "")
+        if img and "substackcdn.com" not in img:
+            erro("destaques.json: item %d com imagem fora do substackcdn: %s" % (pos, img[:60]))
+        datas.append(str(it.get("data") or "")[:10])
+
+    if all(re.match(r"^\d{4}-\d{2}-\d{2}$", d) for d in datas):
+        if any(a < b for a, b in zip(datas, datas[1:])):
+            erro("destaques.json: fora de ordem — itens[0] tem de ser o post mais novo "
+                 "(o cartao e o hub leem itens[0] como 'ultimo')")
+    else:
+        erro("destaques.json: data fora do padrao AAAA-MM-DD")
+
+
 def main():
     ap = argparse.ArgumentParser(description="Invariantes do repositorio publicado.")
     ap.add_argument("--raiz", default=".", help="raiz do site (default: pasta atual)")
@@ -607,6 +654,7 @@ def main():
     checar_css_menu(raiz)
     checar_imagens(raiz)
     checar_assets_externos(raiz)
+    checar_destaques(raiz)
     checar_camadas_decorativas(raiz)
     checar_camadas_metodo(raiz)
     checar_mapa(raiz)

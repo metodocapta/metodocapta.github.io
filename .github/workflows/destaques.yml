@@ -196,8 +196,39 @@ jobs:
                   "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
                   "imagem": imagem_leve(imagem(item)),
               })
-              if len(itens) >= LIMITE:
+              if len(itens) >= LIMITE + 3:
                   break
+
+          # Link vivo: so o 404/410 definitivo tira o card. Cloudflare (403),
+          # timeout e 5xx NAO provam que o post sumiu — nesse caso o item fica.
+          def link_vivo(u):
+              for metodo in ("HEAD", "GET"):
+                  try:
+                      req = urllib.request.Request(u, method=metodo,
+                                                   headers={"User-Agent": UA})
+                      with urllib.request.urlopen(req, timeout=20) as r:
+                          return 200 <= int(getattr(r, "status", 200)) < 400
+                  except urllib.error.HTTPError as e:
+                      if e.code in (404, 410):
+                          return False
+                      if metodo == "HEAD" and e.code in (405, 501):
+                          continue
+                      return True
+                  except Exception:
+                      return True
+              return True
+
+          vivos = []
+          for it in itens:
+              if len(vivos) >= LIMITE:
+                  break
+              if link_vivo(it["link"]):
+                  vivos.append(it)
+              else:
+                  print("descartado (link 404/410):", it["link"])
+          itens = sorted(vivos, key=lambda it: it.get("data") or "", reverse=True)[:LIMITE]
+          if len(itens) < LIMITE:
+              print("AVISO: apenas", len(itens), "item(ns) vivo(s) no feed")
 
           dado = {
               "gerado_em": date.today().isoformat(),
