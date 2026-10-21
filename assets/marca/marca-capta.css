@@ -311,6 +311,12 @@ footer::before,.fm-footer::before{
 .fm-site{overflow:visible !important;}
 html,body{overflow-x:clip !important;}
 
+/* --- 1b) cabecalho das paginas de secao: acompanha a rolagem como o .fm-header -- */
+/* .site-hd e filho direto do body e o overflow-x:clip acima preserva o sticky.
+   z-index 900 fica acima do conteudo e abaixo do WhatsApp (9998) e do modal (9999). */
+.site-hd{position:sticky;top:0;z-index:900;}
+html{scroll-padding-top:96px;}
+
 .fm-header{
   background:transparent !important;
   border-bottom-color:transparent !important;
