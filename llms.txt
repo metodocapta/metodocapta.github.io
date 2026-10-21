@@ -133,6 +133,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## FAQ e mapa
 
+- [Comparativo de caminhos](https://metodocapta.github.io/comparativo/): fazer internamente, freelancer ou método — risco, prazo, conformidade, continuidade e quando não contratar.
 - [Objeções antes de contratar](https://metodocapta.github.io/objecoes/): as dez dúvidas que travam a decisão — consultoria, estatuto, projeto, equipe, verba e garantias.
 - [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
 - [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
