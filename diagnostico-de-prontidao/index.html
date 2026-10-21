@@ -221,8 +221,8 @@ details p{margin:10px 0 0;color:var(--muted)}
     var idTxt=(org?'Organização: '+org:'')+(org&&nome?' · ':'')+(nome||'');
     relIdent.textContent=idTxt;
     relIdent.className='rel-ident'+(idTxt?' on':'');
-    var msg='Olá! Vim da ferramenta de diagnóstico. Meu resultado: '+n+'/'+cs.length+' ('+pct+'%) — '+lv+'. Meta '+brl(m)+' → '+qtd+' incentivadoras.';
-    if(faltam.length){ msg+=' Prioridades: '+faltam.slice(0,3).map(relTxt).join('; ')+'.'; }
+    var msg='Olá! Vim da ferramenta de diagnóstico. Quero o diagnóstico de prontidão (72h). Meu resultado: '+n+'/'+cs.length+' ('+pct+'%) — '+lv+'. Meta '+brl(m)+' → '+qtd+' incentivadoras.';
+    if(faltam.length){ msg+=' Prioridades: '+faltam.slice(0,3).map(function(c){return relTxt(c).replace(/\.$/,'');}).join('; ')+'.'; }
     msg+=' Minha organização é: '+org;
     if(nome) msg+=' ('+nome+')';
     relWa.href='https://wa.me/5544999120638?text='+encodeURIComponent(msg);
