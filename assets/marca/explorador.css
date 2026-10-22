@@ -7,6 +7,23 @@
    Movimento: transições curtas; desligadas em prefers-reduced-motion.
    ========================================================================== */
 
+/* ============================================================================
+   DENSIDADE E ESCALA DA HOME
+   - menos respiro vertical entre secoes (o vazio dominava a leitura)
+   - escala tipografica +20% (h2, h3, lead, corpo, apoio e numero da secao)
+   ========================================================================== */
+:root{
+  --mc-space-section:clamp(36px,4.2vw,60px);
+  --mc-fs-h2:clamp(35px,4.2vw,55px);
+  --mc-fs-h3:clamp(23px,2.3vw,29px);
+  --mc-fs-lead:clamp(19px,1.56vw,22px);
+  --mc-fs-body:19px;
+  --mc-fs-small:17px;
+}
+/* o numero da secao (kicker) ja e grande: mantem o tamanho original para nao
+   quebrar em varias linhas na coluna estreita do metodo */
+.fm-section h2{margin-top:12px}
+
 /* ---------- A) HERO · navegação por intenção ---------- */
 .fm-intencao{margin:20px 0 8px;max-width:660px}
 .fm-intencao-titulo{margin:0 0 9px;font:600 11.5px/1.4 Oswald,Inter,sans-serif;
