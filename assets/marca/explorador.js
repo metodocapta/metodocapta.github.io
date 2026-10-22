@@ -15,163 +15,143 @@
   var doc = document;
   doc.documentElement.classList.add('fm-js');
 
+  /* instrumentacao: usa a camada do site (fm-eventos.js). Sem provedor = zero rede. */
+  function evento(nome, dados) {
+    if (typeof window.fmEvento === 'function') {
+      try { window.fmEvento(nome, dados || {}); } catch (e) { /* noop */ }
+    }
+  }
+
   /* ==========================================================================
      A) ENGINE — seis etapas
      ========================================================================== */
-  function initEngine() {
-    var box = doc.getElementById('fm-engine');
-    if (!box) return;
-
+  function initEtapas() {
     var cards = Array.prototype.slice.call(doc.querySelectorAll('.fm-pillars .fm-pillar'));
-    var panels = Array.prototype.slice.call(box.querySelectorAll('.fm-engine-p'));
-    if (!cards.length || !panels.length) return;
+    var rail = doc.querySelector('.fm-etapas-rail');
+    if (!cards.length) return;
 
-    var total = Math.min(cards.length, panels.length);
-    var atualEl = box.querySelector('[data-engine-atual]');
-    var btnPrev = box.querySelector('[data-engine-dir="-1"]');
-    var btnNext = box.querySelector('[data-engine-dir="1"]');
-    var atual = 1;
+    var atual = 0;
 
-    function verbo(i) {
-      var el = cards[i] && cards[i].querySelector('.fm-pillar-verb');
-      return el ? el.textContent.replace(/\s+/g, ' ').trim() : '';
+    function marcarRail(n) {
+      if (!rail) return;
+      Array.prototype.slice.call(rail.querySelectorAll('[data-rail]')).forEach(function (b) {
+        if (n && Number(b.getAttribute('data-rail')) === n) b.setAttribute('aria-current', 'step');
+        else b.removeAttribute('aria-current');
+      });
     }
 
-    function render(n, atualizarHash) {
-      n = Math.max(1, Math.min(total, n));
-      atual = n;
-
+    function fecharTodos(exceto) {
       cards.forEach(function (card, i) {
-        var on = i === n - 1;
+        var btn = card.querySelector('.fm-pilar-toggle');
+        var det = card.querySelector('.fm-pilar-detalhe');
+        if (!btn || !det) return;
+        var on = (i + 1) === exceto;
+        det.hidden = !on;
+        btn.setAttribute('aria-expanded', on ? 'true' : 'false');
         card.classList.toggle('is-ativa', on);
-        card.setAttribute('aria-selected', on ? 'true' : 'false');
-        card.setAttribute('tabindex', on ? '0' : '-1');
+        var txt = btn.querySelector('.fm-pilar-toggle-txt');
+        if (txt) txt.textContent = on ? 'Fechar detalhe' : 'O que esta etapa entrega';
       });
-
-      panels.forEach(function (p, i) {
-        var on = i === n - 1;
-        p.hidden = !on;
-        p.setAttribute('aria-hidden', on ? 'false' : 'true');
-        p.setAttribute('tabindex', on ? '0' : '-1');
-      });
-
-      if (atualEl) {
-        atualEl.textContent = 'Etapa ' + n + ' de ' + total + (verbo(n - 1) ? ' \u00b7 ' + verbo(n - 1) : '');
-      }
-      if (btnPrev) btnPrev.disabled = n === 1;
-      if (btnNext) btnNext.disabled = n === total;
-
-      if (atualizarHash) {
-        try {
-          history.replaceState(null, '', location.pathname + location.search + '#fm-engine-' + n);
-        } catch (e) { /* ambientes sem history */ }
-      }
     }
 
-    /* papéis e rótulos: as 6 etapas viram abas; o painel vira tabpanel */
-    var lista = doc.querySelector('.fm-pillars');
-    if (lista) {
-      lista.setAttribute('role', 'tablist');
-      if (!lista.getAttribute('aria-label')) {
-        lista.setAttribute('aria-label', 'As seis etapas do Método Capta+');
+    function abrir(n, rolar) {
+      n = Math.max(1, Math.min(cards.length, n));
+      atual = n;
+      fecharTodos(n);
+      marcarRail(n);
+      if (rolar) {
+        var card = cards[n - 1];
+        if (card && card.scrollIntoView) {
+          var reduz = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          card.scrollIntoView({ behavior: reduz ? 'auto' : 'smooth', block: 'center' });
+        }
       }
+      try {
+        history.replaceState(null, '', location.pathname + location.search + '#fm-etapa-' + n);
+      } catch (e) { /* noop */ }
+      try {
+        doc.dispatchEvent(new CustomEvent('fm:etapa', { detail: { n: n } }));
+      } catch (e) { /* noop */ }
     }
+
+    function fechar() {
+      atual = 0;
+      fecharTodos(0);
+      marcarRail(0);
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    }
+
     cards.forEach(function (card, i) {
-      if (i >= total) return;
-      var p = panels[i];
-      if (!p.id) p.id = 'fm-engine-p-' + (i + 1);
-      if (!card.id) card.id = 'fm-pilar-' + (i + 1);
-      card.setAttribute('role', 'tab');
-      card.setAttribute('aria-controls', p.id);
-      p.setAttribute('role', 'tabpanel');
-      p.setAttribute('aria-labelledby', card.id);
-      card.addEventListener('click', function () { render(i + 1, true); });
-      /* foco por Tab também ativa (automatic activation) — complemento, não dependência */
-      card.addEventListener('focus', function () { render(i + 1, false); });
-      card.addEventListener('keydown', function (ev) {
-        var k = ev.key;
-        var alvo = -1;
-        if (k === 'ArrowRight' || k === 'ArrowDown') alvo = (i + 1) % total;
-        else if (k === 'ArrowLeft' || k === 'ArrowUp') alvo = (i - 1 + total) % total;
-        else if (k === 'Home') alvo = 0;
-        else if (k === 'End') alvo = total - 1;
-        if (alvo >= 0) {
-          ev.preventDefault();
-          cards[alvo].focus();
-          render(alvo + 1, false);   /* ativação explícita: não depende do evento de foco */
-        } else if (k === 'Enter' || k === ' ') {
-          ev.preventDefault();
-          render(i + 1, true);
+      var btn = card.querySelector('.fm-pilar-toggle');
+      if (!btn) return;
+      btn.addEventListener('click', function () {
+        if (atual === i + 1) {
+          fechar();
+          evento('etapa_fechada', { etapa: i + 1 });
+        } else {
+          abrir(i + 1, false);
+          evento('etapa_aberta', { etapa: i + 1, via: 'card' });
         }
       });
     });
 
-    if (btnPrev) {
-      btnPrev.addEventListener('click', function () {
-        render(atual - 1, true);
-        if (cards[atual - 1]) cards[atual - 1].focus();
-      });
-    }
-    if (btnNext) {
-      btnNext.addEventListener('click', function () {
-        render(atual + 1, true);
-        if (cards[atual - 1]) cards[atual - 1].focus();
+    if (rail) {
+      Array.prototype.slice.call(rail.querySelectorAll('[data-rail]')).forEach(function (b) {
+        b.addEventListener('click', function () {
+          var n = Number(b.getAttribute('data-rail')) || 1;
+          abrir(n, true);
+          evento('rail_etapa', { etapa: n });
+        });
       });
     }
 
-    /* deep-link: #fm-engine-4 ou ?etapa=4 */
-    var inicial = 1;
-    var mHash = /#fm-engine-(\d+)/.exec(location.hash || '');
+    /* deep-link: #fm-etapa-4 ou ?etapa=4 */
+    var mHash = /#fm-etapa-(\d+)/.exec(location.hash || '');
     var mQuery = /[?&]etapa=(\d+)/.exec(location.search || '');
-    if (mHash) inicial = parseInt(mHash[1], 10) || 1;
-    else if (mQuery) inicial = parseInt(mQuery[1], 10) || 1;
-
-    render(inicial, false);
+    var inicial = mHash ? parseInt(mHash[1], 10) : (mQuery ? parseInt(mQuery[1], 10) : 0);
+    if (inicial) abrir(inicial, false);
+    else { fecharTodos(0); marcarRail(0); }
   }
 
-  /* ==========================================================================
-     B) RADAR — filtro UF × área (dados agregados, sem identificar organização)
-     ========================================================================== */
   function initRadar() {
     var sec = doc.getElementById('fm-radar');
     if (!sec) return;
 
     var filtros = doc.getElementById('fm-radar-filtros');
     var selUF = doc.getElementById('fm-radar-uf');
-    var resumo = doc.getElementById('fm-radar-resumo');
+    var btnLimpar = doc.getElementById('fm-radar-limpar');
     var kpiOpCard = doc.getElementById('fm-radar-kpi-op');
     var kpiOp = kpiOpCard ? kpiOpCard.querySelector('b') : null;
-    var areasTitulo = sec.querySelector('.fm-radar-areas-titulo');
-    var btnLimpar = doc.getElementById('fm-radar-limpar');
-    var notaEscopo = doc.getElementById('fm-radar-nota-escopo');
-    var chips = Array.prototype.slice.call(sec.querySelectorAll('[data-area-chip]'));
-    var areaBtns = Array.prototype.slice.call(sec.querySelectorAll('[data-area]'));
-    if (!filtros || !selUF || !resumo || !kpiOpCard || !kpiOp) return;
+    var scopeEl = sec.querySelector('[data-scope]');
+    var scopeTotal = sec.querySelector('[data-scope-total]');
+    var barras = Array.prototype.slice.call(sec.querySelectorAll('.fm-barra'));
+    if (!filtros || !selUF || !kpiOpCard || !kpiOp || !barras.length) return;
 
     var nacional = parseInt(sec.getAttribute('data-nac-op') || '0', 10) || 0;
     var rotuloKpiOriginal = kpiOpCard.querySelector('span') ? kpiOpCard.querySelector('span').textContent : '';
     var estado = { uf: '', area: '' };
+    var dados = null;
+    var carregando = null;
 
-    /* mapa área -> total nacional, lido dos próprios botões renderizados no build */
-    function areaNacional(codigo) {
-      var b = areaBtns.filter(function (el) { return el.getAttribute('data-area') === codigo; })[0];
-      return b ? (parseInt(b.getAttribute('data-nac') || '0', 10) || 0) : 0;
-    }
-    function rotuloArea(codigo) {
-      var b = areaBtns.filter(function (el) { return el.getAttribute('data-area') === codigo; })[0];
-      var sp = b && b.querySelector('span');
-      return sp ? sp.textContent.trim() : codigo;
-    }
     function fmt(n) {
       try { return Number(n).toLocaleString('pt-BR'); } catch (e) { return String(n); }
     }
     function nomeUF(uf) {
-      var op = selUF.querySelector('option[value="' + uf + '"]');
-      return op ? op.textContent.trim() : uf;
+      var o = selUF.querySelector('option[value="' + uf + '"]');
+      return o ? o.textContent.trim() : uf;
     }
-
-    var dados = null;
-    var carregando = null;
+    function barraDe(cod) {
+      return barras.filter(function (x) { return x.getAttribute('data-area') === cod; })[0];
+    }
+    function rotuloArea(cod) {
+      var b = barraDe(cod);
+      var sp = b && b.querySelector('span');
+      return sp ? sp.textContent.trim() : cod;
+    }
+    function nac(cod) {
+      var b = barraDe(cod);
+      return b ? (parseInt(b.getAttribute('data-nac') || '0', 10) || 0) : 0;
+    }
     function carregar() {
       if (dados) return Promise.resolve(dados);
       if (carregando) return carregando;
@@ -182,26 +162,17 @@
         .catch(function () { return null; });
       return carregando;
     }
-
-    function areasDoEscopo() {
+    function areasEscopo() {
       if (estado.uf && dados && dados.estados && dados.estados[estado.uf]) {
         return dados.estados[estado.uf].areas || [];
       }
-      /* sem UF: usa o total nacional de cada área (dos data-nac) */
-      return areaBtns.map(function (el) {
-        return {
-          codigo: el.getAttribute('data-area'),
-          rotulo: (el.querySelector('span') || {}).textContent || '',
-          total: parseInt(el.getAttribute('data-nac') || '0', 10) || 0
-        };
+      return barras.map(function (b) {
+        var cod = b.getAttribute('data-area');
+        return { codigo: cod, total: nac(cod) };
       });
     }
-
-    function totalDoEscopo() {
-      if (!estado.uf) {
-        if (!estado.area) return nacional;
-        return areaNacional(estado.area);
-      }
+    function totalEscopo() {
+      if (!estado.uf) return estado.area ? nac(estado.area) : nacional;
       var est = dados && dados.estados && dados.estados[estado.uf];
       if (!est) return 0;
       if (!estado.area) return parseInt(est.oportunidades || 0, 10) || 0;
@@ -209,59 +180,46 @@
       return a ? (parseInt(a.total, 10) || 0) : 0;
     }
 
-    function pintarAreas() {
-      var doEscopo = areasDoEscopo();
-      var porCodigo = {};
-      doEscopo.forEach(function (a) { porCodigo[a.codigo] = parseInt(a.total || 0, 10) || 0; });
-
-      areaBtns.forEach(function (el) {
-        var cod = el.getAttribute('data-area');
-        var num = el.querySelector('b');
-        var temNoEscopo = !estado.uf || Object.prototype.hasOwnProperty.call(porCodigo, cod);
-        if (num) num.textContent = estado.uf ? (temNoEscopo ? fmt(porCodigo[cod] || 0) : '0') : fmt(areaNacional(cod));
-        el.setAttribute('aria-pressed', cod === estado.area ? 'true' : 'false');
-        el.classList.toggle('is-vazio', !!estado.uf && !temNoEscopo);
-      });
-    }
-
     function render() {
-      var total = totalDoEscopo();
-      var escopo = [];
-      if (estado.uf) escopo.push(nomeUF(estado.uf));
-      else escopo.push('Brasil');
-      if (estado.area) escopo.push('em ' + rotuloArea(estado.area));
+      var porCodigo = {};
+      areasEscopo().forEach(function (a) {
+        porCodigo[a.codigo] = parseInt(a.total || 0, 10) || 0;
+      });
+      var maior = 1;
+      barras.forEach(function (b) {
+        var v = estado.uf ? (porCodigo[b.getAttribute('data-area')] || 0) : nac(b.getAttribute('data-area'));
+        if (v > maior) maior = v;
+      });
 
+      barras.forEach(function (b) {
+        var cod = b.getAttribute('data-area');
+        var temNoEscopo = !estado.uf || Object.prototype.hasOwnProperty.call(porCodigo, cod);
+        var v = estado.uf ? (porCodigo[cod] || 0) : nac(cod);
+        var num = b.querySelector('b');
+        if (num) num.textContent = fmt(v);
+        var fill = b.querySelector('.fm-barra-fill');
+        if (fill) fill.style.width = Math.max(2, Math.round(v * 100 / maior)) + '%';
+        b.setAttribute('aria-pressed', cod === estado.area ? 'true' : 'false');
+        b.classList.toggle('is-vazio', !!estado.uf && !temNoEscopo);
+        b.setAttribute('data-dica', rotuloArea(cod) + ': ' + fmt(v)
+          + (estado.uf ? ' em ' + nomeUF(estado.uf) : ' no total'));
+      });
+
+      var total = totalEscopo();
+      if (scopeEl) scopeEl.textContent = estado.uf ? nomeUF(estado.uf) : 'Brasil';
+      if (scopeTotal) scopeTotal.textContent = fmt(total);
       kpiOp.textContent = fmt(total);
       var label = kpiOpCard.querySelector('span');
       if (label) {
         label.textContent = (estado.uf || estado.area) ? 'oportunidades no recorte' : rotuloKpiOriginal;
       }
-
-      if (total === 0 && (estado.uf || estado.area)) {
-        resumo.innerHTML = escopo.join(' ') + ' \u2014 <b>sem oportunidade registrada nesse recorte</b>';
-      } else {
-        resumo.innerHTML = escopo.join(' ') + ' \u00b7 <b>' + fmt(total) + '</b> oportunidade' + (total === 1 ? '' : 's')
-          + (estado.area ? '' : ' acompanhada' + (total === 1 ? '' : 's'));
-      }
-
-      if (areasTitulo) {
-        var rotulo = estado.uf ? 'Áreas no território' : 'Áreas de captação';
-        areasTitulo.textContent = rotulo + ' \u00b7 ' + fmt(total) + ' oportunidade' + (total === 1 ? '' : 's');
-      }
-
-      chips.forEach(function (c) {
-        c.setAttribute('aria-pressed', c.getAttribute('data-area-chip') === estado.area ? 'true' : 'false');
-      });
       if (btnLimpar) btnLimpar.hidden = !(estado.uf || estado.area);
-      if (notaEscopo) notaEscopo.hidden = !(estado.uf || estado.area);
-
-      pintarAreas();
     }
 
-    function ativarFiltros() {
-      if (!filtros.hasAttribute('hidden')) return;
+    function ativar() {
+      if (!filtros.hasAttribute('hidden')) { render(); return; }
       carregar().then(function (j) {
-        if (!j) return;            /* sem dado: mantém a seção estática (nunca número falso) */
+        if (!j) return;              /* sem dado: mantém a seção estática */
         filtros.removeAttribute('hidden');
         render();
       });
@@ -270,21 +228,15 @@
     selUF.addEventListener('change', function () {
       estado.uf = selUF.value || '';
       render();
+      evento('radar_filtro_uf', { uf: estado.uf || 'br' });
     });
 
-    chips.forEach(function (c) {
-      c.addEventListener('click', function () {
-        var cod = c.getAttribute('data-area-chip');
+    barras.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var cod = b.getAttribute('data-area');
         estado.area = estado.area === cod ? '' : cod;
         render();
-      });
-    });
-
-    areaBtns.forEach(function (el) {
-      el.addEventListener('click', function () {
-        var cod = el.getAttribute('data-area');
-        estado.area = estado.area === cod ? '' : cod;
-        render();
+        evento('radar_filtro_area', { area: estado.area || 'todas' });
       });
     });
 
@@ -294,27 +246,271 @@
         estado.area = '';
         selUF.value = '';
         render();
+        evento('radar_limpar', {});
       });
     }
 
-    /* carrega só quando a seção se aproxima da viewport (ou no primeiro foco) */
-    if ('IntersectionObserver' in window) {
-      var obs = new IntersectionObserver(function (ents) {
-        if (ents.some(function (e) { return e.isIntersecting; })) {
-          obs.disconnect();
-          ativarFiltros();
-        }
-      }, { rootMargin: '250px 0px' });
-      obs.observe(sec);
-    } else {
-      ativarFiltros();
+    /* Carrega o recorte (8 KB) na inicializacao. NAO depende de IntersectionObserver:
+       em aba oculta/segundo plano o callback pode nunca disparar e os filtros ficariam
+       presos no estado escondido. */
+    ativar();
+  }
+
+  /* Simulador de carteira: conta explícita (meta ÷ ticket), sem alíquota inventada */
+  function initSimulador() {
+    var meta = doc.getElementById('fm-sim-meta');
+    var ticket = doc.getElementById('fm-sim-ticket');
+    if (!meta || !ticket) return;
+    var outMeta = doc.querySelector('[data-sim-meta]');
+    var outTicket = doc.querySelector('[data-sim-ticket]');
+    var outN = doc.querySelector('[data-sim-n]');
+
+    function brl(n) {
+      try { return 'R$ ' + Number(n).toLocaleString('pt-BR'); } catch (e) { return 'R$ ' + n; }
     }
-    sec.addEventListener('focusin', ativarFiltros, { once: false });
+    function calc(enviar) {
+      var m = parseInt(meta.value, 10) || 0;
+      var t = parseInt(ticket.value, 10) || 1;
+      var n = Math.max(1, Math.ceil(m / t));
+      if (outMeta) outMeta.textContent = brl(m);
+      if (outTicket) outTicket.textContent = brl(t);
+      if (outN) outN.textContent = String(n);
+      if (enviar) evento('simulador_carteira', { meta: m, ticket: t, incentivadores: n });
+    }
+
+    meta.addEventListener('input', function () { calc(false); });
+    ticket.addEventListener('input', function () { calc(false); });
+    meta.addEventListener('change', function () { calc(true); });
+    ticket.addEventListener('change', function () { calc(true); });
+    calc(false);
+  }
+
+  /* Prontidão: derivada das respostas do mini-diagnóstico (sessionStorage, sem cookie) */
+  function initProntidao() {
+    var box = doc.getElementById('fm-prontidao');
+    if (!box) return;
+    var elValor = box.querySelector('[data-pront-valor]');
+    var elFalta = box.querySelector('[data-pront-falta]');
+    var dados = null;
+    try { dados = JSON.parse(sessionStorage.getItem('fm-minidiag') || 'null'); } catch (e) { dados = null; }
+    if (!dados) return;             /* sem respostas: a faixa fica oculta */
+
+    var itens = ['estatuto', 'projeto', 'certidoes', 'parceiros'];
+    var nomes = { estatuto: 'estatuto', projeto: 'projeto', certidoes: 'certidões', parceiros: 'empresas/editais' };
+    var tem = Array.isArray(dados.tem) ? dados.tem : [];
+    var faltas = itens.filter(function (i) { return tem.indexOf(i) < 0; });
+    var pct = Math.round(((itens.length - faltas.length) / itens.length) * 100);
+
+    if (elValor) elValor.textContent = pct + '%';
+    if (elFalta) {
+      elFalta.textContent = faltas.length
+        ? 'Falta: ' + faltas.map(function (f) { return nomes[f]; }).join(', ')
+          + ' (de ' + itens.length + ' itens).'
+        : 'Você marcou os ' + itens.length + ' itens básicos.';
+    }
+    box.hidden = false;
+
+    var refazer = box.querySelector('[data-pront-refazer]');
+    if (refazer) {
+      refazer.addEventListener('click', function () {
+        try { sessionStorage.removeItem('fm-minidiag'); } catch (e) {}
+        box.hidden = true;
+        var md = doc.getElementById('fm-minidiag');
+        if (md) { md.open = true; md.scrollIntoView({ block: 'center' }); }
+        evento('prontidao_refazer', {});
+      });
+    }
+  }
+
+  function initMiniDiag() {
+    var box = doc.getElementById('fm-minidiag');
+    if (!box) return;
+    var form = box.querySelector('[data-md-form]');
+    var passos = Array.prototype.slice.call(box.querySelectorAll('[data-md-passo]'));
+    var prog = box.querySelector('[data-md-prog]');
+    var seguir = box.querySelector('[data-md-seguir]');
+    var voltar = box.querySelector('[data-md-voltar]');
+    var saida = box.querySelector('[data-md-resultado]');
+    if (!form || !passos.length || !prog || !seguir || !saida) return;
+
+    var atual = 1;
+    var aberto = false;
+
+    function resposta(nome) {
+      var el = form.querySelector('[name="' + nome + '"]:checked');
+      return el ? el.value : '';
+    }
+    function marcados(nome) {
+      return Array.prototype.slice.call(form.querySelectorAll('[name="' + nome + '"]:checked'))
+        .map(function (e) { return e.value; });
+    }
+    function podeSeguir() {
+      if (atual === 1) return !!resposta('tipo');
+      if (atual === 2) return true;
+      return !!resposta('urgencia');
+    }
+    function pintar() {
+      passos.forEach(function (p) {
+        p.hidden = Number(p.getAttribute('data-md-passo')) !== atual;
+      });
+      prog.textContent = 'Pergunta ' + atual + ' de 3';
+      seguir.disabled = !podeSeguir();
+      seguir.textContent = atual === 3 ? 'Ver recomendação' : 'Continuar';
+      if (voltar) voltar.hidden = atual === 1;
+    }
+
+    function recomendar() {
+      var tipo = resposta('tipo');
+      var tem = marcados('tem');
+      var urg = resposta('urgencia');
+      var faltas = [];
+      if (tem.indexOf('estatuto') < 0) faltas.push('estatuto atualizado');
+      if (tem.indexOf('projeto') < 0) faltas.push('projeto escrito');
+      if (tem.indexOf('certidoes') < 0) faltas.push('certidões em dia');
+      if (tem.indexOf('parceiros') < 0) faltas.push('empresas ou editais mapeados');
+
+      var r;
+      if (tipo === 'nao') {
+        r = {
+          titulo: 'O primeiro passo é existir juridicamente',
+          porque: 'Sem CNPJ e personalidade jurídica não há como receber recurso público ou incentivado.',
+          links: [['/diagnostico-de-prontidao/', 'Diagnóstico de Prontidão'],
+                  ['/guias/como-montar-um-plano-de-trabalho/', 'Como montar um plano de trabalho']]
+        };
+      } else if (urg === 'edital' && (tem.indexOf('certidoes') < 0 || tem.indexOf('estatuto') < 0)) {
+        r = {
+          titulo: 'Prioridade: prontidão documental',
+          porque: 'Com edital aberto, o que costuma travar não é o projeto: é documento vencido ou estatuto que não cobre o objeto.',
+          links: [['/diagnostico-de-prontidao/', 'Diagnóstico de Prontidão'],
+                  ['/guias/checklist-de-habilitacao-documental/', 'Checklist de habilitação']]
+        };
+      } else if (tem.indexOf('projeto') < 0 || urg === 'estruturar') {
+        r = {
+          titulo: 'Prioridade: estruturar o projeto',
+          porque: 'Sem metas, etapas e orçamento por rubrica, a oportunidade não vira proposta.',
+          links: [['/guias/como-montar-um-plano-de-trabalho/', 'Como montar um plano de trabalho'],
+                  ['/guias/como-montar-indicadores-de-impacto/', 'Indicadores de impacto']]
+        };
+      } else if (tem.indexOf('parceiros') < 0) {
+        r = {
+          titulo: 'Prioridade: carteira de incentivadores',
+          porque: 'Captação incentivada é matemática de relacionamento: meta dividida por ticket, com quem decide mapeado.',
+          links: [['/carteira-de-incentivadores/', 'Carteira de incentivadores'],
+                  ['/radar/', 'Radar de oportunidades']]
+        };
+      } else {
+        r = {
+          titulo: 'Prioridade: diagnóstico de prontidão',
+          porque: 'Você já tem o básico. O ganho agora é conferir o que vence e o que falta por mecanismo.',
+          links: [['/diagnostico-de-prontidao/', 'Diagnóstico de Prontidão'],
+                  ['/radar/', 'Radar de oportunidades']]
+        };
+      }
+
+      try {
+        sessionStorage.setItem('fm-minidiag', JSON.stringify({
+          tipo: tipo, tem: tem, urg: urg, rec: r.titulo
+        }));
+      } catch (e) { /* sessionStorage bloqueado */ }
+
+      var rotulos = { osc: 'OSC/associação', coop: 'cooperativa', inst: 'instituto/fundação', nao: 'ainda não tenho organização' };      var urgs = { edital: 'edital aberto', estruturar: 'estruturar projeto', preparar: 'me preparar' };
+      var resumo = r.titulo + '. ' + r.porque
+        + (faltas.length ? ' Falta organizar: ' + faltas.join(', ') + '.' : ' Base documental e projeto já existem.');
+
+      var msg = 'Olá! Fiz o diagnóstico rápido no site.\n'
+        + 'Organização: ' + (rotulos[tipo] || tipo) + '\n'
+        + 'Já tenho: ' + (tem.length ? tem.join(', ') : 'nada ainda') + '\n'
+        + 'Urgência: ' + (urgs[urg] || urg) + '\n'
+        + 'Recomendação do site: ' + r.titulo;
+      var wa = 'https://wa.me/5544999120638?text=' + encodeURIComponent(msg);
+
+      var ctas = r.links.map(function (p) {
+        return '<a href="' + p[0] + '" data-fm-evento="minidiag_resultado_link">' + p[1] + '</a>';
+      }).join('');
+
+      saida.innerHTML = '<p class="fm-minidiag-titulo"><strong>' + r.titulo + '</strong></p>'
+        + '<p>' + r.porque + '</p>'
+        + (faltas.length
+            ? '<p><b>Falta organizar:</b> ' + faltas.join(', ') + '.</p>'
+            : '<p><b>Base documental e projeto já existem.</b></p>')
+        + '<div class="fm-minidiag-ctas">'
+        + '<a data-md-wa href="' + wa + '" target="_blank" rel="noopener" data-fm-evento="minidiag_whatsapp">Falar sobre meu caso</a>'
+        + ctas
+        + '<button type="button" data-md-copiar>Copiar resumo</button>'
+        + '<button type="button" data-md-refazer>Refazer</button>'
+        + '</div>';
+      form.hidden = true;
+      prog.textContent = 'Recomendação';
+      saida.hidden = false;
+      try { saida.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) { /* noop */ }
+
+      var copiar = saida.querySelector('[data-md-copiar]');
+      if (copiar) {
+        copiar.addEventListener('click', function () {
+          try {
+            navigator.clipboard.writeText(resumo);
+            copiar.textContent = 'Copiado';
+            setTimeout(function () { copiar.textContent = 'Copiar resumo'; }, 1800);
+          } catch (e) { /* clipboard bloqueado */ }
+          evento('minidiag_copiar', {});
+        });
+      }
+      var refazer = saida.querySelector('[data-md-refazer]');
+      if (refazer) {
+        refazer.addEventListener('click', function () {
+          try { sessionStorage.removeItem('fm-minidiag'); } catch (e) {}
+          form.reset();
+          form.hidden = false;
+          atual = 1;
+          saida.hidden = true;
+          saida.innerHTML = '';
+          pintar();
+          evento('minidiag_refazer', {});
+        });
+      }
+    }
+
+    function avancar() {
+      if (!podeSeguir()) return;
+      if (atual < 3) {
+        atual++;
+        pintar();
+        evento('minidiag_passo', { passo: atual });
+        return;
+      }
+      recomendar();
+      evento('minidiag_resultado', {
+        tipo: resposta('tipo'),
+        urgencia: resposta('urgencia'),
+        tem: marcados('tem').length
+      });
+    }
+
+    seguir.addEventListener('click', avancar);
+    if (voltar) {
+      voltar.addEventListener('click', function () {
+        if (atual > 1) { atual--; pintar(); }
+      });
+    }
+    form.addEventListener('change', function () { seguir.disabled = !podeSeguir(); });
+    form.addEventListener('submit', function (ev) { ev.preventDefault(); avancar(); });
+
+    box.addEventListener('toggle', function () {
+      if (box.open && !aberto) {
+        aberto = true;
+        evento('minidiag_abrir', {});
+      }
+    });
+
+    pintar();
   }
 
   function iniciar() {
-    initEngine();
+    initEtapas();
     initRadar();
+    initSimulador();
+    initProntidao();
+    initMiniDiag();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', iniciar, { once: true });
