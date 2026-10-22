@@ -4,17 +4,17 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 533,
+   "oportunidades": 541,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 409
+     "total": 413
     },
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 98
+     "total": 102
     },
     {
      "codigo": "MROSC",
@@ -44,12 +44,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 212,
+   "oportunidades": 216,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 134
+     "total": 138
     },
     {
      "codigo": "ROUANET",
@@ -79,12 +79,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 317,
+   "oportunidades": 319,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 84
+     "total": 86
     },
     {
      "codigo": "ROUANET",
@@ -194,12 +194,12 @@
    ]
   },
   "MG": {
-   "oportunidades": 49,
+   "oportunidades": 50,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 27
+     "total": 28
     },
     {
      "codigo": "MROSC",
@@ -354,7 +354,7 @@
    ]
   },
   "SE": {
-   "oportunidades": 7,
+   "oportunidades": 8,
    "areas": [
     {
      "codigo": "ROUANET",
@@ -364,7 +364,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 1
+     "total": 2
     }
    ]
   },
