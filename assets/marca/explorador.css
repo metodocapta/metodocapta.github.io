@@ -301,3 +301,43 @@
   .fm-radar-chip,.fm-radar-area-opcao{transition:none}
   .fm-intencao a:hover{transform:none}
 }
+
+/* ============================================================================
+   MICROTEXTOS +15% — no FIM do arquivo, para vencer as regras dos componentes
+   (mesma especificidade: vence a ultima) e as do tema (.fm-nav a etc.)
+   ========================================================================== */
+.fm-nav a,.fm-nav .fm-indice-btn{font-size:13.5px !important}
+.fm-hero-alt{font-size:15px !important}
+.fm-intencao-titulo{font-size:13px !important}
+.fm-intencao b{font-size:15.5px !important}
+.fm-intencao span{font-size:14px !important}
+.fm-etapas-rail button{font-size:13.5px !important}
+.fm-pill{font-size:14px !important}
+.fm-radar-kpi span{font-size:14px !important}
+.fm-radar-kpi small{font-size:12.5px !important}
+.fm-barra > span:not(.fm-barra-trilho){font-size:14px !important}
+.fm-barra > b{font-size:18px !important}
+.fm-pilar-toggle{font-size:13px !important}
+.fm-pilar-texto{font-size:15px !important}
+.fm-pilar-artefato{font-size:14px !important}
+.fm-pilar-links a{font-size:13px !important}
+.fm-minidiag summary{font-size:15px !important}
+.fm-minidiag summary span{font-size:12.5px !important}
+.fm-minidiag-passo legend{font-size:15px !important}
+.fm-minidiag-passo label{font-size:15px !important}
+.fm-minidiag-prog{font-size:12.5px !important}
+.fm-minidiag-btn{font-size:14px !important}
+.fm-minidiag-ctas a,.fm-minidiag-ctas button{font-size:13.5px !important}
+.fm-minidiag-nota{font-size:13px !important}
+.fm-sim-campo label{font-size:13px !important}
+.fm-sim-campo output{font-size:17px !important}
+.fm-sim-nota{font-size:13px !important}
+.fm-sim-titulo{font-size:16px !important}
+.fm-sim-sub{font-size:13.5px !important}
+.fm-prontidao-titulo{font-size:15px !important}
+.fm-prontidao-titulo span{font-size:13px !important}
+.fm-prontidao-falta{font-size:14px !important}
+.fm-prontidao-link{font-size:13.5px !important}
+.fm-cockpit-nota{font-size:13px !important}
+.fm-cockpit-kicker{font-size:12.5px !important}
+.fm-mech-note{font-size:13.5px !important}
