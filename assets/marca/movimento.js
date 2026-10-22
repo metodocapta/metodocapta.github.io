@@ -57,7 +57,16 @@ const on = (el, ev, fn, opt) => {
       if (optIn) localStorage.removeItem('fm-movimento');
       else localStorage.setItem('fm-movimento', 'on');
     } catch (e) { /* noop */ }
-    location.reload();
+    /* Recarrega FURANDO o cache do HTML: o GitHub Pages guarda o documento por
+       ~10 min, e o reload podia servir a versao anterior (espacamento/tipografia
+       velhos) — parecia que "ativar o movimento" desfazia o layout. */
+    try {
+      const alvo = new URL(location.href);
+      alvo.searchParams.set('r', Date.now().toString(36));
+      location.replace(alvo.toString());
+    } catch (e) {
+      location.reload();
+    }
   });
   /* ANCORAGEM (auditoria V2.5): flutuando no canto inferior, o botão cobria o CTA
      principal, a faixa "as seis etapas" e a nota "Sem compromisso…" em telas
