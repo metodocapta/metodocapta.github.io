@@ -1,0 +1,110 @@
+/* ============================================================================
+   EXPLORADOR — interação funcional da home
+   A) Hero: navegação por intenção
+   B) Engine: as 6 etapas com painel, aprofundamento e navegação
+   C) Radar: filtro real por território (UF) × área de captação
+   Paleta: SOMENTE tokens --mc-* (nenhuma cor nova).
+   Movimento: transições curtas; desligadas em prefers-reduced-motion.
+   ========================================================================== */
+
+/* ---------- A) HERO · navegação por intenção ---------- */
+.fm-intencao{margin:20px 0 8px;max-width:660px}
+.fm-intencao-titulo{margin:0 0 9px;font:600 11.5px/1.4 Oswald,Inter,sans-serif;
+  letter-spacing:.14em;text-transform:uppercase;color:rgba(127,227,216,.85)}
+.fm-intencao ul{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.fm-intencao a{display:flex;flex-direction:column;justify-content:center;min-height:74px;
+  padding:12px 14px;border:1px solid rgba(10,188,176,.28);
+  border-radius:12px;background:rgba(6,37,49,.35);text-decoration:none;
+  transition:border-color .18s,background .18s,transform .18s}
+.fm-intencao a:hover,.fm-intencao a:focus-visible{border-color:var(--mc-teal);
+  background:rgba(10,188,176,.12);transform:translateY(-1px)}
+.fm-intencao b{display:block;font:600 13.5px/1.32 Inter,Segoe UI,sans-serif;color:var(--mc-white);
+  text-wrap:balance;hyphens:none}
+.fm-intencao span{display:block;margin-top:3px;font-size:12px;line-height:1.38;
+  color:var(--mc-muted);text-wrap:balance;hyphens:none}
+@media (max-width:600px){.fm-intencao ul{grid-template-columns:1fr}}
+
+/* ---------- B) ENGINE · seis etapas ---------- */
+.fm-engine-progresso{display:none;margin:0 0 12px;font:600 11.5px/1.5 Oswald,Inter,sans-serif;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--mc-teal-light)}
+.fm-js .fm-engine-progresso{display:block}
+.fm-engine-aprofundar{margin:14px 0 0;padding:0;list-style:none;display:flex;
+  flex-wrap:wrap;gap:8px}
+.fm-engine-aprofundar a{display:inline-block;padding:7px 12px;border-radius:999px;
+  border:1px solid rgba(10,188,176,.38);background:rgba(10,188,176,.10);color:#bfeee9;
+  font:600 12px/1.5 Inter,Segoe UI,sans-serif;text-decoration:none;
+  text-wrap:balance;hyphens:none;transition:background .18s}
+.fm-engine-aprofundar a:hover,.fm-engine-aprofundar a:focus-visible{background:rgba(10,188,176,.24);
+  outline:3px solid rgba(10,188,176,.55);outline-offset:2px}
+.fm-engine-nav{display:none;gap:8px;margin-top:16px;flex-wrap:wrap}
+.fm-js .fm-engine-nav{display:flex}
+.fm-engine-nav button{appearance:none;cursor:pointer;padding:9px 16px;border-radius:999px;
+  border:1px solid rgba(10,188,176,.42);background:transparent;color:#cfeeea;
+  font:600 12.5px/1.4 Inter,Segoe UI,sans-serif;white-space:nowrap;text-align:center;
+  flex:0 0 auto;transition:background .18s,border-color .18s}
+.fm-engine-nav button:hover:not(:disabled){background:rgba(10,188,176,.16);border-color:var(--mc-teal)}
+.fm-engine-nav button:focus-visible{outline:3px solid rgba(10,188,176,.7);outline-offset:2px}
+.fm-engine-nav button:disabled{opacity:.38;cursor:not-allowed}
+.fm-engine-p[hidden]{display:none}
+.fm-engine .fm-engine-txt{text-wrap:pretty}
+
+/* ---------- C) RADAR · filtros ---------- */
+.fm-radar-filtros{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:10px 16px;margin:20px 0 4px}
+.fm-radar-filtros[hidden]{display:none}
+.fm-radar-campo{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.fm-radar-campo label{font:600 11.5px/1 Oswald,Inter,sans-serif;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--mc-muted)}
+.fm-radar-select{appearance:none;cursor:pointer;padding:9px 34px 9px 12px;border-radius:10px;
+  border:1px solid rgba(10,188,176,.42);background:rgba(6,37,49,.55) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237fe3d8' stroke-width='2'><path d='m6 9 6 6 6-6'/></svg>") no-repeat right 10px center/16px;
+  color:var(--mc-white);font:600 13px/1.4 Inter,Segoe UI,sans-serif;min-width:190px}
+.fm-radar-select:focus-visible{outline:3px solid rgba(10,188,176,.7);outline-offset:2px}
+.fm-radar-chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;
+  flex:1 1 100%;min-width:0}
+.fm-radar-chip{appearance:none;cursor:pointer;padding:7px 12px;border-radius:999px;
+  border:1px solid rgba(127,227,216,.28);background:transparent;color:#cfeeea;
+  font:600 11.5px/1.5 Inter,Segoe UI,sans-serif;letter-spacing:.02em;
+  flex:0 0 auto;max-width:100%;white-space:nowrap;text-align:center;
+  transition:background .18s,border-color .18s}
+.fm-radar-chip:hover{border-color:var(--mc-teal);background:rgba(10,188,176,.12)}
+.fm-radar-chip[aria-pressed="true"]{background:rgba(10,188,176,.26);border-color:var(--mc-teal);
+  color:#fff}
+.fm-radar-chip:focus-visible{outline:3px solid rgba(10,188,176,.7);outline-offset:2px}
+.fm-radar-limpar{appearance:none;cursor:pointer;padding:8px 14px;border-radius:999px;
+  border:1px solid rgba(217,123,77,.5);background:transparent;color:#f0c3aa;
+  font:600 11.5px/1.5 Inter,Segoe UI,sans-serif;white-space:nowrap;flex:0 0 auto}
+.fm-radar-limpar:hover{background:rgba(217,123,77,.14)}
+.fm-radar-limpar:focus-visible{outline:3px solid rgba(217,123,77,.7);outline-offset:2px}
+.fm-radar-resumo{margin:14px 0 0;text-align:center;font-size:13.5px;color:var(--mc-muted)}
+.fm-radar-resumo b{color:var(--mc-teal-light)}
+.fm-radar-nota-escopo{margin:10px 0 0;text-align:center;font-size:11.5px;color:rgba(169,207,203,.85)}
+.fm-radar-areas ul{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:8px}
+.fm-radar-areas .fm-radar-area-opcao{appearance:none;cursor:pointer;width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:2px;
+  min-height:78px;text-align:left;padding:11px 13px;border-radius:12px;
+  border:1px solid rgba(127,227,216,.18);background:rgba(6,37,49,.35);color:inherit;
+  transition:border-color .18s,background .18s}
+.fm-radar-areas .fm-radar-area-opcao:hover{border-color:rgba(10,188,176,.6);background:rgba(10,188,176,.10)}
+.fm-radar-areas .fm-radar-area-opcao[aria-pressed="true"]{border-color:var(--mc-teal);background:rgba(10,188,176,.18)}
+.fm-radar-areas .fm-radar-area-opcao:focus-visible{outline:3px solid rgba(10,188,176,.7);outline-offset:2px}
+.fm-radar-areas .fm-radar-area-opcao b{display:block;text-align:left;min-width:0;
+  font:700 22px/1.05 Oswald,Inter,sans-serif;color:var(--mc-white);letter-spacing:.01em}
+.fm-radar-areas .fm-radar-area-opcao span{display:block;font-size:11.5px;line-height:1.32;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--mc-muted);
+  text-wrap:balance;hyphens:none;overflow-wrap:normal;word-break:normal}
+.fm-radar-area-opcao.is-vazio{opacity:.55}
+.fm-radar-vazio{margin:10px 0 0;text-align:center;font-size:13px;color:var(--mc-muted)}
+
+/* em telas muito estreitas o chip pode quebrar internamente (sem vazar) */
+@media (max-width:460px){
+  .fm-radar-chip{white-space:normal;text-wrap:balance;max-width:100%}
+}
+
+/* ---------- movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce){
+  .fm-intencao a,.fm-engine-aprofundar a,.fm-engine-nav button,
+  .fm-radar-chip,.fm-radar-area-opcao{transition:none}
+  .fm-intencao a:hover{transform:none}
+}
