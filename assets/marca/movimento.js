@@ -391,23 +391,15 @@ const on = (el, ev, fn, opt) => {
 })();
 
 /* --------------------------------------------------------------------------
-   9) H2 COM VARREDURA — cada título de seção entra com um "wipe" lateral
+   9) H2 COM VARREDURA — desativado: o clip-path escondia o h2 e deixava o
+      espaço do título vazio em todas as seções. O h2 entra visível; a classe
+      fica com ".in" desde o primeiro frame para não haver salto de layout.
    -------------------------------------------------------------------------- */
 (function h2Varredura() {
   if (rm) return;
   const h2s = Array.from(doc.querySelectorAll('section h2'));
   if (!h2s.length) return;
-  h2s.forEach((h) => h.classList.add('fm-wipe'));
-
-  if (!('IntersectionObserver' in window)) { h2s.forEach((h) => h.classList.add('in')); return; }
-  const obs = new IntersectionObserver((entradas, o) => {
-    entradas.forEach((e) => {
-      if (!e.isIntersecting) return;
-      o.unobserve(e.target);
-      e.target.classList.add('in');
-    });
-  }, { threshold: 0.25 });
-  h2s.forEach((h) => obs.observe(h));
+  h2s.forEach((h) => h.classList.add('fm-wipe', 'in'));
 })();
 
 /* --------------------------------------------------------------------------
