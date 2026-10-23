@@ -9,11 +9,10 @@
 
 /* ============================================================================
    DENSIDADE E ESCALA DA HOME
-   - menos respiro vertical entre secoes (o vazio dominava a leitura)
+   - o espacamento das secoes vive em marca-capta.css (.fm-section[data-v23-home])
    - escala tipografica +20% (h2, h3, lead, corpo, apoio e numero da secao)
    ========================================================================== */
 :root{
-  --mc-space-section:clamp(36px,4.2vw,60px);
   --mc-fs-h2:clamp(35px,4.2vw,55px);
   --mc-fs-h3:clamp(23px,2.3vw,29px);
   --mc-fs-lead:clamp(19px,1.56vw,22px);

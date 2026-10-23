@@ -580,6 +580,9 @@ html[data-fm-mapa-visivel] .mc-zap svg{width:28px;height:28px;}
 }
 .fm-site .fm-section:first-of-type{padding-top:calc(var(--mc-space-section) * .62) !important;}
 
+/* Home v23: densidade editorial própria; as páginas de conteúdo mantêm a base. */
+.fm-site .fm-section[data-v23-home="1"]{ --mc-space-section: clamp(36px,4.2vw,60px); }
+
 /* respiro interno dos blocos de topo de seção */
 .fm-site .fm-section-heading,
 .fm-site .fm-evidence-head,
