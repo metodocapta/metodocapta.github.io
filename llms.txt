@@ -113,6 +113,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Guias práticos (como fazer)
 
 - [Guias (hub)](https://metodocapta.github.io/guias/): passo a passo de captação.
+- [CAUC](https://metodocapta.github.io/guias/como-regularizar-o-cauc/): Passo a passo para ler o CAUC, achar o que trava a celebração e regularizar a tempo — com a ordem de prioridade quando o prazo é curto.
+- [CEBAS](https://metodocapta.github.io/guias/como-requerer-o-cebas/): Passo a passo do CEBAS: as três portas, requisitos estatutários e contábeis, o que a análise olha, o efeito na folha e como renovar sem perder a imunidade.
 - [Como se habilitar no SINIR (passo a passo) para projetos de reciclagem](https://metodocapta.github.io/guias/como-se-habilitar-no-sinir/): Passo a passo para habilitar sua cooperativa ou associação no SINIR, requisito de elegibilidade da Lei de Incentivo à Reciclagem (LIR).
 - [Como emitir o MTR (Manifesto de Transporte de Resíduos) passo a passo](https://metodocapta.github.io/guias/como-emitir-o-mtr/): Passo a passo para emitir o MTR: cadastro do gerador e do transportador, emissão por movimentação e uso do manifesto como prova na captação e na prestação de contas.
 - [Como montar um plano de trabalho de projeto (metas, etapas e orçamento)](https://metodocapta.github.io/guias/como-montar-um-plano-de-trabalho/): Passo a passo para montar o plano de trabalho de um projeto: objeto, metas com indicadores, etapas, cronograma, orçamento por rubrica e nexo causal — pronto para Transferegov e MROSC.
@@ -137,6 +139,14 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Captação por região](https://metodocapta.github.io/captacao-de-recursos/): captação de recursos por estado.
 - [Santa Catarina](https://metodocapta.github.io/captacao-de-recursos/santa-catarina/): Captação de recursos em Santa Catarina: mecanismos ativos, editais e leis de incentivo, prontidão documental e acompanhamento para OSCs, cooperativas e associações.
 - [Paraná](https://metodocapta.github.io/captacao-de-recursos/parana/): Captação de recursos no Paraná: editais, fundos e leis de incentivo para OSCs, cooperativas e associações, com prontidão documental e acompanhamento.
+- [São Paulo](https://metodocapta.github.io/captacao-de-recursos/sao-paulo/): 217 oportunidades acompanhadas no Radar.
+- [Rio de Janeiro](https://metodocapta.github.io/captacao-de-recursos/rio-de-janeiro/): 53 oportunidades acompanhadas no Radar.
+- [Minas Gerais](https://metodocapta.github.io/captacao-de-recursos/minas-gerais/): 52 oportunidades acompanhadas no Radar.
+- [Rio Grande do Sul](https://metodocapta.github.io/captacao-de-recursos/rio-grande-do-sul/): 44 oportunidades acompanhadas no Radar.
+- [Bahia](https://metodocapta.github.io/captacao-de-recursos/bahia/): 28 oportunidades acompanhadas no Radar.
+- [Goiás](https://metodocapta.github.io/captacao-de-recursos/goias/): 24 oportunidades acompanhadas no Radar.
+- [Ceará](https://metodocapta.github.io/captacao-de-recursos/ceara/): 18 oportunidades acompanhadas no Radar.
+- [Pará](https://metodocapta.github.io/captacao-de-recursos/para/): 18 oportunidades acompanhadas no Radar.
 
 ## FAQ e mapa
 
@@ -149,3 +159,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 - [Matriz de Mecanismos 2026](https://metodocapta.github.io/matriz-de-mecanismos/): os 12 mecanismos que financiam uma OSC (Rouanet, LIE, LIR, FIA, Idoso, PRONON, PRONAS, PNAB, MROSC, emendas, SUAS e CEBAS), com base legal, quem destina, limite, janela, quem aprova e o que exige.
 
+
+## Oportunidades abertas
+
+- [Oportunidades abertas (prazo e link oficial)](https://metodocapta.github.io/radar/oportunidades/): lista viva de projetos captando no SALIC e chamamentos do PNCP, com prazo, valor e UF.
