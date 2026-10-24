@@ -116,8 +116,24 @@ details p{margin:10px 0 0;color:var(--muted)}
  .grid{grid-template-columns:1fr;gap:14px}
  .mc-card{min-height:0}
 }
+/* --- variante "dado" (radar): sigla + numero em destaque --- */
+.mc-card--stat .mc-stat-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.mc-sigla{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:32px;padding:0 10px;
+ border-radius:8px;background:var(--navy);color:#7fe3d8;font:600 12px/1 Oswald,sans-serif;letter-spacing:.12em}
+.mc-num{font:600 28px/1 Oswald,sans-serif;color:var(--navy);text-align:right}
+.mc-num small{display:block;font:600 9.5px/1 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+ color:#8fa3ad;margin-top:5px}
+.mc-card--stat h3{font-size:17px}
+/* --- chips (mecanismos dentro das paginas) --- */
+.mc-chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+.mc-chip{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid var(--line);
+ border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font:600 13px/1 Inter,sans-serif;
+ transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease}
+.mc-chip:hover{border-color:#9fe3dc;color:var(--graf);background:var(--soft);transform:translateY(-1px)}
+.mc-chip:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.mc-chip svg{opacity:.55}
 .autor-box{margin:18px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--soft,#f4f8f8);font-size:14px;line-height:1.6}.autor-box strong{font-family:Oswald,sans-serif;color:var(--navy)}.autor-box a{color:var(--graf,#067a72);text-decoration:none;font-weight:600;margin-left:6px}.autor-box p{margin:8px 0 0;color:var(--muted,#4a6572)}.fontes{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--teal,#0ABCB0);background:var(--soft,#f4f8f8);border-radius:8px;font-size:13.5px;line-height:1.7;color:var(--muted,#4a6572)}.fontes strong{color:var(--navy,#062531);font-family:Oswald,sans-serif}.fontes a{color:var(--graf,#067a72)}.crumb a,article p a,.rels a,.fontes a,.autor-box a{text-decoration:underline;text-underline-offset:2px}</style>
-<link rel="stylesheet" href="../assets/marca/marca-capta.css?v=04e63835">
+<link rel="stylesheet" href="../assets/marca/marca-capta.css?v=e7711f03">
 <link rel="stylesheet" href="../assets/marca/movimento.css?v=90c9aea8">
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <meta property="og:image:type" content="image/jpeg" />

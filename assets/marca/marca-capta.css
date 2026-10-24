@@ -416,16 +416,26 @@ a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visibl
   background:linear-gradient(135deg,#25D366 0%,#0ABCB0 100%);
   box-shadow:0 14px 36px rgba(0,0,0,.34),0 0 0 1px rgba(255,255,255,.18) inset;
   transform:translateY(14px);opacity:0;animation:mcZapIn .5s .6s forwards;
-  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease,padding .22s ease;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease,padding .22s ease,gap .22s ease;
 }
 .mc-zap:hover{transform:translateY(-3px);filter:brightness(1.06);box-shadow:0 20px 44px rgba(0,0,0,.42);color:#04222a !important;}
 .mc-zap svg{width:26px;height:26px;flex:none;fill:#04222a;}
-.mc-zap .mc-zap__txt{white-space:nowrap;}
+.mc-zap .mc-zap__txt{display:inline-block;white-space:nowrap;}
 @keyframes mcZapIn{to{transform:translateY(0);opacity:1;}}
 @media (max-width:760px){
   .mc-zap{right:14px;bottom:14px;padding:13px;gap:0;}
   .mc-zap .mc-zap__txt{display:none;}
   .mc-zap svg{width:28px;height:28px;}
+}
+/* Desktop: o balao de ~230 px cobria o canto dos cards e dos CTAs. Agora ele
+   recolhe para o icone e abre no hover/foco (o rotulo continua no DOM, para
+   leitor de tela e para o aria-label do link). */
+@media (min-width:761px){
+  .mc-zap{padding:13px;gap:0;}
+  .mc-zap .mc-zap__txt{max-width:0;opacity:0;overflow:hidden;
+    transition:max-width .24s ease,opacity .16s ease;}
+  .mc-zap:hover,.mc-zap:focus-visible{padding:13px 20px 13px 15px;gap:11px;}
+  .mc-zap:hover .mc-zap__txt,.mc-zap:focus-visible .mc-zap__txt{max-width:220px;opacity:1;}
 }
 @media (prefers-reduced-motion:reduce){
   .mc-zap{animation:none;opacity:1;transform:none;}

@@ -67,7 +67,68 @@ details p{margin:10px 0 0;color:var(--muted)}
  .cta .btn{display:block;width:100%;text-align:center;margin:0 0 10px}
  .cta .btn.ghost{margin-left:0}
 }
-</style><link rel="stylesheet" href="../assets/marca/marca-capta.css?v=04e63835">
+
+/* --- cards dos hubs: mesma linguagem dos blocos da home --- */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(var(--cols,3),minmax(0,1fr));margin:18px 0 26px}
+.mc-card{position:relative;display:flex;flex-direction:column;min-height:208px;padding:22px 20px 18px;
+ border:1px solid var(--line);border-radius:16px;background:#fff;text-decoration:none;color:inherit;
+ transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.mc-card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;border-radius:16px 16px 0 0;
+ background:linear-gradient(90deg,var(--teal),var(--graf));opacity:0;transition:opacity .18s ease}
+.mc-card:hover{transform:translateY(-4px);border-color:#9fe3dc;box-shadow:0 18px 36px rgba(6,37,49,.10)}
+.mc-card:hover::before{opacity:1}
+.mc-card:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.mc-card-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+ color:var(--graf);background:linear-gradient(135deg,#e9faf8,#f2f8f7);border:1px solid #d9efec}
+.mc-card:hover .mc-card-ico{background:linear-gradient(135deg,#dff7f4,#eaf6f4);border-color:#bfe9e4}
+.mc-card h3{font:600 18px/1.28 Oswald,sans-serif;color:var(--navy);margin:0 0 9px;
+ display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.mc-card p{font-size:14.5px;line-height:1.55;color:var(--muted);margin:0 0 18px;
+ display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.mc-card-f{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;
+ padding-top:12px;border-top:1px solid #eef4f3}
+.mc-card-more{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 Oswald,sans-serif;
+ letter-spacing:.06em;text-transform:uppercase;color:var(--graf)}
+.mc-card-more svg{transition:transform .18s ease}
+.mc-card:hover .mc-card-more svg{transform:translateX(3px)}
+.mc-card-meta{font:600 11px/1 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#8fa3ad}
+/* cabecalho de secao com contagem */
+.bib-sec{margin:34px 0 0}
+.sec-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.sec-h h2{margin:0}
+.sec-n{font:600 11px/1 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8fa3ad}
+/* busca */
+.busca{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:26px 0 4px;
+ padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--soft)}
+.busca label{font:600 11px/1 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--graf)}
+.busca input{flex:1 1 260px;min-width:0;padding:11px 14px;border:1px solid #d7e5e3;border-radius:10px;
+ background:#fff;font:15px/1.2 Inter,sans-serif;color:var(--ink)}
+.busca input:focus{outline:2px solid var(--teal);outline-offset:1px;border-color:var(--teal)}
+.busca .res{font-size:13px;color:var(--muted)}
+@media(max-width:900px){
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ .grid{grid-template-columns:1fr;gap:14px}
+ .mc-card{min-height:0}
+}
+/* --- variante "dado" (radar): sigla + numero em destaque --- */
+.mc-card--stat .mc-stat-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}
+.mc-sigla{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:32px;padding:0 10px;
+ border-radius:8px;background:var(--navy);color:#7fe3d8;font:600 12px/1 Oswald,sans-serif;letter-spacing:.12em}
+.mc-num{font:600 28px/1 Oswald,sans-serif;color:var(--navy);text-align:right}
+.mc-num small{display:block;font:600 9.5px/1 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+ color:#8fa3ad;margin-top:5px}
+.mc-card--stat h3{font-size:17px}
+/* --- chips (mecanismos dentro das paginas) --- */
+.mc-chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+.mc-chip{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid var(--line);
+ border-radius:999px;background:#fff;color:var(--ink);text-decoration:none;font:600 13px/1 Inter,sans-serif;
+ transition:border-color .18s ease,color .18s ease,background .18s ease,transform .18s ease}
+.mc-chip:hover{border-color:#9fe3dc;color:var(--graf);background:var(--soft);transform:translateY(-1px)}
+.mc-chip:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.mc-chip svg{opacity:.55}
+</style><link rel="stylesheet" href="../assets/marca/marca-capta.css?v=e7711f03">
 <link rel="stylesheet" href="../assets/marca/movimento.css?v=90c9aea8">
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <meta property="og:image:alt" content="Captação de recursos para organizações sociais | Método Capta+" />
@@ -87,7 +148,7 @@ details p{margin:10px 0 0;color:var(--muted)}
 <h1>O método se adapta ao tamanho da organização.</h1>
 <div class="def">Da <strong>OSC</strong> à <strong>federação</strong>: veja o caminho de captação para cada tipo de organização.</div></section>
 <article>
-<div class="grid"><div class="card"><b><a href="cooperativas" style="text-decoration:none;color:inherit">Cooperativas</a></b><p class="muted" style="margin:2px 0 0">Como cooperativas captam recursos públicos e incentivados: LIR, MROSC, emendas e editais. Requisitos, prontidão document…</p></div><div class="card"><b><a href="associacoes" style="text-decoration:none;color:inherit">Associações</a></b><p class="muted" style="margin:2px 0 0">Como associações captam recursos: MROSC, fundos (FIA e Fundo do Idoso), leis de incentivo e emendas. Requisitos, passos …</p></div><div class="card"><b><a href="federacoes-e-redes" style="text-decoration:none;color:inherit">Federações e redes</a></b><p class="muted" style="margin:2px 0 0">Como federações e redes captam em escala: padronização de projetos, leis de incentivo, fundos e prestação de contas coor…</p></div><div class="card"><b><a href="institutos-e-fundacoes" style="text-decoration:none;color:inherit">Institutos e fundações</a></b><p class="muted" style="margin:2px 0 0">Institutos e fundações captam com portfólio e governança: leis de incentivo, fundos e parcerias. Requisitos fiduciários,…</p></div><div class="card"><b><a href="conselhos-e-coletivos" style="text-decoration:none;color:inherit">Conselhos e coletivos</a></b><p class="muted" style="margin:2px 0 0">Coletivos e conselhos que estão se formalizando: o primeiro passo para captar, os mecanismos possíveis e a prontidão mín…</p></div><div class="card"><b><a href="oscs" style="text-decoration:none;color:inherit">OSCs</a></b><p class="muted" style="margin:2px 0 0">OSCs (Organizações da Sociedade Civil) captam por MROSC, leis de incentivo, fundos e emendas. Entenda o caminho, os requ…</p></div></div>
+<div class="grid" style="--cols:3"><a class="mc-card" href="cooperativas"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Cooperativas</h3><p>Como cooperativas captam recursos públicos e incentivados: LIR, MROSC, emendas e editais. Requisitos, prontidão documental e caminhos por mecanismo.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a><a class="mc-card" href="associacoes"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Associações</h3><p>Como associações captam recursos: MROSC, fundos (FIA e Fundo do Idoso), leis de incentivo e emendas. Requisitos, passos e erros que custam meses.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a><a class="mc-card" href="federacoes-e-redes"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Federações e redes</h3><p>Como federações e redes captam em escala: padronização de projetos, leis de incentivo, fundos e prestação de contas coordenada entre as filiadas.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a><a class="mc-card" href="institutos-e-fundacoes"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Institutos e fundações</h3><p>Institutos e fundações captam com portfólio e governança: leis de incentivo, fundos e parcerias. Requisitos fiduciários, passos e prestação de contas.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a><a class="mc-card" href="conselhos-e-coletivos"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Conselhos e coletivos</h3><p>Coletivos e conselhos que estão se formalizando: o primeiro passo para captar, os mecanismos possíveis e a prontidão mínima antes de pedir recurso.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a><a class="mc-card" href="oscs"><span class="mc-card-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>OSCs</h3><p>OSCs (Organizações da Sociedade Civil) captam por MROSC, leis de incentivo, fundos e emendas. Entenda o caminho, os requisitos e a prestação de contas.</p><span class="mc-card-f"><span class="mc-card-more">Ver perfil <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span><span class="mc-card-meta">2 min</span></span></a></div>
 <div class="cta"><b>Não sabe qual é o seu caso?</b><p>O diagnóstico de prontidão (72h) aponta o caminho do seu perfil.</p><a class="btn" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.">Agendar diagnóstico de prontidão — 72h</a></div>
 <p class="muted">Última atualização: 2026-10-24.</p>
 </article></main>
