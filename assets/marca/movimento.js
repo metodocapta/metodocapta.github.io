@@ -88,8 +88,21 @@ const on = (el, ev, fn, opt) => {
   } else if (rodape && rodape.parentNode) {
     rodape.parentNode.insertBefore(btn, rodape);
   } else {
-    btn.classList.add('fm-mov-toggle--flutuante');
-    doc.body.appendChild(btn);
+    /* Fallback (auditoria 24/10/2026): as paginas de secao (biblioteca, guias,
+       radar, /para/) usam <footer class="site-ft">, nao o fm-footer. Sem esta
+       saida, o botao caia no modo FLUTUANTE e cobria cards e CTAs no meio da
+       tela. Agora entra no fluxo, logo antes do rodape. Flutuar e o ULTIMO
+       recurso, so quando a pagina nao tem nem rodape nem main. */
+    var pe = doc.querySelector('footer.site-ft');
+    var principal = doc.querySelector('main');
+    if (pe && pe.parentNode) {
+      pe.parentNode.insertBefore(btn, pe);
+    } else if (principal) {
+      principal.appendChild(btn);
+    } else {
+      btn.classList.add('fm-mov-toggle--flutuante');
+      doc.body.appendChild(btn);
+    }
   }
 })();
 
