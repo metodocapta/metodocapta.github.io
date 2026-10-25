@@ -165,6 +165,7 @@
       function abrirMega(tipo, link) {
         if (reduzido()) return;
         if (megaTipo === tipo) return;
+        fecharBusca();
         fecharMega();
         var arq = tipo === "radar" ? "/assets/menu_radar.json" : "/assets/menu_biblioteca.json";
         var montar = function (d) {
@@ -200,6 +201,11 @@
         a.addEventListener("focus", function () { abrirMega(tipo, a); });
       });
 
+      /* sai do header (ou da pagina) e o mega fecha */
+      hd.addEventListener("mouseleave", function () {
+        if (mega && !mega.dataset.hover) fecharMega();
+      });
+
       /* 6) BUSCA */
       var lupa = cria("button", "nav-lupa", { type: "button", "aria-label": "Buscar no site", "aria-expanded": "false" });
       lupa.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>';
@@ -215,6 +221,7 @@
       }
 
       function abrirBusca() {
+        fecharMega();
         if (!painelBusca) {
           painelBusca = cria("div", "nav-busca");
           painelBusca.innerHTML =
