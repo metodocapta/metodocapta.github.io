@@ -1423,3 +1423,34 @@ html body.fm-bar-on .mc-zap{bottom:calc(var(--fm-barra-h, 86px) + 14px);}
 /* scrollspy da pagina Metodo */
 .fm-nav a.is-active{color:#0ABCB0 !important}
 .fm-nav a.is-active::after{content:"";display:block;height:2px;margin-top:4px;border-radius:2px;background:#0ABCB0}
+
+/* ==========================================================================
+   8) MENU — onda 3: submenu no drawer, foco preso, historico e destaque
+   ========================================================================== */
+body.nav-lock{overflow:hidden}
+
+/* submenu dentro do drawer (so no mobile) */
+.nav-sub{display:none}
+@media (max-width:900px){
+  .nav-sub{display:block;border-bottom:1px solid rgba(255,255,255,.07)}
+  .nav-sub summary{list-style:none;cursor:pointer;padding:12px 0;
+    color:#bdeee9;font:600 11.5px/1 Oswald,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+  .nav-sub summary::-webkit-details-marker{display:none}
+  .nav-sub summary::after{content:"+";float:right;font-size:14px;line-height:1}
+  .nav-sub[open] summary::after{content:"–"}
+  .nav-sub-lista{display:flex;flex-direction:column;padding:0 0 10px 10px}
+  .nav-sub-lista a{padding:8px 0;font-size:13px;color:#cfe8e6;text-decoration:none;border:0}
+  .nav-sub-lista a b{color:#7fe3d8;font-weight:600;margin-right:4px}
+}
+
+/* historico e "ver todos" da busca */
+.nav-busca-tit{margin:6px 0 4px;font:600 11px/1 Oswald,sans-serif;letter-spacing:.1em;
+  text-transform:uppercase;color:#8fa3ad}
+.nav-busca-hist{display:block;width:100%;text-align:left;padding:9px 12px;margin:4px 0;
+  border:1px solid #e2e8ea;background:#fff;border-radius:8px;font:14px Inter,sans-serif;
+  color:#0d1f35;cursor:pointer}
+.nav-busca-hist:hover{background:#f4f8f8;border-color:#9fe3dc}
+.nav-busca-todos{display:block;margin-top:8px;padding:10px 12px;font:600 12px/1 Oswald,sans-serif;
+  letter-spacing:.06em;text-transform:uppercase;color:#067a72;text-decoration:none}
+.nav-busca-todos:hover{color:#062531}
+.nav-busca-item mark{background:#d9f7f3;color:inherit;padding:0 2px;border-radius:3px}

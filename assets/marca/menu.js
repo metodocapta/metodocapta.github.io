@@ -43,6 +43,7 @@
 
     if (nav) {
       var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+      var linkPorTipo = {};
 
       /* 1) ativo */
       var ativo = null, tamanho = 0;
@@ -105,22 +106,73 @@
       if (cta && cta.parentNode === wrap) wrap.insertBefore(burger, cta); else wrap.appendChild(burger);
       nav.id = "nav-site";
 
+      var menuAberto = false;
+      var focoAntes = null;
+      var subsOk = false;
+
+      function montarSubs() {
+        if (subsOk) return;
+        subsOk = true;
+        [
+          ["radar", "Mecanismos", "/assets/menu_radar.json", function (d) {
+            return (d.mecanismos || []).map(function (m) {
+              return '<a href="' + m.href + '"><b>' + m.sigla + "</b> " + m.nome + "</a>";
+            }).join("");
+          }],
+          ["biblioteca", "Categorias", "/assets/menu_biblioteca.json", function (d) {
+            return (d.categorias || []).map(function (c) {
+              return '<a href="../../biblioteca' + c.id + '">' + c.cat + "</a>";
+            }).join("");
+          }]
+        ].forEach(function (cfg) {
+          var link = linkPorTipo[cfg[0]];
+          if (!link) return;
+          var det = cria("details", "nav-sub");
+          det.innerHTML = "<summary>" + cfg[1] + '</summary><div class="nav-sub-lista"></div>';
+          link.parentNode.insertBefore(det, link.nextSibling);
+          fetch(cfg[2], { cache: "no-store" })
+            .then(function (r) { return r.json(); })
+            .then(function (d) { det.querySelector(".nav-sub-lista").innerHTML = cfg[3](d); })
+            .catch(function () { det.remove(); });
+        });
+      }
+
+      function abrirMenu() {
+        menuAberto = true;
+        focoAntes = document.activeElement;
+        hd.classList.add("nav-open");
+        document.body.classList.add("nav-lock");
+        burger.setAttribute("aria-expanded", "true");
+        burger.setAttribute("aria-label", "Fechar menu");
+        montarSubs();
+        var p = nav.querySelector("a");
+        if (p) p.focus();
+      }
       function fecharMenu() {
+        if (!menuAberto) return;
+        menuAberto = false;
         hd.classList.remove("nav-open");
+        document.body.classList.remove("nav-lock");
         burger.setAttribute("aria-expanded", "false");
         burger.setAttribute("aria-label", "Abrir menu");
+        if (focoAntes && focoAntes.focus) focoAntes.focus();
       }
       burger.addEventListener("click", function () {
-        var aberto = hd.classList.toggle("nav-open");
-        burger.setAttribute("aria-expanded", aberto ? "true" : "false");
-        burger.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
-        if (aberto) { var p = nav.querySelector("a"); if (p) p.focus(); }
+        menuAberto ? fecharMenu() : abrirMenu();
       });
       nav.addEventListener("click", function (e) {
         if (e.target.tagName === "A" && reduzido()) fecharMenu();
       });
       document.addEventListener("keydown", function (e) {
         if (e.key === "Escape") { fecharMenu(); fecharMega(); fecharBusca(); }
+        if (!menuAberto || e.key !== "Tab") return;
+        /* foco preso no drawer */
+        var f = [burger].concat(Array.prototype.slice.call(nav.querySelectorAll("a,button,summary")))
+          .filter(function (el) { return el.offsetParent !== null; });
+        if (!f.length) return;
+        var i = f.indexOf(document.activeElement);
+        if (e.shiftKey && i <= 0) { e.preventDefault(); f[f.length - 1].focus(); }
+        else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); f[0].focus(); }
       });
       window.addEventListener("resize", function () { if (!reduzido()) fecharMenu(); });
 
@@ -195,6 +247,7 @@
         var tipo = (/biblioteca/.test(h) || t === "biblioteca") ? "biblioteca"
                  : ((/\/radar\/?$/.test(h) || t === "radar") ? "radar" : null);
         if (!tipo) return;
+        linkPorTipo[tipo] = a;
         a.setAttribute("aria-haspopup", "true");
         a.setAttribute("aria-expanded", "false");
         a.addEventListener("mouseenter", function () { abrirMega(tipo, a); });
@@ -237,6 +290,11 @@
             var i = itens.indexOf(document.activeElement);
             if (e.key === "ArrowDown") { e.preventDefault(); (itens[i + 1] || itens[0]).focus(); }
             if (e.key === "ArrowUp") { e.preventDefault(); (itens[i - 1] || itens[itens.length - 1]).focus(); }
+            if (e.key === "Enter") {
+              salvarBusca(campo.value);
+              var primeiro = itens[0];
+              if (primeiro) { e.preventDefault(); location.href = primeiro.getAttribute("href"); }
+            }
           });
           document.addEventListener("click", function (e) {
             if (aberta && !painelBusca.contains(e.target) && e.target !== lupa && !lupa.contains(e.target)) fecharBusca();
@@ -257,18 +315,71 @@
         }
       }
 
+      function hist() {
+        try { return JSON.parse(localStorage.getItem("menu_busca_hist") || "[]"); } catch (e) { return []; }
+      }
+      function salvarBusca(t) {
+        t = (t || "").trim();
+        if (t.length < 2) return;
+        var h = hist().filter(function (x) { return x.toLowerCase() !== t.toLowerCase(); });
+        h.unshift(t);
+        try { localStorage.setItem("menu_busca_hist", JSON.stringify(h.slice(0, 5))); } catch (e) {}
+      }
+      function esc(s) {
+        return String(s).replace(/[&<>"]/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+        });
+      }
+      function marcar(txt, termo) {
+        var t = esc(txt);
+        if (!termo) return t;
+        var re;
+        try { re = new RegExp("(" + termo.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "gi"); } catch (e) { return t; }
+        return t.replace(re, "<mark>$1</mark>");
+      }
+
       function filtrar(termo) {
         var box = painelBusca.querySelector(".nav-busca-res");
         if (!indice) { box.innerHTML = '<p class="nav-busca-vazio">Carregando…</p>'; return; }
-        var t = normaliza(termo.trim());
+        var bruto = (termo || "").trim();
+        var t = normaliza(bruto);
+
+        if (!t) {
+          var h = hist();
+          if (!h.length) {
+            box.innerHTML = '<p class="nav-busca-vazio">Digite para buscar em ' + indice.length + ' páginas.</p>';
+            return;
+          }
+          box.innerHTML = '<p class="nav-busca-tit">Buscas recentes</p>' + h.map(function (x) {
+            return '<button type="button" class="nav-busca-hist">' + esc(x) + "</button>";
+          }).join("");
+          Array.prototype.slice.call(box.querySelectorAll(".nav-busca-hist")).forEach(function (b) {
+            b.addEventListener("click", function () {
+              var campo2 = painelBusca.querySelector("#nav-q");
+              campo2.value = b.textContent;
+              campo2.focus();
+              filtrar(b.textContent);
+            });
+          });
+          return;
+        }
+
         var achados = indice.filter(function (p) {
-          return !t || normaliza(p.t + " " + p.d).indexOf(t) >= 0;
+          return normaliza(p.t + " " + p.d).indexOf(t) >= 0;
         }).slice(0, 8);
+
         if (!achados.length) { box.innerHTML = '<p class="nav-busca-vazio">Nada encontrado.</p>'; return; }
+
+        var todosUrl = "/busca/?q=" + encodeURIComponent(bruto);
         box.innerHTML = achados.map(function (p) {
-          return '<a class="nav-busca-item" role="option" href="' + p.u + '">' +
-                 '<strong>' + p.t + '</strong><span>' + (p.d || p.u) + '</span></a>';
-        }).join("");
+          return '<a class="nav-busca-item" role="option" href="' + p.u + '"><strong>' +
+                 marcar(p.t, bruto) + "</strong><span>" + marcar(p.d || p.u, bruto) + "</span></a>";
+        }).join("") +
+          '<a class="nav-busca-todos" href="' + todosUrl + '">Ver todos os resultados →</a>';
+
+        Array.prototype.slice.call(box.querySelectorAll(".nav-busca-item")).forEach(function (a) {
+          a.addEventListener("click", function () { salvarBusca(bruto); });
+        });
       }
 
       lupa.addEventListener("click", function () { aberta ? fecharBusca() : abrirBusca(); });
