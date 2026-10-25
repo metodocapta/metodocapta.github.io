@@ -1314,3 +1314,40 @@ body{counter-reset:fm-secao}
   html body .fm-sticky-cta .fm-sticky-cta__txt{flex:1 1 100%;}
 }
 html body.fm-bar-on .mc-zap{bottom:calc(var(--fm-barra-h, 86px) + 14px);}
+
+/* ==========================================================================
+   6) MENU — estado ativo, linha que desliza, contador e selo "gratis"
+   ========================================================================== */
+
+/* o header encolhe depois de 8 px (menu.js poe .is-scrolled) */
+.site-hd{transition:padding .18s ease,box-shadow .18s ease}
+.site-hd.is-scrolled{padding:10px 0;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+.fm-header{transition:padding .18s ease,background .18s ease}
+.fm-header.is-scrolled{padding-top:6px;padding-bottom:6px;background:rgba(3,20,19,.98) !important}
+
+/* item ativo + linha teal que acompanha mouse/foco */
+.site-hd nav{position:relative}
+.site-hd nav a.is-active{color:#fff}
+.nav-line{position:absolute;left:0;bottom:-9px;height:2px;border-radius:2px;background:#0ABCB0;
+  opacity:0;pointer-events:none;transition:transform .22s ease,width .22s ease,opacity .18s ease;
+  will-change:transform,width}
+
+/* contador de oportunidades abertas no Radar */
+.nav-count{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:999px;
+  background:rgba(10,188,176,.16);border:1px solid rgba(127,227,216,.35);color:#7fe3d8;
+  font:600 10px/1 Oswald,sans-serif;letter-spacing:.04em;vertical-align:middle}
+
+/* selo "gratis" no CTA (Diagnostico 72h) */
+.hd-cta,.fm-header-cta{position:relative;overflow:visible}
+.hd-cta::after,.fm-header-cta::after{content:"grátis";position:absolute;bottom:-9px;right:8px;
+  background:#04222a;color:#7fe3d8;border:1px solid rgba(127,227,216,.55);
+  font:600 9px/1 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 6px;border-radius:999px;pointer-events:none}
+
+@media(max-width:760px){
+  .nav-line{display:none}
+  .hd-cta::after,.fm-header-cta::after{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .site-hd,.fm-header,.nav-line{transition:none}
+}
