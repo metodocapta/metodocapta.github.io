@@ -413,4 +413,71 @@
       }
     }
   }
+
+  /* ============================================================ conteudo longo
+     Indice com progresso de leitura + CTA lateral. So entra em pagina com
+     article e pelo menos 3 h2 (guias, estudos, conceitos longos). */
+  (function () {
+    var art = document.querySelector("article");
+    if (!art) return;
+    var hs = Array.prototype.slice.call(art.querySelectorAll("h2")).filter(function (h) {
+      return (h.textContent || "").trim().length > 2;
+    });
+    if (hs.length < 3) return;
+
+    function slug(s) {
+      return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
+    }
+    hs.forEach(function (h, i) { if (!h.id) h.id = slug(h.textContent) || ("secao-" + i); });
+
+    var nav = document.createElement("nav");
+    nav.className = "toc";
+    nav.setAttribute("aria-label", "Neste conteúdo");
+    nav.innerHTML = '<div class="toc-head"><span>Neste conteúdo</span><b class="toc-pct">0%</b></div>' +
+      "<ol>" + hs.map(function (h) {
+        return '<li><a href="#' + h.id + '">' + (h.textContent || "").trim() + "</a></li>";
+      }).join("") + '</ol><div class="toc-bar"><i></i></div>';
+    art.insertBefore(nav, hs[0]);
+
+    var pct = nav.querySelector(".toc-pct");
+    var bar = nav.querySelector(".toc-bar i");
+    var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+
+    function progresso() {
+      var r = art.getBoundingClientRect();
+      var total = Math.max(r.height - window.innerHeight * 0.45, 1);
+      var lido = Math.min(Math.max(-r.top + 120, 0), total);
+      var p = Math.min(100, Math.round(lido / total * 100));
+      pct.textContent = p + "%";
+      bar.style.width = p + "%";
+      var ativo = null;
+      hs.forEach(function (h) { if (h.getBoundingClientRect().top < 150) ativo = h; });
+      links.forEach(function (a) {
+        a.classList.toggle("is-active", !!ativo && a.getAttribute("href") === "#" + ativo.id);
+      });
+      return p;
+    }
+    progresso();
+    window.addEventListener("scroll", progresso, { passive: true });
+    window.addEventListener("resize", progresso);
+
+    /* CTA lateral: so em tela larga, depois de 35% e dispensavel */
+    if (!window.matchMedia("(min-width: 1100px)").matches) return;
+    try { if (localStorage.getItem("cta_lateral_off") === "1") return; } catch (e) {}
+    var cta = document.createElement("aside");
+    cta.className = "cta-lateral";
+    cta.innerHTML = '<button type="button" class="cta-x" aria-label="Fechar">×</button>' +
+      "<b>Diagnóstico 72h gratuito</b>" +
+      "<p>O que a sua organização já pode captar — e o que falta.</p>" +
+      '<a href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20gratuito%20%2872h%29." target="_blank" rel="noopener">Agendar agora</a>';
+    document.body.appendChild(cta);
+    cta.querySelector(".cta-x").addEventListener("click", function () {
+      cta.remove();
+      try { localStorage.setItem("cta_lateral_off", "1"); } catch (e) {}
+    });
+    var mostra = function () { cta.classList.toggle("visivel", progresso() > 35); };
+    window.addEventListener("scroll", mostra, { passive: true });
+    mostra();
+  })();
 })();
