@@ -462,22 +462,11 @@
     window.addEventListener("scroll", progresso, { passive: true });
     window.addEventListener("resize", progresso);
 
-    /* CTA lateral: so em tela larga, depois de 35% e dispensavel */
-    if (!window.matchMedia("(min-width: 1100px)").matches) return;
-    try { if (localStorage.getItem("cta_lateral_off") === "1") return; } catch (e) {}
-    var cta = document.createElement("aside");
-    cta.className = "cta-lateral";
-    cta.innerHTML = '<button type="button" class="cta-x" aria-label="Fechar">×</button>' +
-      "<b>Diagnóstico 72h gratuito</b>" +
-      "<p>O que a sua organização já pode captar — e o que falta.</p>" +
-      '<a href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20gratuito%20%2872h%29." target="_blank" rel="noopener">Agendar agora</a>';
-    document.body.appendChild(cta);
-    cta.querySelector(".cta-x").addEventListener("click", function () {
-      cta.remove();
-      try { localStorage.setItem("cta_lateral_off", "1"); } catch (e) {}
-    });
-    var mostra = function () { cta.classList.toggle("visivel", progresso() > 35); };
-    window.addEventListener("scroll", mostra, { passive: true });
-    mostra();
+    /* CTA dentro do indice: sem flutuar por cima do texto */
+    var cta = document.createElement("div");
+    cta.className = "toc-cta";
+    cta.innerHTML = "<span>Diagnóstico 72h <b>gratuito</b> — o que a sua organização já pode captar.</span>" +
+      '<a href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20gratuito%20%2872h%29." target="_blank" rel="noopener">Agendar →</a>';
+    nav.appendChild(cta);
   })();
 })();

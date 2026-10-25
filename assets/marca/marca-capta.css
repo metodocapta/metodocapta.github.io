@@ -1467,7 +1467,7 @@ body.nav-lock{overflow:hidden}
 .site-ft[data-v2] .ft-brand p{margin:0;font-size:13px;color:#a9c6c3;max-width:34ch}
 .site-ft[data-v2] .ft-col b{display:block;font:600 11px Oswald,sans-serif;letter-spacing:.12em;
   text-transform:uppercase;color:#7fe3d8;margin-bottom:8px}
-.site-ft[data-v2] .ft-col a{display:block;color:#cfe8e6;text-decoration:none;font-size:13.5px;padding:3px 0;margin:0}
+.site-ft[data-v2] .ft-col a{display:block;color:#cfe8e6;text-decoration:none;font-size:13.5px;padding:3px 0;margin:0;overflow-wrap:anywhere}
 .site-ft[data-v2] .ft-col a:hover{color:#fff;text-decoration:underline}
 @media(max-width:900px){.site-ft[data-v2] .wrap{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.site-ft[data-v2] .wrap{grid-template-columns:1fr}}
@@ -1485,16 +1485,11 @@ body.nav-lock{overflow:hidden}
   transition:width .2s ease}
 @media(max-width:640px){.toc ol{columns:1}}
 
-.cta-lateral{position:fixed;left:22px;bottom:22px;width:272px;padding:18px 18px 16px;border-radius:14px;
-  background:linear-gradient(135deg,#062531,#0a3340);color:#dff6f2;box-shadow:0 18px 40px rgba(0,0,0,.35);
-  z-index:9990;opacity:0;transform:translateY(12px);pointer-events:none;
-  transition:opacity .2s ease,transform .2s ease}
-.cta-lateral.visivel{opacity:1;transform:none;pointer-events:auto}
-.cta-lateral b{display:block;font:600 16px/1.2 Oswald,sans-serif;color:#fff;margin-bottom:6px}
-.cta-lateral p{margin:0 0 12px;font-size:13px;color:#cfe8e6;line-height:1.45}
-.cta-lateral a{display:inline-block;padding:10px 14px;border-radius:999px;
-  background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;font:600 12px/1 Oswald,sans-serif;
-  letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
-.cta-x{position:absolute;top:6px;right:8px;background:none;border:0;color:#9fc4bf;font-size:18px;
-  line-height:1;cursor:pointer}
-.cta-x:hover{color:#fff}
+.toc-cta{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;
+  padding-top:12px;border-top:1px solid #dbe9e7;font-size:13.5px;color:#0d1f35}
+.toc-cta b{color:#067a72}
+.toc-cta a{flex:0 0 auto;padding:9px 14px;border-radius:999px;
+  background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;
+  font:600 11.5px/1 Oswald,sans-serif;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+.toc-cta a:hover{filter:brightness(1.06)}
+@media(max-width:640px){.toc-cta{flex-direction:column;align-items:flex-start}}
