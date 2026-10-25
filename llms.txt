@@ -113,6 +113,11 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Guias práticos (como fazer)
 
 - [Guias (hub)](https://metodocapta.github.io/guias/): passo a passo de captação.
+- [Teoria da mudança](https://metodocapta.github.io/guias/como-montar-teoria-da-mudanca/): Da causa ao impacto: insumos, atividades, produtos, resultados e pressupostos — e como usar a teoria da mudança no plano de trabalho e no orçamento.
+- [Matriz lógica](https://metodocapta.github.io/guias/como-montar-matriz-logica/): Objetivo, resultados, atividades e insumos na vertical; indicadores, meios de verificação e pressupostos na horizontal. Como preencher a matriz lógica sem inventar indicador.
+- [Cronograma físico-financeiro](https://metodocapta.github.io/guias/como-montar-cronograma-fisico-financeiro/): Metas, etapas, rubricas e desembolso no mesmo quadro: como montar o cronograma físico-financeiro, conciliar execução e evitar gastar tudo no fim.
+- [Gestão de riscos do projeto](https://metodocapta.github.io/guias/como-gerir-riscos-do-projeto/): Como identificar, priorizar e responder aos riscos do projeto com matriz de probabilidade e impacto, dono, gatilho e revisão mensal.
+- [SROI](https://metodocapta.github.io/guias/como-calcular-sroi/): Passo a passo do SROI: escopo, stakeholders, proxies, deadweight, atribuição, drop-off e valor presente. Com exemplo numérico e limites do método.
 - [CAUC](https://metodocapta.github.io/guias/como-regularizar-o-cauc/): Passo a passo para ler o CAUC, achar o que trava a celebração e regularizar a tempo — com a ordem de prioridade quando o prazo é curto.
 - [CEBAS](https://metodocapta.github.io/guias/como-requerer-o-cebas/): Passo a passo do CEBAS: as três portas, requisitos estatutários e contábeis, o que a análise olha, o efeito na folha e como renovar sem perder a imunidade.
 - [Como se habilitar no SINIR (passo a passo) para projetos de reciclagem](https://metodocapta.github.io/guias/como-se-habilitar-no-sinir/): Passo a passo para habilitar sua cooperativa ou associação no SINIR, requisito de elegibilidade da Lei de Incentivo à Reciclagem (LIR).
