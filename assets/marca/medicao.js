@@ -42,11 +42,27 @@
     if (DEBUG && window.console) console.info.apply(console, ['[medicao]'].concat([].slice.call(arguments)));
   }
 
+  /* ---------- 0) marcador de TRAFEGO INTERNO (por dispositivo) ----------
+     O filtro por IP quebra quando o IP muda (operadora, 4G, viagem). Este
+     marcador e por navegador: visitar o site com ?interno=1 marca aquele
+     dispositivo; ?interno=0 desmarca. Todo evento passa a levar
+     traffic_type=internal, que e exatamente o parametro que o filtro padrao
+     "Internal Traffic" do GA4 usa para excluir. */
+  (function () {
+    var m = /[?&]interno=([01])/.exec(location.search);
+    if (m) {
+      gravar('fm-interno', m[1] === '1' ? '1' : '');
+      log('trafego interno', m[1] === '1' ? 'marcado' : 'desmarcado');
+    }
+  })();
+  function ehInterno() { return ler('fm-interno') === '1'; }
+
   /* ---------- 1) emissao: um evento, tres destinos ---------- */
   function emitir(nome, dados) {
     dados = dados || {};
     var ev = { evento: nome, pagina: PAGINA, ts: Math.round(Date.now() / 1000) };
     for (var k in dados) { if (dados[k] !== undefined && dados[k] !== null) ev[k] = dados[k]; }
+    if (ehInterno()) ev.traffic_type = 'internal';
     log(nome, ev);
 
     /* A) GA4 / GTM — so com consentimento (ou no modo cookieless configurado).
