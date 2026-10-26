@@ -1,33 +1,22 @@
-/* MetodoCapta — camada de eventos (privacidade primeiro).
-   Sem cookies e sem provedor embutido: dispara para dataLayer / plausible / gtag
-   SOMENTE se existirem no site. Sem provedor, nao faz nada (zero rede).
-   Uso: window.fmEvento(nome, dados)  ou  data-fm-evento="nome" no elemento. */
+/* MetodoCapta - camada de eventos (DESATIVADA em 26/10/2026)
+   ---------------------------------------------------------------------------
+   Este arquivo foi a primeira camada de eventos do site. Ele escutava cliques em
+   [data-fm-evento], a e button e enviava direto para dataLayer/plausible/gtag
+   - SEM consentimento e em paralelo ao medidor novo, o que contava o mesmo
+   clique duas vezes (intencao_diagnostico + clique).
+
+   A camada unica agora e assets/marca/medicao.js (passo 6c2 do build):
+     - um contrato de 5 eventos + eventos nomeados por data-fm-evento;
+     - GA4 so depois do aceite;
+     - um unico tag por pagina.
+
+   Este arquivo fica como no-op para nao quebrar paginas antigas que ainda o
+   referenciam. Nao reative: use o medicao_config.json.
+*/
 (function () {
-  function enviar(nome, dados) {
-    dados = dados || {};
-    try {
-      if (window.dataLayer && window.dataLayer.push) window.dataLayer.push(Object.assign({ event: nome }, dados));
-      if (typeof window.plausible === "function") window.plausible(nome, { props: dados });
-      if (typeof window.gtag === "function") window.gtag("event", nome, dados);
-    } catch (e) {}
+  'use strict';
+  if (typeof window.fmEvento !== 'function') {
+    /* fallback silencioso: quem chamar fmEvento antes do medidor nao quebra */
+    window.fmEvento = function () {};
   }
-
-  function rotulo(el) { return (el.getAttribute("aria-label") || el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 60); }
-
-  document.addEventListener("click", function (ev) {
-    var el = ev.target && ev.target.closest ? ev.target.closest("[data-fm-evento],a,button") : null;
-    if (!el) return;
-    var nome = el.getAttribute("data-fm-evento");
-    var href = el.getAttribute("href") || "";
-    if (!nome) {
-      if (/wa\.me|whatsapp/i.test(href)) nome = "cta_whatsapp";
-      else if (/calculadora\//.test(href)) nome = "ferramenta_calculadora";
-      else if (/para-o-conselho\//.test(href)) nome = "ferramenta_conselho";
-      else if (/(\.pdf$|\.vcf$)/i.test(href)) nome = "download";
-      else return;
-    }
-    enviar(nome, { rotulo: rotulo(el), href: href.slice(0, 200), pagina: location.pathname });
-  }, true);
-
-  window.fmEvento = enviar;
 })();

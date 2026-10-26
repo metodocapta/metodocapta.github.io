@@ -209,13 +209,25 @@
 
   function ligarCliques() {
     document.addEventListener('click', function (e) {
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      var a = e.target && e.target.closest ? e.target.closest('a,button') : null;
       if (!a) return;
       var href = a.getAttribute('href') || '';
+      var rotulo = (a.getAttribute('aria-label') || a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
+
+      /* 1) evento NOMEADO no proprio elemento (data-fm-evento): manda o nome,
+            nao o generico - preserva a taxonomia que o site ja usava
+            (intencao_diagnostico, ferramenta_calculadora, cta_whatsapp...). */
+      var alvoEv = a.closest ? a.closest('[data-fm-evento]') : null;
+      var nomeEv = alvoEv && alvoEv.getAttribute('data-fm-evento');
+      if (nomeEv) {
+        emitir(nomeEv, { rotulo: rotulo, destino: href.slice(0, 200), origem: 'elemento' });
+        return;
+      }
+
+      /* 2) sem nome explicito: classifica pelo destino (contrato do `clique`) */
       var tipo = tipoDeLink(href);
       if (!tipo) return;
-      var rotulo = (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60);
-      emitir('clique', { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 120) });
+      emitir('clique', { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 200) });
     }, true);
   }
 
