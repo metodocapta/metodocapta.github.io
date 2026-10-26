@@ -49,11 +49,30 @@
     for (var k in dados) { if (dados[k] !== undefined && dados[k] !== null) ev[k] = dados[k]; }
     log(nome, ev);
 
-    /* A) GA4 / GTM — so com consentimento */
+    /* A) GA4 / GTM — so com consentimento (ou no modo cookieless configurado).
+       Detalhe que ja custou uma page_view perdida: o evento de abertura dispara
+       ANTES de o gtag.js terminar de carregar. Por isso, sem `window.gtag`,
+       empilhamos no dataLayer no formato que o gtag entende (objeto {event}). */
     try {
-      if (window.gtag && consentiu()) {
-        var g = {}; for (var a in ev) { if (a !== 'evento') g[a] = ev[a]; }
-        window.gtag('event', nome, g);
+      if (CFG.ga4 && liberado()) {
+        var g = {};
+        for (var a in ev) { if (a !== 'evento') g[a] = ev[a]; }
+        if (nome === 'page_view') {
+          g.page_location = location.href;
+          g.page_title = document.title;
+          g.page_referrer = document.referrer || '';
+          delete g.pagina;
+          delete g.titulo;
+          delete g.referrer;
+        }
+        if (window.gtag) {
+          window.gtag('event', nome, g);
+        } else {
+          window.dataLayer = window.dataLayer || [];
+          var envio = { event: nome };
+          for (var c in g) envio[c] = g[c];
+          window.dataLayer.push(envio);
+        }
       }
     } catch (e) {}
 
@@ -80,11 +99,21 @@
   /* ---------- 2) consentimento (A depende dele; B e C nao) ---------- */
   function consentiu() { return ler(CHAVE) === 'aceito'; }
 
+  /* cookieless: GA4 sem cookie, sem banner (analytics_storage: denied). O dono
+     escolhe no medicao_config.json ("consentimento": "banner" | "cookieless"). */
+  function cookieless() { return CFG.consentimento === 'cookieless'; }
+  function liberado() { return consentiu() || cookieless(); }
+
   function carregarProvedorSemCookie() {
     /* B) Plausible / Umami: o script do provedor precisa estar na pagina. Ele e
        carregado aqui (e nao no HTML) para que o build continue sem CDN fixo e
        para que a configuracao seja um campo so. Sem cookie, sem PII. */
     if (CFG.plausible && !document.getElementById('fm-plausible')) {
+      /* fila do Plausible: o script carrega async, entao a page_view chegaria
+         antes dele. `plausible.q` e o mecanismo oficial de fila. */
+      window.plausible = window.plausible || function () {
+        (window.plausible.q = window.plausible.q || []).push(arguments);
+      };
       var p = document.createElement('script');
       p.id = 'fm-plausible'; p.defer = true;
       p.setAttribute('data-domain', CFG.plausible);
@@ -113,8 +142,10 @@
     window.gtag('js', new Date());
     window.gtag('consent', 'default', {
       ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
-      analytics_storage: 'granted'
+      analytics_storage: cookieless() ? 'denied' : 'granted'
     });
+    /* send_page_view: false — a page_view e a NOSSA (com pagina/titulo/etapa),
+       para nao contar duas vezes quando o gtag tambem envia a dele. */
     window.gtag('config', CFG.ga4, { anonymize_ip: true, send_page_view: false });
   }
 
@@ -148,7 +179,15 @@
       gravar(CHAVE, escolha);
       d.parentNode.removeChild(d);
       emitir('consentimento', { escolha: escolha });
-      if (escolha === 'aceito') carregarGA4();
+      if (escolha === 'aceito') {
+        carregarGA4();
+        /* a page_view desta visita foi emitida antes do aceite e nao saiu:
+           sai agora, uma unica vez. */
+        emitir('page_view', {
+          titulo: document.title.slice(0, 80),
+          referrer: (document.referrer || '').slice(0, 120)
+        });
+      }
     });
     document.body.appendChild(d);
   }
@@ -209,15 +248,17 @@
 
   /* ---------- 4) partida ---------- */
   function iniciar() {
+    /* ordem importa: carrega o provedor ANTES de emitir a page_view (sem isso o
+       primeiro evento cai quando `gtag`/`plausible` ainda nao existem). */
+    if (CFG.ga4) {
+      if (liberado()) carregarGA4();
+      else barra();
+    }
+    carregarProvedorSemCookie();
     emitir('page_view', { titulo: document.title.slice(0, 80), referrer: (document.referrer || '').slice(0, 120) });
     ligarCliques();
     ligarLeitura();
     ligarCalculadora();
-    carregarProvedorSemCookie();
-    if (CFG.ga4) {
-      if (consentiu()) carregarGA4();
-      else barra();
-    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', iniciar);
