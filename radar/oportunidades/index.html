@@ -457,12 +457,20 @@ o link leva ao portal de origem.</div>
     if(dias<=7) o.querySelector('.op-d').classList.add('urgente');
   });
   ops=[].slice.call(lista.querySelectorAll('.op'));
+  function casa(txt, t){
+    if(!t) return true;
+    if(t.length<=4){
+      var partes=txt.split(/[^a-z0-9]+/);
+      return partes.indexOf(t)>=0;
+    }
+    return txt.indexOf(t)>=0;
+  }
   function filtra(){
     var t=(q.value||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
     var u=uf.value, pf=plat.value, n=0;
     ops.forEach(function(o){
       var txt=(o.textContent||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-      var ok=(!t||txt.indexOf(t)>=0)
+      var ok=casa(txt,t)
            &&(!u||o.getAttribute('data-uf')===u)
            &&(!pf||o.getAttribute('data-plat')===pf);
       o.setAttribute('data-ok', ok?'1':'0');
@@ -474,7 +482,7 @@ o link leva ao portal de origem.</div>
       var vs=0;
       serpCards.forEach(function(c){
         var txt=(c.textContent||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-        var ok=!t||txt.indexOf(t)>=0;
+        var ok=casa(txt,t);
         c.style.display=ok?'':'none';
         if(ok) vs++;
       });
@@ -484,7 +492,7 @@ o link leva ao portal de origem.</div>
       var vm=0;
       mecCards.forEach(function(c){
         var txt=(c.textContent||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
-        var ok=!t||txt.indexOf(t)>=0;
+        var ok=casa(txt,t);
         c.style.display=ok?'':'none';
         if(ok) vm++;
       });
