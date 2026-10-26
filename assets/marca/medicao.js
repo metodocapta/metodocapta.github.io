@@ -80,6 +80,28 @@
   /* ---------- 2) consentimento (A depende dele; B e C nao) ---------- */
   function consentiu() { return ler(CHAVE) === 'aceito'; }
 
+  function carregarProvedorSemCookie() {
+    /* B) Plausible / Umami: o script do provedor precisa estar na pagina. Ele e
+       carregado aqui (e nao no HTML) para que o build continue sem CDN fixo e
+       para que a configuracao seja um campo so. Sem cookie, sem PII. */
+    if (CFG.plausible && !document.getElementById('fm-plausible')) {
+      var p = document.createElement('script');
+      p.id = 'fm-plausible'; p.defer = true;
+      p.setAttribute('data-domain', CFG.plausible);
+      p.src = (CFG.plausible_src || 'https://plausible.io/js/script.js');
+      document.head.appendChild(p);
+      log('plausible carregado para', CFG.plausible);
+    }
+    if (CFG.umami && !document.getElementById('fm-umami')) {
+      var u = document.createElement('script');
+      u.id = 'fm-umami'; u.defer = true;
+      u.setAttribute('data-website-id', CFG.umami);
+      u.src = (CFG.umami_src || 'https://cloud.umami.is/script.js');
+      document.head.appendChild(u);
+      log('umami carregado');
+    }
+  }
+
   function carregarGA4() {
     if (!CFG.ga4 || document.getElementById('fm-ga4')) return;
     var s = document.createElement('script');
@@ -191,6 +213,7 @@
     ligarCliques();
     ligarLeitura();
     ligarCalculadora();
+    carregarProvedorSemCookie();
     if (CFG.ga4) {
       if (consentiu()) carregarGA4();
       else barra();
