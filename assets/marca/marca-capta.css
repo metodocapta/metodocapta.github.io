@@ -1368,7 +1368,7 @@ html body.fm-bar-on .mc-zap{bottom:calc(var(--fm-barra-h, 86px) + 14px);}
 /* drawer */
 @media (max-width:900px){
   .site-hd .wrap{flex-wrap:nowrap;gap:6px}
-  .site-hd nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;gap:0;
+  .site-hd nav{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;flex-wrap:nowrap;gap:0;
     background:linear-gradient(180deg,#062531,#0a3340);padding:6px 20px 14px;
     border-top:1px solid rgba(127,227,216,.18);box-shadow:0 24px 48px rgba(0,0,0,.35);
     max-height:calc(100vh - 64px);overflow:auto;z-index:899}
@@ -1428,6 +1428,18 @@ html body.fm-bar-on .mc-zap{bottom:calc(var(--fm-barra-h, 86px) + 14px);}
    8) MENU — onda 3: submenu no drawer, foco preso, historico e destaque
    ========================================================================== */
 body.nav-lock{overflow:hidden}
+
+
+/* o <details> do drawer herdava o estilo branco dos FAQ das paginas de secao:
+   fundo #fff, borda e padding. Aqui volta a ser item de menu. */
+.site-hd .nav-sub{background:transparent !important;border:0 !important;border-radius:0 !important;
+  padding:0 !important;margin:0 !important;box-shadow:none !important}
+.site-hd .nav-sub summary{background:transparent !important;border:0 !important;border-radius:0 !important;
+  color:#bdeee9 !important;padding:13px 0 !important}
+.site-hd .nav-sub summary::after{color:#7fe3d8}
+.site-hd .nav-sub-lista{background:transparent !important;padding:0 0 10px 10px !important}
+.site-hd .nav-sub-lista a{color:#cfe8e6 !important;background:transparent !important;border:0 !important}
+.site-hd .nav-sub-lista a b{color:#7fe3d8}
 
 /* submenu dentro do drawer (so no mobile) */
 .nav-sub{display:none}
