@@ -164,8 +164,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## FAQ e mapa
 
-- [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
-- [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
+- [Percursos: por onde começar](https://metodocapta.github.io/percursos/): três percursos por necessidade, com a página certa em cada etapa.
+
 
 ## Matriz de mecanismos
 
