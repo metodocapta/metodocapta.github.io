@@ -121,7 +121,7 @@
           }],
           ["biblioteca", "Categorias", "/assets/menu_biblioteca.json", function (d) {
             return (d.categorias || []).map(function (c) {
-              return '<a href="../../biblioteca' + c.id + '">' + c.cat + "</a>";
+              return '<a href="' + (c.href || ("/biblioteca/categoria/" + c.id + "/")) + '">' + c.cat + "</a>";
             }).join("");
           }]
         ].forEach(function (cfg) {
@@ -198,7 +198,7 @@
         } else {
           var ul = cria("div", "nav-mega-lista");
           (dados.categorias || []).forEach(function (c) {
-            var a = cria("a", "nav-mega-cat", { href: "/biblioteca/#" + c.id });
+            var a = cria("a", "nav-mega-cat", { href: c.href || ("/biblioteca/#" + c.id) });
             a.innerHTML = '<span>' + c.cat + '</span><em>' + c.n + '</em>';
             ul.appendChild(a);
           });
