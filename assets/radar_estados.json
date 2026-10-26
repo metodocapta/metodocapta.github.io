@@ -4,22 +4,17 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 555,
+   "oportunidades": 416,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 422
-    },
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 107
+     "total": 369
     },
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 8
+     "total": 6
     },
     {
      "codigo": "LIR",
@@ -32,74 +27,69 @@
      "total": 3
     },
     {
-     "codigo": "FUNDO_IDOSO",
-     "rotulo": "FUNDO DO IDOSO",
-     "total": 8
+     "codigo": "EDITAL_PUBLICO",
+     "rotulo": "EDITAIS",
+     "total": 27
     },
     {
-     "codigo": "LIE",
-     "rotulo": "LIE",
-     "total": 3
+     "codigo": "FUNDO_IDOSO",
+     "rotulo": "FUNDO DO IDOSO",
+     "total": 7
     }
    ]
   },
   "SP": {
-   "oportunidades": 225,
+   "oportunidades": 130,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 146
-    },
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 49
+     "total": 60
     },
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 21
-    },
-    {
-     "codigo": "LIR",
-     "rotulo": "LIR RECICLAGEM",
-     "total": 3
+     "total": 18
     },
     {
      "codigo": "FIA",
      "rotulo": "FIA",
+     "total": 2
+    },
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 47
+    },
+    {
+     "codigo": "LIR",
+     "rotulo": "LIR RECICLAGEM",
      "total": 2
     },
     {
      "codigo": "LIE",
      "rotulo": "LIE",
-     "total": 4
+     "total": 1
     }
    ]
   },
   "SC": {
-   "oportunidades": 327,
+   "oportunidades": 263,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 94
+     "total": 35
     },
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 208
-    },
-    {
-     "codigo": "FUNDO_IDOSO",
-     "rotulo": "FUNDO DO IDOSO",
-     "total": 2
+     "total": 206
     },
     {
      "codigo": "FIA",
      "rotulo": "FIA",
-     "total": 6
+     "total": 5
     },
     {
      "codigo": "LIR",
@@ -114,12 +104,12 @@
    ]
   },
   "GO": {
-   "oportunidades": 24,
+   "oportunidades": 18,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 13
+     "total": 7
     },
     {
      "codigo": "ROUANET",
@@ -144,7 +134,7 @@
    ]
   },
   "RJ": {
-   "oportunidades": 53,
+   "oportunidades": 43,
    "areas": [
     {
      "codigo": "LIR",
@@ -159,7 +149,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 21
+     "total": 11
     },
     {
      "codigo": "ROUANET",
@@ -174,33 +164,38 @@
    ]
   },
   "CE": {
-   "oportunidades": 18,
+   "oportunidades": 10,
    "areas": [
-    {
-     "codigo": "MROSC",
-     "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 2
-    },
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 7
+     "total": 3
     },
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 9
+     "total": 7
     }
    ]
   },
-  "MG": {
-   "oportunidades": 62,
+  "AM": {
+   "oportunidades": 3,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 40
+     "total": 2
     },
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 1
+    }
+   ]
+  },
+  "MG": {
+   "oportunidades": 33,
+   "areas": [
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
@@ -222,144 +217,54 @@
      "total": 13
     },
     {
-     "codigo": "LIR",
-     "rotulo": "LIR RECICLAGEM",
-     "total": 2
-    }
-   ]
-  },
-  "AM": {
-   "oportunidades": 3,
-   "areas": [
-    {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 2
-    },
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 1
-    }
-   ]
-  },
-  "BA": {
-   "oportunidades": 28,
-   "areas": [
-    {
-     "codigo": "MROSC",
-     "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 2
-    },
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 18
-    },
-    {
-     "codigo": "FUNDO_IDOSO",
-     "rotulo": "FUNDO DO IDOSO",
-     "total": 1
-    },
-    {
-     "codigo": "LIR",
-     "rotulo": "LIR RECICLAGEM",
-     "total": 1
-    },
-    {
-     "codigo": "LIE",
-     "rotulo": "LIE",
-     "total": 1
-    },
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 5
-    }
-   ]
-  },
-  "MA": {
-   "oportunidades": 4,
-   "areas": [
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 3
-    },
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 1
-    }
-   ]
-  },
-  "PI": {
-   "oportunidades": 6,
-   "areas": [
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 2
-    },
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 3
-    },
-    {
-     "codigo": "MROSC",
-     "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 1
+     "total": 13
     }
    ]
   },
   "RS": {
-   "oportunidades": 44,
+   "oportunidades": 29,
    "areas": [
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 20
-    },
     {
      "codigo": "FIA",
      "rotulo": "FIA",
      "total": 1
     },
     {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 16
-    },
-    {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 3
-    },
-    {
-     "codigo": "FUNDO_IDOSO",
-     "rotulo": "FUNDO DO IDOSO",
      "total": 2
     },
     {
-     "codigo": "LIE",
-     "rotulo": "LIE",
-     "total": 1
+     "codigo": "EDITAL_PUBLICO",
+     "rotulo": "EDITAIS",
+     "total": 7
+    },
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 17
     },
     {
      "codigo": "LIR",
      "rotulo": "LIR RECICLAGEM",
      "total": 1
+    },
+    {
+     "codigo": "FUNDO_IDOSO",
+     "rotulo": "FUNDO DO IDOSO",
+     "total": 1
     }
    ]
   },
   "SE": {
-   "oportunidades": 8,
+   "oportunidades": 6,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 6
+     "total": 4
     },
     {
      "codigo": "EDITAL_PUBLICO",
@@ -369,12 +274,12 @@
    ]
   },
   "PA": {
-   "oportunidades": 19,
+   "oportunidades": 8,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 15
+     "total": 4
     },
     {
      "codigo": "ROUANET",
@@ -385,6 +290,26 @@
      "codigo": "LIR",
      "rotulo": "LIR RECICLAGEM",
      "total": 1
+    }
+   ]
+  },
+  "BA": {
+   "oportunidades": 12,
+   "areas": [
+    {
+     "codigo": "EDITAL_PUBLICO",
+     "rotulo": "EDITAIS",
+     "total": 6
+    },
+    {
+     "codigo": "LIR",
+     "rotulo": "LIR RECICLAGEM",
+     "total": 1
+    },
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 5
     }
    ]
   },
@@ -404,7 +329,7 @@
    ]
   },
   "AL": {
-   "oportunidades": 5,
+   "oportunidades": 3,
    "areas": [
     {
      "codigo": "LIR",
@@ -419,67 +344,47 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 3
+     "total": 1
     }
    ]
   },
   "MT": {
-   "oportunidades": 5,
+   "oportunidades": 2,
    "areas": [
     {
      "codigo": "LIR",
      "rotulo": "LIR RECICLAGEM",
      "total": 2
-    },
+    }
+   ]
+  },
+  "PI": {
+   "oportunidades": 5,
+   "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
      "total": 3
-    }
-   ]
-  },
-  "ES": {
-   "oportunidades": 10,
-   "areas": [
+    },
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 1
+    },
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
      "total": 1
-    },
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 4
-    },
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 5
-    }
-   ]
-  },
-  "TO": {
-   "oportunidades": 4,
-   "areas": [
-    {
-     "codigo": "EDITAL_PUBLICO",
-     "rotulo": "EDITAIS",
-     "total": 2
-    },
-    {
-     "codigo": "ROUANET",
-     "rotulo": "PRONAC ROUANET",
-     "total": 2
     }
    ]
   },
   "RO": {
-   "oportunidades": 6,
+   "oportunidades": 5,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 3
+     "total": 2
     },
     {
      "codigo": "ROUANET",
@@ -498,18 +403,33 @@
     }
    ]
   },
+  "MA": {
+   "oportunidades": 2,
+   "areas": [
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 2
+    }
+   ]
+  },
   "DF": {
-   "oportunidades": 7,
+   "oportunidades": 5,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
      "total": 5
-    },
+    }
+   ]
+  },
+  "ES": {
+   "oportunidades": 5,
+   "areas": [
     {
-     "codigo": "FIA",
-     "rotulo": "FIA",
-     "total": 1
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 4
     },
     {
      "codigo": "EDITAL_PUBLICO",
@@ -519,7 +439,7 @@
    ]
   },
   "PE": {
-   "oportunidades": 14,
+   "oportunidades": 12,
    "areas": [
     {
      "codigo": "ROUANET",
@@ -529,11 +449,26 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 3
+     "total": 1
     },
     {
      "codigo": "EMENDA",
      "rotulo": "EMENDAS",
+     "total": 1
+    }
+   ]
+  },
+  "TO": {
+   "oportunidades": 3,
+   "areas": [
+    {
+     "codigo": "ROUANET",
+     "rotulo": "PRONAC ROUANET",
+     "total": 2
+    },
+    {
+     "codigo": "EDITAL_PUBLICO",
+     "rotulo": "EDITAIS",
      "total": 1
     }
    ]
