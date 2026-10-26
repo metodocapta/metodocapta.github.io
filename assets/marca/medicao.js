@@ -161,8 +161,13 @@
       analytics_storage: cookieless() ? 'denied' : 'granted'
     });
     /* send_page_view: false — a page_view e a NOSSA (com pagina/titulo/etapa),
-       para nao contar duas vezes quando o gtag tambem envia a dele. */
-    window.gtag('config', CFG.ga4, { anonymize_ip: true, send_page_view: false });
+       para nao contar duas vezes quando o gtag tambem envia a dele.
+       ?debug=1 na URL liga o DebugView (sem precisar de extensao). */
+    window.gtag('config', CFG.ga4, {
+      anonymize_ip: true,
+      send_page_view: false,
+      debug_mode: /[?&]debug=1/.test(location.search)
+    });
   }
 
   function barra() {
@@ -240,10 +245,13 @@
         return;
       }
 
-      /* 2) sem nome explicito: classifica pelo destino (contrato do `clique`) */
+      /* 2) sem nome explicito: classifica pelo destino. O evento leva o TIPO no
+         proprio nome (clique_whatsapp, clique_diagnostico...) para virar
+         evento principal (key event) no GA4 sem filtro por parametro. O
+         parametro `tipo` continua, para cruzar em exploracao. */
       var tipo = tipoDeLink(href);
       if (!tipo) return;
-      emitir('clique', { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 200) });
+      emitir('clique_' + tipo, { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 200) });
     }, true);
   }
 
