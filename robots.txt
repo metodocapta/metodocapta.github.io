@@ -5,6 +5,7 @@
 User-agent: *
 Allow: /
 Disallow: /area-do-cliente/
+Disallow: /radar/oportunidades/entidade/
 Disallow: /ola-mundo/
 Disallow: /category/
 
