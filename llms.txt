@@ -61,15 +61,15 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Biblioteca (conceitos)
 
 - [Biblioteca (hub)](https://metodocapta.github.io/biblioteca/): glossário de captação e terceiro setor.
-- [Fundamentos (categoria)](https://metodocapta.github.io/biblioteca/categoria/fundamentos/): conceitos de fundamentos na Biblioteca.
-- [Captação pública (categoria)](https://metodocapta.github.io/biblioteca/categoria/captacao-publica/): conceitos de captação pública na Biblioteca.
-- [Incentivo fiscal (categoria)](https://metodocapta.github.io/biblioteca/categoria/incentivo-fiscal/): conceitos de incentivo fiscal na Biblioteca.
-- [Reciclagem (categoria)](https://metodocapta.github.io/biblioteca/categoria/reciclagem/): conceitos de reciclagem na Biblioteca.
-- [Prestação de contas (categoria)](https://metodocapta.github.io/biblioteca/categoria/prestacao-de-contas/): conceitos de prestação de contas na Biblioteca.
-- [Contabilidade (categoria)](https://metodocapta.github.io/biblioteca/categoria/contabilidade/): conceitos de contabilidade na Biblioteca.
-- [Governança (categoria)](https://metodocapta.github.io/biblioteca/categoria/governanca/): conceitos de governança na Biblioteca.
-- [Compliance (categoria)](https://metodocapta.github.io/biblioteca/categoria/compliance/): conceitos de compliance na Biblioteca.
-- [ESG e parcerias (categoria)](https://metodocapta.github.io/biblioteca/categoria/esg-e-parcerias/): conceitos de esg e parcerias na Biblioteca.
+- [Fundamentos (categoria)](https://metodocapta.github.io/biblioteca/categoria/fundamentos/): Antes de disputar um edital, é preciso saber o que a organização é, como se relaciona com o poder público e o que a lei permite.
+- [Captação pública (categoria)](https://metodocapta.github.io/biblioteca/categoria/captacao-publica/): Aqui o dinheiro não é doação: é repasse com instrumento, plano de trabalho e prestação de contas.
+- [Incentivo fiscal (categoria)](https://metodocapta.github.io/biblioteca/categoria/incentivo-fiscal/): Recursos de renúncia fiscal têm rito próprio: proposta, aprovação, captação, execução e prestação de contas em sistema do órgão.
+- [Reciclagem (categoria)](https://metodocapta.github.io/biblioteca/categoria/reciclagem/): A cadeia da reciclagem tem vocabulário técnico próprio e uma lei de incentivo específica, com teto e rito.
+- [Prestação de contas (categoria)](https://metodocapta.github.io/biblioteca/categoria/prestacao-de-contas/): Depois da assinatura, o projeto vive de lastro: despesa com nexo, conta específica e relatório que conversa com o extrato.
+- [Contabilidade (categoria)](https://metodocapta.github.io/biblioteca/categoria/contabilidade/): Como o recurso do projeto aparece no balanço — e por que isso decide a prestação de contas.
+- [Governança (categoria)](https://metodocapta.github.io/biblioteca/categoria/governanca/): Governança não é formalidade de estatuto: é conselho atuante, ata, segregação de funções e canal de denúncia.
+- [Compliance (categoria)](https://metodocapta.github.io/biblioteca/categoria/compliance/): Conformidade é o que a organização faz para cumprir lei, contrato e regra interna — e para provar que cumpriu.
+- [ESG e parcerias (categoria)](https://metodocapta.github.io/biblioteca/categoria/esg-e-parcerias/): Investimento social privado, ESG e parceria com empresa não são sinônimos: mudam a origem do recurso, o controle e o que se reporta.
 - [OSC (Organização da Sociedade Civil)](https://metodocapta.github.io/biblioteca/o-que-e-osc/): OSC é a sigla de Organização da Sociedade Civil: entidades privadas, sem fins lucrativos, que atuam em finalidade pública — associações, fundações e cooperativas sociais. Entenda o conceito e o marco legal.
 - [CAUC (regularidade para convênios)](https://metodocapta.github.io/biblioteca/o-que-e-cauc/): CAUC é o serviço do SIAFI que mostra a regularidade da entidade para convênios e contratos de repasse. Veja o que entra, o que trava e como regularizar.
 - [CEBAS (Certificação de Entidade Beneficente)](https://metodocapta.github.io/biblioteca/o-que-e-cebas/): CEBAS é a certificação que reconhece a entidade beneficente em assistência social, saúde ou educação e garante imunidade de contribuições. Veja requisitos.
