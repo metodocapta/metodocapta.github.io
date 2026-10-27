@@ -175,3 +175,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Oportunidades abertas
 
 - [Oportunidades abertas (prazo e link oficial)](https://metodocapta.github.io/radar/oportunidades/): lista viva de projetos captando no SALIC e chamamentos do PNCP, com prazo, valor e UF.
+
+## Como pontuamos
+
+- [Como pontuamos uma oportunidade](https://metodocapta.github.io/radar/como-pontuamos/): as 8 dimensoes do CAPTA_SCORE, pesos, faixas, regra de cobertura e o que descarta um edital antes da nota
