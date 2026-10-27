@@ -153,7 +153,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Captação por região](https://metodocapta.github.io/captacao-de-recursos/): captação de recursos por estado.
 - [Santa Catarina](https://metodocapta.github.io/captacao-de-recursos/santa-catarina/): Captação de recursos em Santa Catarina: mecanismos ativos, editais e leis de incentivo, prontidão documental e acompanhamento para OSCs, cooperativas e associações.
 - [Paraná](https://metodocapta.github.io/captacao-de-recursos/parana/): Captação de recursos no Paraná: editais, fundos e leis de incentivo para OSCs, cooperativas e associações, com prontidão documental e acompanhamento.
-- [São Paulo](https://metodocapta.github.io/captacao-de-recursos/sao-paulo/): 130 oportunidades acompanhadas no Radar.
+- [São Paulo](https://metodocapta.github.io/captacao-de-recursos/sao-paulo/): 134 oportunidades acompanhadas no Radar.
 - [Rio de Janeiro](https://metodocapta.github.io/captacao-de-recursos/rio-de-janeiro/): 43 oportunidades acompanhadas no Radar.
 - [Minas Gerais](https://metodocapta.github.io/captacao-de-recursos/minas-gerais/): 33 oportunidades acompanhadas no Radar.
 - [Rio Grande do Sul](https://metodocapta.github.io/captacao-de-recursos/rio-grande-do-sul/): 29 oportunidades acompanhadas no Radar.

@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-10-26",
+ "gerado_em": "2026-10-27",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 1945,
+  "oportunidades": 1960,
   "elegiveis": 11,
   "estruturados": 4,
   "matches": 1128
@@ -12,12 +12,12 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 726
+   "total": 741
   },
   {
    "codigo": "MROSC",
    "rotulo": "CHAMAMENTOS PÚBLICOS",
-   "total": 56
+   "total": 57
   },
   {
    "codigo": "ROUANET",
@@ -27,7 +27,7 @@
   {
    "codigo": "LIR",
    "rotulo": "LIR RECICLAGEM",
-   "total": 249
+   "total": 248
   },
   {
    "codigo": "EMENDA",

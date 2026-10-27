@@ -1,10 +1,10 @@
 {
- "gerado_em": "2026-10-26",
+ "gerado_em": "2026-10-27",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 416,
+   "oportunidades": 419,
    "areas": [
     {
      "codigo": "ROUANET",
@@ -29,7 +29,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 27
+     "total": 30
     },
     {
      "codigo": "FUNDO_IDOSO",
@@ -39,12 +39,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 130,
+   "oportunidades": 134,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 60
+     "total": 64
     },
     {
      "codigo": "MROSC",
@@ -74,12 +74,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 263,
+   "oportunidades": 265,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 35
+     "total": 37
     },
     {
      "codigo": "ROUANET",
