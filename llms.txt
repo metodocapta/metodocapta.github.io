@@ -180,3 +180,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Como pontuamos
 
 - [Como pontuamos uma oportunidade](https://metodocapta.github.io/radar/como-pontuamos/): as 8 dimensoes do CAPTA_SCORE, pesos, faixas, regra de cobertura e o que descarta um edital antes da nota
+
+## Portfólio por perfil
+
+- [Portfólio de captação por perfil](https://metodocapta.github.io/radar/portfolio/): as leis que cada natureza juridica permite, os editais abertos por UF e o que cada edital cobra — sem cadastro
