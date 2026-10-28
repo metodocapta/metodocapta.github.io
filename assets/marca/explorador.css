@@ -342,6 +342,28 @@
 .fm-mech-note{font-size:13.5px !important}
 
 /* ============================================================================
+   SISTEMA TIPOGRÁFICO — dois papéis, sem improviso
+   Títulos (h1–h4 + kicker): SEMPRE Oswald, 700, tracking negativo nos grandes.
+   Leitura (parágrafos, labels): SEMPRE Inter (diversificação de papéis).
+   A Oswald não tem itálico: <em> nos títulos vira contraste de PESO (400),
+   nunca oblíquo sintético — que borra a forma das letras condensadas.
+   ========================================================================== */
+.fm-site h1, .fm-site h2, .fm-site h3, .fm-site h4, .fm-site .fm-kicker{
+  font-family:'Oswald','Segoe UI',system-ui,Arial,sans-serif !important;
+  font-synthesis:none;
+}
+.fm-site h1, .fm-site h2, .fm-site h3, .fm-site h4{font-weight:700}
+/* tracking de display: levemente negativo nos grandes, neutro no h3 */
+.fm-site h1{letter-spacing:-.012em !important}
+.fm-site h2{letter-spacing:-.008em !important}
+.fm-site h3{letter-spacing:0 !important}
+.fm-site h1 em, .fm-site h2 em, .fm-site h3 em, .fm-site h4 em,
+.fm-site .fm-kicker em{
+  font-style:normal;
+  font-weight:400;
+}
+
+/* ============================================================================
    P1 — ACABAMENTO ÓPTICO (tokens da casa, SEM novo backdrop-filter)
    ========================================================================== */
 
@@ -406,3 +428,10 @@
   }
   .fm-section .fm-kicker{font-size:clamp(18px,4.6vw,22px) !important;line-height:1.12}
 }
+
+/* Números tabulares: dígitos de largura fixa sem terceira família */
+.fm-radar-kpi b,
+.fm-barra > b,
+.fm-sim-campo output,
+.fm-sim-resultado b,
+.fm-prontidao-valor{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
