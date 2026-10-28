@@ -459,6 +459,8 @@
       if (refazer) {
         refazer.addEventListener('click', function () {
           try { sessionStorage.removeItem('fm-minidiag'); } catch (e) {}
+          var pront = doc.getElementById('fm-prontidao');
+          if (pront) pront.hidden = true;   /* o score do Radar nao pode ficar velho */
           form.reset();
           form.hidden = false;
           atual = 1;
@@ -505,12 +507,27 @@
     pintar();
   }
 
+  /* Marca quando o Radar está na tela: no mobile libera a zona do polegar
+     (esconde a barra "Agendar agora", que duplica o CTA do próprio painel). */
+  function initRadarZona() {
+    var sec = doc.getElementById('fm-radar');
+    if (!sec || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) {
+        if (e.isIntersecting) doc.documentElement.setAttribute('data-fm-radar-visivel', '');
+        else doc.documentElement.removeAttribute('data-fm-radar-visivel');
+      });
+    }, { rootMargin: '-8% 0px -18% 0px' });
+    obs.observe(sec);
+  }
+
   function iniciar() {
     initEtapas();
     initRadar();
     initSimulador();
     initProntidao();
     initMiniDiag();
+    initRadarZona();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', iniciar, { once: true });

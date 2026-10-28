@@ -340,3 +340,69 @@
 .fm-cockpit-nota{font-size:13px !important}
 .fm-cockpit-kicker{font-size:12.5px !important}
 .fm-mech-note{font-size:13.5px !important}
+
+/* ============================================================================
+   P1 — ACABAMENTO ÓPTICO (tokens da casa, SEM novo backdrop-filter)
+   ========================================================================== */
+
+/* 4) Borda especular: luz no topo, sombra na base (só border + inset shadow) */
+.fm-pillars .fm-pillar{
+  border-top-color:rgba(127,227,216,.30) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 12px 28px -20px rgba(0,0,0,.65);
+}
+.fm-cockpit{
+  border-top-color:rgba(255,255,255,.14);
+  box-shadow:0 24px 60px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+/* 5) "Dado vivo": ponto pulsante no painel do Radar */
+.fm-cockpit-kicker::before{
+  content:"";display:inline-block;width:8px;height:8px;border-radius:50%;
+  margin-right:8px;vertical-align:middle;background:var(--mc-green);
+  box-shadow:0 0 10px var(--mc-green),0 0 20px rgba(37,211,102,.55);
+  animation:fmPulso 2.2s ease-in-out infinite;
+}
+@keyframes fmPulso{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.55;transform:scale(1.3)}
+}
+
+/* 6) CTA primário do hero em terracota (contraste complementar à interface teal) */
+.fm-hero .fm-btn-primary{
+  background:linear-gradient(135deg,#e08a5c 0%,var(--mc-orange) 100%) !important;
+  box-shadow:0 14px 34px -10px rgba(217,123,77,.55),
+             inset 0 1px 0 rgba(255,255,255,.28) !important;
+}
+.fm-hero .fm-btn-primary:hover{filter:brightness(1.06)}
+
+/* 7) Conector do fluxo: gradiente estático + realce no hover (sem loop infinito) */
+.fm-mech-flow{position:relative}
+.fm-mech-flow::after{
+  content:"";position:absolute;left:0;right:0;bottom:-8px;height:1px;
+  background:linear-gradient(90deg,rgba(10,188,176,0),rgba(10,188,176,.45) 35%,rgba(217,123,77,.45) 70%,rgba(217,123,77,0));
+  opacity:.55;transition:opacity .25s ease;
+}
+.fm-mech-flow:hover::after{opacity:1}
+.fm-mech-arrow{color:rgba(127,227,216,.35) !important;transition:color .2s ease}
+.fm-mech-flow:hover .fm-mech-arrow{color:var(--mc-orange) !important}
+
+/* 3) Mobile: libera a zona do polegar quando o Radar está na tela */
+@media (max-width:760px){
+  html[data-fm-radar-visivel] .fm-sticky-cta{display:none !important}
+  .fm-cockpit{padding-bottom:18px}
+  .fm-barras{padding-bottom:56px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .fm-cockpit-kicker::before{animation:none}
+  .fm-mech-flow::after{transition:none}
+}
+
+/* Mobile: mantém o numero da secao colado ao separador (evita "05" / "·" em
+   linhas separadas) e reduz o kicker para caber em 2 linhas equilibradas */
+@media (max-width:600px){
+  .fm-section .fm-kicker::before{
+    content:counter(fm-secao,decimal-leading-zero) "\00a0\00b7\00a0";
+  }
+  .fm-section .fm-kicker{font-size:clamp(18px,4.6vw,22px) !important;line-height:1.12}
+}
