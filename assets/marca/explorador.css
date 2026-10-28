@@ -128,7 +128,13 @@
   text-transform:uppercase;color:var(--mc-muted)}
 .fm-radar-select{appearance:none;cursor:pointer;padding:9px 34px 9px 12px;border-radius:10px;
   border:1px solid rgba(10,188,176,.42);background:rgba(6,37,49,.55) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237fe3d8' stroke-width='2'><path d='m6 9 6 6 6-6'/></svg>") no-repeat right 10px center/16px;
-  color:var(--mc-white);font:600 13px/1.4 Inter,Segoe UI,sans-serif;min-width:190px}
+  color:var(--mc-white);font:600 13px/1.4 Inter,Segoe UI,sans-serif;min-width:190px;
+  color-scheme:dark}
+/* o popup nativo das opcoes seguia o tema claro do sistema (esbranquicado) */
+.fm-radar-select option,.fm-radar-select optgroup{
+  background:var(--mc-navy);color:var(--mc-text);}
+.fm-radar-select option:checked,.fm-radar-select option:hover{
+  background:var(--mc-teal-dark);color:#fff;}
 .fm-radar-select:focus-visible{outline:3px solid rgba(10,188,176,.7);outline-offset:2px}
 .fm-radar-limpar{appearance:none;cursor:pointer;padding:8px 14px;border-radius:999px;
   border:1px solid rgba(217,123,77,.5);background:transparent;color:#f0c3aa;
