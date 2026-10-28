@@ -369,6 +369,13 @@
   font-weight:400;
 }
 
+/* h3 (títulos de card): 25px — fecha a escala 48 → 38 → 25 sem estourar o card
+   (a 28px o título quebrava em 3 linhas e o card crescia demais). */
+.fm-site .fm-section h3{font-size:25px !important;line-height:1.22}
+/* Card das 6 etapas: reserva 2 linhas de título para o corpo do texto começar
+   SEMPRE no mesmo Y (sem isso, 1 linha x 2 linhas desalinha os cards em ~30px). */
+.fm-pillars .fm-pillar h3{min-height:calc(1.22em * 2)}
+
 /* ============================================================================
    P1 — ACABAMENTO ÓPTICO (tokens da casa, SEM novo backdrop-filter)
    ========================================================================== */
