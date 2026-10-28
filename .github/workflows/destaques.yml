@@ -3,14 +3,15 @@ name: Atualizar Destaques (Substack)
 # Puxa os ultimos 5 posts do Substack e atualiza assets/destaques.json,
 # que alimenta o slider "Destaques" da Home.
 #
-# Roda: 1x/dia, no botao manual, e em push de estudo novo. O Substack (Cloudflare)
-# bloqueia com frequencia o IP do runner do GitHub; nesse caso o job NAO falha —
-# apenas MANTEM o assets/destaques.json como esta (a atualizacao local, via
-# build_site, cuida do arquivo). Assim o Actions nao dispara alerta a toa.
+# Roda: de hora em hora, no botao manual, e em push de estudo novo. A fonte
+# preferida e a API de arquivo do Substack (JSON, sem cache e sem Cloudflare);
+# o RSS direto e os proxies ficam de reserva. Se NENHUMA fonte responder:
+#   - arquivo atualizado ha <= 3 dias -> mantem e nao falha (evita alerta a toa);
+#   - arquivo parado ha mais de 3 dias -> FALHA de proposito, para o dono saber.
 
 on:
   schedule:
-    - cron: "0 11 * * *"       # 1x/dia (~08:00 BRT)
+    - cron: "0 * * * *"        # de hora em hora (o GitHub pode atrasar)
   workflow_dispatch:            # permite rodar manualmente na aba Actions
   push:
     branches: [main]
@@ -39,6 +40,7 @@ jobs:
           from datetime import date
 
           FEED  = "https://minutocaptamais.substack.com/feed"
+          API   = "https://minutocaptamais.substack.com/api/v1/archive?sort=new&limit=20&offset=0"
           SAIDA = "assets/destaques.json"
           LIMITE = 5
           MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]
@@ -86,10 +88,7 @@ jobs:
                       return el.text
               return ""
 
-          def primeiro_paragrafo(item, limite=RESUMO_MAX):
-              # <description> costuma ser o subtitulo (as vezes = titulo); o corpo
-              # vem em <content:encoded>. Pegamos o 1o paragrafo util.
-              enc = _encoded(item)
+          def primeiro_paragrafo_html(enc, limite=RESUMO_MAX):
               if not enc:
                   return ""
               enc = re.sub(r"<(script|style)\b[\s\S]*?</\1>", " ", enc, flags=re.I)
@@ -102,12 +101,22 @@ jobs:
                   return texto(p, limite)
               return ""
 
+          def primeiro_paragrafo(item, limite=RESUMO_MAX):
+              # RSS: <description> costuma ser o subtitulo (as vezes = titulo); o
+              # corpo vem em <content:encoded>. Pegamos o 1o paragrafo util.
+              return primeiro_paragrafo_html(_encoded(item), limite)
+
           def marca(s):
               s = re.sub(r"\bMÉTODO CAPTA+\b", "M\u00c9TODO", s or "")
               s = re.sub(r"\bMétodo Capta+\b", "M\u00e9todo", s)
               return re.sub(r"\s+", " ", s).strip()
 
           def data_pt(pub):
+              pub = (pub or "").strip()
+              m = re.match(r"(\d{4})-(\d{2})-(\d{2})", pub)   # ISO 8601 da API
+              if m:
+                  ano, mes, dia = (int(x) for x in m.groups())
+                  return date(ano, mes, dia).isoformat(), "%02d %s %d" % (dia, MESES[mes-1], ano)
               try:
                   dt = email.utils.parsedate_to_datetime(pub)
                   return dt.date().isoformat(), "%02d %s %d" % (dt.day, MESES[dt.month-1], dt.year)
@@ -151,53 +160,112 @@ jobs:
           # O Substack (Cloudflare) bloqueia o IP do runner do GitHub (HTTP 403).
           # Tenta direto e, se falhar, por proxies publicos de leitura que buscam
           # do IP deles — devolvendo o mesmo XML.
+          # A API de arquivo responde JSON fresco (sem cache e, na pratica, sem o
+          # Cloudflare que bloqueia o IP do runner). O RSS direto e os proxies de
+          # leitura ficam de reserva — devolvem o mesmo conteudo em XML.
           FONTES = [
-              FEED,
-              "https://r.jina.ai/" + FEED,
-              "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe=""),
-              "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe=""),
-              "https://api.codetabs.com/v1/proxy?quest=" + urllib.parse.quote(FEED, safe=""),
+              ("api", API),
+              ("rss", FEED),
+              ("rss", "https://r.jina.ai/" + FEED),
+              ("rss", "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe="")),
+              ("rss", "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe="")),
+              ("rss", "https://api.codetabs.com/v1/proxy?quest=" + urllib.parse.quote(FEED, safe="")),
           ]
 
           def pegar_feed():
-              for src in FONTES:
+              for tipo, src in FONTES:
                   try:
                       bruto = baixar(src)
+                      if tipo == "api":
+                          if bruto.lstrip().startswith("[") and '"canonical_url"' in bruto:
+                              print("fonte OK (api):", src[:74])
+                              return tipo, bruto
+                          print("api sem posts:", src[:60])
+                          continue
                       if "<item" in bruto:
-                          print("fonte OK:", src[:74])
-                          return bruto
+                          print("fonte OK (rss):", src[:74])
+                          return tipo, bruto
                       print("sem itens:", src[:74])
                   except Exception as exc:
                       print("falhou:", src[:60], "->", exc)
-              return None
+              return None, None
 
-          bruto = pegar_feed()
+          def mais_novo(lista):
+              return max((i.get("data") or "" for i in lista), default="")
+
+          tipo, bruto = pegar_feed()
           if not bruto:
-              print("AVISO: feed do Substack inacessivel deste runner (Cloudflare/proxy).")
-              print("Mantendo assets/destaques.json como esta (a atualizacao local cuida).")
+              # Sem fonte: mantem o arquivo. So falha (alerta) se ele estiver
+              # parado ha mais de 3 dias — o silencio eterno era o problema.
+              dias = 999
+              try:
+                  with open(SAIDA, encoding="utf-8") as fh:
+                      atual = mais_novo(json.load(fh).get("itens", []))
+                  dias = (date.today() - date.fromisoformat(atual)).days if atual else 999
+              except (OSError, ValueError):
+                  pass
+              if dias > 3:
+                  print("ERRO: feed do Substack inacessivel e destaques parados ha %s dias." % dias)
+                  raise SystemExit(1)
+              print("AVISO: feed inacessivel; mantendo destaques (atualizado ha %s dia(s))." % dias)
               raise SystemExit(0)
 
           import xml.etree.ElementTree as ET
           itens = []
-          for item in ET.fromstring(bruto).iter("item"):
-              titulo = texto(item.findtext("title"))
-              link = (item.findtext("link") or "").strip()
-              if not titulo or not link:
-                  continue
-              iso, pt = data_pt(item.findtext("pubDate"))
-              lead = marca(texto(item.findtext("description")))
-              slug = link.rstrip("/").split("/")[-1]
-              itens.append({
-                  "titulo": marca(titulo),
-                  "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
-                  "link": link,
-                  "data": iso,
-                  "data_pt": pt,
-                  "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
-                  "imagem": imagem_leve(imagem(item)),
-              })
-              if len(itens) >= LIMITE + 3:
-                  break
+          if tipo == "api":
+              # A API as vezes vem SEM body_html. O RSS traz o corpo: completa
+              # por link, sem trocar a lista (a API segue mandando na atualidade).
+              corpo = {}
+              try:
+                  rss_bruto = baixar(FEED)
+                  if "<item" in rss_bruto:
+                      for it in ET.fromstring(rss_bruto).iter("item"):
+                          lk = (it.findtext("link") or "").strip().rstrip("/")
+                          if lk:
+                              corpo[lk] = (_encoded(it), imagem(it))
+                      print("corpo do RSS:", len(corpo), "post(s)")
+              except Exception as exc:
+                  print("sem corpo do RSS:", exc)
+              for p in json.loads(bruto):
+                  titulo = texto(p.get("title"))
+                  link = (p.get("canonical_url") or "").strip()
+                  if not titulo or not link:
+                      continue
+                  iso, pt = data_pt(p.get("post_date"))
+                  lead = marca(texto(p.get("description") or p.get("subtitle") or ""))
+                  slug = link.rstrip("/").split("/")[-1]
+                  enc, img = corpo.get(link.rstrip("/"), ("", ""))
+                  itens.append({
+                      "titulo": marca(titulo),
+                      "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
+                      "link": link,
+                      "data": iso,
+                      "data_pt": pt,
+                      "resumo": marca(primeiro_paragrafo_html(enc or p.get("body_html")) or lead),
+                      "imagem": imagem_leve(img or p.get("cover_image") or ""),
+                  })
+                  if len(itens) >= LIMITE + 3:
+                      break
+          else:
+              for item in ET.fromstring(bruto).iter("item"):
+                  titulo = texto(item.findtext("title"))
+                  link = (item.findtext("link") or "").strip()
+                  if not titulo or not link:
+                      continue
+                  iso, pt = data_pt(item.findtext("pubDate"))
+                  lead = marca(texto(item.findtext("description")))
+                  slug = link.rstrip("/").split("/")[-1]
+                  itens.append({
+                      "titulo": marca(titulo),
+                      "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
+                      "link": link,
+                      "data": iso,
+                      "data_pt": pt,
+                      "resumo": marca(primeiro_paragrafo(item) or texto(item.findtext("description"), RESUMO_MAX)),
+                      "imagem": imagem_leve(imagem(item)),
+                  })
+                  if len(itens) >= LIMITE + 3:
+                      break
 
           # Link vivo: so o 404/410 definitivo tira o card. Cloudflare (403),
           # timeout e 5xx NAO provam que o post sumiu — nesse caso o item fica.
@@ -229,6 +297,19 @@ jobs:
           itens = sorted(vivos, key=lambda it: it.get("data") or "", reverse=True)[:LIMITE]
           if len(itens) < LIMITE:
               print("AVISO: apenas", len(itens), "item(ns) vivo(s) no feed")
+
+          # TRAVA ANTI-RETROCESSO: fonte em cache nunca "desatualiza" o slider.
+          atual = ""
+          try:
+              with open(SAIDA, encoding="utf-8") as fh:
+                  atual = mais_novo(json.load(fh).get("itens", []))
+          except (OSError, ValueError):
+              pass
+          if atual and mais_novo(itens) < atual:
+              print("AVISO: fonte devolveu post mais antigo (%s) que o arquivo (%s)."
+                    % (mais_novo(itens) or "?", atual))
+              print("Nada gravado — o slider nao retrocede.")
+              raise SystemExit(0)
 
           dado = {
               "gerado_em": date.today().isoformat(),
