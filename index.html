@@ -204,13 +204,17 @@ body.fm-bar-on .mc-zap{bottom:86px}
   border:1px solid rgba(127,227,216,.16);border-radius:10px;text-decoration:none;
   color:#eafffb;font-size:12.5px;line-height:1.25;
   transition:border-color .16s ease,background .16s ease,transform .16s ease}
-.fm-indice-sumario a.is-on{border-color:#0ABCB0;background:rgba(10,188,176,.16)}
-.fm-indice-sumario a.is-on b{color:#0ABCB0}
+.fm-indice-sumario a.is-on{border-color:#0ABCB0;background:#0ABCB0;color:#04222a;font-weight:600}
+.fm-indice-sumario a.is-on b{color:#04222a}
 .fm-indice-sumario a:hover{border-color:rgba(10,188,176,.55);background:rgba(10,188,176,.10);
   transform:translateY(-1px)}
 .fm-indice-sumario a b{font:700 10.5px/1 Oswald,sans-serif;letter-spacing:.08em;color:#7fe3d8;flex:0 0 auto}
 @keyframes fmSumIn{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 .fm-indice-sumario li{animation:fmSumIn .6s cubic-bezier(.2,.7,.3,1) both}
+@supports (animation-timeline: view()){
+  /* dispara quando o bloco entra na tela, nao no carregamento */
+  .fm-indice-sumario li{animation-timeline:view();animation-range:entry 0% cover 35%}
+}
 @media (prefers-reduced-motion: reduce){
   .fm-indice-sumario li{animation-name:fmSumFade}
   @keyframes fmSumFade{from{opacity:0}to{opacity:1}}
