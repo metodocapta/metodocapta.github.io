@@ -391,10 +391,50 @@ body.fm-bar-on .mc-zap{bottom:86px}
                     </div>
 
                 </section>
-<nav class="fm-indice-sumario" aria-label="Sumário desta página"><!-- fm-sumario-v6 -->
+<nav class="fm-indice-sumario" aria-label="Sumário desta página"><!-- fm-sumario-v7 -->
 <div class="fm-sum-topo"><span class="fm-sum-k">Nesta página · 12 seções</span></div>
 <ol><li><a href="#fm-parceiros"><b>01</b><span>Com quem atuamos</span></a></li><li><a href="#fm-problema"><b>02</b><span>O problema</span></a></li><li><a href="#fm-comparativo"><b>03</b><span>Comparativo</span></a></li><li><a href="#fm-capta"><b>04</b><span>Método</span></a></li><li><a href="#fm-radar"><b>05</b><span>Radar</span></a></li><li><a href="#fm-destaques"><b>06</b><span>Estudos</span></a></li><li><a href="#fm-evidencias"><b>07</b><span>Evidências</span></a></li><li><a href="#fm-publico"><b>08</b><span>Para quem</span></a></li><li><a href="#fm-riscos"><b>09</b><span>Riscos</span></a></li><li><a href="#fm-faq"><b>10</b><span>FAQ</span></a></li><li><a href="#fm-decisao-mapa"><b>11</b><span>Decisão</span></a></li><li><a href="#fm-decisao"><b>12</b><span>Começar</span></a></li></ol>
 </nav>
+<script>
+(function(){
+  var nav=document.querySelector('.fm-indice-sumario');
+  if(!nav) return;
+  var itens=[].slice.call(nav.querySelectorAll('ol li'));
+  if(!itens.length) return;
+  var mov=false;
+  try{ mov=localStorage.getItem('fm-movimento')==='on'; }catch(e){}
+  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var html=document.documentElement;
+  html.classList.add('fm-anim');
+  if(reduz && !mov) html.classList.add('fm-fade');
+  function animar(){
+    itens.forEach(function(li,i){
+      li.style.transitionDelay=(i*110)+'ms';
+      li.classList.add('is-in');
+    });
+    setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*110+800);
+  }
+  // FORCA O LAYOUT entre esconder e mostrar. Sem isto o navegador aplica as
+  // duas classes no mesmo quadro, nunca pinta o estado inicial e nao ha
+  // transicao nenhuma (o efeito simplesmente nao acontece).
+  void nav.offsetWidth;
+  requestAnimationFrame(function(){ animar(); });
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(ents){
+      ents.forEach(function(e){
+        if(e.isIntersecting){
+          itens.forEach(function(li){ li.classList.remove('is-in'); });
+          void nav.offsetWidth;
+          requestAnimationFrame(function(){ animar(); });
+        } else {
+          itens.forEach(function(li){ li.classList.remove('is-in'); });
+        }
+      });
+    },{threshold:.2});
+    obs.observe(nav);
+  }
+</script>
+
 <script>
 (function(){
   var nav=document.querySelector('.fm-indice-sumario');
