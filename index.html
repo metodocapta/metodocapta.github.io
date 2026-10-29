@@ -204,6 +204,8 @@ body.fm-bar-on .mc-zap{bottom:86px}
   border:1px solid rgba(127,227,216,.16);border-radius:10px;text-decoration:none;
   color:#eafffb;font-size:12.5px;line-height:1.25;
   transition:border-color .16s ease,background .16s ease,transform .16s ease}
+.fm-indice-sumario a.is-on{border-color:#0ABCB0;background:rgba(10,188,176,.16)}
+.fm-indice-sumario a.is-on b{color:#0ABCB0}
 .fm-indice-sumario a:hover{border-color:rgba(10,188,176,.55);background:rgba(10,188,176,.10);
   transform:translateY(-1px)}
 .fm-indice-sumario a b{font:700 10.5px/1 Oswald,sans-serif;letter-spacing:.08em;color:#7fe3d8;flex:0 0 auto}
@@ -390,7 +392,28 @@ body.fm-bar-on .mc-zap{bottom:86px}
 <div class="fm-sum-topo"><span class="fm-sum-k">Nesta página · 12 seções</span></div>
 <ol><li style="animation-delay:0ms"><a href="#fm-parceiros"><b>01</b><span>Com quem atuamos</span></a></li><li style="animation-delay:110ms"><a href="#fm-problema"><b>02</b><span>O problema</span></a></li><li style="animation-delay:220ms"><a href="#fm-comparativo"><b>03</b><span>Comparativo</span></a></li><li style="animation-delay:330ms"><a href="#fm-capta"><b>04</b><span>Método</span></a></li><li style="animation-delay:440ms"><a href="#fm-radar"><b>05</b><span>Radar</span></a></li><li style="animation-delay:550ms"><a href="#fm-destaques"><b>06</b><span>Estudos</span></a></li><li style="animation-delay:660ms"><a href="#fm-evidencias"><b>07</b><span>Evidências</span></a></li><li style="animation-delay:770ms"><a href="#fm-publico"><b>08</b><span>Para quem</span></a></li><li style="animation-delay:880ms"><a href="#fm-riscos"><b>09</b><span>Riscos</span></a></li><li style="animation-delay:990ms"><a href="#fm-faq"><b>10</b><span>FAQ</span></a></li><li style="animation-delay:1100ms"><a href="#fm-decisao-mapa"><b>11</b><span>Decisão</span></a></li><li style="animation-delay:1210ms"><a href="#fm-decisao"><b>12</b><span>Começar</span></a></li></ol>
 </nav>
-
+<script>
+(function(){
+  var nav=document.querySelector('.fm-indice-sumario');
+  if(!nav||!('IntersectionObserver' in window)) return;
+  var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
+  var alvos=links.map(function(a){ return document.getElementById(a.getAttribute('href').slice(1)); });
+  var ativo=-1;
+  function marcar(i){
+    if(i===ativo) return;
+    ativo=i;
+    links.forEach(function(a,j){ a.classList.toggle('is-on', j===i); });
+  }
+  var obs=new IntersectionObserver(function(ents){
+    ents.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var i=alvos.indexOf(e.target);
+      if(i>=0) marcar(i);
+    });
+  },{rootMargin:'-45% 0px -45% 0px'});
+  alvos.forEach(function(t){ if(t) obs.observe(t); });
+})();
+</script>
 
 <section data-v23-home="1" class="fm-section fm-partners-section" aria-labelledby="fm-partners-title" id="fm-parceiros">
 
