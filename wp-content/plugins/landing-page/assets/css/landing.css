@@ -238,7 +238,7 @@ body .entry-title:empty { display: none !important; }
 
 @media (max-width: 1024px) {
     .fm-nav { gap: 18px; }
-    .fm-header-cta { display: none; }
+    
     .fm-hero { min-height: auto; padding-top: 96px; }
     .fm-hero-grid { grid-template-columns: minmax(0,.9fr) minmax(420px,1fr); gap: 32px; }
     .fm-hero-stage { min-height: 540px; }
@@ -772,3 +772,6 @@ html, body {
 .fm-frentes-lista strong{display:block;color:#eafff7;font-size:13.5px}
 .fm-frentes-lista span{display:block;margin-top:4px;color:#8fa7a2;font-size:12.5px;line-height:1.5}
 @media (max-width:560px){.fm-frentes-lista{grid-template-columns:1fr}}
+
+/* CTA do header: visivel a partir de 901px; abaixo disso o menu nao cabe */
+@media (max-width: 900px) { .fm-header-cta { display: none; } }

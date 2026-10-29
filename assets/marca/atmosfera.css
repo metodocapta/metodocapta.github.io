@@ -236,9 +236,7 @@
   .fm-nav a{font-size:12px !important;flex:0 0 auto;}
   .fm-header-cta{padding:0 14px !important;font-size:12px !important;flex:0 0 auto;}
 }
-@media (min-width:901px) and (max-width:1500px){
-  .fm-header-cta{display:none !important;}
-}
+
 /* os atalhos de SEÇÃO (que ja vivem no Indice e no rodape) saem do menu superior
    para abrir espaco ao "Compartilhar" sem empurrar o CTA para fora */
 @media (min-width:901px){
