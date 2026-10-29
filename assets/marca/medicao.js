@@ -199,15 +199,23 @@
       var escolha = b.getAttribute('data-fm');
       gravar(CHAVE, escolha);
       d.parentNode.removeChild(d);
-      emitir('consentimento', { escolha: escolha });
       if (escolha === 'aceito') {
         carregarGA4();
+        /* ORDEM IMPORTA: o evento de consentimento precisa sair DEPOIS de o
+           gtag existir. Antes ele era emitido primeiro e era enfileirado no
+           dataLayer antes de haver propriedade vinculada - nao chegava ao GA4
+           (confirmado: 0 eventos em 3 dias de coleta). */
+        emitir('consentimento', { escolha: escolha });
         /* a page_view desta visita foi emitida antes do aceite e nao saiu:
            sai agora, uma unica vez. */
         emitir('page_view', {
           titulo: document.title.slice(0, 80),
           referrer: (document.referrer || '').slice(0, 120)
         });
+      } else {
+        /* "so o essencial": sem GA4. O evento so chega a um destino sem cookie
+           quando CFG.plausible/umami/endpoint estiverem configurados. */
+        emitir('consentimento', { escolha: escolha });
       }
     });
     document.body.appendChild(d);

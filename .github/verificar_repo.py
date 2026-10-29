@@ -590,6 +590,30 @@ def checar_codificacao(raiz):
     return n
 
 
+def checar_preposicoes_uf(raiz):
+    """Regencia das paginas por UF: "Captação de recursos em Bahia" e erro publicado.
+
+    O gerador (publico_paginas.py) usa a preposicao "em" fixa. Quatro UFs estao
+    corretas assim; seis nao. fix_preposicoes_uf.py normaliza a saida — esta
+    invariante garante que o erro nao volte em um build futuro.
+    """
+    base = os.path.join(raiz, "captacao-de-recursos")
+    if not os.path.isdir(base):
+        return
+    regras = [
+        ("Bahia", "na"), ("Ceará", "no"), ("Pará", "no"), ("Paraná", "no"),
+        ("Rio de Janeiro", "no"), ("Rio Grande do Sul", "no"),
+    ]
+    for pasta, dirs, arqs in os.walk(base):
+        if "index.html" not in arqs:
+            continue
+        rel = os.path.relpath(os.path.join(pasta, "index.html"), raiz).replace("\\", "/")
+        html = ler(os.path.join(pasta, "index.html")) or ""
+        for nome, prep in regras:
+            if re.search(r"\bem " + re.escape(nome) + r"\b", html):
+                erro("regencia: %s usa 'em %s' (correto: '%s %s')" % (rel, nome, prep, nome))
+
+
 def checar_destaques(raiz):
     """Destaques: o JSON e o DADO do slider — estrutura, ordem e origem.
 
@@ -658,6 +682,7 @@ def main():
     checar_camadas_decorativas(raiz)
     checar_camadas_metodo(raiz)
     checar_mapa(raiz)
+    checar_preposicoes_uf(raiz)
     checar_cta_e_cabecalho(raiz)
     n_texto = checar_codificacao(raiz)
 
