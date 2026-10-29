@@ -177,20 +177,21 @@
     d.id = 'fm-consent';
     d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', 'Escolha sobre medição de audiência');
-    d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:' + cor +
-      ';color:' + txt + ';padding:14px 96px 14px 18px;display:flex;gap:14px;flex-wrap:wrap;' +
-      'align-items:center;justify-content:center;font:400 14px/1.5 Inter,system-ui,sans-serif;' +
-      'box-shadow:0 -2px 10px rgba(0,0,0,.18)';
+    d.style.cssText = 'position:fixed;left:16px;right:auto;bottom:16px;z-index:9999;background:' + cor +
+      ';color:' + txt + ';padding:12px 14px;display:flex;flex-direction:column;gap:10px;' +
+      'max-width:min(520px,calc(100vw - 32px));border:1px solid rgba(127,227,216,.28);border-radius:14px;' +
+      'box-sizing:border-box;font:400 13px/1.45 Inter,system-ui,sans-serif;' +
+      'box-shadow:0 8px 28px rgba(0,0,0,.35)';
     d.innerHTML =
-      '<span style="max-width:640px">Medimos audiência para saber o que é útil: ' +
+      '<span>Medimos audiência para saber o que é útil: ' +
       '<strong>sem cookie para anúncio</strong>, sem identificar ninguém. ' +
       'Detalhes na <a href="/privacidade/" style="color:' + teal + ';text-decoration:underline">Política de Privacidade</a>.</span>' +
       '<span style="display:flex;gap:8px;flex-wrap:wrap">' +
-      '<button type="button" data-fm="aceito" style="cursor:pointer;border:0;border-radius:999px;padding:10px 16px;' +
+      '<button type="button" data-fm="aceito" style="cursor:pointer;border:0;border-radius:999px;padding:9px 14px;' +
       'background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;font:600 12px/1 Oswald,sans-serif;' +
       'letter-spacing:.06em;text-transform:uppercase">Aceitar medição</button>' +
       '<button type="button" data-fm="essencial" style="cursor:pointer;border:1px solid rgba(127,227,216,.55);' +
-      'border-radius:999px;padding:10px 16px;background:transparent;color:#7fe3d8;' +
+      'border-radius:999px;padding:9px 14px;background:transparent;color:#7fe3d8;' +
       'font:600 12px/1 Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase">Só o essencial</button>' +
       '</span>';
     d.addEventListener('click', function (e) {
@@ -218,7 +219,34 @@
         emitir('consentimento', { escolha: escolha });
       }
     });
-    document.body.appendChild(d);
+    /* A barra entra DEPOIS que o hero assentou. Antes ela abria no primeiro
+       quadro e cobria a faixa dos CTAs principais em telas de 670px de altura
+       (o CTA ficava atras do banner justamente na primeira visita, o unico
+       momento em que ele importa).
+       Duas portas: (a) rolagem de 600px, quando o hero ja saiu de cena;
+       (b) 15s parado, e nesse caso ela ancora a DIREITA, porque o CTA do hero
+       e alinhado a esquerda - assim nao cobre o botao em nenhuma largura. */
+    var mostrada = false;
+    function mostrar(direita) {
+      if (mostrada) return;
+      mostrada = true;
+      if (direita) {
+        /* ancorada a direita e mais estreita: o CTA do hero termina em ~498px
+           nesta largura, entao 380px de card (912-16-380=516) nao encosta nele */
+        d.style.left = 'auto';
+        d.style.right = '16px';
+        d.style.maxWidth = 'min(380px,calc(100vw - 32px))';
+      }
+      document.body.appendChild(d);
+      window.removeEventListener('scroll', aoRolar);
+    }
+    function aoRolar() {
+      var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (y >= 600) mostrar(false);
+    }
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    if ((window.pageYOffset || 0) >= 600) mostrar(false);
+    setTimeout(function () { mostrar(true); }, 15000);
   }
 
   /* ---------- 3) o que medir ---------- */
