@@ -22,7 +22,7 @@
     var nEl = document.getElementById('n');
     var score = nEl ? String(nEl.textContent || '').trim() : '';
     var linhas = [
-      'Olá! Vim da ferramenta de diagnóstico do Método Capta+.',
+      'Olá! Vim da ferramenta de diagnóstico do MetodoCapta.',
       'Organização: ' + (org || '(não informada)'),
       'UF: ' + uf,
       'Situação: ' + sit,
