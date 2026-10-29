@@ -195,29 +195,23 @@ body.fm-bar-on .mc-zap{bottom:86px}
 .fm-indice-sumario{max-width:1180px;margin:0 auto 10px;padding:20px 22px 14px;
   border-top:1px solid rgba(127,227,216,.18);border-bottom:1px solid rgba(127,227,216,.18);
   background:rgba(255,255,255,.02)}
-.fm-indice-sumario .fm-sum-topo{display:flex;align-items:baseline;justify-content:space-between;
-  gap:12px;margin:0 0 12px}
+.fm-indice-sumario .fm-sum-topo{display:flex;align-items:baseline;gap:12px;margin:0 0 12px}
 .fm-indice-sumario .fm-sum-k{font:600 10.5px/1 Oswald,sans-serif;letter-spacing:.14em;
   text-transform:uppercase;color:#7fe3d8}
 .fm-indice-sumario ol{list-style:none;margin:0;padding:0;display:grid;
   grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:8px}
-.fm-indice-sumario li{opacity:1;transform:none}
 .fm-indice-sumario a{display:flex;align-items:baseline;gap:9px;padding:9px 11px;
   border:1px solid rgba(127,227,216,.16);border-radius:10px;text-decoration:none;
-  color:#eafffb;font-size:12.5px;line-height:1.25;transition:border-color .16s ease,
-  background .16s ease,transform .16s ease}
+  color:#eafffb;font-size:12.5px;line-height:1.25;
+  transition:border-color .16s ease,background .16s ease,transform .16s ease}
 .fm-indice-sumario a:hover{border-color:rgba(10,188,176,.55);background:rgba(10,188,176,.10);
   transform:translateY(-1px)}
-.fm-indice-sumario a b{font:700 10.5px/1 Oswald,sans-serif;letter-spacing:.08em;color:#7fe3d8;
-  flex:0 0 auto}
-/* entrada em cascata: só quando o JS marcou html.fm-anim */
-.fm-anim .fm-indice-sumario li{opacity:0;transform:translateY(26px) scale(.97)}
-.fm-fade .fm-indice-sumario li{transform:none !important}
+.fm-indice-sumario a b{font:700 10.5px/1 Oswald,sans-serif;letter-spacing:.08em;color:#7fe3d8;flex:0 0 auto}
+.fm-anim .fm-indice-sumario li{opacity:0;transform:translateY(26px)}
+.fm-fade .fm-indice-sumario li{transform:none}
 .fm-anim .fm-indice-sumario li.is-in{opacity:1;transform:none;
   transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
-@media (prefers-reduced-motion: reduce){
-  .fm-anim .fm-indice-sumario li{opacity:1;transform:none;transition:none}
-}
+@media (prefers-reduced-motion: reduce){.fm-anim .fm-indice-sumario li{transition:none}}
 @media (max-width:520px){.fm-indice-sumario ol{grid-template-columns:1fr 1fr}}
 </style><!-- fm-sumario-css-fim -->
 </head>
@@ -391,7 +385,7 @@ body.fm-bar-on .mc-zap{bottom:86px}
                     </div>
 
                 </section>
-<nav class="fm-indice-sumario" aria-label="Sumário desta página"><!-- fm-sumario-v7 -->
+<nav class="fm-indice-sumario" aria-label="Sumário desta página">
 <div class="fm-sum-topo"><span class="fm-sum-k">Nesta página · 12 seções</span></div>
 <ol><li><a href="#fm-parceiros"><b>01</b><span>Com quem atuamos</span></a></li><li><a href="#fm-problema"><b>02</b><span>O problema</span></a></li><li><a href="#fm-comparativo"><b>03</b><span>Comparativo</span></a></li><li><a href="#fm-capta"><b>04</b><span>Método</span></a></li><li><a href="#fm-radar"><b>05</b><span>Radar</span></a></li><li><a href="#fm-destaques"><b>06</b><span>Estudos</span></a></li><li><a href="#fm-evidencias"><b>07</b><span>Evidências</span></a></li><li><a href="#fm-publico"><b>08</b><span>Para quem</span></a></li><li><a href="#fm-riscos"><b>09</b><span>Riscos</span></a></li><li><a href="#fm-faq"><b>10</b><span>FAQ</span></a></li><li><a href="#fm-decisao-mapa"><b>11</b><span>Decisão</span></a></li><li><a href="#fm-decisao"><b>12</b><span>Começar</span></a></li></ol>
 </nav>
@@ -401,22 +395,17 @@ body.fm-bar-on .mc-zap{bottom:86px}
   if(!nav) return;
   var itens=[].slice.call(nav.querySelectorAll('ol li'));
   if(!itens.length) return;
-  var mov=false;
-  try{ mov=localStorage.getItem('fm-movimento')==='on'; }catch(e){}
-  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var reduz=false;
+  try{ reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
   var html=document.documentElement;
   html.classList.add('fm-anim');
-  if(reduz && !mov) html.classList.add('fm-fade');
+  if(reduz) html.classList.add('fm-fade');
   function animar(){
     itens.forEach(function(li,i){
       li.style.transitionDelay=(i*110)+'ms';
       li.classList.add('is-in');
     });
-    setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*110+800);
   }
-  // FORCA O LAYOUT entre esconder e mostrar. Sem isto o navegador aplica as
-  // duas classes no mesmo quadro, nunca pinta o estado inicial e nao ha
-  // transicao nenhuma (o efeito simplesmente nao acontece).
   void nav.offsetWidth;
   requestAnimationFrame(function(){ animar(); });
   if('IntersectionObserver' in window){
@@ -433,146 +422,6 @@ body.fm-bar-on .mc-zap{bottom:86px}
     },{threshold:.2});
     obs.observe(nav);
   }
-</script>
-
-<script>
-(function(){
-  var nav=document.querySelector('.fm-indice-sumario');
-  if(!nav) return;
-  var itens=[].slice.call(nav.querySelectorAll('ol li'));
-  if(!itens.length) return;
-  var mov=false;
-  try{ mov=localStorage.getItem('fm-movimento')==='on'; }catch(e){}
-  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var html=document.documentElement;
-  html.classList.add('fm-anim');
-  if(reduz && !mov) html.classList.add('fm-fade');
-  function animar(){
-    itens.forEach(function(li,i){
-      li.style.transitionDelay=(i*110)+'ms';
-      li.classList.add('is-in');
-    });
-    setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*110+800);
-  }
-  animar();
-  if('IntersectionObserver' in window){
-    var obs=new IntersectionObserver(function(ents){
-      ents.forEach(function(e){
-        if(e.isIntersecting){ animar(); }
-        else { itens.forEach(function(li){ li.classList.remove('is-in'); }); }
-      });
-    },{threshold:.2});
-    obs.observe(nav);
-  }
-</script>
-
-<script>
-(function(){
-  var nav=document.querySelector('.fm-indice-sumario');
-  if(!nav) return;
-  var itens=[].slice.call(nav.querySelectorAll('ol li'));
-  if(!itens.length) return;
-  var mov=localStorage.getItem('fm-movimento')==='on';
-  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function mostrarTudo(){ itens.forEach(function(li){ li.classList.add('is-in'); }); }
-  if(reduz && !mov){ mostrarTudo(); return; }
-  var html=document.documentElement;
-  html.classList.add('fm-anim');
-  if(!('IntersectionObserver' in window)){ mostrarTudo(); return; }
-  function animar(){
-    itens.forEach(function(li,i){
-      li.style.transitionDelay=(i*110)+'ms';
-      li.classList.add('is-in');
-    });
-    setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*110+800);
-  }
-  // ja visivel no carregamento? espera a primeira rolagem, senao o efeito
-  // acontece antes de o visitante olhar para o sumario
-  var r0=nav.getBoundingClientRect();
-  var visivelAgora = r0.top < innerHeight && r0.bottom > 0;
-  if(visivelAgora){
-    window.addEventListener('scroll', function ao(){ window.removeEventListener('scroll', ao); animar(); }, {passive:true, once:true});
-    setTimeout(animar, 2500);
-    return;
-  }
-  if(!('IntersectionObserver' in window)){ animar(); return; }
-  var obs=new IntersectionObserver(function(ents){
-    ents.forEach(function(e){
-      if(e.isIntersecting){ animar(); }
-      else { itens.forEach(function(li){ li.classList.remove('is-in'); }); }
-    });
-  },{threshold:.2});
-  obs.observe(nav);
-})();
-</script>
-
-<script>
-(function(){
-  var nav=document.querySelector('.fm-indice-sumario');
-  if(!nav) return;
-  var itens=[].slice.call(nav.querySelectorAll('ol li'));
-  if(!itens.length) return;
-  var mov=localStorage.getItem('fm-movimento')==='on';
-  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function mostrarTudo(){ itens.forEach(function(li){ li.classList.add('is-in'); }); }
-  if(reduz && !mov){ mostrarTudo(); return; }
-  var html=document.documentElement;
-  html.classList.add('fm-anim');
-  if(!('IntersectionObserver' in window)){ mostrarTudo(); return; }
-  var feito=false;
-  function animar(){
-    if(feito) return;
-    feito=true;
-    itens.forEach(function(li,i){
-      li.style.transitionDelay=(i*70)+'ms';
-      li.classList.add('is-in');
-    });
-    setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*70+700);
-  }
-  // ja visivel no carregamento? espera a primeira rolagem, senao o efeito
-  // acontece antes de o visitante olhar para o sumario
-  var r0=nav.getBoundingClientRect();
-  var visivelAgora = r0.top < innerHeight && r0.bottom > 0;
-  if(visivelAgora){
-    window.addEventListener('scroll', function ao(){ window.removeEventListener('scroll', ao); animar(); }, {passive:true, once:true});
-    setTimeout(animar, 2500);
-    return;
-  }
-  if(!('IntersectionObserver' in window)){ animar(); return; }
-  var obs=new IntersectionObserver(function(ents){
-    ents.forEach(function(e){ if(e.isIntersecting) animar(); });
-  },{threshold:.2});
-  obs.observe(nav);
-})();
-</script>
-
-<script>
-(function(){
-  var nav=document.querySelector('.fm-indice-sumario');
-  if(!nav) return;
-  var itens=[].slice.call(nav.querySelectorAll('ol li'));
-  if(!itens.length) return;
-  var mov=localStorage.getItem('fm-movimento')==='on';
-  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function mostrarTudo(){ itens.forEach(function(li){ li.classList.add('is-in'); }); }
-  if(reduz && !mov){ mostrarTudo(); return; }
-  var html=document.documentElement;
-  html.classList.add('fm-anim');
-  if(!('IntersectionObserver' in window)){ mostrarTudo(); return; }
-  var feito=false;
-  var obs=new IntersectionObserver(function(ents){
-    ents.forEach(function(e){
-      if(!e.isIntersecting || feito) return;
-      feito=true;
-      itens.forEach(function(li,i){
-        li.style.transitionDelay=(i*45)+'ms';
-        li.classList.add('is-in');
-      });
-      setTimeout(function(){ itens.forEach(function(li){ li.style.transitionDelay=''; }); }, itens.length*45+600);
-      obs.disconnect();
-    });
-  },{threshold:.25});
-  obs.observe(nav);
 })();
 </script>
 
