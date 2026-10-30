@@ -81,6 +81,29 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <meta name="twitter:title" content="Quem somos: captação de recursos e projetos | Método Capta+" />
 <meta name="twitter:description" content="Quem somos: como o Método Capta+ estrutura a captação de recursos e a gestão de projetos sociais, do diagnóstico à prestação de contas." />
 <meta name="twitter:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.jpg" />
+<style>
+/* seção de origem: leitura em coluna, com respiro */
+.fm-origem{padding:64px 0 48px}
+.fm-origem .fm-container{max-width:820px}
+.fm-origem-copy{max-width:700px;text-align:left}
+.fm-origem .fm-kicker{display:inline-block;margin-bottom:14px}
+.fm-origem h2{font-family:Oswald,sans-serif;font-size:clamp(30px,4vw,46px);line-height:1.12;margin:0 0 22px;color:#fff;letter-spacing:-.01em}
+.fm-origem p{font-size:17px;line-height:1.75;color:#c9dbdc;margin:0 0 16px;max-width:66ch}
+.fm-origem p:last-child{margin-bottom:0}
+@media(max-width:640px){.fm-origem{padding:44px 0 32px}.fm-origem p{font-size:16px}}
+
+/* fundo animado: duas auroras lentas, atrás de tudo, sem custo de JS */
+.fm-aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.75}
+.fm-aurora i{position:absolute;display:block;width:52vw;height:52vw;min-width:420px;min-height:420px;
+ border-radius:50%;filter:blur(90px);opacity:.34;will-change:transform}
+.fm-aurora i:nth-child(1){background:radial-gradient(circle at 30% 30%,#0ABCB0 0%,rgba(10,188,176,0) 62%);
+ top:-12vw;left:-8vw;animation:fmAurora1 34s ease-in-out infinite alternate}
+.fm-aurora i:nth-child(2){background:radial-gradient(circle at 60% 40%,#0a5c66 0%,rgba(10,92,102,0) 64%);
+ bottom:-18vw;right:-10vw;animation:fmAurora2 46s ease-in-out infinite alternate}
+@keyframes fmAurora1{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(9vw,6vw,0) scale(1.18)}}
+@keyframes fmAurora2{from{transform:translate3d(0,0,0) scale(1.1)}to{transform:translate3d(-8vw,-7vw,0) scale(.92)}}
+@media (prefers-reduced-motion: reduce){.fm-aurora i{animation:none}}
+</style>
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <!-- fm-hier-css -->
 <style>
@@ -98,6 +121,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 </head>
 <body class="wp-singular page-template-default page page-id-33 wp-embed-responsive wp-theme-hello-elementor fm-method-page hello-elementor-default elementor-default elementor-kit-9">
+<div class="fm-aurora" aria-hidden="true"><i></i><i></i></div>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
         <div class="fm-site fm-method-site" data-fm-site>
             <div class="fm-noise" aria-hidden="true"></div><div class="fm-vignette" aria-hidden="true"></div>
@@ -125,13 +149,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             </header>
 
             <main id="conteudo">
-                <section class="fm-section" aria-labelledby="fm-origem-title">
+                <section class="fm-section fm-origem" aria-labelledby="fm-origem-title">
                     <div class="fm-container">
-                        <div class="fm-heading fm-heading-center fm-reveal">
+                        <div class="fm-origem-copy">
                             <span class="fm-kicker">De onde vem o método</span>
                             <h2 id="fm-origem-title">A correção que virou processo.</h2>
-                        </div>
-                        <div class="fm-reveal" style="max-width:760px;margin:0 auto">
                             <p>O método não nasceu de uma metodologia de prateleira. Nasceu de uma constatação repetida em projeto atrás de projeto: a entidade faz o trabalho, mas não consegue provar o que o edital pede.</p>
                             <p>Cada uma das seis etapas existe para fechar uma lacuna que já custou oportunidade a alguém: a fonte que ninguém viu, a exigência que ninguém leu, o documento que venceu, o projeto que não tinha nexo, a prestação que virou glosa.</p>
                             <p>Missão, visão e valores continuam valendo — e estão logo abaixo. Não como abertura, mas como consequência.</p>
