@@ -1522,3 +1522,10 @@ body.nav-lock{overflow:hidden}
 .fm-method-page .fm-section > .fm-container{position:relative;z-index:1}
 @keyframes fmDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.14)}}
 @media (prefers-reduced-motion: reduce){.fm-method-page .fm-glow{animation:none}}
+
+/* ==========================================================================
+   SELECTS — a lista nativa abre com fundo do sistema; sem isto, o texto claro
+   do tema escuro fica branco no branco e a opção desaparece.
+   ========================================================================== */
+select option{background:#ffffff;color:#0d1f35}
+select option:checked{background:#0A4A4A;color:#ffffff}
