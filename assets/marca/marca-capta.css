@@ -1505,3 +1505,20 @@ body.nav-lock{overflow:hidden}
   font:600 11.5px/1 Oswald,sans-serif;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
 .toc-cta a:hover{filter:brightness(1.06)}
 @media(max-width:640px){.toc-cta{flex-direction:column;align-items:flex-start}}
+
+/* ==========================================================================
+   PÁGINA DO MÉTODO — sem numeração de seção e com brilho animado
+   O contador "01 ·" vem de .fm-section .fm-kicker::before; aqui ele é desligado
+   só nesta página. O brilho é um elemento (.fm-glow) com deriva lenta em CSS.
+   ========================================================================== */
+.fm-method-page .fm-section .fm-kicker::before{content:none !important}
+.fm-method-page .fm-section{position:relative;overflow:hidden}
+.fm-method-page .fm-glow{position:absolute;inset:-30% -18%;z-index:0;pointer-events:none;
+ background:
+  radial-gradient(36% 44% at 16% 24%, rgba(10,188,176,.20) 0%, rgba(10,188,176,0) 64%),
+  radial-gradient(40% 50% at 84% 76%, rgba(10,120,132,.26) 0%, rgba(10,120,132,0) 66%);
+ animation:fmDrift 38s ease-in-out infinite alternate}
+.fm-method-page .fm-section:nth-of-type(even) .fm-glow{animation-delay:-14s}
+.fm-method-page .fm-section > .fm-container{position:relative;z-index:1}
+@keyframes fmDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.14)}}
+@media (prefers-reduced-motion: reduce){.fm-method-page .fm-glow{animation:none}}
