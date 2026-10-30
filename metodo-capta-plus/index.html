@@ -97,10 +97,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 /* fundo animado da secao: brilho lento, atras do texto e na frente do fundo do site */
 .fm-origem{overflow:hidden}
-.fm-origem::before{content:"";position:absolute;inset:-25% -15%;z-index:0;pointer-events:none;
+.fm-origem::before{content:"";position:absolute;inset:-40% -20%;z-index:0;pointer-events:none;
  background:
-  radial-gradient(38% 46% at 18% 28%, rgba(10,188,176,.22) 0%, rgba(10,188,176,0) 62%),
-  radial-gradient(42% 52% at 82% 72%, rgba(10,92,102,.30) 0%, rgba(10,92,102,0) 64%);
+  radial-gradient(38% 46% at 18% 28%, rgba(10,188,176,.42) 0%, rgba(10,188,176,0) 66%),
+  radial-gradient(42% 52% at 82% 72%, rgba(10,120,132,.50) 0%, rgba(10,120,132,0) 68%);
  animation:fmDrift 30s ease-in-out infinite alternate}
 .fm-origem > .fm-container{position:relative;z-index:1}
 @keyframes fmDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.14)}}
