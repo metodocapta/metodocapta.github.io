@@ -95,17 +95,16 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .fm-origem p:last-child{margin-bottom:0}
 @media(max-width:640px){.fm-origem{padding:44px 0 32px}.fm-origem p{font-size:16px}}
 
-/* fundo animado: duas auroras lentas, atrás de tudo, sem custo de JS */
-.fm-aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:.75}
-.fm-aurora i{position:absolute;display:block;width:52vw;height:52vw;min-width:420px;min-height:420px;
- border-radius:50%;filter:blur(90px);opacity:.34;will-change:transform}
-.fm-aurora i:nth-child(1){background:radial-gradient(circle at 30% 30%,#0ABCB0 0%,rgba(10,188,176,0) 62%);
- top:-12vw;left:-8vw;animation:fmAurora1 34s ease-in-out infinite alternate}
-.fm-aurora i:nth-child(2){background:radial-gradient(circle at 60% 40%,#0a5c66 0%,rgba(10,92,102,0) 64%);
- bottom:-18vw;right:-10vw;animation:fmAurora2 46s ease-in-out infinite alternate}
-@keyframes fmAurora1{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(9vw,6vw,0) scale(1.18)}}
-@keyframes fmAurora2{from{transform:translate3d(0,0,0) scale(1.1)}to{transform:translate3d(-8vw,-7vw,0) scale(.92)}}
-@media (prefers-reduced-motion: reduce){.fm-aurora i{animation:none}}
+/* fundo animado da secao: brilho lento, atras do texto e na frente do fundo do site */
+.fm-origem{overflow:hidden}
+.fm-origem::before{content:"";position:absolute;inset:-25% -15%;z-index:0;pointer-events:none;
+ background:
+  radial-gradient(38% 46% at 18% 28%, rgba(10,188,176,.22) 0%, rgba(10,188,176,0) 62%),
+  radial-gradient(42% 52% at 82% 72%, rgba(10,92,102,.30) 0%, rgba(10,92,102,0) 64%);
+ animation:fmDrift 30s ease-in-out infinite alternate}
+.fm-origem > .fm-container{position:relative;z-index:1}
+@keyframes fmDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.14)}}
+@media (prefers-reduced-motion: reduce){.fm-origem::before{animation:none}}
 </style>
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <!-- fm-hier-css -->
@@ -124,7 +123,6 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 </head>
 <body class="wp-singular page-template-default page page-id-33 wp-embed-responsive wp-theme-hello-elementor fm-method-page hello-elementor-default elementor-default elementor-kit-9">
-<div class="fm-aurora" aria-hidden="true"><i></i><i></i></div>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
         <div class="fm-site fm-method-site" data-fm-site>
             <div class="fm-noise" aria-hidden="true"></div><div class="fm-vignette" aria-hidden="true"></div>
