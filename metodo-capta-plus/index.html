@@ -23,6 +23,18 @@
         <style id="wp-img-auto-sizes-contain-inline-css">
 img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+/* demais secoes do metodo: mesmo brilho, sem a numeracao de secao */
+.fm-method-page .fm-section{position:relative;overflow:hidden}
+.fm-method-page .fm-section .fm-kicker::before{content:none !important}
+.fm-method-page .fm-section::before{content:"";position:absolute;inset:-30% -18%;z-index:0;
+ pointer-events:none;
+ background:
+  radial-gradient(36% 44% at 16% 24%, rgba(10,188,176,.20) 0%, rgba(10,188,176,0) 64%),
+  radial-gradient(40% 50% at 84% 76%, rgba(10,120,132,.26) 0%, rgba(10,120,132,0) 66%);
+ animation:fmDrift 38s ease-in-out infinite alternate}
+.fm-method-page .fm-section:nth-of-type(even)::before{animation-delay:-14s}
+.fm-method-page .fm-section > .fm-container{position:relative;z-index:1}
+@media (prefers-reduced-motion: reduce){.fm-method-page .fm-section::before{animation:none}}
 </style>
 <style id="wp-emoji-styles-inline-css">
 
