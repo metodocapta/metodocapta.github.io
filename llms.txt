@@ -189,3 +189,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## O que recusamos
 
 - [O que recusamos](https://metodocapta.github.io/recusas/): cinco recusas do metodo, cada uma com o fato que a sustenta
+
+## Como sabemos
+
+- [Como sabemos](https://metodocapta.github.io/como-sabemos/): as ferramentas do metodo reunidas pelo que elas provam
