@@ -185,3 +185,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Quem conduz
 
 - [Quem conduz o Método Capta+](https://metodocapta.github.io/quem-conduz/): de onde vem o metodo: a trajetoria, o que ela ensinou e as cinco recusas
+
+## O que recusamos
+
+- [O que recusamos](https://metodocapta.github.io/recusas/): cinco recusas do metodo, cada uma com o fato que a sustenta
