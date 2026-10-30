@@ -140,6 +140,18 @@ figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
 as faixas, a regra de cobertura e — igualmente importante — <strong>o que descarta um edital
 antes mesmo de ele ser pontuado</strong>.</div></section>
 <article>
+<h2>A regra de cobertura — a parte que evita mentira</h2>
+<div class="box firme">
+<p><strong>Dimensão sem insumo fica NÃO AVALIADA.</strong> Ela sai da ponderação em vez de virar
+zero ou chute. O resultado informa ao lado a <strong>cobertura</strong>: quanto dos pesos entrou
+na conta.</p>
+<p>A ordem da fila só usa o CAPTA_SCORE quando a cobertura passa de
+<strong>45%</strong>. Abaixo disso, a ordem volta a ser a nota da fila — porque
+um score calculado sobre pouco dado não deve decidir prioridade.</p>
+</div>
+<p class="muted">Por isso você pode ver <code>CAPTA 78/55%</code>: 78 é o índice, 55% é quanto do
+peso foi medido. O segundo número é tão importante quanto o primeiro.</p>
+
 
 <h2>Primeiro: são dois scores diferentes</h2>
 <p><strong>Prontidão</strong> responde "a entidade está pronta para captar?" — 18 itens em três
@@ -180,17 +192,7 @@ jurídico nem promessa de aprovação.</p>
 <p>Total = soma de <code>peso × nota</code> dividida pela soma dos pesos <strong>avaliados</strong>.
 Cada dimensão vale de 0 a 100.</p>
 
-<h2>A regra de cobertura — a parte que evita mentira</h2>
-<div class="box firme">
-<p><strong>Dimensão sem insumo fica NÃO AVALIADA.</strong> Ela sai da ponderação em vez de virar
-zero ou chute. O resultado informa ao lado a <strong>cobertura</strong>: quanto dos pesos entrou
-na conta.</p>
-<p>A ordem da fila só usa o CAPTA_SCORE quando a cobertura passa de
-<strong>45%</strong>. Abaixo disso, a ordem volta a ser a nota da fila — porque
-um score calculado sobre pouco dado não deve decidir prioridade.</p>
-</div>
-<p class="muted">Por isso você pode ver <code>CAPTA 78/55%</code>: 78 é o índice, 55% é quanto do
-peso foi medido. O segundo número é tão importante quanto o primeiro.</p>
+
 
 <h2>As faixas</h2>
 <table><thead><tr><th class="n">Score</th><th>Faixa</th></tr></thead><tbody><tr><td class="n">85–100</td><td><strong>ATAQUE IMEDIATO</strong></td></tr><tr><td class="n">70–84</td><td><strong>ALTA PRIORIDADE</strong></td></tr><tr><td class="n">55–69</td><td><strong>CONDICIONADA</strong></td></tr><tr><td class="n">40–54</td><td><strong>BAIXA</strong></td></tr><tr><td class="n">0–39</td><td><strong>NAO PRIORITARIA</strong></td></tr></tbody></table>
