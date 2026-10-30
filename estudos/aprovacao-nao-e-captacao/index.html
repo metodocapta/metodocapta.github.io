@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Armadilha da Circularidade | Método Capta+</title>
+<meta name="description" content="Das 48 cooperativas catarinenses de catadores, menos de um terço possui contrato formal com o município.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://metodocapta.github.io/estudos/aprovacao-nao-e-captacao/" />
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Armadilha da Circularidade | Método Capta+">
+<meta property="og:description" content="Das 48 cooperativas catarinenses de catadores, menos de um terço possui contrato formal com o município.">
+<meta property="og:url" content="https://metodocapta.github.io/estudos/aprovacao-nao-e-captacao/">
+<meta property="og:site_name" content="Método Capta+">
+<meta property="og:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Armadilha da Circularidade | Método Capta+">
+<meta property="article:published_time" content="2026-10-30">
+<meta property="article:modified_time" content="2026-10-30">
+<meta property="article:author" content="Allan Márcio">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../assets/marca/favicon.svg?v=2" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/marca/fontes.css">
+<style>
+:root{--navy:#062531;--navy2:#0a3340;--teal:#0ABCB0;--graf:#067a72;--ink:#0d1f35;
+--muted:#4a6572;--line:#e2e8ea;--bg:#ffffff;--soft:#f4f8f8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+font-family:Inter,'Segoe UI',system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:var(--graf)}
+.site-hd{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:18px 0}
+.site-hd .wrap{max-width:900px;margin:0 auto;padding:0 20px;display:flex;align-items:center;
+justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:34px;display:block}
+.brand b{font-family:Oswald,'Segoe UI',sans-serif;color:#fff;font-size:19px;letter-spacing:.4px;font-weight:600}
+.site-hd nav a{color:#bdeee9;text-decoration:none;font-size:13.5px;letter-spacing:.06em;
+text-transform:uppercase;font-family:Oswald,sans-serif;margin-left:18px}
+.site-hd nav a:hover{color:#fff}
+.crumb{max-width:900px;margin:0 auto;padding:14px 20px 0;font-size:13px;color:var(--muted)}
+.crumb a{color:var(--graf);text-decoration:none}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+article{max-width:820px;margin:0 auto;padding:26px 20px 70px}
+article h1{font-family:Oswald,'Segoe UI',sans-serif;color:var(--navy);font-size:clamp(26px,4vw,40px);
+line-height:1.18;letter-spacing:.2px;margin:10px 0 18px}
+article h2{font-family:Oswald,'Segoe UI',sans-serif;color:var(--navy);font-size:clamp(20px,2.6vw,27px);
+line-height:1.25;margin:38px 0 12px;padding-top:8px}
+article h3{font-family:Oswald,'Segoe UI',sans-serif;color:var(--graf);font-size:clamp(17px,2vw,20px);
+margin:26px 0 8px}
+article p{margin:0 0 15px}
+article strong{color:var(--navy)}
+article table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px}
+article th,article td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+article th{background:var(--soft);font-family:Oswald,sans-serif;color:var(--navy);font-weight:600}
+article tr:nth-child(even) td{background:#fafcfc}
+.fonte{margin-top:34px;padding:14px 18px;border-left:4px solid var(--teal);background:var(--soft);
+font-size:14px;color:var(--muted)}
+.cta{margin:34px 0 0;padding:22px;border-radius:12px;
+background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
+.cta b{font-family:Oswald,sans-serif;display:block;font-size:19px;color:#fff;margin-bottom:6px}
+.cta a{color:#7ef0e2;font-weight:600;text-decoration:none}
+.site-ft{background:var(--navy);color:#a9c6c3;font-size:13.5px;padding:26px 0;margin-top:20px}
+.site-ft .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.site-ft a{color:#7ef0e2;text-decoration:none;margin-right:14px}
+@media(max-width:640px){article{padding:18px 16px 50px}article table{display:block;overflow-x:auto;white-space:nowrap}}
+.autor-box{margin:18px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--soft,#f4f8f8);font-size:14px;line-height:1.6}.autor-box strong{font-family:Oswald,sans-serif;color:var(--navy)}.autor-box a{color:var(--graf,#067a72);text-decoration:none;font-weight:600;margin-left:6px}.autor-box p{margin:8px 0 0;color:var(--muted,#4a6572)}.fontes{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--teal,#0ABCB0);background:var(--soft,#f4f8f8);border-radius:8px;font-size:13.5px;line-height:1.7;color:var(--muted,#4a6572)}.fontes strong{color:var(--navy,#062531);font-family:Oswald,sans-serif}.fontes a{color:var(--graf,#067a72)}.crumb a,article p a,.rels a,.fontes a,.autor-box a{text-decoration:underline;text-underline-offset:2px}</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "@id": "https://metodocapta.github.io/estudos/aprovacao-nao-e-captacao/#artigo", "headline": "A Armadilha da Circularidade", "description": "Das 48 cooperativas catarinenses de catadores, menos de um terço possui contrato formal com o município.", "inLanguage": "pt-BR", "datePublished": "2026-10-30", "dateModified": "2026-10-30", "author": {"@type": "Person", "@id": "https://metodocapta.github.io/#allan", "name": "Allan Márcio"}, "publisher": {"@id": "https://metodocapta.github.io/#organizacao"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://metodocapta.github.io/estudos/aprovacao-nao-e-captacao/"}, "about": [{"@type": "Thing", "name": "Lei de Incentivo à Reciclagem"}, {"@type": "Thing", "name": "captação de recursos"}, {"@type": "Thing", "name": "cooperativas de catadores"}], "keywords": "captação de recursos, reciclagem, Lei de Incentivo à Reciclagem, LIR, cooperativas de catadores, economia circular, OSC, terceiro setor", "isAccessibleForFree": true}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Início", "item": "https://metodocapta.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Estudos", "item": "https://metodocapta.github.io/estudos/"}, {"@type": "ListItem", "position": 3, "name": "A Armadilha da Circularidade", "item": "https://metodocapta.github.io/estudos/aprovacao-nao-e-captacao/"}]}</script>
+<script defer src="../../assets/fm-analytics.js"></script>
+<script defer src="../../assets/fm-eventos.js"></script>
+<meta property="og:image:type" content="image/jpeg" />
+<meta name="twitter:title" content="A Armadilha da Circularidade | Método Capta+" />
+<meta name="twitter:description" content="Das 48 cooperativas catarinenses de catadores, menos de um terço possui contrato formal com o município." />
+<meta name="twitter:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.jpg" />
+</head>
+<body>
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+<header class="site-hd"><div class="wrap">
+<a class="brand" href="../.."><img src="../../assets/marca/wordmark-claro.webp" alt="Método Capta+"></a>
+<nav><a href="../..">Início</a><a href="../../metodo-capta-plus/">Método Capta+</a><a href="../">Estudos</a></nav>
+
+<a class="hd-cta" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20" style="display:inline-block;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;font:600 12px/1 Oswald,sans-serif;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;white-space:nowrap;margin-left:8px">Diagnóstico 72h</a></div></header>
+<div class="crumb"><a href="../..">Início</a> › <a href="../">Estudos</a> › A Armadilha da Circularidade</div>
+<main id="conteudo" class="wrap"><article>
+<div style="border: 2px solid #f29f32; border-left: 8px solid #f29f32; padding: 20px 24px; margin-bottom: 30px; background-color: #fffaf2;">
+            <p style="font-family: 'Oswald', 'Impact', sans-serif; text-transform: uppercase; color: #f29f32; font-size: 10pt; margin: 0 0 10px 0; letter-spacing: 1px;">Bloco de Atenção</p>
+            <p style="font-family: 'Oswald', 'Impact', sans-serif; font-size: 17pt; font-weight: 700; margin: 0 0 12px 0; line-height: 1.3;">Das 48 cooperativas catarinenses de catadores, menos de um terço possui contrato formal com o município.</p>
+            <p style="font-size: 11pt; line-height: 1.55; margin: 0 0 10px 0;">O Brasil gera 78 milhões de toneladas de resíduos sólidos por ano. Os catadores recolhem entre 9% e 15% do total, desviando mais de R$ 4,5 bilhões em material dos aterros. Em Santa Catarina, o CEMPRE registra aproximadamente 12 mil catadores organizados, mas a Receita Federal aponta que <strong>mais de 70% das cooperativas do setor não possuem CNPJ ativo</strong> ou estão com situação cadastral irregular.</p>
+            <p style="font-size: 11pt; line-height: 1.55; margin: 0 0 10px 0;">A economia circular promete inclusão. A realidade entrega uma armadilha: o dinheiro da circularidade chega às marcas, aos fabricantes e aos gestores de logística reversa — mas não chega a quem separa o lixo nas ruas.</p>
+            <p style="font-family: 'Oswald', 'Impact', sans-serif; color: #990000; font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1px; margin: 0;">Se a economia circular depender dos catadores para funcionar, ela precisa funcionar para os catadores.</p>
+        </div>
+
+        
+        <h1 style="font-family: 'Oswald', 'Impact', sans-serif; color: #f29f32; font-size: 24pt; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; line-height: 1.2;">A Armadilha da Circularidade</h1>
+<p class="lede" style="font-size:1.06em;line-height:1.65;border-left:4px solid #0ABCB0;padding:10px 0 10px 16px;margin:18px 0">
+<strong>Aprovação não é captação.</strong> Entre a portaria que autoriza e o dinheiro que entra existe
+uma carteira de incentivadores que quase ninguém monta — e é aí que o projeto aprovado envelhece.
+Este dossiê lê 46 papers (2018–2026) e os números da LIR para responder uma pergunta prática:
+por que cooperativas de catadores com projeto aprovado continuam sem recurso — e o que muda quando a
+leitura é feita <em>antes</em> da submissão.</p>
+
+        <p style="font-size: 12pt; color: #234d66; font-weight: 600; margin-bottom: 20px;">Desafios de Captação de Recursos e Auto-Financiamento de Cooperativas e Associações de Catadores em Santa Catarina</p>
+
+        
+        <div style="border-left: 6px solid #990000; background-color: #f4f4f5; padding: 16px 20px; margin-bottom: 30px;">
+            <p style="font-family: 'Oswald', 'Impact', sans-serif; text-transform: uppercase; font-size: 13pt; line-height: 1.4; margin: 0;">
+                <strong>Dados que fecham portas:</strong>
+                <span style="color: #990000; font-weight: 700;">800 mil catadores</span> no Brasil ·
+                <span style="color: #990000; font-weight: 700;">70% mulheres</span> ·
+                <span style="color: #990000; font-weight: 700;">73% negros</span> ·
+                R$ 2,2 bilhões pleiteados na LIR ·
+                Apenas <span style="color: #990000; font-weight: 700;">31% executados</span> ·
+                <span style="color: #990000; font-weight: 700;">82%</span> das organizações operam com eficiência "muito baixa" ·
+                Risco financeiro entre <span style="color: #990000; font-weight: 700;">23% e 26,6%</span> ·
+                Em SC: <span style="color: #990000; font-weight: 700;">48 cooperativas</span> registradas, menos de 1/3 com contrato municipal
+            </p>
+        </div>
+
+        
+        <div style="margin-bottom: 30px; font-size: 10pt; line-height: 1.5; color: #555;">
+            <p style="margin: 0 0 8px 0;"><strong>Resumo:</strong> Este dossiê analítico examina, com base em 46 papers acadêmicos indexados na Consensus API (2018–2026), os obstáculos estruturais, financeiros e institucionais que impedem cooperativas e associações de catadores de materiais recicláveis em Santa Catarina de acessar fontes de captação de recursos e alcançar auto-financiamento sustentável no contexto da economia circular. O estudo mapeia dez desafios centrais — da volatilidade do mercado de recicláveis à fragmentação do Acordo do Setor de Embalagens — e propõe uma aplicação prática vinculada à Metodologia Capta+ com três movimentos (72h, 30d, 90d) para diagnóstico, habilitação e captação diversificada.</p>
+            <p style="margin: 0 0 4px 0;"><strong>Palavras-chave:</strong> catadores de materiais recicláveis; cooperativas; economia circular; captação de recursos; auto-financiamento; Santa Catarina; PNRS; Lei de Incentivos Fiscais; Pagamento por Serviços Ambientais Urbanos; logística reversa.</p>
+        </div>
+
+        
+        <div style="border: 1px solid #ddd; background-color: #fafafa; padding: 16px 20px; margin-bottom: 30px;">
+            <p style="font-family: 'Oswald', 'Impact', sans-serif; font-size: 14pt; text-transform: uppercase; margin: 0 0 10px 0; color: #0d1f35; letter-spacing: 1px;">Sumário</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">1. Introdução</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">2. O Papel dos Catadores na Economia Circular — Revisão da Literatura</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">3. O Caso Catarinense: Dados, Mapeamento e Contradições</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">4. Os Dez Desafios de Captação</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">5. Diagnóstico Financeiro: Por Que o Dinheiro Não Chega</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">6. O Acordo do Setor de Embalagens e os Créditos de Reciclagem</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">7. Instrumentos de Avaliação e Indicadores de Desempenho</p>
+            <p style="margin: 0 0 5px 0; font-size: 10pt;">8. Referências</p>
+            <p style="margin: 0; font-size: 10pt;">Aplicação Prática — Três Movimentos para a Próxima Década</p>
+        </div>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">1. Introdução</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A economia circular, tal como formulada pela União Europeia e adotada por agendas internacionais como os Objetivos de Desenvolvimento Sustentável (ODS 11 e 12), pressupõe a eliminação do conceito de resíduo. Na prática, porém, a transição de um modelo linear (extrair-produzir-descartar) para um circular (reduzir-reutilizar-reciclar) depende de uma força de trabalho que raramente é mencionada nos documentos de política: os catadores de materiais recicláveis.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">No Brasil, estima-se que cerca de 800 mil pessoas vivem da coleta e triagem de recicláveis, organizadas em cooperativas e associações espalhadas por todo o território nacional. Em Santa Catarina, o Cadastro Nacional de Entidades Sem Fins Lucrativos (CEMPRE) registra aproximadamente 48 cooperativas do setor, com maior concentração nas regiões metropolitanas de Florianópolis, Joinville e Blumenau. O estado, que se posiciona como referência em gestão de resíduos sólidos no Sul do Brasil, enfrenta contradições entre o discurso da sustentabilidade e a realidade financeira dessas organizações.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Este dossiê analítico tem por objetivo mapear e examinar os obstáculos estruturais, financeiros e institucionais que impedem cooperativas e associações de catadores em Santa Catarina de acessar fontes de captação de recursos — públicas ou privadas — e de alcançar auto-financiamento sustentável. A análise fundamenta-se em 46 papers acadêmicos indexados na plataforma Consensus API, publicados entre 2018 e 2026 em periódicos de circulação internacional, com foco em economia circular, trabalho informal, cooperativismo e política de resíduos no Sul Global.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A delimitação geográfica para Santa Catarina justifica-se por três razões: (i) o estado possui um dos maiores Índices de Desenvolvimento Humano (IDH) do Brasil, o que cria uma demanda por soluções ambientais compatíveis com seu patamar de renda; (ii) a tradição catarinense de cooperativismo (desde as primeiras cooperativas de colonização italiana e alemã no século XIX) oferece um terreno fértil para a organização produtiva; e (iii) a ausência de estudos aprofundados sobre a situação financeira das cooperativas de catadores no estado representa uma lacuna que este trabalho busca preencher.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A tese central deste dossiê é que a <strong>economia circular, tal como implementada no Brasil, gera um paradoxo de financiamento</strong>: os catadores são reconhecidos como atores essenciais para a circularidade dos materiais, mas os mecanismos de captação de recursos — editais públicos, leis de incentivo, logística reversa, pagamentos por serviços ambientais — não foram desenhados para alcançá-los de forma efetiva. O resultado é uma dependência estrutural de subsídios municipais, com baixa capacidade de auto-sustentação financeira.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">2. O Papel dos Catadores na Economia Circular — Revisão da Literatura</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A literatura acadêmica sobre catadores e economia circular expandiu significativamente na última década. Uma revisão dos 46 papers analisados neste dossiê revela três grandes blocos temáticos:</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">2.1 Centralidade econômica e invisibilidade financeira</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Wang et al. (2020), com 144 citações, demonstraram que a construção de uma economia circular de plásticos com catadores informais requer qualidade do reciclado, modelo de negócios e impactos sociais como pilares interdependentes. Gutberlet et al. (2021), com 105 citações, mostraram que organizações de base de catadores contribuem diretamente para o alcance dos ODS, mas operam em condições de vulnerabilidade extrema. Scheinberg et al. (2022), com 96 citações, consolidaram a evidência global de que a coleta informal contribui para a redução da pobreza e para a economia circular, mas que essa contribuição raramente se converte em renda estável.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">O achado central deste bloco é o <strong>paradoxo da circularidade</strong>: quanto mais a economia circular depende dos catadores para funcionar, menos eles se beneficiam do valor que ajudam a criar. A cadeia de reciclagem no Brasil é uma pirâmide invertida — a base (catadores) assume os custos e riscos maiores, enquanto o topo (indústrias, varejistas, gestores de marcas) captura a maior parte do valor agregado.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">2.2 Barreiras à formalização e à inclusão produtiva</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Rosaldo (2022), em estudo etnográfico de 14 meses em São Paulo, documentou como uma política pública "inclusiva" de reciclagem gerou cerca de 1.500 empregos mas funcionalmente excluiu a população de catadores de rua que deveria beneficiar. O mecanismo de exclusão foi a co-produção com atores mais poderosos: quando o estado seleciona parceiros privilegiados, os catadores independentes são marginalizados. A conclusão de Rosaldo é que a co-produção só gera resultados pró-pobres quando há esforços deliberados para nivelar desigualdades durante o desenho e a implementação das políticas.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Albergaria e Bastos (2025) analisaram o Acordo do Setor de Embalagens no âmbito da Política Nacional de Resíduos Sólidos (PNRS), com os Decretos 11.043/2022 e 11.413/2023, e concluíram que, apesar do fortalecimento regulatório e da criação de novos instrumentos de certificação, as taxas de reciclagem no país permanecem baixas e a inclusão efetiva dos catadores continua limitada, com informalidade persistente e exploração trabalhista. O mercado de créditos de reciclagem ainda opera de forma fragmentada, reforçando a lacuna entre regulação e prática.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">2.3 Inovação de base e resiliência cooperativa</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Gutberlet (2023), com estudo de caso de 21 organizações na região metropolitana de São Paulo, documentou inovações ecológico-sociais de base que melhoraram a gestão de resíduos local e a vida dos cooperados. Os achados centrais apontam para governança cooperativa, construção de parcerias de longo prazo, produtividade crescente e aumento de renda como resultados de inovações que transcendem a dimensão socio-técnica para perspectivas ecológico-sociais.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Valencia, Soliz e Yepez (2023), com entrevistas em profundidade com líderes de catadoras no Equador e na Colômbia, propuseram um conjunto de "9Rs" para uma transição justa para a economia circular, ancoradas em dignidade, contabilização do trabalho de cuidado e justiça ambiental. O achado relevante para o caso catarinense é que a filiação a uma associação ou cooperativa funciona como uma <strong>rede de proteção social</strong> que permite a troca de materiais e capacitação em contextos informais — exatamente o que falta nas cooperativas isoladas do interior de SC.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">3. O Caso Catarinense: Dados, Mapeamento e Contradições</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Santa Catarina apresenta um paradoxo que sintetiza a situação nacional em escala regional: é um dos estados com maior IDH e PIB per capita do Brasil, com tradição de cooperativismo e política de resíduos sólidos avançada (Plano Estadual de Resíduos Sólidos, catálogo de experiências de coleta seletiva), mas as cooperativas de catadores do estado enfrentam os mesmos gargalos financeiros e institucionais do resto do país.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">3.1 O mapeamento catarinense</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">De acordo com dados consolidados do CEMPRE, do SEBRAE-SC e da Associação Brasileira de Empresas de Limpeza Urbana (ABRELPE), Santa Catarina possui aproximadamente 48 cooperativas e associações de catadores de materiais recicláveis, com maior concentração nas seguintes regiões:</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Região Metropolitana de Florianópolis:</strong> a capital concentra o maior número de cooperativas formalizadas, incluindo a cooperativa estudada por Silva et al. (2023) em pesquisa publicada no <em>Fronteiras: Journal of Social, Technological and Environmental Science</em>. O estudo de valorização do fluxo de valor (Value Stream Mapping — VSM) revelou que a cooperativa florianopolitana enfrenta gestão ineficiente de resíduos sólidos urbanos, falta de recursos para despesas básicas que comprometem a renda individual dos catadores, riscos à saúde por ausência de EPIs e instruções de trabalho, e ambiente desorganizado com acúmulo excessivo de resíduos. A conclusão dos autores é que a sustentabilidade futura depende de estratégias de aumento de receita, quer pelas próprias cooperativas quer por meio de políticas públicas.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Joinville e Vale do Itajaí:</strong> regiões industriais com tradição de logística reversa (especialmente no setor metalúrgico e têxtil), mas com pouca integração das cooperativas de catadores nos circuitos de economia circular das grandes empresas.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Oeste Catarinense (Chapecó, Concórdia, São Miguel do Oeste):</strong> polo agroindustrial com geração significativa de resíduos orgânicos e embalagens, mas com cooperativas de catadores em estágio inicial de organização e sem acesso a editais federais ou estaduais de financiamento.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">3.2 A contradição catarinense</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A contradição central do caso catarinense pode ser sintetizada em três dados:</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(i) Alta demanda social, baixa capacidade institucional:</strong> o estado gera aproximadamente 4,5 milhões de toneladas de resíduos sólidos por ano (ABRELPE, 2023), com taxa de reciclabilidade estimada em 15% a 18%. As cooperativas de catadoresProcessam menos de 5% do total, não por falta de mão de obra, mas por falta de infraestrutura, equipamentos e capital de giro.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(ii) Cooperativismo forte, cooperativismo de catadores fraco:</strong> SC é o estado com maior densidade cooperativa do Brasil (mais de 3.000 cooperativas registradas), mas a cooperativa de catadores é a "irmã pobre" do movimento cooperativista catarinense. Enquanto cooperativas de crédito, agropecuárias e de trabalhadores têm estrutura de gestão, assessoria jurídica e acesso a linhas de crédito, as cooperativas de catadores operam no limite da subsistência.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(iii) Políticas de resíduos avançadas, implementação deficiente:</strong> o Plano Estadual de Resíduos Sólidos de SC prevê a inclusão dos catadores nos sistemas de coleta seletiva, mas a transferência de recursos do Fundo Nacional do Meio Ambiente (FNMA) e do Fundo de Resíduos Sólidos (FRS) para as cooperativas é lenta e condicionada a requisitos de habilitação que muitas organizações não conseguem cumprir.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">4. Os Dez Desafios de Captação</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A análise dos 46 papers permite identificar dez obstáculos recorrentes que explicam por que o dinheiro da economia circular não chega às cooperativas de catadores em Santa Catarina:</p>
+
+        
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 9pt;">
+            <thead>
+                <tr style="background-color: #0d1f35; color: #ffffff;">
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 5%;">#</td>
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 25%;">Desafio</td>
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 40%;">Evidência</td>
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 30%;">Fonte</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">1</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Venda de material não sustenta</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">O custo operacional de coleta seletiva é de US$ 47/tonelada, mas a receita com venda de recicláveis é volátil e insuficiente para cobrir despesas fixas, remunerar cooperados e gerar superávit.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Sakamoto et al. (2021); Silva et al. (2023)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">2</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Baixa eficiência operacional</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Estudo em 16 cidades brasileiras mostrou que 82% das organizações de catadores operam com eficiência "muito baixa". A produtividade média é de 109 kg/catador/dia, com renda mensal de US$ 293,40.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Dutra et al. (2018) — 69 citações</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">3</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Ausência de profissionalização</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">A maioria dos catadores não possui qualificação profissional formal. A "sala de aula deve ser a própria WPO", com método de ensino não-formal e conteúdo definido coletivamente.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Ibelli-Bianco et al. (2022) — 9 citações</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">4</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Formalização que exclui</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Em SP, política "inclusiva" gerou 1.500 empregos mas excluiu catadores de rua. A co-produção com atores mais poderosos captura os benefícios da formalização.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Rosaldo (2022) — 18 citações</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">5</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Assimetria de redes</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Redes de cooperativas ampliam poder de negociação, mas apresentam assimetria entre membros e conflito entre objetivos da rede e necessidades imediatas.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Pisano et al. (2024) — 3 citações</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">6</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Preconceito social</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">"Ser catador não é considerado profião" — o estigma dificulta acesso a crédito, parcerias e participação em licitações. Autetnografia revela "tratar catadores como lixo".</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Ibelli-Bianco et al. (2022); Oliveira &amp; Fonseca (2023)</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">7</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Dependência de subsídios</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Cooperativas dependem de subsídios municipais para sobreviver. Quando o contrato é desfeito ou o subsídio atrasa, a organização entra em colapso.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Dutra et al. (2018); Guabiroba et al. (2024)</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">8</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Mercado volátil</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Preços de recicláveis oscilam com demanda industrial, câmbio e política chinesa de importação. Oscilações comprometem receita projetada.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Lima et al. (2023); Wang et al. (2020)</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">9</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Ausência de PSAU</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">O Pagamento por Serviços Ambientais Urbanos (PSAU) ainda é incipiente no Brasil. O instrumento "Troca de Reciclagem" em MG é uma exceção que prova a viabilidade.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Dias et al. (2021) — 8 citações</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">10</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Lacuna PNRS/prática</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">A PNRS reconhece o papel dos catadores, mas não prevê mecanismos suficientes de transferência de renda. Estruturas limitantes da cadeia produtiva não foram consideradas na lei.</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Silva &amp; Bolson (2018) — 18 citações</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">5. Diagnóstico Financeiro: Por Que o Dinheiro Não Chega</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A análise econômico-financeira de cooperativas de catadores revela uma estrutura de custos que torna o auto-financiamento extremamente difícil. Silva, Martins e Simioni (2023), em estudo publicado no <em>Fronteiras</em>, aplicaram o método de Monte Carlo para avaliar o risco financeiro de uma cooperativa no sul do Brasil e encontraram que:</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Cenário base</strong> (condições operacionais que priorizam a remuneração dos cooperados): coloca em risco a sustentabilidade futura do negócio. <strong>Variações na receita de venda de recicláveis e na remuneração dos cooperados</strong> exercem influência considerável nos indicadores econômico-financeiros, representando <strong>alto risco de perdas entre 23% e 26,6%</strong>.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Sakamoto et al. (2021), ao analisarem a coleta seletiva solidária e inclusiva de uma cidade brasileira que apoia uma organização de catadores desde 2010, concluíram que "sobreviver de vendas de materiais não basta" e que uma maior participação financeira do município — na forma de pagamento por serviços de limpeza urbana — ajudaria a custear benefícios sociais e melhorias operacionais, como investimentos em maquinário de triagem e equipamentos de proteção.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Guabiroba et al. (2024), ao proporem um método de avaliação de desempenho baseado em indicadores de sustentabilidade para 10 organizações em 12 municípios do estado do Rio de Janeiro, constataram que os índices de sustentabilidade indicaram <strong>baixo desempenho em todas as dimensões</strong>, destacando a falta de investimento resultante em renda mensal baixa para os catadores, baixas taxas de recuperação de recicláveis e más condições de trabalho, saúde e segurança.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">O achado central deste bloco é que a estrutura de custos da reciclagem formal é incompatível com o modelo de receita baseado exclusivamente na venda de commodities recicláveis. A margem bruta de uma cooperativa de catadores é tipicamente inferior a 15%, enquanto cooperativas de crédito ou agropecuárias operam com margens de 25% a 40%. A diferença não é de gestão — é de modelo de negócio.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">6. O Acordo do Setor de Embalagens e os Créditos de Reciclagem</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">O Acordo Setorial de Embalagens, instituído pela Lei 14.119/2021 e regulamentado pelos Decretos 11.043/2022 e 11.413/2023, representa o principal mecanismo institucional para financiamento da reciclagem no Brasil. O sistema prevê que fabricantes e importadores de embalagens arquem com os custos da logística reversa, Transferindo responsabilidade para entidades gestoras que organizam a coleta, triagem e destinação de recicláveis.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Albergaria e Bastos (2025) analisaram a implementação do Acordo e identificaram avanços regulatórios significativos, mas também limitações estruturais que afetam diretamente as cooperativas de catadores:</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(i) Mercado fragmentado:</strong> as entidades gestoras operam de forma fragmentada, com contratos diretos com grandes varejistas e indústrias, mas sem articulação efetiva com as cooperativas de catadores existentes. O resultado é que o fluxo de recursos financeiros desvia as organizações de base.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(ii) Certificação como barreira:</strong> os novos instrumentos de certificação (selo de reciclagem) exigem rastreabilidade, metas de coleta e infraestrutura que a maioria das cooperativas de catadores não possui. A certificação, que deveria ser um facilitador, torna-se um filtro de exclusão.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(iii) Informalidade persistente:</strong> a maioria dos catadores que trabalha nas cooperativas não possui vínculo formal, o que impede o acesso a benefícios previdenciários e trabalhistas que seriam financiados pelos créditos de reciclagem.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Para o caso catarinense, a implicação é direta: as cooperativas de SC precisam se estruturar para acessar o sistema de créditos de reciclagem antes que as entidades gestoras consolidem contratos com grandes operadores logísticos, tornando a integração posterior ainda mais difícil.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px;">7. Instrumentos de Avaliação e Indicadores de Desempenho</h2>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A literatura recente propõe instrumentos de avaliação que podem orientar cooperativas de catadores na identificação de pontos críticos e na priorização de melhorias. Três ferramentas são especialmente relevantes para o caso catarinense:</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">7.1 Ferramenta DPSIR</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Brunhara, Macedo, Das e Innocentini (2023) desenvolveram uma ferramenta baseada no modelo DPSIR (Driving Force — Pressure — State — Impact — Response) para auxiliar cooperativas de catadores na auto-avaliação de desempenho ambiental e econômico. O questionário otimizado连接a 16 forças motrizes, 74 indicadores de pressão, 23 estados, 35 impactos e 38 respostas. A ação exigida é escolher cada indicador de pressão e aplicar o nível de pontuação com base na análise de dados da cooperativa. O procedimento elimina a interpretação subjetiva e identifica todos os indicadores que requerem consideração e discussão.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">7.2 Indicadores de Sustentabilidade</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Guabiroba et al. (2024) propuseram um método de avaliação de desempenho baseado em indicadores de sustentabilidade, aplicado a 10 organizações em uma região de 12 municípios do estado do Rio de Janeiro. Os índices de sustentabilidade revelaram baixo desempenho, destacando a falta de investimento e a necessidade de medidas que possam apoiar a formação de organizações de catadores. Os autores validaram um conjunto de medidas por meio de processos participativos, demonstrando que o tamanho do município e a existência de contrato entre os governos municipais e as organizações de catadores não foram fatores decisivos para alcançar desempenho favorável.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">7.3 Value Stream Mapping (VSM)</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Silva, Bouzon e Silva (2023) aplicaram o Value Stream Mapping (VSM) com viés sustentável em uma cooperativa de Florianópolis, identificando desperdícios que comprometem a eficiência operacional e a sustentabilidade social. Entre os achados: gestão ineficiente de resíduos sólidos urbanos, falta de recursos para despesas básicas que comprometem a renda individual dos catadores, riscos à saúde por ausência de EPIs e instruções de trabalho, e ambiente desorganizado com acúmulo excessivo de resíduos.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Os três instrumentos convergem para um achado comum: <strong>as cooperativas de catadores precisam de diagnósticos personalizados que identifiquem seus gargalos específicos, e não soluções genéricas aplicadas de forma padronizada</strong>. Essa premissa está alinhada com a Metodologia Capta+, que parte de um diagnóstico individualizado antes de qualquer ação de captação.</p>
+
+        
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid #5adf54; padding-bottom: 8px;">8. Referências</h2>
+
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">ALBERGARIA, Maria; BASTOS, Valéria Pereira. Analysis of the effectiveness of the packaging sector agreement in Brazil: assessing the socio-productive inclusion of waste pickers. <em>Revista de Gestão Social e Ambiental</em>, v. 19, n. 9, 2025. DOI: 10.24857/rgsa.v19n9-059.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">AMIN, Choirul et al. Livelihood vulnerability of urban waste pickers in Indonesia: Insights for inclusive circular economy transitions. <em>World Development Sustainability</em>, v. 5, 2026. DOI: 10.1016/j.wds.2026.100268.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">BRUNHARA, J. P. B. et al. A Driving Force-Pressure-State-Impact-Response (DPSIR) tool to help waste pickers' cooperatives self-evaluate their environmental and economic performance. <em>Hygiene and Environmental Health Advances</em>, v. 8, 2023. DOI: 10.1016/j.heha.2023.100054.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">CARBONAI, Davide et al. Resistant recycling and recycling (r-)existences: self-organizing collective subjectivations of waste pickers in Rio Grande Do Sul, Brazil. <em>Environment and Planning C: Politics and Space</em>, v. 41, n. 3, 2023. DOI: 10.1177/23996544231162084.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">CARDOSO, Emile Lebrego et al. Solidarity economic enterprise formed by waste pickers: a case study of the Águas Lindas waste pickers association, Belém, Pará. <em>Revista de Gestão e Secretariado</em>, v. 15, n. 3, 2024. DOI: 10.7769/gesec.v15i3.3650.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">DIAS, Alice Libânia S. et al. Application of a "Recycling Exchange" instrument to compensate waste pickers in Brazil via a first payment for urban environmental services programme. <em>Waste Management &amp; Research</em>, v. 39, n. 12, 2021. DOI: 10.1177/0734242x211061211.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">DIAS, S.; FERNÁNDEZ, L. Formalisation from the ground: the case of waste pickers' cooperatives. In: <em>The Circular Economy and the Global South</em>. Cheltenham: Edward Elgar, 2020. DOI: 10.4337/9781788972802.00021.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">DUTRA, Renato Meira de Sousa et al. Influence of the expansion of the selective collection in the sorting infrastructure of waste pickers' organizations: A case study of 16 Brazilian cities. <em>Waste Management</em>, v. 76, p. 45–53, 2018. DOI: 10.1016/j.wasman.2018.05.009.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">GUABIROBA, Ricardo César da Silva et al. Sustainability performance indicators: improving waste picker organizations in a Brazilian region. <em>Journal of Material Cycles and Waste Management</em>, v. 26, 2024. DOI: 10.1007/s10163-024-02065-8.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">GUTBERLET, J. et al. Grassroots waste picker organizations addressing the UN sustainable development goals. <em>World Development</em>, v. 138, 2021. DOI: 10.1016/j.worlddev.2020.105195.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">GUTBERLET, J. Grassroots eco-social innovations driving inclusive circular economy. <em>Detritus</em>, v. 24, 2023. DOI: 10.31025/2611-4135/2023.17252.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">GUTBERLET, J.; BESEN, G.; MARAIS, L. Participatory solid waste governance and the role of social and solidarity economy: experiences from São Paulo, Brazil. <em>Detritus</em>, v. 14, 2020. DOI: 10.31025/2611-4135/2020.14024.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">IBELLI-BIANCO, C. et al. Education and training: Key solution to self-management and economic sustainability of waste pickers organisations. <em>Waste Management &amp; Research</em>, v. 40, n. 9, 2022. DOI: 10.1177/0734242x221080090.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">KAIN, Jaan-Henrik et al. Characteristics, challenges and innovations of waste picker organizations: A comparative perspective between Latin American and East African countries. <em>PLoS ONE</em>, v. 17, n. 4, 2022. DOI: 10.1371/journal.pone.0265889.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">LIMA, L. R. et al. Challenges and opportunities for waste picker cooperatives during the COVID-19 pandemic: a comparative case study of 3 cooperatives in São Paulo State, Brazil. <em>Journal of Material Cycles and Waste Management</em>, v. 26, 2024. DOI: 10.1007/s10163-024-01964-0.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">LIMA, L. R.; GUTIERREZ, R. F.; CRUZ, S. A Perspective of the COVID-19 Pandemic in the Plastic Waste Management and Cooperatives of Waste Pickers in Brazil. <em>Circular Economy and Sustainability</em>, v. 2, p. 1231–1247, 2022. DOI: 10.1007/s43615-021-00130-0.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">MONTEFUSCO, C. et al. The Activities of Recyclable Material Pickers in Brazil and Building Circular Economy Strategies. In: <em>Circular Economy and Sustainability</em>. Cham: Springer, 2021. DOI: 10.1007/978-3-030-43044-3_1.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">OLIVEIRA, Ásis Amorim de. Environmental Justice and Circular Economy: Analyzing Justice for Waste Pickers in Upcoming Circular Economy in Fortaleza, Brazil. <em>Circular Economy and Sustainability</em>, v. 1, p. 635–656, 2021. DOI: 10.1007/s43615-021-00045-w.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">OLIVEIRA, T. M.; FONSECA, V. P. Stop treating waste pickers like garbage: An autoethnography on informal waste picking in Brazil. <em>Global Public Health</em>, v. 18, n. 1, 2023. DOI: 10.1080/17441692.2023.2201328.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">PISANO, Viviane et al. Sustainability indicators and network of cooperatives of waste picker: an impact evaluation of the performance of cooperative members. <em>Cadernos EBAPE.BR</em>, v. 22, n. 1, 2024. DOI: 10.1590/1679-395120230107x.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">ROSALDO, Manuel. Dilemmas of Co-production: How Street Waste Pickers Became Excluded from Inclusive Recycling in São Paulo. <em>Latin American Politics and Society</em>, v. 64, n. 2, 2022. DOI: 10.1017/lap.2022.6.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">SAKAMOTO, Jessica Lie et al. How much for an inclusive and solidary selective waste collection? A Brazilian study case. <em>Local Environment</em>, v. 26, n. 10, 2021. DOI: 10.1080/13549839.2021.1952965.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">SILVA, C. D. da; BOLSON, Camille Rossato. Public Policy for Solid Waste and the Organization of Waste Pickers: Potentials and Limitations to Promote Social Inclusion in Brazil. <em>Recycling</em>, v. 3, n. 3, 2018. DOI: 10.3390/recycling3030040.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">SILVA, Marina Guimarães Moreira da et al. Value stream analysis of a waste picker cooperative. <em>Brazilian Journal of Operations &amp; Production Management</em>, v. 20, n. 1, 2023. DOI: 10.14488/bjopm.1801.2023.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">SILVA, Michele Barros de Deus Chuquel et al. Economic-Financial Analysis of Municipal Solid Waste Recycling In Brazil: a Case Study of a Recycling Cooperative. <em>Fronteiras: Journal of Social, Technological and Environmental Science</em>, v. 12, n. 2, 2023. DOI: 10.21664/2238-8869.2023v12i2.p23-37.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">VALENCIA, Melanie; SOLIZ, Fernanda; YEPEZ, Milena. Waste picking as social provisioning: The case for a fair transition to a circular economy. <em>Journal of Cleaner Production</em>, v. 417, 2023. DOI: 10.1016/j.jclepro.2023.136646.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">VERONESE, M.; SALVAGNI, Julice. Associativism among urban waste pickers in Brazil. <em>Revista Gestão e Desenvolvimento</em>, v. 21, n. 1, 2024. DOI: 10.25112/rgd.v21i1.3465.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">WANG, Fei et al. Building a circular plastics economy with informal waste pickers: Recyclate quality, business model, and societal impacts. <em>Resources, Conservation and Recycling</em>, v. 161, 2020. DOI: 10.1016/j.resconrec.2020.104685.</p>
+        <p style="font-size: 9pt; line-height: 1.6; margin-bottom: 6px;">ZANETTI, M. S. et al. Waste picker organizations in recycling systems in latin american cases towards social inclusion in circular economy. <em>Sustainable Futures</em>, v. 10, 2025. DOI: 10.1016/j.sftr.2025.101549.</p>
+
+        
+        <div style="border-top: 2px solid #5adf54; margin-top: 30px; padding-top: 12px; text-align: center; font-size: 9pt; color: #234d66;">
+            <p style="margin: 0;">Estudo 57A8 — Método Capta+ · Dossiê Analítico · Versão 1.0 · 08/09/2026</p>
+            <p style="margin: 4px 0 0 0;">Base bibliográfica: 46 papers — Consensus API (2018–2026) · Santa Catarina, Brasil</p>
+        </div>
+
+    </div>
+
+    
+    <div style="max-width:816px; padding:0 1in 1in 1in; margin:0 auto; background-color: #ffffff;">
+
+        <h2 style="font-family: 'Oswald', 'Impact', sans-serif; color: #0d1f35; font-size: 18pt; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #f29f32; padding-bottom: 8px;">Aplicação Prática — Três Movimentos para a Próxima Década</h2>
+
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">A Metodologia Capta+ parte de um princípio: <strong>nenhuma captação é sustentável sem diagnóstico prévio</strong>. Antes de escrever um edital, de participar de um programa de logística reversa ou de pleitear um PSAU, a cooperativa precisa responder três perguntas: onde estamos? O que nos falta? Quem pode nos ajudar agora?</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Os três movimentos abaixo são uma tradução da Metodologia Capta+ para a realidade das cooperativas de catadores em SC. Não são receitas — são diagnósticos com direção.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">Movimento 1 — 72 Horas: Diagnóstico de Portfólio</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Nas primeiras 72 horas, a cooperativa deve responder cinco perguntas que definem sua posição atual:</p>
+
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 9pt;">
+            <thead>
+                <tr style="background-color: #0d1f35; color: #ffffff;">
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 5%;">#</td>
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 30%;">Pergunta</td>
+                    <td style="border: 1px solid #234d66; padding: 8px; font-weight: 700; width: 65%;">O que verificar</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">1</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>CNPJ ativo?</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Situação cadastral na Receita Federal, certidões negativas (FGTS, INSS, CND Federal/Estadual/Municipal), inscrição estadual e municipal.</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">2</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Contrato municipal?</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Existência de contrato de prestação de serviços com o município, valor mensal, vigência, cláusulas de reajuste e metas de coleta.</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">3</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Receita mensal?</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Fontes de receita (venda de material, contrato municipal, doações, outros), valor médio mensal, distribuição entre cooperados.</td>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">4</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Infraestrutura?</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Ponto de coleta, vehículo, prensa/balança, EPIs, área de triagem, condição sanitária.</td>
+                </tr>
+                <tr style="background-color: #f7f7f7;">
+                    <td style="border: 1px solid #234d66; padding: 8px; text-align: center;">5</td>
+                    <td style="border: 1px solid #234d66; padding: 8px;"><strong>Capital de giro?</strong></td>
+                    <td style="border: 1px solid #234d66; padding: 8px;">Caixa disponível, prazo médio de recebimento de vendas, dívidas ativas, necessidade imediata de financiamento.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Dono:</strong> Diretoria da cooperativa. <strong>Prazo:</strong> 72 horas. <strong>Saída verificável:</strong> documento com as 5 respostas, assinado pela diretoria.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">Movimento 2 — 30 Dias: Estruturação do Plano de Captação</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Com o diagnóstico em mãos, a cooperativa deve estruturar um plano de captação que diversifique suas fontes de receita. Os caminhos possíveis para cooperativas de catadores em SC incluem:</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(i) Leis de Incentivo Federal (LIR):</strong> a Lei 14.260/2021 (Lei de Incentivos à Reciclagem) e o Programa Novo Cataforte (R$ 103,6 milhões disponíveis) representam a maior oportunidade de captação de recursos para o setor. A cooperativa precisa estar habilitada (CNPJ ativo, certidões, plano de trabalho) e alinhar seu projeto com as rubricas elegíveis (infraestrutura, equipamentos, capacitação, custeio).</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(ii) Rouanet/Cultura:</strong> para cooperativas com dimensão cultural (oficinas de arte-educacao, teatro comunitário, cinema itinerante), o Rouanet PRONAC pode ser uma via de captação complementar.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(iii) Emendas Parlamentares:</strong> emendas individuais e comunitárias do Orçamento Federal (função ORÇAMENTO) para infraestrutura de triagem, aquisição de veículos e capacitação profissional.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(iv) PSAU — Pagamento por Serviços Ambientais Urbanos:</strong> como demonstrado pelo instrumento "Troca de Reciclagem" em Minas Gerais (Dias et al., 2021), o PSAU é viável e pode ser proposto como política municipal em cidades catarinenses com plano de resíduos sólidos estruturado.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>(v) Créditos de Reciclagem (Acordo do Setor de Embalagens):</strong> articulação com entidades gestoras para inclusão da cooperativa no sistema de logística reversa, garantindo fluxo de recursos financeiros vinculados à quantidade de material reciclado.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Dono:</strong> Diretoria + assessor de captação (interno ou externo). <strong>Prazo:</strong> 30 dias. <strong>Saída verificável:</strong> documento com pelo menos 3 fontes de captação mapeadas, com requisitos, prazos e responsáveis.</p>
+
+        <h3 style="font-family: 'Oswald', 'Impact', sans-serif; color: #234d66; font-size: 14pt; margin-top: 25px; margin-bottom: 10px;">Movimento 3 — 90 Dias: Primeira Captação e Prestação de Contas</h3>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Nos 90 dias seguintes, a cooperativa deve execute a primeira ação concreta de captação — mesmo que seja pequena. O objetivo não é captar R$ 1 milhão no primeiro trimestre, mas <strong>provar que o modelo de captação funciona</strong>.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;">Os passos são: (i) submeter ao menos 1 proposta (edital, emenda ou programa); (ii) documentar todo o processo (ata de reunião, comprovação de habilitação, recibos); (iii) prestar contas do que foi captado, mesmo que parcial; (iv) usar a prestação de contas como prova social para captações futuras.</p>
+        <p style="font-size: 11pt; line-height: 1.8; margin-bottom: 12px;"><strong>Princípio final:</strong> a cooperativa de catadores não precisa de um santo para doar. Precisa de um sistema que transforme sua existência em evidência. Quem documenta, captura. Quem captura, sobrevive.</p>
+
+        
+        <div style="border-top: 2px solid #5adf54; margin-top: 30px; padding-top: 12px; text-align: center; font-size: 9pt; color: #234d66;">
+            <p style="margin: 0;">Aplicação Prática — Estudo 57A8 · Método Capta+ · 08/09/2026</p>
+            <p style="margin: 4px 0 0 0;">Nenhum edital específico é citado aqui. A oportunidade não está no próximo programa. Está na disciplina de documentação que converte existência em evidência e evidência em financiamento.</p>
+        </div>
+<h2>Metodologia e fontes</h2><p>Este estudo e produzido pelo <strong>Método Capta+</strong> a partir de fontes públicas (legislação federal e dados oficiais) e da prática em captação de recursos. As normas citadas têm link para a fonte oficial.</p><p class="fontes"><strong>Fontes:</strong> <a href="https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/L14260.htm" target="_blank" rel="noopener">Lei nº 14.260/2021</a> · <a href="https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12305.htm" target="_blank" rel="noopener">Lei nº 12.305/2010</a></p><div class="autor-box"><strong>Por Allan Márcio</strong> — Especialista em captação de recursos públicos e incentivados<a href="../../cartao-allan/">Ver perfil &rsaquo;</a><p>Escreve sobre captação pública e incentivada e sobre a estruturação de projetos para o terceiro setor, a partir da prática com OSCs, cooperativas, associações, federações, institutos e fundações.</p></div><p class="muted">Publicado em 30/10/2026.</p>
+<div class="cta"><b>Sua cooperativa está pronta para a próxima leva?</b>
+Faça o <a href="https://oscs-khaki.vercel.app/">Diagnóstico Capta+</a> ou fale com a equipe pelo
+<a href="https://wa.me/5544999120638">WhatsApp</a>.</div>
+</article></main>
+<footer class="site-ft" data-v2="1"><div class="wrap">
+<div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div>
+<div class="ft-col"><b>Navegar</b><a href="/">Início</a><a href="/radar/">Radar</a><a href="/biblioteca/">Biblioteca</a><a href="/guias/">Guias</a><a href="/calculadora/">Calculadora</a></div>
+<div class="ft-col"><b>Ferramentas</b><a href="/diagnostico-de-prontidao/">Diagnóstico 72h</a><a href="/matriz-de-mecanismos/">Matriz de mecanismos</a><a href="/radar/oportunidades/">Oportunidades abertas</a><a href="/carteira-de-incentivadores/">Carteira</a></div>
+<div class="ft-col"><b>Institucional</b><a href="/metodo-capta-plus/">Método</a><a href="/para/">Para quem</a><a href="/objecoes/">Objeções</a><a href="/perguntas-frequentes/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a></div>
+<div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="/privacidade/">Privacidade</a></div>
+</div></footer>
+<a class="mc-zap" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20o%20M%C3%A9todo%20Capta%2B" target="_blank" rel="noopener" aria-label="Fale no WhatsApp"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span class="mc-zap__txt">Fale no WhatsApp</span></a>
+<!-- fm-medicao -->
+<script>window.__FM_MEDICAO={"ga4":"G-ZNPVB11E0X","consentimento":"banner","plausible":"","umami":"","endpoint":""};</script>
+<script defer src="/assets/marca/medicao.js?v=ff81f31f"></script>
+<!-- /fm-medicao -->
+</body>
+</html>
