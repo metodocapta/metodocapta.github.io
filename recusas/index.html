@@ -118,6 +118,17 @@ h1{font:600 34px/1.15 Oswald,sans-serif;color:var(--navy);margin:10px 0 10px}
 .site-hd[data-fm-nav] nav a{font:600 12px/1 Oswald,'Segoe UI',sans-serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
 .site-hd[data-fm-nav] nav a.is-active,
 .site-hd[data-fm-nav] nav a[aria-current="page"]{color:#fff;border-bottom:2px solid #0ABCB0;padding-bottom:5px}
+/* PAINEL DO MENU (mega): fundo branco, texto escuro.
+   A regra global `.fm-site span{color:#e4f4f1}` (texto claro para fundo escuro)
+   pintava os <span> deste painel e deixava o nome do mecanismo ilegivel.
+   Precisa de especificidade maior que `.fm-site span` para vencer. */
+.site-hd[data-fm-nav] .nav-mega,
+.site-hd[data-fm-nav] .nav-mega p,
+.site-hd[data-fm-nav] .nav-mega span,
+.site-hd[data-fm-nav] .nav-mega a{color:#0d1f35}
+.site-hd[data-fm-nav] .nav-mega .mg-sigla{color:#7fe3d8;background:#062531}
+.site-hd[data-fm-nav] .nav-mega .mg-nome{color:#0d1f35}
+.site-hd[data-fm-nav] .nav-mega .mg-n{color:#4a6572}
 @media (min-width:901px){
   .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
