@@ -1,7 +1,7 @@
 {
  "atualizado_em": "2026-11-03",
  "fonte": "curado",
- "nota": "Ranking exibido como primeira dica na busca do menu. Enquanto nao houver volume de eventos de busca (medicao.js), a lista e' curada a mao. Para atualizar com dado real: contar os eventos de busca por termo e reescrever este arquivo.",
+ "nota": "Ranking exibido como primeira dica na busca do menu. Enquanto nao houver volume de eventos de busca, a lista e' curada a mao. Para virar medido: exporte os eventos de busca para assets/medicao_buscas.json e rode SKILLS/SCRIPTS/buscas_ranking.py (o build faz isso sozinho quando o arquivo existir).",
  "termos": [
   { "termo": "Lei de Incentivo à Reciclagem", "rotulo": "LIR / reciclagem", "href": "/radar/lir/" },
   { "termo": "Rouanet", "rotulo": "Rouanet (PRONAC)", "href": "/radar/rouanet/" },
