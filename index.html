@@ -144,8 +144,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .fm-sticky-cta.on{transform:translateY(0);opacity:1;visibility:visible}
 .fm-sticky-cta__txt{margin:0;max-width:560px;color:#eafffb;font-size:14px;line-height:1.4}
 .fm-sticky-cta__txt strong{color:#7fe3d8;font-weight:600}
-.fm-sticky-cta__btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:#0ABCB0;color:#04222a;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;letter-spacing:.03em;box-shadow:0 10px 26px rgba(10,188,176,.4);transition:transform .18s ease,filter .18s ease}
-.fm-sticky-cta__btn:hover{transform:translateY(-2px);filter:brightness(1.06);color:#04222a}
+.fm-sticky-cta .fm-sticky-cta__btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:linear-gradient(135deg,#e08a5c 0%,#d97b4d 100%);color:#04222a;font-weight:700;text-decoration:none;padding:12px 20px;border-radius:999px;letter-spacing:.03em;box-shadow:0 14px 34px -10px rgba(217,123,77,.6),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .18s ease,filter .18s ease}
+.fm-sticky-cta .fm-sticky-cta__btn:hover{transform:translateY(-2px);filter:brightness(1.06);color:#04222a;box-shadow:0 16px 38px -8px rgba(217,123,77,.7),inset 0 1px 0 rgba(255,255,255,.28)}
 .fm-sticky-cta__x{background:transparent;border:0;color:#7fa8a2;font-size:22px;line-height:1;cursor:pointer;padding:6px 10px;border-radius:8px}
 .fm-sticky-cta__x:hover{color:#eafffb;background:rgba(127,227,216,.12)}
 body.fm-bar-on .mc-zap{bottom:96px}
@@ -157,7 +157,7 @@ body.fm-bar-on .mc-zap{bottom:86px}
 }
 @media (prefers-reduced-motion:reduce){
 .fm-sticky-cta{transition:none}
-.fm-sticky-cta__btn:hover{transform:none}
+.fm-sticky-cta .fm-sticky-cta__btn:hover{transform:none}
 }
 </style>
 <script defer src="assets/fm-conversao.min.js?v=fffea860"></script>
@@ -340,6 +340,8 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 .fm-manifesto.band-light a, .fm-band-light .fm-manifesto a{color:#7fe3d8 !important}
 @media(max-width:640px){.fm-manifesto{padding:20px 20px}}
 </style>
+
+<noscript></noscript>
 
 <noscript></noscript>
 
@@ -966,6 +968,8 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
                     </div>
 
                 </section>
+
+
 
 
 
