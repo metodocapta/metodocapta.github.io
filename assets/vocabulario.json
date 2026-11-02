@@ -1,0 +1,47 @@
+{
+ "atualizado_em": "2026-11-03",
+ "categorias": [
+  {
+   "chave": "fiscal",
+   "rotulo": "Incentivo fiscal",
+   "definicao": "O recurso vem de renúncia tributária: a empresa ou a pessoa física destina parte do imposto que já pagaria. Exige projeto aprovado e captação com documento próprio."
+  },
+  {
+   "chave": "fundo",
+   "rotulo": "Fundo público",
+   "definicao": "O dinheiro é do orçamento público e fica num fundo com conselho gestor. Exige habilitação e projeto aprovado pelo conselho do fundo."
+  },
+  {
+   "chave": "repasse",
+   "rotulo": "Repasse/parceria",
+   "definicao": "Transferência da União, do estado ou do município por instrumento (convênio, termo de fomento, emenda). Exige regularidade documental e plano de trabalho."
+  },
+  {
+   "chave": "certificacao",
+   "rotulo": "Certificação",
+   "definicao": "Não é fonte de recurso: é título que habilita a entidade a acessar benefícios e outras fontes. Não capta sozinha."
+  }
+ ],
+ "mecanismos": {
+  "ROUANET": "fiscal",
+  "LIE": "fiscal",
+  "LIR": "fiscal",
+  "PRONON": "fiscal",
+  "PRONAS": "fiscal",
+  "FIA": "fundo",
+  "FUNDO_IDOSO": "fundo",
+  "SUAS": "fundo",
+  "MROSC": "repasse",
+  "PNAB": "repasse",
+  "EMENDA": "repasse",
+  "CEBAS": "certificacao"
+ },
+ "nota_paulo_gustavo": {
+  "titulo": "Lei Paulo Gustavo e Lei Paulo Minc: por que não aparecem como janela corrente",
+  "paragrafos": [
+   "A Lei Paulo Gustavo (Lei Complementar 195/2022) transferiu recursos da União para estados e municípios executarem ações culturais. O ciclo de transferência já foi executado pelos entes, e a fase corrente é a de prestação de contas dos recursos empenhados — não uma janela nacional aberta de captação. Por isso ela não aparece como mecanismo próprio no Radar.",
+   "O nome correto é Lei Paulo Gustavo. A Política Nacional Aldir Blanc (PNAB, Lei 14.399/2022) é outro instrumento, com editais locais publicados por estados e municípios — é ela que aparece no Radar sob o código PNAB. Se você procura saldo, regularização ou edital local remanescente de qualquer um dos dois, a fonte é o órgão responsável no seu estado ou município, não este site."
+  ],
+  "fonte": "https://www.gov.br/cultura/pt-br/assuntos/noticias/entenda-a-lei-paulo-gustavo-e-a-atual-fase-de-prestacao-de-contas"
+ }
+}
