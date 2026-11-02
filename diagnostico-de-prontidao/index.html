@@ -117,6 +117,23 @@ table.matriz td:first-child{white-space:nowrap;color:var(--navy)}
 .fm-hier-j a{color:#067a72;text-decoration:none;border-bottom:1px solid rgba(10,188,176,.35)}
 @media(max-width:560px){.fm-hier{padding:16px}.fm-hier-dl{grid-template-columns:1fr;gap:2px}.fm-hier-dt{margin-top:8px}}
 </style>
+<style data-fm-conversao>
+.fm-ficha{margin:22px 0 10px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f7fbfb;padding:18px 22px}
+.fm-ficha h2{margin:0 0 4px;font-size:1.15rem}
+.fm-ficha > p{margin:0 0 14px;color:#3d5a63;font-size:14.5px}
+.fm-ficha dl{display:grid;grid-template-columns:190px 1fr;gap:10px 18px;margin:0}
+.fm-ficha dt{font:600 11.5px/1.5 Oswald,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#067a72}
+.fm-ficha dd{margin:0;font-size:14.5px;line-height:1.6;color:#1f3a44}
+.fm-ficha .nota{margin:14px 0 0;font-size:12.5px;color:#4a6572;border-top:1px solid #dbe7e7;padding-top:10px}
+.fm-trilhas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0 0}
+.fm-trilha{display:block;text-decoration:none;border:1px solid rgba(127,227,216,.22);border-radius:14px;background:rgba(4,34,42,.55);padding:16px 18px;transition:border-color .18s ease,transform .18s ease}
+.fm-trilha:hover{border-color:#0ABCB0;transform:translateY(-2px)}
+.fm-trilha b{display:block;font:700 17px/1.2 Oswald,sans-serif;letter-spacing:-.01em;color:#eafffb;margin:0 0 6px}
+.fm-trilha span{display:block;font-size:13.5px;line-height:1.5;color:#a9cfcb;margin:0 0 8px}
+.fm-trilha em{display:block;font-style:normal;font:600 11px/1.4 Oswald,sans-serif;letter-spacing:.10em;text-transform:uppercase;color:#7fe3d8}
+@media(max-width:760px){.fm-ficha dl{grid-template-columns:1fr}.fm-trilhas{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.fm-trilha{transition:none}.fm-trilha:hover{transform:none}}
+</style>
 <style data-fm-nav>
 /* componente unico de navegacao (nav_comum.py) — so a pele e o layout DESKTOP.
    O COMPORTAMENTO (ativo por rota, drawer mobile, busca, mega-menu, encolher no
@@ -157,6 +174,7 @@ table.matriz td:first-child{white-space:nowrap;color:var(--navy)}
 <div class="def">Antes de procurar recurso, vale saber <strong>o que já está pronto</strong>. Calcule quantas incentivadoras (empresas do Lucro Real) o seu projeto precisa e percorra as <strong>três dimensões</strong> que a empresa e o financiador público avaliam: <strong>documental e governança</strong>, <strong>projeto e parceria</strong> e <strong>execução e prestação</strong>. O resultado é a sua lista de prioridades — não um veredito.</div>
 </section>
 <article>
+<!-- fm-conversao:inicio --><section class="fm-ficha" data-fm-ficha><h2>Ficha do Diagnóstico de prontidão</h2><p>O que entra, o que não entra, quanto tempo leva e o que acontece com os seus documentos.</p><dl><dt>O que você envia</dt><dd>CNPJ, estatuto com a última alteração, ata de posse da diretoria, certidões (federal, FGTS e trabalhista), a meta de captação e o prazo que você tem em vista. Sem esses itens o diagnóstico sai incompleto — e dizemos o que faltou.</dd><dt>Quando o prazo começa</dt><dd>Nas 72 horas contadas a partir da confirmação de que os documentos chegaram completos. Não conta da primeira mensagem: mensagem sem documento é conversa, não diagnóstico. Envio em fim de semana ou feriado começa a contar no primeiro dia útil seguinte.</dd><dt>O que você recebe</dt><dd>Uma página com três blocos — o que a sua organização já pode captar, o que falta e qual é o próximo passo — mais a lista de prioridades entre os mecanismos compatíveis com o seu perfil.</dd><dt>Quem analisa</dt><dd>A ferramenta de 18 itens desta página é automática e serve para você mesmo se localizar. O diagnóstico é diferente: é lido por uma pessoa do Método Capta+ e assinado por ela.</dd><dt>O que NÃO está incluído</dt><dd>Parecer jurídico, garantia de elegibilidade ou de aprovação, elaboração do projeto, planilha orçamentária e cadastro em plataformas. Se for isso que você precisa, é outro escopo — e ele é dito antes de começar.</dd><dt>Seus documentos</dt><dd>São usados apenas para este diagnóstico, não são compartilhados com terceiros e não viram banco de dados. Você pode pedir a exclusão a qualquer momento — o pedido é atendido em até 5 dias úteis.</dd><dt>Custo</dt><dd>Gratuito e sem compromisso. Não há cobrança depois, nem venda automática de serviço: se houver proposta, ela vem separada e com escopo próprio.</dd><dt>Canal e horário</dt><dd>WhatsApp, de segunda a sexta, das 9h às 18h. Fora desse horário a mensagem é registrada e respondida no próximo dia útil.</dd></dl><p class="nota">Este diagnóstico é orientação preliminar. A elegibilidade de cada mecanismo depende do edital e da norma vigente, e a decisão do aporte é do financiador.</p></section><!-- fm-conversao:fim -->
 <h2>1 · Quantas incentivadoras o projeto precisa?</h2>
 <div class="tool">
   <label for="meta">Meta de captação do projeto (R$)</label>

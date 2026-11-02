@@ -1,0 +1,69 @@
+{
+ "atualizado_em": "2026-11-03",
+ "diagnostico": {
+  "titulo": "Ficha do Diagnóstico de prontidão",
+  "resumo": "O que entra, o que não entra, quanto tempo leva e o que acontece com os seus documentos.",
+  "campos": [
+   {
+    "rotulo": "O que você envia",
+    "texto": "CNPJ, estatuto com a última alteração, ata de posse da diretoria, certidões (federal, FGTS e trabalhista), a meta de captação e o prazo que você tem em vista. Sem esses itens o diagnóstico sai incompleto — e dizemos o que faltou."
+   },
+   {
+    "rotulo": "Quando o prazo começa",
+    "texto": "Nas 72 horas contadas a partir da confirmação de que os documentos chegaram completos. Não conta da primeira mensagem: mensagem sem documento é conversa, não diagnóstico. Envio em fim de semana ou feriado começa a contar no primeiro dia útil seguinte."
+   },
+   {
+    "rotulo": "O que você recebe",
+    "texto": "Uma página com três blocos — o que a sua organização já pode captar, o que falta e qual é o próximo passo — mais a lista de prioridades entre os mecanismos compatíveis com o seu perfil."
+   },
+   {
+    "rotulo": "Quem analisa",
+    "texto": "A ferramenta de 18 itens desta página é automática e serve para você mesmo se localizar. O diagnóstico é diferente: é lido por uma pessoa do Método Capta+ e assinado por ela."
+   },
+   {
+    "rotulo": "O que NÃO está incluído",
+    "texto": "Parecer jurídico, garantia de elegibilidade ou de aprovação, elaboração do projeto, planilha orçamentária e cadastro em plataformas. Se for isso que você precisa, é outro escopo — e ele é dito antes de começar."
+   },
+   {
+    "rotulo": "Seus documentos",
+    "texto": "São usados apenas para este diagnóstico, não são compartilhados com terceiros e não viram banco de dados. Você pode pedir a exclusão a qualquer momento — o pedido é atendido em até 5 dias úteis."
+   },
+   {
+    "rotulo": "Custo",
+    "texto": "Gratuito e sem compromisso. Não há cobrança depois, nem venda automática de serviço: se houver proposta, ela vem separada e com escopo próprio."
+   },
+   {
+    "rotulo": "Canal e horário",
+    "texto": "WhatsApp, de segunda a sexta, das 9h às 18h. Fora desse horário a mensagem é registrada e respondida no próximo dia útil."
+   }
+  ],
+  "nota": "Este diagnóstico é orientação preliminar. A elegibilidade de cada mecanismo depende do edital e da norma vigente, e a decisão do aporte é do financiador."
+ },
+ "trilhas": {
+  "titulo": "Comece por onde você está",
+  "resumo": "Três pontos de partida. Escolha o que descreve a sua situação hoje — cada um leva a um percurso com etapas, ferramentas e o próximo passo.",
+  "itens": [
+   {
+    "id": "j1",
+    "titulo": "Primeira captação",
+    "situacao": "Nunca captei, ou tentei e não passou da porta.",
+    "entrega": "do zero ao projeto pronto para o edital",
+    "href": "/percursos/#j1"
+   },
+   {
+    "id": "j2",
+    "titulo": "Projeto aprovado, sem patrocinador",
+    "situacao": "Tenho o projeto aprovado e o dinheiro não entrou.",
+    "entrega": "da aprovação à carteira de incentivadores",
+    "href": "/percursos/#j2"
+   },
+   {
+    "id": "j3",
+    "titulo": "Prestação sem glosa",
+    "situacao": "Já executo e tenho medo de perder na prestação.",
+    "entrega": "da execução ao relatório sem devolução",
+    "href": "/percursos/#j3"
+   }
+  ]
+ }
+}
