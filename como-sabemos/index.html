@@ -137,7 +137,6 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 @media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
 </style>
 
-
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <!-- fm-hier-css -->
 <style>
@@ -193,9 +192,9 @@ já pode captar, o que trava a próxima submissão e onde vale gastar energia.</
 
 
 
-<script type="module" src="../assets/marca/movimento.min.js?v=e690f5b9"></script>
+
 <!-- fm-medicao -->
 <script>window.__FM_MEDICAO={"ga4":"G-ZNPVB11E0X","consentimento":"banner","plausible":"","umami":"","endpoint":""};</script>
-<script defer src="/assets/marca/medicao.min.js?v=e8acbbe8"></script>
+<script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=ff81f31f",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
 <!-- /fm-medicao -->
 </body></html>
