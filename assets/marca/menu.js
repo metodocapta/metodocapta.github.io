@@ -294,6 +294,7 @@
             if (e.key === "ArrowUp") { e.preventDefault(); (itens[i - 1] || itens[itens.length - 1]).focus(); }
             if (e.key === "Enter") {
               salvarBusca(campo.value);
+              if (window.fmEvento) window.fmEvento("busca", { termo: campo.value, resultados: itens.length });
               var primeiro = itens[0];
               if (primeiro) { e.preventDefault(); location.href = primeiro.getAttribute("href"); }
             }
@@ -379,6 +380,13 @@
         var t = normaliza(bruto);
 
         if (!t) { vazio(box); return; }
+        var achados = indice.filter(function (p) {
+          return normaliza(p.t + " " + p.d).indexOf(t) >= 0;
+        }).slice(0, 8);
+        if (!achados.length) {
+          box.innerHTML = '<p class="nav-busca-vazio">Nada encontrado. Tente outra palavra.</p>';
+          return;
+        }
 
         var todosUrl = "/busca/?q=" + encodeURIComponent(bruto);
         box.innerHTML = achados.map(function (p) {
@@ -388,7 +396,10 @@
           '<a class="nav-busca-todos" href="' + todosUrl + '">Ver todos os resultados →</a>';
 
         Array.prototype.slice.call(box.querySelectorAll(".nav-busca-item")).forEach(function (a) {
-          a.addEventListener("click", function () { salvarBusca(bruto); });
+          a.addEventListener("click", function () {
+            salvarBusca(bruto);
+            if (window.fmEvento) window.fmEvento("busca", { termo: bruto, resultados: achados.length });
+          });
         });
       }
 
