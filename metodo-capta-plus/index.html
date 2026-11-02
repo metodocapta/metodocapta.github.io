@@ -111,8 +111,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
    Regra de ouro: nao sobrescrever nada em <=900px, onde vive o drawer. */
 .site-hd[data-fm-nav]{background:linear-gradient(135deg,#062531,#04222a)}
 .site-hd[data-fm-nav] .brand img{height:44px;width:auto;max-width:270px;display:block}
-.site-hd[data-fm-nav] .hd-cta{background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;border-radius:999px;padding:13px 26px;font-size:13.5px;box-shadow:0 12px 30px rgba(10,188,176,.45);transform:translateY(-1px)}
-.site-hd[data-fm-nav] .hd-cta:hover{filter:brightness(1.07);box-shadow:0 12px 30px rgba(10,188,176,.5)}
+.site-hd[data-fm-nav] .hd-cta{background:linear-gradient(135deg,#e08a5c 0%,#d97b4d 100%);color:#04222a;border-radius:999px;padding:13px 26px;font-size:13.5px;font-weight:700;box-shadow:0 14px 34px -10px rgba(217,123,77,.6),inset 0 1px 0 rgba(255,255,255,.28);transform:translateY(-1px)}
+.site-hd[data-fm-nav] .hd-cta:hover{filter:brightness(1.06);box-shadow:0 16px 38px -8px rgba(217,123,77,.7)}
 .site-hd[data-fm-nav] nav a{font:600 12px/1 Oswald,'Segoe UI',sans-serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
 .site-hd[data-fm-nav] nav a.is-active,
 .site-hd[data-fm-nav] nav a[aria-current="page"]{color:#fff;border-bottom:2px solid #0ABCB0;padding-bottom:5px}
@@ -127,6 +127,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .site-hd[data-fm-nav] .nav-mega .mg-sigla{color:#7fe3d8;background:#062531}
 .site-hd[data-fm-nav] .nav-mega .mg-nome{color:#0d1f35}
 .site-hd[data-fm-nav] .nav-mega .mg-n{color:#4a6572}
+/* painel de busca: fundo branco exige texto escuro (o titulo vinha claro) */
+.site-hd[data-fm-nav] .nav-busca-tit{color:#3f5f66 !important;font-weight:700;letter-spacing:.10em}
+.site-hd[data-fm-nav] .nav-busca-hist{color:#0d1f35 !important;background:#f7fbfb;border-color:#dbe7e7}
+.site-hd[data-fm-nav] .nav-busca-hist:hover{background:#eef7f6;border-color:#0ABCB0}
 @media (min-width:901px){
   .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
@@ -487,7 +491,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
 <a class="mc-zap" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20o%20M%C3%A9todo%20Capta%2B" target="_blank" rel="noopener" aria-label="Fale no WhatsApp"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span class="mc-zap__txt">Fale no WhatsApp</span></a>
 <script type="module" src="../assets/marca/movimento.min.js?v=e690f5b9"></script>
-<script defer src="../assets/marca/menu.min.js?v=ed7cdd65"></script>
+<script defer src="../assets/marca/menu.min.js?v=c9f6a948"></script>
 <style id="fm-metodo-glow">
 .fm-method-page .fm-section .fm-kicker::before{content:none !important}
 @keyframes fmDrift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.14)}}

@@ -1,0 +1,12 @@
+{
+ "atualizado_em": "2026-11-03",
+ "fonte": "curado",
+ "nota": "Ranking exibido como primeira dica na busca do menu. Enquanto nao houver volume de eventos de busca (medicao.js), a lista e' curada a mao. Para atualizar com dado real: contar os eventos de busca por termo e reescrever este arquivo.",
+ "termos": [
+  { "termo": "Lei de Incentivo à Reciclagem", "rotulo": "LIR / reciclagem", "href": "/radar/lir/" },
+  { "termo": "Rouanet", "rotulo": "Rouanet (PRONAC)", "href": "/radar/rouanet/" },
+  { "termo": "plano de trabalho", "rotulo": "plano de trabalho", "href": "/guias/como-montar-um-plano-de-trabalho/" },
+  { "termo": "prestação de contas", "rotulo": "prestação de contas", "href": "/guias/como-prestar-contas-de-parceria/" },
+  { "termo": "diagnóstico de prontidão", "rotulo": "diagnóstico de prontidão", "href": "/diagnostico-de-prontidao/" }
+ ]
+}

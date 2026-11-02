@@ -92,8 +92,8 @@ transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;}
    Regra de ouro: nao sobrescrever nada em <=900px, onde vive o drawer. */
 .site-hd[data-fm-nav]{background:linear-gradient(135deg,#062531,#04222a)}
 .site-hd[data-fm-nav] .brand img{height:44px;width:auto;max-width:270px;display:block}
-.site-hd[data-fm-nav] .hd-cta{background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;border-radius:999px;padding:13px 26px;font-size:13.5px;box-shadow:0 12px 30px rgba(10,188,176,.45);transform:translateY(-1px)}
-.site-hd[data-fm-nav] .hd-cta:hover{filter:brightness(1.07);box-shadow:0 12px 30px rgba(10,188,176,.5)}
+.site-hd[data-fm-nav] .hd-cta{background:linear-gradient(135deg,#e08a5c 0%,#d97b4d 100%);color:#04222a;border-radius:999px;padding:13px 26px;font-size:13.5px;font-weight:700;box-shadow:0 14px 34px -10px rgba(217,123,77,.6),inset 0 1px 0 rgba(255,255,255,.28);transform:translateY(-1px)}
+.site-hd[data-fm-nav] .hd-cta:hover{filter:brightness(1.06);box-shadow:0 16px 38px -8px rgba(217,123,77,.7)}
 .site-hd[data-fm-nav] nav a{font:600 12px/1 Oswald,'Segoe UI',sans-serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
 .site-hd[data-fm-nav] nav a.is-active,
 .site-hd[data-fm-nav] nav a[aria-current="page"]{color:#fff;border-bottom:2px solid #0ABCB0;padding-bottom:5px}
@@ -108,6 +108,10 @@ transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;}
 .site-hd[data-fm-nav] .nav-mega .mg-sigla{color:#7fe3d8;background:#062531}
 .site-hd[data-fm-nav] .nav-mega .mg-nome{color:#0d1f35}
 .site-hd[data-fm-nav] .nav-mega .mg-n{color:#4a6572}
+/* painel de busca: fundo branco exige texto escuro (o titulo vinha claro) */
+.site-hd[data-fm-nav] .nav-busca-tit{color:#3f5f66 !important;font-weight:700;letter-spacing:.10em}
+.site-hd[data-fm-nav] .nav-busca-hist{color:#0d1f35 !important;background:#f7fbfb;border-color:#dbe7e7}
+.site-hd[data-fm-nav] .nav-busca-hist:hover{background:#eef7f6;border-color:#0ABCB0}
 @media (min-width:901px){
   .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}

@@ -265,6 +265,7 @@
       if (cta && cta.parentNode === wrap) wrap.insertBefore(lupa, burger); else wrap.appendChild(lupa);
 
       var painelBusca = null, indice = null, aberta = false;
+  var populares = null;
 
       function fecharBusca() {
         if (!painelBusca) return;
@@ -283,6 +284,7 @@
             'aria-label="Buscar no site" autocomplete="off">' +
             '<div class="nav-busca-res" role="listbox" aria-label="Resultados"></div></div>';
           hd.appendChild(painelBusca);
+      if (populares === null) { populares = []; fetch("/assets/busca_populares.json", { cache: "no-store" }) .then(function (r) { return r.json(); }) .then(function (d) { populares = (d && d.termos) || []; var q = painelBusca.querySelector("#nav-q"); if (q && !q.value) filtrar(""); }) .catch(function () {}); }
           var campo = painelBusca.querySelector("#nav-q");
           campo.addEventListener("input", function () { filtrar(campo.value); });
           campo.addEventListener("keydown", function (e) {
@@ -338,37 +340,45 @@
         return t.replace(re, "<mark>$1</mark>");
       }
 
-      function filtrar(termo) {
+      function vazio(box) {
+    var h = hist();
+    var html = "";
+    if (populares && populares.length) {
+      html += '<p class="nav-busca-tit">Mais buscados no site</p>' +
+        populares.map(function (p) {
+          return '<button type="button" class="nav-busca-hist" data-pop="' + esc(p.termo) + '">' +
+                 esc(p.rotulo || p.termo) + "</button>";
+        }).join("");
+    }
+    if (h.length) {
+      html += '<p class="nav-busca-tit">Buscas recentes</p>' +
+        h.map(function (x) {
+          return '<button type="button" class="nav-busca-hist" data-hist="' + esc(x) + '">' + esc(x) + "</button>";
+        }).join("");
+    }
+    if (!html) {
+      box.innerHTML = '<p class="nav-busca-vazio">Digite para buscar em ' + indice.length + " p\u00e1ginas.</p>";
+      return;
+    }
+    box.innerHTML = html;
+    Array.prototype.slice.call(box.querySelectorAll(".nav-busca-hist")).forEach(function (b) {
+      b.addEventListener("click", function () {
+        var campo2 = painelBusca.querySelector("#nav-q");
+        var termo = b.getAttribute("data-pop") || b.getAttribute("data-hist") || b.textContent;
+        campo2.value = termo;
+        campo2.focus();
+        filtrar(termo);
+      });
+    });
+  }
+
+  function filtrar(termo) {
         var box = painelBusca.querySelector(".nav-busca-res");
         if (!indice) { box.innerHTML = '<p class="nav-busca-vazio">Carregando…</p>'; return; }
         var bruto = (termo || "").trim();
         var t = normaliza(bruto);
 
-        if (!t) {
-          var h = hist();
-          if (!h.length) {
-            box.innerHTML = '<p class="nav-busca-vazio">Digite para buscar em ' + indice.length + ' páginas.</p>';
-            return;
-          }
-          box.innerHTML = '<p class="nav-busca-tit">Buscas recentes</p>' + h.map(function (x) {
-            return '<button type="button" class="nav-busca-hist">' + esc(x) + "</button>";
-          }).join("");
-          Array.prototype.slice.call(box.querySelectorAll(".nav-busca-hist")).forEach(function (b) {
-            b.addEventListener("click", function () {
-              var campo2 = painelBusca.querySelector("#nav-q");
-              campo2.value = b.textContent;
-              campo2.focus();
-              filtrar(b.textContent);
-            });
-          });
-          return;
-        }
-
-        var achados = indice.filter(function (p) {
-          return normaliza(p.t + " " + p.d).indexOf(t) >= 0;
-        }).slice(0, 8);
-
-        if (!achados.length) { box.innerHTML = '<p class="nav-busca-vazio">Nada encontrado.</p>'; return; }
+        if (!t) { vazio(box); return; }
 
         var todosUrl = "/busca/?q=" + encodeURIComponent(bruto);
         box.innerHTML = achados.map(function (p) {
