@@ -103,6 +103,14 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 </style>
 <link rel="preload" href="assets/marca/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style data-fm-a11y>
+.fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
+.fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
+.fm-site a:focus-visible,.site-hd a:focus-visible,button:focus-visible,
+summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid #0ABCB0;outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
+</style>
 <!-- fm-hier-css -->
 <style>
 .fm-hier{margin:34px 0 0;padding:20px 22px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f4f8f8}
@@ -120,7 +128,7 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
-<header class="site-hd" data-fm-nav><div class="wrap"><a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Metodo Capta+" width="1200" height="320"></a><nav id="fm-nav-principal" aria-label="Navegacao principal"><a href="/radar/" title="Radar, oportunidades e matriz de mecanismos">Descobrir</a><a href="/diagnostico-de-prontidao/" title="Diagnostico, checklists e calculadora">Verificar</a><a href="/guias/" title="Guias, plano de trabalho e orcamento">Estruturar</a><a href="/checklist-prestacao/" title="Execucao, prestacao de contas e impacto">Executar</a><a href="/metodo-capta-plus/" title="Metodo, escopo, evidencias e objecoes">Contratar</a></nav><a class="hd-cta" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20">Diagnostico 72h</a></div></header>
+<header class="site-hd" data-fm-nav><div class="wrap"><a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Metodo Capta+" width="1200" height="320"></a><nav id="fm-nav-principal" aria-label="Navegacao principal"><a href="/radar/" title="Radar, oportunidades e matriz de mecanismos">Descobrir</a><a href="/diagnostico-de-prontidao/" title="Diagnostico, checklists e calculadora" data-cta-primario="1">Verificar</a><a href="/guias/" title="Guias, plano de trabalho e orcamento">Estruturar</a><a href="/checklist-prestacao/" title="Execucao, prestacao de contas e impacto">Executar</a><a href="/metodo-capta-plus/" title="Metodo, escopo, evidencias e objecoes">Contratar</a></nav><a class="hd-cta" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20">Diagnostico 72h</a></div></header>
 <div class="crumb"><a href="../..">Início</a> › <a href="..">Estudos</a> › ESG e Captação Incentivada: Por Que Empresas Investem e Como uma OSC se Torna Pa</div>
 <main id="conteudo" class="wrap"><article>
 <div style="border: 2px solid #0ABCB0; border-left: 8px solid #0ABCB0; padding: 20px 24px; margin-bottom: 30px; background-color: #f2fbfa;">
@@ -369,7 +377,7 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 
             <p>As primeiras 72 horas não produzem abordagem; produzem o mapa honesto de onde a entidade está. Cada ação tem dono, prazo e saída verificável — e responde diretamente à barreira da governança descrita na seção 8.</p>
 
-            <table style="border-collapse: collapse; width: 100%; margin-bottom: 20px; font-size: 10pt;">
+            <div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table style="border-collapse: collapse; width: 100%; margin-bottom: 20px; font-size: 10pt;">
                 <tr>
                     <th style="border: 1px solid #062531; padding: 8px; text-align: left; background-color: #062531; color: #ffffff;">Ação</th>
                     <th style="border: 1px solid #062531; padding: 8px; text-align: left; background-color: #062531; color: #ffffff;">Dono</th>
@@ -400,7 +408,7 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
                     <td style="border: 1px solid #062531; padding: 8px;">Equipe técnica</td>
                     <td style="border: 1px solid #062531; padding: 8px;">Marco zero documentado (alcance, resultado, impacto)</td>
                 </tr>
-            </table>
+            </table></div>
 
             <p>Ao fim das 72 horas, a entidade sabe exatamente quais lacunas de governança a excluem hoje, em qual meta ESG a sua causa se enquadra e qual é o seu ponto de partida de medição. Essa é a diferença entre chegar à empresa com proposta verificável e chegar com um pedido que não se sustenta.</p>
 

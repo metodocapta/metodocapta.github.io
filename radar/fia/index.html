@@ -185,6 +185,14 @@ html,body{overflow-x:hidden}}
 }
 </style>
 
+<style data-fm-a11y>
+.fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
+.fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
+.fm-site a:focus-visible,.site-hd a:focus-visible,button:focus-visible,
+summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid #0ABCB0;outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
+</style>
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <!-- fm-hier-css -->
 <style>
@@ -264,7 +272,7 @@ html,body{overflow-x:hidden}}
 <footer class="site-ft" data-v2="1"><div class="wrap">
 <div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div>
 <div class="ft-col"><b>Navegar</b><a href="../..">Início</a><a href="../../recusas/">Recusas</a><a href="../">Radar</a><a href="../../biblioteca/">Biblioteca</a><a href="../../guias/">Guias</a><a href="../../calculadora/">Calculadora</a></div>
-<div class="ft-col"><b>Ferramentas</b><a href="../../diagnostico-de-prontidao/">Diagnóstico 72h</a><a href="../../matriz-de-mecanismos/">Matriz de mecanismos</a><a href="../oportunidades/">Oportunidades abertas</a><a href="../../carteira-de-incentivadores/">Carteira</a></div>
+<div class="ft-col"><b>Ferramentas</b><a href="../../diagnostico-de-prontidao/">Diagnóstico 72h</a><a href="../../matriz-de-mecanismos/">Matriz de mecanismos</a><a href="../oportunidades/" data-cta-primario="1">Oportunidades abertas</a><a href="../../carteira-de-incentivadores/">Carteira</a></div>
 <div class="ft-col"><b>Institucional</b><a href="../../metodo-capta-plus/">Método</a><a href="../../para/">Para quem</a><a href="../../objecoes/">Objeções</a><a href="../../perguntas-frequentes/">FAQ</a><a href="../../mapa-do-site/">Mapa do site</a></div>
 <div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="../../privacidade/">Privacidade</a></div>
 </div></footer>

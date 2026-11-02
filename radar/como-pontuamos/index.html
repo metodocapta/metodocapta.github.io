@@ -157,6 +157,14 @@ figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
 }
 </style>
 
+<style data-fm-a11y>
+.fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
+.fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
+.fm-site a:focus-visible,.site-hd a:focus-visible,button:focus-visible,
+summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid #0ABCB0;outline-offset:2px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
+</style>
 </head><body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
 <header class="site-hd" data-fm-nav><div class="wrap"><a class="brand" href="/"><img src="/assets/marca/wordmark-claro.webp" alt="Metodo Capta+" width="1200" height="320"></a><nav id="fm-nav-principal" aria-label="Navegacao principal"><a href="/radar/" aria-current="page" title="Radar, oportunidades e matriz de mecanismos">Descobrir</a><a href="/diagnostico-de-prontidao/" title="Diagnostico, checklists e calculadora">Verificar</a><a href="/guias/" title="Guias, plano de trabalho e orcamento">Estruturar</a><a href="/checklist-prestacao/" title="Execucao, prestacao de contas e impacto">Executar</a><a href="/metodo-capta-plus/" title="Metodo, escopo, evidencias e objecoes">Contratar</a></nav><a class="hd-cta" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20">Diagnostico 72h</a></div></header>
@@ -206,24 +214,24 @@ a elegibilidade. Capturas com o seletor de organização oculto.</figcaption>
 
 <h2>A fila: a nota que ordena o trabalho</h2>
 <p>Antes do score, cada edital recebe uma nota de fila, com três pesos declarados:</p>
-<table><thead><tr><th>Componente</th><th class="n">Peso</th><th>Como é aplicado</th></tr></thead><tbody>
+<div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table><thead><tr><th>Componente</th><th class="n">Peso</th><th>Como é aplicado</th></tr></thead><tbody>
 <tr><td>Elegibilidade</td><td class="n">60</td><td>Veredito do mecanismo para a natureza jurídica da entidade (regra legal).</td></tr>
 <tr><td>Território</td><td class="n">20</td><td>Mesma UF = 1,0 · federal = 0,9 · outra UF = 0,15. Edital estadual ou municipal de outra UF nem entra.</td></tr>
 <tr><td>Tema</td><td class="n">20</td><td>O texto do edital cita tema que a entidade tipifica. Sem tema, o edital não entra na fila.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p class="muted">Nota abaixo de 45 não entra na fila. A nota é fila de trabalho, não parecer
 jurídico nem promessa de aprovação.</p>
 
 <h2>O CAPTA_SCORE: oito dimensões</h2>
 <p>Sobre cada par <em>entidade × edital</em> da fila, calcula-se o índice de prioridade:</p>
-<table><thead><tr><th>Dimensão</th><th class="n">Peso</th><th>O que ela mede</th></tr></thead><tbody><tr><td><strong>Elegibilidade</strong></td><td class="n">25%</td><td>A natureza jurídica da entidade pode ser proponente neste mecanismo (regra legal do mecanismo).</td></tr><tr><td><strong>Compatibilidade estatutária</strong></td><td class="n">20%</td><td>O tema e o público do edital estão dentro da finalidade declarada no estatuto.</td></tr><tr><td><strong>Capacidade técnica</strong></td><td class="n">15%</td><td>Evidência documental de projeto na pasta: proposta, aprovação (certidão/DOU) e execução (termo/extrato).</td></tr><tr><td><strong>Capacidade documental</strong></td><td class="n">10%</td><td>Certidões mínimas vigentes na data de hoje.</td></tr><tr><td><strong>Potencial financeiro</strong></td><td class="n">10%</td><td>Teto do mecanismo comparado ao valor do projeto.</td></tr><tr><td><strong>Probabilidade de execução</strong></td><td class="n">10%</td><td>Do que foi aprovado, quanto foi efetivamente captado.</td></tr><tr><td><strong>Prazo</strong></td><td class="n">5%</td><td>Dias até o prazo do edital — quanto mais perto, menor a nota.</td></tr><tr><td><strong>Potencial estratégico</strong></td><td class="n">5%</td><td>Se o mecanismo é porta de entrada ou fonte secundária para aquele perfil.</td></tr></tbody></table>
+<div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table><thead><tr><th>Dimensão</th><th class="n">Peso</th><th>O que ela mede</th></tr></thead><tbody><tr><td><strong>Elegibilidade</strong></td><td class="n">25%</td><td>A natureza jurídica da entidade pode ser proponente neste mecanismo (regra legal do mecanismo).</td></tr><tr><td><strong>Compatibilidade estatutária</strong></td><td class="n">20%</td><td>O tema e o público do edital estão dentro da finalidade declarada no estatuto.</td></tr><tr><td><strong>Capacidade técnica</strong></td><td class="n">15%</td><td>Evidência documental de projeto na pasta: proposta, aprovação (certidão/DOU) e execução (termo/extrato).</td></tr><tr><td><strong>Capacidade documental</strong></td><td class="n">10%</td><td>Certidões mínimas vigentes na data de hoje.</td></tr><tr><td><strong>Potencial financeiro</strong></td><td class="n">10%</td><td>Teto do mecanismo comparado ao valor do projeto.</td></tr><tr><td><strong>Probabilidade de execução</strong></td><td class="n">10%</td><td>Do que foi aprovado, quanto foi efetivamente captado.</td></tr><tr><td><strong>Prazo</strong></td><td class="n">5%</td><td>Dias até o prazo do edital — quanto mais perto, menor a nota.</td></tr><tr><td><strong>Potencial estratégico</strong></td><td class="n">5%</td><td>Se o mecanismo é porta de entrada ou fonte secundária para aquele perfil.</td></tr></tbody></table></div>
 <p>Total = soma de <code>peso × nota</code> dividida pela soma dos pesos <strong>avaliados</strong>.
 Cada dimensão vale de 0 a 100.</p>
 
 
 
 <h2>As faixas</h2>
-<table><thead><tr><th class="n">Score</th><th>Faixa</th></tr></thead><tbody><tr><td class="n">85–100</td><td><strong>ATAQUE IMEDIATO</strong></td></tr><tr><td class="n">70–84</td><td><strong>ALTA PRIORIDADE</strong></td></tr><tr><td class="n">55–69</td><td><strong>CONDICIONADA</strong></td></tr><tr><td class="n">40–54</td><td><strong>BAIXA</strong></td></tr><tr><td class="n">0–39</td><td><strong>NAO PRIORITARIA</strong></td></tr></tbody></table>
+<div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table><thead><tr><th class="n">Score</th><th>Faixa</th></tr></thead><tbody><tr><td class="n">85–100</td><td><strong>ATAQUE IMEDIATO</strong></td></tr><tr><td class="n">70–84</td><td><strong>ALTA PRIORIDADE</strong></td></tr><tr><td class="n">55–69</td><td><strong>CONDICIONADA</strong></td></tr><tr><td class="n">40–54</td><td><strong>BAIXA</strong></td></tr><tr><td class="n">0–39</td><td><strong>NAO PRIORITARIA</strong></td></tr></tbody></table></div>
 <div class="box aviso">
 <p><strong>Trava de habilitação.</strong> Se a habilitação da entidade não está completa
 (certidões vigentes), a faixa é rebaixada para <strong>condicionada (habilitação)</strong> —
@@ -264,13 +272,13 @@ não entra na fila: vira <strong>janela perdida</strong> — não é falta de op
 decisão maior que o prazo.</p>
 
 <h2>Habilitação: cinco certidões, uma régua</h2>
-<table><thead><tr><th>Certidão</th><th>Validade típica</th></tr></thead><tbody>
+<div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table><thead><tr><th>Certidão</th><th>Validade típica</th></tr></thead><tbody>
 <tr><td>CND Federal (RFB/PGFN)</td><td>180 dias</td></tr>
 <tr><td>CRF FGTS</td><td>30 dias</td></tr>
 <tr><td>CNDT (trabalhista)</td><td>180 dias</td></tr>
 <tr><td>CND Estadual</td><td>60 dias</td></tr>
 <tr><td>CND Municipal</td><td>60 dias</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p>Cada certidão vale <strong>1</strong> se vigente, <strong>0,5</strong> se vence em até 30 dias e
 <strong>0</strong> se vencida; a soma dividida por cinco é o índice de habilitação.</p>
 
@@ -296,7 +304,7 @@ há ciclo fechado, a dimensão de execução fica em premissa — não em zero.<
 <dt class="fm-hier-dt">Resolve</dt><dd class="fm-hier-dd">Como o Método Capta+ pontua uma oportunidade: as 8 dimensões do CAPTA_SCORE, os pesos, as faixas, a regra de cobertura e o que descarta um edital antes da</dd>
 <dt class="fm-hier-dt">Fica pronto</dt><dd class="fm-hier-dd">As exigências lidas: elegibilidade, prazos e critérios de seleção.</dd>
 </dl>
-<p class="fm-hier-nx"><strong>Próximo passo:</strong> <a href="/radar/oportunidades/">O que está aberto para captar agora</a> · <a href="/diagnostico-de-prontidao/">Diagnóstico de prontidão (72h)</a></p>
+<p class="fm-hier-nx"><strong>Próximo passo:</strong> <a href="/radar/oportunidades/" data-cta-primario="1">O que está aberto para captar agora</a> · <a href="/diagnostico-de-prontidao/">Diagnóstico de prontidão (72h)</a></p>
 </aside>
 <!-- fm-hier:fim --><div class="cta"><b>Quer ver isso aplicado à sua entidade?</b>
 <p>Diagnóstico de prontidão (72h), gratuito: elegibilidade, pendência documental e prioridade das
