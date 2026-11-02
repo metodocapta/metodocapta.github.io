@@ -126,7 +126,7 @@
           }]
         ].forEach(function (cfg) {
           var link = linkPorTipo[cfg[0]];
-          if (!link) return;
+          if (!link || !link.parentNode || !link.parentNode.contains(link)) return;
           var det = cria("details", "nav-sub");
           det.innerHTML = "<summary>" + cfg[1] + '</summary><div class="nav-sub-lista"></div>';
           link.parentNode.insertBefore(det, link.nextSibling);
@@ -438,7 +438,7 @@
       "<ol>" + hs.map(function (h) {
         return '<li><a href="#' + h.id + '">' + (h.textContent || "").trim() + "</a></li>";
       }).join("") + '</ol><div class="toc-bar"><i></i></div>';
-    art.insertBefore(nav, hs[0]);
+    art.insertBefore(nav, art.firstChild);
 
     var pct = nav.querySelector(".toc-pct");
     var bar = nav.querySelector(".toc-bar i");
