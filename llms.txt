@@ -193,3 +193,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 ## Como sabemos
 
 - [Como sabemos](https://metodocapta.github.io/como-sabemos/): as ferramentas do metodo reunidas pelo que elas provam
+
+## Como contamos
+
+- [Como contamos o que o Radar mostra](https://metodocapta.github.io/radar/como-contamos/): definição de oportunidade acompanhada, aberta, listada e priorizada; fonte, data de coleta e regra de deduplicação de cada número publicado
+

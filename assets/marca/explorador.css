@@ -448,3 +448,9 @@
 .fm-sim-campo output,
 .fm-sim-resultado b,
 .fm-prontidao-valor{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* selo de fonte dos contadores (Onda 1) */
+.fm-cockpit .fm-fonte{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#8fb3ae}
+.fm-cockpit .fm-fonte a{color:#7fe3d8;text-decoration:underline;text-underline-offset:2px}
+.fm-cockpit .fm-fonte time{color:#cfe8e6}
+
