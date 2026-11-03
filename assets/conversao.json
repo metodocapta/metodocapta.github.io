@@ -10,7 +10,7 @@
    },
    {
     "rotulo": "Quando o prazo começa",
-    "texto": "Nas 72 horas contadas a partir da confirmação de que os documentos chegaram completos. Não conta da primeira mensagem: mensagem sem documento é conversa, não diagnóstico. Envio em fim de semana ou feriado começa a contar no primeiro dia útil seguinte."
+    "texto": "Nas 72 horas corridas contadas da confirmação de que os documentos chegaram completos — não da primeira mensagem: mensagem sem documento é conversa, não diagnóstico. Sábado, domingo e feriado contam normalmente. Se o prazo vencer fora do horário de atendimento (segunda a sexta, 9h às 18h) ou em dia não útil, a entrega acontece no primeiro dia útil seguinte."
    },
    {
     "rotulo": "O que você recebe",
