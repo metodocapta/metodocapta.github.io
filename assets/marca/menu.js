@@ -438,11 +438,25 @@
   /* ============================================================ conteudo longo
      Indice com progresso de leitura + CTA lateral. So entra em pagina com
      article e pelo menos 3 h2 (guias, estudos, conceitos longos). */
+  /* link direto para secao dentro de <details> recolhido: abre o bloco antes
+     de rolar, senao o destino fica escondido. */
+  (function () {
+    function abrirAlvo() {
+      var id = (location.hash || "").slice(1);
+      if (!id) return;
+      var el = document.getElementById(id);
+      var d = el && el.closest("details");
+      if (d && !d.open) d.open = true;
+    }
+    window.addEventListener("hashchange", abrirAlvo);
+    abrirAlvo();
+  })();
+
   (function () {
     var art = document.querySelector("article");
     if (!art) return;
     var hs = Array.prototype.slice.call(art.querySelectorAll("h2")).filter(function (h) {
-      return (h.textContent || "").trim().length > 2;
+      return (h.textContent || "").trim().length > 2 && !h.closest("details");
     });
     if (hs.length < 3) return;
 
