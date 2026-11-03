@@ -189,6 +189,24 @@ a{color:var(--graf)}
 .site-hd[data-fm-nav] .nav-busca-tit{color:#3f5f66 !important;font-weight:700;letter-spacing:.10em}
 .site-hd[data-fm-nav] .nav-busca-hist{color:#0d1f35 !important;background:#f7fbfb;border-color:#dbe7e7}
 .site-hd[data-fm-nav] .nav-busca-hist:hover{background:#eef7f6;border-color:#0ABCB0}
+/* RESULTADOS DA BUSCA: o global `.fm-site a{color:inherit}` (0,1,1) vencia o
+   `.nav-busca-item` (0,1,0) e o titulo do resultado herdava o texto claro do
+   cabecalho — branco sobre branco. Aqui a especificidade e o !important fecham. */
+.site-hd[data-fm-nav] .nav-busca,
+.site-hd[data-fm-nav] .nav-busca p,
+.site-hd[data-fm-nav] .nav-busca span,
+.site-hd[data-fm-nav] .nav-busca strong,
+.site-hd[data-fm-nav] .nav-busca em,
+.site-hd[data-fm-nav] .nav-busca small{color:#0d1f35 !important}
+.site-hd[data-fm-nav] .nav-busca a,
+.site-hd[data-fm-nav] .nav-busca button{color:#0d1f35 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-tit{color:#4a6572 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-tit::after{content:none !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-item span,
+.site-hd[data-fm-nav] .nav-busca .nav-busca-vazio{color:#4a6572 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-todos{color:#067a72 !important}
+.site-hd[data-fm-nav] .nav-busca input{color:#0d1f35 !important;background:#fff}
+.site-hd[data-fm-nav] .nav-busca input::placeholder{color:#788d96;opacity:1}
 @media (min-width:901px){
   .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
