@@ -114,9 +114,9 @@ def checar_home(raiz, home):
     # A ordem e' narrativa: dor -> diferenca -> mecanismo -> prova -> voce ->
     # objecao -> acao. Trocar duas secoes muda o argumento, nao so o layout.
     ORDEM_ESPERADA = [
-        "fm-parceiros", "fm-problema", "fm-comparativo", "fm-capta",
-        "fm-radar", "fm-destaques", "fm-evidencias", "fm-publico",
-        "fm-riscos", "fm-faq", "fm-decisao-mapa", "fm-decisao",
+        "fm-decisao-mapa", "fm-parceiros", "fm-problema", "fm-comparativo",
+        "fm-capta", "fm-radar", "fm-destaques", "fm-evidencias", "fm-publico",
+        "fm-riscos", "fm-faq", "fm-decisao",
     ]
     pos_sec = {i: home.find('id="%s"' % i) for i in ORDEM_ESPERADA}
     presentes = [i for i in ORDEM_ESPERADA if pos_sec[i] >= 0]
@@ -138,25 +138,37 @@ def checar_home(raiz, home):
              % (len(schema_q), len(visivel_q)))
 
     # CTA do cabecalho: rotulo curto (o hero diz a acao inteira)
-    m = re.search(r'<a class="fm-header-cta"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)', home)
+    # O componente unico (nav_comum.py) usa class="hd-cta"; a versao antiga da
+    # home usava "fm-header-cta". Aceita as duas — o que importa e' o rotulo.
+    m = re.search(r'<a class="(?:hd-cta|fm-header-cta)"[^>]*>([\s\S]{0,90}?)(?:<svg|</a>)',
+                  home)
     if not m:
-        erro("Home sem o CTA do cabecalho (fm-header-cta)")
-    elif "Diagn\u00f3stico 72h" not in m.group(1):
-        erro("Home: CTA do cabecalho fora do padrao curto ('Diagnostico 72h'): %r"
-             % m.group(1).strip()[:50])
-
-    # versionamento dos assets (?v=) — sem isso o navegador serve CSS velho
-    for css in ("marca-capta.css", "movimento.css"):
-        if not re.search(re.escape(css) + r"\?v=", home):
-            erro("Home: %s sem ?v= (cache-busting)" % css)
-    css_t = os.path.join(raiz, "assets", "marca", "framework-t.css")
-    if not os.path.isfile(css_t):
-        erro("assets/marca/framework-t.css ausente")
+        erro("Home sem o CTA do cabecalho (hd-cta)")
     else:
-        with open(css_t, "rb") as fh:
+        rotulo = re.sub(r"\s+", " ", m.group(1)).strip()
+        if not re.match(r"^Diagn[oó]stico 72h", rotulo, re.I):
+            erro("Home: CTA do cabecalho fora do padrao curto ('Diagnostico 72h'): %r"
+                 % rotulo[:50])
+
+    # versionamento dos assets (?v=) — sem isso o navegador serve CSS velho.
+    # O minificador (minificar_css.py) troca x.css por x.min.css?v=<md5 do MIN>,
+    # entao a conferencia e' pelo arquivo que a pagina realmente carrega.
+    for nome in ("marca-capta", "movimento", "framework-t"):
+        m_asset = re.search(
+            r'href="[^"]*%s(\.min)?\.css\?v=([0-9a-f]+)"' % re.escape(nome), home)
+        if not m_asset:
+            erro("Home: %s sem ?v= (cache-busting)" % nome)
+            continue
+        arquivo = os.path.join(raiz, "assets", "marca",
+                               nome + (m_asset.group(1) or "") + ".css")
+        if not os.path.isfile(arquivo):
+            erro("assets/marca/%s.css ausente" % nome)
+            continue
+        with open(arquivo, "rb") as fh:
             md5 = hashlib.md5(fh.read()).hexdigest()[:8]
-        if ("framework-t.css?v=%s" % md5) not in home:
-            erro("Home: framework-t.css sem ?v=%s (md5 do arquivo)" % md5)
+        if m_asset.group(2)[:8] != md5:
+            erro("Home: %s v=%s nao casa com o md5 do arquivo (%s)"
+                 % (os.path.basename(arquivo), m_asset.group(2)[:8], md5))
 
 
 # ---------------------------------------------------------------------------
