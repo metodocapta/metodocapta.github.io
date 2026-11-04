@@ -1,14 +1,30 @@
 {
   "atualizado_em": "2026-11-04",
-  "escopo": "Trajetória do responsável técnico (acumulado) + atuação do Método Capta+ desde 2023",
-  "rotulo_escopo": "Trajetória do responsável técnico",
+  "escopo": "Acumulado do Método Capta+ desde 2023",
+  "rotulo_escopo": "Acumulado desde 2023",
   "indicadores": [
-    { "id": "captado",      "valor": "R$ 2,5 M", "rotulo": "Captado na trajetória" },
-    { "id": "projetos",     "valor": "25",       "rotulo": "Projetos aprovados" },
-    { "id": "experiencia",  "valor": "15 anos",  "rotulo": "De trajetória" },
-    { "id": "conformidade", "valor": "Verificável", "rotulo": "Conformidade em conta vinculada" }
+    {
+      "id": "captado",
+      "valor": "R$ 2,5 M",
+      "rotulo": "Captado na trajetória"
+    },
+    {
+      "id": "projetos",
+      "valor": "25",
+      "rotulo": "Projetos aprovados"
+    },
+    {
+      "id": "experiencia",
+      "valor": "3 anos",
+      "rotulo": "De atuação"
+    },
+    {
+      "id": "conformidade",
+      "valor": "Verificável",
+      "rotulo": "Conformidade em conta vinculada"
+    }
   ],
-  "intro": "Acumulado da trajetória do responsável técnico em captação de recursos públicos e incentivados — projetos de inclusão digital, saúde e infância.",
-  "nota": "Os 15 anos são da <strong>trajetória do responsável técnico</strong>; o Método Capta+ atua <strong>desde 2023</strong>. O valor é <strong>acumulado</strong> (mais de 8 fontes de recursos), não de um contrato único. Consultoria de <strong>meio</strong>: o recurso captado pertence à organização e é comprovável em cada conta vinculada e prestação de contas. Conformidade é <strong>verificável por projeto</strong> — não um percentual agregado. <a href=\"/como-sabemos/\">Ver os casos com documento</a>.",
-  "nota_llms": "Indicadores (trajetória do responsável técnico, acumulado): R$ 2,5 M captados, 25 projetos aprovados e 15 anos de trajetória; o Método Capta+ atua desde 2023. Conformidade verificável em cada conta vinculada (sem percentual agregado). Casos com documento em /como-sabemos/."
+  "intro": "Acumulado do Método Capta+ desde 2023 em captação de recursos públicos e incentivados — projetos de inclusão digital, saúde e infância.",
+  "nota": "Os números são o <strong>acumulado do Método Capta+ desde 2023</strong> (3 anos), com mais de 8 fontes de recursos — não de um contrato único. Consultoria de <strong>meio</strong>: o recurso captado pertence à organização e é comprovável em cada conta vinculada e prestação de contas. Conformidade é <strong>verificável por projeto</strong> — não um percentual agregado. <a href=\"/como-sabemos/\">Ver os casos com documento</a>.",
+  "nota_llms": "Indicadores (acumulado do Método Capta+ desde 2023): R$ 2,5 M captados, 25 projetos aprovados e 3 anos de atuação; conformidade verificável em cada conta vinculada (sem percentual agregado). Casos com documento em /como-sabemos/."
 }
