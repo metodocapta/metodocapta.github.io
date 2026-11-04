@@ -7,7 +7,7 @@
    "url": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
    "orgao": "www.gov.br",
    "resumo": "Chamamento público É um procedimento feito pela administração pública para executar atividades ou projetos que tenham …",
-   "prazo": "",
+   "prazo": "2026-11-18",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -40,7 +40,10 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As propostas e a documentação deverão ser enviadas até 18 de novembro de 2026 pelo serviço de protocolo eletrônico do MGI. | https://www.gov.br/gestao/pt-br/ass",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Chamamento Público",
@@ -79,7 +82,7 @@
    "url": "https://www.serpro.gov.br/consultas-publicas",
    "orgao": "www.serpro.gov.br",
    "resumo": "30 de abr. de 2026 · 0290/2026 - Consulta Pública Eletrônica Pré qualificação de plataformas analíticas grafos. Sede 06/05/2026 …",
-   "prazo": "",
+   "prazo": "2025-05-12",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -105,14 +108,17 @@
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Os interessados poderão encaminhar propostas até o dia 12/05/2025 e obter os arquivos do Edital no sítio do SERPRO, pela URL: https://www.serpro.gov.br/consulta",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital de Fomento Multiartes | Secretaria da Cultura",
    "url": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
    "orgao": "www.cultura.pr.gov.br",
    "resumo": "Edital de Fomento Multiartes EDITAL DE FOMENTO MULTIARTES – CHAMAMENTO PÚBLICO N.º 004/2026 Edital acessível AVISO DE PUBLICAÇÃO NO DIÁRIO OFICIAL ANEXO I: DOS CRITÉRIOS PARA A ANÁLISE TÉCNICA E DE MÉRITO ANEXO II: DISTRIBUIÇÃO DE VAGAS POR",
-   "prazo": "",
+   "prazo": "2026-04-27",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -148,14 +154,17 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital Fomento - gov.br",
    "url": "https://www.gov.br/memp/pt-br/acesso-a-informacao/editais/edital-fomento",
    "orgao": "www.gov.br",
    "resumo": "Feb 20, 2026 · Edital Fomento Publicado em 20/02/2026 09:46 Modificado em 31/07/2026 06:40 Compartilhe: PORTARIA_MEMP_N__81__DE_19_DE_FEVEREIRO_DE_2026.pdf Criado há 8 meses",
-   "prazo": "",
+   "prazo": "2023-11-05",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -180,14 +189,17 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/memp/pt-br/acesso-a-informacao/editais/edital-fomento",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Período de inscrição: 06 de outubro a 05 de novembro de 2023 | https://www.gov.br/mpa/pt-br/acesso-a-informacao/editais-de/2023/edital-de-chamamento-publico-no-",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital Acessível | Edital de Fomento Multiartes | Secretaria ...",
    "url": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "orgao": "www.cultura.pr.gov.br",
    "resumo": "Em alinhamento com os Planos Nacional e Estadual de Cultura, o Edital de Chamamento Público n.º 004/2026 tem como objetivo assegurar, dentro das normas estabelecidas, a valorização e a promoção da produção artístico-cultural no Estado do Pa",
-   "prazo": "",
+   "prazo": "2026-04-27",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -213,14 +225,17 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Inscrições: a partir das 18h de 26 de março até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO N 002/2026 – FOMENTO CULTURAL ...",
    "url": "https://culteditais.cultura.gov.br/oportunidade/11851/",
    "orgao": "culteditais.cultura.gov.br",
    "resumo": "O objeto deste Edital é a seleção de projetos culturais para recebimento de apoio financeiro, mediante celebração de Termo de Execução Cultural, nas categorias descritas no Anexo I.",
-   "prazo": "",
+   "prazo": "2026-05-28",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -246,14 +261,17 @@
    "http_status": 404,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Período de Inscrições 05/05/2026 à 28/05/2026 | https://s3cache.dom.sc.gov.br/atos/2026/05/1778597474_correcao_cronograma_022026_premiacao_cultural_assinado.pdf",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL PARA FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS (APOIO ...",
    "url": "https://pmp.pr.gov.br/website/assets/arquivos/cultura/leiAldirBlanc/2026/Edital_Lei_Aldir_Blanc_2026.pdf",
    "orgao": "pmp.pr.gov.br",
    "resumo": "Inscrições – Etapa destinada à apresentação e ao protocolo das propostas pelos agentes culturais interessados, a ser realizada no período de 11 de agosto de 2026, a partir das 08h00, até as 23h59 do dia 25 de agosto de 2026, observadas as c",
-   "prazo": "",
+   "prazo": "2026-08-25",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -292,14 +310,17 @@
    "http_status": 200,
    "url_final": "https://pmp.pr.gov.br/website/assets/arquivos/cultura/leiAldirBlanc/2026/Edital_Lei_Aldir_Blanc_2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições poderão ser realizadas no período de 11 de agosto de 2026, a partir das 08h00, até as 23h59 do dia 25 de agosto de 2026. | https://pmp.pr.gov.br/w",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "POLÍTICA NACIONAL ALDIR BLANC (PNAB) CICLO 2 - EDITAL DE ...",
    "url": "https://www.mapacultural.pe.gov.br/oportunidade/3233/",
    "orgao": "www.mapacultural.pe.gov.br",
    "resumo": "Jun 25, 2026 · Este edital reflete o profundo compromisso da Secretaria de Educação e Diretoria de Cultura de Custódia com a valorização de nossa identidade. Viabilizado pela PNAB, ele celebra e impulsiona o talento dos fazedores de cultura",
-   "prazo": "",
+   "prazo": "2026-04-24",
    "mecanismo": "PNAB",
    "tipo_item": "edital",
    "jev": {
@@ -324,14 +345,17 @@
    "http_status": 404,
    "url_final": "https://www.mapacultural.pe.gov.br/oportunidade/3233/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Das 8:00 horas do dia 13/04/2026 até às 18:00 horas do dia 24/04/2026. | https://www.lagodapedra.ma.gov.br/cultura/editais/20/60/EDITAL_DE_FOMENTO_CULTURAL_Nm_0",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
    "url": "https://www.gov.br/cultura/pt-br/assuntos/politica-nacional-aldir-blanc",
    "orgao": "www.gov.br",
    "resumo": "Oct 23, 2026 · Assuntos Política Nacional Aldir Blanc de Fomento à Cultura Política Nacional Aldir Blanc de Fomento à Cultura",
-   "prazo": "",
+   "prazo": "2026-05-29",
    "mecanismo": "PNAB",
    "tipo_item": "pagina",
    "jev": {
@@ -356,14 +380,17 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/politica-nacional-aldir-blanc",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições estarão disponíveis das 8:00h do dia 29 de abril de 2026 até o dia 29 de maio de 2026 às 17:00 | https://www.parisi.sp.gov.br/portal/download/arqu",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura (PNAB)",
    "url": "https://www.cultura.pr.gov.br/PNAB",
    "orgao": "www.cultura.pr.gov.br",
    "resumo": "SEEC divulga resultado final do Edital de Apoio a Publicações Independentes e relação de projetos habilitados do Edital Viva Cultura Cultura divulga resultado final de segundo e terceiro trimestres do edital Mobilidade Cultural - 2.ª edição",
-   "prazo": "",
+   "prazo": "2026-04-27",
    "mecanismo": "PNAB",
    "tipo_item": "pagina",
    "jev": {
@@ -388,14 +415,17 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/PNAB",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
    "url": "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/politica-nacional-aldir-blanc-de-fomento-a-cultura",
    "orgao": "www.gov.br",
    "resumo": "Jul 3, 2026 · Os recursos da Política Nacional Aldir Blanc são repassados aos estados, ao Distrito Federal e aos municípios, responsáveis pela execução das ações e pela publicação dos editais destinados à seleção de agentes culturais, pesso",
-   "prazo": "",
+   "prazo": "2026-05-29",
    "mecanismo": "PNAB",
    "tipo_item": "pagina",
    "jev": {
@@ -420,14 +450,17 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/politica-nacional-aldir-blanc-de-fomento-a-cultura",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições estarão disponíveis das 8:00h do dia 29 de abril de 2026 até o dia 29 de maio de 2026 às 17:00 | https://www.parisi.sp.gov.br/portal/download/arqu",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Política Nacional Aldir Blanc (PNAB) - Prefeitura de Cotia",
    "url": "https://cotia.sp.gov.br/politica-nacional-aldir-blanc-pnab/",
    "orgao": "cotia.sp.gov.br",
    "resumo": "Confira AQUI o Edital n°01/2024 de Fomento para Todas as Linguagens referente à Política Nacional Aldir Blanc – PNAB. Confira AQUI os anexos disponíveis para download em Word referentes ao edital.",
-   "prazo": "",
+   "prazo": "2026-10-21",
    "mecanismo": "PNAB",
    "tipo_item": "pagina",
    "jev": {
@@ -452,7 +485,10 @@
    "http_status": 200,
    "url_final": "https://cotia.sp.gov.br/politica-nacional-aldir-blanc-pnab/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "no período de 22 de setembro a 21 de outubro de 2026 | https://cotia.sp.gov.br/wp-content/uploads/2026/10/lista-de-incricoes-validas-editl-04-2026-pnab-pncv-cot",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "PNAB 2026 - Politica Nacional Aldir Blanc — Prefeitura de ...",
@@ -539,7 +575,7 @@
    "url": "https://www.cinep.pb.gov.br/portal/?page_id=13953",
    "orgao": "www.cinep.pb.gov.br",
    "resumo": "A Companhia de Desenvolvimento da Paraíba (CINEP) lançou o Chamamento Público nº 001/2025, que tem como objetivo selecionar associações e/ou cooperativas de ...",
-   "prazo": "",
+   "prazo": "2025-09-30",
    "mecanismo": "LIR",
    "tipo_item": "edital",
    "jev": {
@@ -575,14 +611,17 @@
    "http_status": 200,
    "url_final": "https://www.cinep.pb.gov.br/portal/?page_id=13953",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "no período de 22 a 30 de setembro 2025 a seguinte documentação | https://www.cinep.pb.gov.br/portal/wp-content/uploads/2025/10/EDITAL-DE-CHAMAMENTO-1.pdf",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Proesporte - Lei de Incentivo | Edital 06 | Secretaria do EsportePLANO DE DIVULGAÇÃO DA LEI DE INCENTIVO AO ESPORTE - 2026Lei de Incentivo ao Esporte: como funciona (2026) · Capita",
    "url": "https://www.esporte.pr.gov.br/Pagina/Proesporte-Lei-de-Incentivo-Edital-06",
    "orgao": "www.esporte.pr.gov.br",
    "resumo": "A Secretaria de Estado do Esporte do Paraná e a Comissão do Programa Estadual de Fomento e Incentivo ao Esporte (CPROESPORTE) divulgam o lançamento do Edital 06. Ações e Programas Lei de Incentivo ao Esporte Modelos e Manuais PLANO DE DIVUL",
-   "prazo": "",
+   "prazo": "2025-04-17",
    "mecanismo": "LIE",
    "tipo_item": "edital",
    "jev": {
@@ -616,7 +655,10 @@
    "http_status": 200,
    "url_final": "https://www.esporte.pr.gov.br/Pagina/Proesporte-Lei-de-Incentivo-Edital-06",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "O período para inscrição de projetos neste edital começa às 8h do dia 17 de fevereiro de 2025 e vai até as 23h59 de 17 de abril de 2025. | https://www.parana.pr",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "PLANO DE DIVULGAÇÃO DA LEI DE INCENTIVO AO ESPORTE - 2026",
@@ -655,7 +697,7 @@
    "url": "https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital-123-2026-flim-2026.pdf",
    "orgao": "maringacultura.maringa.pr.gov.br",
    "resumo": "As condições para a execução deste edital foram criadas por meio da Lei Complementar no 1124/2018, que dispõe sobre o Sistema Municipal de Cultura, e o presente edital destina-se a apoiar projetos apresentados pelos agentes culturais do mun",
-   "prazo": "",
+   "prazo": "2026-06-12",
    "mecanismo": "",
    "tipo_item": "edital",
    "jev": {
@@ -694,7 +736,10 @@
    "http_status": 200,
    "url_final": "https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital-123-2026-flim-2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "De 15 dias úteis, sendo das 9 horas do dia 19/05/2026 até às 14 horas do dia 12/06/2026. | https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO No 3/2026 - maringa.pr.gov.br",
@@ -746,33 +791,39 @@
    "url": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
    "orgao": "www.gov.br",
    "resumo": "Esse serviço permite que organizações de catadores de materiais reutilizáveis e recicláveis façam seu cadastro no Módulo Catadores, parte do Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos (SINIR). Ao preencher o cadastr",
-   "prazo": "",
+   "prazo": "2026-05-18",
    "mecanismo": "LIR",
    "tipo_item": "pagina",
    "http_status": 403,
    "url_final": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Período para entrega dos documentos de inscrição/credenciamento/habilitação: 11/05/2026 a 18/05/2026. | https://www.gov.br/dnit/pt-br/acesso-a-informacao/partic",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Catadores",
    "url": "https://www.sinir.gov.br/sistemas/catadores/",
    "orgao": "www.sinir.gov.br",
    "resumo": "Catadores Cooperativas e associações de catadores e catadoras de materiais recicláveis e reutilizáveis já podem iniciar o preenchimento de suas informações no Módulo Catadores do Sistema Nacional de Informações sobre a Gestão dos Resíduos S",
-   "prazo": "",
+   "prazo": "2024-08-07",
    "mecanismo": "LIR",
    "tipo_item": "pagina",
    "http_status": null,
    "url_final": "https://www.sinir.gov.br/sistemas/catadores/",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "A data limite para o envio das propostas é 23:59 horas do dia 07/08/2024. | https://www.gov.br/mma/pt-br/composicao/secex/dfre/fundo-nacional-do-meio-ambiente/e",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital de Apoio ao Fortalecimento das Cooperativas de Catadores(as) de ...",
    "url": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-apoio-ao-fortalecimento-das-cooperativas-de-catadores-as-de-materiais-reciclaveis",
    "orgao": "www.gov.br",
    "resumo": "PORTARIA Nº 1.166, DE 14 DE OUTUBRO DE 2024 - Trata-se da Homologação e publicação do resultado definitivo da fase de seleção, com divulgação das decisões recursais proferidas pela Comissão de Seleção do Edital de Chamamento Público nº 01/2",
-   "prazo": "",
+   "prazo": "2024-09-24",
    "mecanismo": "LIR",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -786,14 +837,17 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-apoio-ao-fortalecimento-das-cooperativas-de-catadores-as-de-materiais-reciclaveis",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "poderá ser interposta no período de 17/09/2024 até o prazo limite de 24/09/2024 | https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/edita",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital para Apoio a Organizações de Catadores de Materiais Recicláveis",
    "url": "https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/",
    "orgao": "sinir.gov.br",
    "resumo": "Edital de Chamamento Público nº 1/2024 Sobre o Edital: O Ministério do Meio Ambiente e Mudança do Clima (MMA) lançou, em 07/06/2024, um edital com valor inicial de R$ 8 milhões destinado a apoiar cooperativas e associações de catadoras e ca",
-   "prazo": "",
+   "prazo": "2024-08-07",
    "mecanismo": "LIR",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -815,7 +869,10 @@
    "http_status": 200,
    "url_final": "https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "O prazo para submissão de propostas foi encerrado no dia 07/08/2024. | https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/ (fetch)",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Termo de Colaboração / Termo de Fomento",
@@ -856,7 +913,7 @@
    "url": "https://www.seeduc.rj.gov.br/mais/chamamento-público",
    "orgao": "www.seeduc.rj.gov.br",
    "resumo": "Esse espaço no site da SEEDUC, refere-se ao Chamamento Público para eleição dos Conselheiros do CEAE-RJ, mandato 2025-2029, considerando que o atual mandato (2021-2025) se encerrará em 19 de maio de 2025.",
-   "prazo": "",
+   "prazo": "2021-12-08",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -869,54 +926,66 @@
    "http_status": null,
    "url_final": "https://www.seeduc.rj.gov.br/mais/chamamento-público",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições serão realizadas exclusivamente pela internet, no período de 04/12/2021 a 08/12/2021 às 12 horas. | https://www.projetoeco.uerj.br/wp-content/uplo",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026 - SELEÇÃO DE ...",
    "url": "https://mapacultural.pa.gov.br/oportunidade/2061/",
    "orgao": "mapacultural.pa.gov.br",
    "resumo": "Feb 27, 2026 · Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por me",
-   "prazo": "",
+   "prazo": "2026-07-26",
    "mecanismo": "PNAB",
    "tipo_item": "edital",
    "http_status": 404,
    "url_final": "https://mapacultural.pa.gov.br/oportunidade/2061/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Do dia 03/07/2026 até às 23h59min do dia 26/07/2026. | https://mapacultural.iracema.ce.gov.br/files/opportunity/8093/edital-de-chamamento-publico-n-001-2026-pna",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 007/2026 - SELEÇÃO DE ...",
    "url": "https://mapacultural.pa.gov.br/oportunidade/2116/",
    "orgao": "mapacultural.pa.gov.br",
    "resumo": "Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por meio da Política ",
-   "prazo": "",
+   "prazo": "2026-07-01",
    "mecanismo": "PNAB",
    "tipo_item": "edital",
    "http_status": 404,
    "url_final": "https://mapacultural.pa.gov.br/oportunidade/2116/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "O prazo para envio dos documentos de habilitação será de 25 de junho a 01 de julho de 2026, através do link: https://mapacultural.pa.gov.br/oportunidade/2116/#i",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO 02/2026 - SR/PF/PA — Polícia Federal",
    "url": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
    "orgao": "www.gov.br",
    "resumo": "Jul 16, 2026 · O objeto do presente Edital de Chamamento Público é a escolha de área mínima de 125,00 m2 (cento e vinte e cinco metros quadrados), em centros comerciais de compras multimarcas (shopping center), localizados no município de B",
-   "prazo": "",
+   "prazo": "2026-05-12",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
    "http_status": 403,
    "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "das 16 horas do dia 8 de maio de 2026 às 18 horas do dia 12 de maio de 2026 (horário oficial de Brasília/DF) | https://www.gov.br/pf/pt-br/acesso-a-informacao/s",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL 001/2026 - digital.belem.pa.gov.br",
    "url": "https://digital.belem.pa.gov.br/wp-content/uploads/2026/03/EDITAL-DE-CHAMAMENTO-PUBLICO-01-2026_.pdf",
    "orgao": "digital.belem.pa.gov.br",
    "resumo": "Poderão participar deste chamamento empresas públicas ou privadas, fundações, organizações da sociedade civil e instituições tecnológicas com atuação comprovada no desenvolvimento de soluções compatíveis com o objeto descrito neste edital.",
-   "prazo": "",
+   "prazo": "2026-03-09",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -929,14 +998,17 @@
    "http_status": 200,
    "url_final": "https://digital.belem.pa.gov.br/wp-content/uploads/2026/03/EDITAL-DE-CHAMAMENTO-PUBLICO-01-2026_.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições serão gratuitas e estarão abertas no período de 00h do dia 05 de mar- ço de 2026 às 23h59 do dia 09 de março de 2026 | http://ioepa.com.br/pages/2",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "CHAMAMENTOS ABERTOS | Secretaria de Ciência, Tecnologia e ...",
    "url": "https://sectet.pa.gov.br/audiovisual/basic-page/chamamentos-abertos",
    "orgao": "sectet.pa.gov.br",
    "resumo": "Pedido Complementar de Esclarecimentos da OS FCTG e Resposta - EDITAL DE CHAMAMENTO PÚBLICO Nº 01_2026_SECTET EXTRATO DE RETIFICAÇÃO DO EDITAL DE CHAMAMENTO PÚBLICO N° 01-2026 SECTET",
-   "prazo": "",
+   "prazo": "2026-01-22",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -959,14 +1031,17 @@
    "http_status": 200,
    "url_final": "https://sectet.pa.gov.br/audiovisual/basic-page/chamamentos-abertos",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Sessão pública para credenciamento, entrega e recebimento dos envelopes. 22/01/2026 | https://www.sectet.pa.gov.br/sites/default/files/EDITAL%20DE%20CHAMAMENTO%",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital de Chamamento Público - seplad.pa.gov.br",
    "url": "https://www.seplad.pa.gov.br/chamamento-pub-jun-2026/",
    "orgao": "www.seplad.pa.gov.br",
    "resumo": "A Secretaria de Estado de Planejamento e Administração – SEPLAD, criada pela Lei nº 8.933, de 29 de novembro de 2019, é um órgão da administração direta do Estado, subordinado diretamente ao Governador do Estado do Pará.",
-   "prazo": "",
+   "prazo": "2026-01-13",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -979,7 +1054,10 @@
    "http_status": 200,
    "url_final": "https://www.seplad.pa.gov.br/chamamento-pub-jun-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Os agentes financeiros interessados deverão enviar suas propostas, até o dia 13 de janeiro de 2026, na forma do ANEXO nº 02 do presente instrumento, para o segu",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "EDITAL DO CHAMAMENTO PÚBLICO PARA TERMO DE COLABORAÇÃO",
@@ -1015,20 +1093,23 @@
    "url": "https://www.parceriassociais.sp.gov.br/OSC/Chamamento",
    "orgao": "www.parceriassociais.sp.gov.br",
    "resumo": "CHAMAMENTOS PÚBLICOS - LANÇADOS ... Chamamento público é o procedimento destinado a selecionar, para a celebração de parceria com o Poder Público, a OSC mais apta ...",
-   "prazo": "",
+   "prazo": "2025-11-21",
    "mecanismo": "",
    "tipo_item": "edital",
    "http_status": null,
    "url_final": "https://www.parceriassociais.sp.gov.br/OSC/Chamamento",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "2 Envio das Propostas pelas OSC's. 22/10/2025 a 21/11/2025 | http://www.parceriassociais.sp.gov.br/OSC/MinhaArea/AnaliseCP/Buscar_Anexo_PorId/04fa283f-11ab-43dc",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Chamamentos Públicos - Secretaria da Educação",
    "url": "https://www.educacao.sp.gov.br/educacao/transparencia/participacao_social/chamamentos-publicos",
    "orgao": "www.educacao.sp.gov.br",
    "resumo": "Nº 06/2021. Edital de chamamento público para avaliação de recursos educacionais digitais e composição do “Guia de Recursos Educacionais Digitais do Estado de ...",
-   "prazo": "",
+   "prazo": "2023-04-28",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -1041,7 +1122,10 @@
    "http_status": 200,
    "url_final": "https://www.educacao.sp.gov.br/educacao/transparencia/participacao_social/chamamentos-publicos",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As inscrições estão abertas até 28/04/2023, às 17h e devem ser encaminhadas para o e-mail: comeleitoral@educacao.sp.gov.br. | https://www.educacao.sp.gov.br/edu",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Chamamento Público - Prodam",
@@ -1108,7 +1192,7 @@
    "url": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/publicações/política+estadual+sobre+drogas/editais+e+dispensas+de+chamamento+público+(DPOD)",
    "orgao": "www.desenvolvimentosocial.sp.gov.br",
    "resumo": "Política de Privacidade · Logo São Paulo - Governo do Estado. Acompanhe as novidades do Governo do Estado de São Paulo. © 2026 CMS.SP.GOV.BR. Todos os direitos ...",
-   "prazo": "",
+   "prazo": "2026-06-02",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -1121,20 +1205,26 @@
    "http_status": null,
    "url_final": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/publicações/política+estadual+sobre+drogas/editais+e+dispensas+de+chamamento+público+(DPOD)",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "As propostas deverão ser apresentadas pelas OSC´s no período de 04/05/2026 a 02/06/2026, no Portal de Parceiras Sociais http://www.parceriassociais.sp.gov.br/os",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO No 001/2026 - cehap.pb.gov.br",
    "url": "http://cehap.pb.gov.br/anexos/cham_publico_001_2026/AVISO+ABERTURA.pdf",
    "orgao": "cehap.pb.gov.br",
    "resumo": "A retirada do Edital e seus Anexos se dará através do E-mail: cehaplicitacao@gmail.com, bem como no sítio eletrônico da Cehap: www.cehap.pb.gov.br, na aba \"TRANSPARÊNCIA- Chamamentos Públicos.\"João Pessoa-PB, 30 de março de 2026.",
-   "prazo": "",
+   "prazo": "2026-08-21",
    "mecanismo": "",
    "tipo_item": "edital",
    "http_status": 404,
    "url_final": "http://cehap.pb.gov.br/anexos/cham_publico_001_2026/AVISO+ABERTURA.pdf",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "de 19/08/2026 a 21/08/2026 das 08:30h às 11:30 e das 14:00h às 16:30h | https://ourovelho.pb.gov.br/wp-content/uploads/2026/08/Edital-de-Chamamento-Publico-No-0",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Edital de Chamamento Público Nº 002/2026 - detran.pb.gov.br",
@@ -1154,7 +1244,7 @@
    "url": "https://guarabira.pb.gov.br/fian-2026",
    "orgao": "guarabira.pb.gov.br",
    "resumo": "Edital de chamamento público FIAN 2026 Abrir documento do edital em português. Edital",
-   "prazo": "",
+   "prazo": "2026-06-02",
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
@@ -1167,7 +1257,10 @@
    "http_status": 200,
    "url_final": "https://guarabira.pb.gov.br/fian-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04"
+   "verificado_em": "2026-11-04",
+   "prazo_origem": "extraido do documento",
+   "prazo_ctx": "Os interessados deverão entregar a documentação para o Credenciamento no período das 08h00min de 26 de maio de 2026 até às 12h00min do dia 02 de junho de 2026 |",
+   "prazo_conf": "alta"
   },
   {
    "titulo": "Chamamentos Públicos | Companhia Estadual de Habitação Popular",

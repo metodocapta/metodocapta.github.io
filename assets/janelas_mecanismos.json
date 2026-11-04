@@ -1,0 +1,41 @@
+{
+ "_nota": "Janela oficial de captacao por mecanismo, quando o orgao publica. Fonte > regra geral: o que estiver aqui vence o relogio do exercicio fiscal. Preenchido a mao, a partir do acervo (nunca por estimativa).",
+ "atualizado_em": "2026-11-04",
+ "mecanismos": {
+  "rouanet": {
+   "nome": "Lei Rouanet / PRONAC",
+   "janela": null,
+   "fonte": "",
+   "revalidar_em": "2026-10-31",
+   "status": "a_levantar"
+  },
+  "lir": {
+   "nome": "Lei de Incentivo a Reciclagem",
+   "janela": null,
+   "fonte": "",
+   "revalidar_em": "2026-10-31",
+   "status": "a_levantar"
+  },
+  "lie": {
+   "nome": "Lei de Incentivo ao Esporte",
+   "janela": null,
+   "fonte": "",
+   "revalidar_em": "2026-10-31",
+   "status": "a_levantar"
+  },
+  "fia": {
+   "nome": "Fundo da Infancia e da Adolescencia",
+   "janela": null,
+   "fonte": "",
+   "revalidar_em": "2026-12-31",
+   "status": "a_levantar"
+  },
+  "fundo_idoso": {
+   "nome": "Fundo da Pessoa Idosa",
+   "janela": null,
+   "fonte": "",
+   "revalidar_em": "2026-12-31",
+   "status": "a_levantar"
+  }
+ }
+}
