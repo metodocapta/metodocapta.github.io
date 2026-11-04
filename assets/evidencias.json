@@ -1,14 +1,14 @@
 {
-  "atualizado_em": "2026-10-08",
-  "escopo": "Trajetória ampla/apresentada (Método Capta+)",
-  "rotulo_escopo": "Trajetória ampla/apresentada",
+  "atualizado_em": "2026-11-04",
+  "escopo": "Trajetória do responsável técnico (acumulado, não de um único contrato)",
+  "rotulo_escopo": "Trajetória do responsável técnico",
   "indicadores": [
-    { "id": "captado",      "valor": "R$ 2,5 M", "rotulo": "Valor captado" },
+    { "id": "captado",      "valor": "R$ 2,5 M", "rotulo": "Captado na trajetória" },
     { "id": "projetos",     "valor": "25",       "rotulo": "Projetos aprovados" },
-    { "id": "experiencia",  "valor": "15 anos",  "rotulo": "Experiência" },
+    { "id": "experiencia",  "valor": "15 anos",  "rotulo": "De trajetória" },
     { "id": "conformidade", "valor": "Verificável", "rotulo": "Conformidade em conta vinculada" }
   ],
-  "intro": "Trajetória ampla/apresentada em captação de recursos públicos e incentivados para projetos de inclusão digital, saúde e infância.",
-  "nota": "Trajetória ampla/apresentada: acumulado de captações e de projetos conduzidos no HUB — mais de 8 fontes de recursos. Consultoria de <strong>meio</strong>: o recurso captado pertence à organização e é comprovável em cada conta vinculada e prestação de contas. Conformidade é <strong>verificável por projeto</strong> — não um percentual agregado.",
-  "nota_llms": "Indicadores (trajetória ampla/apresentada): R$ 2,5 M captados, 25 projetos aprovados e 15 anos de experiência; conformidade verificável em cada conta vinculada (sem percentual agregado)."
+  "intro": "Acumulado da trajetória do responsável técnico em captação de recursos públicos e incentivados — projetos de inclusão digital, saúde e infância.",
+  "nota": "O número é <strong>acumulado da trajetória</strong> (mais de 8 fontes de recursos), não de um contrato único com o Método Capta+. Consultoria de <strong>meio</strong>: o recurso captado pertence à organização e é comprovável em cada conta vinculada e prestação de contas. Conformidade é <strong>verificável por projeto</strong> — não um percentual agregado. <a href=\"/como-sabemos/\">Ver os casos com documento</a>.",
+  "nota_llms": "Indicadores (trajetória do responsável técnico, acumulado): R$ 2,5 M captados, 25 projetos aprovados e 15 anos de trajetória; conformidade verificável em cada conta vinculada (sem percentual agregado). Casos com documento em /como-sabemos/."
 }

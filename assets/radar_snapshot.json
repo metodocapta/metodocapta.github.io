@@ -1,18 +1,18 @@
 {
- "gerado_em": "2026-11-03",
+ "gerado_em": "2026-11-04",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 2008,
-  "elegiveis": 13,
-  "estruturados": 14,
+  "oportunidades": 2024,
+  "elegiveis": 12,
+  "estruturados": 6,
   "matches": 4
  },
  "areas": [
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 783
+   "total": 797
   },
   {
    "codigo": "MROSC",
@@ -37,7 +37,7 @@
   {
    "codigo": "FIA",
    "rotulo": "FIA",
-   "total": 20
+   "total": 22
   },
   {
    "codigo": "FUNDO_IDOSO",
