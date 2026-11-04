@@ -36,7 +36,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "painelistas e mediadores adriana marcolino doutoranda no programa de pos-graduacao em sociologia da usp. mestre em sociologia do trabalho no programa de pos-graduacao em sociologia da usp. possui graduacao em ciencias sociais pela universidade de sao paulo. atualmente e diretora tecnica do departamento intersindical de estatisticas e estudos socioeconomicos (dieese). tem experie"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamento Público",
@@ -64,7 +68,11 @@
     "cobra_resultado": "EXECUCAO",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/chamamento-publico",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamento Público",
@@ -93,7 +101,11 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04"
+   "doc_em": "2026-11-04",
+   "http_status": 403,
+   "url_final": "https://www.serpro.gov.br/consultas-publicas",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Fomento Multiartes | Secretaria da Cultura",
@@ -132,7 +144,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "nica e de merito anexo iv documentos obrigatorios para a habilitacao anexo v termo de execucao cultural anexo vi politicas afirmativas, acessibilidade e democratizacao anexo vii declaracao de representacao de grupo ou coletivo ​ anexo viii autodeclaracao anexo ix mapa das macrorregioes historico-culturais do parana 1. ​do objeto 1.1. ​com fundamento no art. 5.°, incis"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital Fomento - gov.br",
@@ -160,7 +176,11 @@
     "cobra_resultado": "EXECUCAO",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.gov.br/memp/pt-br/acesso-a-informacao/editais/edital-fomento",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital Acessível | Edital de Fomento Multiartes | Secretaria ...",
@@ -189,7 +209,11 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04"
+   "doc_em": "2026-11-04",
+   "http_status": 200,
+   "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO N 002/2026 – FOMENTO CULTURAL ...",
@@ -218,7 +242,11 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04"
+   "doc_em": "2026-11-04",
+   "http_status": 404,
+   "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL PARA FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS (APOIO ...",
@@ -260,7 +288,11 @@
      "Planilha orçamentária"
     ],
     "trecho": "conforme os procedimentos estabelecidos neste edital. • habilitacao – etapa de verificacao e analise da documentacao dos proponentes selecionados, com o objetivo de verificar o atendimento as exigencias previstas neste edital, a ser realizada no periodo de 09 a 11 de setembro de 2026. • resultado da habilitacao – etapa de divulgacao do resultado da habilitacao dos projetos se"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://pmp.pr.gov.br/website/assets/arquivos/cultura/leiAldirBlanc/2026/Edital_Lei_Aldir_Blanc_2026.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "POLÍTICA NACIONAL ALDIR BLANC (PNAB) CICLO 2 - EDITAL DE ...",
@@ -288,7 +320,11 @@
     "cobra_resultado": "EXECUCAO",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 404,
+   "url_final": "https://www.mapacultural.pe.gov.br/oportunidade/3233/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
@@ -316,7 +352,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/cultura/pt-br/assuntos/politica-nacional-aldir-blanc",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura (PNAB)",
@@ -344,7 +384,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.cultura.pr.gov.br/PNAB",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
@@ -372,7 +416,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/politica-nacional-aldir-blanc-de-fomento-a-cultura",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Política Nacional Aldir Blanc (PNAB) - Prefeitura de Cotia",
@@ -400,7 +448,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://cotia.sp.gov.br/politica-nacional-aldir-blanc-pnab/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "PNAB 2026 - Politica Nacional Aldir Blanc — Prefeitura de ...",
@@ -428,7 +480,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.umbuzeiro.pb.gov.br/servicos/editais-pnab-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Chamamento Público SNSA/MCID nº 01/2026 - gov.br",
@@ -472,7 +528,11 @@
      "Cadastro no SINIR"
     ],
     "trecho": "oes em ambito nacional. nao se configura como requisito de habilitacao ou certificacao, mas como condicao operacional que demonstra a insercao e a regularidade da organizacao no ecossistema de gestao de residuos, garantindo que o fomento publico se destine a atores integrados a politica setorial. 5.2. ficara impedida de celebrar o termo de fomento a osc que: a) nao esteja regularmente const"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-snsa-mcid-no-01-2026",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Habilitação de Associações e Cooperativas de Catadores ...",
@@ -511,7 +571,11 @@
      "Procuração"
     ],
     "trecho": "/cinep chamamento publico no 001/2025. procedimento de habilitacao das associacoes e/ou cooperativas de catadores de materiais reciclaveis. processo cin-prc-2024/01005 a companhia de desenvolvimento da paraiba-cinep, torna publico, para conhecimento dos interessados, que na data entre 22 a 30 de setembro de 2025, no horario das 08:00 horas as 16:00 horas, fara realizar proce"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.cinep.pb.gov.br/portal/?page_id=13953",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Proesporte - Lei de Incentivo | Edital 06 | Secretaria do EsportePLANO DE DIVULGAÇÃO DA LEI DE INCENTIVO AO ESPORTE - 2026Lei de Incentivo ao Esporte: como funciona (2026) · Capita",
@@ -548,7 +612,11 @@
      "CNDT (trabalhista)"
     ],
     "trecho": "documentacao obrigatoria e complementar para as etapas de habilitacao e analise tecnica e de merito dos projetos inscritos, e passam a fazer parte integrante dele, estando disponiveis na plataforma digital utilizada pelo proesporte e em www.esporte.pr.gov.br. 2. da participacao e das vedacoes a participacao 2.1 os beneficios previstos no presente edital, conforme artigo 35 da lei n.o"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.esporte.pr.gov.br/Pagina/Proesporte-Lei-de-Incentivo-Edital-06",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "PLANO DE DIVULGAÇÃO DA LEI DE INCENTIVO AO ESPORTE - 2026",
@@ -576,7 +644,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.gov.br/esporte/pt-br/acoes-e-programas-1/lei-de-incentivo-ao-esporte/modelos-e-manuais-3/pdlie_mesp-2026.docx",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO - maringacultura.maringa.pr.gov.br",
@@ -618,7 +690,11 @@
      "Planilha orçamentária"
     ],
     "trecho": "– etapa em que uma comissao analisa e seleciona os projetos habilitacao – etapa em que os agentes culturais selecionados na etapa anterior serao convocados para apresentar documentos de habilitacao assinatura do termo de execucao cultural – etapa em que os agentes culturais habilitados serao convocados para assinar o termo de execucao cultural 4. inscricoes edital 123 (8669058) sei 01.14"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital-123-2026-flim-2026.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO No 3/2026 - maringa.pr.gov.br",
@@ -646,7 +722,11 @@
     "cobra_resultado": "EXECUCAO",
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 404,
+   "url_final": "https://www3.maringa.pr.gov.br/construtor/arquivos/110626110011_sei8796780editaldechamamentopublico3_pdf.pdf",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE FOMENTO AO AUDIOVISUAL DE MARINGÁ – DIFUSÃO ...",
@@ -655,7 +735,11 @@
    "resumo": "Serão selecionados 8 (oito) projetos para execução no município de Maringá. O objeto deste Edital visa cumprir com os compromissos previstos na Chamada Pública SAV/MINC/FSA Nº 4 DE 9 D E JUNHO DE 2025, e selecionará projetos de difusão, for",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://maringacultura.maringa.pr.gov.br/oportunidade/983/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Cadastrar e habilitar Cooperativas e Associações de Catadores de ...",
@@ -664,7 +748,11 @@
    "resumo": "Esse serviço permite que organizações de catadores de materiais reutilizáveis e recicláveis façam seu cadastro no Módulo Catadores, parte do Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos (SINIR). Ao preencher o cadastr",
    "prazo": "",
    "mecanismo": "LIR",
-   "tipo_item": "pagina"
+   "tipo_item": "pagina",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Catadores",
@@ -673,7 +761,11 @@
    "resumo": "Catadores Cooperativas e associações de catadores e catadoras de materiais recicláveis e reutilizáveis já podem iniciar o preenchimento de suas informações no Módulo Catadores do Sistema Nacional de Informações sobre a Gestão dos Resíduos S",
    "prazo": "",
    "mecanismo": "LIR",
-   "tipo_item": "pagina"
+   "tipo_item": "pagina",
+   "http_status": null,
+   "url_final": "https://www.sinir.gov.br/sistemas/catadores/",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Apoio ao Fortalecimento das Cooperativas de Catadores(as) de ...",
@@ -690,7 +782,11 @@
      "CRF FGTS"
     ],
     "trecho": "ital portaria setad/mcti no 8.609, de 15 de outubro de 2024 habilitacao a fruicao do credito financeiro de que tratam o art. 4o da lei no 8.248, de 23 de outubro de 1991 e os arts. 2o, 3o e 4o da lei no 13.969, de 26 de dezembro de 2019. o secretario de ciencia e tecnologia para transformacao digital do ministerio da ciencia, tecnologia e inovacao, no uso da atribuicao conferida pelo paragrafo uni"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-apoio-ao-fortalecimento-das-cooperativas-de-catadores-as-de-materiais-reciclaveis",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital para Apoio a Organizações de Catadores de Materiais Recicláveis",
@@ -715,7 +811,11 @@
      "Cadastro no SINIR"
     ],
     "trecho": "republica federativa do brasil ministerio do meio ambiente e mudanca do clima secretaria executiva departamento de gestao de fundos e de recursos externos secretaria nacional de meio ambiente urbano e qualidade ambiental departamento de gestao de residuos edital de chamamento publico no 1/2024 programa 4420420240001 - transferegov apoio as cooperativas e associacoes de catadoras e catadore"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Termo de Colaboração / Termo de Fomento",
@@ -724,7 +824,11 @@
    "resumo": "May 13, 2025 ... O escopo deste trabalho é valorizar a contribuição dos catadores no processo de reciclagem ... VIGÊNCIA: até 29 de novembro de 2026.",
    "prazo": "",
    "mecanismo": "MROSC",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 200,
+   "url_final": "https://www.sema.df.gov.br/termos-de-colaboracao",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "termo de fomento que celebrará o município e a ... - Coqueiral-MG",
@@ -741,7 +845,11 @@
      "Plano de trabalho"
     ],
     "trecho": "prefeitura municipal - termo de fomento que celebrara o municipio e a associacao de catadores de materiais reciclaveis de... ir para conteudo do site interna nao ha suporte ao javascript. editais de licitacao principal editais editais de licitacao termo de fomento que celebrara o municipio e a associacao de catadores de materiais reciclaveis de coqueiral... atualizado em: 08/08/2025 as 13h12 termo"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.coqueiral.mg.gov.br/portal/editais/0/1/1219/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamento Público - seeduc.rj.gov.br",
@@ -757,7 +865,11 @@
      "Planilha orçamentária"
     ],
     "trecho": "a da chamada publica 2021 5 - prazo de regularizacao para a habilitacao 6 - 2a lista de habilitados da 1o etapa da chamada publica 2021 7 - 2a etapa - lista dos habilitados aptos a fornecer generos alimenticios 8 - aviso - 3a etapa - entrega dos projetos de vendas 9 - 3a etapa - aviso alteracao de calendario 10 - abertura dos envelopes da 3a etapa da chamada publica 2021 11 - 3a etapa - contabiliz"
-   }
+   },
+   "http_status": null,
+   "url_final": "https://www.seeduc.rj.gov.br/mais/chamamento-público",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026 - SELEÇÃO DE ...",
@@ -766,7 +878,11 @@
    "resumo": "Feb 27, 2026 · Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por me",
    "prazo": "",
    "mecanismo": "PNAB",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://mapacultural.pa.gov.br/oportunidade/2061/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 007/2026 - SELEÇÃO DE ...",
@@ -775,7 +891,11 @@
    "resumo": "Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por meio da Política ",
    "prazo": "",
    "mecanismo": "PNAB",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://mapacultural.pa.gov.br/oportunidade/2116/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO 02/2026 - SR/PF/PA — Polícia Federal",
@@ -785,7 +905,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04"
+   "doc_em": "2026-11-04",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL 001/2026 - digital.belem.pa.gov.br",
@@ -801,7 +925,11 @@
      "CNPJ"
     ],
     "trecho": "edital de chamamento publico no 001/2026​ procedimento de manifestacao de interesse para parceria estrategica. processo gdoc: 311/2026 - belem digital a companhia de transformacao digital do municipio de belem – belem digital, sociedade de economia mista vinculada ao municipio de belem, com sede na avenida nazare, no 708, bairro: nazare, cidade de belem - pa, cep: 66035-170, inscrita no cnpj"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://digital.belem.pa.gov.br/wp-content/uploads/2026/03/EDITAL-DE-CHAMAMENTO-PUBLICO-01-2026_.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "CHAMAMENTOS ABERTOS | Secretaria de Ciência, Tecnologia e ...",
@@ -827,7 +955,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "............................. 23 clausula 15 envelope 3 – documentos de habilitacao .............................................................................. 24 clausula 16 criterios de julgamento e selecao ........................................................................................... 29 clausula 17 recurso ..............................................................."
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://sectet.pa.gov.br/audiovisual/basic-page/chamamentos-abertos",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Chamamento Público - seplad.pa.gov.br",
@@ -843,7 +975,11 @@
      "CNPJ"
     ],
     "trecho": "edital de chamamento publico - seplad - secretaria de planejamento e administracao telefone: (91) 3251-2900 ouvidoria: ouvidoria@seplad.pa.gov.br funcionamento: seg-sex: 8h - 17h --> --> edital de chamamento publico voce esta aqui: seplad – secretaria de planejamento e administracao edital de chamamento publico edital de chamamento publico no 002/2026 – dpe/gabs/seplad formulario de inscricao aces"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.seplad.pa.gov.br/chamamento-pub-jun-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "EDITAL DO CHAMAMENTO PÚBLICO PARA TERMO DE COLABORAÇÃO",
@@ -868,7 +1004,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "677 tce/pa – anexo i – documentos da celebracao - tabela – habilitacao). belem (pa), 14 de outubro de 2026. (assinatura) marcel do nascimento botelho diretor-presidente 19 anexo i declaracao de ciencia e concordancia declaro que a [identificacao da organizacao da sociedade civil – osc] esta ciente e concorda com as dis"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2026/10/Edital-e-Anexos-Projeto-Reciclagem-e-Economia-Circular.PUBLICACAO.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "chamamento público - PORTAL DE PARCERIAS COM OSC",
@@ -877,7 +1017,11 @@
    "resumo": "CHAMAMENTOS PÚBLICOS - LANÇADOS ... Chamamento público é o procedimento destinado a selecionar, para a celebração de parceria com o Poder Público, a OSC mais apta ...",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": null,
+   "url_final": "https://www.parceriassociais.sp.gov.br/OSC/Chamamento",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamentos Públicos - Secretaria da Educação",
@@ -893,7 +1037,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "to 01/2026 homologacao do resultados definitivos da fase de habilitacao do edital do credenciamento no01/2026 parecer sobre segunda analise de inscricoes edital de credenciamento no 01/2026 segunda publicacao de resultado preliminar do edital de credenciamento 01/2026 resultado preliminar do edital de credenciamento 01/2026 parecer sobre segunda analise de inscricoes edital de credenciamento no 01"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.educacao.sp.gov.br/educacao/transparencia/participacao_social/chamamentos-publicos",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamento Público - Prodam",
@@ -905,7 +1053,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
    "prazo_fonte": "documento",
-   "prazo_gatilho": "envio"
+   "prazo_gatilho": "envio",
+   "http_status": null,
+   "url_final": "https://portal.prodam.sp.gov.br/chamamento-público",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "edital de chamamento público nº 2, de 15 de janeiro de 2026",
@@ -914,7 +1066,11 @@
    "resumo": "Jan 16, 2026 ... 1.2. O procedimento de seleção reger-se-á pela Lei nº 13.019, de 31 de julho de 2014, pelo Decreto nº 61.981/2016, e pelos demais normativos ...",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 200,
+   "url_final": "https://doe.sp.gov.br/executivo/secretaria-da-educacao/edital-de-chamamento-publico-n-2-de-15-de-janeiro-de-2026-202601151322161574597",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Editais de Chamamento Público - Secretaria da Saúde - Governo do ...",
@@ -941,7 +1097,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "nto convocatorio. 3. da apresentacao dos documentos 3.1. os documentos de habilitacao, plano de trabalho, comprovacao de experiencia e proposta financeira - exigidos no presente chamamento publico - deverao ser apresentados em 02 (dois) envelopes fechados, indevassaveis, distintos e identificados. 3.2. cada um dos envelopes devera ser identificado conforme modelo de etiquetas contidas no item 4.1"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.saude.sp.gov.br/ses/perfil/cidadao/homepage/outros-destaques/editais-de-chamamento-publico",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Editais e dispensas de chamamento público",
@@ -957,7 +1117,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "editais e dispensas de chamamento publico secretaria de desenvolvimento social informamos que sera realizada uma janela de manutencao programada no ambiente do cms, com inicio as 20h de sabado (22/08/2026) e termino previsto as 06h de segunda-feira (24/08/2026) . durante esse periodo, poderao ocorrer instabilidades, indisponibilidade temporaria ou oscilacoes no ambiente de autoria ( producao segui"
-   }
+   },
+   "http_status": null,
+   "url_final": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/publicações/política+estadual+sobre+drogas/editais+e+dispensas+de+chamamento+público+(DPOD)",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO No 001/2026 - cehap.pb.gov.br",
@@ -966,7 +1130,11 @@
    "resumo": "A retirada do Edital e seus Anexos se dará através do E-mail: cehaplicitacao@gmail.com, bem como no sítio eletrônico da Cehap: www.cehap.pb.gov.br, na aba \"TRANSPARÊNCIA- Chamamentos Públicos.\"João Pessoa-PB, 30 de março de 2026.",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "http://cehap.pb.gov.br/anexos/cham_publico_001_2026/AVISO+ABERTURA.pdf",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Edital de Chamamento Público Nº 002/2026 - detran.pb.gov.br",
@@ -975,7 +1143,11 @@
    "resumo": "Você está aqui: Página Inicial > Portarias/Instruções Normativas/Editais > Edital de Chamamento Público Nº 002/2026 Info",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://detran.pb.gov.br/portaria-instrucoes-normativas/dtrprc202555454v02_88678152.pdf/view",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamento público FIAN 2026 - Prefeitura de Guarabira (PB)",
@@ -991,7 +1163,11 @@
      "Estatuto e última alteração"
     ],
     "trecho": "oteses, orteses e outros recursos relativos ao tratamento, habilitacao ou reabilitacao; xii \u0000– implantar novas unidades de saœde e melhoramentos nas instalacıes existentes, como unidades bæsicas de saœde e hospitais, de forma a possibilitar um melhor atendimento a comunidade urbana e rural, bem c omo prestar a devida manutencao dos servicos; xiii - adotar as normas de padronizacao estab"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://guarabira.pb.gov.br/fian-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   },
   {
    "titulo": "Chamamentos Públicos | Companhia Estadual de Habitação Popular",
@@ -1015,9 +1191,14 @@
      "Conta bancária específica"
     ],
     "trecho": "os no empreendimento (modelo i ou modelo ii - anexo vii) e documentos de habilitacao juridica e fiscal (item 8); documentos de habilitacao tecnica (item 9), exigidos neste edital. 7.1.1 a declaracao negativa, expedida pela cehap, de inexistencia de pendencias perante a companhia (modelo - anexo iv), devera ser solicitada pela empresa a cehap atraves do e-mail (financeira@cehap.pb.gov.br). no"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://cehap.pb.gov.br/sitecehap/transparencia/chamamentos-publicos/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-04"
   }
  ],
  "jev_em": "2026-11-04",
- "prazos_em": "2026-11-04"
+ "prazos_em": "2026-11-04",
+ "links_em": "2026-11-04"
 }
