@@ -1529,3 +1529,30 @@ body.nav-lock{overflow:hidden}
    ========================================================================== */
 select option{background:#ffffff;color:#0d1f35}
 select option:checked{background:#0A4A4A;color:#ffffff}
+
+/* ==========================================================================
+   LOTE 3 - MENOS ALTURA, MESMA INFORMACAO (05/11/2026)
+   Medido em 786x670: a home tinha 22.424 px (31 telas). Dois blocos gastavam
+   altura sem entregar informacao nova:
+     - fm-decisao-mapa: cinco cartoes que repetem, em texto, links que a
+       propria secao ja oferece (e que o indice do topo tambem lista);
+     - fm-problema: cartoes com min-height 270px e padding 29px, pensados
+       para 5 colunas, herdados para telas de 1 coluna.
+   Aqui os MESMOS conteudos ficam mais densos. Nenhuma frase foi removida.
+   ========================================================================== */
+@media (max-width: 900px){
+  .fm-method-layers{margin-top:28px;gap:12px}
+  .fm-method-layer{min-height:0;padding:20px}
+  .fm-method-layer h3{margin-top:12px;font-size:20px}
+  .fm-method-layer > span{font-size:38px;right:18px;top:14px}
+}
+@media (max-width: 760px){
+  .fm-dec5-grid{grid-template-columns:1fr;gap:0;margin-top:18px}
+  .fm-dec5-card{padding:12px 0;border:0;border-top:1px solid rgba(127,227,216,.16);
+                border-radius:0;background:none}
+  .fm-dec5-card .n{font-size:11.5px}
+  .fm-dec5-card h3{margin:2px 0 0;font-size:16px}
+  .fm-dec5-card .q{margin:3px 0 0;font-size:13px}
+  .fm-dec5-card p{margin:4px 0 0;font-size:13.5px;line-height:1.5}
+  .fm-dec5-card a{margin-top:4px;padding:6px 0;font-size:13px}
+}
