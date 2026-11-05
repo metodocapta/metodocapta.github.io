@@ -549,8 +549,11 @@ html.fm-movimento .fm-decision-cta .fm-btn-primary{animation:mcGlowPulse 4.6s ea
 @media (max-width: 760px){
   /* <=760 px: ai sim vira lista — em 1 coluna, moldura de cartao e so peso. */
   .fm-dec5-grid{grid-template-columns:1fr;gap:0;margin-top:18px}
-  .fm-dec5-card{padding:12px 0;border:0;border-top:1px solid rgba(127,227,216,.16);
-                border-radius:0;background:none}
+  /* Especificidade (0,3,0): `.fm-band-light .fm-dec5-card` (0,2,0) do tema
+     repunha borda e gradiente e a lista continuava parecendo cartao. */
+  .fm-section .fm-dec5-grid .fm-dec5-card{padding:12px 0;border:0;
+                border-top:1px solid rgba(127,227,216,.16);border-radius:0;
+                background:none;box-shadow:none}
   .fm-dec5-card .n{font-size:11.5px}
   .fm-dec5-card h3{margin:2px 0 0;font-size:16px}
   .fm-dec5-card .q{margin:3px 0 0;font-size:13px}
