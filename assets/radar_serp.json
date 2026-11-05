@@ -108,7 +108,7 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
@@ -228,7 +228,7 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
@@ -265,7 +265,7 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "http_status": 404,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
    "link_classe": "morto",
@@ -567,7 +567,7 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -817,7 +817,26 @@
    "verificado_em": "2026-11-04",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
-   "sem_prazo_declarado": true
+   "sem_prazo_declarado": true,
+   "jev": {
+    "mecanismo": "PNAB",
+    "prob": 0.72,
+    "confianca": 0.69,
+    "naturezas": {
+     "associacao": 0.69,
+     "fundacao": 0.48,
+     "cooperativa": 0.53,
+     "federacao": 0.31
+    },
+    "resultado": {
+     "prob": 0.22,
+     "base": "trecho",
+     "carga": 240
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Cadastrar e habilitar Cooperativas e Associações de Catadores de ...",
@@ -834,7 +853,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Período para entrega dos documentos de inscrição/credenciamento/habilitação: 11/05/2026 a 18/05/2026. | https://www.gov.br/dnit/pt-br/acesso-a-informacao/partic",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.56,
+    "confianca": 0.52,
+    "naturezas": {
+     "associacao": 0.73,
+     "fundacao": 0.23,
+     "cooperativa": 0.78,
+     "federacao": 0.23
+    },
+    "resultado": {
+     "prob": 0.06,
+     "base": "documento",
+     "carga": 7264
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Catadores",
@@ -851,7 +889,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "A data limite para o envio das propostas é 23:59 horas do dia 07/08/2024. | https://www.gov.br/mma/pt-br/composicao/secex/dfre/fundo-nacional-do-meio-ambiente/e",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "LIR",
+    "prob": 0.65,
+    "confianca": 0.62,
+    "naturezas": {
+     "associacao": 0.82,
+     "fundacao": 0.25,
+     "cooperativa": 0.86,
+     "federacao": 0.28
+    },
+    "resultado": {
+     "prob": 0.11,
+     "base": "trecho",
+     "carga": 240
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Edital de Apoio ao Fortalecimento das Cooperativas de Catadores(as) de ...",
@@ -876,7 +933,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "poderá ser interposta no período de 17/09/2024 até o prazo limite de 24/09/2024 | https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/edita",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.96,
+    "confianca": 0.96,
+    "naturezas": {
+     "associacao": 0.93,
+     "fundacao": 0.56,
+     "cooperativa": 0.95,
+     "federacao": 0.37
+    },
+    "resultado": {
+     "prob": 0.31,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Edital para Apoio a Organizações de Catadores de Materiais Recicláveis",
@@ -909,7 +985,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "O prazo para submissão de propostas foi encerrado no dia 07/08/2024. | https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/ (fetch)",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.97,
+    "confianca": 0.97,
+    "naturezas": {
+     "associacao": 0.94,
+     "fundacao": 0.77,
+     "cooperativa": 0.96,
+     "federacao": 0.28
+    },
+    "resultado": {
+     "prob": 0.29,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Termo de Colaboração / Termo de Fomento",
@@ -925,7 +1020,26 @@
    "verificado_em": "2026-11-04",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
-   "sem_prazo_declarado": true
+   "sem_prazo_declarado": true,
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.69,
+    "confianca": 0.66,
+    "naturezas": {
+     "associacao": 0.76,
+     "fundacao": 0.53,
+     "cooperativa": 0.69,
+     "federacao": 0.53
+    },
+    "resultado": {
+     "prob": 0.28,
+     "base": "trecho",
+     "carga": 149
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "termo de fomento que celebrará o município e a ... - Coqueiral-MG",
@@ -935,7 +1049,7 @@
    "prazo": "",
    "mecanismo": "MROSC",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -949,7 +1063,26 @@
    "verificado_em": "2026-11-04",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
-   "sem_prazo_declarado": true
+   "sem_prazo_declarado": true,
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.95,
+    "confianca": 0.94,
+    "naturezas": {
+     "associacao": 0.9,
+     "fundacao": 0.22,
+     "cooperativa": 0.29,
+     "federacao": 0.22
+    },
+    "resultado": {
+     "prob": 0.2,
+     "base": "documento",
+     "carga": 5670
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público - seeduc.rj.gov.br",
@@ -973,7 +1106,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições serão realizadas exclusivamente pela internet, no período de 04/12/2021 a 08/12/2021 às 12 horas. | https://www.projetoeco.uerj.br/wp-content/uplo",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.82,
+     "fundacao": 0.2,
+     "cooperativa": 0.91,
+     "federacao": 0.36
+    },
+    "resultado": {
+     "prob": 0.06,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026 - SELEÇÃO DE ...",
@@ -990,7 +1142,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Do dia 03/07/2026 até às 23h59min do dia 26/07/2026. | https://mapacultural.iracema.ce.gov.br/files/opportunity/8093/edital-de-chamamento-publico-n-001-2026-pna",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "PNAB",
+    "prob": 0.55,
+    "confianca": 0.5,
+    "naturezas": {
+     "associacao": 0.65,
+     "fundacao": 0.52,
+     "cooperativa": 0.53,
+     "federacao": 0.36
+    },
+    "resultado": {
+     "prob": 0.26,
+     "base": "trecho",
+     "carga": 240
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 007/2026 - SELEÇÃO DE ...",
@@ -1007,7 +1178,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "O prazo para envio dos documentos de habilitação será de 25 de junho a 01 de julho de 2026, através do link: https://mapacultural.pa.gov.br/oportunidade/2116/#i",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "PNAB",
+    "prob": 0.65,
+    "confianca": 0.62,
+    "naturezas": {
+     "associacao": 0.65,
+     "fundacao": 0.54,
+     "cooperativa": 0.53,
+     "federacao": 0.4
+    },
+    "resultado": {
+     "prob": 0.28,
+     "base": "trecho",
+     "carga": 240
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO 02/2026 - SR/PF/PA — Polícia Federal",
@@ -1017,7 +1207,7 @@
    "prazo": "2026-05-12",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "http_status": 403,
    "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
    "link_classe": "bloqueado",
@@ -1025,7 +1215,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "das 16 horas do dia 8 de maio de 2026 às 18 horas do dia 12 de maio de 2026 (horário oficial de Brasília/DF) | https://www.gov.br/pf/pt-br/acesso-a-informacao/s",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.93,
+    "confianca": 0.92,
+    "naturezas": {
+     "associacao": 0.4,
+     "fundacao": 0.34,
+     "cooperativa": 0.32,
+     "federacao": 0.28
+    },
+    "resultado": {
+     "prob": 0.17,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL 001/2026 - digital.belem.pa.gov.br",
@@ -1049,7 +1258,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições serão gratuitas e estarão abertas no período de 00h do dia 05 de mar- ço de 2026 às 23h59 do dia 09 de março de 2026 | http://ioepa.com.br/pages/2",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.96,
+    "confianca": 0.96,
+    "naturezas": {
+     "associacao": 0.8,
+     "fundacao": 0.94,
+     "cooperativa": 0.68,
+     "federacao": 0.64
+    },
+    "resultado": {
+     "prob": 0.13,
+     "base": "documento",
+     "carga": 7733
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "CHAMAMENTOS ABERTOS | Secretaria de Ciência, Tecnologia e ...",
@@ -1083,7 +1311,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Sessão pública para credenciamento, entrega e recebimento dos envelopes. 22/01/2026 | https://www.sectet.pa.gov.br/sites/default/files/EDITAL%20DE%20CHAMAMENTO%",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.66,
+    "confianca": 0.63,
+    "naturezas": {
+     "associacao": 0.67,
+     "fundacao": 0.32,
+     "cooperativa": 0.14,
+     "federacao": 0.25
+    },
+    "resultado": {
+     "prob": 0.54,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "MISTO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Edital de Chamamento Público - seplad.pa.gov.br",
@@ -1107,7 +1354,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Os agentes financeiros interessados deverão enviar suas propostas, até o dia 13 de janeiro de 2026, na forma do ANEXO nº 02 do presente instrumento, para o segu",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.67,
+    "confianca": 0.64,
+    "naturezas": {
+     "associacao": 0.52,
+     "fundacao": 0.35,
+     "cooperativa": 0.41,
+     "federacao": 0.29
+    },
+    "resultado": {
+     "prob": 0.23,
+     "base": "documento",
+     "carga": 3439
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL DO CHAMAMENTO PÚBLICO PARA TERMO DE COLABORAÇÃO",
@@ -1137,7 +1403,26 @@
    "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2026/10/Edital-e-Anexos-Projeto-Reciclagem-e-Economia-Circular.PUBLICACAO.pdf",
    "link_classe": "vivo",
    "verificado_em": "2026-11-04",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.99,
+    "confianca": 0.99,
+    "naturezas": {
+     "associacao": 0.96,
+     "fundacao": 0.93,
+     "cooperativa": 0.94,
+     "federacao": 0.34
+    },
+    "resultado": {
+     "prob": 0.11,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "chamamento público - PORTAL DE PARCERIAS COM OSC",
@@ -1154,7 +1439,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "2 Envio das Propostas pelas OSC's. 22/10/2025 a 21/11/2025 | http://www.parceriassociais.sp.gov.br/OSC/MinhaArea/AnaliseCP/Buscar_Anexo_PorId/04fa283f-11ab-43dc",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.99,
+    "confianca": 0.99,
+    "naturezas": {
+     "associacao": 0.88,
+     "fundacao": 0.73,
+     "cooperativa": 0.47,
+     "federacao": 0.65
+    },
+    "resultado": {
+     "prob": 0.42,
+     "base": "trecho",
+     "carga": 166
+    },
+    "cobra_resultado": "MISTO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamentos Públicos - Secretaria da Educação",
@@ -1178,7 +1482,26 @@
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições estão abertas até 28/04/2023, às 17h e devem ser encaminhadas para o e-mail: comeleitoral@educacao.sp.gov.br. | https://www.educacao.sp.gov.br/edu",
    "prazo_conf": "alta",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.9,
+    "confianca": 0.89,
+    "naturezas": {
+     "associacao": 0.77,
+     "fundacao": 0.62,
+     "cooperativa": 0.58,
+     "federacao": 0.54
+    },
+    "resultado": {
+     "prob": 0.19,
+     "base": "documento",
+     "carga": 12775
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público - Prodam",
@@ -1188,14 +1511,33 @@
    "prazo": "2026-11-25",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "prazo_fonte": "documento",
    "prazo_gatilho": "envio",
    "http_status": null,
    "url_final": "https://portal.prodam.sp.gov.br/chamamento-público",
    "link_classe": "falha",
    "verificado_em": "2026-11-04",
-   "idioma": "pt"
+   "idioma": "pt",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.98,
+    "confianca": 0.98,
+    "naturezas": {
+     "associacao": 0.49,
+     "fundacao": 0.6,
+     "cooperativa": 0.59,
+     "federacao": 0.42
+    },
+    "resultado": {
+     "prob": 0.16,
+     "base": "documento",
+     "carga": 5888
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "edital de chamamento público nº 2, de 15 de janeiro de 2026",
@@ -1211,7 +1553,26 @@
    "verificado_em": "2026-11-04",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
-   "sem_prazo_declarado": true
+   "sem_prazo_declarado": true,
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.99,
+    "confianca": 0.99,
+    "naturezas": {
+     "associacao": 0.78,
+     "fundacao": 0.6,
+     "cooperativa": 0.59,
+     "federacao": 0.52
+    },
+    "resultado": {
+     "prob": 0.32,
+     "base": "trecho",
+     "carga": 161
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Editais de Chamamento Público - Secretaria da Saúde - Governo do ...",
@@ -1221,7 +1582,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1245,7 +1606,26 @@
    "verificado_em": "2026-11-04",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
-   "sem_prazo_declarado": true
+   "sem_prazo_declarado": true,
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.6,
+    "confianca": 0.56,
+    "naturezas": {
+     "associacao": 0.91,
+     "fundacao": 0.81,
+     "cooperativa": 0.39,
+     "federacao": 0.62
+    },
+    "resultado": {
+     "prob": 0.6,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "RESULTADO",
+    "em": "2026-11-05",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Editais e dispensas de chamamento público",
@@ -1367,9 +1747,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %���� 41 0 obj > stream x�՚w|t���gφ'�lb\u0012\u0002 �%\u0011\\��p$k\u001a�\b$$���e�\b\u0010 ��\u0004�\"�u\u0014{g����,(\u0001 �;(������*v�^\u0014���y� �^��}?������o�)gμ3s& b !u�d���a��vx쥈| *�\u0016�\u001a���a!�x��u-m��jx8� b�?q�0wᚃ��bd�g#ι�+j�\u000f�q7ك2k�j|տ��b\u0017\"�}� q���!s�\u0010�\u0016���-l^ � �h �/k��*�\\���t �1 }�\u001b����\u0000�b��| kz� �\u0003i _�lx�� ���bt�f�74�4t�ۻ�\u0010iqh�ka s��\"\\d��\u0014>\u00145z���\u0010�5\u0011%��pm��lz�\u0017b`p��s\u0001z�v��\\j� ����\u0011⸐�en�2�b\u0006u�igx�:�hʒĸ�\u0011�\u0013a�/4\u0002*��j\u0006�f)h��`"
+   }
   },
   {
    "titulo": "AVISO DE EDITAL CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO Nº",
@@ -1381,9 +1767,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %���� 1 0 obj >>> endobj 2 0 obj > endobj 3 0 obj > endobj 4 0 obj > endobj 5 0 obj > endobj 6 0 obj > endobj 7 0 obj > endobj 8 0 obj > endobj 9 0 obj > endobj 10 0 obj > endobj 11 0 obj >stream x�msˊ�@ ��+� ��� !0;v� �\u000f�� ��hi����b,�-�t*ɽu\\߾.��z��x��w���^~.ok�$gn˧\u0019mk�_���ک1�ۏ�\u000e?b܂}��� �g0w�n����\u0018q� y��\\�lx\u0013d�4�n�˅�t!��\u0001�x�x�\u000e���o( @��h��j%2�\u0016�\u0003�\u0014��wd ��׷hr8�y�\"w��@]�j�:t&o5=�u\u0018�i��jx7�"
+   }
   },
   {
    "titulo": "EDITAL DE CREDENCIAMENTO Chamamento Público/Credenciamento – 005/2026",
@@ -1395,9 +1787,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %���� 1 0 obj > endobj 2 0 obj > endobj 3 0 obj >/extgstate >/font >/procset[/pdf/text/imageb/imagec/imagei] >>/mediabox[ 0 0 595.3 841.9] /contents 7 0 r/group >/tabs/s>> endobj 4 0 obj > stream x��w|tu���s�mz!�\u0010 �$@\u0002i��b i& =�\u0000�bc\u0010d�\" v��(\u0016\u0004\u0014\u0005\u0015�����uwky{y׊���ww��\u0006��ι�djf�� �l���z��&�g_���s���� b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO 001/2026",
@@ -1423,9 +1821,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %���� 1 0 obj > endobj 2 0 obj > endobj 3 0 obj > endobj 4 0 obj >/mediabox[ 0 0 595.5 842]/parent 2 0 r /resources 6 0 r /type/page>> endobj 5 0 obj >stream x���mn�0\u0010����-[�8v~j`gh@a)�$tиi\u0002 *�ƴ��g�\u0005�\u0004\"�g�f�4� �γa\\\u001af۩�xcns �ƚ�ܯe�+ ����f��\u001a���6 >/procset[/pdf/text/imageb/imagec/imagei]/xobject >>> endobj 7 0 obj > endobj 8 0 obj >stream x�]r�n�0\u0010��\u0015>��\bl\u001a�%�di�8���~\u0000�%e*\u0006\u0019r�لاvҫhx�gvvk?/��"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO",
@@ -1437,9 +1841,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 4 0 obj (identity) endobj 5 0 obj (adobe) endobj 8 0 obj > stream x�� `t��?>sᄇ��lޛlbn�$\u0004\u0012�\u0010\u0002���7 �$�\u0001 \"f��$����\u001b^\u0002\"\"`de�7\"z�\u000f�.\u0011\u0015�\"*e��/�v��������v����� � z�������ss��yϙ�3s�y �\u0010�\u0005�b-����s� nc�x\u0003bi�ʊk\u001b\u0006 �\u0014\u0010 �d\b;ʊ�j�>p�\u0005 \b ��e����(r�z\u0019!�\u0007�kk�w7�\u001b��a\u0017\u0012��3�����d�8���h ����ɻ�i�#p�qh������[��e'���m� h�\b�2$m|l-���h�t�7�%�>h�@\u000f�`��\u0004� ���f������ � a��zp0��\u0007�yt+ �\u001a�?���s\u000e�dn\u0014 �\u0010 �\u0010 ��_ �q�*\u0014"
+   }
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 008/2026",
@@ -1451,9 +1861,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "outro"
+   "idioma": "outro",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.5 %���� 1 0 obj >>> endobj 2 0 obj > endobj 3 0 obj >/extgstate >/xobject >/procset[/pdf/text/imageb/imagec/imagei] >>/annots[ 30 0 r 31 0 r 32 0 r] /mediabox[ 0 0 595.32 841.92] /contents 4 0 r/group >/tabs/s/structparents 0>> endobj 4 0 obj > stream x��=�n g�w\u0001��:v\u000f���w=\u0004�x��g$x\u000f[�\u0007`�ݤj �z�����|�=�\u0017�eo\u0016|\u0010��o�o\u001b\u0011�y��j6�l�6`��*�\"22#2�}x�\\\u0017��t |����z�o��g�w���⯇��x�\u000f_�\u0017e���� |����ix�x\u0018�����\u0003"
+   }
   },
   {
    "titulo": "AVISO DE LICITAÇÃO – Concorrência Pública Nº 001/2026 - Prefeitura Municipal de Potim - SP",
@@ -1465,9 +1881,24 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "Estatuto e última alteração",
+     "RG e CPF dos dirigentes",
+     "Procuração",
+     "Certidão negativa federal (RFB/PGFN)",
+     "CRF FGTS",
+     "CNDT (trabalhista)",
+     "Certidão estadual/municipal",
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "tem anterior podera ensejar desclassificacao no momento da habilitacao. 4.8 e vedada a participacao na licitacao de empresas: 4.9. que tenha sido declarada inidonea por orgao ou entidade da administracao publica direta ou indireta, federal, estadual, municipal ou do distrito federal ou que estejam cumprindo periodo de suspensao no ambito da administracao municipal, nos termos do art. 156, iii"
+   }
   },
   {
    "titulo": "Contratação 004/2026 | GanhaLicita",
@@ -1479,9 +1910,16 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "outro"
+   "idioma": "outro",
+   "requisitos": {
+    "documentos": [
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "construcao 20 unidades — padre carvalho/mg · encerrada pular para o conteudo principal construcao 20 unidades habitacionais contratacao no 004/2026 · concorrencia eletronica ver licitacoes abertas em minas gerais → concorrencia eletronica propostas ate 18/05/2026 09:00 valor estimado r$ 2.869.998,65 baixar o documento (pdf) · r$ 9,90 proc r$ 9,90 por todos os documentos desta licitacao, pix ou car"
+   }
   },
   {
    "titulo": "Contratação CCE 11/2026 | GanhaLicita",
@@ -1493,9 +1931,16 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "outro"
+   "idioma": "outro",
+   "requisitos": {
+    "documentos": [
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "construcao da unidade basica — santo antonio da platina/pr pular para o conteudo principal construcao da unidade basica de saude centro contratacao no cce 11/2026 · concorrencia eletronica ver licitacoes abertas no parana → concorrencia eletronica propostas ate 26/06/2026 08:00 valor estimado r$ 1.435.942,77 baixar o edital (pdf) · r$ 9,90 edital 175/2026 3106 r$ 9,90 por todos os documentos desta"
+   }
   },
   {
    "titulo": "Contratação 00010/2026 | GanhaLicita",
@@ -1507,9 +1952,16 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "outro"
+   "idioma": "outro",
+   "requisitos": {
+    "documentos": [
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "secretaria municipal — pindamonhangaba/sp · encerrada pular para o conteudo principal secretaria municipal de servicos publicos contratacao no 00010/2026 · concorrencia eletronica ver licitacoes abertas em sao paulo → concorrencia eletronica propostas ate 27/07/2026 10:59 valor estimado r$ 194.738,49 baixar o edital · r$ 9,90 edital r$ 9,90 por todos os documentos desta licitacao, pix ou cartao va"
+   }
   },
   {
    "titulo": "Contracting of a specialized company to maintain...",
@@ -1521,7 +1973,7 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
    "idioma": "en"
   },
@@ -1535,9 +1987,23 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "Estatuto e última alteração",
+     "RG e CPF dos dirigentes",
+     "Certidão negativa federal (RFB/PGFN)",
+     "CRF FGTS",
+     "CNDT (trabalhista)",
+     "Certidão estadual/municipal",
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "assessoria tecnica. 3 da apresentacao da proposta e dos documentos de habilitacao: 3.1 os licitantes encaminharao, exclusivamente por meio do sistema eletronico, a proposta com o preco, conforme o criterio de julgamento adotado neste edital, ate o fim do recebimento de propostas. 3.2 no cadastramento da proposta inicial, o licitante declarara, em campo proprio do sistema, que: 3.2.1 cump"
+   }
   },
   {
    "titulo": "AVISO LICITAÇÃO CONCORRÊNCIA ELETRÔNICA Nº 022/2026",
@@ -1549,9 +2015,25 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "Estatuto e última alteração",
+     "RG e CPF dos dirigentes",
+     "Procuração",
+     "Certidão negativa federal (RFB/PGFN)",
+     "CRF FGTS",
+     "CNDT (trabalhista)",
+     "Certidão estadual/municipal",
+     "Conta bancária específica",
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "item anterior podera ensejar desclassificacao no momento da habilitacao. da participacao na concorrencia. poderao participar desta concorrencia interessados cujo ramo de atividade seja compativel com o objeto desta licitacao, e que estejam com credenciamento regular na portal de compras publicas. sera concedido tratamento favorecido para as microempresas e empresas de pequeno porte, para as socied"
+   }
   },
   {
    "titulo": "Edital - Chamamento Público Nº 015/2026",
@@ -1563,7 +2045,7 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
    "idioma": "pt"
   },
@@ -1577,9 +2059,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %���� 140 0 obj > stream x�]r�n�0\u0010��\u0015>��\bl\u001a�%�di�8���~\u0000�%e*\u0006\u0019r�لاvҫhx�gvvk?/���\u0017ι��`\u0011]�[\u0003�x5 �3\\z��p�}�� ��po���j�\u0017\u0018jݍ^���x6/f\u0015�� ������\u0005���|�\u0015��4}�\u0000z\u0011�����\u000e}��� @�,-��˺e�u\u0002\u0011�^�,��� �\u0012\u0006!\u0011j\"v!\u00132&bgg%r\"h��d��\\}2el1n\u0005��\u0005h�j��\u0002�e�\u0013�\"\u0019a*\u0012h����:\u0011��d\u0011��9c���[�x\u001b1~��\"�3�g�\u0013�n�;o�� > endobj 142 0 obj > endobj 144 0 obj > /matte [0 0 0] /length 6439 >> stream x�� \\m����m�� �\u0006�d)��\"soo��$%b懧�\u0014!�de�"
+   }
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -1591,7 +2079,7 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
    "idioma": "pt"
   },
@@ -1605,7 +2093,7 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
    "idioma": "pt"
   },
@@ -1619,9 +2107,15 @@
    "prazo_conf": "alta",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-04",
+   "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "requisitos": {
+    "documentos": [
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "%pdf-1.7 %�쏢 %%invocation: path/gswinc.exe -ddisplayformat=198788 -ddisplayresolution=96 -dbatch -dnopause -dsafer -dallowpstransparency -sfontpath=? -dnewpdf=true -sdevice=pdfwrite -soutputfile=? -dcompatibilitylevel=1.7 -dautorotatepages=/pagebypage %%+ -dembedallfonts=true -dsubsetfonts=true -dprocesscolormodel=/devicergb -scolorconversionstrategy=leavecolorunchanged -dpreserveannots=true -da"
+   }
   },
   {
    "titulo": "Anexos: 2026_03_04_PNCP_PE_013_2026.pdf 2026_03_04_SAAE_PE_013_2026.pdf",
@@ -1636,9 +2130,37 @@
    "doc_em": "2026-11-04",
    "fonte": "pncp-busca",
    "idioma": "pt"
+  },
+  {
+   "titulo": "2026 Pregão 071-2026",
+   "url": "https://wtc.lagoasanta.mg.gov.br/licitacao/pregao/12899-2026-pregao-71-2026",
+   "orgao": "Prefeitura Municipal de Lagoa Santa",
+   "prazo": "2026-11-18",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "RECEBIMENTO DE PROPOSTAS ATÉ:\n\nDia 18/11/2026 às 09:00",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-05",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Estado do Ceará - Prefeitura Municipal de Cedro - Aviso - Chamamento Público N°",
+   "url": "https://www.saae.quixeramobim.ce.gov.br/arquivos_download/licitacao/286/1404#1#1#1",
+   "orgao": "Saae de Quixeramobim",
+   "prazo": "2026-04-24",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "torna público, para conhecimento dos interessados que até o dia 24 de abril de 2026, às 09:00 h, através da plataforma www.licitacedroce.com.br estará recebendo documentos de habil",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-05",
+   "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-04",
- "prazos_em": "2026-11-04",
+ "jev_em": "2026-11-05",
+ "prazos_em": "2026-11-05",
  "links_em": "2026-11-04"
 }

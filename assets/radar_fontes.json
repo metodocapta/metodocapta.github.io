@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04",
+ "atualizado_em": "2026-11-05",
  "fontes": {
   "prazos": {
    "rodadas": 1,
@@ -8,6 +8,14 @@
    "baixa": 1,
    "ultima": "2026-11-04",
    "aproveitamento": 0.0
+  },
+  "pncp-busca": {
+   "rodadas": 1,
+   "chamadas": 3,
+   "candidatos": 7,
+   "aceitos": 2,
+   "ultima": "2026-11-05",
+   "aproveitamento": 28.6
   }
  }
 }
