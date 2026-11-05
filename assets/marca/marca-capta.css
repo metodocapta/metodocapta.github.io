@@ -1546,7 +1546,7 @@ select option:checked{background:#0A4A4A;color:#ffffff}
   .fm-method-layer h3{margin-top:12px;font-size:20px}
   .fm-method-layer > span{font-size:38px;right:18px;top:14px}
 }
-@media (max-width: 760px){
+@media (max-width: 900px){
   .fm-dec5-grid{grid-template-columns:1fr;gap:0;margin-top:18px}
   .fm-dec5-card{padding:12px 0;border:0;border-top:1px solid rgba(127,227,216,.16);
                 border-radius:0;background:none}
