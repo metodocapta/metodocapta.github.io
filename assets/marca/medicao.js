@@ -269,6 +269,26 @@
     return null;
   }
 
+  /* De ONDE veio o clique: data-fm-local (quando o dono declara, ex. barra
+     fixa) ou o id da secao que contem o link. Sem isso, 14 CTAs diferentes
+     viravam um numero so e nao havia como saber qual secao converte. */
+  function origemDoLink(a) {
+    var d = a.closest ? a.closest('[data-fm-local]') : null;
+    if (d) return d.getAttribute('data-fm-local').slice(0, 40);
+    var s = a.closest ? a.closest('section[id]') : null;
+    if (s) return s.id.slice(0, 40);
+    var h = a.closest ? a.closest('header') : null;
+    if (h) return 'cabecalho';
+    return '';
+  }
+  function canalDe(href) {
+    if (href.indexOf('wa.me/') > -1) return 'whatsapp';
+    if (/^mailto:/i.test(href)) return 'email';
+    if (/^tel:/i.test(href)) return 'telefone';
+    if (href.charAt(0) === '#' || href.indexOf(location.host) > -1 || href.charAt(0) === '/') return 'site';
+    return 'externo';
+  }
+
   function ligarCliques() {
     document.addEventListener('click', function (e) {
       var a = e.target && e.target.closest ? e.target.closest('a,button') : null;
@@ -282,7 +302,7 @@
       var alvoEv = a.closest ? a.closest('[data-fm-evento]') : null;
       var nomeEv = alvoEv && alvoEv.getAttribute('data-fm-evento');
       if (nomeEv) {
-        emitir(nomeEv, { rotulo: rotulo, destino: href.slice(0, 200), origem: 'elemento' });
+        emitir(nomeEv, { rotulo: rotulo, destino: href.slice(0, 200), origem: origemDoLink(a), canal: canalDe(href) });
         return;
       }
 
@@ -292,7 +312,7 @@
          parametro `tipo` continua, para cruzar em exploracao. */
       var tipo = tipoDeLink(href);
       if (!tipo) return;
-      emitir('clique_' + tipo, { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 200) });
+      emitir('clique_' + tipo, { tipo: tipo, rotulo: rotulo, destino: href.slice(0, 200), origem: origemDoLink(a), canal: canalDe(href) });
     }, true);
   }
 

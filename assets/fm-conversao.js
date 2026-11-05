@@ -58,28 +58,12 @@
     atualizar();
   }
 
-  /* ---------- (iii) A/B do rótulo do CTA primário ---------- */
-  try {
-    var prim = document.querySelector(".fm-hero .fm-btn.fm-btn-primary");
-    if (prim) {
-      var variantes = [
-        "Agendar diagnóstico de prontidão — 72h",
-        "Quero meu diagnóstico de prontidão — 72h"
-      ];
-      var v = null;
-      try { v = sessionStorage.getItem("fm_ab_cta"); } catch (e) {}
-      if (v !== "0" && v !== "1") {
-        v = Math.random() < 0.5 ? "0" : "1";
-        try { sessionStorage.setItem("fm_ab_cta", v); } catch (e) {}
-      }
-      var texto = null;
-      for (var i = 0; i < prim.childNodes.length; i++) {
-        var n = prim.childNodes[i];
-        if (n.nodeType === 3 && n.nodeValue.replace(/\s/g, "")) { texto = n; break; }
-      }
-      if (texto) texto.nodeValue = texto.nodeValue.replace(/\S[\s\S]*\S/, variantes[+v]);
-      prim.setAttribute("data-fm-ab", "v" + v);
-      if (typeof window.fmEvento === "function") window.fmEvento("ab_cta_variante", { variante: "v" + v });
-    }
-  } catch (e) {}
+  /* ---------- (iii) A/B do rótulo do CTA primário: DESLIGADO ----------
+     Este bloco trocava o rótulo do CTA do herói por duas variantes
+     ("Agendar diagnóstico…" / "Quero meu diagnóstico…"). Era o principal
+     motivo de o site ter 13 frases diferentes para o mesmo pedido: o texto
+     que aparecia na tela não era o do HTML, então nem o rótulo publicado nem
+     a medição batiam. Fica registrado aqui para não voltar: rótulo é conteúdo,
+     não experimento. O que se mede agora é a SEÇÃO de origem (medicao.js),
+     que não muda o texto de ninguém. */
 })();
