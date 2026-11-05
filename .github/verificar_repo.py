@@ -146,8 +146,11 @@ def checar_home(raiz, home):
         erro("Home sem o CTA do cabecalho (hd-cta)")
     else:
         rotulo = re.sub(r"\s+", " ", m.group(1)).strip()
-        if not re.match(r"^Diagn[oó]stico 72h", rotulo, re.I):
-            erro("Home: CTA do cabecalho fora do padrao curto ('Diagnostico 72h'): %r"
+        # Padrao vigente (05/11/2026): "Pedir diagnostico" — o rotulo curto do
+        # cabecalho. A regra antiga exigia "Diagnostico 72h", que era justamente
+        # uma das 13 variacoes do mesmo pedido; o CI reprovava a padronizacao.
+        if not re.match(r"^Pedir diagn[oó]stico", rotulo, re.I):
+            erro("Home: CTA do cabecalho fora do padrao ('Pedir diagnóstico'): %r"
                  % rotulo[:50])
 
     # versionamento dos assets (?v=) — sem isso o navegador serve CSS velho.
