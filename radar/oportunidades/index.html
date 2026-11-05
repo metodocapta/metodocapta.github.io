@@ -125,7 +125,6 @@ a{color:var(--graf)}
 </style>
 <link rel="stylesheet" href="../../assets/marca/marca-capta.min.css?v=e7fcd696">
 <link rel="stylesheet" href="../../assets/marca/movimento.min.css?v=4ebbb84a">
-<script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <meta property="og:image:alt" content="Oportunidades abertas: editais e projetos captando | Método Capta+" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
@@ -135,27 +134,6 @@ a{color:var(--graf)}
 <meta name="twitter:description" content="244 oportunidades abertas com prazo nos próximos 12 meses: 244 projetos captando no SALIC, em 17 UFs — mais 37 leis de incentivo em fluxo contínuo." />
 <meta name="twitter:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.jpg" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "27 leis estaduais de ICMS (por UF)", "acceptedAnswer": {"@type": "Answer", "text": "AC ICMS — Acre (incentivos estaduais de cultura/esporte — A SONDAR) Incentivo fiscal AL ICMS — Alagoas (incentivos estaduais de cultura/esporte — A SONDAR) Incentivo fiscal AM ICMS — Amazonas (A LEVANTAR) Incentivo fiscal AP ICMS — Amapa (incentivos estaduais de cultura/esporte — A SONDAR) Incentivo fiscal BA ICMS — Bahia (FAZCULTURA — Programa Estadual de Incentivo ao Patrocínio Cultural + Fundo de Cultura da Bahia (FCBA)) Incentivo fiscal CE ICMS — Ceara (A LEVANTAR — SECULT-CE com DNS morto) Incentivo fiscal DF ICMS — Distrito Federal (SECEC-DF — Secretaria de Cultura e Economia Criativa (portal responde)) Incentivo fiscal ES ICMS — Espirito Santo (LICC e Funcultura) Incentivo fiscal GO I"}}]}</script>
-<!-- fm-hier-css -->
-<style>
-.fm-hier{margin:34px 0 0;padding:20px 22px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f4f8f8}
-.fm-hier-k{display:block;font:600 12px/1.2 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#067a72;margin:0 0 8px}
-.fm-hier-dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14.5px}
-.fm-hier-dt{font:600 12px/1.6 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#067a72;white-space:nowrap}
-.fm-hier-dd{margin:0;color:#2f4a52}
-.fm-hier-nx{margin:6px 0 0;font-size:14.5px;color:#0d1f35}
-.fm-hier-nx a{color:#067a72;font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(10,188,176,.6)}
-.fm-hier-nx a:hover{border-bottom-color:#0ABCB0}
-.fm-hier-j{margin:12px 0 0;font-size:12.5px;color:#4a6572}
-.fm-hier-j a{color:#067a72;text-decoration:none;border-bottom:1px solid rgba(10,188,176,.35)}
-/* o quadro vive em pagina de fundo escuro, onde `.fm-site span{color:#fff!important}`
-   pinta todo span de branco. Sem este reset o cartao fica ilegivel. */
-.fm-hier .fm-hier-k,.fm-hier .fm-hier-dt{color:#067a72 !important}
-.fm-hier .fm-hier-dd{color:#2f4a52 !important}
-.fm-hier .fm-hier-nx,.fm-hier .fm-hier-nx strong{color:#0d1f35 !important}
-.fm-hier .fm-hier-j{color:#4a6572 !important}
-.fm-hier .fm-hier-nx a,.fm-hier .fm-hier-j a{color:#067a72 !important}
-@media(max-width:560px){.fm-hier{padding:16px}.fm-hier-dl{grid-template-columns:1fr;gap:2px}.fm-hier-dt{margin-top:8px}}
-</style>
 <style data-fm-nav>
 /* componente unico de navegacao (nav_comum.py) — so a pele e o layout DESKTOP.
    O COMPORTAMENTO (ativo por rota, drawer mobile, busca, mega-menu, encolher no
@@ -232,9 +210,6 @@ a{color:var(--graf)}
   .site-hd[data-fm-nav] .hd-cta{padding:8px 10px;font-size:10.5px}
 }
 </style>
-
-<link rel="preload" href="/assets/marca/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style data-fm-a11y>
 .fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
 .fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
@@ -243,6 +218,31 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
   outline:2px solid #0ABCB0;outline-offset:2px;border-radius:4px}
 @media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
 </style>
+
+<script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
+<!-- fm-hier-css -->
+<style>
+.fm-hier{margin:34px 0 0;padding:20px 22px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f4f8f8}
+.fm-hier-k{display:block;font:600 12px/1.2 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#067a72;margin:0 0 8px}
+.fm-hier-dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14.5px}
+.fm-hier-dt{font:600 12px/1.6 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#067a72;white-space:nowrap}
+.fm-hier-dd{margin:0;color:#2f4a52}
+.fm-hier-nx{margin:6px 0 0;font-size:14.5px;color:#0d1f35}
+.fm-hier-nx a{color:#067a72;font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(10,188,176,.6)}
+.fm-hier-nx a:hover{border-bottom-color:#0ABCB0}
+.fm-hier-j{margin:12px 0 0;font-size:12.5px;color:#4a6572}
+.fm-hier-j a{color:#067a72;text-decoration:none;border-bottom:1px solid rgba(10,188,176,.35)}
+/* o quadro vive em pagina de fundo escuro, onde `.fm-site span{color:#fff!important}`
+   pinta todo span de branco. Sem este reset o cartao fica ilegivel. */
+.fm-hier .fm-hier-k,.fm-hier .fm-hier-dt{color:#067a72 !important}
+.fm-hier .fm-hier-dd{color:#2f4a52 !important}
+.fm-hier .fm-hier-nx,.fm-hier .fm-hier-nx strong{color:#0d1f35 !important}
+.fm-hier .fm-hier-j{color:#4a6572 !important}
+.fm-hier .fm-hier-nx a,.fm-hier .fm-hier-j a{color:#067a72 !important}
+@media(max-width:560px){.fm-hier{padding:16px}.fm-hier-dl{grid-template-columns:1fr;gap:2px}.fm-hier-dt{margin-top:8px}}
+</style>
+<link rel="preload" href="/assets/marca/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
@@ -585,10 +585,10 @@ o link leva ao portal de origem.</div>
 </main>
 <footer class="site-ft" data-v2="1"><div class="wrap">
 <div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div>
-<div class="ft-col"><b>Navegar</b><a href="/">Início</a><a href="/recusas/">Recusas</a><a href="/radar/">Radar</a><a href="/biblioteca/">Biblioteca</a><a href="/guias/">Guias</a><a href="/calculadora/">Calculadora</a></div>
-<div class="ft-col"><b>Ferramentas</b><a href="/diagnostico-de-prontidao/">Diagnóstico 72h</a><a href="/matriz-de-mecanismos/">Matriz de mecanismos</a><a href="/radar/oportunidades/">Oportunidades abertas</a><a href="/carteira-de-incentivadores/">Carteira</a></div>
-<div class="ft-col"><b>Institucional</b><a href="/metodo-capta-plus/">Método</a><a href="/para/">Para quem</a><a href="/objecoes/">Objeções</a><a href="/perguntas-frequentes/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a></div>
-<div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="/privacidade/">Privacidade</a></div>
+<div class="ft-col"><b>Navegar</b><a href="../..">Início</a><a href="../../recusas/">Recusas</a><a href="../">Radar</a><a href="../../biblioteca/">Biblioteca</a><a href="../../guias/">Guias</a><a href="../../calculadora/">Calculadora</a></div>
+<div class="ft-col"><b>Ferramentas</b><a href="../../diagnostico-de-prontidao/">Diagnóstico 72h</a><a href="../../matriz-de-mecanismos/">Matriz de mecanismos</a><a href="./">Oportunidades abertas</a><a href="../../carteira-de-incentivadores/">Carteira</a></div>
+<div class="ft-col"><b>Institucional</b><a href="../../metodo-capta-plus/">Método</a><a href="../../para/">Para quem</a><a href="../../objecoes/">Objeções</a><a href="../../perguntas-frequentes/">FAQ</a><a href="../../mapa-do-site/">Mapa do site</a></div>
+<div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="../../privacidade/">Privacidade</a></div>
 </div></footer>
 
 <script>
@@ -723,6 +723,6 @@ o link leva ao portal de origem.</div>
 <a class="mc-zap" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20falar%20sobre%20o%20M%C3%A9todo%20Capta%2B" target="_blank" rel="noopener" aria-label="Fale no WhatsApp"><svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span class="mc-zap__txt">Fale no WhatsApp</span></a>
 <!-- fm-medicao -->
 <script>window.__FM_MEDICAO={"ga4":"G-ZNPVB11E0X","consentimento":"banner","plausible":"","umami":"","endpoint":""};</script>
-<script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=ff81f31f",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
+<script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=490fbd2e",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
 <!-- /fm-medicao -->
 </body></html>

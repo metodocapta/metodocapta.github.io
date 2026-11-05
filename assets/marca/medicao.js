@@ -200,6 +200,10 @@
       var escolha = b.getAttribute('data-fm');
       gravar(CHAVE, escolha);
       d.parentNode.removeChild(d);
+      /* O rodapé volta a ter um dono só: sai o banner, entra a barra de CTA.
+         O evento avisa a barra para reavaliar sem esperar o próximo scroll. */
+      document.body.classList.remove('fm-consent-on');
+      document.dispatchEvent(new CustomEvent('fm-consent-livre'));
       if (escolha === 'aceito') {
         carregarGA4();
         /* ORDEM IMPORTA: o evento de consentimento precisa sair DEPOIS de o
@@ -238,6 +242,7 @@
         d.style.maxWidth = 'min(380px,calc(100vw - 32px))';
       }
       document.body.appendChild(d);
+      document.body.classList.add('fm-consent-on');
       window.removeEventListener('scroll', aoRolar);
     }
     function aoRolar() {

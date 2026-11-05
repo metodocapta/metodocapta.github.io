@@ -148,19 +148,36 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .fm-sticky-cta .fm-sticky-cta__btn:hover{transform:translateY(-2px);filter:brightness(1.06);color:#04222a;box-shadow:0 16px 38px -8px rgba(217,123,77,.7),inset 0 1px 0 rgba(255,255,255,.28)}
 .fm-sticky-cta__x{background:transparent;border:0;color:#7fa8a2;font-size:22px;line-height:1;cursor:pointer;padding:6px 10px;border-radius:8px}
 .fm-sticky-cta__x:hover{color:#eafffb;background:rgba(127,227,216,.12)}
-body.fm-bar-on .mc-zap{bottom:96px}
+body.fm-bar-on .mc-zap{bottom:calc(var(--fm-barra-h,86px) + 12px)}
+/* UM DONO POR VEZ no rodapé. Medido em 390x670: o banner de consentimento
+   (124px) cobria a barra de CTA (118px) inteira, e o WhatsApp flutuante caía
+   sobre o botão do hero e sobre a terceira pílula da faixa de serviços.
+   Regra: enquanto o consentimento não é decidido, ele é o único elemento
+   fixo embaixo. Na home, o WhatsApp só entra quando a barra de CTA entra. */
+body.fm-consent-on .fm-sticky-cta{display:none}
+body.fm-consent-on .mc-zap,
+body.fm-consent-on.fm-home.fm-bar-on .mc-zap{opacity:0;visibility:hidden;pointer-events:none;animation:none}
+body.fm-home:not(.fm-bar-on) .mc-zap{opacity:0;visibility:hidden;pointer-events:none;animation:none;transform:translateY(14px)}
+body.fm-home.fm-bar-on .mc-zap{opacity:1;visibility:visible;pointer-events:auto;animation:none;transform:none}
 @media (max-width:760px){
 .fm-sticky-cta{flex-wrap:wrap;gap:10px;justify-content:space-between}
 .fm-sticky-cta__txt{font-size:13px;max-width:none;flex:1 1 150px}
 .fm-sticky-cta__btn{padding:11px 16px;font-size:14px}
-body.fm-bar-on .mc-zap{bottom:86px}
 }
 @media (prefers-reduced-motion:reduce){
 .fm-sticky-cta{transition:none}
 .fm-sticky-cta .fm-sticky-cta__btn:hover{transform:none}
 }
+/* Em 390px a barra media 118px (18% da tela). Aqui ela encolhe para ~86px:
+   texto em 2 linhas com corte, botão e X na mesma linha. */
+@media (max-width:520px){
+.fm-sticky-cta{padding:8px 12px calc(8px + env(safe-area-inset-bottom,0px));gap:8px;flex-wrap:nowrap;align-items:center}
+.fm-sticky-cta__txt{font-size:12.5px;line-height:1.3;flex:1 1 auto;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fm-sticky-cta .fm-sticky-cta__btn{padding:10px 13px;font-size:12.5px;flex:0 0 auto}
+.fm-sticky-cta__x{padding:6px 8px;font-size:20px;flex:0 0 auto}
+}
 </style>
-<script defer src="assets/fm-conversao.min.js?v=fffea860"></script>
+<script defer src="assets/fm-conversao.min.js?v=e3e6115e"></script>
 <style id="fm-esg-css">
 /* P0 (ESG/ISP) — pedido x proposta de valor */
 .fm-valor{display:grid;gap:16px;grid-template-columns:1fr 1fr;margin:30px 0 8px}
@@ -496,6 +513,8 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <noscript></noscript>
 
 <noscript></noscript>
+
+<noscript></noscript>
 <script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <!-- fm-explorador --><link rel="stylesheet" href="assets/marca/explorador.min.css?v=94d32eed" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/marca/explorador.min.css?v=94d32eed"></noscript>
 <script defer src="assets/marca/explorador.min.js?v=4cc65242"></script>
@@ -507,7 +526,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
-<body class="home wp-singular page-template page-template-elementor_canvas page page-id-2 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2">
+<body class="home fm-home wp-singular page-template page-template-elementor_canvas page page-id-2 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-2">
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
 
 			<div data-elementor-type="wp-page" data-elementor-id="2" class="elementor elementor-2" data-elementor-post-type="page">
@@ -542,7 +561,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
                             <span class="fm-eyebrow"><i></i> Método Capta+</span>
 
-                            <h1>Não falta edital.<br><em>Falta prova.</em></h1>
+                            <h1>Não falta edital.<br> <em>Falta prova.</em></h1>
 
                             <p>O mercado entrega lista. Lista não responde o que o edital cobra, quem pode se candidatar e quanto tempo sobra. O Método Capta+ começa pelo que a sua entidade <em>consegue comprovar</em> — e diz, sem rodeio, o que ela ainda não consegue.</p>
 
@@ -686,7 +705,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
                     <div class="fm-container">
                         <div class="fm-heading fm-heading-center fm-reveal">
                             <span class="fm-kicker">O que recusamos</span>
-                            <h2>A indústria da lista.<br><em>Ela vive de volume.</em></h2>
+                            <h2>A indústria da lista.<br> <em>Ela vive de volume.</em></h2>
                             <!-- fm-manifesto:inicio --><div class="fm-manifesto" data-fm-manifesto><p class="fm-manifesto-k">Manifesto</p><ul><li>Não vendemos lista.</li><li>Não prometemos aprovação.</li><li>Não publicamos número que não se comprova.</li><li>Não tratamos ausência de dado como zero.</li><li>Não chamamos de oportunidade o que já venceu.</li></ul><p class="fm-manifesto-ass">Allan Márcio · CEO · Método Capta+</p><a class="fm-manifesto-link" href="estudos/aprovacao-nao-e-captacao/">Por que aprovação não é captação — o dossiê →</a></div><!-- fm-manifesto:fim -->
                         </div>
                         <div class="fm-impact-grid">
@@ -903,7 +922,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
                             <span class="fm-kicker">Evidências</span>
 
-                            <h2>Por que confiar<br><em>no método.</em></h2>
+                            <h2>Por que confiar<br> <em>no método.</em></h2>
 
                             <p>Não pedimos confiança por adjetivo. Mostramos de onde ela vem.</p>
 
@@ -1022,7 +1041,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
                             <span class="fm-kicker">Para quem é</span>
 
-                            <h2>Para quem já fez<br><em>a parte difícil.</em></h2>
+                            <h2>Para quem já fez<br> <em>a parte difícil.</em></h2>
 
                             <p>Se você quer uma lista de editais para disparar proposta, não somos para você. Se quer promessa de aprovação, também não.</p>
 
@@ -1085,7 +1104,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
                             <span class="fm-kicker">Perguntas frequentes</span>
 
-                            <h2>O que costumam perguntar<br><em>antes de começar.</em></h2>
+                            <h2>O que costumam perguntar<br> <em>antes de começar.</em></h2>
 
                         </div>
 
@@ -1100,6 +1119,8 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
                     </div>
 
                 </section>
+
+
 
 
 
@@ -1294,7 +1315,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
                             <span class="fm-kicker">Contato</span>
 
-                            <h2>Fale com a equipe<br><em>do Método Capta+.</em></h2>
+                            <h2>Fale com a equipe<br> <em>do Método Capta+.</em></h2>
 
                             <p>Conte brevemente o que sua equipe precisa organizar. Entramos em contato para uma conversa direcionada ao seu cenário.</p>
 
@@ -1446,7 +1467,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
 <!-- fm-medicao -->
 <script>window.__FM_MEDICAO={"ga4":"G-ZNPVB11E0X","consentimento":"banner","plausible":"","umami":"","endpoint":""};</script>
-<script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=ff81f31f",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
+<script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=490fbd2e",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
 <!-- /fm-medicao -->
 </body>
 

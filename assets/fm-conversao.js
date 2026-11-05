@@ -27,10 +27,17 @@
       var y = window.pageYOffset || document.documentElement.scrollTop || 0;
       var doc = document.documentElement;
       var pertoDoFim = (y + window.innerHeight) > (doc.scrollHeight - 760);
-      var mostrar = y > 720 && !pertoDoFim;
+      /* Um dono por vez no rodapé: com o banner de consentimento em cena, a
+         barra espera. Sem isso ela nascia por baixo do banner e o visitante
+         via dois retângulos sobrepostos no mesmo canto. */
+      var consentimentoEmCena = document.body.classList.contains('fm-consent-on');
+      var mostrar = y > 720 && !pertoDoFim && !consentimentoEmCena;
       bar.classList.toggle("on", mostrar);
       document.body.classList.toggle("fm-bar-on", mostrar);
     };
+
+    /* o banner avisa quando sai; a barra reavalia na hora, sem depender de scroll */
+    document.addEventListener('fm-consent-livre', atualizar);
 
     /* A altura REAL da barra vai para o CSS (--fm-barra-h): o botao do WhatsApp
        sobe acima dela em vez de cair sobre o "Agendar agora". Era um numero fixo

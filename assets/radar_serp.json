@@ -40,7 +40,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As propostas e a documentação deverão ser enviadas até 18 de novembro de 2026 pelo serviço de protocolo eletrônico do MGI. | https://www.gov.br/gestao/pt-br/ass",
    "prazo_conf": "alta",
@@ -76,7 +76,7 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -112,7 +112,7 @@
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Os interessados poderão encaminhar propostas até o dia 12/05/2025 e obter os arquivos do Edital no sítio do SERPRO, pela URL: https://www.serpro.gov.br/consulta",
    "prazo_conf": "alta",
@@ -159,7 +159,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
    "prazo_conf": "alta",
@@ -195,7 +195,7 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/memp/pt-br/acesso-a-informacao/editais/edital-fomento",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Período de inscrição: 06 de outubro a 05 de novembro de 2023 | https://www.gov.br/mpa/pt-br/acesso-a-informacao/editais-de/2023/edital-de-chamamento-publico-no-",
    "prazo_conf": "alta",
@@ -232,7 +232,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Inscrições: a partir das 18h de 26 de março até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
    "prazo_conf": "alta",
@@ -269,7 +269,7 @@
    "http_status": 404,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Período de Inscrições 05/05/2026 à 28/05/2026 | https://s3cache.dom.sc.gov.br/atos/2026/05/1778597474_correcao_cronograma_022026_premiacao_cultural_assinado.pdf",
    "prazo_conf": "alta",
@@ -319,7 +319,7 @@
    "http_status": 200,
    "url_final": "https://pmp.pr.gov.br/website/assets/arquivos/cultura/leiAldirBlanc/2026/Edital_Lei_Aldir_Blanc_2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições poderão ser realizadas no período de 11 de agosto de 2026, a partir das 08h00, até as 23h59 do dia 25 de agosto de 2026. | https://pmp.pr.gov.br/w",
    "prazo_conf": "alta",
@@ -355,7 +355,7 @@
    "http_status": 404,
    "url_final": "https://www.mapacultural.pe.gov.br/oportunidade/3233/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Das 8:00 horas do dia 13/04/2026 até às 18:00 horas do dia 24/04/2026. | https://www.lagodapedra.ma.gov.br/cultura/editais/20/60/EDITAL_DE_FOMENTO_CULTURAL_Nm_0",
    "prazo_conf": "alta",
@@ -391,7 +391,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/politica-nacional-aldir-blanc",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições estarão disponíveis das 8:00h do dia 29 de abril de 2026 até o dia 29 de maio de 2026 às 17:00 | https://www.parisi.sp.gov.br/portal/download/arqu",
    "prazo_conf": "alta",
@@ -427,7 +427,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/PNAB",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "até às 18h00min59seg do dia 27 de abril de 2026 | https://www.cultura.pr.gov.br/print/pdf/node/7623#1#1#1 (busca)",
    "prazo_conf": "alta",
@@ -463,7 +463,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/politica-nacional-aldir-blanc-de-fomento-a-cultura",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições estarão disponíveis das 8:00h do dia 29 de abril de 2026 até o dia 29 de maio de 2026 às 17:00 | https://www.parisi.sp.gov.br/portal/download/arqu",
    "prazo_conf": "alta",
@@ -499,7 +499,7 @@
    "http_status": 200,
    "url_final": "https://cotia.sp.gov.br/politica-nacional-aldir-blanc-pnab/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "no período de 22 de setembro a 21 de outubro de 2026 | https://cotia.sp.gov.br/wp-content/uploads/2026/10/lista-de-incricoes-validas-editl-04-2026-pnab-pncv-cot",
    "prazo_conf": "alta",
@@ -535,7 +535,7 @@
    "http_status": 200,
    "url_final": "https://www.umbuzeiro.pb.gov.br/servicos/editais-pnab-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -586,7 +586,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-snsa-mcid-no-01-2026",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -629,10 +629,10 @@
     ],
     "trecho": "/cinep chamamento publico no 001/2025. procedimento de habilitacao das associacoes e/ou cooperativas de catadores de materiais reciclaveis. processo cin-prc-2024/01005 a companhia de desenvolvimento da paraiba-cinep, torna publico, para conhecimento dos interessados, que na data entre 22 a 30 de setembro de 2025, no horario das 08:00 horas as 16:00 horas, fara realizar proce"
    },
-   "http_status": 200,
+   "http_status": null,
    "url_final": "https://www.cinep.pb.gov.br/portal/?page_id=13953",
-   "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "no período de 22 a 30 de setembro 2025 a seguinte documentação | https://www.cinep.pb.gov.br/portal/wp-content/uploads/2025/10/EDITAL-DE-CHAMAMENTO-1.pdf",
    "prazo_conf": "alta",
@@ -677,7 +677,7 @@
    "http_status": 200,
    "url_final": "https://www.esporte.pr.gov.br/Pagina/Proesporte-Lei-de-Incentivo-Edital-06",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "O período para inscrição de projetos neste edital começa às 8h do dia 17 de fevereiro de 2025 e vai até as 23h59 de 17 de abril de 2025. | https://www.parana.pr",
    "prazo_conf": "alta",
@@ -711,9 +711,9 @@
     "modelo": "jev-1.14.0"
    },
    "http_status": 200,
-   "url_final": "https://www.gov.br/esporte/pt-br/acoes-e-programas-1/lei-de-incentivo-ao-esporte/modelos-e-manuais-3/pdlie_mesp-2026.docx",
+   "url_final": "https://www.gov.br/esporte/pt-br/acoes-e-programas/lei-de-incentivo-ao-esporte/modelos-e-manuais-3/pdlie_mesp-2026.docx",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -762,7 +762,7 @@
    "http_status": 200,
    "url_final": "https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital-123-2026-flim-2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "De 15 dias úteis, sendo das 9 horas do dia 19/05/2026 até às 14 horas do dia 12/06/2026. | https://maringacultura.maringa.pr.gov.br/files/opportunity/930/edital",
    "prazo_conf": "alta",
@@ -795,10 +795,10 @@
     "em": "2026-11-04",
     "modelo": "jev-1.14.0"
    },
-   "http_status": 404,
+   "http_status": null,
    "url_final": "https://www3.maringa.pr.gov.br/construtor/arquivos/110626110011_sei8796780editaldechamamentopublico3_pdf.pdf",
-   "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -814,7 +814,7 @@
    "http_status": 404,
    "url_final": "https://maringacultura.maringa.pr.gov.br/oportunidade/983/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true,
@@ -849,7 +849,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Período para entrega dos documentos de inscrição/credenciamento/habilitação: 11/05/2026 a 18/05/2026. | https://www.gov.br/dnit/pt-br/acesso-a-informacao/partic",
    "prazo_conf": "alta",
@@ -885,7 +885,7 @@
    "http_status": null,
    "url_final": "https://www.sinir.gov.br/sistemas/catadores/",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "A data limite para o envio das propostas é 23:59 horas do dia 07/08/2024. | https://www.gov.br/mma/pt-br/composicao/secex/dfre/fundo-nacional-do-meio-ambiente/e",
    "prazo_conf": "alta",
@@ -929,7 +929,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-apoio-ao-fortalecimento-das-cooperativas-de-catadores-as-de-materiais-reciclaveis",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "poderá ser interposta no período de 17/09/2024 até o prazo limite de 24/09/2024 | https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/edita",
    "prazo_conf": "alta",
@@ -981,7 +981,7 @@
    "http_status": 200,
    "url_final": "https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "O prazo para submissão de propostas foi encerrado no dia 07/08/2024. | https://sinir.gov.br/perfis/editais/edital-catadores-fnma-sqa-no-1-2024/ (fetch)",
    "prazo_conf": "alta",
@@ -1017,7 +1017,7 @@
    "http_status": 200,
    "url_final": "https://www.sema.df.gov.br/termos-de-colaboracao",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true,
@@ -1060,7 +1060,7 @@
    "http_status": 200,
    "url_final": "https://www.coqueiral.mg.gov.br/portal/editais/0/1/1219/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true,
@@ -1102,7 +1102,7 @@
    "http_status": null,
    "url_final": "https://www.seeduc.rj.gov.br/mais/chamamento-público",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições serão realizadas exclusivamente pela internet, no período de 04/12/2021 a 08/12/2021 às 12 horas. | https://www.projetoeco.uerj.br/wp-content/uplo",
    "prazo_conf": "alta",
@@ -1138,7 +1138,7 @@
    "http_status": 404,
    "url_final": "https://mapacultural.pa.gov.br/oportunidade/2061/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Do dia 03/07/2026 até às 23h59min do dia 26/07/2026. | https://mapacultural.iracema.ce.gov.br/files/opportunity/8093/edital-de-chamamento-publico-n-001-2026-pna",
    "prazo_conf": "alta",
@@ -1174,7 +1174,7 @@
    "http_status": 404,
    "url_final": "https://mapacultural.pa.gov.br/oportunidade/2116/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "O prazo para envio dos documentos de habilitação será de 25 de junho a 01 de julho de 2026, através do link: https://mapacultural.pa.gov.br/oportunidade/2116/#i",
    "prazo_conf": "alta",
@@ -1211,7 +1211,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "das 16 horas do dia 8 de maio de 2026 às 18 horas do dia 12 de maio de 2026 (horário oficial de Brasília/DF) | https://www.gov.br/pf/pt-br/acesso-a-informacao/s",
    "prazo_conf": "alta",
@@ -1254,7 +1254,7 @@
    "http_status": 200,
    "url_final": "https://digital.belem.pa.gov.br/wp-content/uploads/2026/03/EDITAL-DE-CHAMAMENTO-PUBLICO-01-2026_.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições serão gratuitas e estarão abertas no período de 00h do dia 05 de mar- ço de 2026 às 23h59 do dia 09 de março de 2026 | http://ioepa.com.br/pages/2",
    "prazo_conf": "alta",
@@ -1307,7 +1307,7 @@
    "http_status": 200,
    "url_final": "https://sectet.pa.gov.br/audiovisual/basic-page/chamamentos-abertos",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Sessão pública para credenciamento, entrega e recebimento dos envelopes. 22/01/2026 | https://www.sectet.pa.gov.br/sites/default/files/EDITAL%20DE%20CHAMAMENTO%",
    "prazo_conf": "alta",
@@ -1350,7 +1350,7 @@
    "http_status": 200,
    "url_final": "https://www.seplad.pa.gov.br/chamamento-pub-jun-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Os agentes financeiros interessados deverão enviar suas propostas, até o dia 13 de janeiro de 2026, na forma do ANEXO nº 02 do presente instrumento, para o segu",
    "prazo_conf": "alta",
@@ -1402,7 +1402,7 @@
    "http_status": 200,
    "url_final": "https://www.fapespa.pa.gov.br/wp-content/uploads/2026/10/Edital-e-Anexos-Projeto-Reciclagem-e-Economia-Circular.PUBLICACAO.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "jev": {
     "mecanismo": "MROSC",
@@ -1435,7 +1435,7 @@
    "http_status": null,
    "url_final": "https://www.parceriassociais.sp.gov.br/OSC/Chamamento",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "2 Envio das Propostas pelas OSC's. 22/10/2025 a 21/11/2025 | http://www.parceriassociais.sp.gov.br/OSC/MinhaArea/AnaliseCP/Buscar_Anexo_PorId/04fa283f-11ab-43dc",
    "prazo_conf": "alta",
@@ -1478,7 +1478,7 @@
    "http_status": 200,
    "url_final": "https://www.educacao.sp.gov.br/educacao/transparencia/participacao_social/chamamentos-publicos",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As inscrições estão abertas até 28/04/2023, às 17h e devem ser encaminhadas para o e-mail: comeleitoral@educacao.sp.gov.br. | https://www.educacao.sp.gov.br/edu",
    "prazo_conf": "alta",
@@ -1517,7 +1517,7 @@
    "http_status": null,
    "url_final": "https://portal.prodam.sp.gov.br/chamamento-público",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "jev": {
     "mecanismo": "OUTRO",
@@ -1550,7 +1550,7 @@
    "http_status": 200,
    "url_final": "https://doe.sp.gov.br/executivo/secretaria-da-educacao/edital-de-chamamento-publico-n-2-de-15-de-janeiro-de-2026-202601151322161574597",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true,
@@ -1603,7 +1603,7 @@
    "http_status": 200,
    "url_final": "https://www.saude.sp.gov.br/ses/perfil/cidadao/homepage/outros-destaques/editais-de-chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true,
@@ -1645,7 +1645,7 @@
    "http_status": null,
    "url_final": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/publicações/política+estadual+sobre+drogas/editais+e+dispensas+de+chamamento+público+(DPOD)",
    "link_classe": "falha",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "As propostas deverão ser apresentadas pelas OSC´s no período de 04/05/2026 a 02/06/2026, no Portal de Parceiras Sociais http://www.parceriassociais.sp.gov.br/os",
    "prazo_conf": "alta",
@@ -1662,7 +1662,7 @@
    "http_status": 404,
    "url_final": "http://cehap.pb.gov.br/anexos/cham_publico_001_2026/AVISO+ABERTURA.pdf",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "de 19/08/2026 a 21/08/2026 das 08:30h às 11:30 e das 14:00h às 16:30h | https://ourovelho.pb.gov.br/wp-content/uploads/2026/08/Edital-de-Chamamento-Publico-No-0",
    "prazo_conf": "alta",
@@ -1679,7 +1679,7 @@
    "http_status": 404,
    "url_final": "https://detran.pb.gov.br/portaria-instrucoes-normativas/dtrprc202555454v02_88678152.pdf/view",
    "link_classe": "morto",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt",
    "prazo_verificado_em": "2026-11-04",
    "sem_prazo_declarado": true
@@ -1702,7 +1702,7 @@
    "http_status": 200,
    "url_final": "https://guarabira.pb.gov.br/fian-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "prazo_origem": "extraido do documento",
    "prazo_ctx": "Os interessados deverão entregar a documentação para o Credenciamento no período das 08h00min de 26 de maio de 2026 até às 12h00min do dia 02 de junho de 2026 |",
    "prazo_conf": "alta",
@@ -1734,7 +1734,7 @@
    "http_status": 200,
    "url_final": "https://cehap.pb.gov.br/sitecehap/transparencia/chamamentos-publicos/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-04",
+   "verificado_em": "2026-11-05",
    "idioma": "pt"
   },
   {
@@ -1755,7 +1755,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %���� 41 0 obj > stream x�՚w|t���gφ'�lb\u0012\u0002 �%\u0011\\��p$k\u001a�\b$$���e�\b\u0010 ��\u0004�\"�u\u0014{g����,(\u0001 �;(������*v�^\u0014���y� �^��}?������o�)gμ3s& b !u�d���a��vx쥈| *�\u0016�\u001a���a!�x��u-m��jx8� b�?q�0wᚃ��bd�g#ι�+j�\u000f�q7ك2k�j|տ��b\u0017\"�}� q���!s�\u0010�\u0016���-l^ � �h �/k��*�\\���t �1 }�\u001b����\u0000�b��| kz� �\u0003i _�lx�� ���bt�f�74�4t�ۻ�\u0010iqh�ka s��\"\\d��\u0014>\u00145z���\u0010�5\u0011%��pm��lz�\u0017b`p��s\u0001z�v��\\j� ����\u0011⸐�en�2�b\u0006u�igx�:�hʒĸ�\u0011�\u0013a�/4\u0002*��j\u0006�f)h��`"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/45780103000150/compras/2026/644/arquivos/1#1#6#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO DE EDITAL CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO Nº",
@@ -1775,7 +1779,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %���� 1 0 obj >>> endobj 2 0 obj > endobj 3 0 obj > endobj 4 0 obj > endobj 5 0 obj > endobj 6 0 obj > endobj 7 0 obj > endobj 8 0 obj > endobj 9 0 obj > endobj 10 0 obj > endobj 11 0 obj >stream x�msˊ�@ ��+� ��� !0;v� �\u000f�� ��hi����b,�-�t*ɽu\\߾.��z��x��w���^~.ok�$gn˧\u0019mk�_���ک1�ۏ�\u000e?b܂}��� �g0w�n����\u0018q� y��\\�lx\u0013d�4�n�˅�t!��\u0001�x�x�\u000e���o( @��h��j%2�\u0016�\u0003�\u0014��wd ��׷hr8�y�\"w��@]�j�:t&o5=�u\u0018�i��jx7�"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/75829416000116/compras/2026/80/arquivos/1#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "EDITAL DE CREDENCIAMENTO Chamamento Público/Credenciamento – 005/2026",
@@ -1795,7 +1803,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %���� 1 0 obj > endobj 2 0 obj > endobj 3 0 obj >/extgstate >/font >/procset[/pdf/text/imageb/imagec/imagei] >>/mediabox[ 0 0 595.3 841.9] /contents 7 0 r/group >/tabs/s>> endobj 4 0 obj > stream x��w|tu���s�mz!�\u0010 �$@\u0002i��b i& =�\u0000�bc\u0010d�\" v��(\u0016\u0004\u0014\u0005\u0015�����uwky{y׊���ww��\u0006��ι�djf�� �l���z��&�g_���s���� b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!�\u0010b\b!"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07333598000180/compras/2026/17/arquivos/1#1#2#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO 001/2026",
@@ -1809,7 +1821,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/03239027000120/compras/2026/1/arquivos/1#1#8#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Edital de Chamamento Público para Termo de Colaboração CHAMAMENTO PÚBLICO Nº 001/2026",
@@ -1829,7 +1845,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %���� 1 0 obj > endobj 2 0 obj > endobj 3 0 obj > endobj 4 0 obj >/mediabox[ 0 0 595.5 842]/parent 2 0 r /resources 6 0 r /type/page>> endobj 5 0 obj >stream x���mn�0\u0010����-[�8v~j`gh@a)�$tиi\u0002 *�ƴ��g�\u0005�\u0004\"�g�f�4� �γa\\\u001af۩�xcns �ƚ�ܯe�+ ����f��\u001a���6 >/procset[/pdf/text/imageb/imagec/imagei]/xobject >>> endobj 7 0 obj > endobj 8 0 obj >stream x�]r�n�0\u0010��\u0015>��\bl\u001a�%�di�8���~\u0000�%e*\u0006\u0019r�لاvҫhx�gvvk?/��"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13825476000103/compras/2026/139/arquivos/1#1#25#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO",
@@ -1849,7 +1869,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 4 0 obj (identity) endobj 5 0 obj (adobe) endobj 8 0 obj > stream x�� `t��?>sᄇ��lޛlbn�$\u0004\u0012�\u0010\u0002���7 �$�\u0001 \"f��$����\u001b^\u0002\"\"`de�7\"z�\u000f�.\u0011\u0015�\"*e��/�v��������v����� � z�������ss��yϙ�3s�y �\u0010�\u0005�b-����s� nc�x\u0003bi�ʊk\u001b\u0006 �\u0014\u0010 �d\b;ʊ�j�>p�\u0005 \b ��e����(r�z\u0019!�\u0007�kk�w7�\u001b��a\u0017\u0012��3�����d�8���h ����ɻ�i�#p�qh������[��e'���m� h�\b�2$m|l-���h�t�7�%�>h�@\u000f�`��\u0004� ���f������ � a��zp0��\u0007�yt+ �\u001a�?���s\u000e�dn\u0014 �\u0010 �\u0010 ��_ �q�*\u0014"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07777639000127/compras/2026/58/arquivos/1#1#6#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 008/2026",
@@ -1869,7 +1893,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.5 %���� 1 0 obj >>> endobj 2 0 obj > endobj 3 0 obj >/extgstate >/xobject >/procset[/pdf/text/imageb/imagec/imagei] >>/annots[ 30 0 r 31 0 r 32 0 r] /mediabox[ 0 0 595.32 841.92] /contents 4 0 r/group >/tabs/s/structparents 0>> endobj 4 0 obj > stream x��=�n g�w\u0001��:v\u000f���w=\u0004�x��g$x\u000f[�\u0007`�ݤj �z�����|�=�\u0017�eo\u0016|\u0010��o�o\u001b\u0011�y��j6�l�6`��*�\"22#2�}x�\\\u0017��t |����z�o��g�w���⯇��x�\u000f_�\u0017e���� |����ix�x\u0018�����\u0003"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13910211000103/compras/2026/103/arquivos/1#1#6#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO DE LICITAÇÃO – Concorrência Pública Nº 001/2026 - Prefeitura Municipal de Potim - SP",
@@ -1898,7 +1926,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "tem anterior podera ensejar desclassificacao no momento da habilitacao. 4.8 e vedada a participacao na licitacao de empresas: 4.9. que tenha sido declarada inidonea por orgao ou entidade da administracao publica direta ou indireta, federal, estadual, municipal ou do distrito federal ou que estejam cumprindo periodo de suspensao no ambito da administracao municipal, nos termos do art. 156, iii"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.potim.sp.gov.br/aviso-de-licitacao-concorrencia-publica-n-001-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Contratação 004/2026 | GanhaLicita",
@@ -1919,7 +1951,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "construcao 20 unidades — padre carvalho/mg · encerrada pular para o conteudo principal construcao 20 unidades habitacionais contratacao no 004/2026 · concorrencia eletronica ver licitacoes abertas em minas gerais → concorrencia eletronica propostas ate 18/05/2026 09:00 valor estimado r$ 2.869.998,65 baixar o documento (pdf) · r$ 9,90 proc r$ 9,90 por todos os documentos desta licitacao, pix ou car"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://ganhalicita.com.br/contratacao/41cdfcbd-8166-409d-bb56-4d01e77be3b1/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Contratação CCE 11/2026 | GanhaLicita",
@@ -1940,7 +1976,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "construcao da unidade basica — santo antonio da platina/pr pular para o conteudo principal construcao da unidade basica de saude centro contratacao no cce 11/2026 · concorrencia eletronica ver licitacoes abertas no parana → concorrencia eletronica propostas ate 26/06/2026 08:00 valor estimado r$ 1.435.942,77 baixar o edital (pdf) · r$ 9,90 edital 175/2026 3106 r$ 9,90 por todos os documentos desta"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://ganhalicita.com.br/contratacao/9307e53c-97cd-4197-924f-23b9bb86bae1/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Contratação 00010/2026 | GanhaLicita",
@@ -1961,7 +2001,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "secretaria municipal — pindamonhangaba/sp · encerrada pular para o conteudo principal secretaria municipal de servicos publicos contratacao no 00010/2026 · concorrencia eletronica ver licitacoes abertas em sao paulo → concorrencia eletronica propostas ate 27/07/2026 10:59 valor estimado r$ 194.738,49 baixar o edital · r$ 9,90 edital r$ 9,90 por todos os documentos desta licitacao, pix ou cartao va"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://ganhalicita.com.br/contratacao/fbf13e39-d73a-46b4-b89e-d5237538159d/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Contracting of a specialized company to maintain...",
@@ -1975,7 +2019,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "en"
+   "idioma": "en",
+   "http_status": 200,
+   "url_final": "https://bidsfactory.com/en/tenders/contratacao-de-empresa-especializada-em-manter-ser-brazil_pncp-77fa631f18dd4df2",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "PROCESSO Nº 155/2026/PMES – PREGÃO ELETRÔNICO Nº 57/2026 (MODO DE DISPUTA ABERTO/FECHADO). Objeto: Contratação de empresa especializada para",
@@ -2003,7 +2051,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "assessoria tecnica. 3 da apresentacao da proposta e dos documentos de habilitacao: 3.1 os licitantes encaminharao, exclusivamente por meio do sistema eletronico, a proposta com o preco, conforme o criterio de julgamento adotado neste edital, ate o fim do recebimento de propostas. 3.2 no cadastramento da proposta inicial, o licitante declarara, em campo proprio do sistema, que: 3.2.1 cump"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-155-2026-pmes-pregao-eletronico-no-57-2026-modo-de-disputa-aberto-fechado-objeto-contratacao-de-empresa-especializada-para-execucao-de-obra-de-reforma-e-ampliacao-da-escola-municipal",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO LICITAÇÃO CONCORRÊNCIA ELETRÔNICA Nº 022/2026",
@@ -2033,7 +2085,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "item anterior podera ensejar desclassificacao no momento da habilitacao. da participacao na concorrencia. poderao participar desta concorrencia interessados cujo ramo de atividade seja compativel com o objeto desta licitacao, e que estejam com credenciamento regular na portal de compras publicas. sera concedido tratamento favorecido para as microempresas e empresas de pequeno porte, para as socied"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.pombal.pb.gov.br/aviso-licitacao-concorrencia-eletronica-no-022-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Edital - Chamamento Público Nº 015/2026",
@@ -2047,7 +2103,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/76995455000156/compras/2026/88/arquivos/5#29#39#29",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -2067,7 +2127,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %���� 140 0 obj > stream x�]r�n�0\u0010��\u0015>��\bl\u001a�%�di�8���~\u0000�%e*\u0006\u0019r�لاvҫhx�gvvk?/���\u0017ι��`\u0011]�[\u0003�x5 �3\\z��p�}�� ��po���j�\u0017\u0018jݍ^���x6/f\u0015�� ������\u0005���|�\u0015��4}�\u0000z\u0011�����\u000e}��� @�,-��˺e�u\u0002\u0011�^�,��� �\u0012\u0006!\u0011j\"v!\u00132&bgg%r\"h��d��\\}2el1n\u0005��\u0005h�j��\u0002�e�\u0013�\"\u0019a*\u0012h����:\u0011��d\u0011��9c���[�x\u001b1~��\"�3�g�\u0013�n�;o�� > endobj 142 0 obj > endobj 144 0 obj > /matte [0 0 0] /length 6439 >> stream x�� \\m����m�� �\u0006�d)��\"soo��$%b懧�\u0014!�de�"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/840/arquivo/4682/#1#18#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -2081,7 +2145,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/799/arquivo/4292/#1#50#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -2095,7 +2163,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/850/arquivo/4751/#1#30#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "ATESTADOS DE",
@@ -2115,7 +2187,11 @@
      "RG e CPF dos dirigentes"
     ],
     "trecho": "%pdf-1.7 %�쏢 %%invocation: path/gswinc.exe -ddisplayformat=198788 -ddisplayresolution=96 -dbatch -dnopause -dsafer -dallowpstransparency -sfontpath=? -dnewpdf=true -sdevice=pdfwrite -soutputfile=? -dcompatibilitylevel=1.7 -dautorotatepages=/pagebypage %%+ -dembedallfonts=true -dsubsetfonts=true -dprocesscolormodel=/devicergb -scolorconversionstrategy=leavecolorunchanged -dpreserveannots=true -da"
-   }
+   },
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/77821841000194/compras/2026/40/arquivos/4#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Anexos: 2026_03_04_PNCP_PE_013_2026.pdf 2026_03_04_SAAE_PE_013_2026.pdf",
@@ -2129,7 +2205,11 @@
    "tipo_item": "edital",
    "doc_em": "2026-11-04",
    "fonte": "pncp-busca",
-   "idioma": "pt"
+   "idioma": "pt",
+   "http_status": 200,
+   "url_final": "https://www.saaeaparecida.sp.gov.br/portal/download/licitacoes-anexos/nqxx-o/#49#51#49",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "2026 Pregão 071-2026",
@@ -2143,7 +2223,11 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://wtc.lagoasanta.mg.gov.br/licitacao/pregao/12899-2026-pregao-71-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-05"
   },
   {
    "titulo": "Estado do Ceará - Prefeitura Municipal de Cedro - Aviso - Chamamento Público N°",
@@ -2157,10 +2241,14 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-05",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://www.saae.quixeramobim.ce.gov.br/arquivos_download/licitacao/286/1404#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-05"
   }
  ],
  "jev_em": "2026-11-05",
  "prazos_em": "2026-11-05",
- "links_em": "2026-11-04"
+ "links_em": "2026-11-05"
 }
