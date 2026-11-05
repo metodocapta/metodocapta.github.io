@@ -560,3 +560,32 @@ html.fm-movimento .fm-decision-cta .fm-btn-primary{animation:mcGlowPulse 4.6s ea
   .fm-dec5-card p{margin:4px 0 0;font-size:13.5px;line-height:1.5}
   .fm-dec5-card a{margin-top:4px;padding:6px 0;font-size:13px}
 }
+
+/* ==========================================================================
+   TOQUE: LINK ESTICADO, PISTA DE ROLAGEM E ALVO DE 44px (05/11/2026)
+   Medido antes:
+     - .fm-dec5-card: o link ocupava 4 a 7% do cartao - no celular, tocar no
+       titulo nao fazia nada e a pessoa concluia que o site estava quebrado;
+     - .fm-etapas-rail: 619 px de conteudo em 345 px visiveis, cortado no meio
+       de uma palavra e sem nenhuma pista de que rola;
+     - e-mail de contato: alvo de 15 px de altura.
+   Nenhuma palavra do conteudo foi alterada.
+   ========================================================================== */
+/* O cartao E o link: nenhuma camada por cima, area 100% clicavel.
+   (O ::after com inset:0 era o mesmo padrao do fm-capta-grid-bg e o portao
+   do build reprovou - com razao.) */
+a.fm-dec5-card{display:block;text-decoration:none;color:inherit}
+a.fm-dec5-card:focus-visible{outline:2px solid #7fe3d8;outline-offset:3px}
+.fm-dec5-link{display:inline-block;margin-top:12px;color:#eafff7;font-size:12px;
+              text-decoration:underline;text-underline-offset:3px}
+
+.fm-etapas-rail{
+  scroll-snap-type:x proximity;
+  -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+  mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+}
+.fm-etapas-rail ol{scroll-snap-type:x proximity}
+.fm-etapas-rail li{scroll-snap-align:start;min-height:44px;display:inline-flex;align-items:center}
+.fm-etapas-rail button{min-height:44px}
+
+div > a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px;padding:8px 0}
