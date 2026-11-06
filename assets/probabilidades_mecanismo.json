@@ -1,0 +1,79 @@
+{
+ "_nota": "Taxa-base por mecanismo para a Arvore de Decisao (skill 09). REGRA: taxa so existe com denominador, periodo e fonte. Faltando qualquer um, status=nao_estimada e motivo escrito. Nenhum numero aqui foi estimado.",
+ "atualizado_em": "2026-11-06",
+ "regra": "taxa = aprovados / submetidos, com periodo e fonte; sem isso, nao_estimada",
+ "mecanismos": {
+  "ROUANET": {
+   "status": "a_coletar",
+   "taxa": null,
+   "denominador": "propostas submetidas por ano",
+   "periodo": null,
+   "fonte": "SALIC / dados.cultura.gov.br (painel 'projetos avaliados por ano')",
+   "formato": "base aberta + painel",
+   "motivo": "base publica existe; falta extrair denominador e recorte por ano"
+  },
+  "MROSC": {
+   "status": "a_coletar",
+   "taxa": null,
+   "denominador": "propostas apresentadas por programa/ano",
+   "periodo": null,
+   "fonte": "API Transferegov — modulo Discricionarias e Legais",
+   "formato": "API REST",
+   "motivo": "API publicada em out/2026; falta mapear programa -> propostas"
+  },
+  "EMENDA": {
+   "status": "a_coletar",
+   "taxa": null,
+   "denominador": "emendas indicadas por exercicio",
+   "periodo": null,
+   "fonte": "API Transferegov — Transferencias Especiais",
+   "formato": "API REST",
+   "motivo": "mesma familia da MROSC; depende de recorte por parlamentar"
+  },
+  "LIE": {
+   "status": "verificar",
+   "taxa": null,
+   "denominador": "projetos submetidos ao Ministerio do Esporte",
+   "periodo": null,
+   "fonte": "portal do Ministerio do Esporte",
+   "formato": "relatorio/planilha",
+   "motivo": "existe resultado de aprovados; falta confirmar publicacao dos submetidos"
+  },
+  "LIR": {
+   "status": "verificar",
+   "taxa": null,
+   "denominador": "propostas por chamada",
+   "periodo": null,
+   "fonte": "orgao gestor do chamamento",
+   "formato": "a confirmar",
+   "motivo": "chamamentos pontuais; base nao consolidada"
+  },
+  "PNAB": {
+   "status": "parcial",
+   "taxa": null,
+   "denominador": "inscritos por edital/UF",
+   "periodo": null,
+   "fonte": "editais estaduais e municipais (resultados publicados)",
+   "formato": "HTML/PDF heterogeneo",
+   "motivo": "publicacao desigual entre entes; risco de vies por UF"
+  },
+  "FIA": {
+   "status": "nao_estimada",
+   "taxa": null,
+   "denominador": null,
+   "periodo": null,
+   "fonte": null,
+   "formato": null,
+   "motivo": "conselhos municipais (CMDCA); sem base nacional consolidada"
+  },
+  "FUNDO_IDOSO": {
+   "status": "nao_estimada",
+   "taxa": null,
+   "denominador": null,
+   "periodo": null,
+   "fonte": null,
+   "formato": null,
+   "motivo": "conselhos municipais/estaduais; sem base nacional consolidada"
+  }
+ }
+}
