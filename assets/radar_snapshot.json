@@ -3,7 +3,7 @@
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 2070,
+  "oportunidades": 2085,
   "elegiveis": 11,
   "estruturados": 6,
   "matches": 4
@@ -12,7 +12,7 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 820
+   "total": 823
   },
   {
    "codigo": "MROSC",
@@ -22,7 +22,7 @@
   {
    "codigo": "ROUANET",
    "rotulo": "PRONAC ROUANET",
-   "total": 884
+   "total": 894
   },
   {
    "codigo": "LIR",
@@ -52,7 +52,7 @@
   {
    "codigo": "PNAB",
    "rotulo": "PNAB",
-   "total": 7
+   "total": 9
   }
  ]
 }
