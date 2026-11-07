@@ -248,7 +248,10 @@ body .entry-title:empty { display: none !important; }
 }
 
 @media (max-width: 900px) {
-    .fm-container { width: min(100% - 30px, 720px); }
+    /* Respiro lateral: 22px de cada lado, o mesmo do desktop.
+       Antes eram 15px (e 12px no celular) e os cartoes encostavam na borda
+       da tela — sem margem para o olho descansar. */
+    .fm-container { width: min(100% - 44px, 720px); }
     .fm-header-inner { min-height: 70px; }
     .fm-brand img { max-width: 270px; max-height: 46px; }
     .fm-menu-toggle { display: block; }
@@ -281,7 +284,7 @@ body .entry-title:empty { display: none !important; }
 }
 
 @media (max-width: 640px) {
-    .fm-container { width: min(100% - 24px, 520px); }
+    .fm-container { width: min(100% - 40px, 520px); }
     .fm-header-inner { min-height: 66px; }
     .fm-brand img { max-width: 235px; max-height: 40px; }
     .fm-menu-toggle { width: 40px; height: 40px; }

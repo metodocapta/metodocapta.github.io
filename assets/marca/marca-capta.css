@@ -1529,3 +1529,24 @@ body.nav-lock{overflow:hidden}
    ========================================================================== */
 select option{background:#ffffff;color:#0d1f35}
 select option:checked{background:#0A4A4A;color:#ffffff}
+
+/* ==========================================================================
+   RESPIRO DOS CARTOES NO MOBILE (07/11/2026)
+   Duas folgas, medidas no celular:
+     1) a tela ganhou margem lateral propria (landing.css: 20px de cada lado,
+        antes 12px) - os cartoes nao encostam mais na borda do aparelho;
+     2) dentro do cartao, o texto tem piso de 16px e quebra palavra longa em
+        vez de estourar a moldura.
+   A lista de "cinco perguntas" (sem moldura no celular) fica como esta.
+   ========================================================================== */
+@media (max-width: 760px){
+  .fm-radar-kpi{padding:16px 16px 14px}
+  .fm-pillar h3,.fm-audience-card strong,.fm-method-layer h3,.fm-tool strong,
+  .fm-case h3,.fm-faq-item summary,.fm-radar-kpi span,.fm-radar-kpi small,
+  .fm-pillar > span,.fm-pillar p,.fm-dec5-card h3,.fm-dec5-card p,
+  .fm-dec5-card .q,.fm-dec5-card a,.fm-tool span,.fm-case p{
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
+
