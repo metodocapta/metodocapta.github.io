@@ -547,13 +547,12 @@ html.fm-movimento .fm-decision-cta .fm-btn-primary{animation:mcGlowPulse 4.6s ea
   .fm-dec5-card a{margin-top:8px;padding:6px 0;font-size:12.5px}
 }
 @media (max-width: 760px){
-  /* <=760 px: ai sim vira lista — em 1 coluna, moldura de cartao e so peso. */
-  .fm-dec5-grid{grid-template-columns:1fr;gap:0;margin-top:18px}
-  /* Especificidade (0,3,0): `.fm-band-light .fm-dec5-card` (0,2,0) do tema
-     repunha borda e gradiente e a lista continuava parecendo cartao. */
-  .fm-section .fm-dec5-grid .fm-dec5-card{padding:12px 0;border:0;
-                border-top:1px solid rgba(127,227,216,.16);border-radius:0;
-                background:none;box-shadow:none}
+  /* <=760 px: uma coluna. O cartao continua com moldura (a borda de vidro vem
+     de `.fm-pillar,...,.fm-dec5-card{...!important}`, acima), entao ele precisa
+     de respiro interno: antes o padding era 12px 0 e o texto encostava na linha. */
+  .fm-dec5-grid{grid-template-columns:1fr;gap:10px;margin-top:18px}
+  .fm-section .fm-dec5-grid .fm-dec5-card{padding:14px 16px;
+                border-radius:14px;box-shadow:none}
   .fm-dec5-card .n{font-size:11.5px}
   .fm-dec5-card h3{margin:2px 0 0;font-size:16px}
   .fm-dec5-card .q{margin:3px 0 0;font-size:13px}
