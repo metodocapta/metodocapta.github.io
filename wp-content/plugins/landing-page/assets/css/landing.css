@@ -37,8 +37,11 @@ body .entry-title:empty { display: none !important; }
     --fm-radius: 26px;
     --fm-shadow: 0 32px 90px rgba(0, 0, 0, .34);
     position: relative;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    /* 100vw inclui a barra de rolagem: com margem negativa, o bloco comecava
+       7,6px fora da tela e o cartao da esquerda encostava na borda, enquanto
+       a direita parecia folgada. O pai ja e full-width, entao 100% e exato. */
+    width: 100%;
+    margin-left: 0;
     overflow: clip;
     color: var(--fm-text);
     background: var(--fm-bg);
