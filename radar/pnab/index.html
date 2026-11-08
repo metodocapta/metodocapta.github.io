@@ -8,8 +8,8 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://metodocapta.github.io/radar/pnab/" />
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2026-11-07">
-<meta property="article:modified_time" content="2026-11-07">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="article:modified_time" content="2026-11-08">
 <meta property="og:title" content="PNAB: editais por município e quem participa | Método Capta+">
 <meta property="og:description" content="Como funciona a PNAB (Lei 14.399/2022): repasses a municípios e estados, editais locais de cultura, quem pode participar e prazos.">
 <meta property="og:url" content="https://metodocapta.github.io/radar/pnab/">
@@ -150,11 +150,33 @@ html,body{overflow-x:hidden}}
 <script defer src="../../assets/fm-eventos.min.js?v=5cf36c11"></script>
 <link rel="stylesheet" href="../../assets/marca/marca-capta.min.css?v=79b0a56a">
 <link rel="stylesheet" href="../../assets/marca/movimento.min.css?v=4ebbb84a">
+<script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
 <meta property="og:image:type" content="image/jpeg" />
 <meta name="twitter:title" content="PNAB: editais por município e quem participa | Método Capta+" />
 <meta name="twitter:description" content="Como funciona a PNAB (Lei 14.399/2022): repasses a municípios e estados, editais locais de cultura, quem pode participar e prazos." />
 <meta name="twitter:image" content="https://metodocapta.github.io/assets/marca/og-metodo-capta.jpg" />
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "PNAB é lei de incentivo fiscal?", "acceptedAnswer": {"@type": "Answer", "text": "Não. É política pública de fomento (repasse), com editais locais, e não destinação de IR."}}, {"@type": "Question", "name": "Quem publica os editais?", "acceptedAnswer": {"@type": "Answer", "text": "Cada estado e município que recebe os recursos — com prazos e regras próprios."}}, {"@type": "Question", "name": "Coletivos informais podem participar?", "acceptedAnswer": {"@type": "Answer", "text": "Depende do edital; muitos admitem agentes culturais de diversas naturezas, com requisitos próprios."}}]}</script>
+<!-- fm-hier-css -->
+<style>
+.fm-hier{margin:34px 0 0;padding:20px 22px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f4f8f8}
+.fm-hier-k{display:block;font:600 12px/1.2 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#067a72;margin:0 0 8px}
+.fm-hier-dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14.5px}
+.fm-hier-dt{font:600 12px/1.6 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#067a72;white-space:nowrap}
+.fm-hier-dd{margin:0;color:#2f4a52}
+.fm-hier-nx{margin:6px 0 0;font-size:14.5px;color:#0d1f35}
+.fm-hier-nx a{color:#067a72;font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(10,188,176,.6)}
+.fm-hier-nx a:hover{border-bottom-color:#0ABCB0}
+.fm-hier-j{margin:12px 0 0;font-size:12.5px;color:#4a6572}
+.fm-hier-j a{color:#067a72;text-decoration:none;border-bottom:1px solid rgba(10,188,176,.35)}
+/* o quadro vive em pagina de fundo escuro, onde `.fm-site span{color:#fff!important}`
+   pinta todo span de branco. Sem este reset o cartao fica ilegivel. */
+.fm-hier .fm-hier-k,.fm-hier .fm-hier-dt{color:#067a72 !important}
+.fm-hier .fm-hier-dd{color:#2f4a52 !important}
+.fm-hier .fm-hier-nx,.fm-hier .fm-hier-nx strong{color:#0d1f35 !important}
+.fm-hier .fm-hier-j{color:#4a6572 !important}
+.fm-hier .fm-hier-nx a,.fm-hier .fm-hier-j a{color:#067a72 !important}
+@media(max-width:560px){.fm-hier{padding:16px}.fm-hier-dl{grid-template-columns:1fr;gap:2px}.fm-hier-dt{margin-top:8px}}
+</style>
 <style data-fm-nav>
 /* componente unico de navegacao (nav_comum.py) — so a pele e o layout DESKTOP.
    O COMPORTAMENTO (ativo por rota, drawer mobile, busca, mega-menu, encolher no
@@ -231,6 +253,9 @@ html,body{overflow-x:hidden}}
   .site-hd[data-fm-nav] .hd-cta{padding:8px 10px;font-size:10.5px}
 }
 </style>
+
+<link rel="preload" href="/assets/marca/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style data-fm-a11y>
 .fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
 .fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
@@ -239,31 +264,6 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
   outline:2px solid #0ABCB0;outline-offset:2px;border-radius:4px}
 @media (prefers-reduced-motion:reduce){.fm-tabela-scroll{scroll-behavior:auto}}
 </style>
-
-<script>try{if(/[?&]movimento=on/.test(location.search)){try{localStorage.setItem("fm-movimento","on")}catch(e){}}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;var o=false;try{o=localStorage.getItem("fm-movimento")==="on"}catch(e){}document.documentElement.classList.toggle("fm-movimento",(!r||o))}catch(e){}setTimeout(function(){try{if(!window.__fmMovimento)document.documentElement.classList.add("fm-sem-movimento")}catch(e){}},2500);</script>
-<!-- fm-hier-css -->
-<style>
-.fm-hier{margin:34px 0 0;padding:20px 22px;border:1px solid #dbe7e7;border-left:4px solid #0ABCB0;border-radius:14px;background:#f4f8f8}
-.fm-hier-k{display:block;font:600 12px/1.2 Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#067a72;margin:0 0 8px}
-.fm-hier-dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:14.5px}
-.fm-hier-dt{font:600 12px/1.6 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#067a72;white-space:nowrap}
-.fm-hier-dd{margin:0;color:#2f4a52}
-.fm-hier-nx{margin:6px 0 0;font-size:14.5px;color:#0d1f35}
-.fm-hier-nx a{color:#067a72;font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-color:rgba(10,188,176,.6)}
-.fm-hier-nx a:hover{border-bottom-color:#0ABCB0}
-.fm-hier-j{margin:12px 0 0;font-size:12.5px;color:#4a6572}
-.fm-hier-j a{color:#067a72;text-decoration:none;border-bottom:1px solid rgba(10,188,176,.35)}
-/* o quadro vive em pagina de fundo escuro, onde `.fm-site span{color:#fff!important}`
-   pinta todo span de branco. Sem este reset o cartao fica ilegivel. */
-.fm-hier .fm-hier-k,.fm-hier .fm-hier-dt{color:#067a72 !important}
-.fm-hier .fm-hier-dd{color:#2f4a52 !important}
-.fm-hier .fm-hier-nx,.fm-hier .fm-hier-nx strong{color:#0d1f35 !important}
-.fm-hier .fm-hier-j{color:#4a6572 !important}
-.fm-hier .fm-hier-nx a,.fm-hier .fm-hier-j a{color:#067a72 !important}
-@media(max-width:560px){.fm-hier{padding:16px}.fm-hier-dl{grid-template-columns:1fr;gap:2px}.fm-hier-dt{margin-top:8px}}
-</style>
-<link rel="preload" href="/assets/marca/fontes/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
@@ -284,7 +284,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <ul><li>OSCs e coletivos culturais</li><li>Associações e institutos de cultura</li><li>Agentes e espaços culturais formalizados</li></ul>
 
 <h2>O incentivo / o recurso</h2>
-<p>Fomento da política pública (repasse), não incentivo fiscal. Valor e contrapartidas variam por edital municipal/estadual. </p>
+<p>Fomento da política pública (repasse), não incentivo fiscal. Valor e contrapartidas variam por edital municipal/estadual. <span class="muted">(Cf. CF/88, art. 215 (direitos culturais); Lei 14.399/2022 (PNAB))</span></p>
 
 
 <h2>Requisitos</h2>
@@ -322,24 +322,17 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
 <h2>Veja também</h2>
 <p class="rels"><a href="../rouanet/">Rouanet &rsaquo;</a><a href="../mrosc/">MROSC &rsaquo;</a><a href="../emendas/">Emendas &rsaquo;</a> <a href="../">Radar de captação &rsaquo;</a></p>
-<p class="muted">Última atualização: 2026-11-07.</p>
-<p class="muted">Oportunidades acompanhadas pelo Radar (dado agregado, atualizado em 2026-11-07). Nenhuma organização é identificada.</p>
-
-
-
-
-
-
-
+<p class="muted">Última atualização: 2026-11-08.</p>
+<p class="muted">Oportunidades acompanhadas pelo Radar (dado agregado, atualizado em 2026-11-08). Nenhuma organização é identificada.</p>
 <section class="fm-legal" style="margin:28px 0 0;border-top:1px solid #e2e8ea;padding-top:14px"><p style="margin:0 0 8px;font:600 11px/1 Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#067a72">Base legal desta seção</p><ul style="margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:#3c4a52"><li style="margin:4px 0">Cf. <strong>CF/88, art. 215 (direitos culturais)</strong> <span style="color:#067a72;font-size:12px;text-transform:uppercase;letter-spacing:.04em">vigente</span> · <a href="https://www.stf.jus.br/arquivo/cms/legislacaoConstituicao/anexo/cf.pdf" style="color:#067a72">texto oficial</a> · <code style="font-size:11px;color:#6b7f88">324b3e19c1ead8f2</code></li><li style="margin:4px 0">Cf. <strong>Lei 14.399/2022 (PNAB)</strong> <span style="color:#067a72;font-size:12px;text-transform:uppercase;letter-spacing:.04em">vigente</span> · <a href="http://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/L14399.htm" style="color:#067a72">texto oficial</a> · <code style="font-size:11px;color:#6b7f88">fa65849b99bd1a20</code></li></ul><p style="margin:10px 0 0;font-size:12px;color:#6b7f88">Conferência do texto: 2026-11-07 · acervo próprio com hash · <a href="/radar/como-contamos/" style="color:#067a72">como contamos</a> · norma revogada nunca é usada como fundamento.</p></section>
 </article>
 </main>
 <footer class="site-ft" data-v2="1"><div class="wrap">
 <div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div>
-<div class="ft-col"><b>Navegar</b><a href="../..">Início</a><a href="../../recusas/">Recusas</a><a href="../">Radar</a><a href="../../biblioteca/">Biblioteca</a><a href="../../guias/">Guias</a><a href="../../calculadora/">Calculadora</a></div>
-<div class="ft-col"><b>Ferramentas</b><a href="../../diagnostico-de-prontidao/">Pedir diagnóstico</a><a href="../../matriz-de-mecanismos/">Matriz de mecanismos</a><a href="../oportunidades/">Oportunidades abertas</a><a href="../../carteira-de-incentivadores/">Carteira</a></div>
-<div class="ft-col"><b>Institucional</b><a href="../../metodo-capta-plus/">Método</a><a href="../../para/">Para quem</a><a href="../../objecoes/">Objeções</a><a href="../../perguntas-frequentes/">FAQ</a><a href="../../mapa-do-site/">Mapa do site</a></div>
-<div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="../../privacidade/">Privacidade</a></div>
+<div class="ft-col"><b>Navegar</b><a href="/">Início</a><a href="/recusas/">Recusas</a><a href="/radar/">Radar</a><a href="/biblioteca/">Biblioteca</a><a href="/guias/">Guias</a><a href="/calculadora/">Calculadora</a></div>
+<div class="ft-col"><b>Ferramentas</b><a href="/diagnostico-de-prontidao/">Pedir diagnóstico</a><a href="/matriz-de-mecanismos/">Matriz de mecanismos</a><a href="/radar/oportunidades/">Oportunidades abertas</a><a href="/carteira-de-incentivadores/">Carteira</a></div>
+<div class="ft-col"><b>Institucional</b><a href="/metodo-capta-plus/">Método</a><a href="/para/">Para quem</a><a href="/objecoes/">Objeções</a><a href="/perguntas-frequentes/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a></div>
+<div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="/privacidade/">Privacidade</a></div>
 </div></footer>
 <script type="module" src="../../assets/marca/movimento.min.js?v=e690f5b9"></script>
 <script defer src="../../assets/marca/menu.min.js?v=430fb979"></script>
