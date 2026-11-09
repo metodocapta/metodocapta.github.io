@@ -250,6 +250,15 @@
       });
     }
 
+    /* O painel se atualiza sozinho (fm-radar-dinamico): quando o total nacional
+       muda, o filtro de UF precisa recalcular com o valor novo - senao o
+       "Brasil (todos)" ficaria com o total do build. */
+    sec.addEventListener('fm:radar-atualizado', function () {
+      nacional = parseInt(sec.getAttribute('data-nac-op') || '0', 10) || 0;
+      if (!filtros.hasAttribute('hidden')) render();
+      else if (scopeTotal) scopeTotal.textContent = fmt(nacional);
+    });
+
     /* Carrega o recorte (8 KB) na inicializacao. NAO depende de IntersectionObserver:
        em aba oculta/segundo plano o callback pode nunca disparar e os filtros ficariam
        presos no estado escondido. */
