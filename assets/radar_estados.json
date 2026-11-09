@@ -39,12 +39,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 143,
+   "oportunidades": 146,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 72
+     "total": 75
     },
     {
      "codigo": "MROSC",
@@ -74,12 +74,12 @@
    ]
   },
   "SC": {
-   "oportunidades": 267,
+   "oportunidades": 268,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 39
+     "total": 40
     },
     {
      "codigo": "ROUANET",
