@@ -1,9 +1,9 @@
 {
- "gerado_em": "2026-11-08",
+ "gerado_em": "2026-11-09",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 2085,
+  "oportunidades": 2104,
   "elegiveis": 11,
   "estruturados": 6,
   "matches": 4
@@ -12,12 +12,12 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 823
+   "total": 839
   },
   {
    "codigo": "MROSC",
    "rotulo": "CHAMAMENTOS PÚBLICOS",
-   "total": 59
+   "total": 60
   },
   {
    "codigo": "ROUANET",
@@ -37,7 +37,7 @@
   {
    "codigo": "FIA",
    "rotulo": "FIA",
-   "total": 23
+   "total": 25
   },
   {
    "codigo": "FUNDO_IDOSO",

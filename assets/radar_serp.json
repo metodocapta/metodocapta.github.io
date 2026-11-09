@@ -29,7 +29,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -72,7 +72,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -115,7 +115,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -158,7 +158,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 403,
    "url_final": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-sgtes-ms-no-3-2026-pmmb",
    "link_classe": "bloqueado",
@@ -191,7 +191,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -233,7 +233,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.educacao.pr.gov.br/chamamento-publico-selecao-material-didatico-editais",
    "link_classe": "vivo",
@@ -266,7 +266,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "Plano de trabalho"
@@ -305,7 +305,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -348,7 +348,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
@@ -381,7 +381,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.planaltinadoparana.pr.gov.br/publicacao/2026/10/05/chamamento-publico-selecionara-projetos-de-organizacoes-da-sociedade-civil-no-parana",
    "link_classe": "vivo",
@@ -478,7 +478,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 404,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
    "link_classe": "morto",
@@ -590,7 +590,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -636,7 +636,7 @@
     "em": "2026-11-06",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 404,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/10643/",
    "link_classe": "morto",
@@ -778,7 +778,7 @@
    "prazo": "",
    "mecanismo": "PNAB",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -821,7 +821,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 403,
    "url_final": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/rfb/unidades-federativas-uf/mg/drf-jfa-uasg-170092/2026/chamamento-publico/chamamento-publico-drf-jfa-01_2026.pdf/@@download/file",
    "link_classe": "bloqueado",
@@ -854,7 +854,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -934,7 +934,7 @@
    "prazo": "",
    "mecanismo": "LIE",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "Estatuto e última alteração",
@@ -1022,7 +1022,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -1061,7 +1061,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -1100,7 +1100,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.gov.br/florestal/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-sfb-n-01-2026/edital-fndf-01-2026-apresentacao-sintese.pdf/@@display-file/file",
    "link_classe": "vivo",
@@ -1133,7 +1133,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1227,7 +1227,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNDT (trabalhista)",
@@ -1267,7 +1267,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
@@ -1300,7 +1300,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNDT (trabalhista)",
@@ -1373,7 +1373,7 @@
    "prazo": "",
    "mecanismo": "MROSC",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.paudalho.pe.gov.br/portal/publicacao/termo-de-fomento-n-o-005-2026/",
    "link_classe": "vivo",
@@ -1438,7 +1438,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1478,7 +1478,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "Comprovação de experiência"
@@ -1517,7 +1517,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "http_status": 200,
    "url_final": "https://www.saude.sc.gov.br/index.php/pt/servicos/organizacoes-sociais/chamamento-publico-os",
    "link_classe": "vivo",
@@ -1582,7 +1582,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "Comprovação de experiência"
@@ -1621,7 +1621,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1665,7 +1665,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1713,7 +1713,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/45780103000150/compras/2026/644/arquivos/1#1#6#1",
@@ -1750,7 +1750,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/75829416000116/compras/2026/80/arquivos/1#1#1#1",
@@ -1787,7 +1787,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07333598000180/compras/2026/17/arquivos/1#1#2#1",
@@ -1861,7 +1861,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13825476000103/compras/2026/139/arquivos/1#1#25#1",
@@ -1898,7 +1898,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07777639000127/compras/2026/58/arquivos/1#1#6#1",
@@ -1935,7 +1935,7 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13910211000103/compras/2026/103/arquivos/1#1#6#1",
@@ -1972,7 +1972,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://www.potim.sp.gov.br/aviso-de-licitacao-concorrencia-publica-n-001-2026/",
@@ -2097,7 +2097,7 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://wtc.lagoasanta.mg.gov.br/licitacao/pregao/12899-2026-pregao-71-2026",
@@ -2134,7 +2134,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 403,
    "url_final": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-25-2026/Alteracao_cronograma_04_11.pdf#1",
@@ -2215,7 +2215,7 @@
    "idioma": "en",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://bidsfactory.com/en/tenders/contratacao-de-empresa-especializada-em-manter-ser-brazil_pncp-77fa631f18dd4df2",
@@ -2252,7 +2252,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-155-2026-pmes-pregao-eletronico-no-57-2026-modo-de-disputa-aberto-fechado-objeto-contratacao-de-empresa-especializada-para-execucao-de-obra-de-reforma-e-ampliacao-da-escola-municipal",
@@ -2289,7 +2289,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/76995455000156/compras/2026/88/arquivos/5#29#39#29",
@@ -2326,7 +2326,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/840/arquivo/4682/#1#18#1",
@@ -2363,7 +2363,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/799/arquivo/4292/#1#50#1",
@@ -2400,7 +2400,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/850/arquivo/4751/#1#30#1",
@@ -2437,7 +2437,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-07",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/77821841000194/compras/2026/40/arquivos/4#1#1#1",
@@ -2564,7 +2564,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "OUTRO",
@@ -2601,7 +2601,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "MROSC",
@@ -2638,7 +2638,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "OUTRO",
@@ -2675,7 +2675,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "OUTRO",
@@ -2712,8 +2712,27 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.61,
+     "fundacao": 0.54,
+     "cooperativa": 0.62,
+     "federacao": 0.41
+    },
+    "resultado": {
+     "prob": 0.04,
+     "base": "documento",
+     "carga": 6863
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-09",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Protocolo n° 26.097.393-2    Concorrência Eletrônica n° 08/2026    146/2026/GMS    EDITAL (página 1 de 79]",
@@ -2726,8 +2745,27 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.9,
+    "confianca": 0.89,
+    "naturezas": {
+     "associacao": 0.62,
+     "fundacao": 0.49,
+     "cooperativa": 0.57,
+     "federacao": 0.34
+    },
+    "resultado": {
+     "prob": 0.2,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-09",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Emergency Hiring of a Specialized Company for the...",
@@ -2740,11 +2778,86 @@
    "idioma": "en",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-08",
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.54,
+     "fundacao": 0.55,
+     "cooperativa": 0.55,
+     "federacao": 0.37
+    },
+    "resultado": {
+     "prob": 0.08,
+     "base": "documento",
+     "carga": 7434
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-09",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "(REABERTURA DE PROCESSO) PROCESSO Nº 032/2026/PMES – PREGÃO ELETRÔNICO Nº 012/2026 (MODO DE DISPUTA ABERTO). Objeto: Aquisição de 01 (uma) C",
+   "url": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-032-2026-pmes-pregao-eletronico-no-012-2026-modo-de-disputa-aberto-objeto-aquisicao-de-01-uma-cacamba-basculante-convencional-com-recursos-oriundos-do-contrato-de-repasse-no-95068-2",
+   "orgao": "socorro.sp.gov.br",
+   "prazo": "2026-08-07",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Envio das Propostas iniciais e documentos de habilitação: De 20/07/2026 às 15h à 07/08/2026 até às 09h",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Contratação 2026.05.19.1/2026 | GanhaLicita",
+   "url": "https://ganhalicita.com.br/contratacao/29c9705f-a955-4e80-b7e8-9ab27c72de98/",
+   "orgao": "Contratação 009/2025 | GanhaLicita",
+   "prazo": "2026-06-04",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento da Proposta\n\n04/06/2026 11:30",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Serviços de engenharia - FHAJ em Manaus/AM — Dispensa nº 68/2026",
+   "url": "https://licitario.com.br/licitacao/am/fundacao-hospital-adriano-jorge-000108/06168092000108-1-000144-2026",
+   "orgao": "Registro de Preços para futura e eventual contratação de empresa especializada n",
+   "prazo": "2026-11-06",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Propostas até 06/11/2026, 00:59",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-09",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Protocolo n° 25.944.258-3    Concorrência Eletrônica n° 07/2026    EDITAL (página 1 de 67)",
+   "url": "https://www.amep.pr.gov.br/sites/comec/files/documento/2026-09/edital_ce072026_terminalaraucaria.pdf#1",
+   "orgao": "Agência de Assuntos Metropolitanos do Paraná - AMEP",
+   "prazo": "2026-11-06",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Acolhimento/Abertura/Divulgação de Propostas: Até 14h00 min do dia 06/11/2026",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-09",
    "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-07",
- "prazos_em": "2026-11-08",
+ "jev_em": "2026-11-09",
+ "prazos_em": "2026-11-09",
  "links_em": "2026-11-08"
 }
