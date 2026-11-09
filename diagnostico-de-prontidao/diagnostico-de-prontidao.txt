@@ -15,7 +15,7 @@ Método Capta+ · https://metodocapta.github.io/diagnostico-de-prontidao/
 [ ] 3. A governança está ativa (diretoria e conselho em exercício).
       Ata de eleição e posse vigente, com quórum documentado.
 [ ] 4. As certidões estão válidas (federal, FGTS, trabalhista, estadual e municipal).
-      Vencimento monitorado: certidão vencida desclassifica.
+      Vencimento monitorado: certidão vencida pode impedir a habilitação, conforme o instrumento.
 [ ] 5. Existe conta bancária específica do projeto.
       Recurso de projeto não se mistura com o caixa da casa.
 [ ] 6. A escrituração contábil está em dia.

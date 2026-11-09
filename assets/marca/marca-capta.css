@@ -872,7 +872,7 @@ html[data-fm-mapa-visivel] .mc-zap svg{width:28px;height:28px;}
    Este fallback revela o bloco sozinho depois de 1,8s — a animacao de entrada
    continua intacta quando o JS funciona. */
 @keyframes mc-reveal-fallback{ to{opacity:1;transform:none;} }
-.fm-reveal:not(.is-visible){animation:mc-reveal-fallback .7s ease 1.8s forwards;}
+.fm-reveal:not(.is-visible){animation:mc-reveal-fallback .7s ease .4s forwards;}
 .fm-reveal.is-visible{animation:none;}
 @media (prefers-reduced-motion: reduce){.fm-reveal:not(.is-visible){animation:none;}}
 /* nota do mecanismo: o fluxo de 7 pilulas e INTERNO as seis etapas */
@@ -1549,4 +1549,16 @@ select option:checked{background:#0A4A4A;color:#ffffff}
     word-break:normal;
   }
 }
+
+/* ==========================================================================
+   CONTRASTE DA LINHA DE BASE LEGAL (09/11/2026)
+   O Lighthouse reprovou o cinza #6b7f88 a 12px sobre o fundo escuro das
+   secoes (contraste ~3,4:1) e o link "como contamos" so por cor. Agora:
+     - fundo escuro: texto #a9cfcb, link #7fe3d8 sublinhado;
+     - faixa clara (.fm-band-light): texto #3c4a52, link #067a72 sublinhado.
+   ========================================================================== */
+.fm-legal-linha{color:#a9cfcb}
+.fm-legal-linha a{color:#7fe3d8;text-decoration:underline;text-underline-offset:2px}
+.fm-band-light .fm-legal-linha{color:#3c4a52}
+.fm-band-light .fm-legal-linha a{color:#067a72}
 
