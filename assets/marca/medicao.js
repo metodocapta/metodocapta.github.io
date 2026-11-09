@@ -28,6 +28,22 @@
   'use strict';
 
   var CFG = window.__FM_MEDICAO || {};
+
+  /* ---------- 0a) UMA home, uma URL ----------
+     O GitHub Pages serve / e /index.html com o mesmo conteudo. Enquanto o
+     endereco ficava com /index.html, o GA4 contava duas paginas de entrada
+     para a mesma home (57 sessoes em "/" e 24 em "/index.html" na leitura de
+     28 dias) e o relatorio de aquisicao se dividia. Aqui o endereco e
+     normalizado ANTES de qualquer evento: o que aparece na barra e o que vai
+     para o page_location. */
+  (function () {
+    if (!/\/index\.html$/.test(location.pathname)) return;
+    try {
+      var limpo = location.pathname.replace(/index\.html$/, '');
+      window.history.replaceState(null, '', limpo + location.search + location.hash);
+    } catch (e) {}
+  })();
+
   var PAGINA = location.pathname.replace(/\/index\.html$/, '/');
   var CHAVE = 'fm-consent';
   var DEBUG = /[?&]medicao=debug/.test(location.search);
@@ -206,17 +222,16 @@
       document.dispatchEvent(new CustomEvent('fm-consent-livre'));
       if (escolha === 'aceito') {
         carregarGA4();
-        /* ORDEM IMPORTA: o evento de consentimento precisa sair DEPOIS de o
-           gtag existir. Antes ele era emitido primeiro e era enfileirado no
-           dataLayer antes de haver propriedade vinculada - nao chegava ao GA4
-           (confirmado: 0 eventos em 3 dias de coleta). */
-        emitir('consentimento', { escolha: escolha });
-        /* a page_view desta visita foi emitida antes do aceite e nao saiu:
-           sai agora, uma unica vez. */
+        /* ORDEM IMPORTA (as duas): o gtag precisa existir antes de qualquer
+           evento e o page_view precisa sair ANTES do consentimento. Quando o
+           consentimento vinha primeiro, o GA4 abria a sessao no evento de
+           consentimento e a landing page ficava "(not set)" - eram 7 das 116
+           sessoes na leitura de 28 dias. */
         emitir('page_view', {
           titulo: document.title.slice(0, 80),
           referrer: (document.referrer || '').slice(0, 120)
         });
+        emitir('consentimento', { escolha: escolha });
       } else {
         /* "so o essencial": sem GA4. O evento so chega a um destino sem cookie
            quando CFG.plausible/umami/endpoint estiverem configurados. */
