@@ -159,6 +159,20 @@ def checar_home(raiz, home):
     for nome in ("marca-capta", "movimento", "framework-t"):
         m_asset = re.search(
             r'href="[^"]*%s(\.min)?\.css\?v=([0-9a-f]+)"' % re.escape(nome), home)
+        if not m_asset and nome == "marca-capta":
+            # CSS critico consolidado (landing + marca + cena num so arquivo).
+            m_asset = re.search(r'href="[^"]*critico(\.min)?\.css\?v=([0-9a-f]+)"', home)
+            if m_asset:
+                arquivo = os.path.join(raiz, "assets", "marca", "critico.min.css")
+                if not os.path.isfile(arquivo):
+                    erro("assets/marca/critico.min.css ausente")
+                else:
+                    with open(arquivo, "rb") as fh:
+                        sha = hashlib.sha1(fh.read()).hexdigest()[:10]
+                    if m_asset.group(2)[:10] != sha:
+                        erro("Home: critico v=%s nao casa com o sha1 do arquivo (%s)"
+                             % (m_asset.group(2)[:10], sha))
+                continue
         if not m_asset:
             erro("Home: %s sem ?v= (cache-busting)" % nome)
             continue
