@@ -166,13 +166,6 @@ jobs:
           FONTES = [
               ("api", API),
               ("rss", FEED),
-              # Os conversores buscam do IP deles: funcionam quando o runner do
-              # GitHub e' bloqueado pelo Cloudflare do Substack. Sao a reserva
-              # que faltava — o coletor local ja os usa.
-              ("rss2json", "https://api.rss2json.com/v1/api.json?rss_url="
-               + urllib.parse.quote(FEED, safe="")),
-              ("jsonfeed", "https://feed2json.org/convert?url="
-               + urllib.parse.quote(FEED, safe="")),
               ("rss", "https://r.jina.ai/" + FEED),
               ("rss", "https://api.allorigins.win/raw?url=" + urllib.parse.quote(FEED, safe="")),
               ("rss", "https://corsproxy.io/?" + urllib.parse.quote(FEED, safe="")),
@@ -189,12 +182,6 @@ jobs:
                               return tipo, bruto
                           print("api sem posts:", src[:60])
                           continue
-                      if tipo in ("rss2json", "jsonfeed"):
-                          if '"items"' in bruto:
-                              print("fonte OK (%s):" % tipo, src[:74])
-                              return tipo, bruto
-                          print("sem itens:", src[:74])
-                          continue
                       if "<item" in bruto:
                           print("fonte OK (rss):", src[:74])
                           return tipo, bruto
@@ -209,8 +196,7 @@ jobs:
           tipo, bruto = pegar_feed()
           if not bruto:
               # Sem fonte: mantem o arquivo. So falha (alerta) se ele estiver
-              # parado ha mais de 8 dias: a newsletter e' semanal, e o teto de 3
-              # dias acusava falha em todo intervalo entre edicoes.
+              # parado ha mais de 3 dias — o silencio eterno era o problema.
               dias = 999
               try:
                   with open(SAIDA, encoding="utf-8") as fh:
@@ -218,7 +204,7 @@ jobs:
                   dias = (date.today() - date.fromisoformat(atual)).days if atual else 999
               except (OSError, ValueError):
                   pass
-              if dias > 8:
+              if dias > 3:
                   print("ERRO: feed do Substack inacessivel e destaques parados ha %s dias." % dias)
                   raise SystemExit(1)
               print("AVISO: feed inacessivel; mantendo destaques (atualizado ha %s dia(s))." % dias)
@@ -257,29 +243,6 @@ jobs:
                       "data_pt": pt,
                       "resumo": marca(primeiro_paragrafo_html(enc or p.get("body_html")) or lead),
                       "imagem": imagem_leve(img or p.get("cover_image") or ""),
-                  })
-                  if len(itens) >= LIMITE + 3:
-                      break
-          elif tipo in ("rss2json", "jsonfeed"):
-              # Mesma estrutura de item, vinda de JSON (conversores de terceiros).
-              for it in json.loads(bruto).get("items", []):
-                  titulo = texto(it.get("title"))
-                  link = (it.get("link") or it.get("url") or "").strip()
-                  if not titulo or not link:
-                      continue
-                  iso, pt = data_pt(it.get("pubDate") or it.get("date_published"))
-                  lead = marca(texto(it.get("description") or it.get("summary") or ""))
-                  enc = it.get("content") or it.get("content_html") or ""
-                  slug = link.rstrip("/").split("/")[-1]
-                  img = it.get("thumbnail") or it.get("image") or it.get("banner_image") or ""
-                  itens.append({
-                      "titulo": marca(titulo),
-                      "titulo_estrategico": marca(titulo_estrategico(slug, lead)),
-                      "link": link,
-                      "data": iso,
-                      "data_pt": pt,
-                      "resumo": marca(primeiro_paragrafo_html(enc) or lead),
-                      "imagem": imagem_leve(img),
                   })
                   if len(itens) >= LIMITE + 3:
                       break
