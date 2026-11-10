@@ -3022,6 +3022,39 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-10",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.66,
+     "fundacao": 0.61,
+     "cooperativa": 0.67,
+     "federacao": 0.45
+    },
+    "resultado": {
+     "prob": 0.03,
+     "base": "documento",
+     "carga": 7868
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-10",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "**Processo APROVA 6176-26-IBR-CLI, para contratação de empresa**",
+   "url": "https://www.altofeliz.rs.gov.br/web/imgs/arquivos/publicacao-famurs-n-78-de-10-de-novembro-de-20261794313942.pdf#39",
+   "orgao": "Prefeitura Municipal de Alto Feliz",
+   "prazo": "2026-11-26",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Início das Propostas: 14:00h do dia 10/11/2026 até às 07:59h do dia 26/11/2026.",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-10",
    "fonte": "pncp-busca"
   }
  ],
