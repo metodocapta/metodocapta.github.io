@@ -1012,6 +1012,32 @@ body{counter-reset:fm-secao}
 .fm-radar-selo{margin:16px 0 0;text-align:center;font-size:12.5px;
   color:rgba(127,227,216,.72);letter-spacing:.04em}
 
+/* Movimento do Radar - o que mudou desde a coleta anterior + frescor.
+   Animacao so de box-shadow (composta na GPU) e desligada em reduced-motion. */
+.fm-movimento{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  margin:14px 0 0;padding:10px 12px;border-radius:12px;
+  border:1px solid rgba(10,188,176,.22);background:rgba(10,188,176,.06)}
+.fm-pulso{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:#0ABCB0;
+  box-shadow:0 0 0 0 rgba(10,188,176,.55);animation:fm-pulso 2.4s ease-out infinite}
+@keyframes fm-pulso{
+  0%{box-shadow:0 0 0 0 rgba(10,188,176,.55)}
+  70%{box-shadow:0 0 0 9px rgba(10,188,176,0)}
+  100%{box-shadow:0 0 0 0 rgba(10,188,176,0)}}
+.fm-mov-texto{margin:0;font-size:13px;line-height:1.45;color:rgba(207,232,230,.9)}
+.fm-mov-rotulo{display:inline-block;margin-right:6px;
+  font:600 10.5px/1.4 'Oswald',sans-serif;letter-spacing:.10em;text-transform:uppercase;
+  color:#7fe3d8}
+.fm-mov-n{font-weight:700;color:#eafffb;font-variant-numeric:tabular-nums}
+.fm-spark{width:120px;height:28px;flex:0 0 auto;margin-left:auto;overflow:visible}
+.fm-spark polyline{fill:none;stroke:#0ABCB0;stroke-width:2;stroke-linecap:round;
+  stroke-linejoin:round;vector-effect:non-scaling-stroke;opacity:.9}
+.fm-spark-legenda{font-size:10.5px;letter-spacing:.04em;
+  color:rgba(127,227,216,.72);white-space:nowrap}
+.fm-frescor{color:rgba(127,227,216,.82)}
+.fm-frescor:not(:empty)::before{content:" · "}
+@media (max-width:640px){.fm-spark,.fm-spark-legenda{display:none}}
+@media (prefers-reduced-motion:reduce){.fm-pulso{animation:none}}
+
 /* Areas de captacao: o Radar por natureza da oportunidade (mesmo agregado). */
 .fm-radar-areas{margin:30px auto 0;max-width:1120px}
 .fm-radar-areas-titulo{display:block;text-align:center;font:700 12px/1.2 'Inter',sans-serif;

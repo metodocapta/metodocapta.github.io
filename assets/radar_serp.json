@@ -3055,6 +3055,39 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-10",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.86,
+    "confianca": 0.85,
+    "naturezas": {
+     "associacao": 0.57,
+     "fundacao": 0.46,
+     "cooperativa": 0.61,
+     "federacao": 0.32
+    },
+    "resultado": {
+     "prob": 0.16,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-10",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Prefeitura Municipal de São Geraldo",
+   "url": "http://mail.saogeraldo.mg.gov.br/licitacao.php?getLink=282",
+   "orgao": "saogeraldo.mg.gov.br",
+   "prazo": "2026-09-04",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Data fim de recebimento de propostas: 04/09/2026 09:00 (horário de Brasília)",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-10",
    "fonte": "pncp-busca"
   }
  ],

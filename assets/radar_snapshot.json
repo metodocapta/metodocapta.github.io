@@ -1,5 +1,6 @@
 {
  "gerado_em": "2026-11-10",
+ "gerado_em_ts": "2026-11-10T14:56:58-03:00",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
@@ -53,6 +54,296 @@
    "codigo": "PNAB",
    "rotulo": "PNAB",
    "total": 9
+  }
+ ],
+ "historico": [
+  {
+   "data": "2026-10-02",
+   "oportunidades": 1472,
+   "elegiveis": 8,
+   "estruturados": 1,
+   "matches": 13,
+   "areas": {
+    "EDITAL_PUBLICO": 386,
+    "MROSC": 40,
+    "ROUANET": 757,
+    "LIR": 247,
+    "EMENDA": 1,
+    "FIA": 18,
+    "FUNDO_IDOSO": 8,
+    "LIE": 10,
+    "PNAB": 5
+   }
+  },
+  {
+   "data": "2026-10-05",
+   "oportunidades": 1557,
+   "elegiveis": 8,
+   "estruturados": 1,
+   "matches": 458,
+   "areas": {
+    "EDITAL_PUBLICO": 439,
+    "MROSC": 43,
+    "ROUANET": 776,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 18,
+    "FUNDO_IDOSO": 12,
+    "LIE": 14,
+    "PNAB": 6
+   }
+  },
+  {
+   "data": "2026-10-08",
+   "oportunidades": 1612,
+   "elegiveis": 8,
+   "estruturados": 1,
+   "matches": 458,
+   "areas": {
+    "EDITAL_PUBLICO": 482,
+    "MROSC": 44,
+    "ROUANET": 787,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 18,
+    "FUNDO_IDOSO": 12,
+    "LIE": 14,
+    "PNAB": 6
+   }
+  },
+  {
+   "data": "2026-10-11",
+   "oportunidades": 1674,
+   "elegiveis": 10,
+   "estruturados": 2,
+   "matches": 458,
+   "areas": {
+    "EDITAL_PUBLICO": 522,
+    "MROSC": 46,
+    "ROUANET": 807,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 18,
+    "FUNDO_IDOSO": 12,
+    "LIE": 14,
+    "PNAB": 6
+   }
+  },
+  {
+   "data": "2026-10-19",
+   "oportunidades": 1803,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 620,
+    "MROSC": 52,
+    "ROUANET": 826,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-21",
+   "oportunidades": 1867,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 666,
+    "MROSC": 55,
+    "ROUANET": 841,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-22",
+   "oportunidades": 1867,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 666,
+    "MROSC": 55,
+    "ROUANET": 841,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-24",
+   "oportunidades": 1912,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 694,
+    "MROSC": 56,
+    "ROUANET": 857,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-25",
+   "oportunidades": 1912,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 694,
+    "MROSC": 56,
+    "ROUANET": 857,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-26",
+   "oportunidades": 1912,
+   "elegiveis": 10,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 694,
+    "MROSC": 56,
+    "ROUANET": 857,
+    "LIR": 249,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-10-29",
+   "oportunidades": 1973,
+   "elegiveis": 11,
+   "estruturados": 4,
+   "matches": 1128,
+   "areas": {
+    "EDITAL_PUBLICO": 751,
+    "MROSC": 58,
+    "ROUANET": 860,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 20,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-11-04",
+   "oportunidades": 2024,
+   "elegiveis": 12,
+   "estruturados": 6,
+   "matches": 4,
+   "areas": {
+    "EDITAL_PUBLICO": 797,
+    "MROSC": 59,
+    "ROUANET": 862,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 22,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-11-05",
+   "oportunidades": 2048,
+   "elegiveis": 11,
+   "estruturados": 6,
+   "matches": 4,
+   "areas": {
+    "EDITAL_PUBLICO": 811,
+    "MROSC": 59,
+    "ROUANET": 872,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 22,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 7
+   }
+  },
+  {
+   "data": "2026-11-07",
+   "oportunidades": 2085,
+   "elegiveis": 11,
+   "estruturados": 6,
+   "matches": 4,
+   "areas": {
+    "EDITAL_PUBLICO": 823,
+    "MROSC": 59,
+    "ROUANET": 894,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 23,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 9
+   }
+  },
+  {
+   "data": "2026-11-09",
+   "oportunidades": 2104,
+   "elegiveis": 11,
+   "estruturados": 6,
+   "matches": 4,
+   "areas": {
+    "EDITAL_PUBLICO": 839,
+    "MROSC": 60,
+    "ROUANET": 894,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 25,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 9
+   }
+  },
+  {
+   "oportunidades": 2157,
+   "elegiveis": 11,
+   "estruturados": 6,
+   "matches": 4,
+   "data": "2026-11-10",
+   "areas": {
+    "EDITAL_PUBLICO": 871,
+    "MROSC": 61,
+    "ROUANET": 913,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 26,
+    "FUNDO_IDOSO": 13,
+    "LIE": 15,
+    "PNAB": 9
+   }
   }
  ]
 }
