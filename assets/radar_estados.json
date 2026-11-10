@@ -4,12 +4,12 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 453,
+   "oportunidades": 470,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 400
+     "total": 417
     },
     {
      "codigo": "MROSC",
@@ -39,12 +39,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 146,
+   "oportunidades": 148,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 75
+     "total": 77
     },
     {
      "codigo": "MROSC",
@@ -194,7 +194,7 @@
    ]
   },
   "MG": {
-   "oportunidades": 41,
+   "oportunidades": 42,
    "areas": [
     {
      "codigo": "MROSC",
@@ -219,7 +219,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 21
+     "total": 22
     }
    ]
   },

@@ -73,8 +73,20 @@
   })();
   function ehInterno() { return ler('fm-interno') === '1'; }
 
+  /* ---------- 0b) UM ATO, UM NOME ----------
+     O pedido de diagnostico saia com tres nomes (intencao_diagnostico,
+     clique_diagnostico e cta_diagnostico). No GA4 isso virava tres eventos
+     principais para a mesma intencao: o total inflava e a taxa se fragmentava.
+     Agora todos saem como `intencao_diagnostico`; o caminho continua visivel
+     nos parametros `tipo`, `origem`, `rotulo` e `destino`. */
+  var CANONICO = {
+    clique_diagnostico: 'intencao_diagnostico',
+    cta_diagnostico: 'intencao_diagnostico'
+  };
+
   /* ---------- 1) emissao: um evento, tres destinos ---------- */
   function emitir(nome, dados) {
+    nome = CANONICO[nome] || nome;
     dados = dados || {};
     var ev = { evento: nome, pagina: PAGINA, ts: Math.round(Date.now() / 1000) };
     for (var k in dados) { if (dados[k] !== undefined && dados[k] !== null) ev[k] = dados[k]; }
@@ -313,11 +325,16 @@
 
       /* 1) evento NOMEADO no proprio elemento (data-fm-evento): manda o nome,
             nao o generico - preserva a taxonomia que o site ja usava
-            (intencao_diagnostico, ferramenta_calculadora, cta_whatsapp...). */
+            (intencao_diagnostico, ferramenta_calculadora...). O `tipo` entra
+            tambem, para a dimensao nao ficar vazia so porque o CTA tem nome. */
       var alvoEv = a.closest ? a.closest('[data-fm-evento]') : null;
       var nomeEv = alvoEv && alvoEv.getAttribute('data-fm-evento');
       if (nomeEv) {
-        emitir(nomeEv, { rotulo: rotulo, destino: href.slice(0, 200), origem: origemDoLink(a), canal: canalDe(href) });
+        var dadosEv = { rotulo: rotulo, destino: href.slice(0, 200),
+                        origem: origemDoLink(a), canal: canalDe(href) };
+        var tipoEv = tipoDeLink(href);
+        if (tipoEv) dadosEv.tipo = tipoEv;
+        emitir(nomeEv, dadosEv);
         return;
       }
 

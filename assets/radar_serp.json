@@ -43,7 +43,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Viva-Cultura-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "EDITAL - VIVA CULTURA PNAB - 2026",
@@ -86,7 +86,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2026-05/edital_-_viva_cultura_pnab_-_2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Chamamento Público nº 01/2026 – Secretaria de Informação e ...",
@@ -127,7 +127,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-01-2026-seidigi",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Chamamento Público SGTES/MS nº 3/2026 - Projeto Mais Médicos ...",
@@ -162,7 +162,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-sgtes-ms-no-3-2026-pmmb",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Editais de Chamamento Público - CGIBS - Comitê Gestor do IBS",
@@ -204,7 +204,7 @@
    "http_status": 200,
    "url_final": "https://cgibs.gov.br/editais-de-chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Chamamento público para seleção de material didático - Editais",
@@ -237,7 +237,7 @@
    "http_status": 200,
    "url_final": "https://www.educacao.pr.gov.br/chamamento-publico-selecao-material-didatico-editais",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "RESULTADO DE CHAMAMENTO PÚBLICO Nº 1/2026 - Imprensa Nacional",
@@ -276,7 +276,7 @@
    "http_status": 200,
    "url_final": "https://www.in.gov.br/web/dou/-/resultado-de-chamamento-publico-n-1/2026-706426598",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Edital de Fomento Multiartes | Secretaria da Cultura",
@@ -319,7 +319,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Edital Acessível | Edital de Fomento Multiartes | Secretaria da Cultura",
@@ -352,7 +352,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Chamamento Público selecionará projetos de organizações da ...",
@@ -385,7 +385,7 @@
    "http_status": 200,
    "url_final": "https://www.planaltinadoparana.pr.gov.br/publicacao/2026/10/05/chamamento-publico-selecionara-projetos-de-organizacoes-da-sociedade-civil-no-parana",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Lei de Incentivo à Reciclagem",
@@ -417,7 +417,7 @@
    "http_status": 200,
    "url_final": "https://sinir.gov.br/lei-de-incentivo-a-reciclagem/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Incentivo à Reciclagem — Ministério do Desenvolvimento, Indústria ...",
@@ -449,7 +449,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/mdic/pt-br/assuntos/enec/legislacao/politica-de-residuos/incentivo-a-reciclagem",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO N 002/2026 – FOMENTO CULTURAL ...",
@@ -479,10 +479,10 @@
     "modelo": "jev-1.14.0"
    },
    "doc_em": "2026-11-10",
-   "http_status": 404,
+   "http_status": 200,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
-   "link_classe": "morto",
-   "verificado_em": "2026-11-09"
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "POLÍTICA NACIONAL ALDIR BLANC (PNAB) CICLO 2 - EDITAL DE ...",
@@ -514,7 +514,7 @@
    "http_status": 404,
    "url_final": "https://www.mapacultural.pe.gov.br/oportunidade/3233/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 001/2026 – ALDIR BLANC",
@@ -561,7 +561,7 @@
    "http_status": 200,
    "url_final": "https://santaremnovo.pa.gov.br/chamamento-publico-no-001-2026-aldir-blanc/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "EDITAL PARA FOMENTO À EXECUÇÃO DE AÇÕES CULTURAIS (APOIO ...",
@@ -607,7 +607,7 @@
    "http_status": 200,
    "url_final": "https://pmp.pr.gov.br/website/assets/arquivos/cultura/leiAldirBlanc/2026/Edital_Lei_Aldir_Blanc_2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Edital de Chamamento Público nº 01/2026 – Seleção de Projetos ...",
@@ -637,10 +637,10 @@
     "modelo": "jev-1.14.0"
    },
    "doc_em": "2026-11-10",
-   "http_status": 404,
+   "http_status": 200,
    "url_final": "https://culteditais.cultura.gov.br/oportunidade/10643/",
-   "link_classe": "morto",
-   "verificado_em": "2026-11-09"
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
@@ -672,7 +672,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/politica-nacional-aldir-blanc",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura - gov.br",
@@ -704,7 +704,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/politica-nacional-aldir-blanc-de-fomento-a-cultura",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Política Nacional Aldir Blanc (PNAB) - Prefeitura de Cotia",
@@ -736,7 +736,7 @@
    "http_status": 200,
    "url_final": "https://cotia.sp.gov.br/politica-nacional-aldir-blanc-pnab/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura (PNAB)",
@@ -749,7 +749,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/PNAB",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "PNAB",
     "prob": 0.97,
@@ -792,7 +792,7 @@
    "http_status": 200,
    "url_final": "https://carmodoparanaiba.mg.gov.br/wp-content/uploads/2026/05/EDITAL_PNAB_COMPLETO.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "PNAB",
     "prob": 1.0,
@@ -825,7 +825,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/rfb/unidades-federativas-uf/mg/drf-jfa-uasg-170092/2026/chamamento-publico/chamamento-publico-drf-jfa-01_2026.pdf/@@download/file",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.86,
@@ -873,7 +873,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-snsa-mcid-no-01-2026",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 1.0,
@@ -905,7 +905,7 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/esporte/pt-br/acoes-e-programas/lei-de-incentivo-ao-esporte",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIE",
     "prob": 0.98,
@@ -946,7 +946,7 @@
    "http_status": 200,
    "url_final": "https://www.esporte.pr.gov.br/Pagina/Proesporte-Lei-de-Incentivo-Edital-06",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIE",
     "prob": 1.0,
@@ -993,7 +993,7 @@
    "http_status": 200,
    "url_final": "https://www.bndes.gov.br/wps/wcm/connect/site/3d4ff94b-43f8-4dbc-80a0-5080cafbb820/Edital+de+Selecao+Publica+FI+2026.pdf?MOD=AJPERES",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "FUNDO_IDOSO",
     "prob": 1.0,
@@ -1032,7 +1032,7 @@
    "http_status": 200,
    "url_final": "https://www.ibge.gov.br/np_download/novoportal/avisos_publicos/Chamamento_Publico_SES_AL_2026_01_Lista_Preliminar_Cooperativas.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.44,
@@ -1071,7 +1071,7 @@
    "http_status": 200,
    "url_final": "https://www.ibge.gov.br/np_download/novoportal/avisos_publicos/Chamamento_Publico_SES_AL_2026_01_Lista_Definitiva_Cooperativas.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.64,
@@ -1104,7 +1104,7 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/florestal/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-sfb-n-01-2026/edital-fndf-01-2026-apresentacao-sintese.pdf/@@display-file/file",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.7,
@@ -1154,7 +1154,7 @@
    "http_status": 200,
    "url_final": "https://saude.sp.gov.br/ses/perfil/cidadao/homepage/outros-destaques/editais-de-chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.59,
@@ -1198,7 +1198,7 @@
    "http_status": 200,
    "url_final": "https://educacao.sme.prefeitura.sp.gov.br/chamamento-publico/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 1.0,
@@ -1238,7 +1238,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.89,
@@ -1271,7 +1271,7 @@
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.75,
@@ -1309,10 +1309,10 @@
     ],
     "trecho": "do por meio de edital, destinado a analise das condicoes de habilitacao, total ou parcial, dos interessados ou do objeto; xlv - sistema de registro de precos: conjunto de procedimentos para realizacao, mediante contratacao direta ou licitacao nas modalidades pregao ou concorrencia, de registro formal de precos relativos a prestacao de servicos, a obras e a aquisicao e locacao de bens para contrata"
    },
-   "http_status": 200,
+   "http_status": null,
    "url_final": "https://cpc.cps.sp.gov.br/chamamento-publico/",
-   "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.87,
@@ -1344,7 +1344,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.56,
@@ -1377,7 +1377,7 @@
    "http_status": 200,
    "url_final": "https://www.paudalho.pe.gov.br/portal/publicacao/termo-de-fomento-n-o-005-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.8,
@@ -1409,7 +1409,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/mma/pt-br/assuntos/meio-ambiente-urbano-recursos-hidricos-qualidade-ambiental/Catadoras+e+Catadores",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.84,
@@ -1449,7 +1449,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-apoio-ao-fortalecimento-das-cooperativas-de-catadores-as-de-materiais-reciclaveis",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.95,
@@ -1488,7 +1488,7 @@
    "http_status": 200,
    "url_final": "https://www.sap.sc.gov.br/chamamento-publico/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.8,
@@ -1521,7 +1521,7 @@
    "http_status": 200,
    "url_final": "https://www.saude.sc.gov.br/index.php/pt/servicos/organizacoes-sociais/chamamento-publico-os",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.9,
@@ -1553,7 +1553,7 @@
    "http_status": 200,
    "url_final": "https://www.icara.sc.gov.br/editais/chamamento_publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.62,
@@ -1592,7 +1592,7 @@
    "http_status": 200,
    "url_final": "https://sap.sc.gov.br/category/intitucional/sap/consultas-sap/chamamento-publico-sap/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.98,
@@ -1636,7 +1636,7 @@
    "http_status": 200,
    "url_final": "https://camboriu.sc.gov.br/wp-content/uploads/2026/02/Edital-no-001.2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.7,
@@ -1681,7 +1681,7 @@
    "http_status": 200,
    "url_final": "https://camboriu.sc.gov.br/wp-content/uploads/2025/08/1754328920_edicao_4905_assinada-1.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.66,
@@ -1718,7 +1718,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/45780103000150/compras/2026/644/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.8,
@@ -1755,7 +1755,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/75829416000116/compras/2026/80/arquivos/1#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.51,
@@ -1792,7 +1792,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07333598000180/compras/2026/17/arquivos/1#1#2#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.51,
@@ -1829,7 +1829,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/03239027000120/compras/2026/1/arquivos/1#1#8#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.72,
@@ -1866,7 +1866,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13825476000103/compras/2026/139/arquivos/1#1#25#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.99,
@@ -1903,7 +1903,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07777639000127/compras/2026/58/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.8,
@@ -1940,7 +1940,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13910211000103/compras/2026/103/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.79,
@@ -1977,7 +1977,7 @@
    "http_status": 200,
    "url_final": "https://www.potim.sp.gov.br/aviso-de-licitacao-concorrencia-publica-n-001-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2014,7 +2014,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/41cdfcbd-8166-409d-bb56-4d01e77be3b1/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2058,7 +2058,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/9307e53c-97cd-4197-924f-23b9bb86bae1/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2102,7 +2102,7 @@
    "http_status": 200,
    "url_final": "https://wtc.lagoasanta.mg.gov.br/licitacao/pregao/12899-2026-pregao-71-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2139,7 +2139,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-25-2026/Alteracao_cronograma_04_11.pdf#1",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.73,
@@ -2176,7 +2176,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/fbf13e39-d73a-46b4-b89e-d5237538159d/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2220,7 +2220,7 @@
    "http_status": 200,
    "url_final": "https://bidsfactory.com/en/tenders/contratacao-de-empresa-especializada-em-manter-ser-brazil_pncp-77fa631f18dd4df2",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2257,7 +2257,7 @@
    "http_status": 200,
    "url_final": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-155-2026-pmes-pregao-eletronico-no-57-2026-modo-de-disputa-aberto-fechado-objeto-contratacao-de-empresa-especializada-para-execucao-de-obra-de-reforma-e-ampliacao-da-escola-municipal",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2294,7 +2294,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/76995455000156/compras/2026/88/arquivos/5#29#39#29",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.77,
@@ -2331,7 +2331,7 @@
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/840/arquivo/4682/#1#18#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.62,
@@ -2368,7 +2368,7 @@
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/799/arquivo/4292/#1#50#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.57,
@@ -2405,7 +2405,7 @@
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/850/arquivo/4751/#1#30#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.63,
@@ -2442,7 +2442,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/77821841000194/compras/2026/40/arquivos/4#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.81,
@@ -2479,7 +2479,7 @@
    "http_status": 200,
    "url_final": "https://www.saaeaparecida.sp.gov.br/portal/download/licitacoes-anexos/nqxx-o/#49#51#49",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.5,
@@ -2516,7 +2516,7 @@
    "http_status": 200,
    "url_final": "https://www.pombal.pb.gov.br/aviso-licitacao-concorrencia-eletronica-no-022-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2588,7 +2588,7 @@
    "http_status": 200,
    "url_final": "https://www.amep.pr.gov.br/sites/comec/files/documento/2026-06/02.edital_ce05.2026_obraviariodepinhais.pdf#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Estado do Ceará - Prefeitura Municipal de Cedro - Aviso - Chamamento Público N°",
@@ -2625,7 +2625,7 @@
    "http_status": 400,
    "url_final": "https://www.saae.quixeramobim.ce.gov.br/arquivos_download/licitacao/286/1404#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Public Call for Accreditation of Official Auctioneer(s)...",
@@ -2662,7 +2662,7 @@
    "http_status": 200,
    "url_final": "https://bidsfactory.com/en/tenders/chamamento-publico-para-credenciamento-de-contrata-brazil_pncp-b936d36b6247744e",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Pregão Eletrônico nº 096/2026",
@@ -2699,7 +2699,7 @@
    "http_status": 200,
    "url_final": "https://www.mirassol.sp.gov.br/portal/editais/0/1/2150/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Multimedia kit — Brazil",
@@ -2736,7 +2736,7 @@
    "http_status": 200,
    "url_final": "https://bidsfactory.com/en/tenders/kit-multimidia-brazil_pncp-002d6ae396708c19",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Protocolo n° 26.097.393-2    Concorrência Eletrônica n° 08/2026    146/2026/GMS    EDITAL (página 1 de 79]",
@@ -2773,7 +2773,7 @@
    "http_status": 200,
    "url_final": "https://www.amep.pr.gov.br/sites/comec/files/documento/2026-08/editaln082026fiscalizadoraobrasviariasrev.pdf#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "Emergency Hiring of a Specialized Company for the...",
@@ -2810,7 +2810,7 @@
    "http_status": 200,
    "url_final": "https://bidsfactory.com/en/tenders/contratacao-emergencial-de-empresa-especializada-n-brazil_pncp-9496b26a9bef5644",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09"
+   "verificado_em": "2026-11-10"
   },
   {
    "titulo": "(REABERTURA DE PROCESSO) PROCESSO Nº 032/2026/PMES – PREGÃO ELETRÔNICO Nº 012/2026 (MODO DE DISPUTA ABERTO). Objeto: Aquisição de 01 (uma) C",
@@ -2828,7 +2828,7 @@
    "http_status": 200,
    "url_final": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-032-2026-pmes-pregao-eletronico-no-012-2026-modo-de-disputa-aberto-objeto-aquisicao-de-01-uma-cacamba-basculante-convencional-com-recursos-oriundos-do-contrato-de-repasse-no-95068-2",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2865,7 +2865,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/29c9705f-a955-4e80-b7e8-9ab27c72de98/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.89,
@@ -2909,7 +2909,7 @@
    "http_status": 200,
    "url_final": "https://licitario.com.br/licitacao/am/fundacao-hospital-adriano-jorge-000108/06168092000108-1-000144-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2952,7 +2952,7 @@
    "http_status": 200,
    "url_final": "https://www.amep.pr.gov.br/sites/comec/files/documento/2026-09/edital_ce072026_terminalaraucaria.pdf#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-09",
+   "verificado_em": "2026-11-10",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.89,
@@ -2985,10 +2985,47 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-10",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.lagoasanta.mg.gov.br/licitacao/pregao/12910-2026-pregao-61-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-10",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.32,
+     "fundacao": 0.4,
+     "cooperativa": 0.93,
+     "federacao": 0.25
+    },
+    "resultado": {
+     "prob": 0.04,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-10",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Headphones and microphones",
+   "url": "https://bidsfactory.com/en/tenders/fones-e-microfones-brazil_pncp-0f50e07d72990637",
+   "orgao": "Derelict Property Study Update",
+   "prazo": "2026-11-16",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Data de encerramento de propostas: 16/11/2026 08:00",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-10",
    "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-09",
+ "jev_em": "2026-11-10",
  "prazos_em": "2026-11-10",
- "links_em": "2026-11-09"
+ "links_em": "2026-11-10"
 }
