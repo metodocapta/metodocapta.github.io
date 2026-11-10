@@ -1014,7 +1014,7 @@ body{counter-reset:fm-secao}
 
 /* Movimento do Radar - o que mudou desde a coleta anterior + frescor.
    Animacao so de box-shadow (composta na GPU) e desligada em reduced-motion. */
-.fm-movimento{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+.fm-radar-mov{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
   margin:14px 0 0;padding:10px 12px;border-radius:12px;
   border:1px solid rgba(10,188,176,.22);background:rgba(10,188,176,.06)}
 .fm-pulso{width:8px;height:8px;border-radius:50%;flex:0 0 auto;background:#0ABCB0;
