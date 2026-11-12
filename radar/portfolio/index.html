@@ -202,14 +202,14 @@ ul.limites li{margin:6px 0;font-size:14px}
 .site-hd[data-fm-nav] .nav-busca input{color:#0d1f35 !important;background:#fff}
 .site-hd[data-fm-nav] .nav-busca input::placeholder{color:#788d96;opacity:1}
 @media (min-width:901px){
-  .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
+  .site-hd[data-fm-nav] .wrap{width:min(1220px,calc(100% - 44px));max-width:none;margin:0 auto;padding:13px 0;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
 }
 /* MOBILE: o wrap precisa de flex tambem aqui. Sem isto marca, busca, menu e CTA
    caem em bloco (o .wrap nao tem display:flex base) e se sobrepoem sem respiro.
    Entra so o LAYOUT — o drawer continua sendo do menu.js + CSS global. */
 @media (max-width:900px){
-  .site-hd[data-fm-nav] .wrap{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;padding:10px 16px;min-height:64px}
+  .site-hd[data-fm-nav] .wrap{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;width:calc(100% - 44px);margin:0 auto;padding:10px 0;min-height:64px}
   .site-hd[data-fm-nav] .brand{flex:0 1 auto;min-width:0;margin:0 auto 0 0;line-height:0}
   .site-hd[data-fm-nav] .brand img{height:32px;width:auto;max-width:100%}
   .site-hd[data-fm-nav] .nav-lupa,
@@ -256,7 +256,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <strong>área</strong> — e a página mostra o que existe hoje para esse recorte: as leis que aceitam a
 sua natureza, os editais abertos no seu estado e <strong>o que cada um cobra</strong>. Sem cadastro e
 sem promessa: é o mapa, não o diagnóstico.</div>
-<p class="mec-nota" style="margin:6px 0 0"><strong>31 oportunidade(s) nova(s)</strong> desde 05/11/2026 — entraram no Radar nos últimos 7 dias. As marcadas com <span class="tag novo" style="background:#0ABCB0;color:#04222a">NOVO</span> estão no topo.</p>
+<p class="mec-nota" style="margin:6px 0 0"><strong>32 oportunidade(s) nova(s)</strong> desde 05/11/2026 — entraram no Radar nos últimos 7 dias. As marcadas com <span class="tag novo" style="background:#0ABCB0;color:#04222a">NOVO</span> estão no topo.</p>
 </section>
 
 <div class="filtros">
@@ -266,7 +266,7 @@ sem promessa: é o mapa, não o diagnóstico.</div>
     <select id="f-uf"><option value="">Todos</option><option value="IN">IN</option><option value="MG">MG</option><option value="PE">PE</option><option value="PR">PR</option><option value="SC">SC</option><option value="SP">SP</option></select></div>
   <div><label for="f-ar">Área</label>
     <select id="f-ar"><option value="">Todas</option><option value="cultura">Cultura</option><option value="esporte">Esporte</option><option value="reciclagem">Reciclagem</option><option value="infancia">Infância e adolescência</option><option value="idoso">Pessoa idosa</option><option value="assistencia_social">Assistência social</option><option value="saude">Saúde</option><option value="educacao">Educação</option><option value="meio_ambiente">Meio ambiente</option><option value="direitos">Direitos</option></select></div>
-  <span class="res" id="f-res">8 lei(s) · 50 edital(is)</span>
+  <span class="res" id="f-res">8 lei(s) · 51 edital(is)</span>
 </div>
 
 <h2 id="leis-sec">As leis que a sua natureza permite <span class="n">regra legal, não opinião</span></h2>
@@ -359,6 +359,12 @@ O que existe para o seu perfil está nas leis acima — e o diagnóstico diz o q
 <div><span class="tag novo" style="background:#0ABCB0;color:#04222a">NOVO</span></div>
 <div class="fonte"><a href="https://bidsfactory.com/en/tenders/chamamento-publico-para-credenciamento-de-contrata-brazil_pncp-b936d36b6247744e" target="_blank" rel="noopener nofollow">fonte: portal do órgão ↗</a></div>
 </div><div class="ed" data-uf="-" data-area="">
+<div class="top">- · LicitaPNCP</div>
+<a class="t" href="https://metodocapta.github.io/radar/oportunidades/?e=a24da779&amp;o=portfolio">Chamamento publico… (Guaratinga/BA) | LicitaPNCP</a>
+<div class="meta">LicitaPNCP · 16/10/2027 · faltam 338 dias</div>
+<div><span class="tag novo" style="background:#0ABCB0;color:#04222a">NOVO</span></div>
+<div class="fonte"><a href="https://licitapncp.com.br/licitacao/chamamento-publico-para-credenciamento-de-profissionais-liberais-13634985000159-1-000124-2026" target="_blank" rel="noopener nofollow">fonte: portal do órgão ↗</a></div>
+</div><div class="ed" data-uf="-" data-area="">
 <div class="top">- · GOV.BR</div>
 <a class="t" href="https://metodocapta.github.io/radar/oportunidades/?e=b1f1b487&amp;o=portfolio">CHAMAMENTO PÚBLICO Nº 008/2026</a>
 <div class="meta">GOV.BR · 31/12/2026 · faltam 49 dias</div>
@@ -395,8 +401,8 @@ não publicou prazo, e quem espera o aviso costuma perder a janela.</p>
 lista, o mecanismo aceita a sua organização. Isso <strong>não</strong> é aderência ao seu estatuto —
 essa leitura é o diagnóstico. O prazo é o do documento na data da coleta
 (2026-11-12) e muda no portal: confirme antes de decidir.</p>
-<p class="muted">50 editais ativos nesta leitura · 35 com prazo vencido ficaram
-fora · 31 editais não declaram área no documento e por isso aparecem em "todas as áreas".</p>
+<p class="muted">51 editais ativos nesta leitura · 35 com prazo vencido ficaram
+fora · 32 editais não declaram área no documento e por isso aparecem em "todas as áreas".</p>
 </div>
 
 <!-- fm-hier:inicio -->

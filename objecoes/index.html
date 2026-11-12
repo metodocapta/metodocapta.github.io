@@ -126,14 +126,14 @@ details p{margin:10px 0 0;color:var(--muted)}
 .site-hd[data-fm-nav] .nav-busca input{color:#0d1f35 !important;background:#fff}
 .site-hd[data-fm-nav] .nav-busca input::placeholder{color:#788d96;opacity:1}
 @media (min-width:901px){
-  .site-hd[data-fm-nav] .wrap{max-width:1180px;margin:0 auto;padding:13px 20px;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
+  .site-hd[data-fm-nav] .wrap{width:min(1220px,calc(100% - 44px));max-width:none;margin:0 auto;padding:13px 0;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
   .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
 }
 /* MOBILE: o wrap precisa de flex tambem aqui. Sem isto marca, busca, menu e CTA
    caem em bloco (o .wrap nao tem display:flex base) e se sobrepoem sem respiro.
    Entra so o LAYOUT — o drawer continua sendo do menu.js + CSS global. */
 @media (max-width:900px){
-  .site-hd[data-fm-nav] .wrap{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;padding:10px 16px;min-height:64px}
+  .site-hd[data-fm-nav] .wrap{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;width:calc(100% - 44px);margin:0 auto;padding:10px 0;min-height:64px}
   .site-hd[data-fm-nav] .brand{flex:0 1 auto;min-width:0;margin:0 auto 0 0;line-height:0}
   .site-hd[data-fm-nav] .brand img{height:32px;width:auto;max-width:100%}
   .site-hd[data-fm-nav] .nav-lupa,
@@ -213,6 +213,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 </aside>
 <!-- fm-hier:fim --><div class="cta"><b>A dúvida é o seu caso?</b><p>Diagnóstico de prontidão (72h), gratuito: elegibilidade, prontidão documental e prioridade. Atuação de meio, sem promessa de resultado.</p><a class="btn" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20obje%C3%A7%C3%B5es.%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20">Pedir o diagnóstico — 72h</a></div>
 <p class="muted">Se a sua dúvida não estiver aqui, ela cabe no diagnóstico.</p>
+
 
 
 

@@ -3133,7 +3133,26 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-12",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.75,
+    "confianca": 0.72,
+    "naturezas": {
+     "associacao": 0.51,
+     "fundacao": 0.45,
+     "cooperativa": 0.47,
+     "federacao": 0.35
+    },
+    "resultado": {
+     "prob": 0.17,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-12",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "PREGÃO ELETRÔNICO Nº 527/2026 - Serviços comuns de engenharia.",
@@ -3147,7 +3166,26 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-12",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.54,
+     "fundacao": 0.36,
+     "cooperativa": 0.66,
+     "federacao": 0.21
+    },
+    "resultado": {
+     "prob": 0.16,
+     "base": "trecho",
+     "carga": 0
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-12",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Edital nº 12/2026",
@@ -3161,10 +3199,43 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-12",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.68,
+    "confianca": 0.65,
+    "naturezas": {
+     "associacao": 0.46,
+     "fundacao": 0.45,
+     "cooperativa": 0.44,
+     "federacao": 0.36
+    },
+    "resultado": {
+     "prob": 0.22,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-12",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Chamamento publico… (Guaratinga/BA) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/chamamento-publico-para-credenciamento-de-profissionais-liberais-13634985000159-1-000124-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2027-10-16",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 16/10/2027 08:00",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-12",
    "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-10",
+ "jev_em": "2026-11-12",
  "prazos_em": "2026-11-12",
  "links_em": "2026-11-12"
 }
