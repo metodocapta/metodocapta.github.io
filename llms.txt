@@ -162,8 +162,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## FAQ e mapa
 
-- [Modelo de performance: cinco perguntas](https://metodocapta.github.io/modelo-de-performance/): as cinco dimensões, a cadeia de resultados e os três níveis de mensuração.
-- [Como ler os números: a prova](https://metodocapta.github.io/como-ler-os-numeros/): seis indicadores corretos e a fragilidade que só a leitura conjunta revela.
+- [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
+- [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
 
 
 ## Matriz de mecanismos
@@ -208,3 +208,9 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - **Público:** organizações que dependem de edital, fundo, emenda ou lei de incentivo — com ou sem equipe dedicada.
 - **Limite declarado:** atuação de meio. Não promete aprovação, não substitui parecer jurídico e não vende lista.
 - **Contato:** WhatsApp +55 44 99912-0638 · metodocaptamais@gmail.com
+
+## MROSC nos municípios
+
+- [MROSC nos municípios](https://metodocapta.github.io/mrosc/): programa de evidência sobre a implementação da Lei 13.019/2014
+- [Processos e sistemas](https://metodocapta.github.io/mrosc/processos-e-sistemas/): o fluxo entre as áreas e a decisão de integrar, comprar ou desenvolver sistema
+
