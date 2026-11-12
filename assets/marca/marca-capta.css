@@ -1621,3 +1621,29 @@ html{interpolate-size:allow-keywords}
   .fm-faq-item::details-content{transition:none}
   .fm-radar-kpi b.fm-pop{animation:none}
 }
+
+
+/* ==========================================================================
+   MOVIMENTO DE CONTEUDO (repertorio ReactBits adaptado, zero dependencia)
+   - icones que se desenham ao entrar na tela
+   - barras do Radar que crescem
+   Usa animation-timeline: view(); sem suporte, tudo fica estatico.
+   ========================================================================== */
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: view()){
+    .fm-pillar-icon svg :is(path,circle,rect,line,polyline,polygon){
+      stroke-dasharray:200;stroke-dashoffset:200;
+      animation:fm-desenhar .9s ease forwards;
+      animation-timeline:view();
+      animation-range:entry 0% cover 30%;
+    }
+    @keyframes fm-desenhar{to{stroke-dashoffset:0}}
+    .fm-barra-fill{
+      transform-origin:left center;
+      animation:fm-crescer .8s ease forwards;
+      animation-timeline:view();
+      animation-range:entry 0% cover 25%;
+    }
+    @keyframes fm-crescer{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  }
+}

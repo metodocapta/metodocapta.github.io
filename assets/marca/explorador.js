@@ -40,6 +40,34 @@
       });
     }
 
+    /* Pill deslizante: mede o botao ativo e desliza ate ele (transicao de tabs). */
+    var pill = null;
+    function posicionarPill() {
+      if (!rail) return;
+      if (!pill) {
+        pill = doc.createElement('span');
+        pill.className = 'fm-rail-pill';
+        pill.setAttribute('aria-hidden', 'true');
+        rail.appendChild(pill);
+      }
+      var ativo = rail.querySelector('[data-rail][aria-current="step"]');
+      if (!ativo) { pill.style.opacity = '0'; return; }
+      pill.style.opacity = '1';
+      pill.style.width = ativo.offsetWidth + 'px';
+      pill.style.height = ativo.offsetHeight + 'px';
+      pill.style.transform = 'translate(' + ativo.offsetLeft + 'px,' + ativo.offsetTop + 'px)';
+    }
+    if (rail) {
+      if ('MutationObserver' in window) {
+        new MutationObserver(posicionarPill).observe(rail, {
+          subtree: true, attributes: true, attributeFilter: ['aria-current']
+        });
+      }
+      window.addEventListener('resize', posicionarPill);
+      if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(posicionarPill).catch(function () {});
+      posicionarPill();
+    }
+
     function fecharTodos(exceto) {
       cards.forEach(function (card, i) {
         var btn = card.querySelector('.fm-pilar-toggle');

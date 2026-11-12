@@ -309,6 +309,18 @@
   background:color-mix(in srgb,var(--etapa) 20%,transparent)}
 .fm-etapas-rail li button[aria-current="step"] span{color:var(--etapa)}
 
+/* Pill deslizante: acompanha a etapa ativa (transicao de tabs, transitions.dev) */
+.fm-etapas-rail{isolation:isolate}
+.fm-rail-pill{position:absolute;top:0;left:0;width:0;height:0;border-radius:999px;
+  background:color-mix(in srgb,var(--mc-teal) 26%,transparent);
+  border:1px solid color-mix(in srgb,var(--mc-teal) 55%,transparent);
+  box-shadow:0 6px 18px -8px rgba(10,188,176,.6);
+  opacity:0;pointer-events:none;z-index:0;
+  transition:transform .24s cubic-bezier(.2,.7,.2,1),width .24s cubic-bezier(.2,.7,.2,1),
+    height .24s cubic-bezier(.2,.7,.2,1),opacity .18s ease}
+.fm-etapas-rail button{position:relative;z-index:1}
+@media (prefers-reduced-motion:reduce){.fm-rail-pill{transition:none}}
+
 /* O sticky do trilho exige um ancestral que nao crie scrollport:
    a secao do metodo usa overflow:hidden; clip recorta igual, sem quebrar o sticky. */
 .fm-capta-section{overflow:clip}
