@@ -558,6 +558,41 @@
     obs.observe(sec);
   }
 
+  /* ==========================================================================
+     TITULOS — duas linhas sobem com atraso (text reveal, ReactBits adaptado)
+     O estado escondido so e aplicado pelo JS; sem JS, o titulo fica visivel.
+     ========================================================================== */
+  function initTitulos() {
+    var reduz = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduz || !('IntersectionObserver' in window)) return;
+
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('visivel'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.25 });
+
+    Array.prototype.slice.call(doc.querySelectorAll('.fm-section h2')).forEach(function (h) {
+      if (h.querySelector('.fm-linha')) return;
+      var partes = [[]];
+      Array.prototype.slice.call(h.childNodes).forEach(function (n) {
+        if (n.nodeType === 1 && n.tagName === 'BR') partes.push([]);
+        else partes[partes.length - 1].push(n);
+      });
+      if (!partes.length) return;
+      h.textContent = '';
+      partes.forEach(function (nodes, i) {
+        var s = doc.createElement('span');
+        s.className = 'fm-linha';
+        s.style.setProperty('--i', i);
+        nodes.forEach(function (n) { s.appendChild(n); });
+        h.appendChild(s);
+      });
+      h.classList.add('fm-titulo');
+      io.observe(h);
+    });
+  }
+
   function iniciar() {
     initEtapas();
     initRadar();
@@ -565,6 +600,7 @@
     initProntidao();
     initMiniDiag();
     initRadarZona();
+    initTitulos();
   }
 
   if (doc.readyState === 'loading') doc.addEventListener('DOMContentLoaded', iniciar, { once: true });

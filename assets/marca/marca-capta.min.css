@@ -46,3 +46,16 @@ html{interpolate-size:allow-keywords}
     @keyframes fm-crescer{from{transform:scaleX(0)}to{transform:scaleX(1)}}
   }
 }
+
+
+/* ==========================================================================
+   TEXT REVEAL - duas linhas sobem com atraso (JS aplica .fm-titulo)
+   Sem JS, o titulo fica visivel: nada some.
+   ========================================================================== */
+.fm-titulo .fm-linha{display:block;opacity:0;transform:translateY(14px);
+  transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1);
+  transition-delay:calc(var(--i,0) * 70ms)}
+.fm-titulo.visivel .fm-linha{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .fm-titulo .fm-linha{opacity:1;transform:none;transition:none}
+}
