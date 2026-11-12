@@ -4,17 +4,17 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 470,
+   "oportunidades": 495,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 417
+     "total": 440
     },
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
-     "total": 6
+     "total": 7
     },
     {
      "codigo": "LIR",
@@ -29,7 +29,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 32
+     "total": 33
     },
     {
      "codigo": "FUNDO_IDOSO",
@@ -39,12 +39,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 153,
+   "oportunidades": 156,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 82
+     "total": 85
     },
     {
      "codigo": "MROSC",
@@ -179,12 +179,12 @@
    ]
   },
   "AM": {
-   "oportunidades": 3,
+   "oportunidades": 4,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 2
+     "total": 3
     },
     {
      "codigo": "ROUANET",
@@ -274,12 +274,12 @@
    ]
   },
   "PA": {
-   "oportunidades": 11,
+   "oportunidades": 12,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 7
+     "total": 8
     },
     {
      "codigo": "ROUANET",

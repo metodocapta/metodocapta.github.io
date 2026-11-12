@@ -1588,3 +1588,36 @@ select option:checked{background:#0A4A4A;color:#ffffff}
 .fm-band-light .fm-legal-linha{color:#3c4a52}
 .fm-band-light .fm-legal-linha a{color:#067a72}
 
+
+
+/* ==========================================================================
+   CAPITULOS DE COR - uma cor por etapa (mesma paleta do rail)
+   ========================================================================== */
+.fm-pillars .fm-pillar:nth-child(1){--etapa:#0ABCB0}
+.fm-pillars .fm-pillar:nth-child(2){--etapa:#7FE3D8}
+.fm-pillars .fm-pillar:nth-child(3){--etapa:#25D366}
+.fm-pillars .fm-pillar:nth-child(4){--etapa:#D97B4D}
+.fm-pillars .fm-pillar:nth-child(5){--etapa:#4FD1C5}
+.fm-pillars .fm-pillar:nth-child(6){--etapa:#F0A57C}
+.fm-pillars .fm-pillar::after{content:";position:absolute;left:0;right:0;top:0;height:3px;
+  background:var(--etapa);opacity:.9;pointer-events:none}
+.fm-pillars .fm-pillar > span{color:var(--etapa) !important}
+.fm-pillars .fm-pillar .fm-pillar-verb,
+.fm-pillars .fm-pillar.is-ativa .fm-pillar-verb{color:var(--etapa) !important}
+
+
+/* ==========================================================================
+   TRANSICOES (transitions.dev adaptado)
+   - FAQ: altura animada via ::details-content (progressive enhancement)
+   - contador: pop-in de 220ms ao terminar a contagem
+   ========================================================================== */
+html{interpolate-size:allow-keywords}
+.fm-faq-item::details-content{block-size:0;overflow:hidden;
+  transition:block-size .28s cubic-bezier(.2,.7,.2,1),content-visibility .28s allow-discrete}
+.fm-faq-item[open]::details-content{block-size:auto}
+@keyframes fm-pop{0%{transform:scale(1)}55%{transform:scale(1.06)}100%{transform:scale(1)}}
+.fm-radar-kpi b.fm-pop{animation:fm-pop 220ms cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion:reduce){
+  .fm-faq-item::details-content{transition:none}
+  .fm-radar-kpi b.fm-pop{animation:none}
+}

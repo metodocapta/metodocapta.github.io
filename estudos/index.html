@@ -63,6 +63,16 @@ background:linear-gradient(135deg,var(--navy),var(--navy2));color:#e9fbf8}
 @media(max-width:640px){article{padding:18px 16px 50px}article table{display:block;overflow-x:auto;white-space:nowrap}}
 
 .hub-hero{padding:30px 0 4px;}
+.hub-hero{position:relative;overflow:hidden;}
+.hub-hero::before{content:"";position:absolute;right:-90px;top:-70px;width:440px;height:440px;
+  border-radius:50%;pointer-events:none;z-index:0;
+  background:
+    repeating-radial-gradient(circle at center, rgba(10,188,176,.16) 0 1px, transparent 1px 46px),
+    conic-gradient(from -30deg at center, rgba(10,188,176,.22), transparent 20%);
+  -webkit-mask-image:radial-gradient(circle at center,#000 0 52%,transparent 72%);
+  mask-image:radial-gradient(circle at center,#000 0 52%,transparent 72%);}
+.hub-hero > *{position:relative;z-index:1;}
+@media (max-width:700px){.hub-hero::before{width:260px;height:260px;right:-90px;top:-50px;}}
 .hub-hero .eyebrow{display:inline-block;font:600 11.5px/1 Oswald,Inter,sans-serif;
   letter-spacing:.18em;text-transform:uppercase;color:var(--graf);margin-bottom:12px;}
 .hub-hero h1{font:600 clamp(29px,3.6vw,44px)/1.16 Oswald,Inter,sans-serif;

@@ -296,6 +296,19 @@
   .fm-etapas-rail button span{display:none}
 }
 
+/* Capitulos de cor: uma cor por etapa (dentro da paleta da marca). */
+.fm-etapas-rail li:nth-child(1){--etapa:#0ABCB0}
+.fm-etapas-rail li:nth-child(2){--etapa:#7FE3D8}
+.fm-etapas-rail li:nth-child(3){--etapa:#25D366}
+.fm-etapas-rail li:nth-child(4){--etapa:#D97B4D}
+.fm-etapas-rail li:nth-child(5){--etapa:#4FD1C5}
+.fm-etapas-rail li:nth-child(6){--etapa:#F0A57C}
+.fm-etapas-rail li button span{color:var(--etapa)}
+.fm-etapas-rail li button{border-color:color-mix(in srgb,var(--etapa) 32%,transparent)}
+.fm-etapas-rail li button[aria-current="step"]{border-color:var(--etapa);
+  background:color-mix(in srgb,var(--etapa) 20%,transparent)}
+.fm-etapas-rail li button[aria-current="step"] span{color:var(--etapa)}
+
 /* O sticky do trilho exige um ancestral que nao crie scrollport:
    a secao do metodo usa overflow:hidden; clip recorta igual, sem quebrar o sticky. */
 .fm-capta-section{overflow:clip}
