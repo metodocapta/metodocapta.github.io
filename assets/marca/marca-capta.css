@@ -828,7 +828,7 @@ html[data-fm-mapa-visivel] .mc-zap svg{width:28px;height:28px;}
 .fm-dest-section .fm-heading p{color:#cfe8e6;}
 .fm-dest-wrap{position:relative;margin-top:34px;}
 .fm-dest-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;
-  padding:4px 4px 20px;scrollbar-width:none;-ms-overflow-style:none;}
+  padding:4px 0 20px;scrollbar-width:none;-ms-overflow-style:none;}
 .fm-dest-track::-webkit-scrollbar{display:none;}
 .fm-dest-card{flex:0 0 min(322px,82vw);scroll-snap-align:start;display:flex;}
 .fm-dest-link{display:flex;flex-direction:column;width:100%;text-decoration:none;
