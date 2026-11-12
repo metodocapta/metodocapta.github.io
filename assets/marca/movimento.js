@@ -82,6 +82,10 @@ const on = (el, ev, fn, opt) => {
   const rodape = doc.querySelector('footer.fm-footer');
   if (heroCopy) {
     btn.classList.add('fm-mov-toggle--hero');
+    /* posiciona ANTES de inserir: sem isto o botao entra no fluxo e empurra o h1 */
+    btn.style.position = 'absolute';
+    btn.style.top = '-56px';
+    btn.style.left = '0';
     heroCopy.insertBefore(btn, heroCopy.firstChild);
   } else if (acoes && acoes.parentNode) {
     acoes.parentNode.insertBefore(btn, acoes.nextSibling);

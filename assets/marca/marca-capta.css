@@ -1660,3 +1660,13 @@ html{interpolate-size:allow-keywords}
 @media (prefers-reduced-motion:reduce){
   .fm-titulo .fm-linha{opacity:1;transform:none;transition:none}
 }
+
+
+/* ==========================================================================
+   BOTAO DE OPT-IN DO MOVIMENTO - fora do fluxo
+   O JS insere o botao no hero para quem tem reduced-motion. Sem posicao
+   absoluta ele entrava no fluxo e empurrava o h1 (CLS 0,247 em 12/11).
+   ========================================================================== */
+.fm-hero-copy{position:relative}
+.fm-mov-toggle--hero{position:absolute;top:-56px;left:0;z-index:5}
+@media (max-width:700px){.fm-mov-toggle--hero{top:-48px}}
