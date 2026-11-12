@@ -218,9 +218,10 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## Mapas da gestão eficaz
 
-- [Mapas da gestão eficaz](https://metodocapta.github.io/gestao-eficaz/mapas/): cinco mapas de processo (mestre + execução, decisão, resultado e missão) em SVG e PDF
+- [Mapas da gestão eficaz](https://metodocapta.github.io/gestao-eficaz/mapas/): seis mapas de processo (mestre + execução, decisão, resultado, missão e relações) em SVG e PDF
+
 
 ## Diagnóstico de gestão eficaz
 
-- [Diagnóstico de gestão eficaz](https://metodocapta.github.io/gestao-eficaz/diagnostico/): diretrizes do diagnóstico assistido: quatro dimensões, doze critérios e como solicitar
+- [Diagnóstico de gestão eficaz](https://metodocapta.github.io/gestao-eficaz/diagnostico/): diretrizes do diagnóstico assistido: quatro dimensões, dezesseis critérios e como solicitar
 
