@@ -453,6 +453,8 @@
   })();
 
   (function () {
+    /* pagina curta/de venda que nao quer indice: marca data-sem-toc no article */
+    if (document.querySelector("[data-sem-toc]")) return;
     var art = document.querySelector("article");
     if (!art) return;
     var hs = Array.prototype.slice.call(art.querySelectorAll("h2")).filter(function (h) {
