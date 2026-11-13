@@ -159,6 +159,82 @@ ul.nao-e strong{color:var(--navy)}
 .apoio a{color:#067a72}
 @media(max-width:860px){.sol-grid,.passos{grid-template-columns:1fr}}
 </style>
+<style data-fm-nav>
+/* componente unico de navegacao (nav_comum.py) — so a pele e o layout DESKTOP.
+   O COMPORTAMENTO (ativo por rota, drawer mobile, busca, mega-menu, encolher no
+   scroll) continua no menu.js + CSS global da marca, que ja eram os donos disso.
+   Regra de ouro: nao sobrescrever nada em <=900px, onde vive o drawer. */
+.site-hd[data-fm-nav]{background:linear-gradient(135deg,#062531,#04222a)}
+.site-hd[data-fm-nav] .brand img{height:44px;width:auto;max-width:270px;display:block}
+.site-hd[data-fm-nav] .hd-cta{background:linear-gradient(135deg,#e08a5c 0%,#d97b4d 100%);color:#04222a;border-radius:999px;padding:13px 26px;font-size:13.5px;font-weight:700;box-shadow:0 14px 34px -10px rgba(217,123,77,.6),inset 0 1px 0 rgba(255,255,255,.28);transform:translateY(-1px)}
+.site-hd[data-fm-nav] .hd-cta:hover{filter:brightness(1.06);box-shadow:0 16px 38px -8px rgba(217,123,77,.7)}
+.site-hd[data-fm-nav] nav a{font:600 12px/1 Oswald,'Segoe UI',sans-serif;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap}
+.site-hd[data-fm-nav] nav a.is-active,
+.site-hd[data-fm-nav] nav a[aria-current="page"]{color:#fff;border-bottom:2px solid #0ABCB0;padding-bottom:5px}
+/* PAINEL DO MENU (mega): fundo branco, texto escuro.
+   A regra global `.fm-site span{color:#e4f4f1}` (texto claro para fundo escuro)
+   pintava os <span> deste painel e deixava o nome do mecanismo ilegivel.
+   Precisa de especificidade maior que `.fm-site span` para vencer. */
+.site-hd[data-fm-nav] .nav-mega,
+.site-hd[data-fm-nav] .nav-mega p,
+.site-hd[data-fm-nav] .nav-mega span,
+.site-hd[data-fm-nav] .nav-mega a{color:#0d1f35}
+.site-hd[data-fm-nav] .nav-mega .mg-sigla{color:#7fe3d8;background:#062531}
+.site-hd[data-fm-nav] .nav-mega .mg-nome{color:#0d1f35}
+.site-hd[data-fm-nav] .nav-mega .mg-n{color:#4a6572}
+/* painel de busca: fundo branco exige texto escuro (o titulo vinha claro) */
+.site-hd[data-fm-nav] .nav-busca-tit{color:#3f5f66 !important;font-weight:700;letter-spacing:.10em}
+.site-hd[data-fm-nav] .nav-busca-hist{color:#0d1f35 !important;background:#f7fbfb;border-color:#dbe7e7}
+.site-hd[data-fm-nav] .nav-busca-hist:hover{background:#eef7f6;border-color:#0ABCB0}
+/* RESULTADOS DA BUSCA: o global `.fm-site a{color:inherit}` (0,1,1) vencia o
+   `.nav-busca-item` (0,1,0) e o titulo do resultado herdava o texto claro do
+   cabecalho — branco sobre branco. Aqui a especificidade e o !important fecham. */
+.site-hd[data-fm-nav] .nav-busca,
+.site-hd[data-fm-nav] .nav-busca p,
+.site-hd[data-fm-nav] .nav-busca span,
+.site-hd[data-fm-nav] .nav-busca strong,
+.site-hd[data-fm-nav] .nav-busca em,
+.site-hd[data-fm-nav] .nav-busca small{color:#0d1f35 !important}
+.site-hd[data-fm-nav] .nav-busca a,
+.site-hd[data-fm-nav] .nav-busca button{color:#0d1f35 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-tit{color:#4a6572 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-tit::after{content:none !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-item span,
+.site-hd[data-fm-nav] .nav-busca .nav-busca-vazio{color:#4a6572 !important}
+.site-hd[data-fm-nav] .nav-busca .nav-busca-todos{color:#067a72 !important}
+.site-hd[data-fm-nav] .nav-busca input{color:#0d1f35 !important;background:#fff}
+.site-hd[data-fm-nav] .nav-busca input::placeholder{color:#788d96;opacity:1}
+@media (min-width:901px){
+  .site-hd[data-fm-nav] .wrap{width:min(1220px,calc(100% - 44px));max-width:none;margin:0 auto;padding:13px 0;display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
+  .site-hd[data-fm-nav] nav{display:flex;align-items:center;gap:6px 18px;margin-left:auto;flex-wrap:wrap}
+}
+/* MOBILE: o wrap precisa de flex tambem aqui. Sem isto marca, busca, menu e CTA
+   caem em bloco (o .wrap nao tem display:flex base) e se sobrepoem sem respiro.
+   Entra so o LAYOUT — o drawer continua sendo do menu.js + CSS global. */
+@media (max-width:900px){
+  .site-hd[data-fm-nav] .wrap{display:flex;align-items:center;flex-wrap:nowrap;gap:10px;width:calc(100% - 40px);margin:0 auto;padding:10px 0;min-height:64px}
+  .site-hd[data-fm-nav] .brand{flex:0 1 auto;min-width:0;margin:0 auto 0 0;line-height:0}
+  .site-hd[data-fm-nav] .brand img{height:32px;width:auto;max-width:100%}
+  .site-hd[data-fm-nav] .nav-lupa,
+  .site-hd[data-fm-nav] .nav-burger{margin:0;flex:0 0 auto;width:38px;height:38px}
+  .site-hd[data-fm-nav] .hd-cta{flex:0 0 auto;margin:0;padding:10px 14px;font-size:12px;line-height:1.15;transform:none;white-space:nowrap;box-shadow:0 10px 24px -12px rgba(217,123,77,.55),inset 0 1px 0 rgba(255,255,255,.28)}
+  .site-hd[data-fm-nav] .hd-cta::after{display:none}
+}
+@media (max-width:560px){
+  .site-hd[data-fm-nav] .wrap{gap:8px;padding:9px 0;min-height:58px}
+  .site-hd[data-fm-nav] .brand img{height:28px}
+  .site-hd[data-fm-nav] .nav-lupa,
+  .site-hd[data-fm-nav] .nav-burger{width:36px;height:36px;border-radius:9px}
+  .site-hd[data-fm-nav] .hd-cta{padding:9px 12px;font-size:11.5px}
+}
+@media (max-width:380px){
+  .site-hd[data-fm-nav] .wrap{gap:6px;padding:8px 0}
+  .site-hd[data-fm-nav] .brand img{height:25px}
+  .site-hd[data-fm-nav] .nav-lupa,
+  .site-hd[data-fm-nav] .nav-burger{width:32px;height:32px}
+  .site-hd[data-fm-nav] .hd-cta{padding:8px 10px;font-size:10.5px}
+}
+</style>
 <style data-fm-a11y>
 .fm-tabela-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0;border-radius:10px}
 .fm-tabela-scroll:focus-visible{outline:2px solid #0ABCB0;outline-offset:3px}
@@ -171,6 +247,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <link rel="preload" href="/assets/marca/fontes/oswald-latin.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
+<header class="site-hd" data-fm-nav><div class="wrap"><a class="brand" href="/"><img src="/assets/marca/wordmark-claro-256.webp" alt="Metodo Capta+" width="256" height="68"></a><nav id="fm-nav-principal" aria-label="Navegacao principal"><a href="/radar/" title="Radar, oportunidades e matriz de mecanismos">Descobrir</a><a href="/diagnostico-de-prontidao/" title="Diagnostico, checklists e calculadora" data-cta-primario="1">Verificar</a><a href="/guias/" title="Guias, plano de trabalho e orcamento">Estruturar</a><a href="/checklist-prestacao/" title="Execucao, prestacao de contas e impacto">Executar</a><a href="/solucoes/" title="Soluções, escopo, prazos e investimento">Contratar</a></nav><a class="hd-cta" href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20o%20diagn%C3%B3stico%20de%20prontid%C3%A3o%20%2872h%29%20do%20M%C3%A9todo%20Capta%2B.%20Minha%20organiza%C3%A7%C3%A3o%20%C3%A9%3A%20" data-fm-evento="intencao_diagnostico">Pedir diagnóstico</a></div></header>
 <div class="crumb"><a href="/">Início</a> &rsaquo; <a href="/solucoes/">Soluções</a> &rsaquo; Plano de trabalho que o parecerista reconhece</div>
 <main class="wrap">
 <section class="hero sol-hero">
@@ -209,7 +286,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
 <p class="apoio"><b>Material de apoio:</b> <a href="/guias/como-montar-teoria-da-mudanca/">Como montar a teoria da mudança</a> · <a href="/guias/como-montar-matriz-logica/">Como montar a matriz lógica</a> · <a href="/guias/como-montar-cronograma-fisico-financeiro/">Cronograma físico-financeiro</a>.</p>
 </article>
-<footer class="site-ft" data-v2="1"><div class="wrap"><div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div><div class="ft-col"><b>Navegar</b><a href="/">Início</a><a href="/percursos/">Percursos</a><a href="/radar/">Radar</a><a href="/biblioteca/">Biblioteca</a><a href="/guias/">Guias</a><a href="/calculadora/">Calculadora</a></div><div class="ft-col"><b>Ferramentas</b><a href="/diagnostico-de-prontidao/" data-cta-primario="1">Pedir diagnóstico</a><a href="/matriz-de-mecanismos/">Matriz de mecanismos</a><a href="/radar/oportunidades/">Oportunidades abertas</a><a href="/carteira-de-incentivadores/">Carteira</a></div><div class="ft-col"><b>Institucional</b><a href="/metodo-capta-plus/">Método</a><a href="/para/">Para quem</a><a href="/objecoes/">Objeções</a><a href="/perguntas-frequentes/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a></div><div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="/privacidade/">Privacidade</a></div></div></footer>
+<footer class="site-ft" data-v2="1"><div class="wrap"><div class="ft-brand"><b>Método Capta+</b><p>Captação de recursos e gestão de projetos para o Terceiro Setor.</p></div><div class="ft-col"><b>Navegar</b><a href="/">Início</a><a href="/percursos/">Percursos</a><a href="/radar/">Radar</a><a href="/biblioteca/">Biblioteca</a><a href="/guias/">Guias</a><a href="/calculadora/">Calculadora</a></div><div class="ft-col"><b>Ferramentas</b><a href="/diagnostico-de-prontidao/">Pedir diagnóstico</a><a href="/matriz-de-mecanismos/">Matriz de mecanismos</a><a href="/radar/oportunidades/">Oportunidades abertas</a><a href="/carteira-de-incentivadores/">Carteira</a></div><div class="ft-col"><b>Institucional</b><a href="/metodo-capta-plus/">Método</a><a href="/para/">Para quem</a><a href="/objecoes/">Objeções</a><a href="/perguntas-frequentes/">FAQ</a><a href="/mapa-do-site/">Mapa do site</a></div><div class="ft-col"><b>Contato</b><a href="mailto:metodocaptamais@gmail.com">metodocaptamais@gmail.com</a><a href="https://wa.me/5544999120638">WhatsApp</a><a href="/privacidade/">Privacidade</a></div></div></footer>
 <!-- fm-medicao -->
 <script>window.__FM_MEDICAO={"ga4":"G-ZNPVB11E0X","consentimento":"banner","plausible":"","umami":"","endpoint":""};</script>
 <script data-fm-ocioso>(function(){var u="/assets/marca/medicao.js?v=b3a575ee",f=0;function c(){if(f)return;f=1;var s=document.createElement("script");s.src=u;s.async=1;document.head.appendChild(s);}if("requestIdleCallback"in window){requestIdleCallback(c,{timeout:2500});}else{setTimeout(c,2500);}["pointerdown","keydown","scroll","visibilitychange"].forEach(function(e){addEventListener(e,c,{once:true,passive:true});});})()</script>
