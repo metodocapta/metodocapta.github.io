@@ -4,12 +4,12 @@
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 495,
+   "oportunidades": 523,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 440
+     "total": 467
     },
     {
      "codigo": "MROSC",
@@ -29,7 +29,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 33
+     "total": 34
     },
     {
      "codigo": "FUNDO_IDOSO",

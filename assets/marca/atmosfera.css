@@ -451,6 +451,15 @@
   background:linear-gradient(150deg,rgba(10,188,176,.16),rgba(10,188,176,.04));
   box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 6px 16px rgba(0,0,0,.18);
 }
+/* porta da prateleira dentro do degrau: o texto continua curto, o link leva ao escopo */
+.fm-step-mais{
+  display:inline-block;margin-top:8px;min-height:24px;
+  color:var(--mc-teal);font-family:inherit;font-weight:600;font-size:13px;line-height:1.5;
+  text-decoration:underline;
+  text-underline-offset:3px;text-decoration-color:rgba(10,188,176,.5);
+}
+.fm-step-mais:hover{color:#fff;text-decoration-color:#fff;}
+.fm-step-mais:focus-visible{outline:2px solid var(--mc-teal);outline-offset:3px;border-radius:3px;}
 
 /* ---------- CONTATO · painel de vidro (já tinha blur; agora com fio) ---------- */
 .fm-contact-side,.fm-form-card{

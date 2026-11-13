@@ -128,9 +128,15 @@ ul.nao-e strong{color:var(--navy)}
 .sol-card .rodape{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}
 .sol-card .faixa{font:600 11.5px/1.4 Oswald,Inter,sans-serif;letter-spacing:.06em;
   text-transform:uppercase;color:#067a72}
-.sol-card .ir{display:inline-block;padding:10px 14px;border-radius:999px;
-  background:linear-gradient(135deg,#0ABCB0,#067a72);color:#04222a;text-decoration:none;
+.sol-card .ir{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+  padding:0 16px;border-radius:999px;background:#0ABCB0;color:#04222a;text-decoration:none;
   font:600 11.5px/1 Oswald,Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.sol-card .ir:hover{background:#067a72;color:#fff}
+.hero-acao{margin:16px 0 0;font-size:15px;line-height:1.6}
+.hero-acao a{color:#067a72;font-weight:600;text-decoration:underline;
+  text-underline-offset:3px;text-decoration-color:rgba(6,122,114,.45)}
+.hero-acao a:hover{text-decoration-color:#067a72}
+.crumb a:focus-visible{outline:2px solid #067a72;outline-offset:3px;border-radius:3px}
 .tab-degraus{width:100%;border-collapse:collapse;margin:14px 0 26px;font-size:14.5px}
 .tab-degraus th,.tab-degraus td{border:1px solid #dbe7e7;padding:9px 11px;text-align:left}
 .tab-degraus th{background:#f4f8f8;font:600 11.5px/1.4 Oswald,Inter,sans-serif;
@@ -147,11 +153,13 @@ ul.nao-e strong{color:var(--navy)}
 .aviso{border-left:3px solid #d97b4d;background:#fdf7f3;padding:12px 16px;border-radius:0 10px 10px 0;
   font-size:14px;line-height:1.6;color:#5a3a29;margin:18px 0}
 .cta-sol{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:26px 0 10px}
-.cta-sol .btn{display:inline-block;padding:15px 22px;border-radius:999px;
+.cta-sol .btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;
+  border-radius:999px;
   background:linear-gradient(135deg,#d97b4d,#c4643a);color:#1b0e07;text-decoration:none;
   font:600 12px/1 Oswald,Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;
   box-shadow:0 12px 28px -14px rgba(217,123,77,.7)}
-.cta-sol .btn2{display:inline-block;padding:15px 22px;border-radius:999px;border:1px solid #7ec6bf;
+.cta-sol .btn2{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 22px;
+  border-radius:999px;border:1px solid #7ec6bf;
   background:#eef8f7;color:#04514d;text-decoration:none;font:600 12px/1 Oswald,Inter,sans-serif;
   letter-spacing:.08em;text-transform:uppercase}
 .cta-sol .btn2:hover{border-color:#067a72;background:#e2f4f2}
@@ -161,6 +169,18 @@ ul.nao-e strong{color:var(--navy)}
 .apoio{margin:22px 0 0;font-size:14px;line-height:1.7;color:#3c4a52}
 .apoio a{color:#067a72}
 @media(max-width:860px){.sol-grid,.passos{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .tab-degraus thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .tab-degraus,.tab-degraus tbody{display:block}
+  .tab-degraus tr{display:block;border:1px solid #dbe7e7;border-radius:12px;
+    padding:4px 0;margin:0 0 10px;background:#fff}
+  .tab-degraus td{display:block;border:0;padding:7px 14px}
+  .tab-degraus td::before{content:attr(data-rotulo);display:block;
+    font:600 10.5px/1.5 Oswald,Inter,sans-serif;letter-spacing:.10em;
+    text-transform:uppercase;color:#067a72}
+  .cta-sol{gap:10px}
+  .cta-sol .btn,.cta-sol .btn2{width:100%}
+}
 </style>
 <style data-fm-nav>
 /* componente unico de navegacao (nav_comum.py) — so a pele e o layout DESKTOP.
@@ -257,6 +277,8 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 <span class="eyebrow">Solução · Recorrência</span>
 <h1>Execução sem glosa, até o dossiê final.</h1>
 <div class="def">A execução acompanhada mês a mês, com calendário de obrigações, revisão de despesas e dossiê de prestação pronto para a diligência.</div>
+<p class="hero-acao"><a href="/checklist-prestacao/">Testar a prontidão &rarr;</a>
+&nbsp;·&nbsp; <a href="https://wa.me/5544999120638?text=Ol%C3%A1%21%20Quero%20a%20solu%C3%A7%C3%A3o%20Execu%C3%A7%C3%A3o%20sem%20glosa%2C%20at%C3%A9%20o%20dossi%C3%AA%20final%20do%20M%C3%A9todo%20Capta%2B." rel="noopener">Tirar uma dúvida antes</a></p>
 </section>
 <article data-sem-toc>
 
