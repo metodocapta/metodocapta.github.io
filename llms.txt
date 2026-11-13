@@ -75,6 +75,7 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Tomada de Contas Especial (TCE)](https://metodocapta.github.io/biblioteca/o-que-e-tomada-de-contas-especial/): A TCE apura dano ao erário quando a prestação de contas não comprova o recurso. Veja quando é instaurada, o que acontece e como a OSC se protege.
 - [Lei Anticorrupção (Lei nº 12.846/2013)](https://metodocapta.github.io/biblioteca/o-que-e-lei-anticorrupcao/): A Lei 12.846 responsabiliza objetivamente a pessoa jurídica por atos contra a administração pública. Veja o que isso significa para a OSC que recebe recurso público.
 - [MROSC (Marco Regulatório das OSCs)](https://metodocapta.github.io/biblioteca/o-que-e-mrosc/): MROSC é o Marco Regulatório das Organizações da Sociedade Civil (Lei 13.019/2014): define termos de fomento e de colaboração e o chamamento público. Veja definição, requisitos e passo a passo.
+- [Gestão eficaz (Terceiro Setor)](https://metodocapta.github.io/biblioteca/o-que-e-gestao-eficaz/): Gestão eficaz é a combinação de execução comprovável, decisão informada e responsabilidade sobre o resultado — sob a tensão entre missão, sustentabilidade e conformidade.
 - [SINIR](https://metodocapta.github.io/biblioteca/o-que-e-sinir/): SINIR é o Sistema Nacional de Informações sobre a Gestão dos Resíduos Sólidos. A habilitação no SINIR é requisito para projetos na Lei de Incentivo à Reciclagem (LIR).
 - [MTR (Manifesto de Transporte de Resíduos)](https://metodocapta.github.io/biblioteca/o-que-e-mtr/): MTR é o Manifesto de Transporte de Resíduos: documento que rastreia a geração, o transporte e a destinação dos resíduos, exigido na LIR e na prestação de contas.
 - [LIR (Lei de Incentivo à Reciclagem)](https://metodocapta.github.io/biblioteca/o-que-e-lir/): LIR é a Lei de Incentivo à Reciclagem (Lei nº 14.260/2021): permite que empresas do Lucro Real destinem parte do IRPJ a projetos de reciclagem. Veja definição, requisitos e vedação.
@@ -91,8 +92,6 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [O que as empresas procuram em uma OSC](https://metodocapta.github.io/biblioteca/o-que-empresas-procuram-em-uma-osc/): Credibilidade, projeto estruturado, capacidade de execução, transparência e indicadores: o que a empresa avalia antes de investir em um projeto social — e como sua OSC se prepara para ser parceira, não apenas pedir.
 - [ESG (Environmental, Social, Governance)](https://metodocapta.github.io/biblioteca/o-que-e-esg/): ESG é o conjunto de critérios ambientais (E), sociais (S) e de governança (G) usados para avaliar organizações. No terceiro setor, a dimensão Social conecta OSCs a empresas — mas só vira parceria quando há impacto mensurável e governança.
 - [Formatos de parceria com empresas](https://metodocapta.github.io/biblioteca/formatos-de-parceria-com-empresas/): Nem toda empresa pode ou quer transferir recursos. Conheça os 6 formatos de parceria (patrocínio, apoio institucional, doação de produtos, voluntariado, apoio técnico e parceria de longo prazo) — e por que a parceria não precisa começar grande.
-
-- [Gestão eficaz (Terceiro Setor)](https://metodocapta.github.io/biblioteca/o-que-e-gestao-eficaz/): Gestão eficaz é a combinação de execução comprovável, decisão informada e responsabilidade sobre o resultado — sob a tensão entre missão, sustentabilidade e conformidade.
 
 ## Ferramentas
 
@@ -164,8 +163,8 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 ## FAQ e mapa
 
-- [Perguntas frequentes](https://metodocapta.github.io/perguntas-frequentes/): dúvidas comuns da captação.
-- [Mapa do site](https://metodocapta.github.io/mapa-do-site/): todas as páginas por seção.
+- [Modelo de performance: cinco perguntas](https://metodocapta.github.io/modelo-de-performance/): as cinco dimensões, a cadeia de resultados e os três níveis de mensuração.
+- [Como ler os números: a prova](https://metodocapta.github.io/como-ler-os-numeros/): seis indicadores corretos e a fragilidade que só a leitura conjunta revela.
 
 
 ## Matriz de mecanismos
@@ -220,8 +219,14 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 
 - [Mapas da gestão eficaz](https://metodocapta.github.io/gestao-eficaz/mapas/): seis mapas de processo (mestre + execução, decisão, resultado, missão e relações) em SVG e PDF
 
-
 ## Diagnóstico de gestão eficaz
 
 - [Diagnóstico de gestão eficaz](https://metodocapta.github.io/gestao-eficaz/diagnostico/): diretrizes do diagnóstico assistido: quatro dimensões, dezesseis critérios e como solicitar
+
+## Soluções
+
+- [Soluções para captar e executar](https://metodocapta.github.io/solucoes/): prateleira com diagnóstico 72h, plano de trabalho e monitoramento/prestação
+- [Diagnóstico de prontidão — 72h](https://metodocapta.github.io/solucoes/diagnostico-72h/): O retrato da entidade antes de escolher o edital.
+- [Plano de trabalho que o parecerista reconhece](https://metodocapta.github.io/solucoes/plano-de-trabalho/): Metas, etapas, itens, cronograma e orçamento com nexo.
+- [Execução sem glosa, até o dossiê final](https://metodocapta.github.io/solucoes/monitoramento-e-prestacao/): Painel mensal, calendário e prestação de contas conciliada.
 
