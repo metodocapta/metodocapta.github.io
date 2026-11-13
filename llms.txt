@@ -228,5 +228,5 @@ estruturar o projeto e a documentação, e 90 dias para a captação e a presta�
 - [Soluções para captar e executar](https://metodocapta.github.io/solucoes/): prateleira com diagnóstico 72h, plano de trabalho e monitoramento/prestação
 - [Diagnóstico de prontidão — 72h](https://metodocapta.github.io/solucoes/diagnostico-72h/): O retrato da entidade antes de escolher o edital.
 - [Plano de trabalho que o parecerista reconhece](https://metodocapta.github.io/solucoes/plano-de-trabalho/): Metas, etapas, itens, cronograma e orçamento com nexo.
-- [Execução sem glosa, até o dossiê final](https://metodocapta.github.io/solucoes/monitoramento-e-prestacao/): Painel mensal, calendário e prestação de contas conciliada.
+- [Medir resultado, não só prestar contas](https://metodocapta.github.io/solucoes/monitoramento-e-prestacao/): Linha de base, indicador de mudança e prestação conciliada no mesmo ciclo.
 

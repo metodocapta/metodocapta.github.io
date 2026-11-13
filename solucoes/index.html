@@ -170,6 +170,21 @@ ul.nao-e strong{color:var(--navy)}
 .apoio a{color:#067a72}
 .problema{margin:12px 0 0;padding:14px 16px;border-left:3px solid #062531;background:#f6fafa;
   border-radius:0 10px 10px 0;font-size:15.5px;line-height:1.68;color:#2f3d45}
+.dado{margin:16px 0 0;padding:18px 20px;border:1px solid #dbe7e7;border-radius:14px;background:#fff}
+.dado-k{display:block;font:600 10.5px/1.5 Oswald,Inter,sans-serif;letter-spacing:.12em;
+  text-transform:uppercase;color:#067a72;margin-bottom:12px}
+.dado-lista{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.dado-lista li{font-size:13px;line-height:1.45;color:#4a6572}
+.dado-lista b{display:block;font:600 25px/1.1 Oswald,Inter,sans-serif;color:#062531;margin-bottom:3px}
+.dado-nota{margin:16px 0 0;font-size:13.5px;line-height:1.6;color:#2f3d45}
+.dado-base{margin:12px 0 0;padding-top:11px;border-top:1px solid #e6efef;
+  font-size:12.5px;line-height:1.6;color:#4a6572}
+.dado-base a{color:#067a72}
+.fontes{margin:14px 0 0;padding:12px 14px;border-left:3px solid #0ABCB0;background:#f4f8f8;
+  border-radius:8px;font-size:13px;line-height:1.7;color:#4a6572}
+.fontes strong{color:#062531;font-family:Oswald,Inter,sans-serif}
+.fontes a{color:#067a72}
 .proximo{margin:26px 0 0;padding:16px 18px;border:1px solid #dbe7e7;border-left:3px solid #0ABCB0;
   border-radius:0 12px 12px 0;background:#f7fbfb}
 .proximo .k{display:block;font:600 10.5px/1.5 Oswald,Inter,sans-serif;letter-spacing:.12em;
@@ -190,6 +205,9 @@ ul.nao-e strong{color:var(--navy)}
     text-transform:uppercase;color:#067a72}
   .cta-sol{gap:10px}
   .cta-sol .btn,.cta-sol .btn2{width:100%}
+  .dado{padding:16px}
+  .dado-lista{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .dado-lista b{font-size:22px}
 }
 </style>
 <style data-fm-nav>
@@ -293,12 +311,12 @@ prazo e escopo declarados.</div>
 &nbsp;·&nbsp; <a href="/diagnostico-de-prontidao/">Começar pelo diagnóstico gratuito</a></p>
 </section>
 <article data-sem-toc>
-<div class="sol-grid"><article class="sol-card"><span class="tag">Entrada</span><h2>Diagnóstico de prontidão — 72h</h2><p>O retrato da entidade antes de escolher o edital.</p><ul><li>Retrato da entidade: DNA, governança e situação documental.</li><li>Elegibilidade por mecanismo (Rouanet, LIR, LIE, FIA, Fundo do Idoso, PNAB, MROSC, emendas).</li><li>Três prioridades de ataque, com justificativa.</li></ul><div class="rodape"><span class="faixa">Gratuito</span><a class="ir" href="/solucoes/diagnostico-72h/">Ver solução</a></div></article><article class="sol-card"><span class="tag">Núcleo</span><h2>Plano de trabalho que o parecerista reconhece</h2><p>Metas, etapas, itens, cronograma e orçamento com nexo.</p><ul><li>Plano de trabalho completo (seções 1, 2, 4, 6, 7, 9, 10 e 13).</li><li>Matriz lógica e teoria da mudança.</li><li>Orçamento por rubrica e natureza da despesa.</li></ul><div class="rodape"><span class="faixa">Sob proposta</span><a class="ir" href="/solucoes/plano-de-trabalho/">Ver solução</a></div></article><article class="sol-card"><span class="tag">Recorrência</span><h2>Execução sem glosa, até o dossiê final</h2><p>Painel mensal, calendário e prestação de contas conciliada.</p><ul><li>Painel mensal de execução (área do cliente, somente leitura).</li><li>Calendário de obrigações do instrumento.</li><li>Revisão de despesas e conciliação com o plano.</li></ul><div class="rodape"><span class="faixa">Sob proposta</span><a class="ir" href="/solucoes/monitoramento-e-prestacao/">Ver solução</a></div></article></div>
+<div class="sol-grid"><article class="sol-card"><span class="tag">Entrada</span><h2>Diagnóstico de prontidão — 72h</h2><p>O retrato da entidade antes de escolher o edital.</p><ul><li>Retrato da entidade: DNA, governança e situação documental.</li><li>Elegibilidade por mecanismo (Rouanet, LIR, LIE, FIA, Fundo do Idoso, PNAB, MROSC, emendas).</li><li>Três prioridades de ataque, com justificativa.</li></ul><div class="rodape"><span class="faixa">Gratuito</span><a class="ir" href="/solucoes/diagnostico-72h/">Ver solução</a></div></article><article class="sol-card"><span class="tag">Núcleo</span><h2>Plano de trabalho que o parecerista reconhece</h2><p>Metas, etapas, itens, cronograma e orçamento com nexo.</p><ul><li>Plano de trabalho completo (seções 1, 2, 4, 6, 7, 9, 10 e 13).</li><li>Matriz lógica e teoria da mudança.</li><li>Orçamento por rubrica e natureza da despesa.</li></ul><div class="rodape"><span class="faixa">Sob proposta</span><a class="ir" href="/solucoes/plano-de-trabalho/">Ver solução</a></div></article><article class="sol-card"><span class="tag">Recorrência</span><h2>Medir resultado, não só prestar contas</h2><p>Linha de base, indicador de mudança e prestação conciliada no mesmo ciclo.</p><ul><li>Linha de base e indicador de mudança por meta.</li><li>Painel mensal de execução e de resultado (área do cliente, somente leitura).</li><li>Calendário de obrigações do instrumento.</li></ul><div class="rodape"><span class="faixa">Sob proposta</span><a class="ir" href="/solucoes/monitoramento-e-prestacao/">Ver solução</a></div></article></div>
 
 <h2>O degrau de cada solução</h2>
 <div class="fm-tabela-scroll" role="region" tabindex="0" aria-label="Tabela com rolagem horizontal"><table class="tab-degraus">
 <thead><tr><th>Degrau</th><th>Solução</th><th>Primeiro artefato</th><th>Prazo</th></tr></thead>
-<tbody><tr><td data-rotulo="Degrau">Entrada</td><td data-rotulo="Solução">Diagnóstico de prontidão — 72h</td><td data-rotulo="Primeiro artefato">Retrato da entidade: DNA, governança e situação documental.</td><td data-rotulo="Prazo">72 horas úteis após o briefing.</td></tr><tr><td data-rotulo="Degrau">Núcleo</td><td data-rotulo="Solução">Plano de trabalho que o parecerista reconhece</td><td data-rotulo="Primeiro artefato">Plano de trabalho completo (seções 1, 2, 4, 6, 7, 9, 10 e 13).</td><td data-rotulo="Prazo">30 dias a partir do briefing completo.</td></tr><tr><td data-rotulo="Degrau">Recorrência</td><td data-rotulo="Solução">Execução sem glosa, até o dossiê final</td><td data-rotulo="Primeiro artefato">Painel mensal de execução (área do cliente, somente leitura).</td><td data-rotulo="Prazo">Ciclo mensal; fechamento conforme o prazo do instrumento.</td></tr></tbody></table></div>
+<tbody><tr><td data-rotulo="Degrau">Entrada</td><td data-rotulo="Solução">Diagnóstico de prontidão — 72h</td><td data-rotulo="Primeiro artefato">Retrato da entidade: DNA, governança e situação documental.</td><td data-rotulo="Prazo">72 horas úteis após o briefing.</td></tr><tr><td data-rotulo="Degrau">Núcleo</td><td data-rotulo="Solução">Plano de trabalho que o parecerista reconhece</td><td data-rotulo="Primeiro artefato">Plano de trabalho completo (seções 1, 2, 4, 6, 7, 9, 10 e 13).</td><td data-rotulo="Prazo">30 dias a partir do briefing completo.</td></tr><tr><td data-rotulo="Degrau">Recorrência</td><td data-rotulo="Solução">Medir resultado, não só prestar contas</td><td data-rotulo="Primeiro artefato">Linha de base e indicador de mudança por meta.</td><td data-rotulo="Prazo">Ciclo mensal; fechamento conforme o prazo do instrumento.</td></tr></tbody></table></div>
 
 <h2>Como contratar</h2>
 <div class="passos">
