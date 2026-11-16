@@ -1,10 +1,10 @@
 {
- "gerado_em": "2026-11-15",
- "gerado_em_ts": "2026-11-15T08:56:23-03:00",
+ "gerado_em": "2026-11-16",
+ "gerado_em_ts": "2026-11-16T09:02:38-03:00",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 2265,
+  "oportunidades": 2285,
   "elegiveis": 13,
   "estruturados": 6,
   "matches": 4
@@ -13,7 +13,7 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 925
+   "total": 946
   },
   {
    "codigo": "MROSC",
@@ -23,7 +23,7 @@
   {
    "codigo": "ROUANET",
    "rotulo": "PRONAC ROUANET",
-   "total": 965
+   "total": 964
   },
   {
    "codigo": "LIR",
@@ -427,6 +427,24 @@
     "EDITAL_PUBLICO": 925,
     "MROSC": 64,
     "ROUANET": 965,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 26,
+    "FUNDO_IDOSO": 13,
+    "LIE": 14,
+    "PNAB": 9
+   }
+  },
+  {
+   "oportunidades": 2285,
+   "elegiveis": 13,
+   "estruturados": 6,
+   "matches": 4,
+   "data": "2026-11-16",
+   "areas": {
+    "EDITAL_PUBLICO": 946,
+    "MROSC": 64,
+    "ROUANET": 964,
     "LIR": 248,
     "EMENDA": 1,
     "FIA": 26,
