@@ -1,10 +1,10 @@
 {
- "gerado_em": "2026-11-17",
- "gerado_em_ts": "2026-11-17T09:29:28-03:00",
+ "gerado_em": "2026-11-18",
+ "gerado_em_ts": "2026-11-18T09:18:42-03:00",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
-  "oportunidades": 2310,
+  "oportunidades": 2324,
   "elegiveis": 13,
   "estruturados": 6,
   "matches": 4
@@ -13,7 +13,7 @@
   {
    "codigo": "EDITAL_PUBLICO",
    "rotulo": "EDITAIS",
-   "total": 963
+   "total": 976
   },
   {
    "codigo": "MROSC",
@@ -38,7 +38,7 @@
   {
    "codigo": "FIA",
    "rotulo": "FIA",
-   "total": 26
+   "total": 27
   },
   {
    "codigo": "FUNDO_IDOSO",
@@ -466,6 +466,24 @@
     "LIR": 248,
     "EMENDA": 1,
     "FIA": 26,
+    "FUNDO_IDOSO": 13,
+    "LIE": 14,
+    "PNAB": 9
+   }
+  },
+  {
+   "oportunidades": 2324,
+   "elegiveis": 13,
+   "estruturados": 6,
+   "matches": 4,
+   "data": "2026-11-18",
+   "areas": {
+    "EDITAL_PUBLICO": 976,
+    "MROSC": 64,
+    "ROUANET": 972,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 27,
     "FUNDO_IDOSO": 13,
     "LIE": 14,
     "PNAB": 9
