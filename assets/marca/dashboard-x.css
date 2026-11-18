@@ -225,6 +225,52 @@ body.fx-dark .fm-partner-card:hover img{
   }
 }
 
+/* 6. cards em faixa clara: superficie clara e texto escuro (nao usar vidro) */
+body.fx-dark .fm-band-light .fm-evidence-card,
+body.fx-dark .fm-band-light .fm-dec5-card,
+body.fx-dark .fm-band-light .fm-dest-card{
+  background: linear-gradient(180deg, #ffffff 0%, #f6faf9 100%) !important;
+  border: 1px solid rgba(6,37,49,.10) !important;
+  border-top-color: rgba(10,188,176,.55) !important;
+  box-shadow: 0 18px 34px -26px rgba(6,37,49,.45), inset 0 1px 0 #ffffff !important;
+}
+body.fx-dark .fm-band-light .fm-evidence-card::after,
+body.fx-dark .fm-band-light .fm-dec5-card::after,
+body.fx-dark .fm-band-light .fm-dest-card::after{
+  background: linear-gradient(90deg, transparent, rgba(10,188,176,.45) 50%, transparent);
+}
+body.fx-dark .fm-band-light .fm-evidence-card::before,
+body.fx-dark .fm-band-light .fm-dec5-card::before,
+body.fx-dark .fm-band-light .fm-dest-card::before{
+  background: linear-gradient(100deg, transparent, rgba(10,188,176,.08) 50%, transparent);
+}
+body.fx-dark .fm-band-light .fm-evidence-card h3,
+body.fx-dark .fm-band-light .fm-evidence-card h4,
+body.fx-dark .fm-band-light .fm-evidence-card strong,
+body.fx-dark .fm-band-light .fm-dec5-card h3,
+body.fx-dark .fm-band-light .fm-dest-card h3{ color: #062531 !important; }
+body.fx-dark .fm-band-light .fm-evidence-card p,
+body.fx-dark .fm-band-light .fm-evidence-card li,
+body.fx-dark .fm-band-light .fm-evidence-card span,
+body.fx-dark .fm-band-light .fm-dec5-card p,
+body.fx-dark .fm-band-light .fm-dest-card p{ color: #3c4a52 !important; }
+body.fx-dark .fm-band-light .fm-evidence-card li::marker{ color: #067a72; }
+
+@media (hover: hover){
+  body.fx-dark .fm-band-light .fm-evidence-card:hover,
+  body.fx-dark .fm-band-light .fm-dec5-card:hover,
+  body.fx-dark .fm-band-light .fm-dest-card:hover{
+    transform: translateY(-3px);
+    border-color: rgba(10,188,176,.45) !important;
+    box-shadow: 0 26px 48px -28px rgba(6,37,49,.55) !important;
+  }
+}
+
+/* 7. mobile: conteudo sempre legivel (a revelacao nao deixa texto em opacidade parcial) */
+@media (max-width: 900px){
+  .fm-reveal{ opacity: 1 !important; transform: none !important; }
+}
+
 .fm-site :focus-visible,
 .site-hd :focus-visible{
   outline: 2px solid #0ABCB0;
