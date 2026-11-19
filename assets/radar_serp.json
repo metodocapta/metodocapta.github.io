@@ -2807,6 +2807,39 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-19",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.72,
+    "confianca": 0.69,
+    "naturezas": {
+     "associacao": 0.51,
+     "fundacao": 0.48,
+     "cooperativa": 0.51,
+     "federacao": 0.35
+    },
+    "resultado": {
+     "prob": 0.2,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-19",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "PROCEDIMENTO DE MANIFESTAÇÃO DE INTERESSE Nº 003/2026",
+   "url": "https://pncp.gov.br/pncp-api/v1/orgaos/29115474000160/compras/2026/271/arquivos/1#1#7#1",
+   "orgao": "GOV.BR",
+   "prazo": "2026-05-25",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "1.2. Data limite para recebimento do projetos: 25/05/2026 – 23:59.",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-19",
    "fonte": "pncp-busca"
   }
  ],
