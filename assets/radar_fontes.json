@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18",
+ "atualizado_em": "2026-11-19",
  "fontes": {
   "prazos": {
    "rodadas": 1,
@@ -10,19 +10,19 @@
    "aproveitamento": 0.0
   },
   "pncp-busca": {
-   "rodadas": 49,
+   "rodadas": 52,
    "chamadas": 3,
-   "candidatos": 29,
-   "aceitos": 24,
-   "ultima": "2026-11-18",
-   "aproveitamento": 82.8
+   "candidatos": 4,
+   "aceitos": 1,
+   "ultima": "2026-11-19",
+   "aproveitamento": 25.0
   },
   "links": {
-   "rodadas": 14,
+   "rodadas": 15,
    "conferidos": 69,
-   "vivos": 43,
-   "ultima": "2026-11-18",
-   "aproveitamento": 62.3
+   "vivos": 45,
+   "ultima": "2026-11-19",
+   "aproveitamento": 65.2
   }
  }
 }
