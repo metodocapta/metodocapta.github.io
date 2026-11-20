@@ -1,6 +1,6 @@
 {
- "gerado_em": "2026-11-19",
- "gerado_em_ts": "2026-11-19T17:03:42-03:00",
+ "gerado_em": "2026-11-20",
+ "gerado_em_ts": "2026-11-20T13:27:56-03:00",
  "fonte": "Capta+ Plataforma · Radar de Oportunidades",
  "nota": "Números agregados do sistema. Nenhuma organização é identificada.",
  "kpis": {
@@ -495,6 +495,24 @@
    "estruturados": 6,
    "matches": 4,
    "data": "2026-11-19",
+   "areas": {
+    "EDITAL_PUBLICO": 1013,
+    "MROSC": 64,
+    "ROUANET": 1004,
+    "LIR": 248,
+    "EMENDA": 1,
+    "FIA": 28,
+    "FUNDO_IDOSO": 14,
+    "LIE": 14,
+    "PNAB": 9
+   }
+  },
+  {
+   "oportunidades": 2395,
+   "elegiveis": 13,
+   "estruturados": 6,
+   "matches": 4,
+   "data": "2026-11-20",
    "areas": {
     "EDITAL_PUBLICO": 1013,
     "MROSC": 64,
