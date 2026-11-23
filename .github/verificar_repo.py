@@ -111,11 +111,13 @@ def checar_home(raiz, home):
              "dizer que acontece dentro das seis etapas)")
 
     # ORDEM DAS SECOES — espelho de ORDEM_SECOES (site_v23_home.py).
-    # A ordem e' narrativa: dor -> diferenca -> mecanismo -> prova -> voce ->
-    # objecao -> acao. Trocar duas secoes muda o argumento, nao so o layout.
+    # A ordem e' narrativa: prova (estudos) -> decisao -> com quem -> problema ->
+    # diferenca -> mecanismo -> onde buscar -> prova -> voce -> objecao -> acao.
+    # Trocar duas secoes muda o argumento, nao so o layout. A home abre pelos
+    # Estudos (fm-destaques) desde a reforma da home; o espelho tem de seguir.
     ORDEM_ESPERADA = [
-        "fm-decisao-mapa", "fm-parceiros", "fm-problema", "fm-comparativo",
-        "fm-capta", "fm-radar", "fm-destaques", "fm-evidencias", "fm-publico",
+        "fm-destaques", "fm-decisao-mapa", "fm-parceiros", "fm-problema",
+        "fm-comparativo", "fm-capta", "fm-radar", "fm-evidencias", "fm-publico",
         "fm-riscos", "fm-faq", "fm-decisao",
     ]
     pos_sec = {i: home.find('id="%s"' % i) for i in ORDEM_ESPERADA}
