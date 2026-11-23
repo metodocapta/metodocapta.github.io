@@ -2633,6 +2633,105 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-23",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.63,
+     "fundacao": 0.23,
+     "cooperativa": 0.8,
+     "federacao": 0.31
+    },
+    "resultado": {
+     "prob": 0.07,
+     "base": "documento",
+     "carga": 3852
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-23",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Contratação de empresa especializada… (Mandaguari/PR) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/contratacao-de-empresa-especializada-em-engenharia-para-78959145000101-1-000007-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2026-12-09",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 09/12/2026 08:59",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-23",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.64,
+     "fundacao": 0.21,
+     "cooperativa": 0.77,
+     "federacao": 0.28
+    },
+    "resultado": {
+     "prob": 0.06,
+     "base": "documento",
+     "carga": 3921
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-23",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Aquisição de termômetro digital… (Tunápolis/SC) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/portal-de-compras-publicas-aquisicao-de-termometro-digital-de-maxima-e-78486198000152-1-000372-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2026-11-27",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 27/11/2026 07:45",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-23",
+   "fonte": "pncp-busca",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.62,
+     "fundacao": 0.5,
+     "cooperativa": 0.79,
+     "federacao": 0.25
+    },
+    "resultado": {
+     "prob": 0.04,
+     "base": "documento",
+     "carga": 3462
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-23",
+    "modelo": "jev-1.14.0"
+   }
+  },
+  {
+   "titulo": "Contratação transitória de serviços… (Belém/PA) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/contratacao-transitoria-de-servicos-continuos-de-limpeza-e-conservacao-02030715000112-1-000218-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2026-11-27",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 27/11/2026 09:00",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-23",
    "fonte": "pncp-busca"
   }
  ],
