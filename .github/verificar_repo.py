@@ -84,6 +84,29 @@ def existe_pagina(raiz, url):
 # ---------------------------------------------------------------------------
 # 1) Home: blocos que nao podem sumir
 # ---------------------------------------------------------------------------
+def _ordem_do_gerador():
+    """Ordem das secoes gravada pelo build (.github/ordem_secoes.json).
+
+    Fonte unica: site_v23_home.ORDEM_SECOES. O build escreve o arquivo ao lado
+    deste verificador. Ausente = checkout antigo, cai na lista de reserva.
+    Presente e invalido = erro: espelho quebrado nao pode passar em silencio,
+    senao a divergencia volta pela porta dos fundos.
+    """
+    caminho = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ordem_secoes.json")
+    if not os.path.exists(caminho):
+        return None
+    try:
+        with open(caminho, encoding="utf-8-sig") as fh:
+            ordem = json.load(fh)
+    except (OSError, ValueError) as exc:
+        erro("ordem_secoes.json ilegivel (%s) — o build precisa regravar" % exc)
+        return None
+    if not (isinstance(ordem, list) and ordem and all(isinstance(x, str) for x in ordem)):
+        erro("ordem_secoes.json invalido: esperava lista de ids de secao")
+        return None
+    return ordem
+
+
 def checar_home(raiz, home):
     if home is None:
         erro("index.html ausente no repositorio publicado")
@@ -110,12 +133,11 @@ def checar_home(raiz, home):
         erro("Home: a nota do fluxo do mecanismo sumiu (o fluxo de 7 pilulas precisa "
              "dizer que acontece dentro das seis etapas)")
 
-    # ORDEM DAS SECOES — espelho de ORDEM_SECOES (site_v23_home.py).
-    # A ordem e' narrativa: prova (estudos) -> decisao -> com quem -> problema ->
-    # diferenca -> mecanismo -> onde buscar -> prova -> voce -> objecao -> acao.
-    # Trocar duas secoes muda o argumento, nao so o layout. A home abre pelos
-    # Estudos (fm-destaques) desde a reforma da home; o espelho tem de seguir.
-    ORDEM_ESPERADA = [
+    # ORDEM DAS SECOES — vem do gerador (site_v23_home.ORDEM_SECOES), gravada
+    # pelo build em .github/ordem_secoes.json ao lado deste verificador. Assim
+    # gerador e portao nao podem divergir. A lista de reserva so vale para
+    # checkout antigo, sem o arquivo.
+    ORDEM_ESPERADA = _ordem_do_gerador() or [
         "fm-destaques", "fm-decisao-mapa", "fm-parceiros", "fm-problema",
         "fm-comparativo", "fm-capta", "fm-radar", "fm-evidencias", "fm-publico",
         "fm-riscos", "fm-faq", "fm-decisao",
