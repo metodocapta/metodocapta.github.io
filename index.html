@@ -727,6 +727,65 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 
 <div class="fm-container" style="padding-top:0"><p class="fm-legal-linha" data-fm-legal="fm-inicio" style="margin:14px 0 0;font-size:12px;line-height:1.6;border-top:1px solid #eef3f4;padding-top:8px;max-width:100%;overflow-wrap:anywhere">Base legal: Cf. <strong>CF/88, art. 70, § único</strong> · <strong>Lei 13.019/2014, art. 24 (chamamento público)</strong> · <a href="/radar/como-contamos/">como contamos</a></p></div>
 </section>
+
+<section class="fm-section fm-dest-section" data-v23-home="1" id="fm-destaques">
+                    <div class="fm-container">
+                        <div class="fm-heading fm-heading-center">
+                            <span class="fm-kicker">Destaques</span>
+                            <h2>Últimas Estratégias de Captação<br> <em>e Newsletters</em></h2>
+                            <p>Análises técnicas e estratégias práticas para estruturar a captação da sua organização.</p>
+                        </div>
+                        <div class="fm-dest-wrap">
+                            <div class="fm-dest-track" id="fm-dest-track" aria-live="polite"></div>
+                            <button class="fm-dest-nav fm-dest-prev" type="button" aria-label="Anterior">&#8249;</button>
+                            <button class="fm-dest-nav fm-dest-next" type="button" aria-label="Próximo">&#8250;</button>
+                        </div>
+                        <p class="fm-dest-vazio" id="fm-dest-vazio" hidden>Veja os destaques no <a href="https://minutocaptamais.substack.com/" target="_blank" rel="noopener">Substack do Método Capta+</a>.</p>
+                    </div>
+                    <script>
+                    (function () {
+                      var track = document.getElementById('fm-dest-track');
+                      var vazio = document.getElementById('fm-dest-vazio');
+                      if (!track) return;
+                      function esc(s) { return (s || '').replace(/[&<>"]/g, function (c) {
+                        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+                      fetch('assets/destaques.json', { cache: 'no-store' })
+                        .then(function (r) { return r.ok ? r.json() : null; })
+                        .then(function (d) {
+                          var itens = (d && d.itens) || [];
+                          if (!itens.length) { if (vazio) vazio.hidden = false; return; }
+                          track.innerHTML = itens.map(function (it) {
+                            var u = it.imagem || '';
+                            var pequeno = /substackcdn\.com/.test(u) ? u.replace(/w_640/g, 'w_320') : u;
+                            var extra = (pequeno !== u)
+                              ? ' srcset="' + esc(pequeno) + ' 320w, ' + esc(u) + ' 640w" sizes="(max-width: 480px) 90vw, 323px"'
+                              : '';
+                            var img = u
+                              ? '<img src="' + esc(pequeno) + '"' + extra + ' alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="355" height="198" loading="lazy" decoding="async">'
+                              : '<span class="fm-dest-semimg">Método Capta+</span>';
+                            return '<article class="fm-dest-card">'
+                              + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
+                              + '<span class="fm-dest-img">' + img
+                              + '<span class="fm-dest-data">' + esc(it.data_pt) + '</span></span>'
+                              + '<h3>' + esc(it.titulo_estrategico || it.titulo) + '</h3>'
+                              + '<p>' + esc(it.resumo) + '</p>'
+                              + '<span class="fm-dest-mais">Leia a Estratégia!</span>'
+                              + '</a></article>';
+                          }).join('');
+                          function passo() {
+                            var c = track.querySelector('.fm-dest-card');
+                            return c ? c.getBoundingClientRect().width + 18 : 340;
+                          }
+                          var prev = document.querySelector('.fm-dest-prev');
+                          var next = document.querySelector('.fm-dest-next');
+                          if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -passo(), behavior: 'smooth' }); });
+                          if (next) next.addEventListener('click', function () { track.scrollBy({ left: passo(), behavior: 'smooth' }); });
+                        })
+                        .catch(function () { if (vazio) vazio.hidden = false; });
+                    })();
+                    </script>
+                <div class="fm-container" style="padding-top:0"><p class="fm-legal-linha" data-fm-legal="fm-destaques" style="margin:14px 0 0;font-size:12px;line-height:1.6;border-top:1px solid #eef3f4;padding-top:8px;max-width:100%;overflow-wrap:anywhere">Base legal: Cf. <strong>CF/88, art. 5º, XXXIII (direito a informação)</strong> · <strong>Lei 12.527/2011 (LAI)</strong> · <a href="/radar/como-contamos/">como contamos</a></p></div>
+</section>
 <section class="fm-section fm-dec5-section" data-v23-home="1" id="fm-decisao-mapa" aria-labelledby="fm-dec5-title">
                     <div class="fm-container">
                         <div class="fm-heading fm-heading-center fm-reveal">
@@ -1183,64 +1242,7 @@ summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vi
 </script><div class="fm-container" style="padding-top:0"><p class="fm-legal-linha" data-fm-legal="fm-radar" style="margin:14px 0 0;font-size:12px;line-height:1.6;border-top:1px solid #eef3f4;padding-top:8px;max-width:100%;overflow-wrap:anywhere">Base legal: Cf. <strong>CF/88, art. 37, § 3 (acesso a informação)</strong> · <strong>Lei 12.527/2011 (LAI)</strong> · <a href="/radar/como-contamos/">como contamos</a></p></div>
 </section>
 
-<section class="fm-section fm-dest-section" data-v23-home="1" id="fm-destaques">
-                    <div class="fm-container">
-                        <div class="fm-heading fm-heading-center">
-                            <span class="fm-kicker">Destaques</span>
-                            <h2>Últimas Estratégias de Captação<br> <em>e Newsletters</em></h2>
-                            <p>Análises técnicas e estratégias práticas para estruturar a captação da sua organização.</p>
-                        </div>
-                        <div class="fm-dest-wrap">
-                            <div class="fm-dest-track" id="fm-dest-track" aria-live="polite"></div>
-                            <button class="fm-dest-nav fm-dest-prev" type="button" aria-label="Anterior">&#8249;</button>
-                            <button class="fm-dest-nav fm-dest-next" type="button" aria-label="Próximo">&#8250;</button>
-                        </div>
-                        <p class="fm-dest-vazio" id="fm-dest-vazio" hidden>Veja os destaques no <a href="https://minutocaptamais.substack.com/" target="_blank" rel="noopener">Substack do Método Capta+</a>.</p>
-                    </div>
-                    <script>
-                    (function () {
-                      var track = document.getElementById('fm-dest-track');
-                      var vazio = document.getElementById('fm-dest-vazio');
-                      if (!track) return;
-                      function esc(s) { return (s || '').replace(/[&<>"]/g, function (c) {
-                        return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
-                      fetch('assets/destaques.json', { cache: 'no-store' })
-                        .then(function (r) { return r.ok ? r.json() : null; })
-                        .then(function (d) {
-                          var itens = (d && d.itens) || [];
-                          if (!itens.length) { if (vazio) vazio.hidden = false; return; }
-                          track.innerHTML = itens.map(function (it) {
-                            var u = it.imagem || '';
-                            var pequeno = /substackcdn\.com/.test(u) ? u.replace(/w_640/g, 'w_320') : u;
-                            var extra = (pequeno !== u)
-                              ? ' srcset="' + esc(pequeno) + ' 320w, ' + esc(u) + ' 640w" sizes="(max-width: 480px) 90vw, 323px"'
-                              : '';
-                            var img = u
-                              ? '<img src="' + esc(pequeno) + '"' + extra + ' alt="' + esc(it.titulo_estrategico || it.titulo) + '" width="355" height="198" loading="lazy" decoding="async">'
-                              : '<span class="fm-dest-semimg">Método Capta+</span>';
-                            return '<article class="fm-dest-card">'
-                              + '<a class="fm-dest-link" href="' + esc(it.link) + '" target="_blank" rel="noopener">'
-                              + '<span class="fm-dest-img">' + img
-                              + '<span class="fm-dest-data">' + esc(it.data_pt) + '</span></span>'
-                              + '<h3>' + esc(it.titulo_estrategico || it.titulo) + '</h3>'
-                              + '<p>' + esc(it.resumo) + '</p>'
-                              + '<span class="fm-dest-mais">Leia a Estratégia!</span>'
-                              + '</a></article>';
-                          }).join('');
-                          function passo() {
-                            var c = track.querySelector('.fm-dest-card');
-                            return c ? c.getBoundingClientRect().width + 18 : 340;
-                          }
-                          var prev = document.querySelector('.fm-dest-prev');
-                          var next = document.querySelector('.fm-dest-next');
-                          if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -passo(), behavior: 'smooth' }); });
-                          if (next) next.addEventListener('click', function () { track.scrollBy({ left: passo(), behavior: 'smooth' }); });
-                        })
-                        .catch(function () { if (vazio) vazio.hidden = false; });
-                    })();
-                    </script>
-                <div class="fm-container" style="padding-top:0"><p class="fm-legal-linha" data-fm-legal="fm-destaques" style="margin:14px 0 0;font-size:12px;line-height:1.6;border-top:1px solid #eef3f4;padding-top:8px;max-width:100%;overflow-wrap:anywhere">Base legal: Cf. <strong>CF/88, art. 5º, XXXIII (direito a informação)</strong> · <strong>Lei 12.527/2011 (LAI)</strong> · <a href="/radar/como-contamos/">como contamos</a></p></div>
-</section>
+
 
 <section class="fm-section fm-evidence-section fm-band-light" data-v23-home="1" id="fm-evidencias">
 
