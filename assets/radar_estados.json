@@ -1,15 +1,15 @@
 {
- "gerado_em": "2026-11-20",
+ "gerado_em": "2026-11-23",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 572,
+   "oportunidades": 589,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 505
+     "total": 522
     },
     {
      "codigo": "MROSC",
@@ -74,7 +74,7 @@
    ]
   },
   "SC": {
-   "oportunidades": 275,
+   "oportunidades": 276,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
@@ -84,7 +84,7 @@
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 206
+     "total": 207
     },
     {
      "codigo": "FIA",
@@ -104,7 +104,7 @@
    ]
   },
   "GO": {
-   "oportunidades": 19,
+   "oportunidades": 20,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
@@ -129,6 +129,11 @@
     {
      "codigo": "MROSC",
      "rotulo": "CHAMAMENTOS PÚBLICOS",
+     "total": 1
+    },
+    {
+     "codigo": "LIR",
+     "rotulo": "LIR RECICLAGEM",
      "total": 1
     }
    ]
