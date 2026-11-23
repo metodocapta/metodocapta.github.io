@@ -10,12 +10,12 @@
    "aproveitamento": 0.0
   },
   "pncp-busca": {
-   "rodadas": 59,
+   "rodadas": 55,
    "chamadas": 3,
-   "candidatos": 3,
-   "aceitos": 0,
+   "candidatos": 10,
+   "aceitos": 4,
    "ultima": "2026-11-23",
-   "aproveitamento": 0.0
+   "aproveitamento": 40.0
   },
   "links": {
    "rodadas": 17,
