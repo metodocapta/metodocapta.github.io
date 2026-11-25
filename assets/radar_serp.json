@@ -29,11 +29,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 403,
    "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Chamamento Público",
@@ -62,11 +62,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 403,
    "url_final": "https://www.serpro.gov.br/consultas-publicas",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Chamamento Público",
@@ -98,7 +98,7 @@
    "http_status": 200,
    "url_final": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Portal de Chamamento de Fornecedores e Parceiros — Serpro",
@@ -130,7 +130,7 @@
    "http_status": 200,
    "url_final": "https://chamamentos.serpro.gov.br/editais",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Edital de Selecao Publica FI 2026 vFinal - bndes.gov.br",
@@ -161,11 +161,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.bndes.gov.br/wps/wcm/connect/site/3d4ff94b-43f8-4dbc-80a0-5080cafbb820/Edital+de+Selecao+Publica+FI+2026.pdf?MOD=AJPERES",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO N° 008/SME/2026 - Seleção de Organização ...",
@@ -194,7 +194,7 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -208,7 +208,7 @@
    "http_status": 200,
    "url_final": "https://itaqua.sp.gov.br/publicacoes/licitacao.php?id=2792",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Chamamento Público selecionará projetos de organizações da ...",
@@ -237,11 +237,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.planaltinadoparana.pr.gov.br/publicacao/2026/10/05/chamamento-publico-selecionara-projetos-de-organizacoes-da-sociedade-civil-no-parana",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Chamada Pública nº 034/2026 - Ipea",
@@ -284,7 +284,7 @@
    "http_status": 200,
    "url_final": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16523-chamada-publica-n-034-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 01/2026 O CONSELHO REGIONAL DE ...",
@@ -316,7 +316,7 @@
    "http_status": null,
    "url_final": "https://www.crefito11.gov.br/arquivos/editais/RESULTADO+FINAL+CHAMAMENTO+PUBLICO+Nº+01-2026.pdf",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Incentivo à Reciclagem — Ministério do Desenvolvimento ...",
@@ -348,7 +348,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/mdic/pt-br/assuntos/enec/legislacao/politica-de-residuos/incentivo-a-reciclagem",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "PNAB 2026 - Politica Nacional Aldir Blanc — Prefeitura de ...",
@@ -377,10 +377,10 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "http_status": 404,
+   "http_status": 200,
    "url_final": "https://www.umbuzeiro.pb.gov.br/servicos/editais-pnab-2026",
-   "link_classe": "morto",
-   "verificado_em": "2026-11-24"
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Política Nacional Aldir Blanc 2026",
@@ -412,7 +412,7 @@
    "http_status": 200,
    "url_final": "https://www.portoamazonas.pr.gov.br/politica-nacional-aldir-blanc-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Edital Política Nacional Aldir Blanc (PNAB) 2025/2026 Ações ...",
@@ -441,11 +441,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.joinville.sc.gov.br/publicacoes/edital-politica-nacional-aldir-blanc-pnab-2025-acoes-culturais/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "EDITAL PNAB Programa Nacional Aldir Blanc Ciclo 02 ...",
@@ -474,11 +474,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://carmodoparanaiba.mg.gov.br/wp-content/uploads/2026/05/EDITAL_PNAB_COMPLETO.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Política Nacional Aldir Blanc de Fomento à Cultura (PNAB)",
@@ -510,7 +510,7 @@
    "http_status": 200,
    "url_final": "https://www.cultura.pr.gov.br/PNAB",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "EDITAL DE CHAMADA PÚBLICA No 001/2026 PARA PROJETOS DE ...",
@@ -539,11 +539,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.cachoeiro.es.gov.br/site-pmci/wp-content/uploads/editais/2026/08/edital-fia-2026-revisado-assinado.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "EDITAL SOCIAL - IDOSO_2026_Final_revisado - bnb.gov.br",
@@ -575,7 +575,7 @@
    "http_status": null,
    "url_final": "https://www.bnb.gov.br/documents/45887/10205353/EDITAL+SOCIAL+-+IDOSO_2026.pdf/e44f5d98-eee2-b676-8878-ec5018975c5c?t=1786133274287",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Chamamento Público Nº 06/2025 - sarandi.pr.gov.br",
@@ -604,11 +604,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.sarandi.pr.gov.br/web/index.php/servicos/licitacoes/category/chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 01/2026 – Prefeitura ...",
@@ -639,11 +639,11 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://sarandi.rs.gov.br/editais/edital-de-chamamento-publico-no-01-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Edital de Chamamento Público nº 02/2026 – Prefeitura ...",
@@ -672,17 +672,17 @@
     "em": "2026-11-20",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "Comprovação de experiência"
     ],
-    "trecho": "edital de chamamento publico no 02/2026 – prefeitura municipal de sarandi/rs ultimas noticias sarandi mobiliza campanha de arrecadacao de donativos para auxiliar tupancireta sarandi realiza encontro de bandas marciais e reune grupos de diferentes municipios sarandi abre oficialmente o natal sonho e luz 2026 em uma noite de encanto, musica e emocao sarandi promove acao do novembro azul com palestra"
+    "trecho": "edital de chamamento publico no 02/2026 – prefeitura municipal de sarandi/rs ultimas noticias sarandi avanca na organizacao e na transparencia do servico de transporte por aplicativo prefeitura de sarandi promove recolhimento de lixo eletronico no dia 1o de dezembro campeonato municipal de futsal 2026 comeca nesta terca-feira em sarandi sarandi mobiliza campanha de arrecadacao de donativos para au"
    },
    "http_status": 200,
    "url_final": "https://sarandi.rs.gov.br/editais/edital-de-chamamento-publico-no-02-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO No 02/2026 SEAB/MDA - gov.br",
@@ -692,13 +692,13 @@
    "prazo": "2026-10-20",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "prazo_fonte": "documento",
    "prazo_gatilho": "envio",
    "http_status": 403,
    "url_final": "https://www.gov.br/mda/pt-br/acesso-a-informacao/participacao-social/Editais-de-chamamento-publico/2026/edital-de-chamamento-publico-no-02-2026-seab/resultado-preliminar_edital-no-02_2026.pdf",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.99,
@@ -727,13 +727,13 @@
    "prazo": "2026-10-20",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "prazo_fonte": "documento",
    "prazo_gatilho": "envio",
    "http_status": 403,
    "url_final": "https://www.gov.br/mda/pt-br/acesso-a-informacao/participacao-social/Editais-de-chamamento-publico/2026/edital-de-chamamento-publico-no-02-2026-seab/sei_57839206_edital-1.pdf",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.98,
@@ -762,7 +762,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -775,7 +775,7 @@
    "http_status": 200,
    "url_final": "https://limpurb.salvador.ba.gov.br/wp-content/uploads/2026/01/1.-Edital-de-Chamamento-Publico.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.64,
@@ -804,11 +804,11 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.casadamoeda.gov.br/arquivos/pcmb/negocios/chamamento-publico/selecao-de-assoc-cooperat-de-catadores-de-mat-reciclaveis-2026/edital-selecao-de-assoc-cooperat-de-catadores-de-mat-reciclaveis-2026.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.81,
@@ -837,7 +837,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -850,7 +850,7 @@
    "http_status": 200,
    "url_final": "https://limpurb.salvador.ba.gov.br/2026/01/23/chamamento-publico-no-001-2026-selecao-de-associacoes-e-ou-cooperativas-de-catadores-de-materiais-reciclaveis-aptas-a-realizarem-a-coleta-seletiva-dos-residuos-produzidos-durante-o-carnaval-de-salva/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.58,
@@ -882,7 +882,7 @@
    "http_status": 403,
    "url_final": "https://www.gov.br/pt-br/servicos/obter-cadastro-e-habilitacao-de-cooperativas-e-associacoes-de-catadores-e-catadoras-de-materiais-reciclaveis-e-reutilizaveis-no-sinir-1",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.5,
@@ -911,11 +911,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 403,
    "url_final": "https://www.gov.br/dnit/pt-br/acesso-a-informacao/participacao-social/consultas-publicas/sei_24592468_edital_01_2026.pdf",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "LIR",
     "prob": 0.64,
@@ -944,11 +944,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://goias.gov.br/meioambiente/residuos-solidos-edital-para-selecao-de-projetos-que-receberao-apoio-na-implantacao/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.85,
@@ -977,11 +977,11 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 403,
    "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-snsa-mcid-no-01-2026",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 1.0,
@@ -1010,11 +1010,11 @@
    "prazo": "",
    "mecanismo": "MROSC",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.paudalho.pe.gov.br/portal/publicacao/termo-de-fomento-n-o-005-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.75,
@@ -1043,11 +1043,11 @@
    "prazo": "",
    "mecanismo": "MROSC",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.paudalho.pe.gov.br/portal/publicacao/termo-de-fomento-n-o-002-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.77,
@@ -1076,11 +1076,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.sarandi.pr.gov.br/web/index.php/secretarias/item/chamamento-publico-n-01-2027",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.97,
@@ -1112,7 +1112,7 @@
    "http_status": 200,
    "url_final": "https://prefa.cascavel.pr.gov.br/cidadao/pagina/chamamento-publico-0012026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.65,
@@ -1141,11 +1141,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 404,
    "url_final": "https://franciscobeltrao.pr.gov.br/licitacoes/chamamento-publico-no-03-2026/",
    "link_classe": "morto",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.96,
@@ -1174,11 +1174,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://tamandare.pr.gov.br/chamamento-publico",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.98,
@@ -1207,11 +1207,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 403,
    "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/parana/superintendencia-regional-no-parana-sr-pf-pr/chamamento-publico-2/chamamento-publico-2-2026-sr-pf-pr",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.95,
@@ -1240,11 +1240,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://www.paranagua.pr.gov.br/chamadas-publicas.php",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -1273,7 +1273,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -1292,7 +1292,7 @@
    "http_status": 200,
    "url_final": "https://reserva.pr.gov.br/wp-content/uploads/2026/03/Edital-de-Chamada-Publica-n.o-001-2026-Cooperativas-ou-Associacao-Catadores-de-Reciclavel-1.pdf",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.92,
@@ -1321,7 +1321,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "Planilha orçamentária"
@@ -1331,7 +1331,7 @@
    "http_status": null,
    "url_final": "https://www.seeduc.rj.gov.br/mais/chamamento-público",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.99,
@@ -1360,11 +1360,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "http_status": 200,
    "url_final": "https://niteroi.rj.gov.br/chamamento-publico/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.63,
@@ -1396,12 +1396,12 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/01067479000146/compras/2026/239/arquivos/2#1#13#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.83,
@@ -1433,12 +1433,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13966711000167/compras/2026/9/arquivos/2#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.84,
@@ -1470,12 +1470,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/11359904000124/compras/2026/20/arquivos/10#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.78,
@@ -1507,12 +1507,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/45780103000150/compras/2026/644/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.78,
@@ -1544,12 +1544,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/75829416000116/compras/2026/80/arquivos/1#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.5,
@@ -1581,12 +1581,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07333598000180/compras/2026/17/arquivos/1#1#2#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.55,
@@ -1623,7 +1623,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/03239027000120/compras/2026/1/arquivos/1#1#8#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.7,
@@ -1655,12 +1655,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13825476000103/compras/2026/139/arquivos/1#1#25#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.99,
@@ -1692,12 +1692,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/07777639000127/compras/2026/58/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.79,
@@ -1729,12 +1729,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://transparencia.capimgrosso.ba.gov.br/wp-includes/ExternalApps/downloader.php?hurl=aHR0cDovL2RvZW0ub3JnLmJyL2JhL2NhcGltZ3Jvc3NvL2FycXVpdm9zL2Rvd25sb2FkL2NkYTFmOGM2NGMzNjAyZjMyMzYxNThmOGI4NDU3MjE0L2I1ZjllZmM3MTQ5ZDNmYTVkMjg3NjNlOTg0M2M1NDEyLnBkZg%3D%3D#2",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.62,
@@ -1771,7 +1771,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/41cdfcbd-8166-409d-bb56-4d01e77be3b1/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "Planilha orçamentária",
@@ -1810,12 +1810,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://www.marmeleiro.pr.gov.br/arquivos/licitacoes/191126_1795086661-1%20-%20Fase%20Interna.pdf#23",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.87,
@@ -1847,12 +1847,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://www.mirassol.sp.gov.br/portal/editais/0/1/2150/#e_campo_busca",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -1884,12 +1884,12 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://www.camaralouveira.sp.gov.br/Licitacao?id=1555&handler=Imagem#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.97,
@@ -1921,12 +1921,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://www.mirassol.sp.gov.br/portal/editais/0/1/2031/#conteudo_esquerda",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -1963,7 +1963,7 @@
    "http_status": 200,
    "url_final": "https://ganhalicita.com.br/contratacao/fbf13e39-d73a-46b4-b89e-d5237538159d/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -2008,7 +2008,7 @@
    "http_status": 403,
    "url_final": "https://licitario.com.br/licitacao/am/fundacao-hospital-adriano-jorge-000108/06168092000108-1-000144-2026",
    "link_classe": "bloqueado",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2051,7 +2051,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/portal-de-compras-publicas-chamamento-publico-para-credenciamento-de-08142887000164-1-000008-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2089,12 +2089,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://licitacoesepregoes.socorro.sp.gov.br/licitacao/pregao/processo-no-155-2026-pmes-pregao-eletronico-no-57-2026-modo-de-disputa-aberto-fechado-objeto-contratacao-de-empresa-especializada-para-execucao-de-obra-de-reforma-e-ampliacao-da-escola-municipal",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2126,12 +2126,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/840/arquivo/4682/#1#18#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.55,
@@ -2163,12 +2163,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/799/arquivo/4292/#1#50#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.62,
@@ -2200,12 +2200,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://igarapava.sislicita.com.br/portal/proc/850/arquivo/4751/#1#30#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "MROSC",
     "prob": 0.55,
@@ -2237,12 +2237,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 400,
    "url_final": "https://www-storage.voxtecnologia.com.br/?m=sigpub.publicacao&f=269&i=publicado_116181_2026-10-27_82ae38b90342b26740212ed4a9fadab3.pdf#54#146#54",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.8,
@@ -2279,7 +2279,7 @@
    "http_status": 200,
    "url_final": "https://www.saaeaparecida.sp.gov.br/portal/download/licitacoes-anexos/nqxx-o/#49#51#49",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.44,
@@ -2311,12 +2311,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "http_status": 200,
    "url_final": "https://portalc1.com.br/wp-content/uploads/2026/07/quinta-16-07-2026.pdf#1#1#1",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 0.66,
@@ -2353,7 +2353,7 @@
    "http_status": 200,
    "url_final": "https://www.pombal.pb.gov.br/aviso-licitacao-concorrencia-eletronica-no-022-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -2425,7 +2425,7 @@
    "http_status": 200,
    "url_final": "https://www.pombal.pb.gov.br/aviso-pregao-eletronico-042-2026/",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -2475,7 +2475,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/contratacao-de-empresa-de-engenharia-para-reforma-de-auditorio-e-05652348000187-1-000055-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2494,7 +2494,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "MROSC",
@@ -2518,7 +2518,7 @@
    "http_status": 400,
    "url_final": "https://www.pncp.gov.br/pncp-api/v1/orgaos/24851511000185/compras/2026/527/arquivos/15#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Estado do Ceará - Prefeitura Municipal de Cedro - Aviso - Chamamento Público N°",
@@ -2531,7 +2531,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "MROSC",
@@ -2555,7 +2555,7 @@
    "http_status": 400,
    "url_final": "https://www.saae.quixeramobim.ce.gov.br/arquivos_download/licitacao/286/1404#1#1#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 008/2026",
@@ -2568,7 +2568,7 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "MROSC",
@@ -2592,7 +2592,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13910211000103/compras/2026/103/arquivos/1#1#6#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "PROCEDIMENTO DE MANIFESTAÇÃO DE INTERESSE Nº 003/2026",
@@ -2605,7 +2605,7 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca",
    "jev": {
     "mecanismo": "OUTRO",
@@ -2629,7 +2629,7 @@
    "http_status": 400,
    "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/29115474000160/compras/2026/271/arquivos/1#1#7#1",
    "link_classe": "falha",
-   "verificado_em": "2026-11-24"
+   "verificado_em": "2026-11-25"
   },
   {
    "titulo": "Contratação de empresa especializada… (Brasília/DF) | LicitaPNCP",
@@ -2666,7 +2666,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/contratacao-de-empresa-especializada-de-engenharia-eletrica-para-a-26461699000180-1-000396-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2709,7 +2709,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/contratacao-de-servicos-comuns-de-engenharia-para-adequacao-de-10882594000165-1-000742-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2752,7 +2752,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/contratacao-de-empresa-especializada-em-engenharia-para-78959145000101-1-000007-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2795,7 +2795,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/portal-de-compras-publicas-aquisicao-de-termometro-digital-de-maxima-e-78486198000152-1-000372-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "requisitos": {
     "documentos": [
      "CNPJ"
@@ -2819,7 +2819,7 @@
    "http_status": 200,
    "url_final": "https://licitapncp.com.br/licitacao/contratacao-transitoria-de-servicos-continuos-de-limpeza-e-conservacao-02030715000112-1-000218-2026",
    "link_classe": "vivo",
-   "verificado_em": "2026-11-24",
+   "verificado_em": "2026-11-25",
    "jev": {
     "mecanismo": "OUTRO",
     "prob": 1.0,
@@ -2857,8 +2857,31 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-25",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://agudos.sp.gov.br/public/admin/globalarq/licitacao/arquivo/d910895f3a807eac565beb31eec29f6d.pdf#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-25",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.57,
+    "confianca": 0.53,
+    "naturezas": {
+     "associacao": 0.44,
+     "fundacao": 0.39,
+     "cooperativa": 0.41,
+     "federacao": 0.29
+    },
+    "resultado": {
+     "prob": 0.23,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-25",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Contratação de empresa especializada… (Goiânia/GO) | LicitaPNCP",
@@ -2871,11 +2894,54 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-24",
+   "doc_em": "2026-11-25",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://licitapncp.com.br/licitacao/contratacao-de-empresa-especializada-para-execucao-de-servico-comum-de-15126437000305-1-000012-2027",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-25",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.69,
+     "fundacao": 0.6,
+     "cooperativa": 0.75,
+     "federacao": 0.26
+    },
+    "resultado": {
+     "prob": 0.08,
+     "base": "documento",
+     "carga": 4255
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-25",
+    "modelo": "jev-1.14.0"
+   },
+   "requisitos": {
+    "documentos": [
+     "CNPJ"
+    ],
+    "trecho": "contratacao de empresa especializada... (goiania/go) | licitapncp como ela chega no alerta caixa de entrada de: licitapncp · 7:00 nova licitacao para “engenharia” contratacao de empresa especializada para execucao de servico comum de engenharia sob... goiania/go · pregao eletronico r$ 1,8 milhao propostas ate 17/12 receba as proximas assim, no dia em que saem. pro: e-mail todo dia as 7h e resumo n"
+   }
+  },
+  {
+   "titulo": "Chamamento / credenciamento visando… (Alvorada/RS) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/chamamento-credenciamento-visando-a-contratacao-de-vagas-nas-88000906000157-1-000460-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2036-12-05",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 05/12/2036 10:00",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-25",
    "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-24",
- "prazos_em": "2026-11-24",
- "links_em": "2026-11-24"
+ "jev_em": "2026-11-25",
+ "prazos_em": "2026-11-25",
+ "links_em": "2026-11-25"
 }
