@@ -1,15 +1,15 @@
 {
- "gerado_em": "2026-11-26",
+ "gerado_em": "2026-11-27",
  "fonte": "Capta+ Plataforma · Radar · por UF",
  "nota": "Números agregados por UF. Nenhuma organização é identificada.",
  "estados": {
   "PR": {
-   "oportunidades": 623,
+   "oportunidades": 656,
    "areas": [
     {
      "codigo": "ROUANET",
      "rotulo": "PRONAC ROUANET",
-     "total": 551
+     "total": 583
     },
     {
      "codigo": "MROSC",
@@ -29,7 +29,7 @@
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 49
+     "total": 50
     },
     {
      "codigo": "FUNDO_IDOSO",
@@ -39,12 +39,12 @@
    ]
   },
   "SP": {
-   "oportunidades": 171,
+   "oportunidades": 173,
    "areas": [
     {
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
-     "total": 100
+     "total": 102
     },
     {
      "codigo": "MROSC",
@@ -199,7 +199,7 @@
    ]
   },
   "MG": {
-   "oportunidades": 47,
+   "oportunidades": 48,
    "areas": [
     {
      "codigo": "MROSC",
@@ -225,6 +225,11 @@
      "codigo": "EDITAL_PUBLICO",
      "rotulo": "EDITAIS",
      "total": 27
+    },
+    {
+     "codigo": "LIR",
+     "rotulo": "LIR RECICLAGEM",
+     "total": 1
     }
    ]
   },
