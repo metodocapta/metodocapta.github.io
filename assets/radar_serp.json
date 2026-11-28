@@ -29,7 +29,7 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -42,7 +42,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "as e a manutencao de seus dados atualizados para garantir a habilitacao para envio de propostas. c) declarar, conforme modelo constante no anexo i, que esta ciente e concorda com as disposicoes previstas neste edital e seus anexos, bem como que se responsabiliza pela veracidade e legitimidade das informacoes e dos documentos apresentados durante o processo de selecao, inclusive aqueles referentes"
-   }
+   },
+   "http_status": 403,
+   "url_final": "https://www.gov.br/mds/pt-br/acesso-a-informacao/licitacoes-e-contratos/editais-abertos/editais-2026-1/edital-de-chamamento-publico-no-012026.pdf",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO N° 01/2026 – SEAS",
@@ -71,7 +75,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-27",
+   "http_status": null,
+   "url_final": "https://www.seas.am.gov.br/edital-de-chamamento-publico-n-01-2026-seas/",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 01/2026 - CultBR Editais",
@@ -100,7 +108,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 404,
+   "url_final": "https://culteditais.cultura.gov.br/oportunidade/13250/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Fomento Multiartes | Secretaria da Cultura",
@@ -129,7 +141,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-de-Fomento-Multiartes",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Editais de fomento - Ministério da Igualdade Racial",
@@ -157,7 +173,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.gov.br/igualdaderacial/pt-br/assuntos/editais/editais-de-fomento",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital Acessível | Edital de Fomento Multiartes | Secretaria ...",
@@ -186,7 +206,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.cultura.pr.gov.br/Pagina/Edital-Acessivel-Edital-de-Fomento-Multiartes",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 06/2026 – PROCESSO Nº 23713/2026",
@@ -215,7 +239,7 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -229,7 +253,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "ra parecer tecnico fundamentado. 11. da proposta tecnica e documentos de habilitacao 11.1. a proposta tecnica, devera ser apresentada no endereco eletronico www.portaldecompraspublicas.com.br 11.2. em nenhuma hipotese serao recebidas propostas fora do prazo estabelecido neste edital. 11.3. a organizacao da sociedade civil proponente devera examinar cuidadosamente todas as instrucoes, condic"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://planaltina.go.gov.br/chamamento-publico-no-06-2026-processo-no-23713-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO N° 008/SME/2026 - Seleção de Organização ...",
@@ -258,7 +286,7 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -268,7 +296,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "edio completo motorista 1 clt – 8 (oito) horas diarias habilitacao (cnh) valida 4.7. atribuicoes – quadro de profissionais 4.7.1. os profissionais contratados pela entidade executora exercerao suas funcoes sob a supervisao tecnica, administrativa e disciplinar exclusiva da propria osc, cuja e responsavel exclusiva pelo vinculo empregaticio entre as partes. 4.7.2. nao havera subordinaca"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://itaqua.sp.gov.br/publicacoes/licitacao.php?id=2792",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Chamada Pública nº 034/2026 - Ipea",
@@ -307,7 +339,11 @@
      "Comprovação de experiência"
     ],
     "trecho": "--> chamada publica no 034/2026 - ipea portal do governo brasileiro atualize sua barra de governo ⁝ orgaos do governo acesso a informacao legislacao acessibilidade bolsas de pesquisa lista chamada publica no 034/2026 chamada publica no 034/2026 publicado em 19/10/2026 as 14h31 - ultima modificacao em 13/11/2026 as 10h54 inicio das bolsas: a partir de 13 de novembro de 2026 prazo inicial: 19-10-26"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16523-chamada-publica-n-034-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO N 002/2026 – FOMENTO CULTURAL ...",
@@ -336,7 +372,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 404,
+   "url_final": "https://culteditais.cultura.gov.br/oportunidade/11851/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Editais - Aldir Blanc Sergipe",
@@ -364,7 +404,11 @@
     "cobra_resultado": "NAO_SE_APLICA",
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://aldirblanc.se.gov.br/editais",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 01/2026 – ALDIR BLANC ...",
@@ -395,7 +439,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://novaveneza.go.gov.br/edital-de-chamamento-publico-no-01-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 52/2026",
@@ -424,7 +472,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://saojeronimo.rs.gov.br/pagina/id/1108/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO Nº 001/2026 – ALDIR BLANC",
@@ -453,7 +505,7 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -465,7 +517,11 @@
      "Planilha orçamentária"
     ],
     "trecho": "em que uma comissao analisa e seleciona os projetos; 5.3 habilitacao – etapa em que os agentes culturais selecionados na etapa anterior serao convocados para apresentar documentos de habilitacao; 5.4 assinatura do termo de execucao cultural – etapa em que os agentes culturais habilitados serao convocados para assinar o termo de execucao cultural. 6. inscricoes 6.1 o periodo de inscric"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://santaremnovo.pa.gov.br/chamamento-publico-no-001-2026-aldir-blanc/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO 01_2026_Completo_docx - gov.br",
@@ -494,7 +550,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/rfb/unidades-federativas-uf/mg/drf-jfa-uasg-170092/2026/chamamento-publico/chamamento-publico-drf-jfa-01_2026.pdf/@@download/file",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Chamamento Público SNSA/MCID nº 01/2026 - gov.br",
@@ -523,7 +583,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/cidades/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-snsa-mcid-no-01-2026",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "SELEÇÃO DE CATADORES DE MATERIAIS RECICLÁVEIS E/OU REUTILIZÁVEIS",
@@ -552,14 +616,18 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "RG e CPF dos dirigentes",
      "Comprovação de experiência"
     ],
     "trecho": "pagina 1 de 5 edital de chamamento publico no 02/2026 selecao de catadores de materiais reciclaveis e/ou reutilizaveis para atuacao no ambito da “estacao acolher” na edicao de 2026 do evento “arraia do povo” o estado de sergipe, por intermedio da secretaria de estado da assistencia social, inclusao e cidadania do estado de sergipe – seasic, no uso das atribuicoes que lhe sao conferidas nos"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://assistenciasocial.se.gov.br/wp-content/uploads/2026/05/EDITAL-DE-CHAMAMENTO-PUBLICO-N-02.2026-SELECAO-DE-CATADORES-DE-MATERIAIS-RECICLAVEIS-E.OU-REUTILIZAVEIS.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "ABERTURA DE CHAMAMENTO PÚBLICO SMASDH Nº 04/2026",
@@ -587,7 +655,11 @@
     "cobra_resultado": "EXECUCAO",
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://prefeitura.pbh.gov.br/assistencia-social-e-direitos-humanos/chamamentos-publicos/termo-de-colaboracao-04-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital 2026 — Lei Estadual de Incentivo ao Esporte ...",
@@ -616,7 +688,7 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -628,7 +700,11 @@
      "Plano de trabalho"
     ],
     "trecho": "projetos apresentados serao analisados para fins de: a) habilitacao; b) selecao; 9.2. somente sera analisado, para fins de selecao, o projeto que for considerado habilitado; 9.3. a comissao execu@va da lei estadual de incen@vo ao esporte sera responsavel por todas as etapas de analise dos projetos apresentados, ate a sua selecao; 10. da habilitacao da proposta 10.1. a habilita"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://esportes.pe.gov.br/editais/lei-estadual-de-incentivo-ao-esporte-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMADA PÚBLICA No 001/2026 PARA PROJETOS DE ...",
@@ -657,7 +733,11 @@
     "em": "2026-11-27",
     "modelo": "jev-1.14.0"
    },
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.cachoeiro.es.gov.br/site-pmci/wp-content/uploads/editais/2026/08/edital-fia-2026-revisado-assinado.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Selecao Publica FI 2026 vFinal - bndes.gov.br",
@@ -667,7 +747,30 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.bndes.gov.br/wps/wcm/connect/site/3d4ff94b-43f8-4dbc-80a0-5080cafbb820/Edital+de+Selecao+Publica+FI+2026.pdf?MOD=AJPERES",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "FUNDO_IDOSO",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.92,
+     "fundacao": 0.85,
+     "cooperativa": 0.55,
+     "federacao": 0.35
+    },
+    "resultado": {
+     "prob": 0.23,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Prefeitura de São Paulo lança edital para Fundo Municipal da ...",
@@ -677,12 +780,35 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "Comprovação de experiência"
     ],
     "trecho": "prefeitura de sao paulo lanca edital para fundo municipal da pessoa idosa com investimento de mais 12 milhoes de reais - direitos humanos e cidadania - prefeitura este site precisa que o seu navegador tenha javascript ativo para funcionar. secretaria municipal de direitos humanos e cidadania procurar search menu menu do site acesso a informacao participacao social quadro de servicos protecao de da"
+   },
+   "http_status": null,
+   "url_final": "https://prefeitura.sp.gov.br/web/direitos_humanos/w/prefeitura-de-são-paulo-lança-edital-para-fundo-municipal-da-pessoa-idosa-com-investimento-de-mais-12-milhões-de-reais",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "FUNDO_IDOSO",
+    "prob": 0.95,
+    "confianca": 0.94,
+    "naturezas": {
+     "associacao": 0.91,
+     "fundacao": 0.62,
+     "cooperativa": 0.61,
+     "federacao": 0.63
+    },
+    "resultado": {
+     "prob": 0.27,
+     "base": "documento",
+     "carga": 5472
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -692,7 +818,30 @@
    "resumo": "O Banco do Nordeste do Brasil S.A. torna público o lançamento do Edital Social - IDOSO/2026 e convida as organizações privadas sem fins lucrativos, habilitadas a trabalhar com o público idoso de baixa renda, sediadas ou com filiais em sua á",
    "prazo": "",
    "mecanismo": "FUNDO_IDOSO",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": null,
+   "url_final": "https://www.bnb.gov.br/documents/45887/10205353/EDITAL+SOCIAL+-+IDOSO_2026.pdf/e44f5d98-eee2-b676-8878-ec5018975c5c?t=1786133274287",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "FUNDO_IDOSO",
+    "prob": 0.48,
+    "confianca": 0.43,
+    "naturezas": {
+     "associacao": 0.86,
+     "fundacao": 0.77,
+     "cooperativa": 0.43,
+     "federacao": 0.57
+    },
+    "resultado": {
+     "prob": 0.34,
+     "base": "trecho",
+     "carga": 240
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO No 02/2026 SEAB/MDA - gov.br",
@@ -702,9 +851,32 @@
    "prazo": "2026-10-20",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "prazo_fonte": "documento",
-   "prazo_gatilho": "envio"
+   "prazo_gatilho": "envio",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/mda/pt-br/acesso-a-informacao/participacao-social/Editais-de-chamamento-publico/2026/edital-de-chamamento-publico-no-02-2026-seab/sei_57839206_edital-1.pdf",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.99,
+    "confianca": 0.99,
+    "naturezas": {
+     "associacao": 0.93,
+     "fundacao": 0.82,
+     "cooperativa": 0.97,
+     "federacao": 0.87
+    },
+    "resultado": {
+     "prob": 0.26,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "SECRETARIA MUNICIPAL DE MEIO AMBIENTE, TURISMO E LAZER EDITAL ...",
@@ -714,7 +886,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -729,6 +901,29 @@
      "Comprovação de experiência"
     ],
     "trecho": "smo e lazer edital de chamamento publico no 01/2026 para habilitacao de cooperativas e/ou associacoes de catadores de material reciclavel 1. descricao do objeto credenciar (cooperativas/associacoes de catadores), para realizacao de atividades de recebimento, triagem, processamento e coleta de materiais reciclaveis oriundos da coleta seletiva municipal, e atendimento ao disposto nos inc"
+   },
+   "http_status": 200,
+   "url_final": "https://reserva.pr.gov.br/wp-content/uploads/2026/03/Edital-de-Chamada-Publica-n.o-001-2026-Cooperativas-ou-Associacao-Catadores-de-Reciclavel-1.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.93,
+    "confianca": 0.92,
+    "naturezas": {
+     "associacao": 0.9,
+     "fundacao": 0.26,
+     "cooperativa": 0.95,
+     "federacao": 0.16
+    },
+    "resultado": {
+     "prob": 0.08,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -739,7 +934,30 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.gov.br/florestal/pt-br/acesso-a-informacao/participacao-social/editais-de-chamamento-publico/edital-de-chamamento-publico-sfb-n-01-2026/edital-fndf-01-2026-apresentacao-sintese.pdf/@@display-file/file",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.65,
+    "confianca": 0.62,
+    "naturezas": {
+     "associacao": 0.53,
+     "fundacao": 0.5,
+     "cooperativa": 0.49,
+     "federacao": 0.4
+    },
+    "resultado": {
+     "prob": 0.23,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "003000-2026 - Coleta Seletiva Cidadã - Edital",
@@ -749,7 +967,30 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.casadamoeda.gov.br/arquivos/pcmb/negocios/chamamento-publico/selecao-de-assoc-cooperat-de-catadores-de-mat-reciclaveis-2026/edital-selecao-de-assoc-cooperat-de-catadores-de-mat-reciclaveis-2026.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "LIR",
+    "prob": 0.7,
+    "confianca": 0.67,
+    "naturezas": {
+     "associacao": 0.87,
+     "fundacao": 0.15,
+     "cooperativa": 0.96,
+     "federacao": 0.14
+    },
+    "resultado": {
+     "prob": 0.06,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026 SELEÇÃO DE ...",
@@ -759,7 +1000,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -768,6 +1009,29 @@
      "Procuração"
     ],
     "trecho": "e de renda unica, mediante apresentacao da documentacao de habilitacao prevista no item 4 deste edital; 3.1.2. nao possuam fins lucrativos; 3.1.3. possuam infraestrutura adequada para realizar a triagem e a classificacao dos residuos reciclaveis e reutilizaveis oriundos da coleta seletiva realizada no evento; 3.1.4. apresentem sistema de rateio entre os associados e/ou cooperados; 3.1.5. r"
+   },
+   "http_status": 200,
+   "url_final": "https://limpurb.salvador.ba.gov.br/wp-content/uploads/2026/01/1.-Edital-de-Chamamento-Publico.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "LIR",
+    "prob": 0.6,
+    "confianca": 0.56,
+    "naturezas": {
+     "associacao": 0.96,
+     "fundacao": 0.18,
+     "cooperativa": 0.97,
+     "federacao": 0.16
+    },
+    "resultado": {
+     "prob": 0.07,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -778,7 +1042,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -789,6 +1053,29 @@
      "Comprovação de experiência"
     ],
     "trecho": "e a quantidade de cooperados ideal; 8. da documentacao de habilitacao 8.1 para fins de habilitacao, as cooperativas interessadas deverao apresentar, nos prazos e condicoes estabelecidos neste edital, a documentacao juridica, fiscal, trabalhista, tecnica e administrativa exigida pela legislacao vigente, incluindo, no minimo: prefeitura de jacarei secretaria de infraestrutura e zeladoria urb"
+   },
+   "http_status": 200,
+   "url_final": "https://www.jacarei.sp.gov.br/wp-content/uploads/2026/06/EDITAL-DE-CHAMAMENTO-PUBLICO.REV03-assinado-2.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.96,
+    "confianca": 0.96,
+    "naturezas": {
+     "associacao": 0.14,
+     "fundacao": 0.12,
+     "cooperativa": 0.96,
+     "federacao": 0.14
+    },
+    "resultado": {
+     "prob": 0.71,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "RESULTADO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -799,7 +1086,30 @@
    "prazo": "",
    "mecanismo": "MROSC",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://www.paudalho.pe.gov.br/portal/publicacao/termo-de-fomento-n-o-005-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.76,
+    "confianca": 0.74,
+    "naturezas": {
+     "associacao": 0.46,
+     "fundacao": 0.21,
+     "cooperativa": 0.93,
+     "federacao": 0.23
+    },
+    "resultado": {
+     "prob": 0.28,
+     "base": "documento",
+     "carga": 1663
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Cooperativa de Trabalho de Catadores de Material Reciclável ...",
@@ -808,7 +1118,30 @@
    "resumo": "Apr 10, 2026 · Cooperativa de Trabalho de Catadores de Material Reciclável em Geral do Sudoeste Goiano COOP-RECICLA DOCUMENTOS Termo de fomento 09/2026",
    "prazo": "",
    "mecanismo": "LIR",
-   "tipo_item": "pagina"
+   "tipo_item": "pagina",
+   "http_status": 200,
+   "url_final": "https://www.rioverde.go.gov.br/download/cooperativa-de-trabalho-de-catadores-de-material-reciclavel-em-geral-do-sudoeste-goiano-coop-recicla-22/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.94,
+    "confianca": 0.93,
+    "naturezas": {
+     "associacao": 0.61,
+     "fundacao": 0.44,
+     "cooperativa": 0.89,
+     "federacao": 0.31
+    },
+    "resultado": {
+     "prob": 0.35,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Editais de Chamamento Público - Secretaria da Saúde - Governo do …",
@@ -818,7 +1151,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -834,6 +1167,29 @@
      "Comprovação de experiência"
     ],
     "trecho": "juridica. 3. – da apresentacao dos documentos 3.1. os documentos de habilitacao, plano de trabalho, comprovacao de experiencia e proposta financeira - exigidos no presente chamamento publico -deverao ser apresentados em 02 (dois) envelopes fechados, indevassaveis, distintos e identificados. 3.2. cada um dos envelopes devera ser identificado conforme modelo de etiquetas contidas no item"
+   },
+   "http_status": 200,
+   "url_final": "https://saude.sp.gov.br/ses/perfil/cidadao/homepage/outros-destaques/editais-de-chamamento-publico",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.6,
+    "confianca": 0.56,
+    "naturezas": {
+     "associacao": 0.92,
+     "fundacao": 0.85,
+     "cooperativa": 0.4,
+     "federacao": 0.65
+    },
+    "resultado": {
+     "prob": 0.69,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "RESULTADO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -844,7 +1200,30 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/gestao/pt-br/acesso-a-informacao/licitacoes-e-contratos/doacoes/chamamentos-publicos",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.91,
+    "confianca": 0.9,
+    "naturezas": {
+     "associacao": 0.45,
+     "fundacao": 0.34,
+     "cooperativa": 0.31,
+     "federacao": 0.34
+    },
+    "resultado": {
+     "prob": 0.17,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público - Secretaria Municipal de Educação",
@@ -854,9 +1233,32 @@
    "prazo": "2026-10-19",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "prazo_fonte": "documento",
-   "prazo_gatilho": "prazo"
+   "prazo_gatilho": "prazo",
+   "http_status": 200,
+   "url_final": "https://educacao.sme.prefeitura.sp.gov.br/chamamento-publico/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 1.0,
+    "confianca": 1.0,
+    "naturezas": {
+     "associacao": 0.85,
+     "fundacao": 0.63,
+     "cooperativa": 0.55,
+     "federacao": 0.52
+    },
+    "resultado": {
+     "prob": 0.19,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público",
@@ -866,7 +1268,30 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 403,
+   "url_final": "https://www.serpro.gov.br/consultas-publicas",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.81,
+    "confianca": 0.79,
+    "naturezas": {
+     "associacao": 0.71,
+     "fundacao": 0.48,
+     "cooperativa": 0.75,
+     "federacao": 0.33
+    },
+    "resultado": {
+     "prob": 0.16,
+     "base": "documento",
+     "carga": 2567
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público",
@@ -875,7 +1300,30 @@
    "resumo": "20 de dez. de 2022 · Chamamento Público O chamamento público é um procedimento administrativo de seleção, via edital, utilizado …",
    "prazo": "",
    "mecanismo": "",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 200,
+   "url_final": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/licitacoes-e-contratos/licitacoes/chamamento-publico",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "MROSC",
+    "prob": 0.85,
+    "confianca": 0.84,
+    "naturezas": {
+     "associacao": 0.63,
+     "fundacao": 0.54,
+     "cooperativa": 0.58,
+     "federacao": 0.45
+    },
+    "resultado": {
+     "prob": 0.24,
+     "base": "trecho",
+     "carga": 129
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "Chamamento Público – CPC – Coordenadoria de Parcerias e Convênios",
@@ -885,7 +1333,7 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNDT (trabalhista)",
@@ -893,6 +1341,29 @@
      "Comprovação de experiência"
     ],
     "trecho": "do por meio de edital, destinado a analise das condicoes de habilitacao, total ou parcial, dos interessados ou do objeto; xlv - sistema de registro de precos: conjunto de procedimentos para realizacao, mediante contratacao direta ou licitacao nas modalidades pregao ou concorrencia, de registro formal de precos relativos a prestacao de servicos, a obras e a aquisicao e locacao de bens para contrata"
+   },
+   "http_status": 200,
+   "url_final": "https://cpc.cps.sp.gov.br/chamamento-publico/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.79,
+    "confianca": 0.77,
+    "naturezas": {
+     "associacao": 0.54,
+     "fundacao": 0.53,
+     "cooperativa": 0.61,
+     "federacao": 0.29
+    },
+    "resultado": {
+     "prob": 0.1,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -903,7 +1374,7 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ",
@@ -914,6 +1385,29 @@
      "CNDT (trabalhista)"
     ],
     "trecho": "aria de saneamento basico edital de chamamento publico para habilitacao de associacao ou cooperativa de catadores de materiais reciclaveis a prefeitura municipal de camboriu, por meio da secretaria de saneamento basico, com fundamento nos arts. 6o, inciso viii; 7o, inciso xii; 8o, inciso iv; 9o; e 36, § 2o, da lei federal no 12.305, de 2 de agosto de 2010, considerando a publicacao do edital sesb"
+   },
+   "http_status": 200,
+   "url_final": "https://camboriu.sc.gov.br/wp-content/uploads/2026/02/Edital-no-001.2026.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "LIR",
+    "prob": 0.65,
+    "confianca": 0.62,
+    "naturezas": {
+     "associacao": 0.89,
+     "fundacao": 0.07,
+     "cooperativa": 0.96,
+     "federacao": 0.09
+    },
+    "resultado": {
+     "prob": 0.04,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -924,7 +1418,30 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 200,
+   "url_final": "https://camboriu.sc.gov.br/wp-content/uploads/2025/08/1754328920_edicao_4905_assinada-1.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "LIR",
+    "prob": 0.71,
+    "confianca": 0.68,
+    "naturezas": {
+     "associacao": 0.86,
+     "fundacao": 0.06,
+     "cooperativa": 0.97,
+     "federacao": 0.08
+    },
+    "resultado": {
+     "prob": 0.05,
+     "base": "documento",
+     "carga": 14000
+    },
+    "cobra_resultado": "EXECUCAO",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
+   }
   },
   {
    "titulo": "SELEÇÃO DE CATADORES DE MATERIAIS RECICLÁVEIS E/OU ...",
@@ -934,13 +1451,36 @@
    "prazo": "",
    "mecanismo": "LIR",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "RG e CPF dos dirigentes",
      "Comprovação de experiência"
     ],
     "trecho": "pagina 1 de 5 edital de chamamento publico no 02/2026 selecao de catadores de materiais reciclaveis e/ou reutilizaveis para atuacao no ambito da “estacao acolher” na edicao de 2026 do evento “arraia do povo” o estado de sergipe, por intermedio da secretaria de estado da assistencia social, inclusao e cidadania do estado de sergipe – seasic, no uso das atribuicoes que lhe sao conferidas nos"
+   },
+   "http_status": 200,
+   "url_final": "https://assistenciasocial.se.gov.br/wp-content/uploads/2026/07/EDITAL-02.2026-SELECAO-DE-CATADORES-ESTACAO-ACOLHER.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "jev": {
+    "mecanismo": "OUTRO",
+    "prob": 0.9,
+    "confianca": 0.89,
+    "naturezas": {
+     "associacao": 0.08,
+     "fundacao": 0.08,
+     "cooperativa": 0.09,
+     "federacao": 0.08
+    },
+    "resultado": {
+     "prob": 0.03,
+     "base": "documento",
+     "carga": 11202
+    },
+    "cobra_resultado": "NAO_SE_APLICA",
+    "em": "2026-11-28",
+    "modelo": "jev-1.14.0"
    }
   },
   {
@@ -950,7 +1490,11 @@
    "resumo": "Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por meio da Política ",
    "prazo": "",
    "mecanismo": "PNAB",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://mapacultural.pa.gov.br/oportunidade/2107/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Chamamento Público - seplad.pa.gov.br",
@@ -960,13 +1504,17 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
    "requisitos": {
     "documentos": [
      "CNPJ"
     ],
     "trecho": "edital de chamamento publico - seplad - secretaria de planejamento e administracao telefone: (91) 3251-2900 ouvidoria: ouvidoria@seplad.pa.gov.br funcionamento: seg-sex: 8h - 17h --> --> edital de chamamento publico voce esta aqui: seplad – secretaria de planejamento e administracao edital de chamamento publico edital de chamamento publico no 002/2026 – dpe/gabs/seplad formulario de inscricao aces"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://www.seplad.pa.gov.br/chamamento-pub-jun-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO Nº 003/2026 SELEÇÃO DE PROJETOS ...",
@@ -975,7 +1523,11 @@
    "resumo": "Jan 27, 2026 · Olá, agentes culturais do Estado do Pará. Estamos muito felizes com o seu interesse em participar deste chamamento público. Este Edital é realizado com recursos do Governo Federal repassados pelo Ministério da Cultura, por me",
    "prazo": "",
    "mecanismo": "PNAB",
-   "tipo_item": "edital"
+   "tipo_item": "edital",
+   "http_status": 404,
+   "url_final": "https://mapacultural.pa.gov.br/oportunidade/2068/",
+   "link_classe": "morto",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO No 001/2026 - itupiranga.pa.gov.br",
@@ -994,7 +1546,11 @@
      "Conta bancária específica"
     ],
     "trecho": "tame; iii - avaliar, decidir e validar os requerimentos de habilitacao, atualizacao de dados e enquadramento funcional dos profissionais do magisterio e de seus sucessores legais; iv - analisar e deliberar, fundamentadamente e em carater definitivo na esfera administrativa, sobre os recursos, contestacoes e pedidos de inclusao apresentados pelos interessados; v - homologar os parametros de ca"
-   }
+   },
+   "http_status": 200,
+   "url_final": "https://itupiranga.pa.gov.br/wp-content/uploads/2026/11/EDITAL-DE-CHAMAMENTO-PUBLICO-No-001-2026-ABONO-PRECATORIO-FUNDEF-MUNICIPIO-DE-ITUPIRANGA_PA.pdf",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO 02/2026 - SR/PF/PA — Polícia Federal",
@@ -1004,7 +1560,11 @@
    "prazo": "",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27"
+   "doc_em": "2026-11-28",
+   "http_status": 403,
+   "url_final": "https://www.gov.br/pf/pt-br/assuntos/licitacoes/2026/para/dispensa-de-licitacao/chamamento-publico-02-2026-sr-pf-pa",
+   "link_classe": "bloqueado",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "CHAMAMENTO PÚBLICO - CHAMAMENTO PÚBLICO",
@@ -1017,8 +1577,12 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/01067479000146/compras/2026/239/arquivos/2#1#13#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Chamamento Público nº 000001/2026 - Edital de Chamamento Público nº 000001/2026",
@@ -1031,8 +1595,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13966711000167/compras/2026/9/arquivos/2#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Chamamento Público n° (2438) | 8-0/2026 - Edital de Chamamento Público n° (2438) | 8-0/2026",
@@ -1045,8 +1613,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/11359904000124/compras/2026/20/arquivos/10#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "AVISO DE EDITAL CHAMAMENTO PÚBLICO PARA CREDENCIAMENTO Nº",
@@ -1059,8 +1631,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/75829416000116/compras/2026/80/arquivos/1#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "EDITAL DE CHAMAMENTO PÚBLICO 001/2026",
@@ -1074,7 +1650,11 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/03239027000120/compras/2026/1/arquivos/1#1#8#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Edital de Chamamento Público para Termo de Colaboração CHAMAMENTO PÚBLICO Nº 001/2026",
@@ -1087,8 +1667,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://pncp.gov.br/pncp-api/v1/orgaos/13825476000103/compras/2026/139/arquivos/1#1#25#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Concorrência Eletrônica nº 005/2026",
@@ -1101,8 +1685,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.mirassol.sp.gov.br/portal/editais/0/1/2031/#conteudo_esquerda",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "AVISO PREGÃO ELETRÔNICO 042/2026",
@@ -1115,8 +1703,25 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.pombal.pb.gov.br/aviso-pregao-eletronico-042-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "Estatuto e última alteração",
+     "RG e CPF dos dirigentes",
+     "Procuração",
+     "Certidão negativa federal (RFB/PGFN)",
+     "CRF FGTS",
+     "CNDT (trabalhista)",
+     "Certidão estadual/municipal"
+    ],
+    "trecho": "item anterior podera ensejar desclassificacao no momento da habilitacao. da participacao no pregao. poderao participar deste pregao interessados cujo ramo de atividade seja compativel com o objeto desta licitacao, que atenda as condicoes do edital e que estejam com credenciamento regular no portal de compras publicas. sera concedido tratamento favorecido para as microempresas e empresas de pequeno"
+   }
   },
   {
    "titulo": "Chamamento / credenciamento visando… (Alvorada/RS) | LicitaPNCP",
@@ -1129,8 +1734,18 @@
    "idioma": "outro",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://licitapncp.com.br/licitacao/chamamento-credenciamento-visando-a-contratacao-de-vagas-nas-88000906000157-1-000460-2026",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "requisitos": {
+    "documentos": [
+     "CNPJ"
+    ],
+    "trecho": "chamamento / credenciamento visando... (alvorada/rs) | licitapncp como ela chega no alerta caixa de entrada de: licitapncp · 7:00 nova licitacao para “vagas” chamamento / credenciamento visando a contratacao de vagas nas instituicoes para mulheres... alvorada/rs · credenciamento r$ 306 mil propostas ate 05/12 receba as proximas assim, no dia em que saem. pro: e-mail todo dia as 7h e resumo no what"
+   }
   },
   {
    "titulo": "AVISO LICITAÇÃO CONCORRÊNCIA ELETRÔNICA Nº 022/2026",
@@ -1143,8 +1758,28 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.pombal.pb.gov.br/aviso-licitacao-concorrencia-eletronica-no-022-2026/",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "Estatuto e última alteração",
+     "RG e CPF dos dirigentes",
+     "Procuração",
+     "Certidão negativa federal (RFB/PGFN)",
+     "CRF FGTS",
+     "CNDT (trabalhista)",
+     "Certidão estadual/municipal",
+     "Conta bancária específica",
+     "Planilha orçamentária",
+     "Comprovação de experiência"
+    ],
+    "trecho": "item anterior podera ensejar desclassificacao no momento da habilitacao. da participacao na concorrencia. poderao participar desta concorrencia interessados cujo ramo de atividade seja compativel com o objeto desta licitacao, e que estejam com credenciamento regular na portal de compras publicas. sera concedido tratamento favorecido para as microempresas e empresas de pequeno porte, para as socied"
+   }
   },
   {
    "titulo": "Pregão Eletrônico nº 090/2026",
@@ -1157,8 +1792,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.mirassol.sp.gov.br/portal/editais/0/1/2134",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "SUMÁRIO",
@@ -1171,8 +1810,19 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.saomanuel.sp.gov.br/portal/diario-oficial/ver/2757",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28",
+   "requisitos": {
+    "documentos": [
+     "CNPJ",
+     "RG e CPF dos dirigentes"
+    ],
+    "trecho": "prefeitura municipal de sao manuel - sp - diario oficial /2026 acessibilidade ✕ aumentar zoom diminuir zoom alto contraste libras ir para o conteudo --> politica de cookies e privacidade personalize as suas preferencias de cookies. clique aqui e consulte nossas politicas . cookies necessarios essenciais para uma navegacao eficiente em nosso site. checkbox cookies de estatisticas recomendados para"
+   }
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -1185,8 +1835,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/840/arquivo/4682/#1#18#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -1199,8 +1853,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/799/arquivo/4292/#1#50#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "**ERRATA Nº 002/2026 AO EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026** - **ERRATA Nº 002/2026 AO EDITAL DE CHAMAMENTO PÚBLICO Nº 001/2026**",
@@ -1213,8 +1871,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://www.pncp.gov.br/pncp-api/v1/orgaos/24851511000185/compras/2026/527/arquivos/15#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "AVISO DE CHAMAMENTO",
@@ -1227,8 +1889,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://igarapava.sislicita.com.br/portal/proc/850/arquivo/4751/#1#30#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Anexos: 2026_03_04_PNCP_PE_013_2026.pdf 2026_03_04_SAAE_PE_013_2026.pdf",
@@ -1242,7 +1908,11 @@
    "mecanismo": "",
    "tipo_item": "edital",
    "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://www.saaeaparecida.sp.gov.br/portal/download/licitacoes-anexos/nqxx-o/#49#51#49",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "**CREDENCIAMENTO Nº 003/2026**",
@@ -1255,8 +1925,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://transparencia.capimgrosso.ba.gov.br/wp-includes/ExternalApps/downloader.php?hurl=aHR0cDovL2RvZW0ub3JnLmJyL2JhL2NhcGltZ3Jvc3NvL2FycXVpdm9zL2Rvd25sb2FkLzEyMjBmNmEzMTllNzRlMzg5MGU0OWQ5Yzk3OGRjZGVlL2MyYjBmZjFhZmVjZDgxZTY0NjJiNjliYzUyYTQ4MGNlLnBkZg%3D%3D#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "Estado do Ceará - Prefeitura Municipal de Cedro - Aviso - Chamamento Público N°",
@@ -1269,8 +1943,12 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
-   "fonte": "pncp-busca"
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 400,
+   "url_final": "https://www.saae.quixeramobim.ce.gov.br/arquivos_download/licitacao/286/1404#1#1#1",
+   "link_classe": "falha",
+   "verificado_em": "2026-11-28"
   },
   {
    "titulo": "AVISO DE LICITAÇÃO - EDITAL N° 104/2026 - CREDENCIAMENTO PARA CHAMAMENTO PUBLICO - A Secreta- ria Municipal de Administração do ... - AVISO ",
@@ -1283,10 +1961,113 @@
    "idioma": "pt",
    "mecanismo": "",
    "tipo_item": "edital",
-   "doc_em": "2026-11-27",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca",
+   "http_status": 200,
+   "url_final": "https://portalc1.com.br/wp-content/uploads/2026/07/quinta-16-07-2026.pdf#1#1#1",
+   "link_classe": "vivo",
+   "verificado_em": "2026-11-28"
+  },
+  {
+   "titulo": "EDITAL DE CHAMAMENTO PÚBLICO",
+   "url": "https://pncp.gov.br/pncp-api/v1/orgaos/07777639000127/compras/2026/58/arquivos/1#1#6#1",
+   "orgao": "GOV.BR",
+   "prazo": "2026-12-31",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "O CREDENCIAMENTO ficará aberto até o dia 31 de dezembro de 2026.",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "CHAMAMENTO PÚBLICO Nº 008/2026",
+   "url": "https://pncp.gov.br/pncp-api/v1/orgaos/13910211000103/compras/2026/103/arquivos/1#1#6#1",
+   "orgao": "GOV.BR",
+   "prazo": "2026-12-31",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "1.2. O credenciamento ficará aberto até 31/12/2026.",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "PROCEDIMENTO DE MANIFESTAÇÃO DE INTERESSE Nº 003/2026",
+   "url": "https://pncp.gov.br/pncp-api/v1/orgaos/29115474000160/compras/2026/271/arquivos/1#1#7#1",
+   "orgao": "GOV.BR",
+   "prazo": "2026-05-25",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "1.2. Data limite para recebimento do projetos: 25/05/2026 – 23:59.",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Contratação 004/2026 | GanhaLicita",
+   "url": "https://ganhalicita.com.br/contratacao/41cdfcbd-8166-409d-bb56-4d01e77be3b1/",
+   "orgao": "Contratação 009/2025 | GanhaLicita",
+   "prazo": "2026-05-18",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento da Proposta\n\n18/05/2026 12:00",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "**ÍNDICE**",
+   "url": "https://transparencia.capimgrosso.ba.gov.br/wp-includes/ExternalApps/downloader.php?hurl=aHR0cDovL2RvZW0ub3JnLmJyL2JhL2NhcGltZ3Jvc3NvL2FycXVpdm9zL2Rvd25sb2FkLzE0NjBkNWQ5YTNmNWRiMDJmNjUwZTRjZjk1Nzk2YWNiLzU1ZjZlNjk1M2IyNDZhNTZmZmVjN2ZjZjBkNGM4YjViLnBkZg%3D%3D#1",
+   "orgao": "Prefeitura Municipal de Capim Grosso",
+   "prazo": "2027-11-11",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Data de Encerramento do Recebimento das Propostas: 11/11/2027 17:00:00",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Contratação 00010/2026 | GanhaLicita",
+   "url": "https://ganhalicita.com.br/contratacao/fbf13e39-d73a-46b4-b89e-d5237538159d/",
+   "orgao": "Contratação 009/2025 | GanhaLicita",
+   "prazo": "2026-07-27",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento da Proposta\n\n27/07/2026 10:59",
+   "prazo_conf": "alta",
+   "idioma": "outro",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
+   "fonte": "pncp-busca"
+  },
+  {
+   "titulo": "Contratação de serviços comuns… (Brasília/DF) | LicitaPNCP",
+   "url": "https://licitapncp.com.br/licitacao/contratacao-de-servicos-comuns-de-engenharia-destinados-a-00394445000101-1-000301-2026",
+   "orgao": "LicitaPNCP",
+   "prazo": "2026-12-10",
+   "prazo_origem": "bd-search",
+   "prazo_ctx": "Encerramento das propostas\n- 10/12/2026 09:30",
+   "prazo_conf": "alta",
+   "idioma": "pt",
+   "mecanismo": "",
+   "tipo_item": "edital",
+   "doc_em": "2026-11-28",
    "fonte": "pncp-busca"
   }
  ],
- "jev_em": "2026-11-27",
- "prazos_em": "2026-11-27"
+ "jev_em": "2026-11-28",
+ "prazos_em": "2026-11-28",
+ "links_em": "2026-11-28"
 }
